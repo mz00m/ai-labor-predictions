@@ -74,11 +74,13 @@ const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }>
   },
 };
 
+// Only Adoption Speed and Friction Buffer are realistically policy-movable.
+// Capability is set by the AI frontier; Demand Elasticity by market structure.
 const FRAMEWORK_LABELS = {
-  adoption: { label: "Adoption Speed", color: "#3a8a4f", num: 1 },
-  capability: { label: "AI Capability", color: "#c89531", num: 2 },
-  demand: { label: "Demand Elasticity", color: "#5b7faf", num: 3 },
-  friction: { label: "Friction Buffer", color: "#7a7e8b", num: 4 },
+  adoption: { label: "Adoption Speed", color: "#3a8a4f", num: 1, movable: true },
+  capability: { label: "AI Capability", color: "#c89531", num: 2, movable: false },
+  demand: { label: "Demand Elasticity", color: "#5b7faf", num: 3, movable: false },
+  friction: { label: "Friction Buffer", color: "#7a7e8b", num: 4, movable: true },
 };
 
 export default function PolicyAnalysisPage() {
@@ -219,22 +221,18 @@ export default function PolicyAnalysisPage() {
                   </p>
                 </div>
                 <p className="text-xs text-[var(--muted)] leading-[1.55] mb-2">{p.tagline}</p>
-                <div className="flex items-center gap-3 text-[10px] text-[var(--muted)] flex-wrap">
+                <div className="flex items-center gap-2 text-[10px] text-[var(--muted)] flex-wrap mb-1.5">
                   <span>${p.typicalCostMillions}M · {p.durationYears}yr</span>
                   <span>•</span>
-                  <span>Targets: {p.targetSectors ? p.targetSectors.join(", ") : "All sectors"}</span>
-                  <span>•</span>
-                  <span>Addresses:</span>
-                  {p.addresses.map((a) => (
+                  <span>{p.targetSectors ? `Sectors: ${p.targetSectors.join(", ")}` : "Cross-sector"}</span>
+                </div>
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  {(p.targetPopulations ?? []).slice(0, 3).map((pop) => (
                     <span
-                      key={a}
-                      className="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wider font-semibold"
-                      style={{
-                        background: `${FRAMEWORK_LABELS[a].color}25`,
-                        color: FRAMEWORK_LABELS[a].color,
-                      }}
+                      key={pop}
+                      className="text-[10px] text-[var(--muted)] bg-[var(--background)] px-1.5 py-0.5 rounded"
                     >
-                      {FRAMEWORK_LABELS[a].num}. {FRAMEWORK_LABELS[a].label}
+                      {pop}
                     </span>
                   ))}
                 </div>
@@ -299,41 +297,91 @@ export default function PolicyAnalysisPage() {
             </p>
           </ReportSection>
 
-          {/* SECTION C — Coverage assessment */}
+          {/* SECTION C — Workforce impact */}
           <ReportSection
-            heading="C · Coverage assessment"
-            subhead="Which framework categories does this policy meaningfully touch?"
+            heading="C · Workforce impact"
+            subhead="What this policy actually does for workers, employers, and the regional economy. Framework-coverage chips at the bottom are a secondary signal — what matters most is the lived workforce reality."
           >
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {(["adoption", "capability", "demand", "friction"] as const).map((cat) => {
-                const meta = FRAMEWORK_LABELS[cat];
-                const covered = policy.addresses.includes(cat);
-                return (
-                  <div
-                    key={cat}
-                    className="rounded-lg p-3 border-2"
-                    style={{
-                      borderColor: covered ? meta.color : "var(--card)",
-                      background: covered ? `${meta.color}15` : "transparent",
-                    }}
-                  >
-                    <div className="flex items-baseline gap-2 mb-1">
-                      <span
-                        className="text-[10px] font-semibold text-white px-1.5 py-0.5 rounded tabular-nums"
-                        style={{ background: meta.color }}
-                      >
-                        {meta.num}
-                      </span>
-                      <p className="text-sm font-medium" style={{ color: covered ? meta.color : "var(--muted)" }}>
-                        {meta.label}
-                      </p>
-                    </div>
-                    <p className="text-[11px]" style={{ color: covered ? meta.color : "var(--muted)" }}>
-                      {covered ? "✓ Addressed" : "○ Not touched"}
-                    </p>
-                  </div>
-                );
-              })}
+            {/* Target populations */}
+            {policy.targetPopulations && policy.targetPopulations.length > 0 && (
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  Who benefits
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {policy.targetPopulations.map((pop) => (
+                    <span
+                      key={pop}
+                      className="text-xs px-2 py-1 rounded bg-[var(--background)] border border-divider text-[var(--foreground)]"
+                    >
+                      {pop}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Workforce impacts */}
+            {policy.workforceImpacts && policy.workforceImpacts.length > 0 && (
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  What changes
+                </p>
+                <ul className="space-y-1.5 text-sm text-[var(--muted)] leading-[1.6] list-disc ml-5">
+                  {policy.workforceImpacts.map((imp, i) => (
+                    <li key={i}>{imp}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Sectors lifted */}
+            {policy.targetSectors && policy.targetSectors.length > 0 && (
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  Sectoral focus in {region.name}
+                </p>
+                <p className="text-sm text-[var(--muted)] leading-[1.6]">
+                  Concentrates effort on{" "}
+                  {policy.targetSectors
+                    .map((naics) => {
+                      const s = sectors.find((x) => x.naics === naics);
+                      const share = region.sectorShares[naics] ?? 0;
+                      return s ? `${s.name} (${(share * 100).toFixed(1)}% of regional jobs)` : naics;
+                    })
+                    .join("; ")}
+                  .
+                </p>
+              </div>
+            )}
+
+            {/* Secondary: model dimensions moved */}
+            <div className="mt-5 pt-4 border-t border-divider">
+              <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                Model dimensions this policy moves
+              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                {(["adoption", "friction"] as const).map((cat) => {
+                  const meta = FRAMEWORK_LABELS[cat];
+                  const covered = policy.addresses.includes(cat);
+                  return (
+                    <span
+                      key={cat}
+                      className="text-[11px] px-2 py-1 rounded font-medium"
+                      style={{
+                        background: covered ? `${meta.color}20` : "transparent",
+                        color: covered ? meta.color : "var(--muted)",
+                        border: covered ? `1px solid ${meta.color}40` : "1px solid var(--divider)",
+                      }}
+                    >
+                      {covered ? "✓" : "○"} {meta.label}
+                    </span>
+                  );
+                })}
+                <span className="text-[11px] text-[var(--muted)] italic ml-2">
+                  AI Capability and Demand Elasticity are structural (set by the AI frontier and market) — policies can&apos;t shift those, so the model shows them only as context.
+                </span>
+              </div>
             </div>
           </ReportSection>
 
@@ -378,13 +426,28 @@ export default function PolicyAnalysisPage() {
                 </details>
               </div>
 
-              {!policy.addresses.includes(dominantRisk.category) ? (
-                <div className="rounded-lg p-4 bg-[#d4493a10] border border-[#d4493a40]">
-                  <p className="text-sm font-semibold text-[#a53024] mb-1">
-                    ⚠ Gap: policy doesn&apos;t address the dominant risk
+              {dominantRisk.category === "capability" || dominantRisk.category === "demand" ? (
+                <div className="rounded-lg p-4 bg-[#a36e1e10] border border-[#a36e1e40]">
+                  <p className="text-sm font-semibold text-[#a36e1e] mb-1">
+                    ⚠ Structural exposure — policy can mitigate, not eliminate
                   </p>
                   <p className="text-sm text-[var(--muted)] leading-[1.6]">
-                    {region.name}&apos;s biggest exposure is{" "}
+                    {region.name}&apos;s dominant exposure runs through{" "}
+                    <strong className="text-[var(--foreground)]">{FRAMEWORK_LABELS[dominantRisk.category].label}</strong>{" "}
+                    in {dominantRisk.sector.name} — a structural feature of how the AI frontier and the market for these services interact.
+                    Workforce policy can&apos;t change the underlying capability trajectory or demand elasticity directly.
+                    What policy <em>can</em> do is buffer affected workers and adjust adoption speed.
+                    {policy.name} delivers{" "}
+                    {policy.addresses.map((a) => FRAMEWORK_LABELS[a].label).join(" + ")} support, which is the right type of intervention for this kind of structural exposure.
+                  </p>
+                </div>
+              ) : !policy.addresses.includes(dominantRisk.category) ? (
+                <div className="rounded-lg p-4 bg-[#d4493a10] border border-[#d4493a40]">
+                  <p className="text-sm font-semibold text-[#a53024] mb-1">
+                    ⚠ Gap: policy doesn&apos;t address the dominant policy-movable risk
+                  </p>
+                  <p className="text-sm text-[var(--muted)] leading-[1.6]">
+                    {region.name}&apos;s biggest <em>policy-movable</em> exposure is{" "}
                     <strong className="text-[var(--foreground)]">{FRAMEWORK_LABELS[dominantRisk.category].label}</strong>{" "}
                     in {dominantRisk.sector.name}. {policy.name} addresses{" "}
                     {policy.addresses.map((a) => FRAMEWORK_LABELS[a].label).join(" + ")}, but
@@ -398,7 +461,7 @@ export default function PolicyAnalysisPage() {
               ) : (
                 <div className="rounded-lg p-4 bg-[#3a8a4f10] border border-[#3a8a4f40]">
                   <p className="text-sm font-semibold text-[#2e6e3f] mb-1">
-                    ✓ Policy targets the dominant risk
+                    ✓ Policy targets the dominant policy-movable risk
                   </p>
                   <p className="text-sm text-[var(--muted)] leading-[1.6]">
                     The {FRAMEWORK_LABELS[dominantRisk.category].label} dimension is what&apos;s
@@ -511,7 +574,7 @@ export default function PolicyAnalysisPage() {
                 The robustness band above shows the range of outcomes when our defaults move by ±50%.
                 Treat directional findings inside that band as defensible; treat point estimates as guidance only.
               </li>
-              {dominantRisk && !policy.addresses.includes(dominantRisk.category) && (
+              {dominantRisk && !(policy.addresses as readonly string[]).includes(dominantRisk.category) && (
                 <li>
                   <strong className="text-[var(--foreground)]">Add a complementary intervention.</strong>{" "}
                   {region.name}&apos;s dominant exposure is {FRAMEWORK_LABELS[dominantRisk.category].label} —
@@ -585,7 +648,7 @@ function suggestedAdjacent(
   all: ModelPolicy[],
   excludeId: string
 ): ModelPolicy[] {
-  return all.filter((p) => p.id !== excludeId && p.addresses.includes(cat)).slice(0, 2);
+  return all.filter((p) => p.id !== excludeId && (p.addresses as readonly string[]).includes(cat)).slice(0, 2);
 }
 
 function formatJobs(n: number, signed = false): string {

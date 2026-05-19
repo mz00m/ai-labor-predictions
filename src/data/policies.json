@@ -5,53 +5,103 @@
       "id": "sector-training-healthcare",
       "name": "Sector-Based Training (Healthcare)",
       "category": "Workforce Training",
-      "tagline": "Project QUEST–style sectoral training pipeline targeting healthcare occupations",
+      "tagline": "Project QUEST\u2013style sectoral training pipeline targeting healthcare occupations",
       "description": "Multi-year cohort training programs that prepare workers for specific healthcare roles (nursing assistants, medical technicians, allied health) with wraparound services, employer partnerships, and guaranteed placement.",
       "typicalCostMillions": 4,
       "durationYears": 3,
-      "targetSectors": ["62"],
-      "evidence": "Project QUEST (San Antonio) RCT: +30% earnings 9 years post-program. Targets adaptability — measured to nearly eliminate the displaced-worker scarring effect in healthcare.",
+      "targetSectors": [
+        "62"
+      ],
+      "evidence": "Project QUEST (San Antonio) RCT: +30% earnings 9 years post-program. Targets adaptability \u2014 measured to nearly eliminate the displaced-worker scarring effect in healthcare.",
       "evidenceUrl": "https://www.mdrc.org/work/publications/project-quest",
-      "addresses": ["friction"],
+      "addresses": [
+        "friction"
+      ],
       "sectorOverrides": {
-        "62": { "frictionDrag": -0.10, "trustCoef": 0.05 }
+        "62": {
+          "frictionDrag": -0.1,
+          "trustCoef": 0.05
+        }
       },
-      "knobShifts": {}
+      "knobShifts": {},
+      "workforceImpacts": [
+        "Pays displaced and entry-level workers a stipend during 12\u201324 months of healthcare credentialing",
+        "Places graduates with employer partners (hospital systems, clinics) at agreed entry wages",
+        "Reduces healthcare workforce shortages while creating mobility ladders for low-wage workers",
+        "Tracks 9-year wage gains of +30% vs. control (Project QUEST RCT)"
+      ],
+      "targetPopulations": [
+        "Displaced workers",
+        "Low-wage workers seeking mobility",
+        "Recent high-school graduates"
+      ]
     },
     {
       "id": "ai-literacy-statewide",
       "name": "AI Literacy / GenAI Fluency (Statewide)",
       "category": "Workforce Training",
       "tagline": "Universal community-college + library-based AI tool training, 6-week certificate",
-      "description": "Statewide rollout of a 6-week certificate course on practical generative AI usage in office settings — prompting, verification, workflow integration. Offered through community college network and public libraries.",
+      "description": "Statewide rollout of a 6-week certificate course on practical generative AI usage in office settings \u2014 prompting, verification, workflow integration. Offered through community college network and public libraries.",
       "typicalCostMillions": 12,
       "durationYears": 2,
       "targetSectors": null,
-      "evidence": "Brynjolfsson, Li, Raymond 2025 (5,172 customer-support agents): 15% productivity gain from AI tools, 30% for least-experienced. Effect concentrated in workers who actually use the tools — training closes the usage gap.",
+      "evidence": "Brynjolfsson, Li, Raymond 2025 (5,172 customer-support agents): 15% productivity gain from AI tools, 30% for least-experienced. Effect concentrated in workers who actually use the tools \u2014 training closes the usage gap.",
       "evidenceUrl": "https://academic.oup.com/qje/article/140/2/889/7990658",
-      "addresses": ["adoption", "friction"],
+      "addresses": [
+        "adoption",
+        "friction"
+      ],
       "sectorOverrides": {},
       "knobShifts": {
         "trustMultiplier": 1.15,
-        "genZAdoptionBoost": 1.10
-      }
+        "genZAdoptionBoost": 1.1
+      },
+      "workforceImpacts": [
+        "Equips incumbent office workers across all sectors with a portable AI-fluency credential",
+        "Closes the within-firm usage gap (currently ~50% of workers with access don't use AI tools)",
+        "Boosts measured per-worker productivity 15\u201330%, with biggest gains for less-experienced workers",
+        "Universal access via community colleges + libraries; reaches workers who'd never enroll in formal training"
+      ],
+      "targetPopulations": [
+        "Incumbent office workers (all sectors)",
+        "Workers without 4-year degrees",
+        "Older / mid-career workers"
+      ]
     },
     {
       "id": "apprenticeship-manufacturing",
       "name": "Registered Apprenticeship (Manufacturing)",
       "category": "Workforce Training",
       "tagline": "Earn-and-learn programs partnered with regional employers in advanced manufacturing",
-      "description": "Federal/state registered apprenticeships placing workers with manufacturers; 18–36 months of paid on-the-job training plus classroom hours. Targets reskilling for AI-augmented manufacturing roles.",
+      "description": "Federal/state registered apprenticeships placing workers with manufacturers; 18\u201336 months of paid on-the-job training plus classroom hours. Targets reskilling for AI-augmented manufacturing roles.",
       "typicalCostMillions": 6,
       "durationYears": 4,
-      "targetSectors": ["31-33"],
+      "targetSectors": [
+        "31-33"
+      ],
       "evidence": "USDOL apprenticeship outcome studies: 91% retention, +$300K lifetime earnings vs. non-apprentices. Boosts adaptability for workers transitioning into AI-augmented production roles.",
       "evidenceUrl": "https://www.apprenticeship.gov/about-us/research-data",
-      "addresses": ["friction"],
+      "addresses": [
+        "friction"
+      ],
       "sectorOverrides": {
-        "31-33": { "frictionDrag": -0.08, "complementarity": 0.08 }
+        "31-33": {
+          "frictionDrag": -0.08,
+          "complementarity": 0.08
+        }
       },
-      "knobShifts": {}
+      "knobShifts": {},
+      "workforceImpacts": [
+        "Earn-and-learn structure: workers earn full wages while completing 2\u20134 years of OJT + classroom",
+        "Builds reskilling pipeline for AI-augmented manufacturing roles (CNC operators, robotics technicians)",
+        "91% retention rate; ~$300K lifetime earnings advantage vs. non-apprentices (USDOL)",
+        "Anchors workers in region \u2014 apprentices typically stay with sponsoring employer"
+      ],
+      "targetPopulations": [
+        "New entrants to manufacturing",
+        "Displaced production workers",
+        "Workers transitioning from declining trades"
+      ]
     },
     {
       "id": "wage-insurance",
@@ -64,52 +114,120 @@
       "targetSectors": null,
       "evidence": "Hyman 2018 (TAA wage insurance): increased re-employment probability by 10pp for displaced workers; modest wage gains; sharp reduction in long-term unemployment.",
       "evidenceUrl": "https://www.nber.org/papers/w24871",
-      "addresses": ["friction"],
+      "addresses": [
+        "friction"
+      ],
       "sectorOverrides": {},
-      "knobShifts": {}
+      "knobShifts": {},
+      "workforceImpacts": [
+        "Replaces 50% of wage loss for up to 24 months when displaced workers re-employ at lower pay",
+        "Cuts long-term unemployment sharply (+10pp re-employment probability within 6 months)",
+        "Lets workers accept adjacent lower-wage roles without devastating household income",
+        "Particularly effective for older displaced workers facing >20% wage cuts post-displacement"
+      ],
+      "targetPopulations": [
+        "Dislocated workers across all sectors",
+        "Workers 50+ facing re-employment at lower wages"
+      ]
     },
     {
       "id": "licensing-reform",
       "name": "Occupational Licensing Reform",
       "category": "Regulatory",
       "tagline": "Streamline state-level licensing barriers in healthcare, finance, and construction",
-      "description": "Targeted reform of state occupational licensing — reciprocal recognition across states, scope-of-practice expansion (e.g., nurse practitioners), and removal of redundant credentials. Lowers the regulatory drag on adoption AND on worker mobility.",
+      "description": "Targeted reform of state occupational licensing \u2014 reciprocal recognition across states, scope-of-practice expansion (e.g., nurse practitioners), and removal of redundant credentials. Lowers the regulatory drag on adoption AND on worker mobility.",
       "typicalCostMillions": 2,
       "durationYears": 2,
-      "targetSectors": ["62", "52", "23"],
+      "targetSectors": [
+        "62",
+        "52",
+        "23"
+      ],
       "evidence": "Kleiner-Krueger studies on licensing: state licensing reduces interstate worker mobility by ~7% and slows technology diffusion in regulated sectors. Reform yields measurable adoption acceleration.",
       "evidenceUrl": "https://www.nber.org/papers/w22810",
-      "addresses": ["adoption"],
+      "addresses": [
+        "adoption"
+      ],
       "sectorOverrides": {
-        "62": { "regSchemaDrag": -0.10 },
-        "52": { "regSchemaDrag": -0.08 },
-        "23": { "regSchemaDrag": -0.05 }
+        "62": {
+          "regSchemaDrag": -0.1
+        },
+        "52": {
+          "regSchemaDrag": -0.08
+        },
+        "23": {
+          "regSchemaDrag": -0.05
+        }
       },
       "knobShifts": {
         "regSchemaMultiplier": 0.85
-      }
+      },
+      "workforceImpacts": [
+        "Removes redundant credential barriers in healthcare, finance, and construction trades",
+        "Cross-state reciprocal recognition lets workers relocate without re-credentialing (~7% mobility lift)",
+        "Expands scope-of-practice for nurse practitioners, dental hygienists, paralegals \u2014 meeting demand without lengthy retraining",
+        "Frees workers from being trapped in occupational silos as their narrow specialty automates"
+      ],
+      "targetPopulations": [
+        "Licensed workers facing geographic constraints",
+        "Workers in adjacent occupations who could fill demand with lighter credentialing"
+      ]
     },
     {
       "id": "arizona-wioa-2024-2027",
-      "name": "Arizona WIOA State Plan (PY 2024–2027)",
+      "name": "Arizona WIOA State Plan (PY 2024\u20132027)",
       "category": "State Workforce System Plan",
       "tagline": "Comprehensive WIOA Title I plan: career pathways, registered apprenticeship, Rapid Response, youth services, and Wagner-Peyser employment services across the state",
       "description": "The Arizona state WIOA plan for Program Years 2024-2027 bundles career pathways and registered apprenticeship (targeting healthcare, advanced manufacturing/semiconductors, and construction), Individual Training Accounts, Rapid Response services for layoffs and plant closings, Trade Adjustment Assistance, pre-employment transition services, and youth in/out-of-school services. Multi-intervention, statewide, covering adults, dislocated workers, youth, veterans, and individuals with disabilities. Modeled here as an aggregated bundle that primarily strengthens the Friction Buffer (worker adaptability and complementarity) in target sectors, with secondary effects on Adoption Speed through employer engagement.",
       "typicalCostMillions": 200,
       "durationYears": 4,
-      "targetSectors": ["62", "31-33", "23", "61"],
-      "evidence": "WIOA Title I formula funds Arizona at roughly $40-55M/year (PYs 2024-2027 ≈ $200M total Title I, excluding Adult Education, Vocational Rehabilitation, and Wagner-Peyser additions). National WIOA Adult/DW outcome studies show modest but real wage and re-employment gains; outcomes vary widely by local board and program quality. Arizona's plan emphasizes the semiconductor cluster (TSMC, Intel) — sectoral training programs in this space have historically tracked Project QUEST-style outcomes when employer engagement is strong.",
+      "targetSectors": [
+        "62",
+        "31-33",
+        "23",
+        "61"
+      ],
+      "evidence": "WIOA Title I formula funds Arizona at roughly $40-55M/year (PYs 2024-2027 \u2248 $200M total Title I, excluding Adult Education, Vocational Rehabilitation, and Wagner-Peyser additions). National WIOA Adult/DW outcome studies show modest but real wage and re-employment gains; outcomes vary widely by local board and program quality. Arizona's plan emphasizes the semiconductor cluster (TSMC, Intel) \u2014 sectoral training programs in this space have historically tracked Project QUEST-style outcomes when employer engagement is strong.",
       "evidenceUrl": "https://wioaplans.dol.gov/node/451901",
-      "addresses": ["friction", "adoption"],
+      "addresses": [
+        "friction",
+        "adoption"
+      ],
       "sectorOverrides": {
-        "62": { "frictionDrag": -0.06, "complementarity": 0.03 },
-        "31-33": { "frictionDrag": -0.05, "complementarity": 0.04 },
-        "23": { "frictionDrag": -0.04, "complementarity": 0.02 },
-        "61": { "frictionDrag": -0.03 }
+        "62": {
+          "frictionDrag": -0.06,
+          "complementarity": 0.03
+        },
+        "31-33": {
+          "frictionDrag": -0.05,
+          "complementarity": 0.04
+        },
+        "23": {
+          "frictionDrag": -0.04,
+          "complementarity": 0.02
+        },
+        "61": {
+          "frictionDrag": -0.03
+        }
       },
       "knobShifts": {
         "trustMultiplier": 1.05
-      }
+      },
+      "workforceImpacts": [
+        "Funds career pathways and registered apprenticeships in healthcare, semiconductors, construction, and education",
+        "Provides Rapid Response services when major employers announce layoffs \u2014 direct outreach, retraining vouchers, job-search support",
+        "Trade Adjustment Assistance for workers displaced by trade and (increasingly) by AI-driven offshoring",
+        "Youth services bridge school-to-work gap for disadvantaged populations",
+        "Wagner-Peyser employment services and individual training accounts available to any unemployed worker"
+      ],
+      "targetPopulations": [
+        "Dislocated workers",
+        "Youth (in-school and out-of-school)",
+        "Adult workers",
+        "Veterans",
+        "Individuals with disabilities",
+        "Low-income workers"
+      ]
     },
     {
       "id": "public-llm-smb",
@@ -120,15 +238,29 @@
       "typicalCostMillions": 8,
       "durationYears": 4,
       "targetSectors": null,
-      "evidence": "BTOS data shows AI adoption concentrated in large firms (250+ employees adopt at 3× the rate of <50). McElheran et al. 2024: shared infrastructure could close half this gap.",
+      "evidence": "BTOS data shows AI adoption concentrated in large firms (250+ employees adopt at 3\u00d7 the rate of <50). McElheran et al. 2024: shared infrastructure could close half this gap.",
       "evidenceUrl": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4673528",
-      "addresses": ["adoption", "friction"],
+      "addresses": [
+        "adoption",
+        "friction"
+      ],
       "sectorOverrides": {},
       "knobShifts": {
-        "trustMultiplier": 1.10,
+        "trustMultiplier": 1.1,
         "securityOverheadMultiplier": 0.85,
         "computeCostDeclineRate": 0.05
-      }
+      },
+      "workforceImpacts": [
+        "Lets SMBs adopt AI without absorbing security review and infrastructure costs that only large firms can afford",
+        "Closes the firm-size adoption gap (250+ employee firms currently adopt at ~3\u00d7 the rate of <50)",
+        "Workers at small firms gain access to the same AI productivity tools as workers at Fortune 500s",
+        "Indirectly preserves SMB jobs by keeping small firms competitive against AI-enabled larger competitors"
+      ],
+      "targetPopulations": [
+        "Workers at small and mid-size firms",
+        "SMB owners and managers",
+        "Regional economic-development authorities"
+      ]
     }
   ]
 }

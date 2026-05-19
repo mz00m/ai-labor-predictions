@@ -546,9 +546,19 @@ export interface ModelPolicy {
   targetSectors: string[] | null; // null = applies to all
   evidence: string;
   evidenceUrl: string;
-  addresses: Array<"adoption" | "capability" | "demand" | "friction">;
-  sectorOverrides: Record<string, Partial<SectorParams>>; // additive deltas to params
-  knobShifts: Partial<Knobs>; // multiplicative for ×-suffix knobs, additive for rates
+  /**
+   * Which framework categories this policy moves in the model.
+   * Note: only Adoption Speed and Friction Buffer are realistically
+   * policy-movable. Capability is set by the AI frontier; Demand
+   * Elasticity is set by market structure. Policies cannot shift those.
+   */
+  addresses: Array<"adoption" | "friction">;
+  /** Workforce-side outcomes — who benefits and what they get. */
+  workforceImpacts: string[];
+  /** Target population groups. */
+  targetPopulations: string[];
+  sectorOverrides: Record<string, Partial<SectorParams>>;
+  knobShifts: Partial<Knobs>;
 }
 
 /** Apply a policy to a sectors array + knobs, returning modified versions. */
@@ -755,6 +765,177 @@ export function findSensitivityFlip(
   // Sort by smallest required move
   flips.sort((a, b) => Math.abs(a.flipValue - a.currentValue) - Math.abs(b.flipValue - b.currentValue));
   return flips.slice(0, 3);
+}
+
+// ────────────────────────────────────────────────────────────────────
+// BUDGET PORTFOLIO OPTIMIZER
+// Inverse of the policy diagnostic: given $X for a region, recommend
+// a portfolio of policies that maximizes net regional jobs while also
+// covering as many of the 4 framework categories as possible.
+// ────────────────────────────────────────────────────────────────────
+
+/** Scale a policy down to a fraction of full funding (linear). */
+export function scalePolicy(policy: ModelPolicy, scale: number): ModelPolicy {
+  const s = Math.max(0, Math.min(1, scale));
+  return {
+    ...policy,
+    typicalCostMillions: policy.typicalCostMillions * s,
+    sectorOverrides: Object.fromEntries(
+      Object.entries(policy.sectorOverrides).map(([naics, overrides]) => [
+        naics,
+        Object.fromEntries(
+          Object.entries(overrides).map(([k, v]) => [k, (v as number) * s])
+        ) as Partial<SectorParams>,
+      ])
+    ),
+    knobShifts: Object.fromEntries(
+      Object.entries(policy.knobShifts).map(([k, v]) => {
+        // For additive rate knobs, scale linearly.
+        if (k === "computeCostDeclineRate") return [k, (v as number) * s];
+        // For multiplier knobs (default 1.0), blend toward 1.0.
+        return [k, 1.0 + ((v as number) - 1.0) * s];
+      })
+    ) as Partial<Knobs>,
+  };
+}
+
+export interface PortfolioSelection {
+  policy: ModelPolicy;
+  allocationMillions: number;
+  scale: number; // 0-1, fraction of full funding
+  standaloneJobsDelta: number; // marginal jobs if THIS policy alone were applied at this scale
+}
+
+export interface PortfolioRecommendation {
+  region: Region;
+  budgetMillions: number;
+  spentMillions: number;
+  unspentMillions: number;
+  selected: PortfolioSelection[];
+  skipped: Array<{ policy: ModelPolicy; reason: string }>;
+  categoriesCovered: Array<"adoption" | "capability" | "demand" | "friction">;
+  baseline: RegionalAggregate;
+  portfolio: RegionalAggregate;
+  portfolioJobsDelta: number;
+  bestSingleJobsDelta: number;
+  bestSinglePolicy: ModelPolicy | null;
+}
+
+/** Greedy gap-aware portfolio optimizer. */
+export function optimizeBudgetPortfolio(
+  sectors: Sector[],
+  knobs: Knobs,
+  region: Region,
+  allPolicies: ModelPolicy[],
+  budgetMillions: number
+): PortfolioRecommendation {
+  // Regional baseline (no policy)
+  const baselineImpacts = sectors.map((s) => computeSector(s, knobs));
+  const baseline = regionalAggregate(baselineImpacts, region);
+
+  // Score each policy at full standalone funding for this region
+  const scored = allPolicies.map((p) => {
+    const { sectors: ps, knobs: pk } = applyPolicy(sectors, knobs, p);
+    const impacts = ps.map((s) => computeSector(s, pk));
+    const agg = regionalAggregate(impacts, region);
+    const jobsDelta = agg.totalJobsImpacted - baseline.totalJobsImpacted;
+    return { policy: p, jobsDelta, agg };
+  });
+
+  // Best single policy at this budget cap (for comparison)
+  const affordableSingle = scored
+    .filter((s) => s.policy.typicalCostMillions <= budgetMillions)
+    .sort((a, b) => b.jobsDelta - a.jobsDelta);
+  const bestSinglePolicy = affordableSingle[0]?.policy ?? null;
+  const bestSingleJobsDelta = affordableSingle[0]?.jobsDelta ?? 0;
+
+  // Greedy gap-aware build
+  const selected: PortfolioSelection[] = [];
+  const skipped: Array<{ policy: ModelPolicy; reason: string }> = [];
+  const coveredCategories = new Set<"adoption" | "capability" | "demand" | "friction">();
+  let remainingBudget = budgetMillions;
+  const candidatePool = [...scored];
+
+  while (remainingBudget >= 0.5 && candidatePool.length > 0) {
+    // Re-score every iteration: cost-efficiency × gap bonus
+    candidatePool.sort((a, b) => {
+      const gapA = a.policy.addresses.some((c) => !coveredCategories.has(c)) ? 1.4 : 1.0;
+      const gapB = b.policy.addresses.some((c) => !coveredCategories.has(c)) ? 1.4 : 1.0;
+      const scoreA =
+        (a.jobsDelta / Math.max(0.1, a.policy.typicalCostMillions)) * gapA;
+      const scoreB =
+        (b.jobsDelta / Math.max(0.1, b.policy.typicalCostMillions)) * gapB;
+      return scoreB - scoreA;
+    });
+    const top = candidatePool.shift()!;
+    // If the policy makes things worse on net, skip
+    if (top.jobsDelta <= 0) {
+      skipped.push({
+        policy: top.policy,
+        reason: "Standalone effect is neutral or net-negative for this region under this scenario",
+      });
+      continue;
+    }
+    const fullCost = top.policy.typicalCostMillions;
+    const scale = Math.min(1.0, remainingBudget / fullCost);
+    // Skip if we can fund less than 25% — fragmentary funding rarely works
+    if (scale < 0.25) {
+      skipped.push({
+        policy: top.policy,
+        reason: `Remaining budget ($${remainingBudget.toFixed(1)}M) is < 25% of full cost ($${fullCost}M) — too thin to be effective`,
+      });
+      continue;
+    }
+    const alloc = fullCost * scale;
+    selected.push({
+      policy: top.policy,
+      allocationMillions: alloc,
+      scale,
+      standaloneJobsDelta: top.jobsDelta * scale,
+    });
+    remainingBudget -= alloc;
+    top.policy.addresses.forEach((c) => coveredCategories.add(c));
+  }
+
+  // Compute combined portfolio impact (stacking policies)
+  let combinedSectors = sectors;
+  let combinedKnobs = { ...knobs };
+  for (const sel of selected) {
+    const scaled = scalePolicy(sel.policy, sel.scale);
+    const out = applyPolicy(combinedSectors, combinedKnobs, scaled);
+    combinedSectors = out.sectors;
+    combinedKnobs = out.knobs;
+  }
+  const portfolioImpacts = combinedSectors.map((s) => computeSector(s, combinedKnobs));
+  const portfolio = regionalAggregate(portfolioImpacts, region);
+
+  // Any candidates left in the pool that we never selected
+  for (const c of candidatePool) {
+    if (!selected.find((s) => s.policy.id === c.policy.id)) {
+      const reason =
+        c.jobsDelta <= 0
+          ? "Standalone effect not positive for this region"
+          : c.policy.addresses.every((cat) => coveredCategories.has(cat))
+            ? "Framework categories already covered by selected portfolio"
+            : "Lower cost-effectiveness than selected policies";
+      skipped.push({ policy: c.policy, reason });
+    }
+  }
+
+  return {
+    region,
+    budgetMillions,
+    spentMillions: budgetMillions - remainingBudget,
+    unspentMillions: remainingBudget,
+    selected,
+    skipped,
+    categoriesCovered: Array.from(coveredCategories),
+    baseline,
+    portfolio,
+    portfolioJobsDelta: portfolio.totalJobsImpacted - baseline.totalJobsImpacted,
+    bestSinglePolicy,
+    bestSingleJobsDelta,
+  };
 }
 
 /** Robustness band: perturb high-impact knobs by ±50% and report resulting jobs range. */

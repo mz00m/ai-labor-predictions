@@ -1,0 +1,709 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import btosData from "@/data/btos-sectors.json";
+import regionsData from "@/data/regions.json";
+import policiesData from "@/data/policies.json";
+import {
+  Sector,
+  Knobs,
+  DEFAULT_KNOBS,
+  Region,
+  ModelPolicy,
+  optimizeBudgetPortfolio,
+} from "@/lib/composite-model";
+
+const sectors = btosData.sectors as Sector[];
+const regions = regionsData.regions as Region[];
+const policies = policiesData.policies as ModelPolicy[];
+
+const SCENARIOS: Record<string, { name: string; tagline: string; knobs: Knobs }> = {
+  status_quo: {
+    name: "Status Quo Persists",
+    tagline: "Slow capability · High friction",
+    knobs: {
+      ...DEFAULT_KNOBS,
+      capabilityDoublingMonths: 14,
+      trustMultiplier: 0.7,
+      regSchemaMultiplier: 1.4,
+      downtimeSensitivity: 1.3,
+      stateRegMultiplier: 1.4,
+      computeCostDeclineRate: 0.08,
+      securityOverheadMultiplier: 1.3,
+    },
+  },
+  steady: {
+    name: "Steady Diffusion",
+    tagline: "Slow capability · Low friction",
+    knobs: { ...DEFAULT_KNOBS, capabilityDoublingMonths: 14, trustMultiplier: 1.1, regSchemaMultiplier: 0.7 },
+  },
+  overhang: {
+    name: "Capability Overhang",
+    tagline: "Fast capability · High friction",
+    knobs: {
+      ...DEFAULT_KNOBS,
+      capabilityDoublingMonths: 4,
+      trustMultiplier: 0.7,
+      regSchemaMultiplier: 1.5,
+      downtimeSensitivity: 1.4,
+      stateRegMultiplier: 1.5,
+      securityOverheadMultiplier: 1.4,
+    },
+  },
+  rapid: {
+    name: "Rapid Transformation",
+    tagline: "Fast capability · Low friction",
+    knobs: {
+      ...DEFAULT_KNOBS,
+      capabilityDoublingMonths: 4,
+      trustMultiplier: 1.3,
+      regSchemaMultiplier: 0.6,
+      stateRegMultiplier: 0.6,
+      computeCostDeclineRate: 0.30,
+      securityOverheadMultiplier: 0.7,
+    },
+  },
+};
+
+// Only Adoption Speed and Friction Buffer are realistically policy-movable.
+// Capability is set by the AI frontier; Demand Elasticity by market structure.
+const FRAMEWORK_LABELS = {
+  adoption: { label: "Adoption Speed", color: "#3a8a4f", num: 1, movable: true },
+  capability: { label: "AI Capability", color: "#c89531", num: 2, movable: false },
+  demand: { label: "Demand Elasticity", color: "#5b7faf", num: 3, movable: false },
+  friction: { label: "Friction Buffer", color: "#7a7e8b", num: 4, movable: true },
+};
+
+function formatJobs(n: number, signed = false): string {
+  const sign = n > 0 ? "+" : n < 0 ? "−" : "";
+  const abs = Math.abs(n);
+  let core: string;
+  if (abs >= 1_000_000) core = `${(abs / 1_000_000).toFixed(2)}M`;
+  else if (abs >= 1_000) core = `${(abs / 1_000).toFixed(1)}K`;
+  else core = `${Math.round(abs)}`;
+  return signed ? `${sign}${core}` : core;
+}
+
+export default function BudgetPlannerPage() {
+  const [regionId, setRegionId] = useState<string>("pittsburgh");
+  const [scenarioId, setScenarioId] = useState<keyof typeof SCENARIOS>("steady");
+  const [budgetMillions, setBudgetMillions] = useState<number>(10);
+
+  const region = regions.find((r) => r.id === regionId)!;
+  const knobs = SCENARIOS[scenarioId].knobs;
+
+  const recommendation = useMemo(
+    () => optimizeBudgetPortfolio(sectors, knobs, region, policies, budgetMillions),
+    [knobs, region, budgetMillions]
+  );
+
+  // Sensitivity: half-budget and double-budget comparisons
+  const halfBudgetRec = useMemo(
+    () => optimizeBudgetPortfolio(sectors, knobs, region, policies, budgetMillions * 0.5),
+    [knobs, region, budgetMillions]
+  );
+  const doubleBudgetRec = useMemo(
+    () => optimizeBudgetPortfolio(sectors, knobs, region, policies, budgetMillions * 2),
+    [knobs, region, budgetMillions]
+  );
+
+  return (
+    <div className="max-w-[1100px] mx-auto">
+      {/* Header */}
+      <header className="mb-8">
+        <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)] mb-3">
+          jobsdata.ai / model / budget
+        </p>
+        <h1 className="text-4xl sm:text-5xl font-bold text-[var(--foreground)] leading-tight mb-4">
+          Workforce Budget Planner
+        </h1>
+        <p className="text-lg text-[var(--muted)] leading-[1.7] mb-3">
+          &ldquo;If we have $X to invest in this region, what should we
+          prioritize?&rdquo; The planner builds an evidence-anchored policy
+          portfolio from the model catalog, optimizing for net regional jobs
+          while covering all four framework categories.
+        </p>
+        <p className="text-sm text-[var(--muted)] leading-[1.6] italic">
+          v0.1 prototype. Greedy gap-aware optimizer over 7 policy archetypes
+          and 9 MSAs. Pair with{" "}
+          <Link href="/model/policy" className="text-[var(--accent-text)] hover:underline">
+            /model/policy
+          </Link>{" "}
+          to stress-test individual policies, or{" "}
+          <Link href="/model" className="text-[var(--accent-text)] hover:underline">
+            /model
+          </Link>{" "}
+          to adjust the underlying assumptions.
+        </p>
+      </header>
+
+      {/* Step 1 — Region */}
+      <Step number={1} title="Pick a region">
+        <select
+          value={regionId}
+          onChange={(e) => setRegionId(e.target.value)}
+          className="w-full bg-card border border-card rounded-lg px-4 py-3 text-base text-[var(--foreground)]"
+        >
+          {regions.map((r) => (
+            <option key={r.id} value={r.id}>
+              {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
+            </option>
+          ))}
+        </select>
+        <p className="text-sm text-[var(--muted)] mt-2 leading-[1.6]">
+          <strong className="text-[var(--foreground)]">{region.name}.</strong>{" "}
+          {region.concentrationNote}
+        </p>
+      </Step>
+
+      {/* Step 2 — Scenario */}
+      <Step number={2} title="Pick a scenario">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5">
+          {Object.entries(SCENARIOS).map(([id, s]) => (
+            <button
+              key={id}
+              onClick={() => setScenarioId(id as keyof typeof SCENARIOS)}
+              className={`text-left p-3.5 rounded-lg border-2 transition-colors hover:border-[var(--foreground)] ${
+                scenarioId === id
+                  ? "border-[var(--foreground)] bg-card"
+                  : "border-card bg-card"
+              }`}
+            >
+              <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+                {s.tagline}
+              </p>
+              <p className="text-sm font-semibold text-[var(--foreground)]">{s.name}</p>
+            </button>
+          ))}
+        </div>
+      </Step>
+
+      {/* Step 3 — Budget */}
+      <Step number={3} title="Set the budget">
+        <div className="bg-card border border-card rounded-lg p-5">
+          <div className="flex items-baseline justify-between mb-3">
+            <label className="text-sm text-[var(--foreground)]">
+              Total investment over the policy horizons
+            </label>
+            <span className="text-3xl font-bold text-[var(--foreground)] tabular-nums">
+              ${budgetMillions}M
+            </span>
+          </div>
+          <input
+            type="range"
+            min={1}
+            max={500}
+            step={1}
+            value={budgetMillions}
+            onChange={(e) => setBudgetMillions(parseInt(e.target.value, 10))}
+            className="w-full accent-[var(--accent-text)] cursor-pointer"
+          />
+          <div className="flex justify-between text-xs text-[var(--muted)] mt-1 tabular-nums">
+            <span>$1M</span>
+            <span>$50M</span>
+            <span>$250M</span>
+            <span>$500M</span>
+          </div>
+          <div className="mt-3 flex gap-2 flex-wrap">
+            {[2, 10, 25, 50, 100, 250].map((v) => (
+              <button
+                key={v}
+                onClick={() => setBudgetMillions(v)}
+                className={`text-xs px-2 py-1 rounded border ${
+                  budgetMillions === v
+                    ? "bg-[var(--accent-text)] text-white border-[var(--accent-text)]"
+                    : "bg-[var(--background)] border-card text-[var(--muted)] hover:border-[var(--foreground)]"
+                }`}
+              >
+                ${v}M
+              </button>
+            ))}
+          </div>
+        </div>
+      </Step>
+
+      {/* Recommendation report */}
+      <div className="mt-10 bg-card border border-card rounded-lg p-6 sm:p-8">
+        <div className="flex items-baseline justify-between mb-1 flex-wrap gap-2">
+          <p className="text-xs uppercase tracking-[0.18em] text-[var(--muted)]">
+            Recommended portfolio — {region.name}
+          </p>
+          <p className="text-xs text-[var(--muted)]">
+            Budget <strong className="text-[var(--foreground)]">${budgetMillions}M</strong>
+            {" · "}Scenario: <strong className="text-[var(--foreground)]">{SCENARIOS[scenarioId].name}</strong>
+            {" · "}Horizon: {knobs.horizonYears}yr
+          </p>
+        </div>
+        <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 leading-tight">
+          Allocate {Math.round((recommendation.spentMillions / budgetMillions) * 100)}% across {recommendation.selected.length} {recommendation.selected.length === 1 ? "policy" : "policies"} for{" "}
+          <span style={{ color: recommendation.portfolioJobsDelta >= 0 ? "#3a8a4f" : "#d4493a" }}>
+            {formatJobs(recommendation.portfolioJobsDelta, true)} jobs
+          </span>
+        </h2>
+
+        {/* A — Allocation */}
+        <ReportSection
+          heading="A · Portfolio allocation"
+          subhead={`${recommendation.selected.length} ${recommendation.selected.length === 1 ? "policy selected" : "policies selected"}. Greedy optimizer favors gap-covering policies (those that address a framework category not yet in the portfolio).`}
+        >
+          {recommendation.selected.length === 0 ? (
+            <p className="text-sm text-[var(--muted)] italic">
+              Budget too small to fund any policy at ≥25% scale. Try $5M+ to
+              see meaningful portfolio recommendations.
+            </p>
+          ) : (
+            <div className="space-y-3">
+              {recommendation.selected.map((sel) => (
+                <AllocationRow
+                  key={sel.policy.id}
+                  selection={sel}
+                  totalBudget={budgetMillions}
+                />
+              ))}
+              {recommendation.unspentMillions > 0.5 && (
+                <div className="text-xs text-[var(--muted)] italic px-3 py-2 bg-[var(--background)] rounded">
+                  <strong className="text-[var(--foreground)]">
+                    ${recommendation.unspentMillions.toFixed(1)}M unspent
+                  </strong>{" "}
+                  — remaining policies are either too expensive at their
+                  minimum-effective scale, redundant on framework coverage, or
+                  ineffective in this region under this scenario. See &ldquo;Skipped
+                  policies&rdquo; below.
+                </div>
+              )}
+            </div>
+          )}
+        </ReportSection>
+
+        {/* B — Impact */}
+        <ReportSection
+          heading="B · Net impact vs no investment"
+          subhead="What the chosen portfolio buys in jobs, plus comparison to spending the same money on the single best policy."
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <BigStat
+              label="Portfolio Δ"
+              value={formatJobs(recommendation.portfolioJobsDelta, true)}
+              sub="vs no-policy baseline"
+              color={recommendation.portfolioJobsDelta >= 0 ? "#3a8a4f" : "#d4493a"}
+            />
+            <BigStat
+              label="Best single policy Δ"
+              value={formatJobs(recommendation.bestSingleJobsDelta, true)}
+              sub={recommendation.bestSinglePolicy?.name ?? "—"}
+              color={recommendation.bestSingleJobsDelta >= 0 ? "#3a8a4f" : "#d4493a"}
+            />
+            <BigStat
+              label="Portfolio advantage"
+              value={
+                recommendation.bestSingleJobsDelta > 0
+                  ? `+${(((recommendation.portfolioJobsDelta - recommendation.bestSingleJobsDelta) / recommendation.bestSingleJobsDelta) * 100).toFixed(0)}%`
+                  : "n/a"
+              }
+              sub="extra jobs from diversifying"
+              color={
+                recommendation.portfolioJobsDelta > recommendation.bestSingleJobsDelta
+                  ? "#3a8a4f"
+                  : "#7a7e8b"
+              }
+            />
+          </div>
+          <p className="text-xs text-[var(--muted)] mt-3 italic leading-[1.6]">
+            Cost per net job moved: ~$
+            {Math.abs(recommendation.portfolioJobsDelta) > 0
+              ? (
+                  (recommendation.spentMillions * 1_000_000) /
+                  Math.abs(recommendation.portfolioJobsDelta)
+                ).toFixed(0)
+              : "—"}
+            . This is a structural cost estimate, not an impact-evaluation
+            number. Real cost-per-job requires longitudinal program data.
+          </p>
+        </ReportSection>
+
+        {/* C — Workforce impact aggregated */}
+        <ReportSection
+          heading="C · Workforce impact across the portfolio"
+          subhead="Aggregated workforce-side outcomes from the selected policies — who benefits and what changes for them, the employers, and the regional economy."
+        >
+          {recommendation.selected.length === 0 ? (
+            <p className="text-sm text-[var(--muted)] italic">
+              No policies selected at this budget level.
+            </p>
+          ) : (
+            <>
+              {/* Populations served */}
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  Populations served
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {Array.from(
+                    new Set(
+                      recommendation.selected.flatMap((s) => s.policy.targetPopulations ?? [])
+                    )
+                  ).map((pop) => (
+                    <span
+                      key={pop}
+                      className="text-xs px-2 py-1 rounded bg-[var(--background)] border border-divider text-[var(--foreground)]"
+                    >
+                      {pop}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Concrete workforce mechanisms — surface up to 6 across portfolio */}
+              <div className="mb-4">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  What this portfolio does for workers
+                </p>
+                <ul className="space-y-1.5 text-sm text-[var(--muted)] leading-[1.6] list-disc ml-5">
+                  {recommendation.selected
+                    .flatMap((s) =>
+                      (s.policy.workforceImpacts ?? []).map((imp) => ({
+                        policy: s.policy.name,
+                        impact: imp,
+                      }))
+                    )
+                    .slice(0, 6)
+                    .map((row, i) => (
+                      <li key={i}>
+                        {row.impact}{" "}
+                        <span className="text-[10px] text-[var(--muted)] italic">
+                          ({row.policy})
+                        </span>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+
+              {/* Sectoral focus across portfolio */}
+              <div className="mb-5">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  Sectoral concentration in {region.name}
+                </p>
+                <p className="text-sm text-[var(--muted)] leading-[1.6]">
+                  {(() => {
+                    const targetSet = new Set<string>();
+                    let crossSectorCount = 0;
+                    recommendation.selected.forEach((s) => {
+                      if (s.policy.targetSectors) {
+                        s.policy.targetSectors.forEach((n) => targetSet.add(n));
+                      } else {
+                        crossSectorCount++;
+                      }
+                    });
+                    const targets = Array.from(targetSet)
+                      .map((n) => sectors.find((s) => s.naics === n)?.name ?? n)
+                      .join(", ");
+                    return `${crossSectorCount > 0 ? `${crossSectorCount} cross-sector ${crossSectorCount === 1 ? "policy" : "policies"}` : ""}${crossSectorCount > 0 && targets ? "; " : ""}${targets ? `sector-specific lift in ${targets}` : ""}.`;
+                  })()}
+                </p>
+              </div>
+
+              {/* Secondary: model dimensions moved */}
+              <div className="pt-4 border-t border-divider">
+                <p className="text-xs uppercase tracking-wider text-[var(--muted)] mb-2">
+                  Model dimensions moved
+                </p>
+                <div className="flex flex-wrap items-center gap-2">
+                  {(["adoption", "friction"] as const).map((cat) => {
+                    const meta = FRAMEWORK_LABELS[cat];
+                    const covered = recommendation.categoriesCovered.includes(cat);
+                    return (
+                      <span
+                        key={cat}
+                        className="text-[11px] px-2 py-1 rounded font-medium"
+                        style={{
+                          background: covered ? `${meta.color}20` : "transparent",
+                          color: covered ? meta.color : "var(--muted)",
+                          border: covered ? `1px solid ${meta.color}40` : "1px solid var(--divider)",
+                        }}
+                      >
+                        {covered ? "✓" : "○"} {meta.label}
+                      </span>
+                    );
+                  })}
+                  <span className="text-[11px] text-[var(--muted)] italic ml-1">
+                    AI Capability + Demand Elasticity are structural — set by the AI frontier and market, not movable by policy.
+                  </span>
+                </div>
+              </div>
+            </>
+          )}
+        </ReportSection>
+
+        {/* D — Budget sensitivity */}
+        <ReportSection
+          heading="D · Budget sensitivity"
+          subhead="What changes at half and double the budget. Use this to argue for or against incremental dollars."
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <BudgetSensitivityCard
+              label="Half budget"
+              budget={budgetMillions * 0.5}
+              rec={halfBudgetRec}
+              vsBaseline={recommendation.portfolioJobsDelta}
+            />
+            <BudgetSensitivityCard
+              label="Current budget"
+              budget={budgetMillions}
+              rec={recommendation}
+              vsBaseline={recommendation.portfolioJobsDelta}
+              current
+            />
+            <BudgetSensitivityCard
+              label="Double budget"
+              budget={budgetMillions * 2}
+              rec={doubleBudgetRec}
+              vsBaseline={recommendation.portfolioJobsDelta}
+            />
+          </div>
+          <p className="text-xs text-[var(--muted)] mt-3 leading-[1.6]">
+            <strong className="text-[var(--foreground)]">Marginal jobs per extra $1M:</strong>{" "}
+            ~{(
+              ((doubleBudgetRec.portfolioJobsDelta - recommendation.portfolioJobsDelta) /
+                (budgetMillions))
+            ).toFixed(0)}{" "}
+            from the current budget upward. If this number is large, more
+            money is well-spent. If it&apos;s small or negative, the catalog
+            is saturated and the next dollar would be better spent elsewhere.
+          </p>
+        </ReportSection>
+
+        {/* E — Skipped */}
+        {recommendation.skipped.length > 0 && (
+          <ReportSection
+            heading="E · Skipped policies"
+            subhead="Policies in the catalog that didn't make the portfolio, with reasons. Transparency on what the optimizer rejected."
+          >
+            <div className="space-y-2">
+              {recommendation.skipped.map((s) => (
+                <div
+                  key={s.policy.id}
+                  className="rounded-lg px-3 py-2 bg-[var(--background)] border border-divider flex items-baseline justify-between gap-3 flex-wrap"
+                >
+                  <span className="text-sm text-[var(--foreground)]">
+                    {s.policy.name}
+                  </span>
+                  <span className="text-xs text-[var(--muted)] italic">
+                    {s.reason}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </ReportSection>
+        )}
+
+        {/* F — Honesty */}
+        <ReportSection
+          heading="F · Honesty notes"
+          subhead=""
+        >
+          <ul className="text-sm text-[var(--muted)] leading-[1.65] list-disc ml-5 space-y-1.5">
+            <li>
+              <strong className="text-[var(--foreground)]">Linear scaling assumption.</strong>{" "}
+              Funding a policy at 50% scale produces ~50% of its effect. Real-world
+              programs often have minimum effective scale and non-linear returns —
+              this is a known approximation.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Greedy, not optimal.</strong>{" "}
+              The optimizer is a gap-aware greedy heuristic, not a full integer
+              programming solve. For most realistic catalogs this is within a few
+              percent of optimal.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Catalog is illustrative.</strong>{" "}
+              The 7 policies are research-anchored archetypes, not the universe of
+              real interventions. A region&apos;s actual best portfolio may include
+              policies not yet in the catalog.
+            </li>
+            <li>
+              <strong className="text-[var(--foreground)]">Use as a planning frame.</strong>{" "}
+              Treat the recommendation as a structured thinking tool. The portfolio
+              gives you a defensible starting allocation and a checklist of trade-offs;
+              the actual political and operational choices still require local judgment.
+            </li>
+          </ul>
+        </ReportSection>
+
+        <div className="mt-8 pt-5 border-t border-divider flex items-center justify-between flex-wrap gap-3">
+          <p className="text-xs text-[var(--muted)] italic">
+            Generated by jobsdata.ai composite displacement model · Catalog
+            policies sourced from workforce-program literature
+          </p>
+          <div className="flex gap-3 text-xs">
+            <Link href="/model/policy" className="text-[var(--accent-text)] hover:underline">
+              ↗ Diagnose a single policy
+            </Link>
+            <Link href="/model" className="text-[var(--accent-text)] hover:underline">
+              ↗ Adjust model assumptions
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ────────────────────────────────────────────────────────────────────
+// Components
+// ────────────────────────────────────────────────────────────────────
+
+function Step({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
+  return (
+    <section className="mb-8">
+      <div className="flex items-baseline gap-3 mb-3">
+        <span className="text-xs font-semibold text-white bg-[var(--foreground)] w-6 h-6 rounded flex items-center justify-center tabular-nums">
+          {number}
+        </span>
+        <h2 className="text-base font-semibold text-[var(--foreground)]">{title}</h2>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+function ReportSection({
+  heading,
+  subhead,
+  children,
+}: {
+  heading: string;
+  subhead: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="mb-7 pb-6 border-b border-divider last:border-0 last:pb-0 last:mb-0">
+      <h3 className="text-base font-semibold text-[var(--foreground)] mb-1">{heading}</h3>
+      {subhead && <p className="text-sm text-[var(--muted)] leading-[1.5] mb-4">{subhead}</p>}
+      {children}
+    </div>
+  );
+}
+
+function BigStat({
+  label,
+  value,
+  sub,
+  color,
+}: {
+  label: string;
+  value: string;
+  sub?: string;
+  color: string;
+}) {
+  return (
+    <div className="bg-[var(--background)] rounded-lg p-3 border border-divider">
+      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">{label}</p>
+      <p className="text-xl font-bold tabular-nums" style={{ color }}>
+        {value}
+      </p>
+      {sub && <p className="text-[11px] text-[var(--muted)] mt-0.5">{sub}</p>}
+    </div>
+  );
+}
+
+function AllocationRow({
+  selection,
+  totalBudget,
+}: {
+  selection: {
+    policy: ModelPolicy;
+    allocationMillions: number;
+    scale: number;
+    standaloneJobsDelta: number;
+  };
+  totalBudget: number;
+}) {
+  const widthPct = (selection.allocationMillions / totalBudget) * 100;
+  return (
+    <div className="bg-[var(--background)] rounded-lg p-3 border border-divider">
+      <div className="flex items-baseline justify-between gap-3 mb-1.5 flex-wrap">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="text-sm font-semibold text-[var(--foreground)] truncate">
+            {selection.policy.name}
+          </span>
+          {selection.scale < 0.99 && (
+            <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 bg-[#a36e1e15] text-[#a36e1e] rounded">
+              {(selection.scale * 100).toFixed(0)}% scale
+            </span>
+          )}
+        </div>
+        <div className="flex items-baseline gap-3 text-xs">
+          <span className="font-medium text-[var(--foreground)] tabular-nums">
+            ${selection.allocationMillions.toFixed(1)}M
+          </span>
+          <span className="tabular-nums text-[#3a8a4f]">
+            {formatJobs(selection.standaloneJobsDelta, true)} jobs (standalone)
+          </span>
+        </div>
+      </div>
+      <div className="h-2 bg-card rounded overflow-hidden">
+        <div
+          className="h-full bg-[var(--accent-text)] rounded"
+          style={{ width: `${widthPct}%` }}
+        />
+      </div>
+      <div className="flex items-center gap-1.5 mt-2 flex-wrap">
+        {(selection.policy.targetPopulations ?? []).slice(0, 3).map((pop) => (
+          <span
+            key={pop}
+            className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--background)] text-[var(--muted)]"
+          >
+            {pop}
+          </span>
+        ))}
+      </div>
+      <p className="text-[10px] text-[var(--muted)] mt-1.5 leading-[1.5]">
+        {selection.policy.tagline}
+      </p>
+    </div>
+  );
+}
+
+function BudgetSensitivityCard({
+  label,
+  budget,
+  rec,
+  vsBaseline,
+  current,
+}: {
+  label: string;
+  budget: number;
+  rec: ReturnType<typeof optimizeBudgetPortfolio>;
+  vsBaseline: number;
+  current?: boolean;
+}) {
+  const delta = rec.portfolioJobsDelta - vsBaseline;
+  const pctChange = vsBaseline !== 0 ? (delta / Math.abs(vsBaseline)) * 100 : 0;
+  return (
+    <div
+      className={`rounded-lg p-3 border-2 ${current ? "border-[var(--foreground)]" : "border-divider"}`}
+    >
+      <p className="text-[10px] uppercase tracking-wider text-[var(--muted)] mb-1">
+        {label}
+      </p>
+      <p className="text-base font-bold text-[var(--foreground)] tabular-nums mb-1">
+        ${budget.toFixed(0)}M
+      </p>
+      <p className="text-sm tabular-nums" style={{ color: rec.portfolioJobsDelta >= 0 ? "#3a8a4f" : "#d4493a" }}>
+        {formatJobs(rec.portfolioJobsDelta, true)} jobs
+      </p>
+      {!current && (
+        <p className="text-[11px] text-[var(--muted)] mt-1">
+          {delta >= 0 ? "+" : ""}
+          {formatJobs(delta)} vs current ({pctChange >= 0 ? "+" : ""}
+          {pctChange.toFixed(0)}%)
+        </p>
+      )}
+      <p className="text-[11px] text-[var(--muted)] mt-1">
+        {rec.selected.length} {rec.selected.length === 1 ? "policy" : "policies"} ·{" "}
+        {rec.categoriesCovered.length}/4 categories
+      </p>
+    </div>
+  );
+}
