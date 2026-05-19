@@ -6,6 +6,9 @@ import btosData from "@/data/btos-sectors.json";
 import RegionCombobox from "@/components/model/RegionCombobox";
 import ModelToolsNav from "@/components/model/ModelToolsNav";
 import SectorDistributionStrip from "@/components/model/SectorDistributionStrip";
+import CustomPolicyDialog from "@/components/model/CustomPolicyDialog";
+import { loadCustomPolicies, removeCustomPolicy } from "@/lib/custom-policies";
+import { useEffect } from "react";
 import regionsData from "@/data/regions.json";
 import policiesData from "@/data/policies.json";
 import {
@@ -93,13 +96,20 @@ export default function PolicyAnalysisPage() {
   const [regionId, setRegionId] = useState<string>("pittsburgh");
   const [scenarioId, setScenarioId] = useState<keyof typeof SCENARIOS>("steady");
   const [policyId, setPolicyId] = useState<string | null>(null);
+  const [customPolicies, setCustomPolicies] = useState<ModelPolicy[]>([]);
+  const [uploadOpen, setUploadOpen] = useState(false);
+
+  // Load custom policies from localStorage on mount
+  useEffect(() => {
+    setCustomPolicies(loadCustomPolicies());
+  }, []);
 
   const region = regions.find((r) => r.id === regionId)!;
   const knobs = SCENARIOS[scenarioId].knobs;
-  // Catalog = static policies + dynamically-generated state WIOA plan for selected region
+  // Catalog = static policies + dynamic state WIOA + user-uploaded custom policies
   const fullCatalog = useMemo<ModelPolicy[]>(
-    () => [...staticCatalog, generateStateWioaPolicy(region)],
-    [region]
+    () => [...customPolicies, ...staticCatalog, generateStateWioaPolicy(region)],
+    [region, customPolicies]
   );
   const policy = policyId ? fullCatalog.find((p) => p.id === policyId) ?? null : null;
 
@@ -227,6 +237,25 @@ export default function PolicyAnalysisPage() {
 
       {/* Step 3 — Policy */}
       <Step number={3} title="Pick a policy to review">
+        <div className="mb-3 flex items-center justify-between flex-wrap gap-2">
+          <p className="text-sm text-[var(--muted)]">
+            13 standard policies + your selected region&apos;s state WIOA plan
+            {customPolicies.length > 0 && (
+              <span className="text-[var(--accent-text)]">
+                {" "}
+                + {customPolicies.length} of your custom polic{customPolicies.length === 1 ? "y" : "ies"}
+              </span>
+            )}
+            .
+          </p>
+          <button
+            type="button"
+            onClick={() => setUploadOpen(true)}
+            className="text-sm px-3 py-1.5 rounded border border-[var(--accent-text)] text-[var(--accent-text)] hover:bg-[var(--accent-text)] hover:text-white transition-colors"
+          >
+            + Upload your own policy
+          </button>
+        </div>
         <div className="space-y-5">
           {groupPoliciesByTopic(fullCatalog).map(({ topic, policies: topicPolicies }) => (
             <PolicyTopicGroup
@@ -661,6 +690,16 @@ export default function PolicyAnalysisPage() {
           </p>
         </div>
       )}
+
+      <CustomPolicyDialog
+        open={uploadOpen}
+        onClose={() => setUploadOpen(false)}
+        onAdded={(p) => {
+          setCustomPolicies((prev) => [p, ...prev.filter((x) => x.id !== p.id)]);
+          setPolicyId(p.id);
+          setUploadOpen(false);
+        }}
+      />
     </div>
   );
 }

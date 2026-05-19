@@ -6,6 +6,9 @@ import btosData from "@/data/btos-sectors.json";
 import RegionCombobox from "@/components/model/RegionCombobox";
 import ModelToolsNav from "@/components/model/ModelToolsNav";
 import SectorDistributionStrip from "@/components/model/SectorDistributionStrip";
+import CustomPolicyDialog from "@/components/model/CustomPolicyDialog";
+import { loadCustomPolicies } from "@/lib/custom-policies";
+import { useEffect } from "react";
 import regionsData from "@/data/regions.json";
 import policiesData from "@/data/policies.json";
 import {
@@ -93,16 +96,22 @@ function formatJobs(n: number, signed = false): string {
 export default function PortfolioBuilderPage() {
   const [regionId, setRegionId] = useState<string>("pittsburgh");
   const [scenarioId, setScenarioId] = useState<keyof typeof SCENARIOS>("steady");
+  const [customPolicies, setCustomPolicies] = useState<ModelPolicy[]>([]);
+  const [uploadOpen, setUploadOpen] = useState(false);
+
+  useEffect(() => {
+    setCustomPolicies(loadCustomPolicies());
+  }, []);
   // allocations: policyId -> $M allocated (0 to typical cost)
   const [allocations, setAllocations] = useState<Record<string, number>>({});
 
   const region = regions.find((r) => r.id === regionId)!;
   const knobs = SCENARIOS[scenarioId].knobs;
 
-  // Catalog = static policies + dynamic state WIOA plan for selected region
+  // Catalog = static policies + dynamic state WIOA + user-uploaded custom policies
   const fullCatalog = useMemo<ModelPolicy[]>(
-    () => [...staticCatalog, generateStateWioaPolicy(region)],
-    [region]
+    () => [...customPolicies, ...staticCatalog, generateStateWioaPolicy(region)],
+    [region, customPolicies]
   );
 
   const selectedPolicies = useMemo(
@@ -267,10 +276,23 @@ export default function PortfolioBuilderPage() {
       {/* Step 3 — Allocate to policies */}
       <Step number={3} title={`Allocate funding across the catalog (${fullCatalog.length} policies)`}>
         <div className="mb-3 flex items-baseline justify-between flex-wrap gap-2">
-          <p className="text-sm text-[var(--muted)]">
+          <p className="text-sm text-[var(--muted)] max-w-2xl">
             Move the slider for each policy you want to fund. Set to $0 to exclude. Each policy has a &ldquo;typical full funding&rdquo; cost; the model scales effects linearly down to 25% of that cost.
+            {customPolicies.length > 0 && (
+              <span className="text-[var(--accent-text)]">
+                {" "}
+                Includes {customPolicies.length} custom polic{customPolicies.length === 1 ? "y" : "ies"} you uploaded.
+              </span>
+            )}
           </p>
           <div className="flex items-baseline gap-3 text-sm">
+            <button
+              type="button"
+              onClick={() => setUploadOpen(true)}
+              className="text-xs px-2 py-1 rounded border border-[var(--accent-text)] text-[var(--accent-text)] hover:bg-[var(--accent-text)] hover:text-white transition-colors"
+            >
+              + Upload policy
+            </button>
             <span className="text-[var(--muted)]">Total:</span>
             <span className="text-xl font-bold text-[var(--foreground)] tabular-nums">
               ${totalAllocated.toFixed(1)}M
@@ -531,6 +553,20 @@ export default function PortfolioBuilderPage() {
           </p>
         </div>
       )}
+
+      <CustomPolicyDialog
+        open={uploadOpen}
+        onClose={() => setUploadOpen(false)}
+        onAdded={(p) => {
+          setCustomPolicies((prev) => [p, ...prev.filter((x) => x.id !== p.id)]);
+          // Auto-fund the new policy at 50% of typical to make its effect visible immediately
+          setAllocations((prev) => ({
+            ...prev,
+            [p.id]: p.typicalCostMillions * 0.5,
+          }));
+          setUploadOpen(false);
+        }}
+      />
     </div>
   );
 }
