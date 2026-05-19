@@ -534,6 +534,9 @@ export interface Region {
   totalEmploymentK: number;
   concentrationNote: string;
   sectorShares: Record<string, number>; // naics → share of regional employment (0-1)
+  /** True for hand-tuned MSAs with research-anchored sector shares; false for
+   * generated MSAs using national-average shares. */
+  curated?: boolean;
 }
 
 export interface ModelPolicy {

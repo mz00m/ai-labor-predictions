@@ -176,17 +176,7 @@ export default function PolicyAnalysisPage() {
       <Step number={1} title="Pick a region">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-4">
           <div>
-            <select
-              value={regionId}
-              onChange={(e) => setRegionId(e.target.value)}
-              className="w-full bg-card border border-card rounded-lg px-4 py-3 text-base text-[var(--foreground)]"
-            >
-              {regions.map((r) => (
-                <option key={r.id} value={r.id}>
-                  {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
-                </option>
-              ))}
-            </select>
+            <RegionSelect regionId={regionId} setRegionId={setRegionId} />
             <p className="text-sm text-[var(--muted)] mt-2 leading-[1.6]">
               <strong className="text-[var(--foreground)]">{region.name}.</strong> {region.concentrationNote}
             </p>
@@ -905,6 +895,53 @@ function PostPolicySectorBreakdown({
         )}
       </div>
     </div>
+  );
+}
+
+/** State-grouped region picker with curated MSAs at the top. */
+function RegionSelect({
+  regionId,
+  setRegionId,
+}: {
+  regionId: string;
+  setRegionId: (id: string) => void;
+}) {
+  const curated = regions.filter((r) => r.curated);
+  const others = regions.filter((r) => !r.curated);
+  // Group "others" by state
+  const byState = new Map<string, Region[]>();
+  for (const r of others) {
+    if (!byState.has(r.state)) byState.set(r.state, []);
+    byState.get(r.state)!.push(r);
+  }
+  const sortedStates = Array.from(byState.keys()).sort();
+
+  return (
+    <select
+      value={regionId}
+      onChange={(e) => setRegionId(e.target.value)}
+      className="w-full bg-card border border-card rounded-lg px-4 py-3 text-base text-[var(--foreground)]"
+    >
+      <optgroup label="Featured MSAs (detailed sector data)">
+        {curated.map((r) => (
+          <option key={r.id} value={r.id}>
+            {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
+          </option>
+        ))}
+      </optgroup>
+      {sortedStates.map((state) => (
+        <optgroup key={state} label={`${state} (national-average shares)`}>
+          {byState
+            .get(state)!
+            .sort((a, b) => b.totalEmploymentK - a.totalEmploymentK)
+            .map((r) => (
+              <option key={r.id} value={r.id}>
+                {r.name} — {r.totalEmploymentK.toLocaleString()}K jobs
+              </option>
+            ))}
+        </optgroup>
+      ))}
+    </select>
   );
 }
 
