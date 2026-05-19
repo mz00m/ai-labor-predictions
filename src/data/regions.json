@@ -105,6 +105,19 @@
         "53": 0.020, "54": 0.088, "55": 0.018, "56": 0.080, "61": 0.060,
         "62": 0.150, "71": 0.020, "72": 0.108, "81": 0.040
       }
+    },
+    {
+      "id": "arizona-statewide",
+      "name": "Arizona (statewide)",
+      "state": "AZ",
+      "totalEmploymentK": 3050,
+      "concentrationNote": "Statewide WIOA planning area. Phoenix-Mesa dominates (~75% of jobs); Tucson and rural areas add mining (copper), agriculture, and tourism exposure. Semiconductor cluster expanding (TSMC, Intel). Healthcare is the largest single sector.",
+      "sectorShares": {
+        "11": 0.008, "21": 0.012, "22": 0.005, "23": 0.072, "31-33": 0.062,
+        "42": 0.038, "44-45": 0.115, "48-49": 0.040, "51": 0.018, "52": 0.070,
+        "53": 0.020, "54": 0.080, "55": 0.015, "56": 0.080, "61": 0.062,
+        "62": 0.145, "71": 0.020, "72": 0.105, "81": 0.040
+      }
     }
   ]
 }

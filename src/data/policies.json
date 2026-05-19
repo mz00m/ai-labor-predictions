@@ -90,6 +90,28 @@
       }
     },
     {
+      "id": "arizona-wioa-2024-2027",
+      "name": "Arizona WIOA State Plan (PY 2024–2027)",
+      "category": "State Workforce System Plan",
+      "tagline": "Comprehensive WIOA Title I plan: career pathways, registered apprenticeship, Rapid Response, youth services, and Wagner-Peyser employment services across the state",
+      "description": "The Arizona state WIOA plan for Program Years 2024-2027 bundles career pathways and registered apprenticeship (targeting healthcare, advanced manufacturing/semiconductors, and construction), Individual Training Accounts, Rapid Response services for layoffs and plant closings, Trade Adjustment Assistance, pre-employment transition services, and youth in/out-of-school services. Multi-intervention, statewide, covering adults, dislocated workers, youth, veterans, and individuals with disabilities. Modeled here as an aggregated bundle that primarily strengthens the Friction Buffer (worker adaptability and complementarity) in target sectors, with secondary effects on Adoption Speed through employer engagement.",
+      "typicalCostMillions": 200,
+      "durationYears": 4,
+      "targetSectors": ["62", "31-33", "23", "61"],
+      "evidence": "WIOA Title I formula funds Arizona at roughly $40-55M/year (PYs 2024-2027 ≈ $200M total Title I, excluding Adult Education, Vocational Rehabilitation, and Wagner-Peyser additions). National WIOA Adult/DW outcome studies show modest but real wage and re-employment gains; outcomes vary widely by local board and program quality. Arizona's plan emphasizes the semiconductor cluster (TSMC, Intel) — sectoral training programs in this space have historically tracked Project QUEST-style outcomes when employer engagement is strong.",
+      "evidenceUrl": "https://wioaplans.dol.gov/node/451901",
+      "addresses": ["friction", "adoption"],
+      "sectorOverrides": {
+        "62": { "frictionDrag": -0.06, "complementarity": 0.03 },
+        "31-33": { "frictionDrag": -0.05, "complementarity": 0.04 },
+        "23": { "frictionDrag": -0.04, "complementarity": 0.02 },
+        "61": { "frictionDrag": -0.03 }
+      },
+      "knobShifts": {
+        "trustMultiplier": 1.05
+      }
+    },
+    {
       "id": "public-llm-smb",
       "name": "Public AI Compute Access (SMB)",
       "category": "Infrastructure",
