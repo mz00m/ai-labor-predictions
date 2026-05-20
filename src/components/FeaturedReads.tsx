@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Andrew R. Hanson (Strada Institute)",
+    title: "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+    summary:
+      "Strada's survey of 1,498 US executives and senior talent leaders (Mar 2026) finds AI is, so far, a net positive for entry-level hiring. In 2025, 46% of employers that have at least explored AI say it raised entry-level hiring vs 13% who say it cut — nearly 4-to-1 — and 2.7x more expect AI to raise than cut hiring in 2026. Greater AI use is the single most-cited positive driver (27%). But the bar is rising: 42% say AI shifted entry-level work toward analytical, judgment-based tasks while 41% report routine admin tasks shrinking, and among the minority cutting roles, reductions concentrate in admin (46%) and customer support (44%). Notably, employers rank AI literacy the least important skill — behind critical thinking and communication.",
+    date: "May 2026",
+    url: "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+  },
+  {
     author: "Garg, Crosta & Baier",
     title: "Global Automation Atlas",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The strongest null-result paper to date. Using synthetic differences-in-differences to compare AI-exposed (top tercile) vs. a synthetic-control group built from unexposed occupations, the authors find no statistically significant AI effect on employment shares or real hourly wages through 2026Q1. Unemployment rose ~0.5pp in the latest quarter for the AI-exposed group (more for 16–34 year olds) but remains statistically insignificant. Honest about the limits: LLMs are still improving, exposure metrics may misclassify, CPS is underpowered for the 22–27 cohort. Required reading for anyone calibrating their confidence about what the data already shows.",
     date: "May 7",
     url: "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
-  },
-  {
-    author: "Ezra Klein (NYT)",
-    title: "Why the A.I. Job Apocalypse (Probably) Won't Happen",
-    summary:
-      "Klein's macro-vs-anecdata case: unemployment 4.3% in Mar 2026 vs 4.4% in Mar 2020, hourly earnings stable, software engineer demand booming despite Claude Code. Drawing on Imas's 'what becomes scarce' framework, predicts labor shifts to the relational sector — Nespresso didn't kill baristas; coffee shops kept multiplying. Cites VisiCalc (1979) which quadrupled accountant employment over 40 years rather than displacing them. The harder scenario isn't 80M displaced but 8M: the U.S. responds poorly to localized shocks (cf. China shock's ~2M jobs), so partial AI displacement may go untreated.",
-    date: "May 3",
-    url: "https://www.nytimes.com/2026/05/03/opinion/ai-jobs-unemployment-silicon-valley.html",
   },
 ];
 

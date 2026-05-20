@@ -668,6 +668,15 @@
       ],
       "evidenceTier": 1,
       "label": "Eurostat: 19.95% of EU enterprises (10+ employees) used at least one AI technology in 2025 (isoc_eb_ai)"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "strada-entry-level-hiring-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Strada: 92% of employers engaging with AI; only 8% have no plans to adopt"
     }
   ],
   "sources": [
@@ -1289,6 +1298,16 @@
       "datePublished": "2025-12-01",
       "excerpt": "In 2025, 19.95% of EU enterprises with 10 or more employees used at least one of the eight AI technologies covered (text mining, speech recognition, natural language generation, image recognition, machine learning, AI-based workflow automation, autonomous machines/vehicles, and AI-based decision systems). Data extracted December 2025 from Eurostat dataset isoc_eb_ai. The Brookings FCAI dialogue briefing cites this figure as the EU diffusion benchmark.",
       "dateAdded": "2026-05-11"
+    },
+    {
+      "id": "strada-entry-level-hiring-ai-2026",
+      "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+      "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+      "publisher": "Strada Institute for the Future of Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Only 8 percent of employers report that they have no current plans to use AI tools, while the vast majority of the market has moved into various stages of adoption: 22 percent of firms have reached a state of strategic integration; 32 percent of companies have partially integrated these tools; 20 percent are in a developing phase; and 18 percent are exploring the use of AI tools.",
+      "dateAdded": "2026-05-20"
     }
   ]
 }

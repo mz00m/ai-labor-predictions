@@ -370,7 +370,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → AI surpasses all human customer service agents by 2030"
+      "label": "FRI: Rapid scenario \u2192 AI surpasses all human customer service agents by 2030"
     },
     {
       "date": "2026-04-01",
@@ -425,6 +425,15 @@
         "metaculus-labor-hub-2026"
       ],
       "evidenceTier": 2
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "strada-entry-level-hiring-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Strada: 44% of employers cutting entry-level hiring cite customer support cuts"
     }
   ],
   "sources": [
@@ -453,7 +462,7 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch \u2014 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -516,7 +525,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,
@@ -678,7 +687,7 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
       "excerpt": "Customer service agents (SSYK 4222) display the same age gradient as the economy-wide canaries effect, lying between the augmentation and automation poles. All four spotlight occupations show young workers declining, older workers stable or rising.",
@@ -721,7 +730,7 @@
       "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
       "evidenceTier": 2,
       "datePublished": "2026-03-24",
-      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives—Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
+      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives\u2014Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
       "dateAdded": "2026-03-24"
     },
     {
@@ -782,6 +791,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
+    },
+    {
+      "id": "strada-entry-level-hiring-ai-2026",
+      "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+      "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+      "publisher": "Strada Institute for the Future of Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "More than 40 percent of these employers report reduced demand for administrative, customer support, and data analytics roles. [Figure 7: Customer support 44 percent, among employers that said AI led to a decrease in entry-level hiring in 2025, N=172.]",
+      "dateAdded": "2026-05-20"
     }
   ]
 }
