@@ -2,12 +2,22 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+      "author": "Andrew R. Hanson",
+      "publisher": "Strada Institute for the Future of Work",
+      "date": "2026-05-01",
+      "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+      "takeaway": "Strada Institute (with Artemis Strategy Group) surveyed 1,498 US executives and senior talent leaders March 3-22, 2026, weighted to represent employers with 5+ staff that hire at the entry level. The headline: AI is a net positive for entry-level hiring so far. In 2025, 46% of employers that have at least explored AI report it increased entry-level hiring vs 13% reporting a decrease (nearly 4-to-1); for 2026, 2.7x as many expect AI to raise hiring as to cut it (46% positive vs 17% negative). Greater AI use is the most frequently cited single positive driver (27% of firms naming a significant positive factor). But the bar is rising: 42% say AI increased analytical/judgment tasks for entry-level staff while 41% say routine admin tasks shrank, and the minority reducing headcount concentrate cuts in administrative/data-entry (46%), customer support (44%), and data analytics (41%) roles. 92% of employers are engaging with AI in some way (22% strategically integrated); only 8% have no plans. Notably, employers rank AI literacy the least important entry-level skill \u2014 behind critical thinking, communication, and collaboration \u2014 and value relevant work experience over a 4.0 GPA with no work history.",
+      "weekFeatured": "2026-05-20",
+      "tier": 2
+    },
+    {
       "title": "Global Automation Atlas",
       "author": "Garg, Crosta & Baier",
       "publisher": "automationatlas.org",
       "date": "2026-05-18",
       "url": "https://automationatlas.org/",
-      "takeaway": "The first global task-level automation atlas: 18,797 O*NET tasks scored across 124 countries, producing 2.33M task-country labels. Core insight: automation risk is not fixed at the task level — the same task carries different exposure depending on local wages, technology adoption rates, workforce skills, and production environment. Covers nations representing 99%+ of global GDP and population. Provides the cross-country comparative baseline that US-centric indices (Eloundou, Felten, Tomei) cannot offer, and directly challenges the assumption that AI displaces uniformly across geographies.",
+      "takeaway": "The first global task-level automation atlas: 18,797 O*NET tasks scored across 124 countries, producing 2.33M task-country labels. Core insight: automation risk is not fixed at the task level \u2014 the same task carries different exposure depending on local wages, technology adoption rates, workforce skills, and production environment. Covers nations representing 99%+ of global GDP and population. Provides the cross-country comparative baseline that US-centric indices (Eloundou, Felten, Tomei) cannot offer, and directly challenges the assumption that AI displaces uniformly across geographies.",
       "weekFeatured": "2026-05-18",
       "tier": 2
     },
@@ -17,7 +27,7 @@
       "publisher": "DeepLearning.AI (The Batch)",
       "date": "2026-05-08",
       "url": "https://charonhub.deeplearning.ai/ai-will-not-destroy-the-job-market/",
-      "takeaway": "Ng argues the 'AI jobpocalypse' narrative is overblown, citing U.S. unemployment at 4.3% and strong software engineer hiring despite coding agents. He identifies three drivers of the narrative: frontier AI labs incentivized to overstate capability, SaaS companies anchoring pricing to employee salaries rather than software benchmarks, and businesses attributing pandemic-era overhiring corrections to AI. Predicts an 'AI jobapalooza' — net job creation through AI engineering roles and transformed non-AI work. Complements the Ezra Klein (NYT) and Yale Budget Lab pieces from the same week with an industry-insider perspective on why incumbents amplify displacement fears.",
+      "takeaway": "Ng argues the 'AI jobpocalypse' narrative is overblown, citing U.S. unemployment at 4.3% and strong software engineer hiring despite coding agents. He identifies three drivers of the narrative: frontier AI labs incentivized to overstate capability, SaaS companies anchoring pricing to employee salaries rather than software benchmarks, and businesses attributing pandemic-era overhiring corrections to AI. Predicts an 'AI jobapalooza' \u2014 net job creation through AI engineering roles and transformed non-AI work. Complements the Ezra Klein (NYT) and Yale Budget Lab pieces from the same week with an industry-insider perspective on why incumbents amplify displacement fears.",
       "weekFeatured": "2026-05-11",
       "tier": 3
     },
@@ -27,7 +37,7 @@
       "publisher": "Brookings (Forum for Cooperation on AI)",
       "date": "2026-05-05",
       "url": "https://www.brookings.edu/articles/ai-growth-acceleration-versus-distributional-fairness/",
-      "takeaway": "Brookings FCAI briefing synthesizing the productivity–diffusion–distribution trilemma. Frontier capability is racing ahead (Stanford AI Index: training compute doubling every 5 months; private industry produced ~90% of notable 2024 models), but real-world productivity is lagging. The headline finding: an NBER Feb 2026 survey of ~6,000 executives (US/UK/DE/AU) reports ~70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% of firms report no impact on employment or productivity over the past three years. Micro-evidence remains bimodal: a customer-support GenAI study showed +15% productivity (concentrated in novices), while METR's randomized trial found experienced open-source developers using early-2025 AI tools were 19% SLOWER on their own repos. Adoption stats: US BTOS Feb 2026 shows 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat 2025 shows 19.95% of EU firms with 10+ employees. Distributional risk concentrates at entry-level (Stanford Digital Economy Lab); ~88% of language-tagged models on Hugging Face are English-only, widening Global North/South divides. Task-based macro estimates put AI's TFP contribution at <0.66% over 10 years.",
+      "takeaway": "Brookings FCAI briefing synthesizing the productivity\u2013diffusion\u2013distribution trilemma. Frontier capability is racing ahead (Stanford AI Index: training compute doubling every 5 months; private industry produced ~90% of notable 2024 models), but real-world productivity is lagging. The headline finding: an NBER Feb 2026 survey of ~6,000 executives (US/UK/DE/AU) reports ~70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% of firms report no impact on employment or productivity over the past three years. Micro-evidence remains bimodal: a customer-support GenAI study showed +15% productivity (concentrated in novices), while METR's randomized trial found experienced open-source developers using early-2025 AI tools were 19% SLOWER on their own repos. Adoption stats: US BTOS Feb 2026 shows 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat 2025 shows 19.95% of EU firms with 10+ employees. Distributional risk concentrates at entry-level (Stanford Digital Economy Lab); ~88% of language-tagged models on Hugging Face are English-only, widening Global North/South divides. Task-based macro estimates put AI's TFP contribution at <0.66% over 10 years.",
       "weekFeatured": "2026-05-11",
       "tier": 2
     },

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-05-18",
-  "totalSources": 558,
-  "verifiedCount": 548,
+  "lastUpdated": "2026-05-20",
+  "totalSources": 559,
+  "verifiedCount": 549,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7907,6 +7907,22 @@
       "verified": true,
       "synthetic": false,
       "dateAdded": "2026-05-18"
+    },
+    "strada-entry-level-hiring-ai-2026": {
+      "id": "strada-entry-level-hiring-ai-2026",
+      "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+      "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+      "publisher": "Strada Institute for the Future of Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Strada Institute surveyed 1,498 US executives and senior talent leaders (Mar 3-22, 2026). 46% of employers that have at least explored AI say it increased entry-level hiring in 2025 vs 13% decrease (4-to-1); 2.7x more expect AI to raise than cut entry-level hiring in 2026. 92% are engaging with AI in some way; AI literacy is ranked the least important entry-level skill.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "ai-adoption-rate",
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   }
 }

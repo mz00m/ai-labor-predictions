@@ -941,6 +941,33 @@
       "label": "Silicon Continent: BLS projects accountants +5% by 2034, clerks -6%"
     },
     {
+      "date": "2026-05-01",
+      "direction": "down",
+      "sourceIds": [
+        "strada-entry-level-hiring-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Strada: 46% say AI raised entry-level hiring in 2025 vs 13% cut (4-to-1)"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "down",
+      "sourceIds": [
+        "strada-entry-level-hiring-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Strada: 2.7x more employers expect AI to raise vs cut entry-level hiring, 2026"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "strada-entry-level-hiring-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Strada: Among entry-level hiring cutters, 46% cut admin, 44% customer support"
+    },
+    {
       "date": "2026-05-04",
       "direction": "up",
       "sourceIds": [
@@ -1755,6 +1782,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-05-04",
       "excerpt": "Office and Administrative Support occupations (SOC 43) have the highest mean (49.2), followed by Computer and Mathematical (47.1) and Business and Financial (42.0). Data Entry Keyers [71.03], Correspondence Clerks [68.60], Proofreaders and Copy Markers [68.57] lead the index."
+    },
+    {
+      "id": "strada-entry-level-hiring-ai-2026",
+      "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
+      "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
+      "publisher": "Strada Institute for the Future of Work",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "When asked about the impact of AI on entry-level hiring volume at their organization in 2025, 46 percent of employers that have at least explored using AI reported an overall increase, compared to 13 percent reporting a decrease, a ratio of nearly 4-to-1. Nearly three times (2.7 times) as many senior talent leaders expect AI use to increase entry-level hiring in 2026 as to decrease it.",
+      "dateAdded": "2026-05-20"
     }
   ]
 }
