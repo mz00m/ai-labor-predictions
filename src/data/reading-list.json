@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The Frontier and the Froth",
+      "author": "Saanya Ojha",
+      "publisher": "Saanya Ojha (Substack)",
+      "date": "2026-05-22",
+      "url": "https://saanyaojha.substack.com/p/the-frontier-and-the-froth",
+      "takeaway": "A 'two realities' essay on the widening gap between AI's frontier capability and its enterprise implementation. On the frontier: an OpenAI model made progress on the Erdős unit-distance problem — given n points in a plane, how many pairs can be exactly one unit apart — a question open since 1946, finding an infinite family of constructions via algebraic number theory through cross-domain reasoning rather than brute-force search, a Lean formalization, or a recovered proof. Outside mathematicians reviewed it and Fields Medalist Timothy Gowers called it 'a milestone in AI mathematics.' On the floor: Starbucks rolled out an AI inventory-counting tool across more than 11,000 North American company-owned stores in 2025, then scrapped it nine months later over persistent inaccuracies (including confusing similar milk types), reverting to manual counting and daily replenishment. Ojha's central claim is that capability does not automatically become productivity — it must pass through incentives, politics, procurement, org charts, and the competence of the people implementing it. She warns of 'metric theater': companies routing existing workflows through AI features, bundling AI into existing contracts, and subsidizing adoption, then reporting usage numbers that, like adjusted EBITDA, require reading the footnotes. The firms that benefit most won't have the loudest mandates or highest internal usage numbers; they'll redesign workflows, train people, set real standards, and measure actual output.",
+      "weekFeatured": "2026-05-22",
+      "tier": 4
+    },
+    {
       "title": "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
       "author": "Andrew R. Hanson",
       "publisher": "Strada Institute for the Future of Work",
