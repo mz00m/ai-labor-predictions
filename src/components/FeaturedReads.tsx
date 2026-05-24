@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Saanya Ojha (Substack)",
+    title: "The Frontier and the Froth",
+    summary:
+      "A 'two realities' argument: the capability ceiling is rising fast while enterprise implementation stays stubbornly human. At the frontier, an OpenAI model made progress on a unit-distance conjecture Paul Erdős posed in 1946 — cross-domain reasoning, not brute force — which Fields Medalist Timothy Gowers called 'a milestone in AI mathematics.' At the floor, Starbucks scrapped an AI inventory tool deployed across 11,000+ North American stores after nine months of inaccuracies, reverting to manual counts. Ojha's warning: firms route existing workflows through AI and count the collision as adoption — 'metric theater' that inflates usage the way adjusted EBITDA flatters earnings. Capability does not automatically become productivity.",
+    date: "May 22",
+    url: "https://saanyaojha.substack.com/p/the-frontier-and-the-froth",
+  },
+  {
     author: "Andrew R. Hanson (Strada Institute)",
     title: "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Brookings briefing on the productivity–diffusion–distribution trilemma. NBER Feb 2026 survey of ~6,000 US/UK/DE/AU executives: 70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% report no impact on employment or productivity over the past three years. (The briefing also cites METR's original 19% developer-slowdown finding, which METR later retracted in Feb 2026 due to selection bias; the redesigned study suggests a likely speedup with wide CIs.) US BTOS (Feb 2026): 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat (2025): 19.95% of EU firms with 10+ employees. The macro upshot: frontier capability is racing ahead (training compute doubling every 5 months), but diffusion is uneven, complement-bound, and lagging.",
     date: "May 5",
     url: "https://www.brookings.edu/articles/ai-growth-acceleration-versus-distributional-fairness/",
-  },
-  {
-    author: "Gimbel, Kendall & Nunn (Yale Budget Lab)",
-    title: "What We Do and Don't Know About How AI is Affecting the Labor Market",
-    summary:
-      "The strongest null-result paper to date. Using synthetic differences-in-differences to compare AI-exposed (top tercile) vs. a synthetic-control group built from unexposed occupations, the authors find no statistically significant AI effect on employment shares or real hourly wages through 2026Q1. Unemployment rose ~0.5pp in the latest quarter for the AI-exposed group (more for 16–34 year olds) but remains statistically insignificant. Honest about the limits: LLMs are still improving, exposure metrics may misclassify, CPS is underpowered for the 22–27 cohort. Required reading for anyone calibrating their confidence about what the data already shows.",
-    date: "May 7",
-    url: "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
   },
 ];
 
