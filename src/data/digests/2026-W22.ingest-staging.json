@@ -1,0 +1,147 @@
+{
+  "week": "2026-W22",
+  "generatedAt": "2026-05-25T11:53:27.825Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Firm Size and the Automation Wage Premium",
+        "summary": "A new peer-reviewed study examining Italian importing firms from 2011–2019 finds that investment in automation-related goods has heterogeneous wage effects depending on firm size, with larger firms capturing a disproportionate share of the automation wage premium. The research integrates trade, firm, and worker-level datasets to quantify how automation investment widens within-sector wage inequality. These findings suggest that automation benefits accrue unevenly, reinforcing wage polarization patterns observed in other advanced economies. (Bisio, Cuzzola, Grazzi, Moschella, 2026)",
+        "source": "https://doi.org/10.1007/s11187-026-01227-2",
+        "authors": [
+          "Laura Bisio",
+          "Angelo Cuzzola",
+          "Marco Grazzi",
+          "Daniele Moschella"
+        ],
+        "publishedAt": "2026-05-22",
+        "doi": "10.1007/s11187-026-01227-2",
+        "score": 0.329,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "doi-firm-size-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Automation wage premium varies significantly by firm size",
+          "quote": "Firm size and the automation wage premium"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Global Automation Atlas: Country-Specific Automation Exposure Measures",
+        "summary": "Garg, Crosta, and Baier introduce the Global Automation Atlas, a task-based, country-specific framework for measuring automation exposure that moves beyond fixed occupational scores. The atlas reveals substantial cross-country variation in how automation reshapes the labor content of work, challenging the assumption that displacement risk is uniform across national labor markets. This tool provides a richer empirical basis for projecting displacement trajectories in both developed and emerging economies. (Garg, Crosta, Baier, 2026)",
+        "source": "https://arxiv.org/abs/2605.17086",
+        "authors": [
+          "Prashant Garg",
+          "Tommaso Crosta",
+          "Jasmin Baier"
+        ],
+        "publishedAt": "2026-05-16",
+        "score": 0.307,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "arxiv-global-automation-atlas-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Global automation exposure ranges 3.3% (S.Sudan) to 61.6% (China)",
+          "quote": "exposure is highly uneven, ranging from 3.3% of tasks in South Sudan to 61.6% in China, and rises strongly with income"
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Low-income countries disproportionately exposed to labor-substituting automation",
+          "quote": "exposed tasks are skewed towards substitution rather than augmentation, but low-income countries are disproportionately exposed to substitution, whereas middle-income countries are more heterogeneous"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "AI less prevalent in simpler automation channels; more substituting in low-income settings",
+          "quote": "AI tends to be less prevalent in simpler channels of automation, but also more prevalent in labour-substituting margins in lower income settings and to augment labour in higher income settings"
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Females disproportionately more exposed to labour-substituting automation than males",
+          "quote": "females seem to be disproportionately more exposed to labour-substituting automation than males"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Less advanced automation >50% of exposed tasks in low-income, ~25% in high-income countries",
+          "quote": "less technologically advanced forms of automation account for more than half of exposed tasks in low-income countries but about one quarter in high-income countries"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Digital Transformation and Labor Demand in Manufacturing Firms",
+        "summary": "Using data from Chinese A-share listed manufacturing firms between 2011 and 2024, Wang et al. find that corporate digital transformation significantly reshapes labor demand, shifting the composition of hiring toward higher-skill roles while reducing demand for routine production workers. The study highlights that the net employment effect of digitalization is highly contingent on the depth and type of technology adoption. These dynamics closely parallel trends observed in U.S. and European manufacturing sectors undergoing AI-driven transformation. (Wang, Liu, Zhu, Cai, Shao, 2026)",
+        "source": "https://doi.org/10.4018/jgim.410774",
+        "authors": [
+          "Yongming Wang",
+          "Xin Liu",
+          "Yujie Zhu",
+          "Huifen Cai",
+          "Xuefeng Shao"
+        ],
+        "publishedAt": "2026-05-22",
+        "doi": "10.4018/jgim.410774",
+        "score": 0.29,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "doi-digital-transformation-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Forensic Accounting Software Signals Automation Push in Financial Services",
+        "summary": "A Hacker News discussion drawing 50 points and 40 comments highlighted a project in which AI was used to build forensic accounting software, illustrating the growing grassroots adoption of AI tools in specialized financial and legal domains. The project demonstrates that even highly judgment-intensive accounting tasks—traditionally insulated from automation—are increasingly being targeted by AI-assisted workflows. Community reaction suggests practitioners are actively experimenting with AI to displace or augment tasks in audit, compliance, and financial investigation roles. (Case-Trail Blog, 2026)",
+        "source": "https://case-trail.com/blog/ai-forensic-accounting-automation",
+        "publishedAt": "2026-05-22",
+        "score": 0.273,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "financial-services-displacement"
+      },
+      "sourceId": "case-trail-ai-forensic-accounting-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "LLMs Enter Physics Education: Capability and Disruption Assessment",
+        "summary": "Donaldson et al. present results from three complementary studies evaluating LLMs as both problem solvers and automated assessors in physics education, finding that current models perform competitively on standard problem sets and can partially substitute for human assessment at scale. The findings raise immediate questions about the future role of human instructors and teaching assistants in STEM disciplines, particularly at the undergraduate level. The work is part of a broader wave of research examining how generative AI is penetrating education sector workflows. (Donaldson et al., 2026)",
+        "source": "https://arxiv.org/abs/2605.23660v1",
+        "authors": [
+          "Jonah R. Donaldson",
+          "Aliya Navaz",
+          "Konstantinos Doran",
+          "Alysta Lim",
+          "Mario Campanelli"
+        ],
+        "publishedAt": "2026-05-22",
+        "score": 0.409,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "education-sector-displacement"
+      },
+      "sourceId": "arxiv-llms-enter-physics-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
