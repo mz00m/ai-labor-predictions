@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-05-26",
-  "totalSources": 562,
-  "verifiedCount": 552,
+  "totalSources": 563,
+  "verifiedCount": 553,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7967,6 +7967,21 @@
       "usedIn": [
         "ai-business-formation",
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-solomon-goldman-ai-jobs-2026": {
+      "id": "nyt-solomon-goldman-ai-jobs-2026",
+      "title": "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
+      "url": "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
+      "publisher": "The New York Times (David M. Solomon, CEO Goldman Sachs)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-22",
+      "excerpt": "Goldman Sachs's economists estimate that, over the next decade, A.I. may automate 25 percent of current work hours. If our estimate proves correct, A.I. won't eliminate 25 percent of jobs. What's more likely is that people will find more productive ways to spend their time. American companies destroy and create between 25 million and 35 million jobs annually.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false

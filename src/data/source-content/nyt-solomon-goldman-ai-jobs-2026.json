@@ -1,0 +1,15 @@
+{
+  "id": "nyt-solomon-goldman-ai-jobs-2026",
+  "abstract": "Goldman Sachs CEO David Solomon argues in a New York Times guest essay that fears of an AI 'job apocalypse' are overblown. He acknowledges Goldman economists estimate AI may automate 25% of current work hours over the next decade, with white-collar jobs (accountants, bankers, lawyers) most affected. Cites a Stanford study showing entry-level employment in the most AI-exposed occupations has already declined 16% relative to least-exposed roles. But argues net job elimination is unlikely: complexity expands to absorb freed capacity, cultural preferences preserve human roles even when automation is possible (ATMs didn't reduce bank employment), and US gross job churn of 25–35M annually provides ample capacity for reallocation. Notes Goldman's data center demand has created 200K+ construction jobs since 2022. Calls for joint public-private reskilling investment.",
+  "keyFindings": [
+    "Goldman economists estimate AI may automate 25% of current work hours over the next decade",
+    "Stanford study: entry-level employment in most AI-exposed occupations already declined 16% relative to least-exposed roles",
+    "Goldman estimates data center demand has created 200K+ construction jobs since 2022",
+    "US companies destroy and create 25–35M jobs annually (gross churn dwarfs net creation)",
+    "Even after decades of ATMs, digital banking, and consolidation, commercial banking employment is roughly the same as mid-1990s",
+    "Since 1962, US civilian employment increased ~145% while civilian population 16+ rose ~128%"
+  ],
+  "methodology": "CEO opinion essay citing Goldman Sachs internal economic research estimates and a Stanford study. No original empirical analysis; draws on Goldman's proprietary client and employment data and publicly available labor statistics.",
+  "qualifiers": "This is a CEO opinion piece, not a research publication. The 25% work-hours figure and 200K construction jobs estimate originate from Goldman's research division (already tracked separately). The Stanford 16% entry-level decline figure is cited secondhand without full attribution. Solomon has an obvious institutional interest in an optimistic AI framing. The historical analogies (electrification, ATMs) are illustrative rather than predictive.",
+  "fetchedAt": "2026-05-26"
+}
