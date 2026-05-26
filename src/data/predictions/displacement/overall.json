@@ -1604,6 +1604,15 @@
       "label": "Anthropic (n=80,508): 1 in 5 Claude users voiced concern about AI displacement"
     },
     {
+      "date": "2026-04-22",
+      "direction": "down",
+      "sourceIds": [
+        "census-ces-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: only 2% of firms report AI-related employment decreases; 66% augment-only"
+    },
+    {
       "date": "2026-04-24",
       "direction": "up",
       "sourceIds": [
@@ -1656,6 +1665,24 @@
       ],
       "evidenceTier": 3,
       "label": "DeepLearning.AI (Ng): US unemployment 4.3% despite AI progress; 'no AI jobpocalypse'"
+    },
+    {
+      "date": "2026-05-14",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-job-postings-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: vacancy decline in AI-exposed jobs predates ChatGPT; no junior/senior divergence"
+    },
+    {
+      "date": "2026-05-14",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-job-postings-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: AI not the main driver of the slowdown in hiring"
     }
   ],
   "sources": [
@@ -2959,6 +2986,24 @@
       "evidenceTier": 1,
       "datePublished": "2013-09-17",
       "excerpt": "We examine how susceptible jobs are to computerisation\u2026 implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier\u2026 According to our estimates, about 47 percent of total US employment is at risk."
+    },
+    {
+      "id": "census-ces-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "US Census Bureau \u2014 Center for Economic Studies (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-22",
+      "excerpt": "Most users (66%) rely on AI solely to augment tasks, while AI-related employment decreases are rare, occurring in only 2% of firms."
+    },
+    {
+      "id": "nyfed-job-postings-ai-2026",
+      "title": "Do Job Postings Show Early Labor-Market Effects of AI?",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/05/do-job-postings-show-early-labor-market-effects-of-ai/",
+      "publisher": "Federal Reserve Bank of New York \u2014 Liberty Street Economics (Audoly, Guerin, Topa)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-14",
+      "excerpt": "While job postings show a relative decline in vacancies in occupations with greater exposure to AI, that divergence began before the release of ChatGPT in late 2022. These patterns make it difficult to attribute the recent slowdown in entry-level hiring to AI alone."
     }
   ]
 }

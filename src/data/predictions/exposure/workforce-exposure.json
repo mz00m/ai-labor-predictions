@@ -699,6 +699,15 @@
       "label": "Anthropic: top-quartile exposure workers 3x more likely to fear job loss"
     },
     {
+      "date": "2026-04-22",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-ces-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 66% of AI users augment-only; task integration \u2260 headcount reduction"
+    },
+    {
       "date": "2026-04-27",
       "direction": "neutral",
       "sourceIds": [
@@ -1322,6 +1331,15 @@
       "evidenceTier": 1,
       "datePublished": "2021-12-01",
       "excerpt": "The authors create and validate a new measure of an occupation's exposure to AI that they call the AI Occupational Exposure (AIOE). They use the AIOE to construct a measure of AI exposure at the industry level (AIIE) and a measure of AI exposure at the county level (AIGE)."
+    },
+    {
+      "id": "census-ces-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "US Census Bureau \u2014 Center for Economic Studies (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-22",
+      "excerpt": "Functional breadth and operational investment are positively associated with employment decreases, whereas worker-task integration shows no significant link to headcount reduction once functional integration and operational investment are taken into account."
     }
   ]
 }

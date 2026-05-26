@@ -80,6 +80,18 @@
       "dataType": "observed"
     },
     {
+      "date": "2026-01-15",
+      "value": 18,
+      "confidenceLow": null,
+      "confidenceHigh": null,
+      "sourceIds": [
+        "census-ces-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
       "date": "2026-02-26",
       "value": 17.5,
       "confidenceLow": 16,
@@ -355,6 +367,15 @@
       "label": "OECD: Only 29% of SMEs use genAI in core activities"
     },
     {
+      "date": "2025-12-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "eurostat-ai-enterprises-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Eurostat: 19.95% of EU enterprises (10+ employees) used at least one AI technology in 2025 (isoc_eb_ai)"
+    },
+    {
       "date": "2025-12-15",
       "direction": "up",
       "sourceIds": [
@@ -616,15 +637,6 @@
       "label": "NYT/Census: ~1 in 5 firms used AI in last 2 weeks; 2x in some industries"
     },
     {
-      "date": "2026-04-06",
-      "direction": "up",
-      "sourceIds": [
-        "dimon-jpmorgan-ceo-letter-2026"
-      ],
-      "evidenceTier": 3,
-      "label": "Dimon: hyperscaler AI capex $725B in 2026, up from $450B in 2025"
-    },
-    {
       "date": "2026-04-03",
       "direction": "up",
       "sourceIds": [
@@ -632,6 +644,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fed (FEDS Note): >20% of US firms expect to use AI in H1 2026"
+    },
+    {
+      "date": "2026-04-06",
+      "direction": "up",
+      "sourceIds": [
+        "dimon-jpmorgan-ceo-letter-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Dimon: hyperscaler AI capex $725B in 2026, up from $450B in 2025"
     },
     {
       "date": "2026-04-13",
@@ -661,13 +682,13 @@
       "label": "Carlyle: 11% of management teams cite SaaS licenses as AI spending offset; 17% cite no meaningful reallocation"
     },
     {
-      "date": "2025-12-01",
+      "date": "2026-05-14",
       "direction": "neutral",
       "sourceIds": [
-        "eurostat-ai-enterprises-2025"
+        "nyfed-job-postings-ai-2026"
       ],
       "evidenceTier": 1,
-      "label": "Eurostat: 19.95% of EU enterprises (10+ employees) used at least one AI technology in 2025 (isoc_eb_ai)"
+      "label": "NY Fed: firms incorporate AI mainly via retraining, limited effects on hiring"
     },
     {
       "date": "2026-05-01",
@@ -1308,6 +1329,24 @@
       "datePublished": "2026-05-01",
       "excerpt": "Only 8 percent of employers report that they have no current plans to use AI tools, while the vast majority of the market has moved into various stages of adoption: 22 percent of firms have reached a state of strategic integration; 32 percent of companies have partially integrated these tools; 20 percent are in a developing phase; and 18 percent are exploring the use of AI tools.",
       "dateAdded": "2026-05-20"
+    },
+    {
+      "id": "census-ces-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "US Census Bureau \u2014 Center for Economic Studies (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-22",
+      "excerpt": "18% of firms used AI in a business function, rising to 32% on an employment-weighted basis; adoption is expected to reach 22% within six months."
+    },
+    {
+      "id": "nyfed-job-postings-ai-2026",
+      "title": "Do Job Postings Show Early Labor-Market Effects of AI?",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/05/do-job-postings-show-early-labor-market-effects-of-ai/",
+      "publisher": "Federal Reserve Bank of New York \u2014 Liberty Street Economics (Audoly, Guerin, Topa)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-14",
+      "excerpt": "While job postings show a relative decline in vacancies in occupations with greater exposure to AI, that divergence began before the release of ChatGPT in late 2022. These patterns make it difficult to attribute the recent slowdown in entry-level hiring to AI alone."
     }
   ]
 }

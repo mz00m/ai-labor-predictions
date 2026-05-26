@@ -109,6 +109,16 @@
       "dataType": "observed"
     },
     {
+      "date": "2026-01-15",
+      "value": 41,
+      "sourceIds": [
+        "census-ces-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
       "date": "2026-01-22",
       "value": 43,
       "sourceIds": [
@@ -819,6 +829,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-05-05",
       "excerpt": "responses to a recent survey suggest that most forecasters are quite optimistic about AI's potential but are assuming only a slow pace of AI adoption through 2030"
+    },
+    {
+      "id": "census-ces-ai-diffusion-2026",
+      "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
+      "publisher": "US Census Bureau \u2014 Center for Economic Studies (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-22",
+      "excerpt": "In 23% (41%, employment-weighted) of firms, workers use AI in work-related tasks. Writing, document analysis, and information search are the leading Generative AI use in tasks, though 65% of firms limit use to three or fewer tasks."
     }
   ]
 }
