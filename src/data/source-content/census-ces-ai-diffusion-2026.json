@@ -1,0 +1,15 @@
+{
+  "id": "census-ces-ai-diffusion-2026",
+  "abstract": "The primary empirical analysis underlying the 2026 BTOS AI supplement, using nationally representative data from November 2025–January 2026 to characterize AI diffusion across three interconnected layers: firm-level adoption, business-function deployment, and worker-task integration. 18% of firms used AI in a business function (32% employment-weighted), with adoption concentrated in larger firms in Information, Professional Services, and Finance (50–70%). Most AI users (66%) rely on it solely to augment tasks, and AI-related employment decreases are rare, occurring in only 2% of firms. The most comprehensive U.S. government dataset on AI adoption patterns to date.",
+  "keyFindings": [
+    "18% of firms used AI in a business function, rising to 32% on an employment-weighted basis; adoption expected to reach 22% within six months",
+    "Use rates reach 50–60% (60–70% employment-weighted) for very large firms in Information, Professional Services, and Finance",
+    "57% of AI users integrate AI in three or fewer business functions; leading functions are Sales/Marketing (52%), Strategy/Business Dev (45%), and IT (41%)",
+    "In 23% (41% employment-weighted) of firms, workers use AI in work-related tasks; 65% of firms limit use to three or fewer tasks",
+    "Most users (66%) rely on AI solely to augment tasks, while AI-related employment decreases are rare, occurring in only 2% of firms",
+    "Functional breadth and operational investment are positively associated with employment decreases, whereas worker-task integration shows no significant link to headcount reduction"
+  ],
+  "methodology": "Uses the BTOS AI supplement (November 17, 2025 – February 8, 2026), a nationally representative survey covering approximately 1.2 million US businesses across six rotating panels of ~200,000 cases each. Analyzes AI diffusion at three levels: firm adoption, business-function deployment, and worker-task integration. Census CES Working Paper CES-WP-26-25.",
+  "qualifiers": "Reference period is November 2025–January 2026; rapid changes in AI adoption may outpace these numbers. The 2% employment-decrease figure captures firms self-reporting AI-related headcount reductions — actual displacement may be underreported or lag adoption. Employment-weighted figures (32% adoption, 41% worker use) are substantially higher than unweighted firm counts, reflecting concentration of AI use in larger firms.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "nyfed-job-postings-ai-2026",
+  "abstract": "NY Fed researchers analyze the relationship between AI exposure and U.S. job postings using Anthropic's AI exposure measure combined with Lightcast vacancy data (through January 2026) and BLS OEWS employment data. While AI-exposed occupations show relative vacancy declines, the divergence began before ChatGPT's release in late 2022 and shows no additional break in trajectory afterward. There is no divergence between junior and senior positions within highly exposed occupations, and the gap in labor demand stabilizes after 2023. The authors conclude that AI is not the main driver of the hiring slowdown.",
+  "keyFindings": [
+    "Less than 10% of workers and vacancies are in occupations with AI exposure of at least 0.4; 40% of workers are in jobs with zero measured AI exposure",
+    "The divergence between high- and low-exposure occupations began before 2022 and does not show a clear additional break after ChatGPT's release",
+    "The gap in labor demand between high- and low-exposure jobs stabilizes after 2023, inconsistent with gradual AI displacement",
+    "Labor demand for junior and senior roles within highly exposed occupations moves broadly in parallel — no evidence of entry-level-specific hollowing out",
+    "NY Fed business surveys indicate firms intend to incorporate AI mainly via retraining, with limited effects on hiring"
+  ],
+  "methodology": "Combines Anthropic's occupation-level AI exposure measure with Lightcast job vacancy data (through January 2026) and BLS Occupational Employment and Wage Statistics. Examines vacancy trends across exposure quintiles and within-occupation junior/senior splits. Authors: Richard Audoly, Miles Guerin, Giorgio Topa (NY Fed Research and Statistics Group).",
+  "qualifiers": "The analysis uses job postings as a proxy for labor demand — postings may not perfectly reflect actual hiring or employment changes. The authors explicitly state that AI 'may be contributing to recent labor market developments' but caution against attributing the hiring slowdown primarily to AI. The pre-ChatGPT onset of the divergence is the key identification challenge. Exposure measures themselves are contested (see NBER 'How Unstable Are LLM Occupational Exposure Scores').",
+  "fetchedAt": "2026-05-26"
+}
