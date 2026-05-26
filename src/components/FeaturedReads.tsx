@@ -9,6 +9,22 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "David M. Solomon (NYT)",
+    title: "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
+    summary:
+      "Goldman's CEO argues AI will automate 25% of work hours but won't eliminate 25% of jobs — complexity expands to fill freed capacity. Cites a Stanford study showing entry-level employment in the most AI-exposed occupations has already declined 16%, but notes US companies churn 25–35M jobs annually and Goldman's own data center demand has created 200K+ construction jobs since 2022. A major CEO staking out the optimist position with internal data.",
+    date: "May 22",
+    url: "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
+  },
+  {
+    author: "Pope Leo XIV (The Holy See)",
+    title: "Magnifica Humanitas: On Safeguarding the Human Person in the Time of AI",
+    summary:
+      "The first papal encyclical to treat AI as a central topic. Warns of a 'significant and rapid contraction in available jobs,' wage polarization — 'outsized remuneration for a highly specialized minority alongside declining wages for a large portion of the workforce' — and that AI can 'paradoxically de-skill workers, subject them to automated surveillance.' Frames policy through subsidiarity and integral human development.",
+    date: "May 15",
+    url: "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+  },
+  {
     author: "Saanya Ojha (Substack)",
     title: "The Frontier and the Froth",
     summary:
@@ -31,22 +47,6 @@ const articles: Article[] = [
       "The first global task-level automation index: 18,797 O*NET tasks scored across 124 countries producing 2.33M task-country labels. Core insight: the same task carries different automation risk depending on local wages, technology adoption, workforce skills, and production environment — automation pressure isn't uniform, it's geographic. Covers nations representing 99%+ of global GDP and population, providing a cross-country comparative baseline that US-centric indices can't offer.",
     date: "2026",
     url: "https://automationatlas.org/",
-  },
-  {
-    author: "Heck, Muro, Methkupally & Siegmund (Brookings Metro / Opportunity@Work)",
-    title: "How AI May Reshape Career Pathways to Better Jobs",
-    summary:
-      "The most rigorous look yet at how AI threatens climbing-the-ladder mobility for workers without four-year degrees. Of America's ~70M STARs (skilled through alternative routes), 15.6M work in roles in the top quartile of AI exposure; 11M of those are in 'Gateway' occupations — the stepping-stone roles that historically lead to higher-wage 'Destination' jobs. 3.5M STARs face high AI exposure AND low adaptive capacity. Only 51% of Gateway-to-Destination career pathways avoid high AI exposure, meaning nearly half of the mobility ladders this cohort relies on are at risk. With 73% of US workers living/working in the same county, the disruption will be place-specific — and remediation has to be too.",
-    date: "Apr 2",
-    url: "https://www.brookings.edu/articles/how-ai-may-reshape-career-pathways-to-better-jobs/",
-  },
-  {
-    author: "Tanner, Kyosovska, Belle, Kerry, Renda, Tabassi & Wyckoff (Brookings FCAI)",
-    title: "AI Growth Acceleration Versus Distributional Fairness",
-    summary:
-      "Brookings briefing on the productivity–diffusion–distribution trilemma. NBER Feb 2026 survey of ~6,000 US/UK/DE/AU executives: 70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% report no impact on employment or productivity over the past three years. (The briefing also cites METR's original 19% developer-slowdown finding, which METR later retracted in Feb 2026 due to selection bias; the redesigned study suggests a likely speedup with wide CIs.) US BTOS (Feb 2026): 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat (2025): 19.95% of EU firms with 10+ employees. The macro upshot: frontier capability is racing ahead (training compute doubling every 5 months), but diffusion is uneven, complement-bound, and lagging.",
-    date: "May 5",
-    url: "https://www.brookings.edu/articles/ai-growth-acceleration-versus-distributional-fairness/",
   },
 ];
 
