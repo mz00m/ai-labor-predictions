@@ -1,0 +1,14 @@
+{
+  "id": "stripe-solopreneurs-solow-saaspocalypse-2026",
+  "abstract": "Stripe economist Ernie Tedeschi presents four charts from Stripe Sessions 2026 examining AI's impact on business formation and software markets. US business applications are accelerating but high-propensity-to-hire applications lag — Stripe Atlas data shows solo founders are the overwhelming driver, with growth in both AI and non-AI startups accelerating since 2023 and especially in Q1 2026. During the early-2026 SaaSpocalypse (~$1T software market cap loss), Stripe's pay-in volumes for the 100 largest non-AI SaaS companies showed only a brief dip and swift recovery, suggesting the sell-off reflected expectations rather than current activity. Frames AI through the Solow paradox: electrification took 30 years before productivity growth doubled, implying near-term absence of aggregate AI productivity effects shouldn't be read as evidence none are coming.",
+  "keyFindings": [
+    "Total US business applications accelerating but high-propensity (likely-to-hire) applications not keeping pace — wedge consistent with AI solopreneurs",
+    "Stripe Atlas startups accelerated since 2023, especially Q1 2026; solo founders are the overwhelming driver of the acceleration",
+    "Growth among both AI and non-AI startups, suggesting AI enables easier formation even for non-AI businesses",
+    "SaaS pay-in volumes for 100 largest non-AI SaaS companies on Stripe showed brief dip and swift recovery during SaaSpocalypse — diverging sharply from equity market pricing",
+    "Solow paradox framing: electrification took 30+ years (1882–1917) before productivity growth doubled; near-term absence of AI productivity acceleration is historically typical"
+  ],
+  "methodology": "Proprietary Stripe transaction and Atlas incorporation data combined with Census Bureau business application statistics. Charts cover weekly pay-in volumes for top 100 non-AI SaaS companies on Stripe, and Stripe Atlas startup formation trends by founder count and AI/non-AI classification. Historical productivity data from standard economic sources on electrification.",
+  "qualifiers": "Stripe's data reflects its own customer base, which skews toward internet-native and technology-adjacent businesses — not representative of all US firms. The solopreneur interpretation is suggestive rather than causal; the wedge between total and high-propensity applications could have other explanations. SaaS pay-in volumes measure current transaction activity, not profitability or future revenue trajectory. Published as a Substack blog post, not a formal research paper.",
+  "fetchedAt": "2026-05-26"
+}

@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Solopreneurs, Solow, and the SaaSpocalypse",
+      "author": "Ernie Tedeschi",
+      "publisher": "Stripe Economics",
+      "date": "2026-05-19",
+      "url": "https://www.stripeeconomics.com/p/solopreneurs-solow-and-the-saaspocalypse",
+      "takeaway": "Stripe's internal data on two AI-economy signals. First, new business formation: total US business applications are accelerating but 'high-propensity' (likely-to-hire) applications aren't keeping pace — Stripe Atlas data confirms solo founders are the overwhelming driver of the acceleration, especially in Q1 2026, consistent with AI lowering barriers to solopreneurship. Second, the SaaSpocalypse: when software stocks shed ~$1T in early 2026 on AI disruption fears, Stripe's pay-in volumes for the 100 largest non-AI SaaS companies showed only a brief dip and swift recovery — the sell-off was expectations, not current activity. Also frames the Solow paradox for AI: the near-term absence of aggregate productivity acceleration shouldn't be read as evidence that none is coming, citing electrification's 30-year lag before productivity doubled.",
+      "weekFeatured": "2026-05-25",
+      "tier": 2
+    },
+    {
       "title": "Do Job Postings Show Early Labor-Market Effects of AI?",
       "author": "Richard Audoly, Miles Guerin & Giorgio Topa",
       "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",

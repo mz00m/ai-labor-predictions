@@ -199,6 +199,24 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Horton et al.): AI agents collapse transaction costs, expanding feasible market designs"
+    },
+    {
+      "date": "2026-05-19",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-solopreneurs-solow-saaspocalypse-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe: solo founders driving startup acceleration; AI lowering barriers to formation"
+    },
+    {
+      "date": "2026-05-19",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-solopreneurs-solow-saaspocalypse-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe Atlas: startups accelerated since 2023, especially Q1 2026; solo founders the driver"
     }
   ],
   "sources": [
@@ -360,6 +378,15 @@
       "datePublished": "2024-01-01",
       "excerpt": "Labor-augmenting AI technologies enable self-employment among high-skilled workers. Labor-saving technologies reduce self-employment likelihood. Workers exposed to labor-augmenting tech more likely to transition to solo self-employment.",
       "dateAdded": "2026-03-18"
+    },
+    {
+      "id": "stripe-solopreneurs-solow-saaspocalypse-2026",
+      "title": "Solopreneurs, Solow, and the SaaSpocalypse",
+      "url": "https://www.stripeeconomics.com/p/solopreneurs-solow-and-the-saaspocalypse",
+      "publisher": "Stripe Economics (Ernie Tedeschi)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-19",
+      "excerpt": "The rapid development of AI tools might be lowering both the barriers to starting a business and the returns to doing so for individual operators—contributing to a rise in AI solopreneurs. Stripe Atlas data shows startups have accelerated since 2023, especially Q1 2026, with solo founders as the overwhelming driver."
     }
   ]
 }
