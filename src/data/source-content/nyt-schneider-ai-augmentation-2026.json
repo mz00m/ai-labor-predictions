@@ -1,0 +1,16 @@
+{
+  "id": "nyt-schneider-ai-augmentation-2026",
+  "abstract": "NYT feature by Patricia Cohen profiling Schneider Electric's approach to AI deployment: augmentation over replacement. Schneider (160K employees worldwide) is using AI across its operations — in call centers, manufacturing, and quality control — while retaining its workforce. In customer service, AI now generates answers for 75% of 150K quarterly queries, but human agents still review, modify, and deliver every response. On the factory floor at Le Vaudreuil (Normandy), AI optimizes silver-tip manufacturing washing cycles (73% waste reduction, drastic water savings) and enables real-time quality inspection via camera systems. Erik Brynjolfsson argues businesses can achieve bigger productivity gains through augmentation than replacement. The Brynjolfsson/Raymond/Li study (already tracked) found 15% productivity gains for CS workers using AI, with novices benefiting most. Anton Korinek (formerly UVA, now at Anthropic) warns the augmentation window may be narrowing as AI capabilities advance. The article's own counterpoint: Schneider's AI-assisted workforce developed a plug-and-play contactor that eliminates the need for an electrician to do wiring.",
+  "keyFindings": [
+    "Schneider Electric call centers fielded 150,000 questions in Q4 2025; AI provided correct answers 75% of the time for straightforward queries",
+    "Human agents still review and deliver all AI-generated responses — augmentation model, not replacement",
+    "Schneider factory reduced manufacturing waste by 73% using AI to optimize washing cycles",
+    "Gasoline consumption for lab-sample transport decreased 22% after AI enabled on-site quality assessment",
+    "Lab testing turnaround reduced from 24-48 hours to real-time with AI quality monitoring",
+    "Schneider's AI-assisted workforce developed a plug-and-play contactor that no longer requires an electrician to install",
+    "Brynjolfsson/Raymond/Li: AI assistance allowed customer support workers to resolve 15% more problems (already tracked separately)"
+  ],
+  "methodology": "Feature journalism. Reporter visited Schneider's Le Vaudreuil factory and interviewed company executives (Philippe Rambach, CAI Officer; Virginie Rigaudeau, project leader; Sandra Ferraguti, plant GM) and academic economists (Erik Brynjolfsson, Stanford; Anton Korinek, formerly UVA). No original empirical analysis; company-reported metrics not independently verified.",
+  "qualifiers": "All quantitative claims are company-reported and not independently audited. The 75% figure measures AI's ability to generate correct answers to 'straightforward questions' — agents still handle delivery, so this is not equivalent to 75% full automation. Schneider operates in France where strict labor laws make layoffs expensive, creating institutional incentives for augmentation that may not generalize to US firms. The Brynjolfsson study finding (15% productivity gain) is from a separate peer-reviewed paper already tracked in the system. Korinek's comments were made before joining Anthropic.",
+  "fetchedAt": "2026-05-29"
+}

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-05-26",
-  "totalSources": 563,
-  "verifiedCount": 553,
+  "lastUpdated": "2026-05-29",
+  "totalSources": 564,
+  "verifiedCount": 554,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7982,6 +7982,20 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-schneider-ai-augmentation-2026": {
+      "id": "nyt-schneider-ai-augmentation-2026",
+      "title": "A.I. Doesn't Have to Mean Layoffs",
+      "url": "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
+      "publisher": "The New York Times (Patricia Cohen)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-29",
+      "excerpt": "In the last three months of 2025, call centers fielded 150,000 questions. Three-quarters of the time, A.I. was able to provide the right answer to straightforward questions. The agent then reviews and if necessary, modifies and refines the answer with the caller.",
+      "usedIn": [
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false

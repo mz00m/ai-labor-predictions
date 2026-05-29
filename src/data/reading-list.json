@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "A.I. Doesn't Have to Mean Layoffs",
+      "author": "Patricia Cohen",
+      "publisher": "The New York Times",
+      "date": "2026-05-29",
+      "url": "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
+      "takeaway": "A well-reported case study of Schneider Electric (160K employees) choosing augmentation over replacement. In Q4 2025, AI answered 75% of 150K customer service queries correctly — but agents still review and deliver every response, preserving headcount while cutting response times. On the factory floor in Le Vaudreuil, AI optimized silver-tip washing cycles (73% waste reduction) and quality inspection without eliminating operators. Erik Brynjolfsson frames the thesis: businesses can reap bigger gains by making workers productive than by cutting them. The counterpoint emerges from within: Schneider's own AI-assisted workforce developed a plug-and-play contactor that no longer requires an electrician to wire. Anton Korinek (now at Anthropic) voices the deeper concern: the direction of AI development is increasingly hard to steer, and the augmentation window may narrow. A useful companion to the Goldman Sachs op-ed from the same week — two different frames for the same optimist position, one from a CEO and one from the factory floor.",
+      "weekFeatured": "2026-05-25",
+      "tier": 3
+    },
+    {
       "title": "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
       "author": "David M. Solomon",
       "publisher": "The New York Times",

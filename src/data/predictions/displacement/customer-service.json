@@ -434,6 +434,15 @@
       ],
       "evidenceTier": 2,
       "label": "Strada: 44% of employers cutting entry-level hiring cite customer support cuts"
+    },
+    {
+      "date": "2026-05-29",
+      "direction": "down",
+      "sourceIds": [
+        "nyt-schneider-ai-augmentation-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT/Schneider: AI answers 75% of 150K CS queries, but agents still review and deliver"
     }
   ],
   "sources": [
@@ -801,6 +810,16 @@
       "datePublished": "2026-05-01",
       "excerpt": "More than 40 percent of these employers report reduced demand for administrative, customer support, and data analytics roles. [Figure 7: Customer support 44 percent, among employers that said AI led to a decrease in entry-level hiring in 2025, N=172.]",
       "dateAdded": "2026-05-20"
+    },
+    {
+      "id": "nyt-schneider-ai-augmentation-2026",
+      "title": "A.I. Doesn't Have to Mean Layoffs",
+      "url": "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
+      "publisher": "The New York Times (Patricia Cohen)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-29",
+      "excerpt": "In the last three months of 2025, call centers fielded 150,000 questions. Three-quarters of the time, A.I. was able to provide the right answer to straightforward questions. The agent then reviews and if necessary, modifies and refines the answer with the caller.",
+      "dateAdded": "2026-05-29"
     }
   ]
 }
