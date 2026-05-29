@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Patricia Cohen (NYT)",
+    title: "A.I. Doesn't Have to Mean Layoffs",
+    summary:
+      "Schneider Electric (160K employees) chose augmentation over replacement. In Q4 2025, AI answered 75% of 150K customer service queries — but agents still review every response, preserving headcount while cutting response times. On the factory floor, AI cut manufacturing waste 73%. Erik Brynjolfsson argues bigger gains come from making workers productive than from cutting them. The counterpoint comes from within: Schneider's own AI-assisted workforce built a product that eliminates the need for an electrician.",
+    date: "May 29",
+    url: "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
+  },
+  {
     author: "David M. Solomon (NYT)",
     title: "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Strada's survey of 1,498 US executives and senior talent leaders (Mar 2026) finds AI is, so far, a net positive for entry-level hiring. In 2025, 46% of employers that have at least explored AI say it raised entry-level hiring vs 13% who say it cut — nearly 4-to-1 — and 2.7x more expect AI to raise than cut hiring in 2026. Greater AI use is the single most-cited positive driver (27%). But the bar is rising: 42% say AI shifted entry-level work toward analytical, judgment-based tasks while 41% report routine admin tasks shrinking, and among the minority cutting roles, reductions concentrate in admin (46%) and customer support (44%). Notably, employers rank AI literacy the least important skill — behind critical thinking and communication.",
     date: "May 2026",
     url: "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
-  },
-  {
-    author: "Garg, Crosta & Baier",
-    title: "Global Automation Atlas",
-    summary:
-      "The first global task-level automation index: 18,797 O*NET tasks scored across 124 countries producing 2.33M task-country labels. Core insight: the same task carries different automation risk depending on local wages, technology adoption, workforce skills, and production environment — automation pressure isn't uniform, it's geographic. Covers nations representing 99%+ of global GDP and population, providing a cross-country comparative baseline that US-centric indices can't offer.",
-    date: "2026",
-    url: "https://automationatlas.org/",
   },
 ];
 
