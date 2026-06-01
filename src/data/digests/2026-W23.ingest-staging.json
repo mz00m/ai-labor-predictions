@@ -1,0 +1,128 @@
+{
+  "week": "2026-W23",
+  "generatedAt": "2026-06-01T13:36:19.999Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Connecticut Governor Signs AI Law Mandating Employee Notification",
+        "summary": "Connecticut has enacted legislation requiring employers to notify workers when AI systems are used in consequential employment decisions, marking one of the first U.S. state-level mandates of its kind. The law signals growing regulatory momentum around workplace AI transparency and worker protections. This could meaningfully affect how firms disclose and deploy AI-driven automation across white-collar roles (Bloomberg Law, 2026).",
+        "source": "https://news.bloomberglaw.com/daily-labor-report/connecticuts-lamont-signs-ai-law-with-employer-notice-mandate",
+        "publishedAt": "2026-05-31",
+        "score": 0.348,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "news-connecticut-governor-signs-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI-Driven Investing Outperforms Peers, Reshaping Asset Management Labor Demand",
+        "summary": "A new NBER working paper documents that AI-driven hedge funds have grown steadily since the early 2010s and outperform non-AI peers, using evidence from regulatory disclosures and labor market data. The findings suggest AI adoption in financial services is accelerating displacement of traditional research and portfolio management roles. This has direct implications for white-collar employment trajectories within the financial sector (Chen, Sialm & Xu, 2026).",
+        "source": "https://www.nber.org/papers/w35273",
+        "authors": [
+          "Shuang Chen",
+          "Clemens Sialm",
+          "David X. Xu"
+        ],
+        "publishedAt": "2026-06-01",
+        "score": 0.567,
+        "sourceAdapter": "nber",
+        "graphSlug": "financial-services-displacement"
+      },
+      "sourceId": "nber-aidriven-investing-outperforms-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "LLMs Deployed for Automated Industrial Ladder Logic Translation",
+        "summary": "Researchers demonstrate that large language models can automate ladder logic translation across incompatible Programmable Logic Controller (PLC) vendors in industrial automation settings, a task historically performed by specialized engineers. The study highlights how generative AI is penetrating technical blue- and white-collar roles in manufacturing and industrial operations. Broad deployment could reduce demand for automation engineering specialists while accelerating AI adoption on factory floors (Ogundare et al., 2026).",
+        "source": "https://arxiv.org/abs/2605.31458v1",
+        "authors": [
+          "Oluwatosin Ogundare",
+          "Promise Ekpo",
+          "Nathanial Wiggins"
+        ],
+        "publishedAt": "2026-05-29",
+        "score": 0.409,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "arxiv-llms-deployed-for-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Agentic AI System AutoSci Automates Full Scientific Research Lifecycle",
+        "summary": "AutoSci, a memory-centric LLM agent system, is presented as capable of coordinating literature review, hypothesis generation, experimentation, manuscript writing, and peer-review response across full research project cycles. This represents a significant step toward AI substitution of high-skill knowledge work traditionally performed by researchers and academics. If widely adopted, such systems could depress demand for entry-level research positions and reshape wage structures in knowledge-intensive sectors (Qian et al., 2026).",
+        "source": "https://arxiv.org/abs/2605.31468v1",
+        "authors": [
+          "Weitong Qian",
+          "Beicheng Xu",
+          "Zhongao Xie",
+          "Bowen Fan",
+          "Guozheng Tang",
+          "Jiale Chen",
+          "Xinzhe Wu",
+          "Mingtian Yang",
+          "Chenyang Di",
+          "Jiajun Li"
+        ],
+        "publishedAt": "2026-05-29",
+        "score": 0.37,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-agentic-ai-system-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI CT Report Generation Model Astra Challenges Radiologist Workflow",
+        "summary": "The Astra foundation model for automated 3D CT report generation demonstrates strong generalizability across clinical settings, addressing the time-intensive task of radiologists reviewing hundreds of volumetric slices per examination. The authors frame the system as a route to improving clinical efficiency, suggesting near-term pressure on healthcare administrative and diagnostic support roles. Widespread deployment could shift labor demand away from routine radiology reporting tasks (Wang et al., 2026).",
+        "source": "https://arxiv.org/abs/2605.31437v1",
+        "authors": [
+          "Zhuhao Wang",
+          "Fang Chen",
+          "Chaohui Yu",
+          "Zihan Li",
+          "Yuchao Zheng",
+          "Jing Wang"
+        ],
+        "publishedAt": "2026-05-29",
+        "score": 0.37,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "healthcare-admin-displacement"
+      },
+      "sourceId": "arxiv-ai-ct-report-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "healthcare-admin-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Astra AI accelerates chest CT report drafting by 29.6%",
+          "quote": "Astra assistance accelerates chest report drafting by 29.6% and improves abdominal report completeness by 11.3% (P<0.001)"
+        },
+        {
+          "graphSlug": "healthcare-admin-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Astra improves abdominal CT report completeness by 11.3%",
+          "quote": "Astra assistance accelerates chest report drafting by 29.6% and improves abdominal report completeness by 11.3% (P<0.001)"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "CT report AI achieves 44.1% avg improvement in diagnostic metrics",
+          "quote": "Astra achieves state-of-the-art performance with a 44.1% average improvement in fine-grained diagnostic metrics (P<0.001)"
+        }
+      ]
+    }
+  ]
+}
