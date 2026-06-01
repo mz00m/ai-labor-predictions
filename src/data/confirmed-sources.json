@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-05-29",
-  "totalSources": 564,
-  "verifiedCount": 554,
+  "lastUpdated": "2026-06-01",
+  "totalSources": 565,
+  "verifiedCount": 555,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7982,6 +7982,21 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "jacobs-canedy-wioa-retraining-2026": {
+      "id": "jacobs-canedy-wioa-retraining-2026",
+      "title": "Did US Worker Retraining Reduce Participant Automation Exposure?",
+      "url": "https://arxiv.org/abs/2605.03767",
+      "publisher": "arXiv (Julian Jacobs, Oxford/DeepMind; Jordan Canedy, FRI)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-05",
+      "excerpt": "WIOA rarely supports worker resilience to automation, with 45% of all WIOA participants returning to their prior industry of work, and 27% staying in the same occupation. Successful outcomes driven mostly by wage gains, possibly due to catch-up mean reversion, rather than changes in occupation.",
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false

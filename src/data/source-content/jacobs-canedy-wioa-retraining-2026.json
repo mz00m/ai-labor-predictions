@@ -1,0 +1,17 @@
+{
+  "id": "jacobs-canedy-wioa-retraining-2026",
+  "abstract": "Jacobs (Oxford/DeepMind) and Canedy (Forecasting Research Institute) evaluate whether the US Workforce Innovation and Opportunity Act (WIOA) successfully insulated workers from technology-enabled automation. Analyzing 23 million WIOA participation records (2017–2023), they introduce a 'Retrainability Index' measuring post-intervention wage recovery and shifts in Routine Task Intensity (RTI). Three central findings: (1) WIOA rarely shifts workers into less automation-exposed occupations — 45% return to their prior industry, 27% to the same occupation; (2) positive outcomes are driven mostly by wage gains that appear to be mean reversion ('catch-up') rather than genuine upskilling; (3) employer-led programs — notably registered apprenticeships — show the highest success rates (0.71 incidence), significantly outperforming classroom-based training. Only ~5% of WIOA participants receive any formal retraining. The paper explicitly measures pre-AI computerization exposure (RTI), not AI exposure, and notes that a worker successfully reducing RTI could simultaneously increase AI exposure. Authors conclude existing US public ALMP infrastructure is poorly suited for managing large-scale technological transitions.",
+  "keyFindings": [
+    "45% of WIOA participants return to their prior industry; 27% stay in the same occupation",
+    "Only ~5% of WIOA participants receive any formal retraining",
+    "Positive outcomes driven chiefly by wage gains (mean reversion), not reduced automation exposure",
+    "Registered apprenticeships and customized training show highest success incidence (0.71 for both)",
+    "Clear age penalty: success incidence drops from 0.75 (ages 15-19) to 0.47 (ages 60-64)",
+    "Low-income participants show higher success rates (0.63 vs 0.56) and double the wage intensity, reflecting catch-up dynamics",
+    "PSM estimates: formal training shows slightly negative ATT (-0.009); registered apprenticeships show positive ATT (0.038)",
+    "83.9% of participants were unemployed at program entry — WIOA functions as a 'second chance' program"
+  ],
+  "methodology": "Analysis of 23 million WIOA Participant Individual Record Layout (PIRL) administrative records (PY 2017–2024 Q3). Novel composite 'Retrainability Index' combining wage change (50% weight) with routine cognitive (25%) and routine manual (25%) task intensity shifts. Uses O*NET-derived RTI measures, inverse probability weighting for sample selection correction, XGBoost and logistic regression for predictive modeling, and propensity score matching for causal estimates. Wages converted to constant 2010 dollars using CPI.",
+  "qualifiers": "Observational study with acknowledged selection bias — survivorship bias inflates success rates since dropouts and persistently unemployed are excluded. The 1.2% of records with complete occupation codes likely over-represent well-administered programs. RTI captures computerization-driven automation only, not AI exposure. The concurrent Hyman et al. (2025) NBER paper (w34174) is the AI-specific companion. Causal claims from PSM are limited by residual imbalances. Four-quarter post-exit window misses longer-term wage trajectories.",
+  "fetchedAt": "2026-06-01"
+}

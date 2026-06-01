@@ -1710,6 +1710,33 @@
       ],
       "evidenceTier": 3,
       "label": "Goldman: data center demand has created 200K+ construction jobs since 2022"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: 45% of WIOA participants return to prior industry; 27% same occupation"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: Only ~5% of WIOA participants receive formal retraining"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "down",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: Apprenticeships show highest retraining success (0.71 incidence)"
     }
   ],
   "sources": [
@@ -3040,6 +3067,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-05-22",
       "excerpt": "Goldman Sachs's economists estimate that, over the next decade, A.I. may automate 25 percent of current work hours. If our estimate proves correct, A.I. won't eliminate 25 percent of jobs. What's more likely is that people will find more productive ways to spend their time."
+    },
+    {
+      "id": "jacobs-canedy-wioa-retraining-2026",
+      "title": "Did US Worker Retraining Reduce Participant Automation Exposure?",
+      "url": "https://arxiv.org/abs/2605.03767",
+      "publisher": "arXiv (Julian Jacobs, Oxford/DeepMind; Jordan Canedy, FRI)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-05",
+      "excerpt": "WIOA rarely supports worker resilience to automation, with 45% of all WIOA participants returning to their prior industry of work, and 27% staying in the same occupation. Successful outcomes driven mostly by wage gains, possibly due to catch-up mean reversion, rather than changes in occupation.",
+      "dateAdded": "2026-06-01"
     }
   ]
 }

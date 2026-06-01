@@ -635,6 +635,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: no statistically significant AI wage effect through 2026Q1 (SDID)"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: WIOA wage gains largely mean reversion, not upskilling"
     }
   ],
   "sources": [
@@ -1212,6 +1221,16 @@
       "datePublished": "2026-05-07",
       "excerpt": "We also examine the log real hourly wages of AI-exposed and unexposed workers... we see no statistically or economically significant impact through 2026Q1.",
       "dateAdded": "2026-05-11"
+    },
+    {
+      "id": "jacobs-canedy-wioa-retraining-2026",
+      "title": "Did US Worker Retraining Reduce Participant Automation Exposure?",
+      "url": "https://arxiv.org/abs/2605.03767",
+      "publisher": "arXiv (Julian Jacobs, Oxford/DeepMind; Jordan Canedy, FRI)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-05",
+      "excerpt": "positive outcomes are rare and driven chiefly by higher wages, as opposed to lower RTI scores due to shifted occupations. Moreover, wage gains may be the consequence of a structural 'catch-up' dynamic, whereby the most vulnerable program participants see a reversion to the mean.",
+      "dateAdded": "2026-06-01"
     }
   ]
 }
