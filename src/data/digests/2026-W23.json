@@ -1,0 +1,134 @@
+{
+  "week": "2026-W23",
+  "generatedAt": "2026-06-01T13:33:07.924Z",
+  "lookbackDays": 10,
+  "highlights": [
+    {
+      "title": "Connecticut Enacts AI Law Requiring Employer Notification to Workers",
+      "summary": "Connecticut Governor Lamont signed legislation mandating that employers notify employees when AI systems are used in ways that may affect their jobs, marking one of the first U.S. state-level AI workplace disclosure laws. The law creates a formal obligation for transparency around AI deployment in employment contexts. This signals a growing regulatory response to workforce AI exposure and potential displacement concerns.",
+      "source": "https://news.bloomberglaw.com/daily-labor-report/connecticuts-lamont-signs-ai-law-with-employer-notice-mandate",
+      "publishedAt": "2026-05-31",
+      "score": 0.348,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "AI-Driven Investing Has Grown Steadily Since the Early 2010s, Concentrated in Hedge Funds",
+      "summary": "A new NBER working paper by Chen, Sialm, and Xu documents the sustained growth of AI-driven asset management using regulatory disclosures and labor market data, finding that AI hedge funds outperform peers on risk-adjusted returns. The study highlights how AI adoption is reshaping the labor composition of financial firms, with implications for the mix of human versus algorithmic decision-making. This provides direct evidence of AI penetration into high-skill financial roles.",
+      "source": "https://www.nber.org/papers/w35273",
+      "authors": [
+        "Shuang Chen",
+        "Clemens Sialm",
+        "David X. Xu"
+      ],
+      "publishedAt": "2026-06-01",
+      "score": 0.567,
+      "sourceAdapter": "nber",
+      "graphSlug": "financial-services-displacement"
+    },
+    {
+      "title": "LLM Agents Increasingly Encode Expert Knowledge and Judgment for Workplace Tasks",
+      "summary": "The COLLEAGUE.SKILL paper introduces a framework for automating AI skill generation by distilling expert knowledge directly into LLM agents, enabling them to carry bounded representations of human expertise and interaction styles. The research demonstrates a pathway for AI systems to replicate white-collar professional judgment at scale, with direct implications for knowledge-worker displacement. This accelerates the timeline for AI substitution of high-skill cognitive roles.",
+      "source": "https://arxiv.org/abs/2605.31264v1",
+      "authors": [
+        "Tianyi Zhou",
+        "Dongrui Liu",
+        "Leitao Yuan",
+        "Jing Shao",
+        "Xia Hu"
+      ],
+      "publishedAt": "2026-05-29",
+      "score": 0.366,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Automated CT Report Generation Model Signals Radiologist Workflow Disruption",
+      "summary": "The Astra foundation model from Zhuhao Wang et al. demonstrates generalizable automated report generation from 3D computed tomography scans, a task currently requiring extensive radiologist expertise and time. The model addresses the bottleneck of reviewing hundreds of volumetric slices per exam, with the authors positioning it as a route to improving clinical efficiency at scale. This represents a concrete AI capability advance directly targeting a high-volume healthcare administrative and diagnostic workflow.",
+      "source": "https://arxiv.org/abs/2605.31437v1",
+      "authors": [
+        "Zhuhao Wang",
+        "Fang Chen",
+        "Chaohui Yu",
+        "Zihan Li",
+        "Yuchao Zheng",
+        "Jing Wang",
+        "Xuan Yang",
+        "Jia Guo",
+        "Zhenlu Yang",
+        "Xingju Zheng",
+        "Yihua Sun",
+        "Haojie Han",
+        "Xiaoxiao Qin",
+        "Zhan Feng",
+        "Wenbo Xiao",
+        "Chao Zhu",
+        "Yuehua Li",
+        "Shipeng Zhang",
+        "Hao Luo",
+        "Yunsong Peng",
+        "Fan Wang",
+        "Hongen Liao"
+      ],
+      "publishedAt": "2026-05-29",
+      "score": 0.37,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "healthcare-admin-displacement"
+    },
+    {
+      "title": "Employer Size Wage Effect Disappears Within Multi-Establishment Firms, Challenging Wage Models",
+      "summary": "Diegmann, Müller, and Schoefer (NBER w35265) find that the well-established employer size wage premium vanishes entirely across establishments within the same firm, even when those establishments operate in different local labor markets. This result challenges canonical labor market models and has implications for understanding how firm-level AI adoption—concentrated in large multi-site employers—may translate into wage compression or divergence. The finding complicates predictions about wage premiums accruing to workers at large, AI-intensive firms.",
+      "source": "https://www.nber.org/papers/w35265",
+      "authors": [
+        "André Diegmann",
+        "Steffen Müller",
+        "Benjamin Schoefer"
+      ],
+      "publishedAt": "2026-06-01",
+      "score": 0.606,
+      "sourceAdapter": "nber",
+      "graphSlug": "median-wage-impact"
+    }
+  ],
+  "themes": [
+    "Regulatory momentum is building around AI workplace transparency, with Connecticut's employer notification law representing a first-mover state-level precedent likely to be watched and replicated nationally.",
+    "AI capability encroachment into high-skill professional domains—financial analysis, radiology, and expert knowledge work—continued at pace, with new models demonstrating practical substitution of cognitive labor.",
+    "Labor market wage structure research is unsettling baseline assumptions: the disappearance of the employer size wage effect within firms complicates projections of how AI adoption at large employers will affect worker compensation.",
+    "Expert-knowledge distillation into LLM agents is maturing from research prototype toward deployable systems, accelerating the timeline for white-collar and knowledge-worker displacement across sectors.",
+    "Healthcare and financial services remain the highest-signal sectors for near-term AI-driven workflow automation, with multiple research outputs this week advancing automation of radiology reporting and algorithmic investment management."
+  ],
+  "watching": [
+    {
+      "title": "AutoSci: Agentic System for the Full Scientific Research Lifecycle",
+      "source": "https://arxiv.org/abs/2605.31468v1",
+      "reason": "If agentic AI automates end-to-end research workflows, demand for research-adjacent white-collar roles (analysts, writers, coordinators) could compress faster than current displacement models anticipate."
+    },
+    {
+      "title": "LLM-Based Conversational Interfaces vs. Graphical Dashboards in Industrial Decision Tasks",
+      "source": "https://arxiv.org/abs/2605.31224v1",
+      "reason": "Adoption data from industrial AI interface studies can serve as a leading indicator for genai-work-adoption trajectories in operational and mid-skill blue-collar adjacent roles."
+    },
+    {
+      "title": "Ladder Logic Translation Using LLMs in Industrial Automation",
+      "source": "https://arxiv.org/abs/2605.31458v1",
+      "reason": "LLM-driven PLC programming translation reduces barriers to switching automation vendors, potentially accelerating factory floor AI adoption and displacing specialized industrial programmers."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 85,
+    "afterDedup": 85
+  }
+}

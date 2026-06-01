@@ -707,6 +707,15 @@
       ],
       "evidenceTier": 2,
       "label": "Stripe: SaaS pay-in volumes recovered quickly; SaaSpocalypse was expectations, not activity"
+    },
+    {
+      "date": "2026-06-01",
+      "direction": "up",
+      "sourceIds": [
+        "nber-chen-sialm-xu-ai-investing-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: AI hedge funds peaked at ~2.7% of all hedge funds; AI labor intensity 1.17% of adviser postings"
     }
   ],
   "sources": [
@@ -1365,6 +1374,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-05-19",
       "excerpt": "Looking at weekly transactions for the 100 largest non-AI software-as-a-service (SaaS) companies on Stripe, the episode appears as a brief dip followed by a swift recovery and continued growth—a pattern quite different from what equity markets were pricing."
+    },
+    {
+      "id": "nber-chen-sialm-xu-ai-investing-2026",
+      "title": "The Growth and Performance of Artificial Intelligence in Asset Management",
+      "url": "https://www.nber.org/papers/w35273",
+      "publisher": "NBER (Shuang Chen, Clemens Sialm, David X. Xu)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-01",
+      "excerpt": "AI-driven investing has grown steadily since the early 2010s and is concentrated among hedge funds. Average AI labor intensity is 1.17% of job postings at SEC-registered investment advisers. AI hedge funds peaked at ~2.7% of all hedge funds in 2023, with AI-Autonomous funds accounting for over 90% of AI AUM by 2024.",
+      "dateAdded": "2026-06-01"
     }
   ]
 }

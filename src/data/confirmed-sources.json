@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-06-01",
-  "totalSources": 565,
-  "verifiedCount": 555,
+  "totalSources": 567,
+  "verifiedCount": 557,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7982,6 +7982,34 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ct-ai-employer-notification-law-2026": {
+      "id": "ct-ai-employer-notification-law-2026",
+      "title": "Connecticut Enacts AI Responsibility and Transparency Act (SB 5)",
+      "url": "https://news.bloomberglaw.com/daily-labor-report/connecticuts-lamont-signs-ai-law-with-employer-notice-mandate",
+      "publisher": "Bloomberg Law / State of Connecticut",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-29",
+      "excerpt": "Connecticut SB 5 requires employers filing WARN Act notices to disclose whether layoffs are related to AI (effective Oct 2026), and requires notice to employees/applicants when automated systems are a substantial factor in hiring, promotion, discipline, or discharge (effective Oct 2027).",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-chen-sialm-xu-ai-investing-2026": {
+      "id": "nber-chen-sialm-xu-ai-investing-2026",
+      "title": "The Growth and Performance of Artificial Intelligence in Asset Management",
+      "url": "https://www.nber.org/papers/w35273",
+      "publisher": "NBER (Shuang Chen, Clemens Sialm, David X. Xu)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-01",
+      "excerpt": "AI-driven investing has grown steadily since the early 2010s and is concentrated among hedge funds. Average AI labor intensity is 1.17% of job postings at SEC-registered investment advisers. AI hedge funds peaked at ~2.7% of all hedge funds in 2023.",
+      "usedIn": [
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false

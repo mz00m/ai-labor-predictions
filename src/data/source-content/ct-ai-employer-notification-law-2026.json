@@ -1,0 +1,14 @@
+{
+  "id": "ct-ai-employer-notification-law-2026",
+  "abstract": "Connecticut enacted the AI Responsibility and Transparency Act (SB 5), signed by Governor Lamont on May 29, 2026 — one of the most comprehensive state-level AI employment laws to date. Three key provisions: (1) employers filing WARN Act layoff notices must disclose whether reductions are related to AI use (effective Oct 1, 2026); (2) using an automated system is not a defense to discrimination claims; (3) employers using automated employment decision technology as a 'substantial factor' in hiring, promotion, discipline, or discharge must provide written notice including the tool's name, purpose, data sources, and methodology (effective Oct 1, 2027). Violations are unfair trade practices enforceable by the AG, up to $1,000 per violation, with a 60-day cure period through Dec 31, 2027. No private right of action.",
+  "keyFindings": [
+    "WARN Act AI disclosure requirement effective Oct 1, 2026 — employers with 100+ workers must disclose AI-related layoffs",
+    "Pre-decision notice to employees/applicants required when AI is a 'substantial factor' in employment decisions (Oct 2027)",
+    "Penalties up to $1,000 per violation, enforced exclusively by CT Attorney General",
+    "Joins Illinois (HB 3773), Colorado (SB 205), NYC (Local Law 144), and California as states with AI employment laws",
+    "WARN Act disclosure could generate first systematic data on AI-attributed layoffs once effective"
+  ],
+  "methodology": "State legislation. No empirical analysis — this is a regulatory signal.",
+  "qualifiers": "Policy signal, not an empirical finding. Contains no labor market statistics. The law's definitions diverge from California and New York approaches, adding multi-state compliance complexity. The WARN Act threshold (100+ employees) limits scope. The 'substantial factor' standard for employment decisions is untested and may face litigation over interpretation.",
+  "fetchedAt": "2026-06-01"
+}

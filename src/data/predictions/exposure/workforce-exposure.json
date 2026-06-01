@@ -742,6 +742,15 @@
       ],
       "evidenceTier": 1,
       "label": "arXiv: 59% of O*NET tasks digitally feasible for RL automation"
+    },
+    {
+      "date": "2026-05-29",
+      "direction": "neutral",
+      "sourceIds": [
+        "ct-ai-employer-notification-law-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Connecticut: employers must disclose AI use in WARN Act layoffs (Oct 2026) and hiring decisions (Oct 2027)"
     }
   ],
   "sources": [
@@ -1340,6 +1349,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-22",
       "excerpt": "Functional breadth and operational investment are positively associated with employment decreases, whereas worker-task integration shows no significant link to headcount reduction once functional integration and operational investment are taken into account."
+    },
+    {
+      "id": "ct-ai-employer-notification-law-2026",
+      "title": "Connecticut Enacts AI Responsibility and Transparency Act (SB 5)",
+      "url": "https://news.bloomberglaw.com/daily-labor-report/connecticuts-lamont-signs-ai-law-with-employer-notice-mandate",
+      "publisher": "Bloomberg Law / State of Connecticut",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-29",
+      "excerpt": "Connecticut SB 5 requires employers filing WARN Act notices to disclose whether layoffs are related to AI (effective Oct 2026), and requires notice to employees/applicants when automated systems are a substantial factor in hiring, promotion, discipline, or discharge (effective Oct 2027). Violations are unfair trade practices enforceable by AG, up to $1,000 per violation.",
+      "dateAdded": "2026-06-01"
     }
   ]
 }

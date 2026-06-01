@@ -1,0 +1,16 @@
+{
+  "id": "nber-chen-sialm-xu-ai-investing-2026",
+  "abstract": "Chen, Sialm, and Xu (NBER w35273) examine the growth and performance of AI-driven investing using investment advisers' regulatory disclosures, labor market data (Lightcast/Burning Glass), and fund strategy descriptions. AI-driven investing has grown steadily since the early 2010s and is concentrated among hedge funds. Average AI labor intensity is 1.17% of job postings at SEC-registered investment advisers (2012-2024). AI hedge funds peaked at ~2.7% of all hedge funds in 2023, with AI-Autonomous funds accounting for over 90% of AI AUM by 2024 (~$12B). AI hedge funds outperformed non-AI peers in early years (49.6 bps/month before 2017), but outperformance declined by 5.9 bps/year and largely disappeared post-2017. The labor composition of AI hiring at investment firms shifted from investment-focused roles to IT-focused roles after 2022, likely reflecting generative AI adoption.",
+  "keyFindings": [
+    "Average AI labor intensity: 1.17% of job postings at SEC-registered investment advisers (2012-2024)",
+    "AI hedge funds peaked at ~2.7% of all hedge funds in 2023",
+    "AI hedge fund AUM reached ~$12 billion by 2024; AI-Autonomous funds = 90%+ of AI AUM",
+    "Only 1.1% of hedge funds (89 of 7,896) were ever identified as AI funds",
+    "AI funds outperformed by 49.6 bps/month before 2017; outperformance declined 5.9 bps/year",
+    "AI hiring shifted from investment-focused to IT-focused roles post-2022 (generative AI effect)",
+    "Investment advisers show higher AI labor intensity than Compustat financial and non-financial firms after 2017"
+  ],
+  "methodology": "Uses SEC Form ADV regulatory filings, Lightcast/Burning Glass job posting data, and fund strategy descriptions. Identifies AI funds through text analysis of strategy descriptions. Labor intensity measured as share of firm's total job postings mentioning AI-related terms. Performance analysis uses risk-adjusted returns with multiple factor models.",
+  "qualifiers": "Paper is primarily about fund performance, not employment displacement. The 1.17% AI job posting figure measures hiring intent, not actual employment share. No data on job losses or headcount reductions in financial services. Only covers hedge funds and registered investment advisers, not the broader financial sector. AI fund identification relies on strategy description text matching, which may miss firms using AI without disclosing it.",
+  "fetchedAt": "2026-06-01"
+}
