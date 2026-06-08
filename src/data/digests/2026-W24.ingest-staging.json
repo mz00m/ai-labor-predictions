@@ -1,0 +1,198 @@
+{
+  "week": "2026-W24",
+  "generatedAt": "2026-06-08T12:28:33.994Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs",
+        "summary": "The US technology sector eliminated 38,242 positions in May 2026, with artificial intelligence cited as the primary driver of workforce reductions — marking one of the clearest direct linkages yet between AI deployment and tech-sector headcount cuts. This continues an accelerating trend of AI-attributed layoffs in the industry. The data underscores mounting pressure on tech workers as companies automate roles previously held by software engineers, QA testers, and support staff. (Tom's Hardware / Challenger, Gray & Christmas via HN)",
+        "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/tech-sector-cut-us-jobs-by-38242-in-may",
+        "publishedAt": "2026-06-04",
+        "score": 0.279,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "tomshardware-us-tech-sector-2026",
+      "evidenceTier": 4,
+      "extractedStats": [
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "US tech sector cut 38,242 jobs in May 2026, highest single month in 2 years",
+          "quote": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Tech led all sectors in layoffs in May 2026; AI cited as top reason",
+          "quote": "US tech layoffs record single-highest month in two years, and more than any other sector — nearly 40,000 get the axe, AI the most cited reason for layoffs"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labour Force",
+        "summary": "A peer-reviewed study in the Scandinavian Journal of Work, Environment & Health finds that occupational exposure to large language models is disproportionately concentrated among workers in precarious employment arrangements in Canada, potentially deepening existing labour market inequities. The authors link higher LLM exposure scores to roles characterised by low job security, part-time hours, and limited benefits — suggesting that automation risk is not evenly distributed across the wage distribution. The findings carry direct implications for entry-level and gig-economy workers globally. (Jetha et al., 2026, doi:10.5271/sjweh.4312)",
+        "source": "https://doi.org/10.5271/sjweh.4312",
+        "authors": [
+          "Arif Jetha",
+          "Qing Liao",
+          "Peter Smith",
+          "Viet Vu",
+          "Aviroop Biswas",
+          "Brendan Smith",
+          "Faraz Vahid Shahidi"
+        ],
+        "publishedAt": "2026-06-03",
+        "doi": "10.5271/sjweh.4312",
+        "score": 0.276,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-llm-exposure-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "data_point",
+          "value": 0.386,
+          "confidenceLow": 0.356,
+          "confidenceHigh": 0.417,
+          "quote": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "data_point",
+          "value": 0.258,
+          "confidenceLow": 0.221,
+          "confidenceHigh": 0.295,
+          "quote": "compared to occupations with medium (mean 0.258, 95% CI 0.221–0.295)"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "data_point",
+          "value": 0.26,
+          "confidenceLow": 0.194,
+          "confidenceHigh": 0.328,
+          "quote": "high (mean 0.260, 95% CI 0.194–0.328)"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "data_point",
+          "value": 0.205,
+          "confidenceLow": 0.136,
+          "confidenceHigh": 0.275,
+          "quote": "or very high precarity (mean 0.205, 95% CI 0.136–0.275)"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "LLM exposure highest in low-precarity jobs; lowest in very high precarity (Canada)",
+          "quote": "Occupations most likely to be exposed to LLM are those where precariousness is lowest. These occupations have previously been sheltered from technological change."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
+        "summary": "Using production data from Perplexity's Search and Computer products, Yang et al. document the shift from conversational AI assistants to autonomous agents capable of executing multi-step knowledge-work tasks end-to-end, measuring meaningful gains in throughput for white-collar workflows. The study finds that agent adoption accelerates task completion in research, writing, and analytical roles — directly reducing the labour-hours required for these functions. These findings provide empirical grounding for projections of white-collar professional displacement as agentic AI moves beyond the pilot phase. (Yang et al., arXiv:2606.07489)",
+        "source": "https://arxiv.org/abs/2606.07489v1",
+        "authors": [
+          "Jeremy Yang",
+          "Kate Zyskowski",
+          "Noah Yonack",
+          "Jerry Ma"
+        ],
+        "publishedAt": "2026-06-05",
+        "score": 0.374,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-how-ai-agents-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI agents cut estimated task completion time by 87% vs human+Search",
+          "quote": "Computer reduces completion time from 269 to 36 minutes on matched tasks, lowering estimated time and cost by 87% and 94%, respectively, compared to humans equipped with Search alone."
+        },
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI agents cut estimated task cost by 94% vs human+Search baseline",
+          "quote": "Computer reduces completion time from 269 to 36 minutes on matched tasks, lowering estimated time and cost by 87% and 94%, respectively, compared to humans equipped with Search alone."
+        },
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI agent dissatisfaction rate 55% lower than Search per-query",
+          "quote": "Autonomy also increases execution quality, with per-query dissatisfaction rates 55% lower on Computer than on Search."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI agents perform 26 min autonomous work/session vs 33 sec for Search",
+          "quote": "Computer performs 26 minutes of autonomous work per user session, versus 33 seconds for Search."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Agentic Very Much! Rapid Adoption of Coding Agents in New GitHub Projects",
+        "summary": "A follow-up empirical study of newly created GitHub repositories finds that coding agent adoption rates are substantially higher among projects started after mid-2025 than in older cohorts, suggesting that agentic AI tools are becoming a default rather than an exception in software development workflows. The authors note that new projects are being architected with agent assistance from inception, signalling a structural shift in how software engineering labour is organised. This has direct implications for entry-level developer hiring and the long-run wage premium for human coding skills. (Robbes et al., arXiv:2606.07448)",
+        "source": "https://arxiv.org/abs/2606.07448v1",
+        "authors": [
+          "Romain Robbes",
+          "Théo Matricon",
+          "Thomas Degueule",
+          "Andre Hora",
+          "Stefano Zacchiroli"
+        ],
+        "publishedAt": "2026-06-05",
+        "score": 0.373,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "arxiv-agentic-very-much-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Coding agent adoption in new GitHub projects more than doubled vs prior study",
+          "quote": "In this new sample, we find that the adoption of coding agents is more than twice as high."
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-assisted commit proportion significantly higher in newly created GitHub projects",
+          "quote": "the adoption is significantly more intensive, as the proportion of AI-assisted commits is sensibly higher, despite strong signs that we do not detect all of it."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Why Aren't We Measuring How AI Affects Humans? (IEEE Spectrum)",
+        "summary": "An IEEE Spectrum commentary argues that despite widespread deployment of AI systems in workplaces and public life, rigorous, standardised measurement of AI's societal and labour-market impacts remains largely absent, leaving policymakers flying blind. The piece calls for systematic longitudinal data collection on AI-driven job restructuring, wage effects, and worker wellbeing — highlighting a critical evidence gap. The discussion on Hacker News surfaced practitioner frustration that industry self-reporting and earnings-call mentions remain the primary signal available to researchers. (IEEE Spectrum, 2026-06-06)",
+        "source": "https://spectrum.ieee.org/measuring-ai-societal-impact-khan",
+        "publishedAt": "2026-06-06",
+        "score": 0.319,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "spectrum-why-arent-we-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    }
+  ]
+}

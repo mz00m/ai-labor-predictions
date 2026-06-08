@@ -1,0 +1,116 @@
+{
+  "week": "2026-W24",
+  "generatedAt": "2026-06-08T12:27:29.830Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs",
+      "summary": "The US technology sector eliminated 38,242 positions in May 2026, with artificial intelligence cited as the primary driver of workforce reductions — marking one of the clearest direct linkages yet between AI deployment and tech-sector headcount cuts. This continues an accelerating trend of AI-attributed layoffs in the industry. The data underscores mounting pressure on tech workers as companies automate roles previously held by software engineers, QA testers, and support staff. (Tom's Hardware / Challenger, Gray & Christmas via HN)",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/tech-sector-cut-us-jobs-by-38242-in-may",
+      "publishedAt": "2026-06-04",
+      "score": 0.279,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "tech-sector-displacement"
+    },
+    {
+      "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labour Force",
+      "summary": "A peer-reviewed study in the Scandinavian Journal of Work, Environment & Health finds that occupational exposure to large language models is disproportionately concentrated among workers in precarious employment arrangements in Canada, potentially deepening existing labour market inequities. The authors link higher LLM exposure scores to roles characterised by low job security, part-time hours, and limited benefits — suggesting that automation risk is not evenly distributed across the wage distribution. The findings carry direct implications for entry-level and gig-economy workers globally. (Jetha et al., 2026, doi:10.5271/sjweh.4312)",
+      "source": "https://doi.org/10.5271/sjweh.4312",
+      "authors": [
+        "Arif Jetha",
+        "Qing Liao",
+        "Peter Smith",
+        "Viet Vu",
+        "Aviroop Biswas",
+        "Brendan Smith",
+        "Faraz Vahid Shahidi"
+      ],
+      "publishedAt": "2026-06-03",
+      "doi": "10.5271/sjweh.4312",
+      "score": 0.276,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
+      "summary": "Using production data from Perplexity's Search and Computer products, Yang et al. document the shift from conversational AI assistants to autonomous agents capable of executing multi-step knowledge-work tasks end-to-end, measuring meaningful gains in throughput for white-collar workflows. The study finds that agent adoption accelerates task completion in research, writing, and analytical roles — directly reducing the labour-hours required for these functions. These findings provide empirical grounding for projections of white-collar professional displacement as agentic AI moves beyond the pilot phase. (Yang et al., arXiv:2606.07489)",
+      "source": "https://arxiv.org/abs/2606.07489v1",
+      "authors": [
+        "Jeremy Yang",
+        "Kate Zyskowski",
+        "Noah Yonack",
+        "Jerry Ma"
+      ],
+      "publishedAt": "2026-06-05",
+      "score": 0.374,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Agentic Very Much! Rapid Adoption of Coding Agents in New GitHub Projects",
+      "summary": "A follow-up empirical study of newly created GitHub repositories finds that coding agent adoption rates are substantially higher among projects started after mid-2025 than in older cohorts, suggesting that agentic AI tools are becoming a default rather than an exception in software development workflows. The authors note that new projects are being architected with agent assistance from inception, signalling a structural shift in how software engineering labour is organised. This has direct implications for entry-level developer hiring and the long-run wage premium for human coding skills. (Robbes et al., arXiv:2606.07448)",
+      "source": "https://arxiv.org/abs/2606.07448v1",
+      "authors": [
+        "Romain Robbes",
+        "Théo Matricon",
+        "Thomas Degueule",
+        "Andre Hora",
+        "Stefano Zacchiroli"
+      ],
+      "publishedAt": "2026-06-05",
+      "score": 0.373,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Why Aren't We Measuring How AI Affects Humans? (IEEE Spectrum)",
+      "summary": "An IEEE Spectrum commentary argues that despite widespread deployment of AI systems in workplaces and public life, rigorous, standardised measurement of AI's societal and labour-market impacts remains largely absent, leaving policymakers flying blind. The piece calls for systematic longitudinal data collection on AI-driven job restructuring, wage effects, and worker wellbeing — highlighting a critical evidence gap. The discussion on Hacker News surfaced practitioner frustration that industry self-reporting and earnings-call mentions remain the primary signal available to researchers. (IEEE Spectrum, 2026-06-06)",
+      "source": "https://spectrum.ieee.org/measuring-ai-societal-impact-khan",
+      "publishedAt": "2026-06-06",
+      "score": 0.319,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "overall-us-displacement"
+    }
+  ],
+  "themes": [
+    "AI is now the most frequently cited cause of tech-sector layoffs, with May 2026 data showing nearly 40,000 US tech job cuts attributed directly to automation.",
+    "Agentic AI systems are transitioning from assistants to autonomous executors of knowledge work, compressing white-collar labour demand across research, writing, and software development.",
+    "LLM exposure risk is regressive: precarious and lower-wage workers face disproportionate displacement pressure, risking a widening of existing labour market inequalities.",
+    "Coding agent adoption is accelerating sharply in new software projects, suggesting the baseline expectation for human developer input is being structurally reset downward.",
+    "A critical measurement gap persists — standardised, longitudinal data on AI's workforce impacts is largely absent, undermining evidence-based policy responses."
+  ],
+  "watching": [
+    {
+      "title": "Goldman Sachs CEO says markets in 'greed' mode as AI companies seek billions",
+      "source": "https://www.cnbc.com/2026/06/02/goldman-ceo-david-solomon-greed-mode-ai-firms-ipos.html",
+      "reason": "Surge in AI firm valuations and IPO activity may accelerate enterprise AI procurement, feeding into adoption-rate and earnings-call-ai-mentions trajectories over H2 2026."
+    },
+    {
+      "title": "But I Like Doing This! Enjoyable Tasks, Contracting, and Automation (NBER w35309)",
+      "source": "https://www.nber.org/papers/w35309",
+      "reason": "Theoretical work on how worker intrinsic motivation interacts with automation decisions could reshape models of which tasks get automated first, relevant to displacement forecasts."
+    },
+    {
+      "title": "Launch HN: Hyper (YC P26) – Company brain to power agentic development",
+      "source": "https://news.ycombinator.com/item?id=48387095",
+      "reason": "Early-stage agentic dev tooling gaining HN traction; a leading indicator of near-term genai-work-adoption acceleration in software and knowledge-work roles."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 80,
+    "afterDedup": 80
+  }
+}
