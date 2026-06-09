@@ -1200,6 +1200,35 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
 
           <div>
             <P>
+              <Strong>Mixing evidence types in a single average.</Strong>{" "}
+              Several displacement graphs blend observed employment changes,
+              job-posting proxies, and modeled forward projections into one
+              weighted number. Proxy points are downweighted by 0.5&times; and
+              projections are flagged in the underlying data, but the headline
+              average still combines fundamentally different kinds of evidence.
+              Read the source mix on each prediction page; a graph dominated by
+              postings proxies tells a different story than one dominated by
+              direct employment counts, even when the headline is the same.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Single-company press-release outliers.</Strong>{" "}
+              A small number of data points come from individual companies
+              self-reporting AI deployment outcomes (e.g., Klarna&rsquo;s
+              two-thirds-of-customer-service-chats figure). These are
+              not independently verified, may be marketing-shaped, and reflect
+              one company&rsquo;s deployment &mdash; not a sector-wide rate.
+              Some companies later reverse the AI-driven workforce decisions
+              they earlier announced; that reversal is rarely reflected in the
+              same data point. Treat company press-release values as one
+              point in a wider distribution, not as the central estimate.
+            </P>
+          </div>
+
+          <div>
+            <P>
               <Strong>Static task bundles undercount AI&rsquo;s wage effects.</Strong>{" "}
               Most sources estimate AI&rsquo;s wage impact by holding fixed the
               pre-AI bundle of tasks assigned to a worker. When automation
