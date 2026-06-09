@@ -1,0 +1,14 @@
+{
+  "id": "tomshardware-us-tech-sector-2026",
+  "abstract": "U.S. tech companies announced 38,242 job cuts in May 2026, marking the highest single month in nearly two years and exceeding any other sector. AI was cited as the most common reason for layoffs across all sectors for the third consecutive month. However, the actual displacement impact of AI remains debated, with some analysts suggesting companies may be using AI as justification for cuts they would have made anyway, a phenomenon termed 'AI washing' by OpenAI's Sam Altman.",
+  "keyFindings": [
+    "U.S. tech sector announced 38,242 job cuts in May 2026, the industry's heaviest month of reductions in nearly two years and more than any other sector.",
+    "Tech sector's 2026 running total reached 123,653 layoffs through May, up more than 65% compared to the same period in 2025.",
+    "AI was the most-cited reason for layoffs across every sector for the third month running, with Challenger, Gray & Christmas logging the technology in more than 49,000 planned cuts through April.",
+    "The four largest tech firms (Google, Amazon, Microsoft, Meta) plan a combined $725 billion in capital spending in 2026, up 77% from the previous year, with roughly three-quarters tied to AI infrastructure.",
+    "Unemployment insurance claims have not risen in line with layoff announcements, and the actual job displacement impact of AI remains unsettled despite being the most-cited reason for cuts."
+  ],
+  "methodology": "Data from outplacement firm Challenger, Gray & Christmas tracking announced job cuts by sector and stated reasons; U.S. Labor Department payroll and unemployment insurance claim data; public statements from company executives and industry analysts regarding capital spending and layoff rationales.",
+  "qualifiers": "The source notes that whether AI is actually performing the work of displaced employees is an 'ongoing and unsettled debate.' The firm ranked AI only third among stated reasons for 2026 layoffs behind market conditions and restructuring. Flat jobless claims and expected payroll data leave 'the case for broad AI displacement unproven for now.' Some employers may be engaged in 'AI washing,' using the technology to justify cuts they would have made regardless.",
+  "fetchedAt": "2026-06-09"
+}

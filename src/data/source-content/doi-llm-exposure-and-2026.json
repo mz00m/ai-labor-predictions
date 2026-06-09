@@ -1,0 +1,13 @@
+{
+  "id": "doi-llm-exposure-and-2026",
+  "abstract": "This study examines the association between occupational exposure to large language models (LLM) and occupational precarity in Canada using the Labour Force Survey. The analysis reveals that occupations with the lowest precarity exposure have significantly higher mean LLM exposure (0.386), while those with very high precarity have the lowest LLM exposure (0.205). The findings suggest that LLM adoption may diverge from historical patterns of technological change, potentially affecting previously sheltered occupations rather than the most precarious jobs.",
+  "keyFindings": [
+    "Occupations with low precarity exposure had a significantly higher mean LLM exposure of 0.386 (95% CI 0.356–0.417) compared to occupations with very high precarity (mean 0.205, 95% CI 0.136–0.275).",
+    "LLM exposure was lower among occupations using each separate dimension of precarity (contractual instability, earnings inadequacy, schedule unpredictability, working-time mismatch), except for earnings adequacy.",
+    "Occupations most likely to be exposed to LLM are those where precariousness is lowest, representing a reversal from historical patterns where technological change impacted the most precarious occupations.",
+    "Medium precarity occupations had mean LLM exposure of 0.258 (95% CI 0.221–0.295) and high precarity occupations had mean LLM exposure of 0.260 (95% CI 0.194–0.328)."
+  ],
+  "methodology": "Cross-sectional analysis using Canada's Labour Force Survey. Four multivariate linear regression models with cluster-robust standard errors estimated associations between LLM exposure and four dimensions of occupational precarity (contractual instability, earnings inadequacy, schedule unpredictability, working-time mismatch). A fifth multivariate model examined the relationship between LLM exposure and a multidimensional precarity index. Mean estimates of occupational LLM exposure were produced utilizing model coefficients.",
+  "qualifiers": "Limited to Canadian labor force data. Specific sample size not stated in excerpt. The authors note there is a need to 'examine the impacts of LLM on workers in jobs where the technology is prominent,' suggesting preliminary understanding of impacts.",
+  "fetchedAt": "2026-06-09"
+}

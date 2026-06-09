@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-01",
-  "totalSources": 567,
-  "verifiedCount": 557,
+  "lastUpdated": "2026-06-09",
+  "totalSources": 569,
+  "verifiedCount": 559,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8039,6 +8039,35 @@
       "excerpt": "In the last three months of 2025, call centers fielded 150,000 questions. Three-quarters of the time, A.I. was able to provide the right answer to straightforward questions. The agent then reviews and if necessary, modifies and refines the answer with the caller.",
       "usedIn": [
         "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "tomshardware-us-tech-sector-2026": {
+      "id": "tomshardware-us-tech-sector-2026",
+      "title": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/tech-sector-cut-us-jobs-by-38242-in-may",
+      "publisher": "tomshardware.com",
+      "evidenceTier": 4,
+      "datePublished": "2026-06-04",
+      "excerpt": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "doi-llm-exposure-and-2026": {
+      "id": "doi-llm-exposure-and-2026",
+      "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labor Force",
+      "url": "https://doi.org/10.5271/sjweh.4312",
+      "publisher": "doi.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-03",
+      "excerpt": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]",
+      "usedIn": [
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
