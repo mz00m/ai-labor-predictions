@@ -1,0 +1,134 @@
+{
+  "week": "2026-W24",
+  "generatedAt": "2026-06-09T12:21:19.992Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs",
+        "summary": "The US technology sector eliminated 38,242 positions in May 2026, with artificial intelligence cited as the primary driver of workforce reductions — marking one of the clearest on-record instances of AI being explicitly named as the cause of tech layoffs. This data point reinforces accelerating displacement trends within the tech sector and underscores growing employer willingness to publicly attribute headcount reductions to automation. The figures, reported via Tom's Hardware citing layoff-tracking data, signal a meaningful inflection in how companies communicate AI-driven workforce changes. (Tom's Hardware / HN, 2026-06-04)",
+        "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/tech-sector-cut-us-jobs-by-38242-in-may",
+        "publishedAt": "2026-06-04",
+        "score": 0.85,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "tomshardware-us-tech-sector-2026",
+      "evidenceTier": 4,
+      "extractedStats": [
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "US tech sector cut 38,242 jobs in May 2026, AI most cited reason",
+          "quote": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Tech layoffs hit single-highest month in two years, leading all sectors",
+          "quote": "US tech layoffs record single-highest month in two years, and more than any other sector — nearly 40,000 get the axe, AI the most cited reason for layoffs"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labor Force",
+        "summary": "A peer-reviewed study published in the Scandinavian Journal of Work, Environment & Health examines how occupational exposure to large language models intersects with labor market precarity in Canada, finding that LLM exposure is not uniformly distributed and disproportionately affects workers already in vulnerable employment conditions. The research unpacks the relationship between AI adoption and widening labor market inequities, echoing historical patterns where digital technology transitions most severely impact the least-protected workers. Authors Jetha et al. provide one of the first empirical assessments linking LLM exposure scores to precarious occupation classifications at the national level. (Jetha et al., SJWEH, DOI: 10.5271/sjweh.4312, 2026-06-03)",
+        "source": "https://doi.org/10.5271/sjweh.4312",
+        "authors": [
+          "Arif Jetha",
+          "Qing Liao",
+          "Peter Smith",
+          "Viet Vu",
+          "Aviroop Biswas",
+          "Brendan Smith",
+          "Faraz Vahid Shahidi"
+        ],
+        "publishedAt": "2026-06-03",
+        "doi": "10.5271/sjweh.4312",
+        "score": 0.82,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-llm-exposure-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "data_point",
+          "value": 0.386,
+          "confidenceLow": 0.356,
+          "confidenceHigh": 0.417,
+          "quote": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Medium precarity occupations: mean LLM exposure 0.258 (CI 0.221–0.295)",
+          "quote": "compared to occupations with medium (mean 0.258, 95% CI 0.221–0.295)"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "High precarity occupations: mean LLM exposure 0.260 (CI 0.194–0.328)",
+          "quote": "high (mean 0.260, 95% CI 0.194–0.328)"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Very high precarity occupations: mean LLM exposure 0.205 (CI 0.136–0.275)",
+          "quote": "or very high precarity (mean 0.205, 95% CI 0.136–0.275)"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "NBER: Workers' Enjoyment of Tasks Shapes Automation Contracting Outcomes",
+        "summary": "A new NBER working paper by Joshua Gans examines 'O-ring' jobs where workers voluntarily devote unpaid time to enjoyable tasks, analyzing how firms choose between pricing complete task bundles versus specifying paid task floors. The model demonstrates that automation decisions are not purely cost-driven — worker preference and intrinsic motivation interact with contracting structures to influence which tasks get automated and at what wage. This has significant implications for predicting which white-collar professional roles resist automation beyond what productivity metrics alone would suggest. (Gans, NBER w35309, 2026-06-09)",
+        "source": "https://www.nber.org/papers/w35309",
+        "authors": [
+          "Joshua S. Gans"
+        ],
+        "publishedAt": "2026-06-09",
+        "score": 0.74,
+        "sourceAdapter": "nber",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "nber-nber-workers-enjoyment-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "IEEE Spectrum: Why Aren't We Measuring How AI Affects Humans?",
+        "summary": "An IEEE Spectrum commentary raises the alarm that society lacks robust, standardized metrics for tracking AI's societal and labor market impacts on humans, despite rapid deployment across industries. The piece argues that the absence of measurement infrastructure means displacement, wage, and well-being effects are being systematically undercounted or ignored by policymakers and researchers alike. The HN discussion, while modest in engagement, reflects practitioner concern that AI adoption rates and their downstream effects on workers remain opaque. (IEEE Spectrum / HN, 2026-06-06)",
+        "source": "https://spectrum.ieee.org/measuring-ai-societal-impact-khan",
+        "publishedAt": "2026-06-06",
+        "score": 0.68,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "spectrum-ieee-spectrum-why-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Goldman Sachs CEO: Markets in 'Greed Mode' as AI Companies Seek Billions in Capital",
+        "summary": "Goldman Sachs CEO David Solomon described financial markets as being in 'greed mode' driven by AI company capital-raising activity, with firms pursuing multi-billion dollar IPOs and funding rounds as of early June 2026. The commentary highlights that investor sentiment and earnings-call narratives around AI remain highly elevated, consistent with continued acceleration in enterprise AI spending signals. This dynamic is a leading indicator for downstream workforce AI adoption as capital deployment translates into product rollouts and headcount restructuring. (CNBC / HN, 2026-06-03)",
+        "source": "https://www.cnbc.com/2026/06/02/goldman-ceo-david-solomon-greed-mode-ai-firms-ipos.html",
+        "publishedAt": "2026-06-03",
+        "score": 0.62,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "earnings-call-ai-mentions"
+      },
+      "sourceId": "cnbc-goldman-sachs-ceo-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    }
+  ]
+}

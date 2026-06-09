@@ -5,10 +5,10 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "exposure",
   "unit": "% of jobs exposed",
-  "currentValue": 67,
+  "currentValue": 0.4,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "latest",
-  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
+  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' — from individual task overlap to full occupation-level capability mapping. The 23–93% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
   "history": [
     {
       "date": "2023-03-26",
@@ -164,6 +164,16 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-06-03",
+      "value": 0.386,
+      "confidenceLow": 0.356,
+      "confidenceHigh": 0.417,
+      "sourceIds": [
+        "doi-llm-exposure-and-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -179,7 +189,7 @@
     {
       "date": "2018-05-01",
       "direction": "neutral",
-      "label": "AEA (Brynjolfsson/Mitchell/Rock): SML \u2014 most occupations partially automatable",
+      "label": "AEA (Brynjolfsson/Mitchell/Rock): SML — most occupations partially automatable",
       "sourceIds": [
         "brynjolfsson-mitchell-rock-sml-2018"
       ],
@@ -188,7 +198,7 @@
     {
       "date": "2021-12-01",
       "direction": "up",
-      "label": "SMJ (Felten/Raj/Seamans): AIOE \u2014 occupation\u00d7industry\u00d7geography exposure dataset",
+      "label": "SMJ (Felten/Raj/Seamans): AIOE — occupation×industry×geography exposure dataset",
       "sourceIds": [
         "felten-raj-seamans-aioe-2021"
       ],
@@ -197,7 +207,7 @@
     {
       "date": "2023-10-04",
       "direction": "neutral",
-      "label": "IMF (Pizzinelli): complementarity adjustment shrinks AE\u2013EM exposure gap",
+      "label": "IMF (Pizzinelli): complementarity adjustment shrinks AE–EM exposure gap",
       "sourceIds": [
         "pizzinelli-imf-complementarity-2023"
       ],
@@ -228,7 +238,7 @@
         "eloundou-openai-2024"
       ],
       "evidenceTier": 1,
-      "label": "OpenAI/UPenn: 80% of workers have \u226510% tasks affected"
+      "label": "OpenAI/UPenn: 80% of workers have ≥10% tasks affected"
     },
     {
       "date": "2025-01-01",
@@ -264,7 +274,7 @@
         "autor-thompson-expertise-2025"
       ],
       "evidenceTier": 1,
-      "label": "MIT (Autor/Thompson): Routine share of US job tasks fell 50.4%\u219232.2% (1977-2018); abstract share rose 33.2%\u219253.6%. 66% of removed tasks were routine; 77% of added were abstract"
+      "label": "MIT (Autor/Thompson): Routine share of US job tasks fell 50.4%→32.2% (1977-2018); abstract share rose 33.2%→53.6%. 66% of removed tasks were routine; 77% of added were abstract"
     },
     {
       "date": "2025-06-20",
@@ -273,7 +283,7 @@
         "autor-thompson-expertise-2025"
       ],
       "evidenceTier": 1,
-      "label": "MIT (Autor/Thompson): Cross-occupation expertise premium NEARLY DOUBLED 1980-2018: 1\u03c3 expertise = +16 log pts wages in 1980, +31 log pts in 2018"
+      "label": "MIT (Autor/Thompson): Cross-occupation expertise premium NEARLY DOUBLED 1980-2018: 1σ expertise = +16 log pts wages in 1980, +31 log pts in 2018"
     },
     {
       "date": "2025-09-01",
@@ -408,7 +418,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "CMU/Stanford: Agent benchmarks target Computer/Math domain \u2014 only 7.6% of US employment"
+      "label": "CMU/Stanford: Agent benchmarks target Computer/Math domain — only 7.6% of US employment"
     },
     {
       "date": "2026-03-01",
@@ -462,7 +472,7 @@
         "shah-levy-pro-se-ai-courts-2026"
       ],
       "evidenceTier": 1,
-      "label": "MIT/USC: Pro se federal filings 11%\u219216.8%; AI-text in 18% of complaints by 2026"
+      "label": "MIT/USC: Pro se federal filings 11%→16.8%; AI-text in 18% of complaints by 2026"
     },
     {
       "date": "2026-03-05",
@@ -606,7 +616,7 @@
         "brookings-ai-career-pathways-2026"
       ],
       "evidenceTier": 2,
-      "label": "Brookings: 12.9M Destination-occupation workers (~1/3) highly AI-exposed \u2014 sales reps, accountants, financial managers"
+      "label": "Brookings: 12.9M Destination-occupation workers (~1/3) highly AI-exposed — sales reps, accountants, financial managers"
     },
     {
       "date": "2026-04-02",
@@ -633,7 +643,7 @@
         "makela-stephany-complement-substitute-2024"
       ],
       "evidenceTier": 1,
-      "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling \u2192 5% rise in complementary skill demand"
+      "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
     },
     {
       "date": "2026-04-03",
@@ -651,7 +661,7 @@
         "yale-budgetlab-cps-march-2026"
       ],
       "evidenceTier": 1,
-      "label": "Yale Budget Lab: March CPS \u2014 OpenAI exposure quintile shares stable since ChatGPT launch"
+      "label": "Yale Budget Lab: March CPS — OpenAI exposure quintile shares stable since ChatGPT launch"
     },
     {
       "date": "2026-04-16",
@@ -678,7 +688,7 @@
         "openai-jobs-transition-framework-2026"
       ],
       "evidenceTier": 2,
-      "label": "OpenAI: 66pp capability overhang \u2014 90% theoretical vs 23.8% realized exposure in high-automation-risk jobs"
+      "label": "OpenAI: 66pp capability overhang — 90% theoretical vs 23.8% realized exposure in high-automation-risk jobs"
     },
     {
       "date": "2026-04-17",
@@ -687,7 +697,7 @@
         "tucker-qwi-early-career-hires-2026"
       ],
       "evidenceTier": 1,
-      "label": "Census/QWI: Monetary policy explains \u2264\u00bc of early-career employment gap; AI effect persists"
+      "label": "Census/QWI: Monetary policy explains ≤¼ of early-career employment gap; AI effect persists"
     },
     {
       "date": "2026-04-22",
@@ -705,7 +715,7 @@
         "census-ces-ai-diffusion-2026"
       ],
       "evidenceTier": 1,
-      "label": "Census BTOS: 66% of AI users augment-only; task integration \u2260 headcount reduction"
+      "label": "Census BTOS: 66% of AI users augment-only; task integration ≠ headcount reduction"
     },
     {
       "date": "2026-04-27",
@@ -751,6 +761,33 @@
       ],
       "evidenceTier": 3,
       "label": "Connecticut: employers must disclose AI use in WARN Act layoffs (Oct 2026) and hiring decisions (Oct 2027)"
+    },
+    {
+      "date": "2026-06-03",
+      "direction": "down",
+      "sourceIds": [
+        "doi-llm-exposure-and-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Medium precarity occupations: mean LLM exposure 0.258 (CI 0.221–0.295)"
+    },
+    {
+      "date": "2026-06-03",
+      "direction": "down",
+      "sourceIds": [
+        "doi-llm-exposure-and-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "High precarity occupations: mean LLM exposure 0.260 (CI 0.194–0.328)"
+    },
+    {
+      "date": "2026-06-03",
+      "direction": "down",
+      "sourceIds": [
+        "doi-llm-exposure-and-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Very high precarity occupations: mean LLM exposure 0.205 (CI 0.136–0.275)"
     }
   ],
   "sources": [
@@ -871,7 +908,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "93% of all occupations analyzed have at least one task with significant AI exposure. Education task exposure jumped from 11% to 49% — a 4.5x increase. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -921,7 +958,7 @@
       "publisher": "Stanford GSB / NBER (Jones, Tonetti)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated \u2014 around 50% \u2014 whereas computers/electronics has the highest share \u2014 more than 85%.",
+      "excerpt": "In recent years, retail trade has the lowest share of tasks that have been automated — around 50% — whereas computers/electronics has the highest share — more than 85%.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -991,7 +1028,7 @@
       "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
-      "excerpt": "Analysis of Bureau of Labor Statistics skill taxonomies reveals that current AI systems can technically perform approximately 16 percent of classified labor tasks. The Iceberg Index for digital AI shows values averaging 11.7%\u2014five times larger than the 2.2% Surface Index.",
+      "excerpt": "Analysis of Bureau of Labor Statistics skill taxonomies reveals that current AI systems can technically perform approximately 16 percent of classified labor tasks. The Iceberg Index for digital AI shows values averaging 11.7%—five times larger than the 2.2% Surface Index.",
       "dateAdded": "2026-03-15"
     },
     {
@@ -1078,7 +1115,7 @@
       "id": "imas-shukla-oring-exposure-2026",
       "title": "How Will AI-driven Automation Actually Affect Jobs?",
       "url": "https://aleximas.substack.com/p/how-will-ai-driven-automation-actually",
-      "publisher": "Substack (Alex Imas, Soumitra Shukla \u2014 U of Chicago Booth)",
+      "publisher": "Substack (Alex Imas, Soumitra Shukla — U of Chicago Booth)",
       "evidenceTier": 4,
       "datePublished": "2026-03-23",
       "excerpt": "Two jobs with identical exposure scores can have completely opposite displacement risks depending on whether their tasks are complements, whether demand for their output is elastic or inelastic, and the incentives of the firm to invest in automation.",
@@ -1127,10 +1164,10 @@
       "id": "maasoum-lichtinger-entry-barriers-2026",
       "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
-      "publisher": "SSRN (Hosseini, Lichtinger \u2014 Harvard)",
+      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
-      "excerpt": "We define a binary automation exposure indicator that equals one for tasks in categories 4\u20135, i.e., more than 80 percent automatable. Under this definition, 4,107 tasks (21.3 percent) are classified as exposed. The mean PSS is about 0.11, implying that for the average occupation, GenAI expands the qualified labor pool by 10 percentage points of the workforce.",
+      "excerpt": "We define a binary automation exposure indicator that equals one for tasks in categories 4–5, i.e., more than 80 percent automatable. Under this definition, 4,107 tasks (21.3 percent) are classified as exposed. The mean PSS is about 0.11, implying that for the average occupation, GenAI expands the qualified labor pool by 10 percentage points of the workforce.",
       "dateAdded": "2026-04-01"
     },
     {
@@ -1140,7 +1177,7 @@
       "publisher": "Brookings Metro / Opportunity@Work (Heck, Muro, Methkupally, Siegmund)",
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
-      "excerpt": "Of America's ~70M STARs (workers skilled through alternative routes, no four-year degree): 15.6M work in roles in the top quartile of AI exposure (43% of all top-quartile workers); 11M of those are in Gateway occupations \u2014 the stepping-stone roles connecting entry-level to higher-wage work \u2014 with 6 Gateway occupations alone accounting for ~8M of them. STARs are 62.3% of all Gateway-occupation workers. Across Destination occupations, 12.9M workers (~1/3) are highly exposed, including sales reps, accountants, financial managers. Only 51% of Gateway-to-Destination career pathways AVOID high AI exposure. 3.5M STARs are both highly exposed AND have low adaptive capacity (67% of all such workers). 23M STARs have low adaptive capacity overall (68% of all such workers). Highest pathway-exposure metros: Palm Bay FL (35.5%), Cape Coral FL (34.7%), Jacksonville (33%), Albany NY (32.8%), Harrisburg (32.6%), Providence (30.1%). 73% of US workers live and work in the same county, so disruption \u2014 and remediation \u2014 will be place-specific. Uses Anthropic's observed-exposure measure on Opportunity@Work pathway taxonomy.",
+      "excerpt": "Of America's ~70M STARs (workers skilled through alternative routes, no four-year degree): 15.6M work in roles in the top quartile of AI exposure (43% of all top-quartile workers); 11M of those are in Gateway occupations — the stepping-stone roles connecting entry-level to higher-wage work — with 6 Gateway occupations alone accounting for ~8M of them. STARs are 62.3% of all Gateway-occupation workers. Across Destination occupations, 12.9M workers (~1/3) are highly exposed, including sales reps, accountants, financial managers. Only 51% of Gateway-to-Destination career pathways AVOID high AI exposure. 3.5M STARs are both highly exposed AND have low adaptive capacity (67% of all such workers). 23M STARs have low adaptive capacity overall (68% of all such workers). Highest pathway-exposure metros: Palm Bay FL (35.5%), Cape Coral FL (34.7%), Jacksonville (33%), Albany NY (32.8%), Harrisburg (32.6%), Providence (30.1%). 73% of US workers live and work in the same county, so disruption — and remediation — will be place-specific. Uses Anthropic's observed-exposure measure on Opportunity@Work pathway taxonomy.",
       "dateAdded": "2026-04-02"
     },
     {
@@ -1167,7 +1204,7 @@
       "id": "makela-stephany-complement-substitute-2024",
       "title": "Complement or Substitute? How AI Increases the Demand for Human Skills",
       "url": "https://arxiv.org/abs/2412.19754",
-      "publisher": "Oxford Internet Institute (M\u00e4kel\u00e4, Stephany)",
+      "publisher": "Oxford Internet Institute (Mäkelä, Stephany)",
       "evidenceTier": 1,
       "datePublished": "2024-12-27",
       "excerpt": "When AI demand doubles in a job ad, demand for complementary skills rises by 5%. Complementary effects are 1.7x larger than substitution effects. Based on 12 million US job vacancies 2018-2023.",
@@ -1290,10 +1327,10 @@
       "id": "autor-thompson-expertise-2025",
       "title": "Expertise",
       "url": "https://economics.mit.edu/sites/default/files/2025-06/Autor-Thompson-Expertise-22050620.pdf",
-      "publisher": "MIT / NBER (David Autor, Neil Thompson) \u2014 Schumpeter Lecture",
+      "publisher": "MIT / NBER (David Autor, Neil Thompson) — Schumpeter Lecture",
       "evidenceTier": 1,
       "datePublished": "2025-06-20",
-      "excerpt": "Introduces a content-agnostic expertise measure based on the Efficient Coding Hypothesis applied to 1977 DOT and 2018 O*NET task descriptions; uses OpenAI text-embedding-3-small with 0.95 caliper to identify which tasks were removed, retained, or added across 303 Census occupations. Findings on US task composition 1977-2018: routine share of tasks fell from 50.4% to 32.2%, abstract share rose from 33.2% to 53.6%, manual share fell from 16.4% to 14.2%. 66% of removed tasks were routine; 77% of added tasks were abstract. Cross-occupation expertise wage premium nearly doubled: 1\u03c3 expertise = +16 log pts wages in 1980, +31 log pts in 2018 (R\u00b2 0.32 \u2192 0.49). Alternative framework to Anthropic/OpenAI/Webb exposure measures \u2014 measures expertise required by tasks rather than AI capability to perform them.",
+      "excerpt": "Introduces a content-agnostic expertise measure based on the Efficient Coding Hypothesis applied to 1977 DOT and 2018 O*NET task descriptions; uses OpenAI text-embedding-3-small with 0.95 caliper to identify which tasks were removed, retained, or added across 303 Census occupations. Findings on US task composition 1977-2018: routine share of tasks fell from 50.4% to 32.2%, abstract share rose from 33.2% to 53.6%, manual share fell from 16.4% to 14.2%. 66% of removed tasks were routine; 77% of added tasks were abstract. Cross-occupation expertise wage premium nearly doubled: 1σ expertise = +16 log pts wages in 1980, +31 log pts in 2018 (R² 0.32 → 0.49). Alternative framework to Anthropic/OpenAI/Webb exposure measures — measures expertise required by tasks rather than AI capability to perform them.",
       "dateAdded": "2026-05-11"
     },
     {
@@ -1312,7 +1349,7 @@
       "publisher": "Oxford Martin School / Technological Forecasting & Social Change (Frey & Osborne)",
       "evidenceTier": 1,
       "datePublished": "2013-09-17",
-      "excerpt": "We examine how susceptible jobs are to computerisation\u2026 implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier\u2026 According to our estimates, about 47 percent of total US employment is at risk."
+      "excerpt": "We examine how susceptible jobs are to computerisation… implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier… According to our estimates, about 47 percent of total US employment is at risk."
     },
     {
       "id": "pizzinelli-imf-complementarity-2023",
@@ -1321,7 +1358,7 @@
       "publisher": "IMF Working Paper WP/23/216 (Pizzinelli, Panton, Tavares, Cazzaniga, Li)",
       "evidenceTier": 1,
       "datePublished": "2023-10-04",
-      "excerpt": "AEs face higher exposure than EMs due to a higher employment share in professional and managerial occupations. However, when accounting for potential complementarity, differences in exposure across countries are more muted. Within countries\u2026 Women and highly educated workers face greater occupational exposure to AI, at both high and low complementarity. Workers in the upper tail of the earnings distribution are more likely to be in occupations with high exposure but also high potential complementarity."
+      "excerpt": "AEs face higher exposure than EMs due to a higher employment share in professional and managerial occupations. However, when accounting for potential complementarity, differences in exposure across countries are more muted. Within countries… Women and highly educated workers face greater occupational exposure to AI, at both high and low complementarity. Workers in the upper tail of the earnings distribution are more likely to be in occupations with high exposure but also high potential complementarity."
     },
     {
       "id": "brynjolfsson-mitchell-rock-sml-2018",
@@ -1330,7 +1367,7 @@
       "publisher": "AEA Papers and Proceedings 108 (Brynjolfsson, Mitchell, Rock)",
       "evidenceTier": 1,
       "datePublished": "2018-05-01",
-      "excerpt": "We apply the rubric evaluating task potential for ML\u2026 to build measures of 'Suitability for Machine Learning' (SML) and apply it to 18,156 tasks in O*NET. We find that (i) ML affects different occupations than earlier automation waves; (ii) most occupations include at least some SML tasks; (iii) few occupations are fully automatable using ML; and (iv) realizing the potential of ML usually requires redesign of job task content."
+      "excerpt": "We apply the rubric evaluating task potential for ML… to build measures of 'Suitability for Machine Learning' (SML) and apply it to 18,156 tasks in O*NET. We find that (i) ML affects different occupations than earlier automation waves; (ii) most occupations include at least some SML tasks; (iii) few occupations are fully automatable using ML; and (iv) realizing the potential of ML usually requires redesign of job task content."
     },
     {
       "id": "felten-raj-seamans-aioe-2021",
@@ -1345,7 +1382,7 @@
       "id": "census-ces-ai-diffusion-2026",
       "title": "The Microstructure of AI Diffusion: Evidence from Firms, Business Functions, and Worker Tasks",
       "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-25.html",
-      "publisher": "US Census Bureau \u2014 Center for Economic Studies (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande)",
+      "publisher": "US Census Bureau — Center for Economic Studies (Bonney, Breaux, Dinlersoz, Foster, Haltiwanger, Pande)",
       "evidenceTier": 1,
       "datePublished": "2026-04-22",
       "excerpt": "Functional breadth and operational investment are positively associated with employment decreases, whereas worker-task integration shows no significant link to headcount reduction once functional integration and operational investment are taken into account."
@@ -1359,6 +1396,15 @@
       "datePublished": "2026-05-29",
       "excerpt": "Connecticut SB 5 requires employers filing WARN Act notices to disclose whether layoffs are related to AI (effective Oct 2026), and requires notice to employees/applicants when automated systems are a substantial factor in hiring, promotion, discipline, or discharge (effective Oct 2027). Violations are unfair trade practices enforceable by AG, up to $1,000 per violation.",
       "dateAdded": "2026-06-01"
+    },
+    {
+      "id": "doi-llm-exposure-and-2026",
+      "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labor Force",
+      "url": "https://doi.org/10.5271/sjweh.4312",
+      "publisher": "doi.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-03",
+      "excerpt": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]"
     }
   ]
 }

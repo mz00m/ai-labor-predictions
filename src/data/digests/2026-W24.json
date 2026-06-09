@@ -1,0 +1,106 @@
+{
+  "week": "2026-W24",
+  "generatedAt": "2026-06-09T12:16:36.856Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs",
+      "summary": "The US technology sector eliminated 38,242 positions in May 2026, with artificial intelligence cited as the primary driver of workforce reductions — marking one of the clearest on-record instances of AI being explicitly named as the cause of tech layoffs. This data point reinforces accelerating displacement trends within the tech sector and underscores growing employer willingness to publicly attribute headcount reductions to automation. The figures, reported via Tom's Hardware citing layoff-tracking data, signal a meaningful inflection in how companies communicate AI-driven workforce changes. (Tom's Hardware / HN, 2026-06-04)",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/tech-sector-cut-us-jobs-by-38242-in-may",
+      "publishedAt": "2026-06-04",
+      "score": 0.85,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "tech-sector-displacement"
+    },
+    {
+      "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labor Force",
+      "summary": "A peer-reviewed study published in the Scandinavian Journal of Work, Environment & Health examines how occupational exposure to large language models intersects with labor market precarity in Canada, finding that LLM exposure is not uniformly distributed and disproportionately affects workers already in vulnerable employment conditions. The research unpacks the relationship between AI adoption and widening labor market inequities, echoing historical patterns where digital technology transitions most severely impact the least-protected workers. Authors Jetha et al. provide one of the first empirical assessments linking LLM exposure scores to precarious occupation classifications at the national level. (Jetha et al., SJWEH, DOI: 10.5271/sjweh.4312, 2026-06-03)",
+      "source": "https://doi.org/10.5271/sjweh.4312",
+      "authors": [
+        "Arif Jetha",
+        "Qing Liao",
+        "Peter Smith",
+        "Viet Vu",
+        "Aviroop Biswas",
+        "Brendan Smith",
+        "Faraz Vahid Shahidi"
+      ],
+      "publishedAt": "2026-06-03",
+      "doi": "10.5271/sjweh.4312",
+      "score": 0.82,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "NBER: Workers' Enjoyment of Tasks Shapes Automation Contracting Outcomes",
+      "summary": "A new NBER working paper by Joshua Gans examines 'O-ring' jobs where workers voluntarily devote unpaid time to enjoyable tasks, analyzing how firms choose between pricing complete task bundles versus specifying paid task floors. The model demonstrates that automation decisions are not purely cost-driven — worker preference and intrinsic motivation interact with contracting structures to influence which tasks get automated and at what wage. This has significant implications for predicting which white-collar professional roles resist automation beyond what productivity metrics alone would suggest. (Gans, NBER w35309, 2026-06-09)",
+      "source": "https://www.nber.org/papers/w35309",
+      "authors": [
+        "Joshua S. Gans"
+      ],
+      "publishedAt": "2026-06-09",
+      "score": 0.74,
+      "sourceAdapter": "nber",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "IEEE Spectrum: Why Aren't We Measuring How AI Affects Humans?",
+      "summary": "An IEEE Spectrum commentary raises the alarm that society lacks robust, standardized metrics for tracking AI's societal and labor market impacts on humans, despite rapid deployment across industries. The piece argues that the absence of measurement infrastructure means displacement, wage, and well-being effects are being systematically undercounted or ignored by policymakers and researchers alike. The HN discussion, while modest in engagement, reflects practitioner concern that AI adoption rates and their downstream effects on workers remain opaque. (IEEE Spectrum / HN, 2026-06-06)",
+      "source": "https://spectrum.ieee.org/measuring-ai-societal-impact-khan",
+      "publishedAt": "2026-06-06",
+      "score": 0.68,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Goldman Sachs CEO: Markets in 'Greed Mode' as AI Companies Seek Billions in Capital",
+      "summary": "Goldman Sachs CEO David Solomon described financial markets as being in 'greed mode' driven by AI company capital-raising activity, with firms pursuing multi-billion dollar IPOs and funding rounds as of early June 2026. The commentary highlights that investor sentiment and earnings-call narratives around AI remain highly elevated, consistent with continued acceleration in enterprise AI spending signals. This dynamic is a leading indicator for downstream workforce AI adoption as capital deployment translates into product rollouts and headcount restructuring. (CNBC / HN, 2026-06-03)",
+      "source": "https://www.cnbc.com/2026/06/02/goldman-ceo-david-solomon-greed-mode-ai-firms-ipos.html",
+      "publishedAt": "2026-06-03",
+      "score": 0.62,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "earnings-call-ai-mentions"
+    }
+  ],
+  "themes": [
+    "AI is now explicitly cited as the leading cause of tech-sector layoffs, moving displacement from theoretical to documented reality in May 2026 job-cut data",
+    "LLM exposure risk is concentrated among already-precarious workers, suggesting AI may amplify rather than equalize existing labor market inequities",
+    "Academic research is beginning to model how intrinsic worker motivation and task enjoyment complicate standard automation-displacement predictions for white-collar roles",
+    "A systemic measurement gap persists: standardized metrics for tracking AI's human impact lag far behind deployment speed, limiting evidence-based policy response",
+    "Financial market 'greed mode' around AI investment signals sustained capital inflows that will accelerate enterprise AI adoption and associated workforce restructuring through 2026"
+  ],
+  "watching": [
+    {
+      "title": "RAG Failures in Legal AI: Fabricated Citations and Anachronistic Content",
+      "source": "https://arxiv.org/abs/2606.09724v1",
+      "reason": "Persistent legal AI failures could slow or reshape AI adoption in legal services, with direct implications for white-collar legal and paralegal displacement trajectories."
+    },
+    {
+      "title": "Automated IEP Generation via Generative AI in Education",
+      "source": "https://arxiv.org/abs/2606.09603v1",
+      "reason": "AI automating high-labor special education documentation tasks signals creeping displacement in education-sector administrative and specialist roles."
+    },
+    {
+      "title": "Ask HN: What is your (AI) dev tech stack / workflow?",
+      "source": "https://news.ycombinator.com/item?id=48413629",
+      "reason": "High-engagement practitioner thread (165 pts, 134 comments) reveals real-time genAI work adoption patterns among tech workers, a leading indicator for workforce exposure metrics."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 79,
+    "afterDedup": 79
+  }
+}
