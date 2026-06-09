@@ -11,6 +11,9 @@
 
 import fs from "fs";
 import path from "path";
+import { loadEnv } from "./lib/load-env";
+
+loadEnv();
 import { toDateString } from "./lib/date-utils";
 import { fetchSource } from "./lib/ingest/fetcher";
 import {
