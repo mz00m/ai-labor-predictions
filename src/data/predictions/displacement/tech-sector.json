@@ -116,18 +116,6 @@
       }
     },
     {
-      "date": "2025-08-01",
-      "value": 13,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-2025"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
       "date": "2025-11-13",
       "value": 1.3,
       "confidenceLow": -1.5,
@@ -292,6 +280,15 @@
     }
   ],
   "overlays": [
+    {
+      "date": "2025-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Brynjolfsson et al. August preprint: ~13% early-career SWE decline (revised to ~1.3% in November publication)"
+    },
     {
       "date": "2023-02-01",
       "direction": "up",
