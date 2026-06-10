@@ -145,6 +145,18 @@ print(soup.get_text(separator=" ", strip=True)[:15000])
 
 **NBER tip:** Strategy 3 (PDF) is the most reliable path for NBER papers. Construct the PDF URL directly from the paper number — you'll get the full text rather than just the abstract, which is essential for extracting all quantitative statistics.
 
+#### Remote-session note (Claude Code on the web)
+
+In remote/cloud sessions, outbound traffic goes through a proxy governed by the environment's network policy. Blocked hosts fail with HTTP 403 and `x-deny-reason: host_not_allowed` (curl) or a generic 403 (WebFetch) — retrying the same host with a different strategy will not help, and Playwright (Strategy 4) is usually unavailable. Hosts observed blocked under the default policy: `arxiv.org`, `export.arxiv.org`, `pewresearch.org`. Hosts observed working: `microsoft.com`, `ilo.org`, plus WebSearch generally.
+
+Fallback order that works when the primary host is blocked:
+
+1. **Try an alternate host for the same document** — publisher landing page, institutional mirror, or aggregator (e.g., a Microsoft Research publication page instead of the arXiv PDF).
+2. **WebSearch for the exact sentences** — search distinctive phrases from the abstract/findings and confirm the verbatim wording from at least **two independent retrievals** before using it as a quote.
+3. **Flag reduced verification** — if a quote could not be confirmed against the full text, say so explicitly in the extraction report and completion summary so the user can spot-check during review.
+
+If a host keeps blocking ingestion work, tell the user to add it to the environment's network allowlist (Environments → Network access at claude.ai/code); the change takes effect in new sessions.
+
 If the retrieved content is under 200 characters after all strategies, warn the user that the fetch failed and wait for them to provide content manually.
 
 ### Step 1.5: Duplicate Check (before extraction)

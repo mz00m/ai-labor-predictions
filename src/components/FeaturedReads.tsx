@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Bill Wasik, mod. (NYT Magazine)",
+    title: "Who Will Actually Thrive in the Hybrid A.I.-Human Work Force",
+    summary:
+      "Four experts — Daron Acemoglu, Dean Ball, Ethan Mollick and Clara Shih — debate how workers should prepare. Mollick cites a P&G experiment with 776 employees where individuals using AI matched two-person teams without it — and warns the apprenticeship model for training juniors has 'all collapsed.' Acemoglu challenges the agent-supervisor future ('How many Marcus Chens can the American economy employ?') and argues investment should flow to augmenting shortage trades — a novice electrician with the right AI tool could be 10x as productive. Shih sees a 'tale of two cities': entry-level candidates fluent in AI agents get hired; the rest watch those roles disappear.",
+    date: "Jun 9",
+    url: "https://www.nytimes.com/2026/06/09/magazine/ai-jobs-workforce-labor.html",
+  },
+  {
     author: "Patricia Cohen (NYT)",
     title: "A.I. Doesn't Have to Mean Layoffs",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "A 'two realities' argument: the capability ceiling is rising fast while enterprise implementation stays stubbornly human. At the frontier, an OpenAI model made progress on a unit-distance conjecture Paul Erdős posed in 1946 — cross-domain reasoning, not brute force — which Fields Medalist Timothy Gowers called 'a milestone in AI mathematics.' At the floor, Starbucks scrapped an AI inventory tool deployed across 11,000+ North American stores after nine months of inaccuracies, reverting to manual counts. Ojha's warning: firms route existing workflows through AI and count the collision as adoption — 'metric theater' that inflates usage the way adjusted EBITDA flatters earnings. Capability does not automatically become productivity.",
     date: "May 22",
     url: "https://saanyaojha.substack.com/p/the-frontier-and-the-froth",
-  },
-  {
-    author: "Andrew R. Hanson (Strada Institute)",
-    title: "Entry-Level Hiring in the AI Era: What Employers Are Thinking (and Doing)",
-    summary:
-      "Strada's survey of 1,498 US executives and senior talent leaders (Mar 2026) finds AI is, so far, a net positive for entry-level hiring. In 2025, 46% of employers that have at least explored AI say it raised entry-level hiring vs 13% who say it cut — nearly 4-to-1 — and 2.7x more expect AI to raise than cut hiring in 2026. Greater AI use is the single most-cited positive driver (27%). But the bar is rising: 42% say AI shifted entry-level work toward analytical, judgment-based tasks while 41% report routine admin tasks shrinking, and among the minority cutting roles, reductions concentrate in admin (46%) and customer support (44%). Notably, employers rank AI literacy the least important skill — behind critical thinking and communication.",
-    date: "May 2026",
-    url: "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
   },
 ];
 

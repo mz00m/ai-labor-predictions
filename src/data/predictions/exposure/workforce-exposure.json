@@ -5,7 +5,7 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "exposure",
   "unit": "% of jobs exposed",
-  "currentValue": 0.4,
+  "currentValue": 67,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "latest",
   "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' — from individual task overlap to full occupation-level capability mapping. The 23–93% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
@@ -45,6 +45,16 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2023-07-26",
+      "value": 19,
+      "sourceIds": [
+        "pew-workers-ai-exposure-2023"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "dataType": "observed"
     },
     {
       "date": "2024-01-14",
@@ -164,16 +174,6 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
-    },
-    {
-      "date": "2026-06-03",
-      "value": 0.386,
-      "confidenceLow": 0.356,
-      "confidenceHigh": 0.417,
-      "sourceIds": [
-        "doi-llm-exposure-and-2026"
-      ],
-      "evidenceTier": 1
     }
   ],
   "overlays": [
@@ -268,6 +268,15 @@
       "label": "OECD: One in three OECD job vacancies have high AI exposure (2025)"
     },
     {
+      "date": "2025-05-20",
+      "direction": "neutral",
+      "sourceIds": [
+        "ilo-nask-genai-exposure-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO: 25% of global employment in occupations exposed to GenAI; 34% in HICs"
+    },
+    {
       "date": "2025-06-20",
       "direction": "up",
       "sourceIds": [
@@ -284,6 +293,15 @@
       ],
       "evidenceTier": 1,
       "label": "MIT (Autor/Thompson): Cross-occupation expertise premium NEARLY DOUBLED 1980-2018: 1σ expertise = +16 log pts wages in 1980, +31 log pts in 2018"
+    },
+    {
+      "date": "2025-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "microsoft-working-with-ai-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Microsoft: Copilot logs show highest AI applicability in knowledge work"
     },
     {
       "date": "2025-09-01",
@@ -745,6 +763,15 @@
       "label": "NYT/OpenAI: GDPVal models reach 80%+ win rate vs human pros"
     },
     {
+      "date": "2026-05-01",
+      "direction": "down",
+      "sourceIds": [
+        "yin-ogut-platform-exposure-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Yin & Ogut: BLS reweighting cuts platform-based exposure estimates 42-93%"
+    },
+    {
       "date": "2026-05-04",
       "direction": "up",
       "sourceIds": [
@@ -788,6 +815,15 @@
       ],
       "evidenceTier": 1,
       "label": "Very high precarity occupations: mean LLM exposure 0.205 (CI 0.136–0.275)"
+    },
+    {
+      "date": "2026-06-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "doi-llm-exposure-and-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Low precarity occupations: mean LLM exposure 0.386 (CI 0.356–0.417)"
     }
   ],
   "sources": [
@@ -1401,10 +1437,46 @@
       "id": "doi-llm-exposure-and-2026",
       "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labor Force",
       "url": "https://doi.org/10.5271/sjweh.4312",
-      "publisher": "doi.org",
+      "publisher": "Scandinavian Journal of Work, Environment & Health",
       "evidenceTier": 1,
       "datePublished": "2026-06-03",
       "excerpt": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]"
+    },
+    {
+      "id": "pew-workers-ai-exposure-2023",
+      "title": "Which U.S. Workers Are More Exposed to AI on Their Jobs?",
+      "url": "https://www.pewresearch.org/social-trends/2023/07/26/which-u-s-workers-are-more-exposed-to-ai-on-their-jobs/",
+      "publisher": "Pew Research Center (Rakesh Kochhar)",
+      "evidenceTier": 2,
+      "datePublished": "2023-07-26",
+      "excerpt": "In 2022, 19% of American workers were in jobs that are the most exposed to artificial intelligence, in which the most important activities may be either replaced or assisted by AI."
+    },
+    {
+      "id": "microsoft-working-with-ai-2025",
+      "title": "Working with AI: Measuring the Applicability of Generative AI to Occupations",
+      "url": "https://arxiv.org/abs/2507.07935",
+      "publisher": "Microsoft Research (Tomlinson, Jaffe, Wang, Counts, Suri)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-01",
+      "excerpt": "a dataset of 200k anonymized and privacy-scrubbed conversations between users and Microsoft Bing Copilot ... the highest AI applicability scores are for knowledge work occupation groups such as computer and mathematical, and office and administrative support, as well as occupations such as sales whose work activities involve providing and communicating information"
+    },
+    {
+      "id": "yin-ogut-platform-exposure-2026",
+      "title": "Who Uses AI? Platforms, Workforce, and AI Exposure",
+      "url": "https://arxiv.org/abs/2605.21743",
+      "publisher": "arXiv (Yin & Ogut)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Reweighting to Bureau of Labor Statistics workforce shares attenuates estimates by 42 to 93 percent."
+    },
+    {
+      "id": "ilo-nask-genai-exposure-2025",
+      "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "publisher": "ILO / NASK",
+      "evidenceTier": 2,
+      "datePublished": "2025-05-20",
+      "excerpt": "25% of global employment falls within occupations potentially exposed to GenAI, with higher shares in high-income countries (34%). Clerical support roles remain the most exposed."
     }
   ]
 }
