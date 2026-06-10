@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Who Will Actually Thrive in the Hybrid A.I.-Human Work Force",
+      "author": "Bill Wasik (moderator)",
+      "publisher": "The New York Times Magazine",
+      "date": "2026-06-09",
+      "url": "https://www.nytimes.com/2026/06/09/magazine/ai-jobs-workforce-labor.html",
+      "takeaway": "A four-expert panel — Daron Acemoglu, Dean Ball, Ethan Mollick, and Clara Shih — on how workers should prepare for a hybrid AI-human workforce. Mollick cites a Procter & Gamble experiment with 776 employees in which individuals using AI performed as well as two-person teams without it, and warns that the apprenticeship model for training junior workers has 'all collapsed.' Acemoglu challenges the agent-supervisor vision of work ('How many Marcus Chens can the American economy employ?') and argues AI investment is misdirected toward automation rather than augmenting trades facing shortages — a novice electrician with the right AI tool could be 10x as productive. Shih reports a 'tale of two cities' in entry-level hiring: candidates fluent in AI agents land jobs while others see those roles disappear. Consensus advice: curious generalists, AI-augmented skilled trades, and owning projects end to end.",
+      "weekFeatured": "2026-06-10",
+      "tier": 3
+    },
+    {
       "title": "A.I. Doesn't Have to Mean Layoffs",
       "author": "Patricia Cohen",
       "publisher": "The New York Times",

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-09",
-  "totalSources": 569,
-  "verifiedCount": 559,
+  "lastUpdated": "2026-06-10",
+  "totalSources": 572,
+  "verifiedCount": 562,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -6546,7 +6546,8 @@
       "excerpt": "25% of global employment falls within occupations potentially exposed to GenAI, with higher shares in high-income countries (34%). Clerical support roles remain the most exposed.",
       "usedIn": [
         "customer-service-automation",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -8061,12 +8062,54 @@
       "id": "doi-llm-exposure-and-2026",
       "title": "LLM Exposure and Precarious Occupations: Evidence from the Canadian Labor Force",
       "url": "https://doi.org/10.5271/sjweh.4312",
-      "publisher": "doi.org",
+      "publisher": "Scandinavian Journal of Work, Environment & Health",
       "evidenceTier": 1,
       "datePublished": "2026-06-03",
       "excerpt": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]",
       "usedIn": [
         "tech-sector-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pew-workers-ai-exposure-2023": {
+      "id": "pew-workers-ai-exposure-2023",
+      "title": "Which U.S. Workers Are More Exposed to AI on Their Jobs?",
+      "url": "https://www.pewresearch.org/social-trends/2023/07/26/which-u-s-workers-are-more-exposed-to-ai-on-their-jobs/",
+      "publisher": "Pew Research Center (Rakesh Kochhar)",
+      "evidenceTier": 2,
+      "datePublished": "2023-07-26",
+      "excerpt": "In 2022, 19% of American workers were in jobs that are the most exposed to artificial intelligence, in which the most important activities may be either replaced or assisted by AI.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "microsoft-working-with-ai-2025": {
+      "id": "microsoft-working-with-ai-2025",
+      "title": "Working with AI: Measuring the Applicability of Generative AI to Occupations",
+      "url": "https://arxiv.org/abs/2507.07935",
+      "publisher": "Microsoft Research (Tomlinson, Jaffe, Wang, Counts, Suri)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-01",
+      "excerpt": "a dataset of 200k anonymized and privacy-scrubbed conversations between users and Microsoft Bing Copilot ... the highest AI applicability scores are for knowledge work occupation groups such as computer and mathematical, and office and administrative support, as well as occupations such as sales whose work activities involve providing and communicating information",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yin-ogut-platform-exposure-2026": {
+      "id": "yin-ogut-platform-exposure-2026",
+      "title": "Who Uses AI? Platforms, Workforce, and AI Exposure",
+      "url": "https://arxiv.org/abs/2605.21743",
+      "publisher": "arXiv (Yin & Ogut)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Reweighting to Bureau of Labor Statistics workforce shares attenuates estimates by 42 to 93 percent.",
+      "usedIn": [
         "workforce-ai-exposure"
       ],
       "verified": true,
