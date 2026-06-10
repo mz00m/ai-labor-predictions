@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const staticRoutes: MetadataRoute.Sitemap = [
+  const staticRoutes: MetadataRoute.Sitemap = ([
     { path: "/predictions", changeFrequency: "daily", priority: 0.9 },
     { path: "/map", changeFrequency: "weekly", priority: 0.8 },
     { path: "/compare", changeFrequency: "weekly", priority: 0.7 },
@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/assessment", changeFrequency: "monthly", priority: 0.8 },
     { path: "/assessment/start", changeFrequency: "monthly", priority: 0.6 },
     { path: "/assessment/methodology", changeFrequency: "monthly", priority: 0.5 },
-  ].map(({ path, changeFrequency, priority }) => ({
+  ] as const).map(({ path, changeFrequency, priority }) => ({
     url: `https://jobsdata.ai${path}`,
     lastModified: new Date(),
     changeFrequency,
