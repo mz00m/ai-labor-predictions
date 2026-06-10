@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Erik Brynjolfsson et al. (Stanford DEL)",
+    title: "The AI Economic Indicators",
+    summary:
+      "Stanford's Digital Economy Lab launches a monthly-updated dashboard suite tracking AI's real economic footprint — the live successor to the Canaries research. An Employment & AI Exposure dashboard built on ADP payroll records covering millions of workers; a Canaries dashboard showing a 16% relative employment decline for workers 22–25 in the most AI-exposed occupations, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macro indicators — productivity, capital share, energy use — that currently read mostly neutral. A standing answer to 'what does the data show right now?'",
+    date: "Jun 2026",
+    url: "https://digitaleconomy.stanford.edu/project/indicators/",
+  },
+  {
     author: "Bill Wasik, mod. (NYT Magazine)",
     title: "Who Will Actually Thrive in the Hybrid A.I.-Human Work Force",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The first papal encyclical to treat AI as a central topic. Warns of a 'significant and rapid contraction in available jobs,' wage polarization — 'outsized remuneration for a highly specialized minority alongside declining wages for a large portion of the workforce' — and that AI can 'paradoxically de-skill workers, subject them to automated surveillance.' Frames policy through subsidiarity and integral human development.",
     date: "May 15",
     url: "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
-  },
-  {
-    author: "Saanya Ojha (Substack)",
-    title: "The Frontier and the Froth",
-    summary:
-      "A 'two realities' argument: the capability ceiling is rising fast while enterprise implementation stays stubbornly human. At the frontier, an OpenAI model made progress on a unit-distance conjecture Paul Erdős posed in 1946 — cross-domain reasoning, not brute force — which Fields Medalist Timothy Gowers called 'a milestone in AI mathematics.' At the floor, Starbucks scrapped an AI inventory tool deployed across 11,000+ North American stores after nine months of inaccuracies, reverting to manual counts. Ojha's warning: firms route existing workflows through AI and count the collision as adoption — 'metric theater' that inflates usage the way adjusted EBITDA flatters earnings. Capability does not automatically become productivity.",
-    date: "May 22",
-    url: "https://saanyaojha.substack.com/p/the-frontier-and-the-froth",
   },
 ];
 

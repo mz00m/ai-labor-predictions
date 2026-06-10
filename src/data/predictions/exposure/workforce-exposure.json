@@ -790,6 +790,15 @@
       "label": "Connecticut: employers must disclose AI use in WARN Act layoffs (Oct 2026) and hiring decisions (Oct 2027)"
     },
     {
+      "date": "2026-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "stanford-del-ai-economic-indicators-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford DEL×ADP: employment growth lowest in most AI-exposed occupations"
+    },
+    {
       "date": "2026-06-03",
       "direction": "down",
       "sourceIds": [
@@ -1477,6 +1486,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-05-20",
       "excerpt": "25% of global employment falls within occupations potentially exposed to GenAI, with higher shares in high-income countries (34%). Clerical support roles remain the most exposed."
+    },
+    {
+      "id": "stanford-del-ai-economic-indicators-2026",
+      "title": "The AI Economic Indicators",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-01",
+      "excerpt": "an expanding series of economic dashboards that connects policymakers, business executives, and individual workers to timely and reliable information on the economic impact of AI"
     }
   ]
 }

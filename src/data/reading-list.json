@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The AI Economic Indicators",
+      "author": "Erik Brynjolfsson et al.",
+      "publisher": "Stanford Digital Economy Lab",
+      "date": "2026-06-01",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "takeaway": "Stanford's Digital Economy Lab launched a monthly-updated public dashboard suite tracking AI's real economic footprint — the live, continuously refreshed successor to the Canaries research. Three components: an Employment & AI Exposure dashboard built with ADP Research on payroll records covering millions of workers at thousands of private companies; the Canaries dashboard tracking early-career employment in AI-exposed occupations, now showing a 16% relative employment decline for workers aged 22-25 in the most-exposed roles, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macroeconomic indicators (productivity, capital share, energy use) that currently read mostly neutral — no macro takeoff visible yet. A standing, citable answer to 'what does the data show right now?'",
+      "weekFeatured": "2026-06-10",
+      "tier": 2
+    },
+    {
       "title": "Who Will Actually Thrive in the Hybrid A.I.-Human Work Force",
       "author": "Bill Wasik (moderator)",
       "publisher": "The New York Times Magazine",

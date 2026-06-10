@@ -1649,6 +1649,33 @@
       "label": "arXiv: +1 SD RL exposure → 2.9% drop in job openings post-ChatGPT"
     },
     {
+      "date": "2026-05-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: 45% of WIOA participants return to prior industry; 27% same occupation"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: Only ~5% of WIOA participants receive formal retraining"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "down",
+      "sourceIds": [
+        "jacobs-canedy-wioa-retraining-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Jacobs/Canedy: Apprenticeships show highest retraining success (0.71 incidence)"
+    },
+    {
       "date": "2026-05-07",
       "direction": "down",
       "sourceIds": [
@@ -1712,31 +1739,13 @@
       "label": "Goldman: data center demand has created 200K+ construction jobs since 2022"
     },
     {
-      "date": "2026-05-05",
-      "direction": "neutral",
-      "sourceIds": [
-        "jacobs-canedy-wioa-retraining-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Jacobs/Canedy: 45% of WIOA participants return to prior industry; 27% same occupation"
-    },
-    {
-      "date": "2026-05-05",
-      "direction": "neutral",
-      "sourceIds": [
-        "jacobs-canedy-wioa-retraining-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Jacobs/Canedy: Only ~5% of WIOA participants receive formal retraining"
-    },
-    {
-      "date": "2026-05-05",
+      "date": "2026-06-01",
       "direction": "down",
       "sourceIds": [
-        "jacobs-canedy-wioa-retraining-2026"
+        "stanford-del-ai-economic-indicators-2026"
       ],
       "evidenceTier": 2,
-      "label": "Jacobs/Canedy: Apprenticeships show highest retraining success (0.71 incidence)"
+      "label": "Stanford DEL Takeoff Tracker: 12 macro AI indicators read mostly neutral"
     }
   ],
   "sources": [
@@ -3077,6 +3086,15 @@
       "datePublished": "2026-05-05",
       "excerpt": "WIOA rarely supports worker resilience to automation, with 45% of all WIOA participants returning to their prior industry of work, and 27% staying in the same occupation. Successful outcomes driven mostly by wage gains, possibly due to catch-up mean reversion, rather than changes in occupation.",
       "dateAdded": "2026-06-01"
+    },
+    {
+      "id": "stanford-del-ai-economic-indicators-2026",
+      "title": "The AI Economic Indicators",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-01",
+      "excerpt": "an expanding series of economic dashboards that connects policymakers, business executives, and individual workers to timely and reliable information on the economic impact of AI"
     }
   ]
 }

@@ -9,10 +9,23 @@
         "nber": "https://www.nber.org/people/daron_acemoglu",
         "scholar": "https://scholar.google.com/citations?user=l_gGrDEAAAAJ"
       },
-      "topics": ["task-based automation model", "displacement vs reinstatement", "pro-worker AI", "so-so automation", "regulation"],
-      "graphRelevance": ["overall-us-displacement", "median-wage-impact", "tech-sector-displacement"],
+      "topics": [
+        "task-based automation model",
+        "displacement vs reinstatement",
+        "pro-worker AI",
+        "so-so automation",
+        "regulation"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "median-wage-impact",
+        "tech-sector-displacement"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["acemoglu-macro-2024", "acemoglu-restrepo-robots-jobs-2020"]
+      "keyPapers": [
+        "acemoglu-macro-2024",
+        "acemoglu-restrepo-robots-jobs-2020"
+      ]
     },
     {
       "name": "Erik Brynjolfsson",
@@ -20,12 +33,28 @@
       "profileUrls": {
         "nber": "https://www.nber.org/people/erik_brynjolfsson",
         "scholar": "https://scholar.google.com/citations?user=ZbNBVWAAAAAJ",
-        "del": "https://digitaleconomy.stanford.edu/people/erik-brynjolfsson/"
+        "del": "https://digitaleconomy.stanford.edu/people/erik-brynjolfsson/",
+        "aiEconomicIndicators": "https://digitaleconomy.stanford.edu/project/indicators/"
       },
-      "topics": ["productivity J-curve", "augmentation vs automation", "Turing Trap", "canaries", "SML rubric"],
-      "graphRelevance": ["overall-us-displacement", "genai-work-adoption", "tech-sector-displacement", "entry-level-wage-impact"],
+      "topics": [
+        "productivity J-curve",
+        "augmentation vs automation",
+        "Turing Trap",
+        "canaries",
+        "SML rubric",
+        "AI Economic Indicators dashboards (monthly refresh)"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "genai-work-adoption",
+        "tech-sector-displacement",
+        "entry-level-wage-impact"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["brynjolfsson-canaries-2025", "brynjolfsson-jcurve-2021"]
+      "keyPapers": [
+        "brynjolfsson-canaries-2025",
+        "brynjolfsson-jcurve-2021"
+      ]
     },
     {
       "name": "Martha Gimbel",
@@ -33,10 +62,22 @@
       "profileUrls": {
         "budgetlab": "https://budgetlab.yale.edu/about/team"
       },
-      "topics": ["CPS microdata", "measured displacement", "AI-washing", "occupational dissimilarity"],
-      "graphRelevance": ["overall-us-displacement", "workforce-ai-exposure"],
+      "topics": [
+        "CPS microdata",
+        "measured displacement",
+        "AI-washing",
+        "occupational dissimilarity"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["yale-budget-lab-2025", "yale-budgetlab-cps-update-2026", "yale-budgetlab-exposure-agreement-2026"]
+      "keyPapers": [
+        "yale-budget-lab-2025",
+        "yale-budgetlab-cps-update-2026",
+        "yale-budgetlab-exposure-agreement-2026"
+      ]
     },
     {
       "name": "James Bessen",
@@ -45,10 +86,23 @@
         "nber": "https://www.nber.org/people/james_bessen",
         "scholar": "https://scholar.google.com/citations?user=HzSz2OIAAAAJ"
       },
-      "topics": ["demand elasticity", "historical automation parallels", "inverted-U employment", "geographic AI adoption", "New Goliaths"],
-      "graphRelevance": ["overall-us-displacement", "ai-adoption-rate", "median-wage-impact"],
+      "topics": [
+        "demand elasticity",
+        "historical automation parallels",
+        "inverted-U employment",
+        "geographic AI adoption",
+        "New Goliaths"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "ai-adoption-rate",
+        "median-wage-impact"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["bessen-ai-jobs-demand-2018", "bessen-automation-employment-demand-2019"]
+      "keyPapers": [
+        "bessen-ai-jobs-demand-2018",
+        "bessen-automation-employment-demand-2019"
+      ]
     },
     {
       "name": "Jed Kolko",
@@ -56,10 +110,22 @@
       "profileUrls": {
         "piie": "https://www.piie.com/experts/senior-research-staff/jed-kolko"
       },
-      "topics": ["measurement methodology", "exposure measure sensitivity", "streetlamp bias", "narrator bias", "first inning"],
-      "graphRelevance": ["workforce-ai-exposure", "ai-adoption-rate", "overall-us-displacement"],
+      "topics": [
+        "measurement methodology",
+        "exposure measure sensitivity",
+        "streetlamp bias",
+        "narrator bias",
+        "first inning"
+      ],
+      "graphRelevance": [
+        "workforce-ai-exposure",
+        "ai-adoption-rate",
+        "overall-us-displacement"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["piie-kolko-ai-labor-first-inning-2026"]
+      "keyPapers": [
+        "piie-kolko-ai-labor-first-inning-2026"
+      ]
     },
     {
       "name": "Alex Imas",
@@ -68,10 +134,22 @@
         "scholar": "https://scholar.google.com/citations?user=6WJnZnkAAAAJ",
         "substack": "https://aleximas.substack.com/"
       },
-      "topics": ["micro-macro disconnect", "adoption heterogeneity", "machine fluency", "specification hazard", "demand constraints"],
-      "graphRelevance": ["genai-work-adoption", "overall-us-displacement", "workforce-ai-exposure"],
+      "topics": [
+        "micro-macro disconnect",
+        "adoption heterogeneity",
+        "machine fluency",
+        "specification hazard",
+        "demand constraints"
+      ],
+      "graphRelevance": [
+        "genai-work-adoption",
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["imas-shukla-oring-exposure-2026"]
+      "keyPapers": [
+        "imas-shukla-oring-exposure-2026"
+      ]
     },
     {
       "name": "Molly Kinder",
@@ -79,10 +157,23 @@
       "profileUrls": {
         "brookings": "https://www.brookings.edu/people/molly-kinder/"
       },
-      "topics": ["worker-centered policy", "adaptive capacity", "career ladder erosion", "gendered displacement", "workforce training"],
-      "graphRelevance": ["overall-us-displacement", "entry-level-wage-impact", "workforce-ai-exposure"],
+      "topics": [
+        "worker-centered policy",
+        "adaptive capacity",
+        "career ladder erosion",
+        "gendered displacement",
+        "workforce training"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "entry-level-wage-impact",
+        "workforce-ai-exposure"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["kinder-brookings-2025", "brookings-adaptive-capacity-2026"]
+      "keyPapers": [
+        "kinder-brookings-2025",
+        "brookings-adaptive-capacity-2026"
+      ]
     },
     {
       "name": "Daniel Rock",
@@ -91,10 +182,22 @@
         "scholar": "https://scholar.google.com/citations?user=MFMqhgIAAAAJ",
         "wharton": "https://oid.wharton.upenn.edu/profile/rockMDaniel/"
       },
-      "topics": ["task-level exposure", "GPTs are GPTs", "J-curve", "SML rubric", "firm-level AI value"],
-      "graphRelevance": ["workforce-ai-exposure", "overall-us-displacement", "genai-work-adoption"],
+      "topics": [
+        "task-level exposure",
+        "GPTs are GPTs",
+        "J-curve",
+        "SML rubric",
+        "firm-level AI value"
+      ],
+      "graphRelevance": [
+        "workforce-ai-exposure",
+        "overall-us-displacement",
+        "genai-work-adoption"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["eloundou-openai-2024"]
+      "keyPapers": [
+        "eloundou-openai-2024"
+      ]
     },
     {
       "name": "Alexander Bick",
@@ -102,10 +205,19 @@
       "profileUrls": {
         "scholar": "https://scholar.google.com/citations?user=IqkVuLkAAAAJ"
       },
-      "topics": ["RTPS GenAI adoption tracking", "work hours with AI", "US-EU adoption gap"],
-      "graphRelevance": ["genai-work-adoption"],
+      "topics": [
+        "RTPS GenAI adoption tracking",
+        "work hours with AI",
+        "US-EU adoption gap"
+      ],
+      "graphRelevance": [
+        "genai-work-adoption"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["bick-blandin-deming-wp-2025", "bick-deming-mind-the-gap-2026"]
+      "keyPapers": [
+        "bick-blandin-deming-wp-2025",
+        "bick-deming-mind-the-gap-2026"
+      ]
     },
     {
       "name": "David Deming",
@@ -114,10 +226,20 @@
         "nber": "https://www.nber.org/people/david_deming",
         "scholar": "https://scholar.google.com/citations?user=fK-6U8YAAAAJ"
       },
-      "topics": ["AI adoption surveys", "work hours measurement", "skill demand shifts"],
-      "graphRelevance": ["genai-work-adoption", "high-skill-wage-premium"],
+      "topics": [
+        "AI adoption surveys",
+        "work hours measurement",
+        "skill demand shifts"
+      ],
+      "graphRelevance": [
+        "genai-work-adoption",
+        "high-skill-wage-premium"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["bick-blandin-deming-wp-2025", "bick-deming-mind-the-gap-2026"]
+      "keyPapers": [
+        "bick-blandin-deming-wp-2025",
+        "bick-deming-mind-the-gap-2026"
+      ]
     },
     {
       "name": "Maria del Rio-Chanona",
@@ -125,10 +247,22 @@
       "profileUrls": {
         "scholar": "https://scholar.google.com/citations?user=VhK4s2EAAAAJ"
       },
-      "topics": ["AI and jobs review", "freelancer displacement", "task exposure", "skills demand"],
-      "graphRelevance": ["freelancer-rate-impact", "workforce-ai-exposure", "overall-us-displacement"],
+      "topics": [
+        "AI and jobs review",
+        "freelancer displacement",
+        "task exposure",
+        "skills demand"
+      ],
+      "graphRelevance": [
+        "freelancer-rate-impact",
+        "workforce-ai-exposure",
+        "overall-us-displacement"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["del-rio-chanona-ai-jobs-2025", "sciencedirect-freelancer-demand-2025"]
+      "keyPapers": [
+        "del-rio-chanona-ai-jobs-2025",
+        "sciencedirect-freelancer-demand-2025"
+      ]
     },
     {
       "name": "Andrea Eisfeldt",
@@ -137,10 +271,21 @@
         "nber": "https://www.nber.org/people/andrea_eisfeldt",
         "scholar": "https://scholar.google.com/citations?user=GqhSNv0AAAAJ"
       },
-      "topics": ["GenAI firm values", "job posting exposure", "white-collar vs blue-collar exposure"],
-      "graphRelevance": ["workforce-ai-exposure", "overall-us-displacement", "earnings-call-ai-mentions"],
+      "topics": [
+        "GenAI firm values",
+        "job posting exposure",
+        "white-collar vs blue-collar exposure"
+      ],
+      "graphRelevance": [
+        "workforce-ai-exposure",
+        "overall-us-displacement",
+        "earnings-call-ai-mentions"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["eisfeldt-genai-firm-values-2026", "eisfeldt-genai-exposure-2025"]
+      "keyPapers": [
+        "eisfeldt-genai-firm-values-2026",
+        "eisfeldt-genai-exposure-2025"
+      ]
     },
     {
       "name": "Pascual Restrepo",
@@ -149,10 +294,19 @@
         "nber": "https://www.nber.org/people/pascual_restrepo",
         "scholar": "https://scholar.google.com/citations?user=EUHq0HEAAAAJ"
       },
-      "topics": ["task-based model", "robots and jobs", "displacement and reinstatement"],
-      "graphRelevance": ["overall-us-displacement", "median-wage-impact"],
+      "topics": [
+        "task-based model",
+        "robots and jobs",
+        "displacement and reinstatement"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "median-wage-impact"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["acemoglu-macro-2024"]
+      "keyPapers": [
+        "acemoglu-macro-2024"
+      ]
     },
     {
       "name": "Shakked Noy",
@@ -160,8 +314,15 @@
       "profileUrls": {
         "scholar": "https://scholar.google.com/citations?user=YJusMuAAAAAJ"
       },
-      "topics": ["AI productivity experiments", "writing task experiments", "task-level automation"],
-      "graphRelevance": ["overall-us-displacement", "white-collar-professional-displacement"],
+      "topics": [
+        "AI productivity experiments",
+        "writing task experiments",
+        "task-level automation"
+      ],
+      "graphRelevance": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
       "lastChecked": "2026-04-14",
       "keyPapers": []
     },
@@ -171,10 +332,19 @@
       "profileUrls": {
         "scholar": "https://scholar.google.com/citations?user=nTI4m7gAAAAJ"
       },
-      "topics": ["task automation evaluation", "AI capability benchmarks", "O*NET task mapping"],
-      "graphRelevance": ["workforce-ai-exposure", "overall-us-displacement"],
+      "topics": [
+        "task automation evaluation",
+        "AI capability benchmarks",
+        "O*NET task mapping"
+      ],
+      "graphRelevance": [
+        "workforce-ai-exposure",
+        "overall-us-displacement"
+      ],
       "lastChecked": "2026-04-14",
-      "keyPapers": ["mit-futuretech-rising-tides-ai-automation-2026"]
+      "keyPapers": [
+        "mit-futuretech-rising-tides-ai-automation-2026"
+      ]
     }
   ]
 }
