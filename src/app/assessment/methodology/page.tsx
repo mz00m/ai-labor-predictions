@@ -1,5 +1,7 @@
 "use client";
 
+import { SOURCE_COUNT, SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "@/lib/constants";
+
 import { useState } from "react";
 import Link from "next/link";
 
@@ -64,7 +66,7 @@ export default function MethodologyPage() {
 
       {/* Stats bar */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 py-8 border-y border-gray-100 mb-12">
-        <Stat value="481" label="Verified research sources" />
+        <Stat value={String(SOURCE_COUNT)} label="Verified research sources" />
         <Stat value="64" label="Evaluated AI tools" />
         <Stat value="62" label="Human capabilities scored" />
         <Stat value="17" label="Industry templates" />
@@ -77,10 +79,10 @@ export default function MethodologyPage() {
           Research Foundation
         </h2>
         <p className="text-md text-gray-500 leading-relaxed mb-4">
-          Every assessment is grounded in a curated database of 481 verified sources spanning peer-reviewed
+          Every assessment is grounded in a curated database of {SOURCE_COUNT} verified sources spanning peer-reviewed
           research, government statistics, and institutional analysis. This is the same research base
           that powers <a href="/" className="text-accent hover:underline">jobsdata.ai</a>,
-          a public dashboard tracking AI&apos;s impact on jobs, wages, and adoption across 16 prediction
+          a public dashboard tracking AI&apos;s impact on jobs, wages, and adoption across {PREDICTION_COUNT} prediction
           categories.
         </p>
         <p className="text-md text-gray-500 leading-relaxed mb-4">
@@ -311,7 +313,7 @@ export default function MethodologyPage() {
         </p>
         <p className="text-md text-gray-500 leading-relaxed mb-4">
           Projections are built from three inputs: your stated time allocation (from intake), research-backed
-          productivity benchmarks (from our 481-source database), and tool-specific capabilities (from our
+          productivity benchmarks (from our {SOURCE_COUNT}-source database), and tool-specific capabilities (from our
           verified tool knowledge base). For nonprofits and mission-driven organizations, we frame savings as
           capacity recovered &mdash; hours per week freed for mission work &mdash; rather than purely
           dollar-denominated returns.

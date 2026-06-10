@@ -19,6 +19,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { path: "/predictions", changeFrequency: "daily", priority: 0.9 },
+    { path: "/map", changeFrequency: "weekly", priority: 0.8 },
+    { path: "/compare", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/task-visualizer", changeFrequency: "weekly", priority: 0.8 },
+    { path: "/task-visualizer/economy", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/productivity", changeFrequency: "monthly", priority: 0.7 },
+    { path: "/demand-elasticity", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/research", changeFrequency: "weekly", priority: 0.8 },
+    { path: "/methodology", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/suggest", changeFrequency: "monthly", priority: 0.4 },
+    { path: "/learn/reading-list", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/assessment", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/assessment/start", changeFrequency: "monthly", priority: 0.6 },
+    { path: "/assessment/methodology", changeFrequency: "monthly", priority: 0.5 },
+  ].map(({ path, changeFrequency, priority }) => ({
+    url: `https://jobsdata.ai${path}`,
+    lastModified: new Date(),
+    changeFrequency,
+    priority,
+  }));
+
   return [
     {
       url: "https://jobsdata.ai",
@@ -26,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
+    ...staticRoutes,
     {
       url: "https://jobsdata.ai/signals",
       lastModified: new Date(),

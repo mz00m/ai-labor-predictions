@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback, FormEvent } from "react";
-import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
+import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "@/lib/constants";
 
 interface Message {
   id: string;
@@ -484,7 +484,7 @@ export default function Chatbot({ sourceCount }: ChatbotProps) {
                 Ask Gob
               </h3>
               <p className="text-xs text-white/70">
-                {sourceCount ? `${sourceCount}+` : SOURCE_COUNT_DISPLAY} sources across 17 predictions
+                {sourceCount ? `${sourceCount}+` : SOURCE_COUNT_DISPLAY} sources across {PREDICTION_COUNT} predictions
               </p>
             </div>
           </div>

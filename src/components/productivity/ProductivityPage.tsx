@@ -401,7 +401,7 @@ export default function ProductivityPage() {
             <NavCard
               href="/"
               label="Dashboard"
-              description="All 16 predictions with evidence tiers"
+              description="All 18 predictions with evidence tiers"
             />
             <NavCard
               href="/j-curve"

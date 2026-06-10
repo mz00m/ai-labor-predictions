@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "@/lib/constants";
 
 export const runtime = "nodejs";
 export const alt = "Early Signals of AI Impact: Tracking AI's impact on jobs and wages";
@@ -344,7 +345,7 @@ export default function OGImage() {
                 fontWeight: 500,
               }}
             >
-              17 predictions · 298 sources across displacement, wages & adoption
+              {PREDICTION_COUNT} predictions · {SOURCE_COUNT_DISPLAY} sources across displacement, wages & adoption
             </span>
             <span
               style={{
