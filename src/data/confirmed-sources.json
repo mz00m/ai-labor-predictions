@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-06-10",
-  "totalSources": 572,
-  "verifiedCount": 562,
+  "totalSources": 573,
+  "verifiedCount": 563,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8110,6 +8110,21 @@
       "datePublished": "2026-05-01",
       "excerpt": "Reweighting to Bureau of Labor Statistics workforce shares attenuates estimates by 42 to 93 percent.",
       "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-ai-economic-indicators-2026": {
+      "id": "stanford-del-ai-economic-indicators-2026",
+      "title": "The AI Economic Indicators",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-01",
+      "excerpt": "an expanding series of economic dashboards that connects policymakers, business executives, and individual workers to timely and reliable information on the economic impact of AI",
+      "usedIn": [
+        "overall-us-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
