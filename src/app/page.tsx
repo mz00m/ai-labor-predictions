@@ -156,12 +156,12 @@ export default function Home() {
         <ScrollReveal>
           <SectionBar
             title="Why Is Nothing Changing?"
-            description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 15 studies."
+            description="40% of jobs are AI-exposed, but near-zero have measurably vanished. Follow the evidence funnel from exposure through productivity to actual displacement across 16 studies."
             href="/j-curve"
             tag="J-Curve"
             accentColor="#F7C96B"
             watermark={<EconomyFunnelWatermark color="#F7C96B" />}
-            stat={{ value: "15", label: "studies" }}
+            stat={{ value: "16", label: "studies" }}
           />
         </ScrollReveal>
 

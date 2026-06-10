@@ -403,6 +403,8 @@ Update `src/data/confirmed-sources.json`:
 
 2. **Increment counters**: Add 1 to both `totalSources` and `verifiedCount`.
 
+3. **Sync the display constant**: Update `SOURCE_COUNT` in `src/lib/constants.ts` to match the new `totalSources`. This constant feeds the root metadata, the chatbot system prompt, and several page descriptions — if it drifts, the site contradicts its own registry.
+
 ### Step 9: Update Timestamps
 
 After all file changes are applied:

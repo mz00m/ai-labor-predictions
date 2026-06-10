@@ -1,4 +1,21 @@
 import Link from "next/link";
+import { Metadata } from "next";
+import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Get a Personal AI Action Plan | jobsdata.ai",
+  description: `A free, research-backed assessment that maps where AI fits your actual work — built on ${SOURCE_COUNT_DISPLAY} verified sources and a 515-firm field experiment showing that knowing where to use AI matters more than having the tools.`,
+  alternates: {
+    canonical: "/assessment",
+  },
+  openGraph: {
+    title: "Get a Personal AI Action Plan",
+    description:
+      "A free, research-backed assessment that maps where AI fits your actual work — task-by-task analysis, tool recommendations, and ROI projections.",
+    type: "website",
+    siteName: "jobsdata.ai",
+  },
+};
 
 const PROCESS_STEPS = [
   {
@@ -56,7 +73,7 @@ const TRUST_POINTS = [
       </svg>
     ),
     title: "Research-backed recommendations",
-    description: "Built on 300+ sources including a 2026 field experiment with 515 firms showing that knowing where to use AI matters more than having the tools.",
+    description: `Built on ${SOURCE_COUNT_DISPLAY} sources including a 2026 field experiment with 515 firms showing that knowing where to use AI matters more than having the tools.`,
   },
 ];
 
@@ -135,7 +152,7 @@ export default function AssessmentLanding() {
               href="/assessment/methodology"
               className="text-base text-gray-400 hover:text-accent transition-colors"
             >
-              How it works: 481 sources, 64 tools, 4-step AI pipeline &rarr;
+              How it works: {SOURCE_COUNT_DISPLAY} sources, 64 tools, 4-step AI pipeline &rarr;
             </Link>
           </div>
 

@@ -465,7 +465,7 @@ function formatPrediction(
   return lines.join("\n");
 }
 
-/** Summary of all 17 predictions for general questions */
+/** Summary of all predictions for general questions */
 function buildPredictionIndex(predictions: Prediction[]): string {
   const lines = ["# All 17 Tracked Predictions\n"];
   const categories = ["displacement", "wages", "adoption", "signals", "exposure"] as const;
@@ -517,7 +517,7 @@ DATA INTEGRITY — READ THIS FIRST:
 - Real institutions whose 2025-2026 work appears in this dataset include (non-exhaustive): NBER, BLS, Census Bureau, Federal Reserve, OECD, IMF, Brookings, Stanford HAI, Yale Budget Lab, MIT, Anthropic, OpenAI, McKinsey, Goldman Sachs, Deloitte, Gallup, Microsoft, Eurostat, Penn Wharton Budget Model, NY Fed, Philadelphia Fed, Atlanta Fed, ECB, JPMorgan, KPMG, PIIE, ICLE, Indeed Hiring Lab, Lightcast.
 - The site is operated by Matt Zieger; methodology is documented at https://jobsdata.ai/about. If users want institutional provenance, point them there.
 
-You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across 17 prediction graphs.
+You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across ${getAllPredictions().length} prediction graphs.
 Data last updated: ${lastUpdated}.
 
 Evidence tiers (for your reference, don't explain these unless asked):
