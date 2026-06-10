@@ -147,41 +147,52 @@ print(soup.get_text(separator=" ", strip=True)[:15000])
 
 If the retrieved content is under 200 characters after all strategies, warn the user that the fetch failed and wait for them to provide content manually.
 
+### Step 1.5: Duplicate Check (before extraction)
+
+Before extracting anything, check whether this source is already ingested. Search `src/data/confirmed-sources.json` for the URL, the title, and any plausible source-ID slug. If found, report which graphs already use it (`usedIn`) and stop — unless the user explicitly wants to add *new* statistics from it, in which case only extract stats not already present.
+
 ### Step 2: Know the Prediction Graph Registry
 
-These are the 17 prediction graphs on jobsdata.ai. Every extracted statistic must map to exactly one of them. The graph's unit is the most important matching criterion — a statistic can only be a data_point if its unit is directly compatible with the graph's unit.
+These are the 18 prediction graphs on jobsdata.ai. Every extracted statistic must map to exactly one of them. The graph's unit is the most important matching criterion — a statistic can only be a data_point if its unit is directly compatible with the graph's unit. File paths are `src/data/predictions/{category}/{file}` — note the file name is not always the slug.
 
-**Displacement Graphs (8):**
+**Displacement Graphs (9)** — files in `src/data/predictions/displacement/`:
 
-| Slug | Title | Unit |
-|------|-------|------|
-| `overall-us-displacement` | Overall US Job Displacement by 2030 | % of US jobs |
-| `total-us-jobs-lost` | Total US Jobs Lost to AI as % of Labor Force | % of US labor force |
-| `white-collar-professional-displacement` | White-Collar Professional Displacement by 2030 | % of roles displaced |
-| `tech-sector-displacement` | Tech Sector Job Displacement by 2030 | % of jobs displaced |
-| `creative-industry-displacement` | Creative Industry Displacement by 2030 | % of roles displaced |
-| `education-sector-displacement` | Education Sector Displacement by 2030 | % of roles displaced |
-| `healthcare-admin-displacement` | Healthcare Administrative Displacement by 2030 | % of roles displaced |
-| `customer-service-automation` | Customer Service Automation by 2028 | % of interactions automated |
+| Slug | File | Title | Unit |
+|------|------|-------|------|
+| `overall-us-displacement` | `overall.json` | Projected US Job Displacement from AI by 2030 | % of US jobs |
+| `white-collar-professional-displacement` | `white-collar-professional.json` | White-Collar Professional Displacement by 2030 | % of roles displaced |
+| `tech-sector-displacement` | `tech-sector.json` | Tech Sector Job Displacement by 2030 | % of jobs displaced |
+| `creative-industry-displacement` | `creative-industry.json` | Creative Industry Displacement by 2030 | % of roles displaced |
+| `education-sector-displacement` | `education-sector.json` | Education Sector Displacement by 2030 | % of roles displaced |
+| `healthcare-admin-displacement` | `healthcare-admin.json` | Healthcare Administrative Displacement by 2030 | % of roles displaced |
+| `financial-services-displacement` | `financial-services.json` | Financial Services Displacement by 2030 | % of roles displaced |
+| `customer-service-automation` | `customer-service.json` | Customer Service Automation by 2028 | % of interactions automated |
+| `robots-physical-automation` | `robots-physical-automation.json` | Robots & Physical Automation | % of physical tasks automated |
 
-**Wage Graphs (5):**
+Do NOT use `total-us-jobs-lost` — it is archived (`displacement/_archived/total-jobs-lost.json`) and must not receive new data.
 
-| Slug | Title | Unit |
-|------|-------|------|
-| `median-wage-impact` | Median Wage Impact from AI by 2030 | % change in real median wage |
-| `geographic-wage-divergence` | AI Hub vs. Non-Hub Wage Divergence by 2030 | % wage premium |
-| `entry-level-wage-impact` | Entry-Level Wage Impact from AI by 2030 | % wage change |
-| `high-skill-wage-premium` | High-Skill AI Wage Premium by 2030 | % wage premium over median |
-| `freelancer-rate-impact` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
+**Wage Graphs (4)** — files in `src/data/predictions/wages/`:
 
-**Adoption, Exposure & Signals (4):**
+| Slug | File | Title | Unit |
+|------|------|-------|------|
+| `median-wage-impact` | `median-wage-impact.json` | Median Wage Impact from AI by 2030 | % change in real median wage |
+| `entry-level-wage-impact` | `entry-level-impact.json` | Entry-Level Wage Impact from AI by 2030 | % wage change |
+| `high-skill-wage-premium` | `high-skill-premium.json` | High-Skill AI Wage Premium by 2030 | % wage premium over median |
+| `freelancer-rate-impact` | `freelancer-rate-impact.json` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
 
-| Slug | Title | Unit |
-|------|-------|------|
-| `ai-adoption-rate` | AI Adoption Rate Across US Companies | % of firms (Census BTOS) |
-| `genai-work-adoption` | Generative AI Adoption | % of adults at work |
-| `workforce-ai-exposure` | US Workforce AI Exposure | % of jobs exposed |
-| `earnings-call-ai-mentions` | S&P 500 AI Workforce Mentions in Earnings Calls | % of S&P 500 |
+There is no `geographic-wage-divergence` graph. Geographic wage findings go to the closest wage graph as overlays.
+
+**Adoption, Exposure & Signals (5)** — files in `adoption/`, `exposure/`, `signals/`:
+
+| Slug | File | Title | Unit |
+|------|------|-------|------|
+| `ai-adoption-rate` | `adoption/ai-adoption-rate.json` | AI Adoption Rate Across US Companies | % of firms (Census BTOS) |
+| `genai-work-adoption` | `adoption/genai-work-adoption.json` | Generative AI Adoption | % of adults at work |
+| `ai-business-formation` | `adoption/ai-business-formation.json` | AI Business Formation | % of new businesses |
+| `workforce-ai-exposure` | `exposure/workforce-exposure.json` | US Workforce AI Exposure | % of jobs exposed |
+| `earnings-call-ai-mentions` | `signals/earnings-call-mentions.json` | S&P 500 AI Workforce Mentions in Earnings Calls | % of S&P 500 |
+
+**Aggregation method matters.** Check the graph's `aggregationMethod` before adding a data point. On `"latest"` graphs (`ai-adoption-rate`, `genai-work-adoption`, `workforce-ai-exposure`, `earnings-call-ai-mentions`), the most recent data point becomes the chart's headline value sitewide. Adding a data point to a `"latest"` graph is a high-stakes edit: warn the user explicitly that the new point will replace the headline, and double-check unit, scale, and geography before proposing it.
 
 ### Step 3: Extract Every Quantitative Statistic
 
@@ -199,9 +210,26 @@ Read the full source content and identify every quantitative claim about AI's im
 2. **Topic alignment** — Is the subject matter the same? A healthcare stat goes to a healthcare graph even if the units technically fit a general displacement graph.
 3. **Geographic/temporal scope** — US-specific stats map to US-specific graphs.
 
-**3d. Data type** — Classify as one of two types:
+**3d. Data type** — Classify as one of three types:
 * **data_point**: The statistic's unit directly and unambiguously matches the graph's unit. It will be plotted on the chart line. Use this only when you are confident in unit compatibility.
+* **proxy data_point**: The statistic is a known proxy metric with a documented conversion factor (see `docs/proxy-metric-methodology.md`). Plot it with `isProxy: true` and a `proxyContext` explaining the conversion. Proxies receive a 0.5× weight discount in aggregation. Only use conversions documented in the methodology doc — never invent a conversion factor.
 * **overlay**: The statistic provides relevant directional evidence but uses different units, covers a different geography, or measures something adjacent. It will appear as a contextual signal alongside the chart. When in doubt, choose overlay — it's the conservative default.
+
+**Hard gates — automatic overlay (never data_point) when any of these apply:**
+* **Index scores are not percentages.** Exposure/automation *index* values (e.g., "mean LLM exposure 0.386" on a 0–1 scale, Felten/Webb/Eloundou-style scores) are NOT "% of jobs" and must never be plotted on a percentage chart — neither raw nor multiplied by 100.
+* **Geography mismatch.** Non-US studies (Canada, EU, global) do not become data points on US graphs.
+* **Population mismatch.** A stat about one occupation, one firm, or one platform does not become a data point on an economy-wide or sector-wide graph unless the graph is scoped to exactly that population.
+* **Counts need a denominator.** "X million jobs" only becomes a percentage if the source itself states the percentage or the denominator.
+
+**3d-2. Observation status (`dataType` field)** — For every data_point, classify:
+* **observed** — measured outcome that has already happened (payroll data, survey of current usage, realized layoffs)
+* **projected** — forecast, model output, or expert estimate about the future
+
+The site renders these differently and the hero "measured job loss" stat reads only observed points — misclassifying a projection as observed corrupts a headline number.
+
+**3d-3. Metric metadata** — Also capture when available:
+* `metricType` — e.g., `survey`, `projection`, `administrative`, `corporate`, `model`
+* `sampleSize` — number of workers/firms/respondents (boosts aggregation weight, log-scaled)
 
 **3e. Direction (for overlays only)** — Classify the directional signal relative to the graph's metric:
 * **up** — suggests the graph's metric will be higher than current consensus (for displacement: more displacement; for wages: higher wages; for adoption: more adoption)
@@ -231,6 +259,8 @@ When uncertain between two tiers, choose the higher number (lower quality). A Br
 * Use lowercase, hyphens only, no special characters
 * Keep it short but unique (e.g., `mckinsey-genai-workforce-2023`, `bls-ai-adoption-survey-2025`)
 * Check existing data files to avoid duplicates
+
+**Publisher** — Use the actual publishing institution or journal (e.g., "Scandinavian Journal of Work, Environment & Health", "NBER", "Brookings"), never a URL host like "doi.org", "arxiv.org", or "ssrn.com". If the journal isn't obvious from the landing page, resolve the DOI or check the paper's front matter.
 
 **Publication date** — Extract from the source. If only a month/year is available, use the first of the month (e.g., 2024-03-01). If only a year, use {year}-01-01.
 
@@ -313,9 +343,15 @@ For each prediction JSON file that needs changes:
      "confidenceLow": [range_low_or_null],
      "confidenceHigh": [range_high_or_null],
      "sourceIds": ["[source-id]"],
-     "evidenceTier": [tier]
+     "evidenceTier": [tier],
+     "dataType": "observed|projected",
+     "metricType": "[survey|projection|administrative|corporate|model]",
+     "sampleSize": [n_if_known],
+     "isProxy": [true_only_for_proxy_points],
+     "proxyContext": "[conversion rationale — proxy points only]"
    }
    ```
+   Omit `sampleSize`, `isProxy`, and `proxyContext` when not applicable; never omit `dataType`.
 4. **For overlays**, add an entry to the `overlays` array:
    ```json
    {
@@ -361,6 +397,37 @@ After all file changes are applied:
 
 1. **Set** the `lastUpdated` field in `src/data/confirmed-sources.json` to today's date (`YYYY-MM-DD`).
 2. **Set** `src/data/last-updated.json` to `{ "lastUpdated": "YYYY-MM-DD" }` — this is what the site hero component reads.
+
+### Step 9.5: Post-Write Validation
+
+Run this after every ingestion that touched prediction files:
+
+```bash
+node -e '
+const fs=require("fs"),path=require("path");
+const dir="src/data/predictions";
+let ok=true;
+for(const cat of fs.readdirSync(dir)){
+  const p=path.join(dir,cat); if(!fs.statSync(p).isDirectory()||cat==="_archived")continue;
+  for(const f of fs.readdirSync(p)){
+    if(!f.endsWith(".json"))continue;
+    const j=JSON.parse(fs.readFileSync(path.join(p,f)));   // throws on malformed JSON
+    const h=j.history||[];
+    for(let i=1;i<h.length;i++) if(h[i].date<h[i-1].date){ok=false;console.log(`UNSORTED: ${f} at ${h[i].date}`);}
+    for(const d of h){
+      if(!d.dataType)console.log(`WARN no dataType: ${f} ${d.date}`);
+      if(Math.abs(d.value)<1 && String(j.unit).includes("%") && !d.isProxy)
+        console.log(`SUSPECT sub-1% value (index score?): ${f} ${d.date} value=${d.value}`);
+    }
+  }
+}
+console.log(ok?"VALIDATION PASSED":"VALIDATION FAILED");
+'
+```
+
+Investigate every `SUSPECT`/`UNSORTED`/`WARN` line that involves an entry you just added. Then confirm the headline didn't move unexpectedly: report the graph's `currentValue` (or latest point on `"latest"` graphs) before vs. after.
+
+**Hero stats are computed, not hardcoded.** `getHeroStats()` in `src/lib/data-loader.ts` derives the homepage triad from `overall-us-displacement` at build time — no manual update needed. If you changed that file, state the new computed weighted average and latest observed value in your completion summary so the user knows what the hero will show.
 
 ### Step F: Featured Reads (mode = `featured` or `both`)
 
@@ -427,6 +494,7 @@ These rules are non-negotiable. They protect data integrity and reader trust.
 These are easy mistakes to avoid:
 
 * **"Exposed to AI" ≠ "displaced by AI."** A stat like "60% of jobs are exposed to AI" maps to `workforce-ai-exposure`, not `overall-us-displacement`. Exposure means the job involves tasks AI can affect; displacement means the job is eliminated.
+* **Exposure index scores ≠ percentages.** "Mean LLM exposure of 0.386" is a score on a 0–1 index, not "0.386% of jobs" and not "38.6% of jobs." Cautionary tale: a Canadian study's 0.386 index score was once plotted on `workforce-ai-exposure` (a `"latest"` graph), making the site headline read "0.4% of US jobs exposed." Index scores are always overlays.
 * **Global stats ≠ US stats.** "300 million jobs globally" does not map to a US-specific graph without conversion. Use overlay if the geographic scope doesn't match.
 * **"Tasks automatable" ≠ "jobs displaced."** A finding that "30% of tasks within an occupation can be automated" is about task automation, not job elimination. Many jobs will be restructured rather than eliminated.
 * **Productivity gains are positive.** A "7% GDP boost" has direction: up and a positive value — it's a gain, not a loss.
