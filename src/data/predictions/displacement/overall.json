@@ -1764,6 +1764,15 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL Takeoff Tracker: 12 macro AI indicators read mostly neutral"
+    },
+    {
+      "date": "2026-06-10",
+      "direction": "down",
+      "sourceIds": [
+        "nyt-casselman-back-office-ai-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT: little firm evidence AI has hurt the labor market as a whole"
     }
   ],
   "sources": [
@@ -3113,6 +3122,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-06-01",
       "excerpt": "an expanding series of economic dashboards that connects policymakers, business executives, and individual workers to timely and reliable information on the economic impact of AI"
+    },
+    {
+      "id": "nyt-casselman-back-office-ai-2026",
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-10",
+      "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs."
     }
   ]
 }
