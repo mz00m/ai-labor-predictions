@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Meet the world's top AI-pilled economists",
+      "author": "The Economist",
+      "publisher": "The Economist",
+      "date": "2026-06-15",
+      "url": "https://www.economist.com/finance-and-economics/2026/06/15/meet-the-worlds-top-ai-pilled-economists",
+      "takeaway": "The Economist argues the center of gravity in AI economics is shifting out of universities and into AI labs and government statistical offices. Academic economists have been comparatively slow: the share of NBER papers on AI is rising but not fast, and even in 2024 COVID-related papers outnumbered AI ones. A core reason is skepticism — a survey by Basil Halperin and colleagues found that even under a 'rapid' AI scenario by 2030 (AI matching or surpassing the brainiest humans), the median academic economist expects US GDP growth of just 3.5% in 2050, versus 5.3% for AI researchers, and only 11% of leading economists (University of Chicago IGM survey) agree AI will substantially raise unemployment in advanced countries over the next decade. Daron Acemoglu's early-2024 model (1,000+ citations) implies modest aggregate productivity gains, a result Tyler Cowen attributes to its assumption that AI won't do new things. Meanwhile labs are hiring economists: Anthropic appointed Anton Korinek, OpenAI hired Ronnie Chatterji as chief economist, and Google DeepMind hired Alex Imas as 'director of AGI economics.' By 2019 more than two-thirds of AI researchers worked in industry (up from under half in 2001, per Ufuk Akcigit), and junior lab economist roles can pay $300,000+. The piece flags conflicts of interest and the risk that AI economics drifts from open science toward proprietary innovation.",
+      "weekFeatured": "2026-06-17",
+      "tier": 3
+    },
+    {
       "title": "The AI Economic Indicators",
       "author": "Erik Brynjolfsson et al.",
       "publisher": "Stanford Digital Economy Lab",

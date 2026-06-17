@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "The Economist",
+    title: "Meet the world's top AI-pilled economists",
+    summary:
+      "Economic analysis of AI is migrating out of universities and into labs and government. Even under a 'rapid' AI scenario by 2030, the median academic economist expects US GDP growth of just 3.5% in 2050 — versus 5.3% for AI researchers — and only 11% of leading economists (Chicago survey) think AI will substantially raise unemployment. Junior lab economist roles pay $300K+; by 2019 two-thirds of AI researchers worked in industry, up from under half in 2001. Anthropic hired Anton Korinek, OpenAI hired Ronnie Chatterji, DeepMind hired Alex Imas. A sharp map of who is actually studying AI's economic impact.",
+    date: "Jun 15",
+    url: "https://www.economist.com/finance-and-economics/2026/06/15/meet-the-worlds-top-ai-pilled-economists",
+  },
+  {
     author: "Erik Brynjolfsson et al. (Stanford DEL)",
     title: "The AI Economic Indicators",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Goldman's CEO argues AI will automate 25% of work hours but won't eliminate 25% of jobs — complexity expands to fill freed capacity. Cites a Stanford study showing entry-level employment in the most AI-exposed occupations has already declined 16%, but notes US companies churn 25–35M jobs annually and Goldman's own data center demand has created 200K+ construction jobs since 2022. A major CEO staking out the optimist position with internal data.",
     date: "May 22",
     url: "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
-  },
-  {
-    author: "Pope Leo XIV (The Holy See)",
-    title: "Magnifica Humanitas: On Safeguarding the Human Person in the Time of AI",
-    summary:
-      "The first papal encyclical to treat AI as a central topic. Warns of a 'significant and rapid contraction in available jobs,' wage polarization — 'outsized remuneration for a highly specialized minority alongside declining wages for a large portion of the workforce' — and that AI can 'paradoxically de-skill workers, subject them to automated surveillance.' Frames policy through subsidiarity and integral human development.",
-    date: "May 15",
-    url: "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
   },
 ];
 
