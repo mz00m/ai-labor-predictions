@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 17.5,
+  "currentValue": 18.5,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
@@ -98,6 +98,18 @@
       "confidenceHigh": 22,
       "sourceIds": [
         "census-btos-ai-biweekly-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
+      "date": "2026-05-03",
+      "value": 18.5,
+      "confidenceLow": 17,
+      "confidenceHigh": 20,
+      "sourceIds": [
+        "census-btos-ai-use-may-2026"
       ],
       "evidenceTier": 1,
       "metricType": "survey",
@@ -716,9 +728,37 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: AI hedge funds peaked at ~2.7% of all hedge funds; AI labor intensity 1.17% of adviser postings"
+    },
+    {
+      "date": "2026-05-03",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-use-may-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 37% of firms with 250+ employees use AI; 32% of 100-249 firms"
+    },
+    {
+      "date": "2026-05-03",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-use-may-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: Information sector AI use 39.7%, Finance & Insurance 33.9%"
     }
   ],
   "sources": [
+    {
+      "id": "census-btos-ai-use-may-2026",
+      "title": "Large Firms With at Least 20 Employees Biggest AI Users",
+      "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "publisher": "U.S. Census Bureau (Business Trends and Outlook Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-26",
+      "excerpt": "The BTOS data (December 2025 to May 2026) show that overall AI usage hovered between 17% and 20%. 37% of firms with at least 250 employees reported using AI. The Information sector was highest at 39.7% current use, Finance and Insurance at 33.9%.",
+      "dateAdded": "2026-06-17"
+    },
     {
       "id": "mcelheran-brynjolfsson-abs-ai-adoption-2024",
       "title": "AI Adoption in America: Who, What, and Where",

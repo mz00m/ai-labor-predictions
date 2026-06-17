@@ -1,0 +1,15 @@
+{
+  "id": "census-btos-ai-use-may-2026",
+  "abstract": "A U.S. Census Bureau Business Trends and Outlook Survey (BTOS) data story released May 26, 2026, reporting on AI adoption among American businesses. The BTOS is the most rigorous available measure of AI use, drawing on a large, representative sample of US firms surveyed biweekly. The release covers data from December 2025 through May 2026 and breaks adoption down by firm size and sector, showing that larger firms drive most of the recent increase in AI use.",
+  "keyFindings": [
+    "Overall AI usage among US businesses hovered between 17% and 20% from December 2025 to May 2026.",
+    "Between 20% and 23% of businesses expected to be using AI within the next six months.",
+    "37% of firms with at least 250 employees reported using AI; 32% of firms with 100 to 249 employees said they used AI.",
+    "Fewer than 20% of firms with four or fewer employees reported using AI.",
+    "By sector, the Information sector was highest at 39.7% current use, Finance and Insurance at 33.9%, and Retail Trade around 14%.",
+    "Between December 2025 and May 2026, AI use increased among firms with at least 20 employees but didn't change significantly among firms with fewer than 20 employees."
+  ],
+  "methodology": "U.S. Census Bureau Business Trends and Outlook Survey (BTOS), a large biweekly survey of US business establishments. Adoption measured as the share of firms reporting current use of AI in producing goods or services, with breakdowns by firm employment size and industry sector. Time period covered: December 2025 through early May 2026 (firm-size and sector figures as of May 3, 2026).",
+  "qualifiers": "Census BTOS measures the share of firms (firm-weighted), which runs well below consultancy survey estimates that use self-selected samples. The headline national figure is reported as a range (17%-20%) over the period rather than a single point estimate. Sector and firm-size breakdowns reflect a single reference period (early May 2026) and are subject to survey sampling variability.",
+  "fetchedAt": "2026-06-17"
+}

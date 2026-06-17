@@ -1,9 +1,21 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-10",
-  "totalSources": 573,
-  "verifiedCount": 563,
+  "lastUpdated": "2026-06-17",
+  "totalSources": 574,
+  "verifiedCount": 564,
   "sources": {
+    "census-btos-ai-use-may-2026": {
+      "id": "census-btos-ai-use-may-2026",
+      "title": "Large Firms With at Least 20 Employees Biggest AI Users",
+      "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "publisher": "U.S. Census Bureau (Business Trends and Outlook Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-26",
+      "excerpt": "The BTOS data (December 2025 to May 2026) show that overall AI usage hovered between 17% and 20%. 37% of firms with at least 250 employees reported using AI. The Information sector was highest at 39.7% current use, Finance and Insurance at 33.9%.",
+      "usedIn": ["ai-adoption-rate"],
+      "verified": true,
+      "synthetic": false
+    },
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
       "title": "What 81,000 people told us about the economics of AI",
