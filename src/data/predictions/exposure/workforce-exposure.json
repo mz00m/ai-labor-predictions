@@ -187,6 +187,15 @@
       "evidenceTier": 1
     },
     {
+      "date": "2026-02-23",
+      "direction": "neutral",
+      "label": "Acemoglu/Autor/Johnson (Brookings Hamilton Project): only 'new task-creating' AI is unambiguously pro-worker — automation and expertise-leveling can erode the value of human expertise even while raising productivity",
+      "sourceIds": [
+        "acemoglu-autor-johnson-pro-worker-ai-2026"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2013-09-17",
       "direction": "up",
       "label": "Oxford (Frey & Osborne): 47% of US jobs at risk of computerisation",
