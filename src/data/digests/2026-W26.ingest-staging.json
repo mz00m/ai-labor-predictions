@@ -1,0 +1,100 @@
+{
+  "week": "2026-W26",
+  "generatedAt": "2026-06-22T13:35:00.443Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Agentic AI and Corporate Governance: Employee Displacement and Director Duties",
+        "summary": "A legal analysis examines how boards adopting agentic AI to drive operational efficiencies must navigate fiduciary duties as AI adoption is increasingly associated with employee role displacement. The paper argues that the interests of employees as stakeholders must be weighed against profit-maximisation incentives when deploying AI systems. This raises governance questions about the pace and accountability of AI-driven workforce restructuring. (Ahern, 2026)",
+        "source": "https://arxiv.org/abs/2606.20453v1",
+        "authors": [
+          "Deirdre Ahern"
+        ],
+        "publishedAt": "2026-06-18",
+        "score": 0.529,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-agentic-ai-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Use and Employment Dynamics Across EU Economies: A Comparative Study",
+        "summary": "A cross-sectional study of EU countries investigates the links between enterprise AI adoption, labor market outcomes, economic performance, and sustainability objectives, finding complex and heterogeneous relationships between AI deployment levels and employment indicators. The research highlights that rapid AI adoption does not uniformly translate into job losses, with economic and institutional context mattering significantly. Policymakers are urged to consider AI's dual role as both a productivity enhancer and a potential labor market disruptor. (Vărzaru & Bocean, 2026)",
+        "source": "https://doi.org/10.3846/jbem.2026.27157",
+        "authors": [
+          "Anca Antoaneta Vărzaru",
+          "Claudiu George Bocean"
+        ],
+        "publishedAt": "2026-06-19",
+        "doi": "10.3846/jbem.2026.27157",
+        "score": 0.477,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "doi-ai-use-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Expert Gig Economy and AI Data Annotation: Reshaping White-Collar Work",
+        "summary": "A study of five leading AI labs' public communications finds that demand for expert-annotated training data has created an 'expert gig economy' with potential to fundamentally reshape white-collar work and devalue traditional professional expertise. The research critiques industry framing that positions cheap expert labor as a feature rather than a structural labor market risk. The findings suggest that professional knowledge workers face new forms of commodification driven by AI training pipelines. (Wolfe & Dangol, 2026)",
+        "source": "https://doi.org/10.1145/3808045.3808063",
+        "authors": [
+          "Robert Wolfe",
+          "Aayushi Dangol"
+        ],
+        "publishedAt": "2026-06-19",
+        "doi": "10.1145/3808045.3808063",
+        "score": 0.422,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "freelancer-rate-impact"
+      },
+      "sourceId": "doi-expert-gig-economy-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Inflation, Nominal Wage Contracts, and Intensified Job Search",
+        "summary": "An NBER working paper models how unanticipated inflation erodes real wages when contracts are set in nominal terms, prompting workers to intensify on-the-job search for wage-adjusting outside offers. The resulting job mobility creates measurable labor market churn and has implications for how wage floors and real compensation trends evolve during inflationary periods. The findings are particularly relevant for understanding entry-level and median wage dynamics in an environment of sticky nominal contracts. (Pilossoph, Ryngaert & Wedewer, 2026)",
+        "source": "https://www.nber.org/papers/w35369",
+        "authors": [
+          "Laura Pilossoph",
+          "Jane M. Ryngaert",
+          "Jesse J. Wedewer"
+        ],
+        "publishedAt": "2026-06-22",
+        "score": 0.756,
+        "sourceAdapter": "nber",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "nber-inflation-nominal-wage-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Digital Tools in Labor Organizing: Bridging a Dispersed Workforce",
+        "summary": "A qualitative study examines how contemporary American workers across multiple unions use digital text-based communication platforms to coordinate labor organizing across spatial and temporal gaps. The research identifies both the affordances and the surveillance risks that digital organizing infrastructure introduces for collective worker action. The findings shed light on how workforce fragmentation—partly driven by automation and gig-economy expansion—is reshaping labor solidarity strategies. (Reiber et al., 2026)",
+        "source": "https://arxiv.org/abs/2606.20375v1",
+        "authors": [
+          "Frederick Reiber",
+          "Alishah Chator",
+          "Dana Calacci",
+          "Allison McDonald"
+        ],
+        "publishedAt": "2026-06-18",
+        "score": 0.339,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "arxiv-digital-tools-in-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
