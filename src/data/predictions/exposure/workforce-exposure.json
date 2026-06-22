@@ -178,6 +178,15 @@
   ],
   "overlays": [
     {
+      "date": "2026-06-19",
+      "direction": "down",
+      "label": "UCLA Anderson (Siddiq & Zhang, 49,610 Upwork workers): post-ChatGPT, contract volume fell ~9.6% in late period for max-exposure categories vs. unexposed; human capital signals (credentials, reputation, self-presentation) lost 10.1% of their importance in hiring",
+      "sourceIds": [
+        "siddiq-zhang-labor-commoditization-2026"
+      ],
+      "evidenceTier": 1
+    },
+    {
       "date": "2013-09-17",
       "direction": "up",
       "label": "Oxford (Frey & Osborne): 47% of US jobs at risk of computerisation",

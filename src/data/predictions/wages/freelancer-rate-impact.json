@@ -114,6 +114,15 @@
   ],
   "overlays": [
     {
+      "date": "2026-06-19",
+      "direction": "down",
+      "sourceIds": [
+        "siddiq-zhang-labor-commoditization-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "UCLA Anderson (Siddiq & Zhang, 49,610 Upwork workers, 2.26M contracts): in late 2025–early 2026, demand shifts toward lower-priced workers by ~7.9% in most AI-exposed categories vs. unexposed — evidence of AI-driven labor commoditization"
+    },
+    {
       "date": "2025-01-01",
       "direction": "down",
       "sourceIds": [
