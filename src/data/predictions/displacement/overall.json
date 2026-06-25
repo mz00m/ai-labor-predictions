@@ -362,6 +362,15 @@
       "evidenceTier": 3
     },
     {
+      "date": "2026-06-25",
+      "direction": "neutral",
+      "label": "RAISE US launches (WSJ): bipartisan coalition (Raimondo/Holcomb) with $500M+ raised to build workforce-transition infrastructure — Amazon, Microsoft, BofA, Eli Lilly, OpenAI, Anthropic; first state pilots in AR, MD, UT, CT",
+      "sourceIds": [
+        "wsj-raise-us-coalition-2026"
+      ],
+      "evidenceTier": 3
+    },
+    {
       "date": "2013-09-17",
       "direction": "up",
       "label": "Oxford (Frey & Osborne): 47% of US employment at-risk benchmark (2013)",
