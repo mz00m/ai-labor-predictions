@@ -1,0 +1,13 @@
+{
+  "abstract": "Narayanan and Kapoor argue AI is best understood as a 'normal' general-purpose technology \u2014 diffusion-bottlenecked by organizations, regulation, complementary capital, and human adoption \u2014 rather than a discontinuous economic singularity. They predict gradual, sectorally uneven labor impacts and warn against policy frames built on transformative-AGI assumptions.",
+  "keyFindings": [
+    "AI deployment is rate-limited by complementary investments (data, integration, training, regulation), not by model capability",
+    "Predicts gradual labor reallocation rather than mass displacement; sectoral patterns will resemble prior GPT cycles",
+    "Warns that policy and investment built around AGI-soon assumptions misallocates resources",
+    "Argues most observable AI productivity gains come from narrow, well-scoped task automation rather than open-ended autonomous agents"
+  ],
+  "methodology": "Essay synthesizing diffusion economics, technology history, and current empirical AI deployment patterns.",
+  "qualifiers": "Tier 3 essay. Authors are computer scientists, not labor economists; conclusions depend on the GPT analogy holding. Counters more aggressive timelines (Aschenbrenner, Amodei) but is not itself an empirical study.",
+  "id": "narayanan-kapoor-ai-normal-tech-2025",
+  "fetchedAt": "2026-06-26"
+}

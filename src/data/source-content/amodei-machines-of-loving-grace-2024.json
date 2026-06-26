@@ -1,0 +1,13 @@
+{
+  "abstract": "Anthropic CEO Dario Amodei argues 'powerful AI' (deliberately not 'AGI') could compress decades of progress in biology, mental health, economics, and governance into a 5\u201310 year window after arrival. The essay is optimistic about diffuse welfare outcomes conditional on responsible deployment and good governance \u2014 but acknowledges replacement-heavy short-term labor dynamics.",
+  "keyFindings": [
+    "Forecasts 5\u201310\u00d7 compression of historical progress in biology, mental health, neuroscience after powerful AI",
+    "Welfare gains framed as broadly distributable, contingent on governance and equitable deployment",
+    "Acknowledges short-term labor disruption is real and significant",
+    "Frames the transition as the central policy challenge of the decade"
+  ],
+  "methodology": "Synthesis essay drawing on Anthropic's internal capability projections and Amodei's biosciences background.",
+  "qualifiers": "Tier 4 \u2014 CEO essay from an AI lab with direct interest in optimistic capability framing. Specific timeline and impact claims are aspirational, not empirically grounded. Treat as one anchor of the lab-optimist position; pair with critical responses (e.g., Garicano's 'The task is not the job' rejoinder, already in registry).",
+  "id": "amodei-machines-of-loving-grace-2024",
+  "fetchedAt": "2026-06-26"
+}

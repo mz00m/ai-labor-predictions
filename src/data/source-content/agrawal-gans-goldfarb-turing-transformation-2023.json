@@ -1,0 +1,13 @@
+{
+  "abstract": "Agrawal, Gans, and Goldfarb formalize a model in which AI can deploy either as Turing-style imitation of human work (substitution) or as intelligence augmentation that raises human productivity. They show the choice has first-order distributional consequences: imitation paths erode wages of automatable workers and concentrate gains in AI developers, while augmentation paths raise skill premiums and broaden gains. The framework is later popularized in their book 'Power & Prediction.'",
+  "keyFindings": [
+    "Models AI as either imitation (Turing path) or augmentation; the deployment choice shapes whether skill premiums rise or fall",
+    "Augmentation raises the marginal product of complementary human skills and lifts wages for skilled labor",
+    "Imitation substitutes for routine and codifiable work, concentrating gains in capital owners and AI builders",
+    "Frames public policy as steering AI investment toward augmentation (training, complementary tools) rather than pure substitution"
+  ],
+  "methodology": "Formal economic model with two deployment regimes; theoretical, not empirical.",
+  "qualifiers": "Conceptual model, not an empirical estimate. Policy implications depend on assumptions about elasticities of substitution that are not measured. Best read alongside Acemoglu/Restrepo automation papers for the substitution-side intuition.",
+  "id": "agrawal-gans-goldfarb-turing-transformation-2023",
+  "fetchedAt": "2026-06-26"
+}

@@ -1,0 +1,13 @@
+{
+  "abstract": "Pre-ChatGPT essay by Sam Altman arguing AI will drive prices of goods and services toward zero. Proposes wealth redistribution via the 'American Equity Fund' \u2014 a tax on the value of large companies (paid in shares) and on land, with proceeds distributed to all adults. Frames replacement of labor by AI as inevitable but compatible with diffuse welfare via redistribution.",
+  "keyFindings": [
+    "Predicts AI-driven price deflation across most goods and services over coming decades",
+    "Proposes American Equity Fund: tax on corporate share value and land value, distributed as universal payouts",
+    "Frames labor displacement as inevitable; bets diffuse welfare on redistribution policy succeeding",
+    "Foundational text for AI-and-UBI policy circles"
+  ],
+  "methodology": "Essay; no empirical model, no quantitative calibration.",
+  "qualifiers": "Tier 4 \u2014 essay from the OpenAI CEO with direct interest in framing AI as positive-sum. Predates ChatGPT. Specific policy proposal (American Equity Fund) has not been seriously advanced politically. Cite as a position-defining document, not as an empirical or policy analysis.",
+  "id": "altman-moores-law-for-everything-2021",
+  "fetchedAt": "2026-06-26"
+}
