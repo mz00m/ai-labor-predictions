@@ -1,0 +1,13 @@
+{
+  "abstract": "Brynjolfsson's influential Daedalus essay names the 'Turing trap': the tendency for AI to be designed and evaluated against human imitation rather than human augmentation, which concentrates economic gains and erodes labor share even when total productivity rises. Argues for shifting research, investment, and policy toward augmentation-oriented AI.",
+  "keyFindings": [
+    "Names the 'Turing trap' \u2014 pursuing human-equivalent imitation as the field's success metric",
+    "Predicts erosion of labor share if imitation continues to dominate AI development",
+    "Argues for augmentation-oriented benchmarks, tax policy, and complementary investment",
+    "Frames the choice as design-determined and politically contestable, not technologically inevitable"
+  ],
+  "methodology": "Synthesis essay; draws on Brynjolfsson's prior empirical work on intangible capital and on the diffusion economics literature.",
+  "qualifiers": "Conceptual framing piece; specific point estimates are not the contribution. Strongly influential in pro-augmentation policy circles, including Acemoglu/Autor/Johnson 2026 Brookings Hamilton Project paper.",
+  "id": "brynjolfsson-turing-trap-2022",
+  "fetchedAt": "2026-06-26"
+}

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-22",
-  "totalSources": 574,
-  "verifiedCount": 564,
+  "lastUpdated": "2026-06-26",
+  "totalSources": 588,
+  "verifiedCount": 578,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8141,6 +8141,204 @@
       "usedIn": [
         "freelancer-rate-impact",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "agrawal-gans-goldfarb-turing-transformation-2023": {
+      "id": "agrawal-gans-goldfarb-turing-transformation-2023",
+      "title": "The Turing Transformation: Artificial Intelligence, Intelligence Augmentation, and Skill Premiums",
+      "url": "https://www.nber.org/papers/w31767",
+      "publisher": "NBER (Agrawal, Gans, Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2023-10-01",
+      "excerpt": "Frames the choice between AI-as-imitation (passing the Turing test by mimicking human work) versus AI-as-augmentation (raising human productivity). Argues the augmentation path raises skill premiums and broadens economic gains; the imitation path concentrates them. Positioned in the Economic Futures Map as 'strong augmentation, diffuse gains.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "narayanan-kapoor-ai-normal-tech-2025": {
+      "id": "narayanan-kapoor-ai-normal-tech-2025",
+      "title": "AI as Normal Technology",
+      "url": "https://knightcolumbia.org/content/ai-as-normal-technology",
+      "publisher": "Knight First Amendment Institute (Narayanan & Kapoor)",
+      "evidenceTier": 3,
+      "datePublished": "2025-04-14",
+      "excerpt": "Argues AI should be understood as a 'normal' general-purpose technology, with diffusion-bottlenecked adoption rather than a discontinuous economic break. Pushes back on transformative-AI framings and predicts gradual, sectorally uneven labor impacts with diffuse rather than concentrated welfare gains. Positioned in the Economic Futures Map as 'strong augmentation, diffuse gains.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "andreessen-techno-optimist-manifesto-2023": {
+      "id": "andreessen-techno-optimist-manifesto-2023",
+      "title": "The Techno-Optimist Manifesto",
+      "url": "https://a16z.com/the-techno-optimist-manifesto/",
+      "publisher": "Andreessen Horowitz (Marc Andreessen)",
+      "evidenceTier": 4,
+      "datePublished": "2023-10-16",
+      "excerpt": "Manifesto-style essay arguing technology \u2014 and AI specifically \u2014 produces broad-based prosperity, that resistance to deployment is itself the principal risk, and that AI should be celebrated rather than constrained. Listed as a position in the Economic Futures Map at 'strong augmentation, diffuse gains' (opinion/advocacy).",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-turing-trap-2022": {
+      "id": "brynjolfsson-turing-trap-2022",
+      "title": "The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence",
+      "url": "https://www.amacad.org/publication/turing-trap-promise-peril-human-like-artificial-intelligence",
+      "publisher": "Daedalus / American Academy of Arts and Sciences (Erik Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2022-05-01",
+      "excerpt": "Influential essay warning that AI's drive toward human-level imitation creates a 'Turing trap' \u2014 it concentrates economic gains in capital and AI developers and erodes labor share, even when total productivity rises. Argues for augmentation-oriented AI design that complements rather than substitutes human workers. Positioned in the Economic Futures Map at the borderline between concentrated and diffuse gains under strong augmentation.",
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "buterin-d-acc-techno-optimism-2023": {
+      "id": "buterin-d-acc-techno-optimism-2023",
+      "title": "My techno-optimism (introducing d/acc \u2014 defensive accelerationism)",
+      "url": "https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html",
+      "publisher": "Vitalik Buterin (personal essay)",
+      "evidenceTier": 4,
+      "datePublished": "2023-11-27",
+      "excerpt": "Introduces 'd/acc' (defensive accelerationism) as an alternative to both e/acc (effective acceleration) and pause-AI camps. Argues for accelerating defensive technologies \u2014 including AI safety, decentralized infrastructure, and bio-defense \u2014 as the path to diffuse, robust welfare gains. Positioned in the Economic Futures Map at 'strong augmentation, diffuse gains.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "drago-laine-intelligence-curse-2025": {
+      "id": "drago-laine-intelligence-curse-2025",
+      "title": "The Intelligence Curse",
+      "url": "https://intelligence-curse.ai/",
+      "publisher": "Drago & Laine (independent essay)",
+      "evidenceTier": 3,
+      "datePublished": "2025-01-01",
+      "excerpt": "Argues advanced AI could trigger an 'intelligence curse' analogous to the resource curse \u2014 states and firms that capture AI capability concentrate economic and political power, hollowing out broader economic participation and weakening incentives to invest in human capital. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kulveit-soares-gradual-disempowerment-2025": {
+      "id": "kulveit-soares-gradual-disempowerment-2025",
+      "title": "Gradual Disempowerment: Systemic Existential Risks from Incremental AI Development",
+      "url": "https://arxiv.org/abs/2501.16946",
+      "publisher": "arXiv (Kulveit, Soares, et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-28",
+      "excerpt": "Argues that even without a discrete misaligned-AGI event, incremental AI capability gains can produce gradual systemic disempowerment of humans through erosion of labor income, political representation, and culture \u2014 with each step locally rational but cumulatively undermining human leverage. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "aschenbrenner-situational-awareness-2024": {
+      "id": "aschenbrenner-situational-awareness-2024",
+      "title": "Situational Awareness: The Decade Ahead",
+      "url": "https://situational-awareness.ai/",
+      "publisher": "Leopold Aschenbrenner (independent essay series)",
+      "evidenceTier": 4,
+      "datePublished": "2024-06-04",
+      "excerpt": "Argues AGI by 2027 and superintelligence shortly after are 'strikingly plausible,' with massive concentration of economic and geopolitical power in a handful of frontier labs. Forecasts trillion-dollar compute clusters and national-security primacy. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "amodei-machines-of-loving-grace-2024": {
+      "id": "amodei-machines-of-loving-grace-2024",
+      "title": "Machines of Loving Grace: How AI Could Transform the World for the Better",
+      "url": "https://darioamodei.com/machines-of-loving-grace",
+      "publisher": "Dario Amodei (Anthropic CEO essay)",
+      "evidenceTier": 4,
+      "datePublished": "2024-10-11",
+      "excerpt": "Anthropic CEO sets out an optimistic vision of 'powerful AI' (deliberately avoiding 'AGI'): 5\u201310\u00d7 compression of decades of biological, mental health, economic, and governance progress into a 5\u201310 year window after powerful AI arrives. Positioned in the Economic Futures Map at 'strong replacement, diffuse gains' \u2014 replacement-heavy in the sense that AI does the work, but welfare gains broadly distributed if governance succeeds.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "altman-moores-law-for-everything-2021": {
+      "id": "altman-moores-law-for-everything-2021",
+      "title": "Moore's Law for Everything",
+      "url": "https://moores.samaltman.com/",
+      "publisher": "Sam Altman (personal essay)",
+      "evidenceTier": 4,
+      "datePublished": "2021-03-16",
+      "excerpt": "Pre-ChatGPT essay arguing AI will drive prices of goods and services to near zero and that wealth must be redistributed via taxing capital (companies) and land. Proposes the American Equity Fund. Positioned in the Economic Futures Map at 'strong replacement, diffuse gains' \u2014 replacement-heavy but with diffuse welfare contingent on redistributive policy.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "doctorow-reverse-centaur-guide-2026": {
+      "id": "doctorow-reverse-centaur-guide-2026",
+      "title": "The Reverse Centaur's Guide to Life After AI",
+      "url": "https://us.macmillan.com/books/9780374621575/thereversecentaursguidetolifeafterai/",
+      "publisher": "Farrar, Straus and Giroux (Cory Doctorow)",
+      "evidenceTier": 4,
+      "datePublished": "2026-06-01",
+      "excerpt": "Doctorow's book-length argument that AI is mostly deployed not to automate work but to put workers into 'reverse centaur' configurations \u2014 humans serving as helpers to machines at inhuman pace (delivery drivers, warehouse pickers, AI-supervised coders). Argues the $16T+ AI investment thesis only makes sense if AI replaces vast swathes of the wage-earning workforce, and that workers, not 'AI-enjoyers,' are the political constituency for resisting that path. Companion talk delivered at University of Washington Neuroscience-AI-Society lecture series. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong augmentation' (augmentation in the cynical sense \u2014 humans augmenting machines, not the reverse).",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kinder-messy-middle-2026": {
+      "id": "kinder-messy-middle-2026",
+      "title": "The Messy Middle",
+      "url": "https://mollykinder2.substack.com/p/the-messy-middle",
+      "publisher": "Molly Kinder (Brookings; personal Substack)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-01",
+      "excerpt": "Kinder predicts a long, hard 'messy middle' between today's mostly intact labor market and any post-AGI abundance. In that period, most jobs survive but losses concentrate in some of the best-paid, most coveted jobs \u2014 cognitive computer work in offices and professional sectors, which are exactly the roles that have grown the most as a share of the US labor force over the last 50 years. Frames these concentrated losses as politically explosive. Her rule of thumb: 'if you can do your job locked in a closet with a computer, you're probably in trouble.' Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "juijn-europe-2031-scenario-2026": {
+      "id": "juijn-europe-2031-scenario-2026",
+      "title": "Europe 2031 \u2014 What getting AI wrong means for us",
+      "url": "https://europe2031.ai/",
+      "publisher": "Arq Foundation / Delta Institute (Juijn, van Baarsen, Dada, Stelling, Fox, Petropoulos, Bakker)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-11",
+      "excerpt": "An 18,000-word fictional five-year scenario (June 2026) by European AI researchers warning the EU risks becoming AI-dependent on the US or China by 2031. Puts Europe at 5% of global AI compute against ~80% for the US in the scenario. Three identified 2025 misjudgements drive the trajectory: underestimating AI's pace, underestimating its scope of change, and overestimating Europe's catch-up capacity. Scenario beats include a 2027 ransomware wave (open-source frontier model) hollowing out European cybersecurity, US and Chinese firms acquiring distressed European carmakers and machine-tool makers, and conversion of factory floors to robot production. Narrative form (two protagonists in Brussels and Silicon Valley), not policy paper. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "korinek-scenario-planning-agi-2023": {
+      "id": "korinek-scenario-planning-agi-2023",
+      "title": "Scenario Planning for an A(G)I Future",
+      "url": "https://www.imf.org/en/Publications/fandd/issues/2023/12/Scenario-Planning-for-an-AGI-Future-Korinek",
+      "publisher": "IMF Finance & Development (Anton Korinek)",
+      "evidenceTier": 2,
+      "datePublished": "2023-12-01",
+      "excerpt": "Korinek sets out a scenario-planning framework for economists and policymakers facing the possibility of human-level AI. Distinguishes scenarios ranging from business-as-usual (gradual GPT-style diffusion) to transformative AGI, with sharply different implications for output, wages, and labor share. Argues economists and policymakers should prepare contingency policy for labor displacement, education reform, market regulation, macroeconomic stability, and international AI governance across all scenarios rather than betting on one. Foundational paper for the scenario-planning approach later adopted by RAISE US and similar coalitions. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

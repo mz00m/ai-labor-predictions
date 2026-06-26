@@ -1,0 +1,14 @@
+{
+  "abstract": "Anton Korinek lays out a scenario-planning framework for economists and policymakers facing the possibility of human-level AI. Distinguishes scenarios ranging from business-as-usual (gradual GPT-style diffusion) to transformative AGI, each with sharply different implications for output, wages, and labor share. Core argument: economists should prepare contingency policy across the scenario set \u2014 labor displacement, education reform, market regulation, macroeconomic stability, and international AI governance \u2014 rather than betting on any single trajectory. Foundational essay for the scenario-planning approach later operationalized by RAISE US and similar institutional efforts.",
+  "keyFindings": [
+    "Articulates a scenario-planning rather than point-forecast approach to AI economic policy",
+    "Identifies labor displacement, education reform, market regulation, macroeconomic stability, and international AI governance as the five policy domains needing contingency plans",
+    "Argues output and wage implications diverge sharply across scenarios \u2014 institutional design must work across the range",
+    "Anticipates the institutional response model (multi-stakeholder coalitions, state-by-state experimentation) later adopted by RAISE US in 2026",
+    "Influential in IMF and central-bank AI policy thinking"
+  ],
+  "methodology": "Scenario-planning essay for IMF Finance & Development, drawing on Korinek's broader academic work on AI macroeconomics.",
+  "qualifiers": "Tier 2 \u2014 published in IMF Finance & Development (institutional venue but not peer-reviewed in the academic sense). Conceptual framing; specific scenario probabilities are not estimated. Korinek has since joined Anthropic as their economist, which readers may want to weigh.",
+  "id": "korinek-scenario-planning-agi-2023",
+  "fetchedAt": "2026-06-26"
+}
