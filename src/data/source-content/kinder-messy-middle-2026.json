@@ -1,0 +1,14 @@
+{
+  "abstract": "Molly Kinder argues that between today's mostly intact labor market and any post-AGI abundance, there will be a long 'messy middle' in which most jobs survive but losses concentrate in some of the best-paid and most coveted roles in the US economy \u2014 cognitive computer work in offices and professional sectors. These are exactly the roles whose share of US employment has grown most over the last 50 years. Kinder predicts the concentration of losses will be politically explosive. Her rule of thumb: 'if you can do your job locked in a closet with a computer, you're probably in trouble.' Published on her Substack after three years leading Brookings' multiyear project on generative AI and work.",
+  "keyFindings": [
+    "Distinguishes 'messy middle' from both incremental-impact and post-AGI-abundance framings \u2014 the middle period is multi-year and structurally different from either bookend",
+    "Predicts losses concentrate in cognitive computer work in offices and professional sectors \u2014 historically the highest-growth, best-paid US job category",
+    "Frames the political dynamics of concentrated white-collar losses as more disruptive than diffuse blue-collar losses of prior cycles",
+    "Closet-with-computer heuristic: if the work is computer-mediated and location-independent, it's exposed",
+    "Calls for transition policy designed for white-collar displacement specifically (career pivots, reskilling for older workers, mid-career safety net), not just generic workforce programs"
+  ],
+  "methodology": "Synthesis essay drawing on Kinder's three-year Brookings project, reporting on white-collar displacement, and adjacent labor-economics literature.",
+  "qualifiers": "Tier 3 \u2014 published on personal Substack rather than peer-reviewed venue, though grounded in extensive Brookings work. Conceptual framing, not quantitative forecast. Pairs naturally with Brynjolfsson-Chandar-Chen 'Canaries' (16% early-career decline) and Acemoglu-Autor-Johnson Brookings (pro-worker AI taxonomy).",
+  "id": "kinder-messy-middle-2026",
+  "fetchedAt": "2026-06-26"
+}
