@@ -353,6 +353,15 @@
   ],
   "overlays": [
     {
+      "date": "2026-06-29",
+      "direction": "neutral",
+      "label": "WSJ 16-economist panel (via Chandar): 5/16 predict net job loss (incl. Acemoglu, Henderson, Restrepo, Wolfers, Chandar), 8/16 no change, 2/16 net growth — 16/16 unanimous on AI boosting productivity. Net-loss group also unanimous that AI replaces rather than complements and reduces white-collar demand",
+      "sourceIds": [
+        "chandar-supply-demand-labor-2026"
+      ],
+      "evidenceTier": 3
+    },
+    {
       "date": "2013-09-17",
       "direction": "up",
       "label": "Oxford (Frey & Osborne): 47% of US employment at-risk benchmark (2013)",

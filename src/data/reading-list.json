@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI and the Supply and Demand for Labor",
+      "author": "Bharat Chandar",
+      "publisher": "What's Next (Substack)",
+      "date": "2026-06-29",
+      "url": "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
+      "takeaway": "Chandar (coauthor of the 'Canaries' paper) explains why he was one of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss — alongside Acemoglu, Henderson, Restrepo, and Wolfers. All 16 agreed AI would boost productivity; 8 predicted no change in net jobs and 2 predicted net growth. The 5 net-loss economists also unanimously said AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's key clarification: his prediction is not a 'jobs bloodbath' story. He expects AI to make the economy rich enough — via capital income from AI assets or transfers — that the income effect dominates the substitution effect, lowering long-run labor force participation. Historically, prime-age LFP has been flat since the 1960s and labor-supply adjustments have come through hours, not participation. He frames Kinder's 'messy middle' as the short-to-medium-run risk lens. A useful disambiguation of what mainstream labor economists actually mean by 'AI net job loss.'",
+      "weekFeatured": "2026-06-29",
+      "tier": 3
+    },
+    {
       "title": "Meet the world's top AI-pilled economists",
       "author": "The Economist",
       "publisher": "The Economist",

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-26",
-  "totalSources": 588,
-  "verifiedCount": 578,
+  "lastUpdated": "2026-06-30",
+  "totalSources": 589,
+  "verifiedCount": 579,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8337,6 +8337,20 @@
       "evidenceTier": 2,
       "datePublished": "2023-12-01",
       "excerpt": "Korinek sets out a scenario-planning framework for economists and policymakers facing the possibility of human-level AI. Distinguishes scenarios ranging from business-as-usual (gradual GPT-style diffusion) to transformative AGI, with sharply different implications for output, wages, and labor share. Argues economists and policymakers should prepare contingency policy for labor displacement, education reform, market regulation, macroeconomic stability, and international AI governance across all scenarios rather than betting on one. Foundational paper for the scenario-planning approach later adopted by RAISE US and similar coalitions. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chandar-supply-demand-labor-2026": {
+      "id": "chandar-supply-demand-labor-2026",
+      "title": "AI and the Supply and Demand for Labor",
+      "url": "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
+      "publisher": "Bharat Chandar (What's Next Substack)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-29",
+      "excerpt": "Chandar \u2014 coauthor of the Brynjolfsson-Chandar-Chen 'Canaries' paper \u2014 explains why he was one of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss (others: Acemoglu, Henderson, Restrepo, Wolfers; 8 said no change, 2 said net growth). All 16 agreed AI would boost productivity. The 5 net-loss economists also unanimously said AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's argument: his net-job-loss prediction is not a 'jobs bloodbath' story \u2014 he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering labor force participation in the long run (~50yr horizon). He explicitly cites Kinder's 'messy middle' framing as the short-to-medium-run risk. Useful disambiguation of what economists mean by 'net job loss' \u2014 long-run LFP decline driven by post-scarcity income, not displacement-driven destitution.",
       "usedIn": [
         "overall-us-displacement"
       ],
