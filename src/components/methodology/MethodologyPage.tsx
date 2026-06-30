@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { PREDICTION_COUNT } from "@/lib/constants";
 
 /* ─── Table of Contents ────────────────────────────────────────────── */
 
@@ -210,7 +211,7 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
         <p>
           jobsdata.ai is a <Strong>live meta-analysis</Strong> of AI&rsquo;s
           impact on jobs, not a forecast. We track {sourceCount}+ individually cited
-          sources across 18 prediction graphs, a 5-dimensional occupation risk
+          sources across {PREDICTION_COUNT} prediction graphs, a 5-dimensional occupation risk
           framework, and real-time automation signals. Peer-reviewed research
           (Tier 1) counts 8&times; more than blog posts (Tier 4). Newer studies
           get up to 1.5&times; more weight. The headline number on every graph
@@ -261,9 +262,10 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
         </P>
         <ul className="text-md text-[var(--muted)] leading-relaxed space-y-2 mb-4 pl-5 list-disc">
           <li>
-            <Strong>Prediction graphs</Strong> (16 graphs across displacement,
-            wages, and adoption) &mdash; each plotting every published estimate
-            we can find, weighted by evidence quality and recency.
+            <Strong>Prediction graphs</Strong> ({PREDICTION_COUNT} graphs across
+            displacement, wages, adoption, and AI exposure) &mdash; each plotting
+            every published estimate we can find, weighted by evidence quality
+            and recency.
           </li>
           <li>
             <Strong>Occupation risk framework</Strong> (342 occupations scored
@@ -405,10 +407,13 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
       <Section id="predictions" title="Prediction Graphs">
         <TLDR>
           <p>
-            16 graphs covering displacement (8), wages (4), and adoption (4).
-            Each graph plots every published estimate as a data point, color-coded
-            by evidence tier. The headline number is a weighted average across all
-            sources. You can toggle tiers on and off to see how the number shifts.
+            {PREDICTION_COUNT} graphs covering displacement (9), wages (4),
+            adoption (3), and AI exposure (1), plus 1 corporate-behavior signal
+            (S&amp;P 500 earnings-call AI mentions) tracked alongside but counted
+            separately. Each graph plots every published estimate as a data
+            point, color-coded by evidence tier. The headline number is a
+            weighted average across all sources. You can toggle tiers on and off
+            to see how the number shifts.
           </p>
         </TLDR>
         <P>
@@ -417,20 +422,30 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
           2030&rdquo;) across all published estimates we can find.
         </P>
 
-        <DeepDive title="What the 16 graphs cover">
+        <DeepDive title={`What the ${PREDICTION_COUNT} graphs cover`}>
           <p className="mb-3">
-            <Strong>Displacement (8 graphs):</Strong> Overall US jobs, white-collar
+            <Strong>Displacement (9 graphs):</Strong> Overall US jobs, white-collar
             professionals, tech sector, creative industries, education, healthcare
-            admin, financial services, and customer service automation.
+            admin, financial services, customer service automation, and
+            robots/physical automation.
           </p>
           <p className="mb-3">
             <Strong>Wages (4 graphs):</Strong> Median wage impact, entry-level
             wages, high-skill wage premium, and freelancer/gig worker rates.
           </p>
+          <p className="mb-3">
+            <Strong>Adoption (3 graphs):</Strong> AI adoption rate (Census BTOS),
+            generative AI adoption at work, and AI business formation.
+          </p>
+          <p className="mb-3">
+            <Strong>Exposure (1 graph):</Strong> Workforce AI exposure (share of
+            US workers in occupations most exposed to AI tasks).
+          </p>
           <p>
-            <Strong>Adoption &amp; Signals (4 graphs):</Strong> AI adoption rate
-            (Census BTOS), generative AI adoption at work, workforce AI exposure,
-            and S&amp;P 500 AI mentions in earnings calls.
+            <Strong>Signals (1, not counted toward the {PREDICTION_COUNT}):</Strong>{" "}
+            S&amp;P 500 AI mentions in earnings calls &mdash; a corporate-behavior
+            signal tracked alongside the predictions but treated as a current
+            measure rather than a forward-looking forecast.
           </p>
         </DeepDive>
 

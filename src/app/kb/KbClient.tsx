@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "@/lib/constants";
 
 interface Message {
   role: "user" | "assistant";
@@ -83,7 +84,7 @@ export default function KbClient() {
               Knowledge Base
             </h1>
             <p className="mt-1 text-sm text-neutral-500">
-              530+ verified sources, 18 predictions, full methodology
+              {SOURCE_COUNT_DISPLAY} verified sources, {PREDICTION_COUNT} predictions, full methodology
             </p>
           </div>
           <a

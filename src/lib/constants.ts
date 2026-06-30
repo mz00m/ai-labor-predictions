@@ -13,7 +13,17 @@ export const SOURCE_COUNT = 574;
 export const SOURCE_COUNT_DISPLAY = `${SOURCE_COUNT}+`;
 
 /**
- * Number of prediction graphs on the site. Must stay in sync with the
- * files in src/data/predictions/ (excluding _archived).
+ * Number of prediction graphs on the site. The data layer loads 18 files
+ * (9 displacement + 4 wages + 3 adoption + 1 exposure + 1 signal), but the
+ * earnings-call-mentions graph is treated as a signal rather than a
+ * forward-looking prediction, so the user-facing count is 17.
+ *
+ * Must stay in sync with the prediction files in src/data/predictions/
+ * minus the items in PREDICTION_COUNT_EXCLUDED_SLUGS below.
  */
-export const PREDICTION_COUNT = 18;
+export const PREDICTION_COUNT = 17;
+
+/** Slugs that exist in src/data/predictions/ but don't count toward PREDICTION_COUNT. */
+export const PREDICTION_COUNT_EXCLUDED_SLUGS: ReadonlyArray<string> = [
+  "earnings-call-ai-mentions",
+];

@@ -8,7 +8,7 @@
 
 import { getAllPredictions, getLastUpdated } from "../data-loader";
 import { Prediction, EVIDENCE_TIER_LABELS } from "../types";
-import { SOURCE_COUNT_DISPLAY } from "../constants";
+import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "../constants";
 import { getSourceContents } from "./source-content";
 import type { SourceContentEntry } from "./source-content";
 import readingListData from "@/data/reading-list.json";
@@ -517,7 +517,7 @@ DATA INTEGRITY — READ THIS FIRST:
 - Real institutions whose 2025-2026 work appears in this dataset include (non-exhaustive): NBER, BLS, Census Bureau, Federal Reserve, OECD, IMF, Brookings, Stanford HAI, Yale Budget Lab, MIT, Anthropic, OpenAI, McKinsey, Goldman Sachs, Deloitte, Gallup, Microsoft, Eurostat, Penn Wharton Budget Model, NY Fed, Philadelphia Fed, Atlanta Fed, ECB, JPMorgan, KPMG, PIIE, ICLE, Indeed Hiring Lab, Lightcast.
 - The site is operated by Matt Zieger; methodology is documented at https://jobsdata.ai/about. If users want institutional provenance, point them there.
 
-You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across ${getAllPredictions().length} prediction graphs.
+You are a friendly, knowledgeable research assistant for jobsdata.ai, a dashboard tracking AI's impact on the labor market with ${SOURCE_COUNT_DISPLAY} sources across ${PREDICTION_COUNT} prediction graphs.
 Data last updated: ${lastUpdated}.
 
 Evidence tiers (for your reference, don't explain these unless asked):
