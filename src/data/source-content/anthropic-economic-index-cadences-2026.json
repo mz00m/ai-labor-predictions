@@ -1,0 +1,16 @@
+{
+  "abstract": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage analytics with a survey of approximately 9,700 Claude users. Headline survey findings: about half (~50%) of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within the next 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users \u2014 experienced users automate substantially more of their work, suggesting AI productivity benefits are skill-dependent. The biggest automation increases appear in business sales, automated trading, and routine market-research roles, flagging those occupations as near-term automation candidates. Companion to the January 2026 'Economic Primitives' and March 2026 'Learning Curves' reports.",
+  "keyFindings": [
+    "Survey n\u22489,700 Claude users: ~50% say AI already handles 50%+ of their work tasks",
+    "4% of surveyed users say Claude could do their entire job today",
+    ">33% of users expect AI to do most or nearly all of their work tasks within 12 months",
+    "Widening 'cadence gap': experienced users automate substantially more than newcomers \u2014 AI productivity is skill-dependent",
+    "Largest automation increases: business sales, automated trading, market research \u2014 near-term automation candidates",
+    "Quarterly Anthropic Economic Index now spans Primitives (Jan), Learning Curves (Mar), Cadences (Jun) \u2014 methodological cadence is stabilizing",
+    "Population is Claude users (self-selected, technically literate, productivity-tool-aware), not US workforce \u2014 strongly biased upward on AI-positive findings"
+  ],
+  "methodology": "Combination of anonymized Claude usage telemetry and a user survey administered to ~9,700 Claude users in mid-2026. Reports task-share automation, time-saving estimates, and forward-looking expectations. Open-data companion via Anthropic/EconomicIndex Hugging Face dataset.",
+  "qualifiers": "Tier 2 \u2014 Anthropic-published, methodologically substantive but the survey population is intrinsically biased (Claude users are early adopters with positive AI experience). The 50% / 4% / 33% figures should NOT be read as US workforce averages \u2014 they describe a self-selected sub-population. The 'biggest automation increases' framing is useful as a leading indicator but lacks comparable counterfactual. Anthropic has commercial interest in optimistic AI productivity framing. Most useful as a sentiment leading indicator and as a corroborating signal for the Acemoglu/Autor/Johnson concern that augmentation gains accrue to incumbents (experienced users) more than newcomers.",
+  "id": "anthropic-economic-index-cadences-2026",
+  "fetchedAt": "2026-06-30"
+}

@@ -10,6 +10,50 @@
   "aggregationMethod": "weighted",
   "history": [
     {
+      "date": "2026-06-15",
+      "value": 0,
+      "confidenceLow": -0.5,
+      "confidenceHigh": 0.5,
+      "sourceIds": [
+        "yale-budgetlab-not-yet-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-06-10",
+      "value": 0.2,
+      "confidenceLow": 0.1,
+      "confidenceHigh": 0.3,
+      "sourceIds": [
+        "stanford-del-canaries-april-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "YoY % decline in most-AI-exposed occupations (April 2026 ADP data)",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly"
+      }
+    },
+    {
+      "date": "2026-06-01",
+      "value": 9,
+      "confidenceLow": 7,
+      "confidenceHigh": 12,
+      "sourceIds": [
+        "goldman-briggs-15m-displacement-revision-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
       "date": "2023-08-01",
       "value": 2.4,
       "confidenceLow": 1.2,

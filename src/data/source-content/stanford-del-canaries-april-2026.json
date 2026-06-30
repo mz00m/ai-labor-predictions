@@ -1,0 +1,16 @@
+{
+  "abstract": "Stanford Digital Economy Lab's Canaries Dashboard, a monthly-updated public dashboard built on anonymized ADP payroll data covering 4.6 million workers across more than 730 occupations, released its April 2026 update on June 10, 2026. Headline reading: in the most AI-exposed occupations, employment contracted 0.2% year-over-year as of April 2026, compared with 0.1% growth in the least-exposed occupations \u2014 a small but consistent gap. The early-career picture is sharper: for workers ages 22-25 in highly AI-exposed occupations, employment is now shrinking at 3.8% per year, with the decline sharpening from -2.8% to April 2024 to over -4% per year since. This is the live update of the original Brynjolfsson, Chandar, Chen (2025) 'Canaries in the Coal Mine' methodology. The dashboard is updated monthly and is the live empirical answer to 'what is happening right now.'",
+  "keyFindings": [
+    "April 2026 reading: most AI-exposed occupations contracted 0.2% YoY; least-exposed grew 0.1% YoY",
+    "Workers 22-25 in highly AI-exposed occupations: employment shrinking at ~3.8% per year (April 2026)",
+    "Early-career trajectory: -2.8% YoY to April 2024, then sharpening to >-4% per year since",
+    "Coverage: 4.6 million workers across 730+ occupations, monthly cadence, anonymized ADP payroll data",
+    "Live, citable answer to 'what does the data show right now' \u2014 supersedes single-point Canaries paper figures",
+    "Most striking signal remains early-career rather than aggregate \u2014 consistent with Yale Budget Lab finding of no macro effect, micro effect concentrated in young workers",
+    "Companion to Stanford's broader AI Economic Indicators platform (Employment & AI Exposure, Canaries, Takeoff Tracker)"
+  ],
+  "methodology": "Monthly aggregation of anonymized ADP payroll records, partitioned by Eloundou et al. (2024) AI exposure scores. Tracks year-over-year employment change in highly-exposed vs least-exposed occupations, with age-of-worker breakdowns. Implementation refines the original Brynjolfsson-Chandar-Chen 2025 paper into a continuous monitoring system. Public dashboard with full data download.",
+  "qualifiers": "Tier 1 \u2014 institutional-quality data infrastructure from Stanford DEL, drawing on the largest US payroll provider. ADP sample skews to medium and large private-sector employers; public sector and very small firms underrepresented. AI-exposure assignment is at the occupation level via Eloundou et al. scores. Authors caution (in Canaries 2025) that the patterns may in part reflect non-AI factors; treat early-career signal as 'consistent with AI causation' rather than 'proven AI causation.' Dashboard updates monthly; cite by snapshot date.",
+  "id": "stanford-del-canaries-april-2026",
+  "fetchedAt": "2026-06-30"
+}

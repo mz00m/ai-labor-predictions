@@ -1,0 +1,16 @@
+{
+  "abstract": "Goldman Sachs Research economist Joseph Briggs revised the firm's US AI labor displacement forecast upward in June 2026: from 6-7% (earlier estimate) to approximately 9% of the workforce, or roughly 15 million workers, displaced over a 10-year AI adoption window. The change reflects a methodological revision: the new measure captures total flow of workers leaving existing jobs due to productivity gains (job-destruction rate), rather than a steady-state count of unemployed workers. Goldman estimates each 1 percentage point increase in technology-driven productivity yields a 0.5-0.6 percentage point increase in the job-destruction rate over the following two years. As of mid-2026, the firm estimates AI is erasing approximately 16,000 net jobs per month, concentrated in entry-level and administrative roles (Gen Z impact). Briggs maintains that long-run benefits outweigh disruption: the US economy churns 25-35M jobs annually, AI will generate new occupations, and the unemployment rate is projected to rise less than 1 percentage point at peak under standard adoption timing.",
+  "keyFindings": [
+    "Revised displacement forecast: ~9% of US workforce / ~15M workers over 10 years (up from 6-7%)",
+    "Methodology shift: measures flow of workers leaving jobs (job-destruction rate), not steady-state unemployed count",
+    "Quantitative rule: each 1% productivity gain \u2192 0.5-0.6% increase in job-destruction rate over following 2 years",
+    "Current pace: ~16,000 net jobs erased per month, concentrated in entry-level and administrative roles",
+    "Unemployment rate projected to rise <1 percentage point at peak (Briggs base case)",
+    "US economy churns 25-35M jobs annually \u2014 AI displacement is meaningful but not catastrophic against that baseline",
+    "Goldman maintains long-run benefits outweigh transition disruption"
+  ],
+  "methodology": "Goldman Sachs Research macro model applied to AI adoption scenarios. New methodology measures total worker outflow from existing roles due to productivity-driven job destruction rather than steady-state unemployment. 10-year base-case adoption timeline; most displaced workers reabsorbed within ~1 year.",
+  "qualifiers": "Tier 2 \u2014 Goldman Sachs Research, not academic peer review. Methodological revision is substantive and well-documented, but the displacement figure is sensitive to the assumed productivity-to-job-destruction elasticity (0.5-0.6%) which has not been independently validated. The 15M / 9% figure is over 10 years total flow, not a steady-state \u2014 readers comparing to academic 'displacement by 2030' estimates should treat as roughly comparable but methodologically distinct. Goldman's prior estimate (6-7%) remains in the registry; the revision direction is upward but Goldman frames it as 'higher but not catastrophic.'",
+  "id": "goldman-briggs-15m-displacement-revision-2026",
+  "fetchedAt": "2026-06-30"
+}
