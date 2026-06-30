@@ -7,6 +7,7 @@ import Link from "next/link";
 
 const TOC = [
   { id: "overview", label: "Overview" },
+  { id: "expert-consensus", label: "What Experts Agree & Disagree About" },
   { id: "predictions", label: "Prediction Graphs" },
   { id: "evidence-tiers", label: "Evidence Tiers" },
   { id: "weighted-average", label: "Weighted Average" },
@@ -280,6 +281,122 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
           Each layer has its own methodology detailed below. They share a common
           evidence tier system and a commitment to showing uncertainty honestly.
         </P>
+      </Section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          01a. WHAT EXPERTS AGREE & DISAGREE ABOUT
+      ════════════════════════════════════════════════════════════════ */}
+      <Section id="expert-consensus" title="What Experts Agree & Disagree About">
+        <TLDR>
+          <p>
+            The productivity question is settled. The jobs question is not.
+            Among labor economists,{" "}
+            <Strong>16 of 16</Strong> on a June 2026 WSJ panel agreed AI will
+            boost productivity &mdash; but only{" "}
+            <Strong>5 of 16</Strong> predict net job loss,{" "}
+            <Strong>8 of 16</Strong> predict no change, and{" "}
+            <Strong>2 of 16</Strong> predict net growth. The site exists because
+            of that second number.
+          </p>
+        </TLDR>
+
+        <div className="space-y-4">
+          <P>
+            A first-time reader of jobsdata.ai may reasonably ask: do experts
+            actually disagree about AI&rsquo;s labor impact, or are we
+            manufacturing controversy? The answer is the former &mdash; and
+            <em> what</em> they agree and disagree about is informative.
+          </P>
+
+          <div>
+            <P>
+              <Strong>Settled (or nearly so):</Strong>{" "}
+              AI will raise measured productivity. The June 2026 WSJ panel of
+              16 labor economists was{" "}
+              <a
+                href="https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                unanimous
+              </a>
+              {" "}on this, including the panel&rsquo;s most skeptical voices.
+              The historical record (railroads, electricity, computers, the
+              internet) supports a productivity boost from general-purpose
+              technologies on a multi-decade horizon, even when the immediate
+              productivity statistics lag adoption.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Contested:</Strong>{" "}
+              Net employment, sectoral composition, the speed of adjustment,
+              and the distribution of gains. On the same WSJ panel,{" "}
+              <Strong>5 of 16</Strong> (Acemoglu, Henderson, Restrepo, Wolfers,
+              Chandar) predicted AI would cause net job loss. The same 5
+              unanimously predicted AI would replace rather than complement
+              workers, and would reduce demand for white-collar jobs. The
+              other 11 saw a mix &mdash; including 2 who expect net growth.
+              The Chicago{" "}
+              <a
+                href="https://www.kentclarkcenter.org/surveys/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                IGM survey
+              </a>
+              {" "}of leading economists shows only 11% agree AI will
+              substantially raise unemployment in advanced countries over the
+              next decade &mdash; a different framing of the same uncertainty.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Disagreements aren&rsquo;t random &mdash; they cluster.</Strong>{" "}
+              On the WSJ panel, the same 5 economists who expected net job loss
+              also unanimously predicted AI would replace rather than
+              complement workers and reduce white-collar demand. Their views
+              are mutually consistent rather than arbitrary. The 11 in the
+              other groups hold a different but internally coherent worldview.
+              This is why the site shows the source mix on every graph: which
+              cluster a given headline number comes from often matters more
+              than the number itself.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Three meanings of &ldquo;net job loss.&rdquo;</Strong>{" "}
+              Even within the net-loss camp, the mechanism is contested.
+              Acemoglu&rsquo;s account is closer to <em>misdirected
+              automation</em>: AI replaces workers in places where augmentation
+              would have created more value. Chandar&rsquo;s account is{" "}
+              <em>long-run income effects</em>: AI makes the economy rich
+              enough &mdash; via capital income or transfers &mdash; that
+              labor force participation falls voluntarily, not because work is
+              unavailable. Restrepo&rsquo;s account leans on{" "}
+              <em>capital&ndash;labor substitution</em>: the labor share of
+              income compresses. The headline number is the same; the welfare
+              implications are very different. We surface the source mix to
+              keep these mechanisms distinguishable.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>How to read this site:</Strong>{" "}
+              Treat every headline number as a snapshot of expert disagreement,
+              not as a forecast. Read the confidence interval, not just the
+              midpoint. Click through to the source mix. Compare the Tier 1
+              academic mean to the Tier 2 institutional mean &mdash; when they
+              diverge, the disagreement is the signal.
+            </P>
+          </div>
+        </div>
       </Section>
 
       {/* ════════════════════════════════════════════════════════════════
