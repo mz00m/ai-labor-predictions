@@ -1,0 +1,15 @@
+{
+  "id": "chandar-supply-demand-labor-2026",
+  "abstract": "Stanford economist Bharat Chandar (coauthor of the influential 2025 'Canaries in the Coal Mine' paper with Brynjolfsson and Chen) explains his prediction on a June 2026 WSJ panel of 16 economists. The panel was unanimous (16/16) that AI will boost productivity, but split on net jobs: 5 predicted net job loss, 8 predicted no change, 2 predicted net growth. Chandar was one of the 5 (with Acemoglu, Henderson, Restrepo, Wolfers). All 5 also unanimously predicted AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's essay clarifies that his net-loss prediction is not a 'jobs bloodbath' story — he expects AI to make the economy rich enough (via capital income from AI assets, or government transfers funded by AI-generated growth) that the income effect dominates the substitution effect, lowering labor force participation in the long run. He primarily considered a ~50-year horizon and held all-else-equal. He explicitly notes the short-to-medium-run risks are different and cites Kinder's 'messy middle' framing as the appropriate lens there.",
+  "keyFindings": [
+    "WSJ panel of 16 economists (June 2026): 5/16 predict AI causes net job loss, 8/16 no change, 2/16 net growth — 16/16 unanimous that AI boosts productivity",
+    "Net-loss economists: Acemoglu, Henderson, Restrepo, Wolfers, Chandar — same 5 who unanimously said AI replaces rather than complements and reduces white-collar demand",
+    "Chandar interprets the question as 'will prime-age labor force participation rate rise or fall' and predicts decline over ~50yr horizon, all else equal",
+    "His mechanism: post-scarcity income effects (from AI-driven capital income or transfers) lower labor force participation, not job-finding impossibility",
+    "Acknowledges the historical record: prime-age LFP has been roughly flat since the 1960s; declines have come via hours-worked (intensive margin), not the extensive margin",
+    "Cites Kinder's 'messy middle' as the right frame for short-to-medium-run risk; cites his own Canaries paper for the entry-level hiring slowdown evidence",
+    "Capital ownership is the policy lever: if AI gains accrue mostly to capital, distribution of capital ownership determines whether welfare gains are diffuse or concentrated"
+  ],
+  "methodology": "Substack essay synthesizing Chandar's WSJ panel response with his prior academic work (Brynjolfsson-Chandar-Chen 'Canaries'), labor economics theory (income vs. substitution effects), and historical labor force participation data from FRED and CPS ASEC.",
+  "qualifiers": "Tier 3 — substack essay, not peer-reviewed. Conceptual framing more than empirical claim. Chandar is explicit that he holds all-else-equal and would not bet money on the prediction. The 16-economist split is the headline empirical fact and is verifiable via the WSJ panel piece. Useful as a disambiguation document for what mainstream labor economists mean by 'AI net job loss' — and useful to pair with the Yelizarova map for situating Chandar (and Acemoglu/Restrepo) in the concentrated-replacement quadrant."
+}

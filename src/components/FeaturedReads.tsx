@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Bharat Chandar",
+    title: "AI and the Supply and Demand for Labor",
+    summary:
+      "Chandar (coauthor of the 'Canaries' paper) was 1 of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss — with Acemoglu, Henderson, Restrepo, Wolfers. All 16 agreed AI boosts productivity; 8 predicted no change; 2 net growth. The 5 net-loss economists unanimously said AI replaces rather than complements and reduces white-collar demand. Chandar's key clarification: this isn't a 'jobs bloodbath' story — he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering long-run labor force participation. A disambiguation of what economists actually mean by 'net job loss.'",
+    date: "Jun 29",
+    url: "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
+  },
+  {
     author: "The Economist",
     title: "Meet the world's top AI-pilled economists",
     summary:
