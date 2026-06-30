@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-06-30",
-  "totalSources": 589,
-  "verifiedCount": 579,
+  "totalSources": 590,
+  "verifiedCount": 580,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8353,6 +8353,21 @@
       "excerpt": "Chandar \u2014 coauthor of the Brynjolfsson-Chandar-Chen 'Canaries' paper \u2014 explains why he was one of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss (others: Acemoglu, Henderson, Restrepo, Wolfers; 8 said no change, 2 said net growth). All 16 agreed AI would boost productivity. The 5 net-loss economists also unanimously said AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's argument: his net-job-loss prediction is not a 'jobs bloodbath' story \u2014 he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering labor force participation in the long run (~50yr horizon). He explicitly cites Kinder's 'messy middle' framing as the short-to-medium-run risk. Useful disambiguation of what economists mean by 'net job loss' \u2014 long-run LFP decline driven by post-scarcity income, not displacement-driven destitution.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "acemoglu-autor-johnson-pro-worker-ai-2026": {
+      "id": "acemoglu-autor-johnson-pro-worker-ai-2026",
+      "title": "Building Pro-Worker Artificial Intelligence",
+      "url": "https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf",
+      "publisher": "Brookings Institution / Hamilton Project (Acemoglu, Autor, Johnson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-23",
+      "excerpt": "Identifies five categories of labor-affecting technology: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Only new task-creating technologies are unambiguously pro-worker because they expand the range of valuable work humans can do and raise the value of human expertise; the other four can lift productivity while reducing the scarcity value of expertise. Cites Schneider Electric AI tool for field electricians that cuts average maintenance-report completion time roughly in half as augmentation evidence. As reported in MIT Sloan Ideas Made to Matter, June 17, 2026.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false

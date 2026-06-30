@@ -1346,6 +1346,31 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
 
           <div>
             <P>
+              <Strong>Productivity gains aren&rsquo;t the same as worker gains.</Strong>{" "}
+              Acemoglu, Autor, and Johnson (Brookings Hamilton Project,{" "}
+              <a
+                href="https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                Feb 2026
+              </a>
+              ) argue that AI breaks into five categories &mdash; labor-augmenting,
+              capital-augmenting, automating, expertise-leveling, and new
+              task-creating &mdash; and that only new task-creating AI is
+              unambiguously pro-worker. The other four can raise firm productivity
+              while reducing the scarcity value of human expertise. Our
+              displacement, wage, and exposure scores measure outcomes, not which
+              category an AI deployment falls into. A graph showing strong
+              productivity adoption with flat or declining wage gains for the same
+              workers is consistent with the automation or expertise-leveling
+              modes the authors warn about.
+            </P>
+          </div>
+
+          <div>
+            <P>
               <Strong>Static task bundles undercount AI&rsquo;s wage effects.</Strong>{" "}
               Most sources estimate AI&rsquo;s wage impact by holding fixed the
               pre-AI bundle of tasks assigned to a worker. When automation
