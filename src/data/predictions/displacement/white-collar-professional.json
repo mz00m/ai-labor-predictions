@@ -984,6 +984,15 @@
       ],
       "evidenceTier": 3,
       "label": "Solomon/Stanford: entry-level employment in most AI-exposed occupations already down 16%"
+    },
+    {
+      "date": "2026-06-10",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-casselman-back-office-ai-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT: back-office jobs (HR, billing, payroll) flagged as most AI-vulnerable"
     }
   ],
   "sources": [
@@ -1810,6 +1819,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-05-22",
       "excerpt": "According to one Stanford study, in the occupations most susceptible to greater automation, such as software engineering or customer service, entry-level employment has already declined by 16 percent relative to the least-exposed roles."
+    },
+    {
+      "id": "nyt-casselman-back-office-ai-2026",
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-10",
+      "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs."
     }
   ]
 }

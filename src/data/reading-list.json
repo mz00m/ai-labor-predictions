@@ -32,6 +32,16 @@
       "tier": 3
     },
     {
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "author": "Ben Casselman",
+      "publisher": "The New York Times",
+      "date": "2026-06-10",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "takeaway": "Casselman reframes the AI-displacement debate away from software engineers toward the larger, quieter population economists worry about most: customer service representatives, bookkeepers, payroll clerks, and HR specialists — tens of millions of jobs, disproportionately held by women, many without college degrees. Molly Kinder: 'I worry that AI will be to high-school-educated women what deindustrialization was to high-school-educated men.' Cites Northwestern's Yin & Ogut reweighting showing usage-based exposure measures understate impacts on workers without degrees, older workers, and people of color; GovAI's exposure-times-adaptive-capacity framework identifying back-office workers as both highly exposed and least able to adapt; and Muro/Heck's 'gateway jobs' research on AI carving out the career ladder's middle rungs. Balances with Forsythe's caution that prior automation waves created jobs, and notes there is still little firm evidence AI has hurt the labor market as a whole.",
+      "weekFeatured": "2026-06-10",
+      "tier": 3
+    },
+    {
       "title": "The AI Economic Indicators",
       "author": "Erik Brynjolfsson et al.",
       "publisher": "Stanford Digital Economy Lab",

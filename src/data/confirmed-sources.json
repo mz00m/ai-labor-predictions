@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-06-30",
-  "totalSources": 591,
-  "verifiedCount": 581,
+  "totalSources": 592,
+  "verifiedCount": 582,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8154,6 +8154,22 @@
       "datePublished": "2026-06-25",
       "excerpt": "A bipartisan consortium called RAISE US launches with a 'people strategy' for the AI era \u2014 led by former Commerce Secretary Gina Raimondo (CEO) and former Indiana Gov. Eric Holcomb. Founding employers include Amazon, Microsoft, Bank of America, and Eli Lilly; OpenAI and Anthropic are involved; MIT economist David Autor sits on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah, and Connecticut. Mandate goes beyond retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and developing corporate incentives for employers to retain and reskill rather than lay off.",
       "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-casselman-back-office-ai-2026": {
+      "id": "nyt-casselman-back-office-ai-2026",
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-10",
+      "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "healthcare-admin-displacement",
         "overall-us-displacement"
       ],
       "verified": true,

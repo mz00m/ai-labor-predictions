@@ -309,6 +309,15 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford HAI: physicians report up to 83% less time writing clinical notes"
+    },
+    {
+      "date": "2026-06-10",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-casselman-back-office-ai-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT/Kinder: medical records specialists >90% women, vulnerable to AI"
     }
   ],
   "sources": [
@@ -609,6 +618,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-13",
       "excerpt": "Tools that automatically generate clinical notes from patient visits saw widespread adoption in 2025. Across multiple hospital systems, physicians reported up to 83% less time spent writing notes and significant reductions in burnout."
+    },
+    {
+      "id": "nyt-casselman-back-office-ai-2026",
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-10",
+      "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs."
     }
   ]
 }
