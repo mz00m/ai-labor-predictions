@@ -17,6 +17,14 @@ const articles: Article[] = [
     url: "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
   },
   {
+    author: "Chip Cutter (WSJ)",
+    title: "The New Push to Ready Millions for AI Career Upheaval",
+    summary:
+      "RAISE US launches as a bipartisan consortium with a 'people strategy' for the AI era — led by former Commerce Secretary Gina Raimondo and former Indiana Gov. Eric Holcomb, with founding employers Amazon, Microsoft, Bank of America, Eli Lilly, OpenAI and Anthropic, plus MIT's David Autor on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah and Connecticut. Mandate goes beyond conventional retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and designing corporate incentives for employers to retain and reskill rather than lay off. The first large bipartisan, multi-state institutional response treating AI labor disruption as a policy problem.",
+    date: "Jun 25",
+    url: "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
+  },
+  {
     author: "The Economist",
     title: "Meet the world's top AI-pilled economists",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Four experts — Daron Acemoglu, Dean Ball, Ethan Mollick and Clara Shih — debate how workers should prepare. Mollick cites a P&G experiment with 776 employees where individuals using AI matched two-person teams without it — and warns the apprenticeship model for training juniors has 'all collapsed.' Acemoglu challenges the agent-supervisor future ('How many Marcus Chens can the American economy employ?') and argues investment should flow to augmenting shortage trades — a novice electrician with the right AI tool could be 10x as productive. Shih sees a 'tale of two cities': entry-level candidates fluent in AI agents get hired; the rest watch those roles disappear.",
     date: "Jun 9",
     url: "https://www.nytimes.com/2026/06/09/magazine/ai-jobs-workforce-labor.html",
-  },
-  {
-    author: "Patricia Cohen (NYT)",
-    title: "A.I. Doesn't Have to Mean Layoffs",
-    summary:
-      "Schneider Electric (160K employees) chose augmentation over replacement. In Q4 2025, AI answered 75% of 150K customer service queries — but agents still review every response, preserving headcount while cutting response times. On the factory floor, AI cut manufacturing waste 73%. Erik Brynjolfsson argues bigger gains come from making workers productive than from cutting them. The counterpoint comes from within: Schneider's own AI-assisted workforce built a product that eliminates the need for an electrician.",
-    date: "May 29",
-    url: "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
   },
 ];
 

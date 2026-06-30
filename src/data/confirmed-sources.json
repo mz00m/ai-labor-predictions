@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-06-30",
-  "totalSources": 590,
-  "verifiedCount": 580,
+  "totalSources": 591,
+  "verifiedCount": 581,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8141,6 +8141,20 @@
       "usedIn": [
         "freelancer-rate-impact",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wsj-raise-us-coalition-2026": {
+      "id": "wsj-raise-us-coalition-2026",
+      "title": "The New Push to Ready Millions for AI Career Upheaval",
+      "url": "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
+      "publisher": "The Wall Street Journal (Chip Cutter)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-25",
+      "excerpt": "A bipartisan consortium called RAISE US launches with a 'people strategy' for the AI era \u2014 led by former Commerce Secretary Gina Raimondo (CEO) and former Indiana Gov. Eric Holcomb. Founding employers include Amazon, Microsoft, Bank of America, and Eli Lilly; OpenAI and Anthropic are involved; MIT economist David Autor sits on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah, and Connecticut. Mandate goes beyond retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and developing corporate incentives for employers to retain and reskill rather than lay off.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
