@@ -2,7 +2,7 @@
   "id": "displacement-overall",
   "slug": "overall-us-displacement",
   "title": "Projected US Job Displacement from AI by 2030",
-  "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, synthesizing displacement estimates, observed employment data, and net-of-job-creation projections.",
+  "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, synthesizing displacement estimates, observed employment data, and net-of-job-creation projections. Note that 'net job loss' can carry multiple mechanisms — direct displacement, capital-labor substitution that erodes labor share, or long-run labor force participation declines driven by income effects as AI-generated wealth (via capital income or transfers) makes work less necessary for consumption. The headline number does not distinguish these; the source mix and the methodology page do.",
   "category": "displacement",
   "unit": "% of US jobs",
   "currentValue": 3.1,
