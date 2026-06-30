@@ -1,0 +1,61 @@
+{
+  "_comment": "Institutional research feeds polled weekly by the trackedInstitutions adapter. Each entry declares a feedType: 'rss', 'atom', or 'sitemap'. Failing institutions are skipped with a warning (not fatal). Sitemap mode is used when an institution has abandoned RSS but exposes a sitemap.xml — the adapter filters by lastmod date + URL path substring and fetches metadata per candidate page.",
+  "_added": "2026-06-30",
+  "_history": [
+    "2026-06-30: initial scaffold. Discovered that many institutions abandoned RSS (Yale BL, Stanford DEL, Brookings, IMF Blog all return 200 but with empty/redirect bodies). Pivoted to sitemap-based polling for those, RSS for ones that still publish proper feeds (Hamilton Project verified working)."
+  ],
+  "institutions": [
+    {
+      "publisher": "Hamilton Project",
+      "domain": "hamiltonproject.org",
+      "feedUrl": "https://www.hamiltonproject.org/feed/",
+      "feedType": "rss",
+      "tier": 1,
+      "notes": "Brookings-affiliated; publishes Acemoglu/Autor/Johnson Pro-Worker AI and other key labor-AI papers. RSS verified working 2026-06-30."
+    },
+    {
+      "publisher": "Yale Budget Lab",
+      "domain": "budgetlab.yale.edu",
+      "feedUrl": "https://budgetlab.yale.edu/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "pathInclude": "/research/",
+      "notes": "Site abandoned RSS (rss.xml redirects to search). Sitemap polling for /research/ paths picks up new analyses like 'AI Is Probably Not (Yet) the Reason for Labor Market Weakening' (Jun 2026)."
+    },
+    {
+      "publisher": "Stanford Digital Economy Lab",
+      "domain": "digitaleconomy.stanford.edu",
+      "feedUrl": "https://digitaleconomy.stanford.edu/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "pathInclude": "/publication",
+      "notes": "Canaries, AI Economic Indicators, Brynjolfsson group. Small sitemap (~1KB), may be an index — adapter resolves nested sitemaps automatically."
+    },
+    {
+      "publisher": "Brookings",
+      "domain": "brookings.edu",
+      "feedUrl": "https://www.brookings.edu/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "pathInclude": "/articles/",
+      "notes": "RSS /feed/ redirects to homepage. Sitemap polling for /articles/ paths picks up Kinder, Muro, and related Brookings labor research."
+    },
+    {
+      "publisher": "Anthropic Research",
+      "domain": "anthropic.com",
+      "feedUrl": "https://www.anthropic.com/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 2,
+      "pathInclude": "/research/",
+      "notes": "Economic Index reports (Primitives Jan, Learning Curves Mar, Cadences Jun 2026) + labor research. No public RSS. Anthropic has commercial interest — apply Tier 2."
+    }
+  ],
+  "_planned_but_not_yet_working": [
+    "OECD AI Observatory (oecd.ai) — no functional RSS or sitemap discovered",
+    "IMF Blog (blogs.imf.org) — sitemap returns 403, RSS empty",
+    "Goldman Sachs Insights (goldmansachs.com/insights) — no public feed",
+    "Dallas Fed / Atlanta Fed / St Louis Fed research — RSS endpoints 404; would need custom HTML scrapers",
+    "IZA Discussion Papers — RSS endpoint 404",
+    "VoxEU / CEPR — RSS returns 403 (likely Cloudflare bot protection)"
+  ]
+}
