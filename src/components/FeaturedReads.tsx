@@ -48,14 +48,6 @@ const articles: Article[] = [
     date: "May 29",
     url: "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
   },
-  {
-    author: "David M. Solomon (NYT)",
-    title: "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
-    summary:
-      "Goldman's CEO argues AI will automate 25% of work hours but won't eliminate 25% of jobs — complexity expands to fill freed capacity. Cites a Stanford study showing entry-level employment in the most AI-exposed occupations has already declined 16%, but notes US companies churn 25–35M jobs annually and Goldman's own data center demand has created 200K+ construction jobs since 2022. A major CEO staking out the optimist position with internal data.",
-    date: "May 22",
-    url: "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
-  },
 ];
 
 export default function FeaturedReads() {
