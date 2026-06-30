@@ -5,6 +5,7 @@ import ResearchEvidence from "@/components/ResearchEvidence";
 import ProductivityPredictions from "@/components/ProductivityPredictions";
 import ProductivityPaths from "@/components/signals/ProductivityPaths";
 import ShareSectionBar from "@/components/ShareSectionBar";
+import { PREDICTION_COUNT } from "@/lib/constants";
 
 export default function ProductivityPage() {
   return (
@@ -401,7 +402,7 @@ export default function ProductivityPage() {
             <NavCard
               href="/"
               label="Dashboard"
-              description="All 18 predictions with evidence tiers"
+              description={`All ${PREDICTION_COUNT} predictions with evidence tiers`}
             />
             <NavCard
               href="/j-curve"
