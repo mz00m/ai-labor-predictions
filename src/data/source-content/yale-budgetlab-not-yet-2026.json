@@ -1,0 +1,16 @@
+{
+  "abstract": "Yale Budget Lab researchers Adriana Gimbel and Ernie Tedeschi published 'AI Is Probably Not (Yet) the Reason for Labor Market Weakening' in June 2026. Using their preferred econometric strategy applied to CPS and payroll data, they find no strong evidence of AI's impact on aggregate US employment or unemployment 33 months after ChatGPT's release. Measures of AI usage at the occupational level show no detectable connection to changes in employment or unemployment in those same occupations. The 2026 labor market features unusually low layoffs paired with unusually low hiring (especially of unemployed workers) \u2014 payroll employment growth has averaged ~20,000 net new jobs per month over the prior year, and the unemployment rate has risen to 4.3% in March 2026. The authors caution that historically widespread technological disruption tends to unfold over decades, not months or years; AI is likely to leave its mark eventually, but the macro signature is not yet visible. Treat as a companion to the lab's March 2026 CPS update.",
+  "keyFindings": [
+    "No detectable macro labor-market signature of AI 33 months post-ChatGPT (June 2026)",
+    "Measures of AI usage show no econometric connection to employment or unemployment changes at the occupational level",
+    "Macro context: ~20,000 net new payroll jobs per month over prior year, unemployment 4.3% as of March 2026",
+    "Pattern: low layoffs AND low hiring (especially of unemployed workers) \u2014 the labor market is 'frozen,' not collapsing",
+    "Authors expect AI will eventually affect the labor market \u2014 but the time horizon for general-purpose technologies has historically been decades, not months",
+    "Pushes back against 'AI-washing' narrative where layoffs are attributed to AI without supporting micro evidence",
+    "Tier 1 academic-quality analysis from an institutional venue with deep CPS expertise"
+  ],
+  "methodology": "Econometric analysis applying Yale Budget Lab's preferred strategy to CPS public-use microdata and BLS payroll series. Cross-references occupational-level AI exposure (from prior published measures) with employment and unemployment outcomes. Companion to their February and March 2026 updates with consistent methodology.",
+  "qualifiers": "Tier 1 \u2014 institutional venue, methodologically rigorous, but is an empirical 'no detectable effect' finding which is intrinsically a null. Could be re-evaluated as AI usage data improves. The paper does NOT argue AI cannot affect labor markets, only that current measures do not detect a macro effect. Useful counterpoint to forecasts predicting visible near-term displacement; consistent with the early-career findings (Canaries) being micro patterns not yet macro-visible.",
+  "id": "yale-budgetlab-not-yet-2026",
+  "fetchedAt": "2026-06-30"
+}

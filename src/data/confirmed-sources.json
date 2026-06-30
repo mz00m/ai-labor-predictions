@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-06-30",
-  "totalSources": 592,
-  "verifiedCount": 582,
+  "totalSources": 596,
+  "verifiedCount": 586,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8398,6 +8398,67 @@
       "usedIn": [
         "workforce-ai-exposure",
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-briggs-15m-displacement-revision-2026": {
+      "id": "goldman-briggs-15m-displacement-revision-2026",
+      "title": "Goldman Sachs Revised Forecast: ~9% / 15M US Workers Displaced over 10 Years",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Research (Joseph Briggs)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-01",
+      "excerpt": "Goldman Sachs revised its US labor displacement forecast upward from 6-7% to ~9% (about 15 million workers) over the next decade. The change reflects a new methodology measuring total flow of workers leaving jobs due to AI-driven productivity gains, rather than steady-state unemployed count. Briggs estimates each 1% increase in technology-driven productivity yields a 0.5-0.6% increase in the job-destruction rate over the following two years. Goldman maintains the long-run benefits outweigh the disruption (US churns 25-35M jobs annually, and AI will generate new employment), and that unemployment rises less than 1 percentage point at peak under standard adoption timing. As of mid-2026, Goldman estimates AI is erasing ~16,000 net jobs per month, concentrated in entry-level and administrative roles.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-not-yet-2026": {
+      "id": "yale-budgetlab-not-yet-2026",
+      "title": "AI Is Probably Not (Yet) the Reason for Labor Market Weakening",
+      "url": "https://budgetlab.yale.edu/research/ai-probably-not-yet-reason-labor-market-weakening",
+      "publisher": "Yale Budget Lab (Gimbel, Tedeschi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-15",
+      "excerpt": "Yale Budget Lab's preferred econometric strategy finds no strong evidence of AI's impact on aggregate US employment or unemployment 33 months post-ChatGPT. Measures of AI usage show no detectable connection to changes in employment or unemployment. The labor market in early 2026 features low layoffs but also low hiring, with payroll growth ~20,000 net new jobs per month and unemployment 4.3% in March 2026. Authors caution that historically technological disruption unfolds over decades, not months \u2014 AI is likely to leave its mark eventually, but the macro signature is not yet visible. A companion to the lab's March 2026 CPS update.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-canaries-april-2026": {
+      "id": "stanford-del-canaries-april-2026",
+      "title": "Stanford DEL Canaries Dashboard: April 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-10",
+      "excerpt": "Monthly-updated dashboard built on anonymized ADP payroll data covering 4.6 million workers across 730+ occupations. April 2026 reading: most AI-exposed occupations contracted 0.2% YoY, least-exposed grew 0.1% YoY \u2014 a small but consistent gap. For workers ages 22-25 in highly AI-exposed occupations, employment is now shrinking at 3.8% per year, with the early-career decline sharpening from -2.8% to April 2024 to over -4% per year since. Builds on Brynjolfsson, Chandar, Chen (2025) 'Canaries in the Coal Mine.' Live update of the underlying employment story behind the 'overall not yet, early-career already' pattern.",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-economic-index-cadences-2026": {
+      "id": "anthropic-economic-index-cadences-2026",
+      "title": "Anthropic Economic Index Report: Cadences (June 2026)",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "publisher": "Anthropic Economic Index",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-26",
+      "excerpt": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage patterns with a survey of ~9,700 Claude users. Headline findings: about half of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users \u2014 experienced users automate substantially more of their work. Biggest automation increases occur in business sales, automated trading, and routine market-research tasks, flagging those roles as near-term automation candidates.",
+      "usedIn": [
+        "genai-work-adoption",
+        "workforce-ai-exposure",
+        "ai-adoption-rate"
       ],
       "verified": true,
       "synthetic": false

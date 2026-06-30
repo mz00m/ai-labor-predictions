@@ -153,6 +153,15 @@
   ],
   "overlays": [
     {
+      "date": "2026-06-26",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-cadences-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Economic Index 'Cadences' (n≈9,700 Claude users, biased sample): ~50% say AI already handles 50%+ of their work tasks; 4% say Claude could do their entire job today; >33% expect AI to do most/all tasks within 12 months"
+    },
+    {
       "date": "2026-02-23",
       "direction": "up",
       "sourceIds": [

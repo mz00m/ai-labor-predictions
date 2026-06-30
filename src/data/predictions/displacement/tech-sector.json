@@ -281,6 +281,15 @@
   ],
   "overlays": [
     {
+      "date": "2026-06-10",
+      "direction": "down",
+      "sourceIds": [
+        "stanford-del-canaries-april-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL Canaries Dashboard (ADP, April 2026 data, 4.6M workers): for workers 22-25 in highly AI-exposed occupations, employment shrinking at ~3.8%/yr — the early-career decline sharpening from -2.8% to April 2024 to >-4%/yr since"
+    },
+    {
       "date": "2025-08-01",
       "direction": "neutral",
       "sourceIds": [
