@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 600,
-  "verifiedCount": 590,
+  "totalSources": 601,
+  "verifiedCount": 591,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8519,6 +8519,20 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-bloom-prettner-ai-skill-premium-2024": {
+      "id": "nber-bloom-prettner-ai-skill-premium-2024",
+      "title": "Artificial Intelligence and the Skill Premium",
+      "url": "https://www.nber.org/papers/w32430",
+      "publisher": "NBER (Bloom, Prettner, Saadaoui, Veruete)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-01",
+      "excerpt": "We show that AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers. [...] This leads to a skill premium of about 2, i.e., wages of high-skill workers are twice the wages of low-skill workers. In the second row, G_t is half the value of P_t and the skill premium decreases to about 1.7. In the third row, the value of G_t is now the same as the value of P_t so that the skill premium shrinks further to 1.62.",
+      "usedIn": [
+        "high-skill-wage-premium"
       ],
       "verified": true,
       "synthetic": false

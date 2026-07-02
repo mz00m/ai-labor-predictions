@@ -152,6 +152,15 @@
       "label": "Microsoft: Cloud revenue $35.1B, up 23%; 65%+ of Fortune 500 use Azure OpenAI"
     },
     {
+      "date": "2024-05-01",
+      "direction": "down",
+      "sourceIds": [
+        "nber-bloom-prettner-ai-skill-premium-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER model: AI scaling cuts skill premium from ~2.0x to 1.62x"
+    },
+    {
       "date": "2024-09-01",
       "direction": "up",
       "sourceIds": [
@@ -842,6 +851,15 @@
       "datePublished": "2026-05-07",
       "excerpt": "Synthesis of micro-level firm evidence finds generative AI already embedded in everyday business practice. Productivity gains in the near term come from task reallocation and upskilling rather than headcount reduction, with high-skill workers who effectively augment their output capturing a widening wage premium. The brief cautions that this benign short-run picture may mask longer-run structural displacement.",
       "dateAdded": "2026-05-18"
+    },
+    {
+      "id": "nber-bloom-prettner-ai-skill-premium-2024",
+      "title": "Artificial Intelligence and the Skill Premium",
+      "url": "https://www.nber.org/papers/w32430",
+      "publisher": "NBER (Bloom, Prettner, Saadaoui, Veruete)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-01",
+      "excerpt": "We show that AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers. [...] This leads to a skill premium of about 2, i.e., wages of high-skill workers are twice the wages of low-skill workers. In the second row, G_t is half the value of P_t and the skill premium decreases to about 1.7. In the third row, the value of G_t is now the same as the value of P_t so that the skill premium shrinks further to 1.62."
     }
   ]
 }
