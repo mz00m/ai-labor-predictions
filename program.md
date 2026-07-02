@@ -251,15 +251,15 @@ Never use `git reset --hard` — always revert for audit trail.
 
 ## Hero Stats Sync
 
-Three hardcoded hero stats on the homepage must stay in sync with prediction data:
+Three homepage hero stats. Two are computed at build time, one is hardcoded:
 
-| Stat | Source Graph | Current Value |
-|------|-------------|---------------|
-| ~21% Productivity boost | Manual (median of 18 studies) | 21% |
-| ~3% Projected job loss | `overall-us-displacement` (weighted avg, all tiers) | 3% |
-| ~0% Measured job loss | `overall-us-displacement` (observed data only) | 0% |
+| Stat | Source | Sync mechanism |
+|------|--------|----------------|
+| ~21% Productivity boost | Hardcoded in `src/components/HeroTriad.tsx` (center 21, range 14-35) | Manual — flag for human if the median/range of productivity studies drifts |
+| Projected job loss | `getHeroStats()` in `src/lib/data-loader.ts` — weighted avg of `overall-us-displacement`, all tiers | Automatic — sanity-check the computed value after displacement ingestions |
+| Measured job loss | `getHeroStats()` — latest `dataType: "observed"` point of `overall-us-displacement` | Automatic — verify observed points are correctly dated and typed |
 
-After any ingestion that affects displacement graphs, the audit script checks for drift > 1pp. If detected, flag for human to update `src/app/page.tsx`.
+Caveat: `auto-audit.js` still compares against a hardcoded ~3% and greps `page.tsx` for labels that moved to `HeroTriad.tsx` — verify its hero-drift findings manually rather than editing page.tsx.
 
 ## Human Responsibilities
 
