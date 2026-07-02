@@ -1,0 +1,12 @@
+{
+  "id": "gartner-cs-abandon-reduction-plans-2025",
+  "abstract": "Gartner prediction (June 2025): by 2027, half of organizations that expected to significantly reduce their customer service workforce will abandon those plans, as 'agent-less' staffing goals prove hard to achieve. Based in part on a March 2025 poll of 163 customer service and support leaders.",
+  "keyFindings": [
+    "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans.",
+    "95% of customer service leaders plan to retain human agents to strategically define AI's role ('digital first, but not digital only').",
+    "Poll: 163 customer service and support leaders, March 2025."
+  ],
+  "methodology": "Gartner analyst prediction supported by a March 2025 poll of 163 customer service and support leaders. Press release June 10, 2025. Gartner PR is fetch-blocked; quotes verified via Directors Club News reprint.",
+  "qualifiers": "Analyst prediction about plan abandonment, not observed staffing outcomes. Small poll (n=163). Staffing-plans finding on an interactions-based chart, hence overlay.",
+  "fetchedAt": "2026-07-02"
+}

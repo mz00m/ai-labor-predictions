@@ -213,6 +213,15 @@
       "label": "Klarna reversed course, rehiring humans after 22% CSAT drop"
     },
     {
+      "date": "2025-06-10",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-abandon-reduction-plans-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: 50% of orgs will abandon CS workforce-reduction plans by 2027"
+    },
+    {
       "date": "2025-08-01",
       "direction": "down",
       "sourceIds": [
@@ -867,6 +876,15 @@
       "evidenceTier": 2,
       "datePublished": "2025-11-13",
       "excerpt": "Service teams estimate 30% of cases are currently handled by AI. By 2027, as AI agents - or digital labor - gain momentum, they project that figure will reach 50%. Data is sourced from a double-anonymous survey of 6,500 service professionals and decision makers conducted from April 25 through June 6, 2025."
+    },
+    {
+      "id": "gartner-cs-abandon-reduction-plans-2025",
+      "title": "Gartner Predicts 50% of Organizations Will Abandon Plans to Reduce Customer Service Workforce Due to AI",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-10-gartner-predicts-50-percent-of-organizations-will-abandon-plans-to-reduce-customer-service-workforce-due-to-ai",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-10",
+      "excerpt": "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans. A Gartner poll of 163 customer service and support leaders conducted in March 2025 [found] 95% of customer service leaders plan to retain human agents to strategically define AI's role."
     }
   ]
 }

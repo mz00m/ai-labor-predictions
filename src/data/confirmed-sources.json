@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 605,
-  "verifiedCount": 595,
+  "totalSources": 606,
+  "verifiedCount": 596,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8590,6 +8590,20 @@
       "usedIn": [
         "high-skill-wage-premium",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gartner-cs-abandon-reduction-plans-2025": {
+      "id": "gartner-cs-abandon-reduction-plans-2025",
+      "title": "Gartner Predicts 50% of Organizations Will Abandon Plans to Reduce Customer Service Workforce Due to AI",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-10-gartner-predicts-50-percent-of-organizations-will-abandon-plans-to-reduce-customer-service-workforce-due-to-ai",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-10",
+      "excerpt": "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans. A Gartner poll of 163 customer service and support leaders conducted in March 2025 [found] 95% of customer service leaders plan to retain human agents to strategically define AI's role.",
+      "usedIn": [
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false
