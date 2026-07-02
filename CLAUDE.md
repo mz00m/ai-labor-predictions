@@ -106,7 +106,7 @@ Format: `{publisher-slug}-{topic-keywords}-{year}` (e.g., `brynjolfsson-2024`, `
 - Every ingested source must appear here with `usedIn[]` array listing all graph slugs
 - `verified: true`, `synthetic: false` for real sources
 - Update `totalSources` and `verifiedCount` counts on every ingestion
-- Currently: 524 sources, 514 verified
+- The live counts are the `totalSources`/`verifiedCount` fields in the file itself — do not restate them in docs, they rot (auto-audit.js verifies they match actual entries)
 
 ### Reading list (`src/data/reading-list.json`)
 Schema: `{ description, articles: [{ title, author, publisher, date, url, takeaway, weekFeatured, tier }] }`
