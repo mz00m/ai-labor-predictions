@@ -1,0 +1,20 @@
+{
+  "_comment": "Real-Time Population Survey quarterly waves (Bick/Blandin/Deming). Powers src/components/AIAdoptionChart.tsx. Add a new object to `series` each quarter when the tracker updates.",
+  "series": [
+    { "date": "Jun 2024", "overall": 43.9, "work": 32.9, "estimated": false },
+    { "date": "Aug 2024", "overall": 44.6, "work": 33.3, "estimated": false },
+    { "date": "Nov 2024", "overall": 46.3, "work": 31.0, "estimated": false },
+    { "date": "Feb 2025", "overall": 49.5, "work": 33.5, "estimated": true },
+    { "date": "May 2025", "overall": 52.0, "work": 35.5, "estimated": true },
+    { "date": "Aug 2025", "overall": 54.6, "work": 37.4, "estimated": false },
+    { "date": "Nov 2025", "overall": 55.9, "work": 40.7, "estimated": false },
+    { "date": "May 2026", "overall": 61.8, "work": 45.2, "estimated": false }
+  ],
+  "source": {
+    "publisher": "St. Louis Fed / Harvard RPS",
+    "url": "https://genaiadoptiontracker.com",
+    "urlLabel": "GenAIAdoptionTracker.com",
+    "cadence": "Updated quarterly"
+  },
+  "footnote": "Hollow dots are values estimated visually from the tracker chart before the corresponding working paper wave was published; solid dots are from the working paper or the tracker dashboard."
+}
