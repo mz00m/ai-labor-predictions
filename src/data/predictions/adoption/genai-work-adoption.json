@@ -520,12 +520,12 @@
     },
     {
       "id": "genai-adoption-tracker-2025",
-      "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
+      "title": "GenAI Adoption Tracker snapshot (Feb & May 2025 estimates)",
       "url": "https://pw.hks.harvard.edu/post/the-generative-ai-adoption-tracker",
       "publisher": "Harvard / St. Louis Fed RPS",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
-      "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper.",
+      "excerpt": "Snapshot of the GenAIAdoptionTracker.com dashboard at the time of ingestion (Nov 2025). Used here for the Feb 2025 (33.5%) and May 2025 (35.5%) quarterly waves \u2014 both estimated from the tracker chart before those results were published in the working paper. Later quarterly waves are captured in separate source entries (bick-blandin-deming-wp-2025 for Aug/Nov 2025; bick-deming-mind-the-gap-2026 for Feb 2026; genai-adoption-tracker-may-2026 for May 2026). The underlying RPS runs continuously and updates each quarter.",
       "dateAdded": "2026-03-01"
     },
     {
