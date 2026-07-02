@@ -1,13 +1,19 @@
 {
   "id": "mercer-global-talent-trends-2026",
-  "abstract": "Mercer's 11th annual Global Talent Trends survey (nearly 12,000 executives, HR leaders, investors, and employees worldwide, fielded September-October 2025) on how AI is reshaping workforce planning. Headline: most executives expect substantial redeployment and reskilling rather than outright elimination, while employee job-loss concern has risen sharply.",
+  "abstract": "Mercer's Global Talent Trends 2026 report, published February 25, 2026, surveys ~12,000 C-suite executives, HR leaders, investors, and employees across markets. The report finds AI is reshaping the wage-and-skills landscape: 65% of employers expect 11-30% of their workforce to be redeployed or reskilled due to AI within two years, 63% of employees would trade a 10% pay increase for AI/digital upskilling opportunities, and 72% of investors believe companies integrating human+AI capabilities gain competitive advantage. The report signals sharp compensation divergence: skilled-trades and frontline roles command premium wage growth while tech/professional-services compensation cools.",
   "keyFindings": [
-    "65% of executives expect 11%-30% of their workforce to be redeployed or reskilled due to AI over the next two years.",
-    "Employee concern about job loss due to AI surged from 28% in 2024 to 40% in 2026.",
-    "98% of executives are planning organizational design changes over the next two years.",
-    "Investors say companies combining human and AI capabilities gain a competitive advantage."
+    "12,000 respondents (C-suite, HR leaders, investors, employees) surveyed Sep-Oct 2025",
+    "65% of employers expect 11-30% of workforce redeployed or reskilled due to AI within 2 years",
+    "63% of employees would trade a 10% pay increase for opportunities to upskill in AI and digital skills",
+    "72% of investors believe companies combining human+AI capabilities gain competitive advantage",
+    "40% of employees worried about job loss from AI, up from 28% in 2024",
+    "59% of HR leaders cite difficulty attracting digital-skills talent as top challenge",
+    "77% of investors more likely to support companies committed to AI education",
+    "44% of employees report thriving at work (down from 66% in 2024)",
+    "Average 2026 merit budget projected at 3.2%; total salary budget 3.5%",
+    "Compensation growth in technology and professional services cooling as hiring normalizes"
   ],
-  "methodology": "Global survey of nearly 12,000 C-suite executives, HR leaders, employees, and investors across 16 geographies and 16 industries, conducted September-October 2025; released February 2026. 11th year of the series.",
-  "qualifiers": "Redeployment/reskilling expectations are not job-loss projections - classified as a neutral overlay on the displacement chart. Global sample, not US-specific. Executive expectations, not realized outcomes.",
+  "methodology": "Global cross-sectional survey conducted by Mercer (part of Marsh McLennan) between September-October 2025, sample ~12,000 respondents across 4 stakeholder groups (C-suite, HR leaders, investors, employees). 11th annual edition; results weighted across 16 industries and 25+ countries.",
+  "qualifiers": "Mercer is a Tier 2 institutional/consulting analyst \u2014 perspective is employer- and investor-facing. Numbers reflect self-reported attitudes and plans (not observed wage outcomes). Wage-premium implications are indirect: the report signals employers' willingness-to-pay for AI skills through the tech/professional-services compensation cooling and the skills-tradeoff data, rather than measuring realized AI wage premiums.",
   "fetchedAt": "2026-07-02"
 }

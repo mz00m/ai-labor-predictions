@@ -1,0 +1,14 @@
+{
+  "id": "genai-adoption-tracker-may-2026",
+  "abstract": "The Generative AI Adoption Tracker maintained by Alexander Bick, Adam Blandin, and David Deming provides ongoing quarterly measurement of US workplace generative AI use, drawing on the Real-Time Population Survey (RPS). The May 2026 update reports 45.2% of employed US adults using generative AI for work, up from 43% in the January-February 2026 wave. The tracker complements the authors' NBER and Management Science publications by providing continuous, nationally-representative measurement of the fastest-adopted general-purpose technology on record.",
+  "keyFindings": [
+    "May 2026 measurement: 45.2% of employed respondents used generative AI for work — up from 43% in Jan-Feb 2026 and 40.7% in Nov 2025",
+    "Overall adoption (work + non-work) reached 55.9% in late 2025, outpacing PC and internet adoption at comparable points post-launch",
+    "Tracker visualizes 8 combined survey waves encompassing approximately 40,000 respondents in total",
+    "Underlying RPS wave sizes typically 5,000-6,000 respondents per quarter",
+    "US work-related adoption has risen from 33% (Aug 2024) to 45.2% (May 2026) — roughly 12 percentage points in ~21 months"
+  ],
+  "methodology": "The Generative AI Adoption Tracker aggregates the GenAI module of the Real-Time Population Survey (RPS), a nationally representative online labor market survey of US adults aged 18-64 that has run continuously since 2020. The GenAI module has been asked quarterly since August 2024 with 5,000-6,000 respondents per wave. Results are weighted to nationally representative benchmarks and designed to complement the CPS.",
+  "qualifiers": "Adoption is self-reported. The RPS is an online panel and while weighted to be nationally representative, may differ from probability-sampled surveys like the CPS or Census BTOS. The 45.2% figure captures 'used genAI for work' at any frequency, without a specific frequency threshold. Question wording is consistent across waves, enabling clean time-series comparison.",
+  "fetchedAt": "2026-07-02"
+}

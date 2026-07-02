@@ -1,0 +1,18 @@
+{
+  "id": "challenger-june-2026",
+  "abstract": "Challenger, Gray & Christmas's June 2026 layoff report (published July 1, 2026) shows US employers announced 45,849 job cuts in June — down 53% from May's 97,006 — with AI cited as the leading reason for cuts for the fourth consecutive month. AI-attributed layoffs reached 14,029 in June (31% of the monthly total) and 101,743 year-to-date (23% of all cuts). Tech remains the epicenter at 139,156 YTD cuts, up 83% versus first-half 2025.",
+  "keyFindings": [
+    "June 2026 total US layoffs: 45,849 (down 53% from May's 97,006; lowest since December 2025)",
+    "AI-attributed layoffs in June 2026: 14,029 (31% of monthly total)",
+    "YTD 2026 AI-attributed layoffs: 101,743 (23% of all cuts)",
+    "Total cumulative AI-attributed cuts since 2023: 173,568",
+    "YTD 2026 total layoffs: 443,604 (down 40% from H1 2025's 744,308)",
+    "Technology sector YTD 2026 cuts: 139,156 (+83% vs H1 2025)",
+    "Tech accounts for nearly one-third of all 2026 layoffs",
+    "Healthcare YTD cuts: 33,175 (+10%); Transportation: 40,970 (+387%)",
+    "YTD hires: 91,405 (+10% vs 2025)"
+  ],
+  "methodology": "Challenger, Gray & Christmas tracks US employer job-cut announcements via press releases, regulatory filings, and direct company statements. AI attribution requires the company to explicitly cite AI/automation/ML as a driver of the cuts. Data covers June 2026 and year-to-date through June 30, 2026.",
+  "qualifiers": "Challenger is a Tier 3 outplacement-firm data source. AI-attribution is company-declared and may be subject to 'AI washing' (companies citing AI as cover for other cost pressures) — the report itself flags that many 2025 layoffs cited AI without demonstrable AI-related workforce redesign. Also does not distinguish white-collar vs. front-line cuts within each sector, though tech dominance suggests concentration in white-collar/knowledge roles.",
+  "fetchedAt": "2026-07-02"
+}

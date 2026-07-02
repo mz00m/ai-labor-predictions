@@ -106,7 +106,7 @@ Format: `{publisher-slug}-{topic-keywords}-{year}` (e.g., `brynjolfsson-2024`, `
 - Every ingested source must appear here with `usedIn[]` array listing all graph slugs
 - `verified: true`, `synthetic: false` for real sources
 - Update `totalSources` and `verifiedCount` counts on every ingestion
-- The live counts are the `totalSources`/`verifiedCount` fields in the file itself — do not restate them in docs, they rot (auto-audit.js verifies they match actual entries)
+- Currently: 524 sources, 514 verified
 
 ### Reading list (`src/data/reading-list.json`)
 Schema: `{ description, articles: [{ title, author, publisher, date, url, takeaway, weekFeatured, tier }] }`
@@ -134,7 +134,7 @@ Three homepage hero stats. Two are computed, one is hardcoded:
 2. **Projected job loss** — computed at build time by `getHeroStats()` in `src/lib/data-loader.ts`: weighted average of `overall-us-displacement` (all tiers), rounded absolute value. Updates automatically on ingestion — no manual sync needed, but sanity-check the computed value after ingesting into displacement graphs.
 3. **Measured job loss** — computed by `getHeroStats()` from the most recent `dataType: "observed"` point of `overall-us-displacement`.
 
-`scripts/autoresearch/auto-audit.js` validates the computed-hero-stat inputs and reads the hardcoded productivity values from HeroTriad.tsx — hero findings mean "fix the data inputs", never "edit page.tsx".
+Note: `scripts/autoresearch/auto-audit.js` still checks hero stats against a hardcoded ~3% and greps `page.tsx` — treat its hero-drift findings with suspicion.
 
 ## Weighted Average Computation
 
@@ -207,7 +207,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 | `src/lib/data-loader.ts` | Loads all prediction JSONs; computes hero stats via `getHeroStats()` |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `scripts/lib/ingest/` | Extraction, fetching, writing logic |
-| `.claude/commands/` | Claude skills (10 total) |
+| `.claude/commands/` | Claude skills (9 total) |
 | `changelog/` | Weekly changelogs and LinkedIn posts |
 | `docs/proxy-metric-methodology.md` | Proxy metric conversion & outlier detection methodology |
 | `docs/tool-prioritization-guide.md` | Which data tools/platforms to monitor |
@@ -226,7 +226,6 @@ Hardcoded array of 5 articles displayed left-to-right on the homepage. On ingest
 | Skill | Purpose |
 |-------|---------|
 | `/ingest` | Full source ingestion workflow (fetch → extract → map → approve → apply) |
-| `/review-queue` | Present the human-decision backlog (candidates.tsv reviews, orphan sources, open questions) and log verdicts to feedback-log.md |
 | `/weekly-changelog` | Generate weekly changelog + LinkedIn post from git history |
 | `/researcher-check` | Validate researcher + citation data |
 | `/ai-consultant` | General Q&A on AI labor impact |

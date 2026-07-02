@@ -1,0 +1,14 @@
+{
+  "id": "unesco-reshaping-creativity-2026",
+  "abstract": "UNESCO's flagship 2026 Re|Shaping Policies for Creativity report, published February 18, 2026, projects sharp income declines for creative-sector workers globally due to generative AI. Music creators are projected to lose 24% of revenue and audiovisual-sector workers 21% of income by 2028, driven by AI-generated content flooding markets, intellectual property violations, and streaming-platform algorithmic opacity. The report covers 120+ countries and analyzes 8,100+ policy measures.",
+  "keyFindings": [
+    "Music creators projected to lose 24% of revenue by 2028 due to generative AI",
+    "Audiovisual-sector workers projected to lose 21% of income by 2028",
+    "Digital-skills divide: 67% in developed countries vs. 28% in developing countries",
+    "Coverage spans more than 120 countries and 8,100+ cultural policy measures",
+    "Report attributes creator income declines to AI-generated content flooding markets, IP violations, and opaque streaming algorithms"
+  ],
+  "methodology": "UNESCO flagship Global Report on the Convention on the Diversity of Cultural Expressions. Draws on member-state cultural policy reports (120+ countries), sector economic data, and industry surveys from the international creative economy. Projections rely on modeled scenarios extending recent trend data.",
+  "qualifiers": "UNESCO forecasts are institutional projections, not observed labor-market data. The 24% music and 21% audiovisual figures cover creator revenue and income share more broadly than the US-freelance-focused evidence dominating the graph, so should be treated as a directional overlay rather than a direct-substitute data point. Scope is global; US-specific magnitudes may differ.",
+  "fetchedAt": "2026-07-02"
+}

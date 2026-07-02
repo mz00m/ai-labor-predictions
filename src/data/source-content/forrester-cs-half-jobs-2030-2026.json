@@ -1,0 +1,14 @@
+{
+  "id": "forrester-cs-half-jobs-2030-2026",
+  "abstract": "Forrester's May 2026 report by analysts Kate Leggett and Laura Ramos forecasts that AI will eliminate 49 percent of current customer service jobs by 2030, with the deepest cuts concentrated at organizations dominated by low-complexity inquiries. The report cites live examples such as Anthropic (AI handles ~96% of inquiries) and Heathrow Airport (~90%) as leading indicators of how far routine handling can move to AI. Rather than describing simple headcount elimination, the analysts argue AI will bifurcate the profession: fewer front-line agents, more human coaches, subject-matter experts, and AI governance roles.",
+  "keyFindings": [
+    "Forrester predicts 49% of current customer service jobs will disappear by 2030 (report published May 20, 2026)",
+    "In a modeled example, a company with 1,000 CS reps could shrink to 40 within four years — a 96% reduction — at high-volume, low-complexity operators",
+    "Low- and mid-level service representatives will be hit hardest among the 49% displaced",
+    "AI already handles about 96% of inquiries at Anthropic, ~90% at Heathrow Airport, and 68-80% at firms like Rocket Money and TeamSystem",
+    "Contact centers will hire relationship managers, industry/subject experts, and AI coaches to replace some displaced routine agent roles"
+  ],
+  "methodology": "Forrester Research analyst report by Kate Leggett and Laura Ramos synthesizing survey-based customer-service leader data, contact-center benchmarking, and case studies of large AI deployments. Sample size for the underlying survey not disclosed in press coverage.",
+  "qualifiers": "Forrester is a Tier 2 industry-research publisher; the specific 49% figure is a forecast rather than an observation. Trade press coverage (CX Dive, HR Dive, Inc., CMSWire) all cite the same primary report but do not disclose the full survey methodology or n. Forecast horizon is 2030.",
+  "fetchedAt": "2026-07-02"
+}

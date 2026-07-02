@@ -10,20 +10,15 @@ import {
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
+import rpsTracker from "@/data/rps-tracker.json";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
 /* ------------------------------------------------------------------ */
 
-const aiAdoptionData = [
-  { date: "Jun 2024", overall: 43.9, work: 32.9, estimated: false },
-  { date: "Aug 2024", overall: 44.6, work: 33.3, estimated: false },
-  { date: "Nov 2024", overall: 46.3, work: 31.0, estimated: false },
-  { date: "Feb 2025", overall: 49.5, work: 33.5, estimated: true },
-  { date: "May 2025", overall: 52.0, work: 35.5, estimated: true },
-  { date: "Aug 2025", overall: 54.6, work: 37.4, estimated: false },
-  { date: "Nov 2025", overall: 55.9, work: 40.7, estimated: false },
-];
+const aiAdoptionData = rpsTracker.series;
+const rpsSource = rpsTracker.source;
+const rpsFootnote = rpsTracker.footnote;
 
 const OVERALL_COLOR = "#4338CA";
 const WORK_COLOR = "#A5B4FC";
@@ -246,20 +241,19 @@ export default function AIAdoptionChart() {
 
       {/* Footnote */}
       <p className="text-xs text-[var(--muted)] mt-3 leading-relaxed opacity-70">
-        Feb &amp; May 2025 values estimated from tracker chart; all other
-        values from published working paper.
+        {rpsFootnote}
       </p>
 
       {/* Source */}
       <p className="text-sm text-[var(--muted)] mt-2">
-        St. Louis Fed / Harvard RPS &middot; Updated quarterly &middot;{" "}
+        {rpsSource.publisher} &middot; {rpsSource.cadence} &middot;{" "}
         <a
-          href="https://genaiadoptiontracker.com"
+          href={rpsSource.url}
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-[var(--foreground)]"
         >
-          GenAIAdoptionTracker.com
+          {rpsSource.urlLabel}
         </a>
       </p>
     </div>
