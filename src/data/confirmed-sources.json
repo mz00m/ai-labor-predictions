@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 609,
-  "verifiedCount": 599,
+  "totalSources": 610,
+  "verifiedCount": 600,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8632,6 +8632,18 @@
       "publisher": "Challenger, Gray & Christmas",
       "evidenceTier": 3,
       "datePublished": "2026-07-01"
+    },
+    "fiverr-q1-2026-earnings": {
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Fiverr Announces First Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-first-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-30"
     }
   }
 }

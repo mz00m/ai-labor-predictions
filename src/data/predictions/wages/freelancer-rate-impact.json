@@ -123,6 +123,15 @@
       "label": "Upwork: AI-applied freelance skills +109% YoY; video gen +329%"
     },
     {
+      "date": "2026-04-30",
+      "direction": "down",
+      "sourceIds": [
+        "fiverr-q1-2026-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Fiverr Q1 2026: Active buyers -17.8%; marketplace rev -13.6%; $1K+ projects +18%"
+    },
+    {
       "date": "2026-06-19",
       "direction": "down",
       "sourceIds": [
@@ -429,6 +438,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-04",
       "excerpt": "Top skills explicitly tied to applying AI within existing roles grew 109% year over year. AI video generation and editing +329%, AI integration +178%, AI data annotation and labeling +154%, AI image generation and editing +95%, AI chatbot development +71%. The most sought-after skills including full stack development, general virtual assistance, data analytics, and graphic design have remained consistently strong year over year. Nearly half of business leaders say they would pay a premium to work with independent talent who are creative and innovative. Analysis of completed-job freelancer earnings Jan 1-Dec 31, 2025.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "fiverr-q1-2026-earnings",
+      "title": "Fiverr Announces First Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-first-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-30",
+      "excerpt": "Q1 2026 revenue of $105.5 million, down 1.6% year-over-year. Marketplace revenue fell 13.6% to $67.1 million, while Services revenue jumped 30% to $38.4 million. Annual active buyers slipped to 2.9 million as of March 31, down 17.8 percent from 3.5 million a year earlier, but spend per buyer rose 15.4 percent to $356. Projects priced over $1,000 grew at a strong double-digit clip, and clients completing those engagements were up 18 percent year over year. The pivot is partly a response to a flood of low-quality AI output eroding marketplace trust.",
       "dateAdded": "2026-07-02"
     }
   ]
