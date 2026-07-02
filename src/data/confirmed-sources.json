@@ -8538,6 +8538,7 @@
       "synthetic": false
     },
     "forrester-cs-half-jobs-2030-2026": {
+      "id": "forrester-cs-half-jobs-2030-2026",
       "usedIn": [
         "customer-service-automation"
       ],
@@ -8550,6 +8551,7 @@
       "datePublished": "2026-05-20"
     },
     "gallup-arts-ai-creative-2026": {
+      "id": "gallup-arts-ai-creative-2026",
       "usedIn": [
         "creative-industry-displacement"
       ],
@@ -8562,6 +8564,7 @@
       "datePublished": "2026-05-01"
     },
     "unesco-reshaping-creativity-2026": {
+      "id": "unesco-reshaping-creativity-2026",
       "usedIn": [
         "creative-industry-displacement"
       ],
@@ -8574,6 +8577,7 @@
       "datePublished": "2026-02-18"
     },
     "yale-sonnenfeld-entry-level-ai-2026": {
+      "id": "yale-sonnenfeld-entry-level-ai-2026",
       "usedIn": [
         "white-collar-professional-displacement"
       ],
@@ -8586,6 +8590,7 @@
       "datePublished": "2026-05-04"
     },
     "mercer-global-talent-trends-2026": {
+      "id": "mercer-global-talent-trends-2026",
       "usedIn": [
         "high-skill-wage-premium"
       ],
@@ -8598,6 +8603,7 @@
       "datePublished": "2026-02-25"
     },
     "unitypoint-health-layoffs-2026": {
+      "id": "unitypoint-health-layoffs-2026",
       "usedIn": [
         "healthcare-admin-displacement"
       ],
@@ -8610,6 +8616,7 @@
       "datePublished": "2026-04-15"
     },
     "upwork-in-demand-skills-2026": {
+      "id": "upwork-in-demand-skills-2026",
       "usedIn": [
         "freelancer-rate-impact"
       ],
@@ -8622,6 +8629,7 @@
       "datePublished": "2026-02-04"
     },
     "challenger-june-2026": {
+      "id": "challenger-june-2026",
       "usedIn": [
         "white-collar-professional-displacement"
       ],
@@ -8634,6 +8642,7 @@
       "datePublished": "2026-07-01"
     },
     "fiverr-q1-2026-earnings": {
+      "id": "fiverr-q1-2026-earnings",
       "usedIn": [
         "freelancer-rate-impact"
       ],
@@ -8646,6 +8655,7 @@
       "datePublished": "2026-04-30"
     },
     "adobe-creators-toolkit-2026": {
+      "id": "adobe-creators-toolkit-2026",
       "usedIn": [
         "creative-industry-displacement"
       ],
