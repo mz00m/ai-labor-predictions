@@ -215,6 +215,15 @@
       "label": "Marguerit: Augmentation AI fosters new work and raises wages for high-skilled occupations"
     },
     {
+      "date": "2025-04-04",
+      "direction": "down",
+      "sourceIds": [
+        "imf-rockall-ai-adoption-inequality-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF model: AI cuts wage Gini 1.73pp (high earners exposed); wealth Gini +7.18pp"
+    },
+    {
       "date": "2025-05-01",
       "direction": "down",
       "sourceIds": [
@@ -860,6 +869,15 @@
       "evidenceTier": 1,
       "datePublished": "2024-05-01",
       "excerpt": "We show that AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers. [...] This leads to a skill premium of about 2, i.e., wages of high-skill workers are twice the wages of low-skill workers. In the second row, G_t is half the value of P_t and the skill premium decreases to about 1.7. In the third row, the value of G_t is now the same as the value of P_t so that the skill premium shrinks further to 1.62."
+    },
+    {
+      "id": "imf-rockall-ai-adoption-inequality-2025",
+      "title": "AI Adoption and Inequality (IMF Working Paper 2025/068)",
+      "url": "https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729",
+      "publisher": "IMF (Rockall, Mendes Tavares, Pizzinelli)",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-04",
+      "excerpt": "Under the baseline assumption that occupational exposure to AI is directly associated with task displacement, the model predicts a decrease in the Gini coefficient for wage inequality of 1.73 p.p. Wealth inequality, however, is predicted to widen, with the wealth Gini rising 7.18 p.p. [...] roughly 60 percent of workers at the 90th income percentile are in an occupation where a large share of tasks can be performed by AI, at the 10th percentile only 15 percent of workers are in this situation. For comparison, the model calibrated to routine-biased automation produces a substantial increase in both wage and wealth inequality, with the Gini rising by 2.05 p.p. and 6.89 p.p., respectively."
     }
   ]
 }
