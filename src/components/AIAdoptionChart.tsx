@@ -23,6 +23,7 @@ const aiAdoptionData = [
   { date: "May 2025", overall: 52.0, work: 35.5, estimated: true },
   { date: "Aug 2025", overall: 54.6, work: 37.4, estimated: false },
   { date: "Nov 2025", overall: 55.9, work: 40.7, estimated: false },
+  { date: "May 2026", overall: 61.8, work: 45.2, estimated: false },
 ];
 
 const OVERALL_COLOR = "#4338CA";
