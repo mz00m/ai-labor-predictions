@@ -8,8 +8,9 @@ Before any autonomous session, read these files for full context:
 
 1. `CLAUDE.md` — project architecture, data conventions, evidence tiers, file paths
 2. `src/data/confirmed-sources.json` — master source registry (what's already ingested)
-3. `scripts/autoresearch/candidates.tsv` — what's already been attempted (avoid re-searching)
-4. `src/data/last-updated.json` — current freshness date
+3. `src/data/recurring-sources.json` — recurring release registry (tracked series, cadences, last ingested editions)
+4. `scripts/autoresearch/candidates.tsv` — what's already been attempted (avoid re-searching)
+5. `src/data/last-updated.json` — current freshness date
 
 Then verify the state:
 - Run `node scripts/autoresearch/auto-audit.js` to check data health
@@ -17,7 +18,7 @@ Then verify the state:
 
 ## What You CAN Do
 
-- **Modify data files**: prediction JSONs in `src/data/predictions/`, `confirmed-sources.json`, `last-updated.json`
+- **Modify data files**: prediction JSONs in `src/data/predictions/`, `confirmed-sources.json`, `last-updated.json`, `recurring-sources.json`
 - **Write to logs**: `scripts/autoresearch/candidates.tsv`
 - **Run audit scripts**: `node scripts/autoresearch/auto-audit.js [--fix]`
 - **Search the web**: discover and evaluate new research sources
@@ -41,8 +42,13 @@ score = tier_score + freshness_score + coverage_score + novelty_score
 tier_score:      T1=40  T2=25  T3=10  T4=5
 freshness_score: ≤90 days=20  ≤180 days=15  ≤1 year=10  older=5
 coverage_score:  graph has <5 pts=20  <8 pts=15  <12 pts=10  12+=5
-novelty_score:   new publisher=15  existing publisher new topic=5
+novelty_score:   new publisher=15
+                 new edition of a tracked recurring series=15
+                 existing publisher new topic=5
+                 existing publisher same topic (untracked)=0
 ```
+
+New editions of series in `src/data/recurring-sources.json` are never penalized for coming from a known publisher — refreshed data from an established series is the main way graphs stay current.
 
 **Keep/discard thresholds:**
 | Score | Action |
@@ -108,6 +114,18 @@ There are three autonomous loops. Each can run independently.
 Skill: `/autoresearch [category]`
 
 ```
+SWEEP (once per session, before the loop):
+  For each series in src/data/recurring-sources.json where
+  today >= nextExpected (or nextExpected is null), highest priority first:
+    a. Search/fetch for an edition newer than lastIngested
+    b. If found: score (novelty=15), and route through the normal
+       keep/discard thresholds
+    c. Update lastChecked; on ingestion update lastIngested and advance
+       nextExpected one cadence interval; if nothing new, push nextExpected
+       forward by a short recheck window (7d monthly/biweekly, 14d quarterly,
+       30d annual)
+  Set the registry's lastSweep to today.
+
 LOOP:
   1. Pick the highest-priority graph from the priority list above
      (or use the human's focus directive if provided)
@@ -134,6 +152,19 @@ LOOP:
 - Source ID format: `{publisher-slug}-{topic-keywords}-{year}`
 - Update `confirmed-sources.json` with every ingestion
 - Update `last-updated.json` with today's date
+- If the source belongs to a tracked recurring series, update its entry in `recurring-sources.json`; if it is clearly a recurring release with no entry, add one
+
+---
+
+### Recurring Release Tracking
+
+`src/data/recurring-sources.json` tracks every series that republishes on a schedule — Stanford AI Index (annual, April), Stanford DEL Canaries dashboard (monthly), Anthropic Economic Index (quarterly), FactSet Earnings Insight (quarterly), Census BTOS AI module (biweekly), Challenger Report (monthly), Yale Budget Lab tracker (monthly), BLS releases (monthly/annual), PwC AI Jobs Barometer (annual, June), OECD Employment Outlook (annual, July), and ~20 more.
+
+Rules:
+- **Sweep before discovering.** A missed edition of a tracked series is a known gap; a novel source is a speculative one. Clear all due series first.
+- **The registry is the memory.** `lastIngested` says what edition the site has; `nextExpected` says when to look again. Keep both current or the sweep degrades.
+- **Backfill sparingly.** If several editions were missed, ingest the newest first; backfill older ones only when they add distinct data points to a graph.
+- **Human**: prune or re-prioritize series here the same way you tune the graph priority table.
 
 ---
 

@@ -198,6 +198,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 |------|---------|
 | `src/data/predictions/` | All 18 prediction JSON files |
 | `src/data/confirmed-sources.json` | Master source registry (524 sources) |
+| `src/data/recurring-sources.json` | Recurring release registry (tracked series, cadences, last ingested editions — swept by `/autoresearch`) |
 | `src/data/reading-list.json` | Rolling reading list for Featured Reads |
 | `src/data/last-updated.json` | Site-wide "last updated" date |
 | `src/app/page.tsx` | Hero section with hardcoded stats |
