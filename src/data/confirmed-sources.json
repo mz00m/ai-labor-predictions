@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 599,
-  "verifiedCount": 589,
+  "totalSources": 612,
+  "verifiedCount": 602,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -1880,12 +1880,12 @@
     },
     "genai-adoption-tracker-2025": {
       "id": "genai-adoption-tracker-2025",
-      "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
+      "title": "GenAI Adoption Tracker snapshot (Feb & May 2025 estimates)",
       "url": "https://pw.hks.harvard.edu/post/the-generative-ai-adoption-tracker",
       "publisher": "Harvard / St. Louis Fed RPS",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
-      "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper.",
+      "excerpt": "Snapshot of the GenAIAdoptionTracker.com dashboard at the time of ingestion (Nov 2025). Used here for the Feb 2025 (33.5%) and May 2025 (35.5%) quarterly waves \u2014 both estimated from the tracker chart before those results were published in the working paper. Later quarterly waves are captured in separate source entries (bick-blandin-deming-wp-2025 for Aug/Nov 2025; bick-deming-mind-the-gap-2026 for Feb 2026; genai-adoption-tracker-may-2026 for May 2026). The underlying RPS runs continuously and updates each quarter.",
       "usedIn": [
         "genai-work-adoption"
       ],
@@ -8503,6 +8503,181 @@
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-timmerman-education-exposure-2025": {
+      "id": "fed-timmerman-education-exposure-2025",
+      "title": "Educational Exposure to Generative Artificial Intelligence",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/educational-exposure-to-generative-artificial-intelligence-20250226.html",
+      "publisher": "Federal Reserve Board (Timmerman)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-26",
+      "excerpt": "Using the National Survey of College Graduates 2013-2021 (n=375,991 unweighted, weighted to ~228.8M), Table 2 reports education field GenAI exposure z-scores of 0.68 for language modeling and -0.69 for image generation, indicating moderate text-based AI exposure and low image-generation exposure. The paper cites Bick et al. (2024): '46 percent of workers who majored in STEM use generative AI at work, compared with 40 percent for workers who majored in business...and 22 percent for all other majors.'",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-scale-ai-k12-evidence-2026": {
+      "id": "stanford-scale-ai-k12-evidence-2026",
+      "title": "The Evidence Base on AI in K-12: A 2026 Review",
+      "url": "https://scale.stanford.edu/research-in-action/understanding-evidence-base-ai-k12-education",
+      "publisher": "Stanford SCALE Initiative (Graduate School of Education)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-11",
+      "excerpt": "Reviewed more than 800 academic papers related to AI and K-12 education (Repository now over 1,100 papers) and identified only 20 high-quality causal studies that rigorously examine how AI tools affect students or educators. 'Student performance often improves with access to AI tools, but once removed, results are mixed.' No high-quality causal studies of student AI use conducted in U.S. K-12 classrooms. AI tools designed with pedagogical guardrails show more promising outcomes than general-purpose chatbots.",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "forrester-cs-half-jobs-2030-2026": {
+      "id": "forrester-cs-half-jobs-2030-2026",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Half of current customer service jobs will be lost to AI by 2030, Forrester predicts",
+      "url": "https://www.customerexperiencedive.com/news/forrester-predicts-half-customer-service-jobs-cut-AI/821797/",
+      "publisher": "Forrester (via CX Dive; analysts Kate Leggett & Laura Ramos)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-20"
+    },
+    "gallup-arts-ai-creative-2026": {
+      "id": "gallup-arts-ai-creative-2026",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "AI Is Changing Creative Work, but the Arts Aren't Disappearing",
+      "url": "https://www.gallup.com/workplace/708575/ai-changing-creative-work-arts-arent-disappearing.aspx",
+      "publisher": "Gallup (with Journal of Cultural Economics)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01"
+    },
+    "unesco-reshaping-creativity-2026": {
+      "id": "unesco-reshaping-creativity-2026",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Artists face steep income decline due to AI, UNESCO finds",
+      "url": "https://news.un.org/en/story/2026/02/1166989",
+      "publisher": "UNESCO (via UN News; Re|Shaping Policies for Creativity report)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18"
+    },
+    "yale-sonnenfeld-entry-level-ai-2026": {
+      "id": "yale-sonnenfeld-entry-level-ai-2026",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start",
+      "url": "https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start",
+      "publisher": "Yale Insights / Yale Chief Executive Leadership Institute (Sonnenfeld, Henriques, Griessel, Alam-Nist, Yu)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-04"
+    },
+    "mercer-global-talent-trends-2026": {
+      "id": "mercer-global-talent-trends-2026",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Investors say companies combining human and AI capabilities gain a competitive advantage, according to Mercer's Global Talent Trends 2026 report",
+      "url": "https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/",
+      "publisher": "Mercer / Marsh McLennan",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-25"
+    },
+    "unitypoint-health-layoffs-2026": {
+      "id": "unitypoint-health-layoffs-2026",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "UnityPoint Health to lay off 207 IT employees",
+      "url": "https://www.businessrecord.com/unitypoint-health-to-lay-off-207-it-employees/",
+      "publisher": "Business Record (Iowa) / UnityPoint Health / Becker's Hospital Review",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-15"
+    },
+    "upwork-in-demand-skills-2026": {
+      "id": "upwork-in-demand-skills-2026",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Upwork's In-Demand Skills 2026: Demand for Top AI Skills More Than Doubles as AI Is Embedded Into Everyday Work",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "publisher": "Upwork (Investor Relations / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-04"
+    },
+    "challenger-june-2026": {
+      "id": "challenger-june-2026",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Challenger Report: June Layoffs Cool to 45,849, Down 53% From May; AI Leads Reasons for Fourth Consecutive Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-june-layoffs-cool-to-45849-down-53-from-may-ai-leads-reasons-for-fourth-consecutive-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01"
+    },
+    "fiverr-q1-2026-earnings": {
+      "id": "fiverr-q1-2026-earnings",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Fiverr Announces First Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-first-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-30"
+    },
+    "adobe-creators-toolkit-2026": {
+      "id": "adobe-creators-toolkit-2026",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "87 Percent of Creators Say Creative AI Is Growing Their Business and Audience, According to Adobe's 2026 Creators' Toolkit Report",
+      "url": "https://news.adobe.com/news/2026/06/creators-toolkit-report-2026",
+      "publisher": "Adobe (Creators' Toolkit Report / Harris Poll)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-16"
+    },
+    "genai-adoption-tracker-may-2026": {
+      "id": "genai-adoption-tracker-may-2026",
+      "title": "Generative AI Adoption Tracker \u2014 May 2026 Update",
+      "url": "https://www.genaiadoptiontracker.com/",
+      "publisher": "Bick, Blandin, Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Generative AI Adoption Tracker (Bick, Blandin, Deming), May 2026 update: '45.2% of the employed respondents used genAI for work.' Based on the Real-Time Population Survey (RPS), a nationally representative online labor market survey of US adults 18-64 running continuously since 2020. Tracker visualizes findings from 8 combined survey waves encompassing approximately 40,000 respondents, weighted to be nationally representative.",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false

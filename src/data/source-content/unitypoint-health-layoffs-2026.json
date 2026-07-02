@@ -1,0 +1,14 @@
+{
+  "id": "unitypoint-health-layoffs-2026",
+  "abstract": "Iowa-based health system UnityPoint Health announced in April 2026 the elimination of 207 IT positions and additional (unspecified) revenue-cycle roles, with functions to be outsourced to Accenture (IT) and Omega Healthcare Management Services (billing and payment operations, described as 'artificial intelligence-driven'). This is the second major RCM outsourcing/layoff announcement of 2026 following Trinity Health's January cut of 10.5% of its RCM staff, and continues a pattern of hospital administrative displacement to AI-driven vendors.",
+  "keyFindings": [
+    "UnityPoint Health to eliminate 207 IT positions later in 2026",
+    "Additional revenue-cycle staff layoffs planned (exact number not disclosed)",
+    "IT functions to move to Accenture; billing/payment operations to Omega Healthcare Management Services, an 'AI-driven' vendor",
+    "System cites rising medicine/labor/supplies costs, reduced reimbursements, and higher complex-care demand as drivers",
+    "Marks second major AI-linked RCM/admin outsourcing move in 2026 (after Trinity Health's 10.5% RCM cut in Jan 2026)"
+  ],
+  "methodology": "Corporate layoff announcement covered by Iowa business press (Business Record, KCRG, Becker's Hospital Review, HealthLeaders Media). Numbers sourced from UnityPoint Health's statement and Iowa state WARN notice filings.",
+  "qualifiers": "Tier 3 evidence — corporate announcement / trade press coverage. Revenue-cycle layoff count not disclosed. AI attribution is inferred from Omega Healthcare's self-description as an 'artificial intelligence-driven' vendor; UnityPoint's stated drivers are broader cost pressures. Not peer-reviewed.",
+  "fetchedAt": "2026-07-02"
+}

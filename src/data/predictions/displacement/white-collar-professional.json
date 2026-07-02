@@ -677,7 +677,7 @@
         "wang-neubig-agent-benchmarks-2026"
       ],
       "evidenceTier": 1,
-      "label": "Wang et al.: Legal 70%, Management 88% digital work — high automation potential"
+      "label": "Wang et al.: Legal 70%, Management 88% digital work \u2014 high automation potential"
     },
     {
       "date": "2026-03-01",
@@ -740,7 +740,7 @@
         "anthropic-labor-market-impacts-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid — no unemployment rise found"
+      "label": "Anthropic: Most AI-exposed workers are educated, higher-paid \u2014 no unemployment rise found"
     },
     {
       "date": "2026-03-07",
@@ -848,7 +848,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → white-collar sector share stalls at 20-21% by 2050"
+      "label": "FRI: Rapid scenario \u2192 white-collar sector share stalls at 20-21% by 2050"
     },
     {
       "date": "2026-04-01",
@@ -902,7 +902,7 @@
         "barth-hoen-kerr-declining-occupations-nber-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER: Norway declining-occupation workers lose 0.4 years of work (2007–2024)"
+      "label": "NBER: Norway declining-occupation workers lose 0.4 years of work (2007\u20132024)"
     },
     {
       "date": "2026-04-21",
@@ -977,6 +977,15 @@
       "label": "arXiv: Clerical/admin top RL-exposure (49.2/100 vs. 27 mean)"
     },
     {
+      "date": "2026-05-04",
+      "direction": "up",
+      "sourceIds": [
+        "yale-sonnenfeld-entry-level-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Yale/Sonnenfeld: New-grad unemployment ~6%; CS majors 7.0%, CE 7.8%"
+    },
+    {
       "date": "2026-05-22",
       "direction": "up",
       "sourceIds": [
@@ -993,6 +1002,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: back-office jobs (HR, billing, payroll) flagged as most AI-vulnerable"
+    },
+    {
+      "date": "2026-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-june-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Challenger: AI cited in 101,743 US layoffs YTD 2026 (23%); tech +83% vs H1 2025"
     }
   ],
   "sources": [
@@ -1127,7 +1145,7 @@
     },
     {
       "id": "jpmorgan-10k-ai-2024",
-      "title": "JPMorgan Chase 2024 10-K — AI and Workforce",
+      "title": "JPMorgan Chase 2024 10-K \u2014 AI and Workforce",
       "url": "https://www.sec.gov/edgar/browse/?CIK=0000019617",
       "publisher": "JPMorgan Chase (SEC Filing)",
       "evidenceTier": 1,
@@ -1137,7 +1155,7 @@
     },
     {
       "id": "ey-10k-ai-2024",
-      "title": "EY Global — AI Transformation in Professional Services",
+      "title": "EY Global \u2014 AI Transformation in Professional Services",
       "url": "https://www.ey.com/en_gl/insights/ai/case-study-how-ey-transformed-with-ai",
       "publisher": "Ernst & Young",
       "evidenceTier": 2,
@@ -1211,7 +1229,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1370,7 +1388,7 @@
       "publisher": "MIT / Oak Ridge National Laboratory (Project Iceberg)",
       "evidenceTier": 1,
       "datePublished": "2025-11-26",
-      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption—and are geographically distributed across all states, not just coastal.",
+      "excerpt": "Administrative and financial tasks where AI demonstrates capability span five times more wage value than visible tech disruption\u2014and are geographically distributed across all states, not just coastal.",
       "dateAdded": "2026-03-15"
     },
     {
@@ -1380,7 +1398,7 @@
       "publisher": "MIT Technology Review",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
+      "excerpt": "Despite early signs that AI is beginning to affect entry-level workers, labor statistics have yet to show lawyers being displaced. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1390,7 +1408,7 @@
       "publisher": "NBER",
       "evidenceTier": 1,
       "datePublished": "2025-12-15",
-      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% — the highest rate on record.",
+      "excerpt": "AI chatbots had no statistically significant impact on hours worked or wages earned for lawyers. Law graduate employment in 2024 reached 93.4% \u2014 the highest rate on record.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1440,7 +1458,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1511,11 +1529,11 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-01",
       "dateAdded": "2026-03-02",
-      "excerpt": "the jobs most vulnerable to AI are elsewhere—including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
+      "excerpt": "the jobs most vulnerable to AI are elsewhere\u2014including executive assistants, editors, and interpreters/translators (where over 70% of their skills are exposed to AI)."
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover — December 2025",
+      "title": "Job Openings and Labor Turnover \u2014 December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -1570,7 +1588,7 @@
       "publisher": "CausalInf Substack (Scott Cunningham)",
       "evidenceTier": 4,
       "datePublished": "2026-03-02",
-      "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
+      "excerpt": "Project APE \u2014 Autonomous Policy Evaluation... has produced 204 papers \u2014 with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -1617,10 +1635,10 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
-      "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
+      "excerpt": "An event study documents an accelerating decline in employment of 22\u201325-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "dateAdded": "2026-03-17"
     },
     {
@@ -1649,7 +1667,7 @@
       "publisher": "The Burning Glass Institute (Gad Levanon)",
       "evidenceTier": 3,
       "datePublished": "2026-03-26",
-      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 — modest but meaningful across more than 300 metropolitan areas.",
+      "excerpt": "In 2022, there was essentially no relationship between a metro area's share of college graduates and where its unemployment rate stood relative to its own history. The correlation was -0.01. Three years later, that correlation is 0.26 \u2014 modest but meaningful across more than 300 metropolitan areas.",
       "dateAdded": "2026-03-27"
     },
     {
@@ -1679,7 +1697,7 @@
       "publisher": "Brookings Metro / Opportunity@Work",
       "evidenceTier": 2,
       "datePublished": "2026-04-02",
-      "excerpt": "Across Destination occupations, 12.9 million workers—or around one-third of all workers in those occupations—may now be highly exposed to AI",
+      "excerpt": "Across Destination occupations, 12.9 million workers\u2014or around one-third of all workers in those occupations\u2014may now be highly exposed to AI",
       "dateAdded": "2026-04-02"
     },
     {
@@ -1694,7 +1712,7 @@
     },
     {
       "id": "bls-employment-situation-mar-2026",
-      "title": "BLS Employment Situation: Total Nonfarm Payrolls — March 2026",
+      "title": "BLS Employment Situation: Total Nonfarm Payrolls \u2014 March 2026",
       "url": "https://data.bls.gov/timeseries/CEU0000000001",
       "publisher": "data.bls.gov",
       "evidenceTier": 1,
@@ -1717,7 +1735,7 @@
       "publisher": "NBER (Barth, Hoen, Kerr, Kerr)",
       "evidenceTier": 1,
       "datePublished": "2026-04-20",
-      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024."
+      "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007\u20132024."
     },
     {
       "id": "metaculus-labor-hub-2026",
@@ -1744,7 +1762,7 @@
       "publisher": "The Burning Glass Institute (Gad Levanon)",
       "evidenceTier": 3,
       "datePublished": "2026-04-21",
-      "excerpt": "FIIPB's combined within-industry contribution roughly doubled between 2013–2019 and 2019–2025, from 0.78 to 1.50 percentage points per year. Advanced manufacturing quadrupled from a low base. Professional and business services... Post-2022 annualized: GDP +3.0%, hours −0.4%. AI-powered automation appears to be reducing demand for junior professionals in consulting, accounting, and legal work."
+      "excerpt": "FIIPB's combined within-industry contribution roughly doubled between 2013\u20132019 and 2019\u20132025, from 0.78 to 1.50 percentage points per year. Advanced manufacturing quadrupled from a low base. Professional and business services... Post-2022 annualized: GDP +3.0%, hours \u22120.4%. AI-powered automation appears to be reducing demand for junior professionals in consulting, accounting, and legal work."
     },
     {
       "id": "carlyle-compass-ai-saas-2026",
@@ -1753,7 +1771,7 @@
       "publisher": "Carlyle (Jason Thomas, Head of Global Research & Investment Strategy)",
       "evidenceTier": 2,
       "datePublished": "2026-04-21",
-      "excerpt": "Our proprietary survey of AI integration efforts finds that only 11% of management teams expect AI to replace existing software subscriptions. Far more expect the move to AI-centric architectures to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, reducing future headcount needs. Figure 4 (Carlyle Proprietary Survey, April 2026): Internal headcount cited as AI spending offset by 26% of respondents — the largest single category."
+      "excerpt": "Our proprietary survey of AI integration efforts finds that only 11% of management teams expect AI to replace existing software subscriptions. Far more expect the move to AI-centric architectures to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, reducing future headcount needs. Figure 4 (Carlyle Proprietary Survey, April 2026): Internal headcount cited as AI spending offset by 26% of respondents \u2014 the largest single category."
     },
     {
       "id": "shah-levy-pro-se-ai-courts-2026",
@@ -1772,7 +1790,7 @@
       "publisher": "NBER (Karger, Kuusela, Abaluck, Bryan, Halperin, Jones, Murphy, Trammell, et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
-      "excerpt": "In the unconditional scenario, economists expect the share of business and analytical ('white-collar') roles to continue to rise slowly, reaching 21.0% in 2030 and 22.0% in 2050 compared to a 2025 baseline of 20.4%... In the rapid scenario, the growth in white-collar occupations would stall, with their share remaining flat at around 20.0%–21.0% in 2030 and 2050."
+      "excerpt": "In the unconditional scenario, economists expect the share of business and analytical ('white-collar') roles to continue to rise slowly, reaching 21.0% in 2030 and 22.0% in 2050 compared to a 2025 baseline of 20.4%... In the rapid scenario, the growth in white-collar occupations would stall, with their share remaining flat at around 20.0%\u201321.0% in 2030 and 2050."
     },
     {
       "id": "anthropic-81k-economics-survey-2026",
@@ -1828,6 +1846,26 @@
       "evidenceTier": 3,
       "datePublished": "2026-06-10",
       "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs."
+    },
+    {
+      "id": "yale-sonnenfeld-entry-level-ai-2026",
+      "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start",
+      "url": "https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start",
+      "publisher": "Yale Insights / Yale Chief Executive Leadership Institute (Sonnenfeld, Henriques, Griessel, Alam-Nist, Yu)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-04",
+      "excerpt": "Recent graduate unemployment climbed to nearly 6%, rising twice as fast as the rest of the workforce since 2022. Computer science majors (ages 22-27) unemployment is 7.0%, computer engineering 7.8%. Early-career software developers aged 22-25 have seen nearly a 20% employment drop from the late-2022 peak; software development job postings are down 53%. 41% of ~100 university presidents surveyed at the January 2026 Yale Higher Education Summit are highly concerned about entry-level white-collar role vulnerability.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "challenger-june-2026",
+      "title": "Challenger Report: June Layoffs Cool to 45,849, Down 53% From May; AI Leads Reasons for Fourth Consecutive Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-june-layoffs-cool-to-45849-down-53-from-may-ai-leads-reasons-for-fourth-consecutive-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01",
+      "excerpt": "US-based employers announced 45,849 job cuts in June 2026, down 53% from May. AI led all reasons for job cuts with 14,029 announced (31% of monthly total). Year-to-date, AI has been cited in 101,743 job cut announcements, approximately 23% of all cuts. Technology announced 15,503 cuts in June for a total of 139,156 YTD \u2014 an increase of 83% from H1 2025. Tech now accounts for nearly a third of all job cuts announced this year. Tech remains the epicenter of this year's cuts. AI is the dominant force as companies are restructuring around it.",
+      "dateAdded": "2026-07-02"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "gallup-arts-ai-creative-2026",
+  "abstract": "A 2026 analysis from Gallup, drawing on Gallup Panel workforce studies and federal labor-market data, finds that despite artistic occupations having above-average AI exposure, generative AI has not broadly reduced artists' earnings through 2024. The report — published in the Journal of Cultural Economics and summarized in Gallup's workplace insights — shows artists are more likely to use AI frequently than the general workforce and use it primarily for idea generation and small-task automation rather than end-to-end job replacement.",
+  "keyFindings": [
+    "Roughly 1 in 4 artists use AI frequently vs. about 1 in 5 workers across the broader economy",
+    "Highly AI-exposed artistic occupations show earnings estimates that are slightly positive but statistically indistinguishable from zero (2017-2024)",
+    "Total hours worked by artists in more exposed occupations rose after 2022 and remained elevated through 2024",
+    "AI exposure scores: music directors/composers 0.70, special effects artists/animators ~0.54, art directors ~0.50, actors 0.18, dancers 0.04",
+    "Some highly exposed artistic occupations experienced modestly weaker job growth in 2023 vs. less-exposed ones — but 'far from the widespread job losses often assumed'",
+    "AI use by artists concentrates in early-stage creative work (idea generation, exploration) rather than task automation"
+  ],
+  "methodology": "Analysis of Gallup Panel workforce studies (2017-2024) linked to federal labor market data (BLS Current Population Survey). Occupational AI exposure scores from Felten et al. AI Occupational Exposure Index. Published in the Journal of Cultural Economics; summarized in a Gallup Workplace commentary.",
+  "qualifiers": "Data window ends 2024, so misses any 2025-26 acceleration in generative-AI creative displacement. Sample restricted to US artistic occupations; excludes freelance-platform-specific dynamics (Upwork, Fiverr, Pixiv). Findings contradict some freelance-platform evidence showing steeper commodity declines — likely because BLS employment data captures W-2 employment more than gig/freelance shifts.",
+  "fetchedAt": "2026-07-02"
+}

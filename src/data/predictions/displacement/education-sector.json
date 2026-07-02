@@ -144,6 +144,15 @@
       "label": "Chegg: 636 employees eliminated (67% of workforce), citing AI"
     },
     {
+      "date": "2025-02-26",
+      "direction": "neutral",
+      "sourceIds": [
+        "fed-timmerman-education-exposure-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed Reserve: education field GenAI exposure z=0.68 lang / -0.69 image (n=376K)"
+    },
+    {
       "date": "2025-04-03",
       "direction": "up",
       "sourceIds": [
@@ -204,7 +213,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
+      "label": "Cognizant: education exposure jumped from 11% to 49% \u2014 a 4.5x increase"
     },
     {
       "date": "2026-01-28",
@@ -222,7 +231,7 @@
         "shrm-automation-education-2025"
       ],
       "evidenceTier": 2,
-      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
+      "label": "SHRM: only 7.3% of education jobs highly automated \u2014 lowest of any sector (n=20,262)"
     },
     {
       "date": "2026-02-01",
@@ -250,6 +259,15 @@
       ],
       "evidenceTier": 2,
       "label": "Ellucian: 66% of higher ed institutions leveraging AI, up from 49% YoY (n=779)"
+    },
+    {
+      "date": "2026-03-11",
+      "direction": "neutral",
+      "sourceIds": [
+        "stanford-scale-ai-k12-evidence-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford SCALE: only 20 of 800+ AI-in-K12 studies met rigorous causal standards"
     }
   ],
   "sources": [
@@ -285,7 +303,7 @@
     },
     {
       "id": "chegg-enrollment-decline",
-      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
+      "title": "Chegg Q2 2024 Earnings \u2014 ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
       "evidenceTier": 2,
@@ -325,7 +343,7 @@
     },
     {
       "id": "pearson-10k-2024",
-      "title": "Pearson plc 2024 Annual Report — AI Strategy",
+      "title": "Pearson plc 2024 Annual Report \u2014 AI Strategy",
       "url": "https://plc.pearson.com/en-GB/investors",
       "publisher": "Pearson plc",
       "evidenceTier": 2,
@@ -390,7 +408,7 @@
       "publisher": "SHRM (Society for Human Resource Management)",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations \u2014 the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
       "dateAdded": "2026-03-08"
     },
     {
@@ -410,7 +428,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -447,7 +465,7 @@
       "id": "nber-cruces-galiani-ai-productivity-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
       "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
@@ -490,6 +508,26 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
+    },
+    {
+      "id": "fed-timmerman-education-exposure-2025",
+      "title": "Educational Exposure to Generative Artificial Intelligence",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/educational-exposure-to-generative-artificial-intelligence-20250226.html",
+      "publisher": "Federal Reserve Board (Timmerman)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-26",
+      "excerpt": "Using the National Survey of College Graduates 2013-2021 (n=375,991 unweighted, weighted to ~228.8M), Table 2 reports education field GenAI exposure z-scores of 0.68 for language modeling and -0.69 for image generation, indicating moderate text-based AI exposure and low image-generation exposure. The paper cites Bick et al. (2024): '46 percent of workers who majored in STEM use generative AI at work, compared with 40 percent for workers who majored in business...and 22 percent for all other majors.'",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "stanford-scale-ai-k12-evidence-2026",
+      "title": "The Evidence Base on AI in K-12: A 2026 Review",
+      "url": "https://scale.stanford.edu/research-in-action/understanding-evidence-base-ai-k12-education",
+      "publisher": "Stanford SCALE Initiative (Graduate School of Education)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-11",
+      "excerpt": "Reviewed more than 800 academic papers related to AI and K-12 education (Repository now over 1,100 papers) and identified only 20 high-quality causal studies that rigorously examine how AI tools affect students or educators. 'Student performance often improves with access to AI tools, but once removed, results are mixed.' No high-quality causal studies of student AI use conducted in U.S. K-12 classrooms. AI tools designed with pedagogical guardrails show more promising outcomes than general-purpose chatbots.",
+      "dateAdded": "2026-07-02"
     }
   ]
 }
