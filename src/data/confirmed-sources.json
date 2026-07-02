@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 604,
-  "verifiedCount": 594,
+  "totalSources": 605,
+  "verifiedCount": 595,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8572,6 +8572,18 @@
       "publisher": "UNESCO (via UN News; Re|Shaping Policies for Creativity report)",
       "evidenceTier": 2,
       "datePublished": "2026-02-18"
+    },
+    "yale-sonnenfeld-entry-level-ai-2026": {
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start",
+      "url": "https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start",
+      "publisher": "Yale Insights / Yale Chief Executive Leadership Institute (Sonnenfeld, Henriques, Griessel, Alam-Nist, Yu)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-04"
     }
   }
 }
