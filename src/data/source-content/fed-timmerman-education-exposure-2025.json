@@ -1,0 +1,16 @@
+{
+  "id": "fed-timmerman-education-exposure-2025",
+  "abstract": "A FEDS Notes analysis by Jean Xiao Timmerman at the Federal Reserve Board examines how generative AI exposure varies across educational fields and demographic groups. Using the National Survey of College Graduates (NSCG) 2013-2021 pooled sample, the paper computes standardized AI exposure z-scores for both language modeling and image generation across major fields of study. The Education field shows moderate language-modeling exposure and low image-generation exposure — a nuanced signal that suggests education workers face some text-based AI substitution risk but are relatively shielded from image-generation tools.",
+  "keyFindings": [
+    "Education field GenAI exposure z-scores: 0.68 for language modeling (moderate), -0.69 for image generation (low)",
+    "Sample: National Survey of College Graduates 2013-2021, n=375,991 unweighted respondents, weighted to ~228.8M workers",
+    "Cited Bick et al. (2024): '46 percent of workers who majored in STEM use generative AI at work, compared with 40 percent for workers who majored in business...and 22 percent for all other majors'",
+    "Mathematics & Computer Science has the highest language-modeling exposure (z=1.10); Biological & Health Science the lowest (z=-2.02)",
+    "Engineering & Technology has the highest image-generation exposure (z=1.67); Biological & Health Science the lowest (z=-1.09)",
+    "Female graduates show negative correlation (-0.67) with image generation exposure; Asian graduates positive (+0.47)",
+    "Document emphasizes ambiguity: higher exposure may indicate automation or augmentation, not necessarily displacement"
+  ],
+  "methodology": "Uses standardized z-score construction to measure AI exposure across educational fields. Draws on the National Survey of College Graduates 2013-2021 pooled cross-section (375,991 unweighted respondents, weighted to ~228.8M workers). AI exposure is mapped to occupational task profiles and then aggregated up to educational field of study. Separately estimates language-modeling exposure (Felten et al.-style) and image-generation exposure. Reports demographic correlations (gender, race, ethnicity) and cites concurrent literature (Bick et al. 2024) on realized workplace GenAI adoption by major field.",
+  "qualifiers": "The author is explicit that AI exposure is not equivalent to displacement — exposure captures the fraction of an occupation's task profile that GenAI can potentially perform, which could translate into automation OR augmentation. Findings are US-only. The NSCG is a repeat cross-section of college graduates and does not directly measure post-2021 outcomes. The Bick et al. adoption statistics are cited from a separate study, not primary to this note.",
+  "fetchedAt": "2026-07-02"
+}
