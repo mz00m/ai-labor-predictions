@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 611,
-  "verifiedCount": 601,
+  "totalSources": 612,
+  "verifiedCount": 602,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8666,6 +8666,21 @@
       "publisher": "Adobe (Creators' Toolkit Report / Harris Poll)",
       "evidenceTier": 2,
       "datePublished": "2026-06-16"
+    },
+    "genai-adoption-tracker-may-2026": {
+      "id": "genai-adoption-tracker-may-2026",
+      "title": "Generative AI Adoption Tracker \u2014 May 2026 Update",
+      "url": "https://www.genaiadoptiontracker.com/",
+      "publisher": "Bick, Blandin, Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Generative AI Adoption Tracker (Bick, Blandin, Deming), May 2026 update: '45.2% of the employed respondents used genAI for work.' Based on the Real-Time Population Survey (RPS), a nationally representative online labor market survey of US adults 18-64 running continuously since 2020. Tracker visualizes findings from 8 combined survey waves encompassing approximately 40,000 respondents, weighted to be nationally representative.",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   }
 }
