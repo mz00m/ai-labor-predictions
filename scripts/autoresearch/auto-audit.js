@@ -18,7 +18,9 @@ const ROOT = path.resolve(__dirname, "../..");
 const PREDICTIONS_DIR = path.join(ROOT, "src/data/predictions");
 const CONFIRMED_SOURCES_PATH = path.join(ROOT, "src/data/confirmed-sources.json");
 const LAST_UPDATED_PATH = path.join(ROOT, "src/data/last-updated.json");
-const HERO_PATH = path.join(ROOT, "src/app/page.tsx");
+const HERO_TRIAD_PATH = path.join(ROOT, "src/components/HeroTriad.tsx");
+const RECURRING_SOURCES_PATH = path.join(ROOT, "src/data/recurring-sources.json");
+const SOURCE_CONTENT_DIR = path.join(ROOT, "src/data/source-content");
 
 const TIER_WEIGHT = { 1: 4, 2: 2, 3: 1, 4: 0.5 };
 
@@ -403,34 +405,84 @@ function checkRequiredFields(prediction, report) {
   }
 }
 
+// Hero stats architecture: projected & measured job loss are COMPUTED at build
+// time by getHeroStats() in src/lib/data-loader.ts from overall-us-displacement.
+// Only the productivity stat is hardcoded, in src/components/HeroTriad.tsx.
+// So this check validates the INPUTS to the computation, and mirrors the
+// computation to report the values the site will display.
 function checkHeroStats(predictions, report) {
-  const heroContent = fs.readFileSync(HERO_PATH, "utf-8");
-
-  // Extract hero values from the page source
-  // ~21% productivity boost
-  const productivityMatch = heroContent.match(/Productivity boost/);
-  const projectedMatch = heroContent.match(/Projected job loss/);
-  const measuredMatch = heroContent.match(/Measured job loss/);
-
-  // Recompute projected job loss from overall-us-displacement
   const overall = predictions.find((p) => p.slug === "overall-us-displacement");
-  if (overall) {
-    const recomputed = computeWeightedAvg(overall);
-    const heroValue = 3; // hardcoded ~3%
-    const drift = Math.abs(Math.abs(recomputed) - heroValue);
+
+  // Productivity boost — hardcoded in HeroTriad.tsx as center={N} low={L} high={H}
+  let heroTriad = "";
+  try {
+    heroTriad = fs.readFileSync(HERO_TRIAD_PATH, "utf-8");
+  } catch (e) {
+    report.addMustFix(
+      "hero-stats",
+      "HeroTriad.tsx not found",
+      HERO_TRIAD_PATH,
+      "Hero stat architecture changed — update auto-audit.js paths"
+    );
+  }
+  const wobble = heroTriad.match(/center=\{(\d+)\}\s+low=\{(\d+)\}\s+high=\{(\d+)\}/);
+  if (wobble) {
     report.addHeroStat(
-      "Projected job loss",
-      `~${heroValue}%`,
-      `~${Math.abs(recomputed).toFixed(1)}%`,
-      drift <= 1
+      "Productivity boost",
+      `~${wobble[1]}% (range ${wobble[2]}-${wobble[3]})`,
+      "hardcoded in HeroTriad.tsx — manual check vs productivity studies",
+      true
+    );
+  } else if (heroTriad) {
+    report.addShouldFix(
+      "hero-stats",
+      "Could not locate productivity wobble values in HeroTriad.tsx",
+      "Expected center={N} low={N} high={N}",
+      "Update the extraction pattern in auto-audit.js if HeroTriad changed"
     );
   }
 
-  // Productivity boost — would need to recompute from productivity studies
-  report.addHeroStat("Productivity boost", "~21%", "N/A (manual check)", true);
+  if (!overall) {
+    report.addMustFix(
+      "hero-stats",
+      "overall-us-displacement not found",
+      "getHeroStats() will throw at build time",
+      "Restore src/data/predictions/displacement/overall.json"
+    );
+    return;
+  }
 
-  // Measured job loss
-  report.addHeroStat("Measured job loss", "~0%", "~0% (observed data)", true);
+  // Projected job loss — mirror getHeroStats(): weighted avg, all tiers, rounded abs
+  const recomputed = computeWeightedAvg(overall);
+  report.addHeroStat(
+    "Projected job loss",
+    `~${Math.round(Math.abs(recomputed))}%`,
+    `computed by getHeroStats() from ${overall.history.length} estimates`,
+    true
+  );
+
+  // Measured job loss — getHeroStats() uses the latest observed point.
+  // Validate the inputs: at least one observed point must exist, none in the future.
+  const observed = overall.history.filter((d) => d.dataType === "observed");
+  if (observed.length === 0) {
+    report.addMustFix(
+      "hero-stats",
+      "No observed data points in overall-us-displacement",
+      "Measured job loss hero stat will silently fall back to 0",
+      "Ensure observed data points carry dataType: \"observed\""
+    );
+  } else {
+    const latest = observed
+      .slice()
+      .sort((a, b) => a.date.localeCompare(b.date))
+      .pop();
+    report.addHeroStat(
+      "Measured job loss",
+      `~${Math.round(Math.abs(latest.value))}%`,
+      `latest observed point ${latest.date}`,
+      true
+    );
+  }
 }
 
 function checkConfirmedSourcesCounts(confirmedSources, predictions, report) {
@@ -523,6 +575,180 @@ function checkBrokenURLPatterns(prediction, report) {
   if (clean) report.addPassing();
 }
 
+// Sign conventions (CLAUDE.md): displacement positive = more displacement;
+// wages negative = decline; adoption/exposure = positive share in [0, 100].
+function checkSignConventions(prediction, report) {
+  let clean = true;
+  const cat = prediction.category;
+  for (let i = 0; i < prediction.history.length; i++) {
+    const h = prediction.history[i];
+    if ((cat === "adoption" || cat === "exposure") && (h.value < 0 || h.value > 100)) {
+      report.addMustFix(
+        prediction.slug,
+        `history[${i}]: ${cat} value out of [0, 100]`,
+        `value=${h.value} on ${h.date}`,
+        "Adoption/exposure charts are positive percentage shares — check for sign or unit error"
+      );
+      clean = false;
+    }
+    if (cat === "displacement" && (h.value < -50 || h.value > 100)) {
+      report.addShouldFix(
+        prediction.slug,
+        `history[${i}]: implausible displacement value`,
+        `value=${h.value} on ${h.date} (negative = employment growth; verify against source excerpt)`,
+        "Verify sign convention: positive = more displacement"
+      );
+      clean = false;
+    }
+    if (cat === "wages" && (h.value < -100 || h.value > 200)) {
+      report.addShouldFix(
+        prediction.slug,
+        `history[${i}]: implausible wage value`,
+        `value=${h.value} on ${h.date} (negative = decline; verify against source excerpt)`,
+        "Verify sign convention: negative = wage decline"
+      );
+      clean = false;
+    }
+  }
+  if (clean) report.addPassing();
+}
+
+function checkDataTypeSanity(prediction, report, today) {
+  let clean = true;
+  for (let i = 0; i < prediction.history.length; i++) {
+    const h = prediction.history[i];
+    if (h.dataType === "observed" && h.date > today) {
+      report.addMustFix(
+        prediction.slug,
+        `history[${i}]: observed data point dated in the future`,
+        `date=${h.date}, today=${today}`,
+        'Future-dated points must be dataType: "projected"'
+      );
+      clean = false;
+    }
+  }
+  if (prediction.aggregationMethod === "latest" && prediction.history.length > 1) {
+    const maxDate = prediction.history.reduce((m, h) => (h.date > m ? h.date : m), "");
+    const atMax = prediction.history.filter((h) => h.date === maxDate);
+    const values = new Set(atMax.map((h) => h.value));
+    if (values.size > 1) {
+      report.addShouldFix(
+        prediction.slug,
+        `aggregationMethod "latest" has ${atMax.size ?? atMax.length} tied points on ${maxDate} with different values`,
+        `values: ${[...values].join(", ")}`,
+        "Disambiguate the most recent point — currentValue is order-dependent"
+      );
+      clean = false;
+    }
+  }
+  if (clean) report.addPassing();
+}
+
+// Every ingested source must have a chatbot content file (autoresearch rule).
+function checkSourceContentCoverage(allPredictions, report) {
+  const referenced = new Set();
+  for (const p of allPredictions) {
+    for (const s of p.sources) referenced.add(s.id);
+  }
+  let existing = new Set();
+  try {
+    existing = new Set(
+      fs.readdirSync(SOURCE_CONTENT_DIR).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, ""))
+    );
+  } catch (e) {
+    report.addShouldFix(
+      "source-content",
+      "source-content directory unreadable",
+      String(e.message),
+      "Check src/data/source-content/"
+    );
+    return;
+  }
+  const missing = [...referenced].filter((id) => !existing.has(id)).sort();
+  if (missing.length > 0) {
+    report.addShouldFix(
+      "source-content",
+      `${missing.length} referenced source(s) missing content files (chatbot blind spots)`,
+      `e.g. ${missing.slice(0, 5).join(", ")}${missing.length > 5 ? ", ..." : ""}`,
+      "Run: npm run backfill:content"
+    );
+  } else {
+    report.addPassing();
+  }
+}
+
+const CADENCE_DAYS = {
+  biweekly: 14,
+  monthly: 31,
+  quarterly: 92,
+  semiannual: 183,
+  annual: 366,
+  biennial: 731,
+};
+
+// Recurring release registry: flag series overdue by more than one cadence
+// interval (graphs falling behind) and validate targetGraphs slugs.
+function checkRecurringSourcesFreshness(allPredictions, report, today) {
+  let registry;
+  try {
+    registry = readJSON(RECURRING_SOURCES_PATH);
+  } catch (e) {
+    report.addShouldFix(
+      "recurring-sources",
+      "recurring-sources.json missing or unparseable",
+      String(e.message),
+      "Restore src/data/recurring-sources.json"
+    );
+    return;
+  }
+  const validSlugs = new Set(allPredictions.map((p) => p.slug));
+  const todayMs = new Date(today).getTime();
+  const stale = [];
+  const due = [];
+  let badSlugs = 0;
+
+  for (const s of registry.series || []) {
+    for (const g of s.targetGraphs || []) {
+      // total-us-jobs-lost is archived but still appears in historical usedIn data
+      if (!validSlugs.has(g) && g !== "total-us-jobs-lost") {
+        report.addShouldFix(
+          "recurring-sources",
+          `Series ${s.id} targets unknown graph slug`,
+          `targetGraphs contains "${g}"`,
+          "Fix the slug in recurring-sources.json"
+        );
+        badSlugs++;
+      }
+    }
+    if (!s.nextExpected) {
+      due.push(`${s.id} (nextExpected unset)`);
+      continue;
+    }
+    const overdueDays = (todayMs - new Date(s.nextExpected).getTime()) / 86400000;
+    const interval = CADENCE_DAYS[s.cadence] || 92;
+    if (overdueDays > interval) {
+      stale.push(`${s.id} (${Math.round(overdueDays)}d overdue, ${s.cadence})`);
+    } else if (overdueDays > 0) {
+      due.push(`${s.id} (${Math.round(overdueDays)}d past nextExpected)`);
+    }
+  }
+
+  if (stale.length > 0) {
+    report.addShouldFix(
+      "recurring-sources",
+      `${stale.length} recurring series more than one cadence interval overdue — graph coverage is falling behind`,
+      stale.join("; "),
+      "Run /autoresearch to sweep overdue series"
+    );
+  }
+  if (due.length > 0) {
+    report.addNiceToHave(
+      `${due.length} recurring series due for a sweep: ${due.join("; ")}`
+    );
+  }
+  if (stale.length === 0 && badSlugs === 0) report.addPassing();
+}
+
 // ─── Main ────────────────────────────────────────────────────────────────────
 
 function main() {
@@ -563,6 +789,8 @@ function main() {
     checkSchema(p, report);
     checkRequiredFields(p, report);
     checkBrokenURLPatterns(p, report);
+    checkSignConventions(p, report);
+    checkDataTypeSanity(p, report, today);
   }
 
   // Cross-file checks
@@ -571,6 +799,8 @@ function main() {
   checkConfirmedSourcesCounts(confirmedSources, allPredictions, report);
   checkOrphanSources(confirmedSources, allPredictions, report);
   checkLastUpdatedConsistency(confirmedSources, report);
+  checkSourceContentCoverage(allPredictions, report);
+  checkRecurringSourcesFreshness(allPredictions, report, today);
 
   // ─── Output Report ───────────────────────────────────────────────────────
 

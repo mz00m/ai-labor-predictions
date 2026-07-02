@@ -167,7 +167,7 @@
         "openai-8k-funding-2024"
       ],
       "evidenceTier": 2,
-      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K\u2013$1.44M"
+      "label": "OpenAI: avg stock comp $1.5M; researcher total comp $763K–$1.44M"
     },
     {
       "date": "2025-02-01",
@@ -320,7 +320,7 @@
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
-      "label": "Dallas Fed: AI exposure \u2192 +0.2pp wage growth for high-experience-premium occupations"
+      "label": "Dallas Fed: AI exposure → +0.2pp wage growth for high-experience-premium occupations"
     },
     {
       "date": "2026-03-01",
@@ -392,7 +392,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario \u2192 top 10% wealth share rises to 80% by 2050 (from ~72%)"
+      "label": "FRI: Rapid scenario → top 10% wealth share rises to 80% by 2050 (from ~72%)"
     },
     {
       "date": "2026-04-01",
@@ -410,7 +410,7 @@
         "makela-stephany-complement-substitute-2024"
       ],
       "evidenceTier": 1,
-      "label": "Oxford/OII: AI roles 2x more likely to require resilience/agility; 5-10% premium for complementary skills (12M vacancies)"
+      "label": "Oxford/OII: 5-10% wage premium for AI-complementary skills (12M vacancies)"
     },
     {
       "date": "2026-04-24",
@@ -437,7 +437,7 @@
         "autor-new-work-2026"
       ],
       "evidenceTier": 1,
-      "label": "Autor et al.: tech-linked new work wage premium 4\u00d7 other new work"
+      "label": "Autor et al.: tech-linked new work wage premium 4× other new work"
     },
     {
       "date": "2026-05-07",
@@ -584,7 +584,7 @@
       "publisher": "Science (Noy, Zhang)",
       "evidenceTier": 1,
       "datePublished": "2023-07-14",
-      "excerpt": "ChatGPT compressed productivity distribution \u2014 low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time.",
+      "excerpt": "ChatGPT compressed productivity distribution — low-ability workers gained most (40% time reduction, 18% quality increase). May reduce skill premium over time.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -614,7 +614,7 @@
       "publisher": "CESifo (Althoff, Reichardt)",
       "evidenceTier": 1,
       "datePublished": "2026-01-21",
-      "excerpt": "some occupations \u2014 such as architects, engineers, and executives \u2014 see absolute wage declines",
+      "excerpt": "some occupations — such as architects, engineers, and executives — see absolute wage declines",
       "dateAdded": "2026-03-01"
     },
     {
@@ -631,7 +631,7 @@
       "id": "cepr-ai-productivity-jobs-europe-2026",
       "title": "How AI is affecting productivity and jobs in Europe",
       "url": "https://cepr.org/voxeu/columns/how-ai-affecting-productivity-and-jobs-europe",
-      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, P\u00e1l, Revoltella, Weiss, Wolski)",
+      "publisher": "CEPR VoxEU (Aldasoro, Gambacorta, Pál, Revoltella, Weiss, Wolski)",
       "evidenceTier": 1,
       "datePublished": "2026-02-17",
       "excerpt": "The wage gains observed may accrue disproportionately to highly skilled workers, potentially widening income inequality.",
@@ -644,7 +644,7 @@
       "publisher": "Federal Reserve Bank of Dallas (J. Scott Davis)",
       "evidenceTier": 1,
       "datePublished": "2026-02-24",
-      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent \u2014 a 9.2 percentage point gap reflecting the AI-skill wage premium.",
+      "excerpt": "Nominal average weekly wages nationwide have increased 7.5 percent, while the computer systems design sector has risen 16.7 percent — a 9.2 percentage point gap reflecting the AI-skill wage premium.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -669,7 +669,7 @@
     },
     {
       "id": "indeed-geo-premiums-2024",
-      "title": "The Geography of AI Jobs \u2014 Indeed Hiring Lab",
+      "title": "The Geography of AI Jobs — Indeed Hiring Lab",
       "url": "https://www.hiringlab.org/2024/09/12/ai-job-tracker/",
       "publisher": "Indeed Hiring Lab",
       "evidenceTier": 2,
@@ -694,7 +694,7 @@
       "publisher": "Fortune",
       "evidenceTier": 2,
       "datePublished": "2025-07-27",
-      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries \u2014 an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
+      "excerpt": "Job postings for non-tech roles that require AI skills offer 28% higher salaries — an average of nearly $18,000 more per year. The divide between AI-skilled and non-AI-skilled workers is widening.",
       "dateAdded": "2026-03-11"
     },
     {
@@ -733,7 +733,7 @@
       "publisher": "CoworkingCafe (Yardi Systems)",
       "evidenceTier": 3,
       "datePublished": "2026-03-18",
-      "excerpt": "AI professionals earn $215,000, on average, in San Jose, CA \u2014 the highest in the country. But, with living costs 13% above average, that premium narrows. For comparison, in Dallas\u2013Fort Worth, TX, $128,000 salaries stretch further with costs just 3% above average."
+      "excerpt": "AI professionals earn $215,000, on average, in San Jose, CA — the highest in the country. But, with living costs 13% above average, that premium narrows. For comparison, in Dallas–Fort Worth, TX, $128,000 salaries stretch further with costs just 3% above average."
     },
     {
       "id": "oxford-oii-ai-skills-premium-2025",
@@ -757,7 +757,7 @@
     },
     {
       "id": "lichtinger-hosseini-inequality-equalizer-2026",
-      "title": "AI Narrows Performance Gaps \u2014 But Does That Mean It Reduces Inequality?",
+      "title": "AI Narrows Performance Gaps — But Does That Mean It Reduces Inequality?",
       "url": "https://guylichtinger.substack.com/p/ai-narrows-performance-gaps-but-does",
       "publisher": "Substack (Guy Lichtinger, Seyed M Hosseini)",
       "evidenceTier": 4,
@@ -789,7 +789,7 @@
       "id": "maasoum-lichtinger-entry-barriers-2026",
       "title": "Generative AI and Occupational Entry Barriers: The Labor-Supply Channel of Technological Change",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6059674",
-      "publisher": "SSRN (Hosseini, Lichtinger \u2014 Harvard)",
+      "publisher": "SSRN (Hosseini, Lichtinger — Harvard)",
       "evidenceTier": 1,
       "datePublished": "2026-04-01",
       "excerpt": "In general equilibrium, overall wage dispersion rises modestly relative to baseline: the variance of log wages increases from 0.201 to 0.230, while the p90-p50 gap rises from 0.733 to 0.789.",
@@ -809,7 +809,7 @@
       "id": "makela-stephany-complement-substitute-2024",
       "title": "Complement or Substitute? How AI Increases the Demand for Human Skills",
       "url": "https://arxiv.org/abs/2412.19754",
-      "publisher": "Oxford Internet Institute (M\u00e4kel\u00e4, Stephany)",
+      "publisher": "Oxford Internet Institute (Mäkelä, Stephany)",
       "evidenceTier": 1,
       "datePublished": "2024-12-27",
       "excerpt": "AI-focused roles are twice as likely to require resilience, agility, and analytical thinking. Data scientists with complementary skills (resilience, ethics) earn a 5-10% salary premium. Complementary effects are 1.7x larger than substitution effects across 12 million US job vacancies 2018-2023.",

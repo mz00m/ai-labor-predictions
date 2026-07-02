@@ -268,7 +268,7 @@
       "releasePattern": "January, every two years (2023, 2025, 2027)",
       "checkUrls": ["https://www.weforum.org/publications/"],
       "searchQuery": "WEF Future of Jobs Report {year}",
-      "targetGraphs": ["overall-us-displacement", "creative-industry-displacement", "education-sector-displacement", "financial-services-displacement", "tech-sector-displacement", "robots-physical-automation"],
+      "targetGraphs": ["overall-us-displacement", "creative-industry-displacement", "education-sector-displacement", "financial-services-displacement", "tech-sector-displacement", "robots-physical-automation-displacement"],
       "lastIngested": { "date": "2025-12-01", "edition": "Future of Jobs Report 2025" },
       "lastChecked": null,
       "nextExpected": "2027-01-10",

@@ -98,6 +98,24 @@
       }
     },
     {
+      "date": "2025-02-10",
+      "value": 9.6,
+      "sourceIds": [
+        "bls-ooh-programmer-decline-2023-2033"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "projection",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% decline in computer programmer employment (SOC 15-1251), 2023-2033 projection",
+        "conversionFactor": 0.5,
+        "conversionLow": 0.3,
+        "conversionHigh": 0.7,
+        "rationale": "BLS projects 9.6% decline for the narrow 'computer programmers' category. Broader software developer category is growing. This overstates sector-wide displacement."
+      }
+    },
+    {
       "date": "2025-07-30",
       "value": 13.5,
       "sourceIds": [
@@ -126,24 +144,6 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
-    },
-    {
-      "date": "2025-02-10",
-      "value": 9.6,
-      "sourceIds": [
-        "bls-ooh-programmer-decline-2023-2033"
-      ],
-      "evidenceTier": 1,
-      "dataType": "projected",
-      "metricType": "projection",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% decline in computer programmer employment (SOC 15-1251), 2023-2033 projection",
-        "conversionFactor": 0.5,
-        "conversionLow": 0.3,
-        "conversionHigh": 0.7,
-        "rationale": "BLS projects 9.6% decline for the narrow 'computer programmers' category. Broader software developer category is growing. This overstates sector-wide displacement."
-      }
     },
     {
       "date": "2026-01-10",
@@ -230,6 +230,16 @@
       }
     },
     {
+      "date": "2026-03-25",
+      "value": 18.3,
+      "sourceIds": [
+        "tufts-digital-planet-ai-jobs-risk-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected"
+    },
+    {
       "date": "2026-04-13",
       "value": 20,
       "sourceIds": [
@@ -246,16 +256,6 @@
         "conversionHigh": 0.5,
         "rationale": "Age-specific (22-25 only) and combines AI displacement with macro hiring slowdown. The 20% figure is for the most-affected age group, not the full tech workforce."
       }
-    },
-    {
-      "date": "2026-03-25",
-      "value": 18.3,
-      "sourceIds": [
-        "tufts-digital-planet-ai-jobs-risk-2026"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
     },
     {
       "date": "2026-04-17",
@@ -280,24 +280,6 @@
     }
   ],
   "overlays": [
-    {
-      "date": "2026-06-10",
-      "direction": "down",
-      "sourceIds": [
-        "stanford-del-canaries-april-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Stanford DEL Canaries Dashboard (ADP, April 2026 data, 4.6M workers): for workers 22-25 in highly AI-exposed occupations, employment shrinking at ~3.8%/yr — the early-career decline sharpening from -2.8% to April 2024 to >-4%/yr since"
-    },
-    {
-      "date": "2025-08-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "Brynjolfsson et al. August preprint: ~13% early-career SWE decline (revised to ~1.3% in November publication)"
-    },
     {
       "date": "2023-02-01",
       "direction": "up",
@@ -477,6 +459,15 @@
       ],
       "evidenceTier": 1,
       "label": "OECD: Employment Outlook 2025 on AI and the labour market"
+    },
+    {
+      "date": "2025-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Brynjolfsson et al. August preprint: ~13% early-career SWE decline (revised to ~1.3% in November publication)"
     },
     {
       "date": "2025-08-01",
@@ -882,6 +873,15 @@
       ],
       "evidenceTier": 4,
       "label": "Tech layoffs hit single-highest month in two years, leading all sectors"
+    },
+    {
+      "date": "2026-06-10",
+      "direction": "down",
+      "sourceIds": [
+        "stanford-del-canaries-april-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL Canaries: ages 22-25 in AI-exposed jobs shrinking ~3.8%/yr"
     }
   ],
   "sources": [
@@ -1630,6 +1630,15 @@
       "evidenceTier": 4,
       "datePublished": "2026-06-04",
       "excerpt": "US Tech Sector Cut 38,242 Jobs in May, AI Most Cited Reason for Layoffs"
+    },
+    {
+      "id": "stanford-del-canaries-april-2026",
+      "title": "Stanford DEL Canaries Dashboard: April 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-10",
+      "excerpt": "Monthly-updated dashboard built on anonymized ADP payroll data covering 4.6 million workers across 730+ occupations. April 2026 reading: most AI-exposed occupations contracted 0.2% YoY, least-exposed grew 0.1% YoY — a small but consistent gap. For workers ages 22-25 in highly AI-exposed occupations, employment is now shrinking at 3.8% per year, with the early-career decline sharpening from -2.8% to April 2024 to over -4% per year since. Builds on Brynjolfsson, Chandar, Chen (2025) 'Canaries in the Coal Mine.' Live update of the underlying employment story behind the 'overall not yet, early-career already' pattern."
     }
   ],
   "marketIds": {

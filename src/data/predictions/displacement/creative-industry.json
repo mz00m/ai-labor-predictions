@@ -5,7 +5,7 @@
   "description": "Estimated share of creative work (design, writing, marketing, illustration) significantly affected by generative AI by 2030. Sources measure different things — freelance platform declines, job posting changes, executive surveys, and model projections — making direct comparison difficult. Effects are concentrated in commoditized, entry-level tasks; experienced creative professionals show wage growth and productivity gains from AI augmentation.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 23.8,
+  "currentValue": 20.7,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "disclaimer": "Heterogeneous evidence — interpret with caution. This estimate aggregates 8 data points that measure fundamentally different things: freelance platform revenue declines, job posting volume changes, illustration upload trends, executive surveys, and model-based projections. These are not interchangeable metrics. The 14–33% range reflects both genuine uncertainty and definitional incompatibility across sources. Observed platform-level effects (Upwork, Pixiv) capture commoditized creative tasks — entry-level, template-driven work — not the full creative sector. Overlays show experienced designers saw +16.7% wage growth (Dallas Fed), and human-AI teams showed 73% higher productivity (Ju & Aral). The weighted average is a mathematical summary of mixed evidence, not a consensus estimate of sector-wide role elimination.",

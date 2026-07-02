@@ -134,7 +134,7 @@ Three homepage hero stats. Two are computed, one is hardcoded:
 2. **Projected job loss** — computed at build time by `getHeroStats()` in `src/lib/data-loader.ts`: weighted average of `overall-us-displacement` (all tiers), rounded absolute value. Updates automatically on ingestion — no manual sync needed, but sanity-check the computed value after ingesting into displacement graphs.
 3. **Measured job loss** — computed by `getHeroStats()` from the most recent `dataType: "observed"` point of `overall-us-displacement`.
 
-Note: `scripts/autoresearch/auto-audit.js` still checks hero stats against a hardcoded ~3% and greps `page.tsx` — treat its hero-drift findings with suspicion.
+`scripts/autoresearch/auto-audit.js` validates the computed-hero-stat inputs and reads the hardcoded productivity values from HeroTriad.tsx — hero findings mean "fix the data inputs", never "edit page.tsx".
 
 ## Weighted Average Computation
 

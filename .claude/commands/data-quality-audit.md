@@ -13,11 +13,9 @@ Audit target: $ARGUMENTS
 
 ### Step 0: Run the Automated Baseline
 
-Run `node scripts/autoresearch/auto-audit.js` (optionally `--category=X` or `--slug=Y`) and read its report before doing anything manually. It already covers drift, source ID integrity, duplicates, sort order, schema, hero stats, registry counts, orphans, and URL patterns — do not redo those by hand; verify and extend.
+Run `node scripts/autoresearch/auto-audit.js` (optionally `--category=X` or `--slug=Y`) and read its report before doing anything manually. It covers drift, source ID integrity, duplicates, sort order, schema, hero stats (computed-architecture aware), registry counts, orphans, URL patterns, sign conventions, `dataType` sanity, source-content coverage, and recurring-sources freshness — do not redo those by hand; verify and extend.
 
-**Known script limitations** (verify these manually, don't trust the script):
-- Its hero-stat check compares against a hardcoded `heroValue = 3` and greps `src/app/page.tsx` for labels that have moved — see Step 3 for how hero stats actually work now.
-- It does not check sign conventions, `dataType` sanity, the source-content store, or `recurring-sources.json` (Steps 2i-2k and 4c-4d below).
+The manual steps below define what each check means and what the script cannot judge: whether a flagged sign matches the source excerpt, which duplicate to keep, whether a proxy conversion is defensible. The script finds; you adjudicate.
 
 ### Step 1: Load All Data
 
