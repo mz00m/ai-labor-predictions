@@ -397,6 +397,33 @@
   ],
   "overlays": [
     {
+      "date": "2026-07-02",
+      "direction": "neutral",
+      "label": "NYT (Casselman) — 'A.I. Is Reshaping the Economy. Good Luck Measuring How.' Different data sources give contradictory answers on basic questions: whether AI is currently causing job losses or gains, which workers are most exposed, whether productivity gains are real. Cites new Yale Budget Lab 'occupational churn' monthly measure, Ramp/Revelio data showing intense AI users add jobs faster, and EIG (Goldschlag) report on the measurement challenge itself",
+      "sourceIds": [
+        "nyt-casselman-ai-measurement-2026"
+      ],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2026-07-02",
+      "direction": "neutral",
+      "label": "EIG (Goldschlag & Eckhardt): applied 5 different AI-exposure measures from 4 papers. Which measure you pick determines not just the SCALE but the DIRECTION of estimated AI-employment effect — some show AI hurting jobs, others show it helping. 'Getting the policy right depends on getting the measurement right.'",
+      "sourceIds": [
+        "eig-goldschlag-ai-jobs-final-word-2026"
+      ],
+      "evidenceTier": 1
+    },
+    {
+      "date": "2026-06-30",
+      "direction": "down",
+      "label": "Ramp Economics Lab / Revelio Labs (n=21,599 US firms): companies investing heavily in AI grew headcount +10% over 2 years post-adoption; entry-level +12%. Direction opposite to pure-displacement narrative. Caveat: heavy adopters were already larger, more VC-backed, faster-growing — causality vs. selection unclear",
+      "sourceIds": [
+        "ramp-revelio-ai-jobs-impact-2026"
+      ],
+      "evidenceTier": 2
+    },
+    {
       "date": "2026-06-29",
       "direction": "neutral",
       "label": "WSJ 16-economist panel (via Chandar): 5/16 predict net job loss (incl. Acemoglu, Henderson, Restrepo, Wolfers, Chandar), 8/16 no change, 2/16 net growth — 16/16 unanimous on AI boosting productivity. Net-loss group also unanimous that AI replaces rather than complements and reduces white-collar demand",

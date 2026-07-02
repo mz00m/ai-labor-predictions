@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Ben Casselman (NYT)",
+    title: "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
+    summary:
+      "Casselman's synthesis of the measurement problem: different data sources give contradictory answers on basic questions — is AI causing job losses or gains, which workers are most exposed, is the productivity boom real? Highlights new Yale Budget Lab 'occupational churn' monthly measure; Ramp/Revelio data finding companies using AI most intensely are adding jobs FASTER than laggards (opposite direction from displacement narrative); Nathan Goldschlag/EIG report on the measurement challenge itself; and a bipartisan Senate bill (Kelly D-AZ) to expand federal AI labor data collection. Frames the confusion as J-curve territory — most firms still on the downward experimentation phase before productivity gains materialize. Companion to Casselman's June 10 'Hidden Workers' piece.",
+    date: "Jul 2",
+    url: "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
+  },
+  {
     author: "Bharat Chandar",
     title: "AI and the Supply and Demand for Labor",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Stanford's Digital Economy Lab launches a monthly-updated dashboard suite tracking AI's real economic footprint — the live successor to the Canaries research. An Employment & AI Exposure dashboard built on ADP payroll records covering millions of workers; a Canaries dashboard showing a 16% relative employment decline for workers 22–25 in the most AI-exposed occupations, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macro indicators — productivity, capital share, energy use — that currently read mostly neutral. A standing answer to 'what does the data show right now?'",
     date: "Jun 2026",
     url: "https://digitaleconomy.stanford.edu/project/indicators/",
-  },
-  {
-    author: "Bill Wasik, mod. (NYT Magazine)",
-    title: "Who Will Actually Thrive in the Hybrid A.I.-Human Work Force",
-    summary:
-      "Four experts — Daron Acemoglu, Dean Ball, Ethan Mollick and Clara Shih — debate how workers should prepare. Mollick cites a P&G experiment with 776 employees where individuals using AI matched two-person teams without it — and warns the apprenticeship model for training juniors has 'all collapsed.' Acemoglu challenges the agent-supervisor future ('How many Marcus Chens can the American economy employ?') and argues investment should flow to augmenting shortage trades — a novice electrician with the right AI tool could be 10x as productive. Shih sees a 'tale of two cities': entry-level candidates fluent in AI agents get hired; the rest watch those roles disappear.",
-    date: "Jun 9",
-    url: "https://www.nytimes.com/2026/06/09/magazine/ai-jobs-workforce-labor.html",
   },
 ];
 
