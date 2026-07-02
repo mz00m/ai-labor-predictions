@@ -207,7 +207,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 | `src/lib/data-loader.ts` | Loads all prediction JSONs; computes hero stats via `getHeroStats()` |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `scripts/lib/ingest/` | Extraction, fetching, writing logic |
-| `.claude/commands/` | Claude skills (9 total) |
+| `.claude/commands/` | Claude skills (10 total) |
 | `changelog/` | Weekly changelogs and LinkedIn posts |
 | `docs/proxy-metric-methodology.md` | Proxy metric conversion & outlier detection methodology |
 | `docs/tool-prioritization-guide.md` | Which data tools/platforms to monitor |
@@ -226,6 +226,7 @@ Hardcoded array of 5 articles displayed left-to-right on the homepage. On ingest
 | Skill | Purpose |
 |-------|---------|
 | `/ingest` | Full source ingestion workflow (fetch → extract → map → approve → apply) |
+| `/review-queue` | Present the human-decision backlog (candidates.tsv reviews, orphan sources, open questions) and log verdicts to feedback-log.md |
 | `/weekly-changelog` | Generate weekly changelog + LinkedIn post from git history |
 | `/researcher-check` | Validate researcher + citation data |
 | `/ai-consultant` | General Q&A on AI labor impact |
