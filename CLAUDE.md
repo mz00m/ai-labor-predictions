@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 18 interactive prediction graphs across 5 categories. Practitioner-first tone — no hype, no doom, just evidence.
+A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 17 interactive prediction graphs across 5 categories, plus one signal-only chart (earnings-call AI mentions, excluded from prediction counts). Practitioner-first tone — no hype, no doom, just evidence.
 
 ## Quick Start
 
@@ -47,7 +47,7 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 | `/j-curve` | J-Curve explainer with interactive visuals |
 | `/about` | Methodology, FAQ |
 
-## Prediction Graph Taxonomy (18 graphs)
+## Prediction Graph Taxonomy (17 predictions + 1 signal-only chart)
 
 ### Displacement (9)
 | Slug | Title | Unit |
@@ -77,7 +77,7 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 | `genai-work-adoption` | Generative AI Adoption | % of adults at work |
 | `ai-business-formation` | AI Business Formation | % of new businesses |
 | `workforce-ai-exposure` | US Workforce AI Exposure | % of jobs exposed |
-| `earnings-call-ai-mentions` | S&P 500 AI Workforce Mentions in Earnings Calls | % of S&P 500 |
+| `earnings-call-ai-mentions` | S&P 500 AI Workforce Mentions in Earnings Calls (signal-only, excluded from prediction counts) | % of S&P 500 |
 
 ### Archived
 - `displacement/_archived/total-jobs-lost.json` — deprecated, do not use
@@ -127,14 +127,14 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 - **Arrays sorted by date** ascending
 - **One source entry per file** even if multiple stats from same source
 
-## Hero Stats (src/app/page.tsx)
+## Hero Stats (HeroTriad + data-loader)
 
-Three hardcoded stats that must stay in sync with prediction data:
-1. **~21% Productivity boost** — "Median of 18 studies"
-2. **~1% Projected job loss** — "Weighted avg of estimates" (from `overall-us-displacement`, all tiers weighted)
-3. **~0% Measured job loss** — "Yale, Goldman, Dallas Fed" (observed data only)
+Three homepage hero stats. Two are computed, one is hardcoded:
+1. **~21% Productivity boost** — hardcoded in `src/components/HeroTriad.tsx` (`center={21} low={14} high={35}`). Manually maintained; update if the median/range of productivity studies drifts.
+2. **Projected job loss** — computed at build time by `getHeroStats()` in `src/lib/data-loader.ts`: weighted average of `overall-us-displacement` (all tiers), rounded absolute value. Updates automatically on ingestion — no manual sync needed, but sanity-check the computed value after ingesting into displacement graphs.
+3. **Measured job loss** — computed by `getHeroStats()` from the most recent `dataType: "observed"` point of `overall-us-displacement`.
 
-These are manually set — after ingesting data that affects displacement graphs, recompute the weighted average and update if drift > 1pp.
+Note: `scripts/autoresearch/auto-audit.js` still checks hero stats against a hardcoded ~3% and greps `page.tsx` — treat its hero-drift findings with suspicion.
 
 ## Weighted Average Computation
 
@@ -196,14 +196,15 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 
 | Path | Purpose |
 |------|---------|
-| `src/data/predictions/` | All 18 prediction JSON files |
+| `src/data/predictions/` | All 18 prediction JSON files (17 predictions + 1 signal-only) |
 | `src/data/confirmed-sources.json` | Master source registry (524 sources) |
+| `src/data/recurring-sources.json` | Recurring release registry (tracked series, cadences, last ingested editions — swept by `/autoresearch`) |
 | `src/data/reading-list.json` | Rolling reading list for Featured Reads |
 | `src/data/last-updated.json` | Site-wide "last updated" date |
 | `src/app/page.tsx` | Hero section with hardcoded stats |
 | `src/lib/types.ts` | TypeScript interfaces (Prediction, Source, etc.) |
 | `src/lib/prediction-stats.ts` | Weighted average computation |
-| `src/lib/data-loader.ts` | Loads all 18 predictions |
+| `src/lib/data-loader.ts` | Loads all prediction JSONs; computes hero stats via `getHeroStats()` |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `scripts/lib/ingest/` | Extraction, fetching, writing logic |
 | `.claude/commands/` | Claude skills (9 total) |
