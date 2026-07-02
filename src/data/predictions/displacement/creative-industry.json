@@ -371,6 +371,15 @@
       ],
       "evidenceTier": 2,
       "label": "Gallup: Artists' earnings not sharply lower despite AI exposure (2017-2024)"
+    },
+    {
+      "date": "2026-06-16",
+      "direction": "up",
+      "sourceIds": [
+        "adobe-creators-toolkit-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Adobe/Harris: 87% of creators say AI accelerated business/audience (n=16K)"
     }
   ],
   "sources": [
@@ -710,6 +719,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-18",
       "excerpt": "Music creators face a projected 24% revenue loss and audiovisual sector workers a 21% income loss by 2028. The report stresses that these disruptions are occurring at a pace that outstrips current policy responses, exacerbating inequalities and threatening the livelihoods of millions of cultural workers. Report covers more than 120 countries and includes 8,100+ policy measures.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "adobe-creators-toolkit-2026",
+      "title": "87 Percent of Creators Say Creative AI Is Growing Their Business and Audience, According to Adobe's 2026 Creators' Toolkit Report",
+      "url": "https://news.adobe.com/news/2026/06/creators-toolkit-report-2026",
+      "publisher": "Adobe (Creators' Toolkit Report / Harris Poll)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-16",
+      "excerpt": "87% of creators using creative AI report it has accelerated the growth of their business or audience. 75% describe creative AI as integrated or essential to how they work. 58% feel stronger competing against larger teams/studios since using creative AI. 48% feel more secure about their future as creators. 40% report AI-assisted content performs consistently better. Survey of more than 16,000 creators across US, UK, France, Germany, South Korea, Japan, India, Australia conducted with The Harris Poll.",
       "dateAdded": "2026-07-02"
     }
   ]

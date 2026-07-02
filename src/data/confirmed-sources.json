@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 610,
-  "verifiedCount": 600,
+  "totalSources": 611,
+  "verifiedCount": 601,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8644,6 +8644,18 @@
       "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
       "evidenceTier": 1,
       "datePublished": "2026-04-30"
+    },
+    "adobe-creators-toolkit-2026": {
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "87 Percent of Creators Say Creative AI Is Growing Their Business and Audience, According to Adobe's 2026 Creators' Toolkit Report",
+      "url": "https://news.adobe.com/news/2026/06/creators-toolkit-report-2026",
+      "publisher": "Adobe (Creators' Toolkit Report / Harris Poll)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-16"
     }
   }
 }

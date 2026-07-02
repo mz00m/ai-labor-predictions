@@ -1,0 +1,17 @@
+{
+  "id": "adobe-creators-toolkit-2026",
+  "abstract": "Adobe's 2026 Creators' Toolkit Report (June 16, 2026), based on a Harris Poll survey of 16,000+ creators across 8 countries, finds that 87% of creators using AI say it has accelerated the growth of their business or audience, and 75% describe creative AI as integrated or essential to how they work. The report offers strong counter-displacement evidence: creators are gaining audience, feeling more secure about their future, and out-competing larger teams by using AI.",
+  "keyFindings": [
+    "87% of creators using creative AI say it has accelerated the growth of their business or audience",
+    "75% describe creative AI as integrated or essential to how they work",
+    "93% say creative AI helps produce content faster",
+    "58% feel stronger competing against larger teams/studios since using creative AI",
+    "48% feel more secure about their future as creators",
+    "40% report AI-assisted content performs consistently better",
+    "85% believe their AI-created work reflects their unique voice",
+    "Sample: 16,000+ creators surveyed across US, UK, France, Germany, South Korea, Japan, India, Australia; conducted with The Harris Poll"
+  ],
+  "methodology": "Global online survey of 16,000+ creators fielded by Adobe with The Harris Poll across 8 countries in 2026. 'Creator' definition includes independent, freelance, hobbyist, and semi-professional creative workers. Data self-reported.",
+  "qualifiers": "Adobe is a Tier 2 corporate data source with obvious commercial interest — the survey is designed to demonstrate positive AI outcomes for creators using tools Adobe sells. Selection bias possible: creators willing to respond to Adobe may skew toward those succeeding with AI. Metrics focus on the augmentation/success side, not on displaced or exiting creators. The 87% growth signal is strong but should be balanced against platform-decline evidence.",
+  "fetchedAt": "2026-07-02"
+}
