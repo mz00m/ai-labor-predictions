@@ -707,6 +707,15 @@
       "label": "MIT/USC: Lawyer case counts flat but pro se filings +79% as AI enables self-representation"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "nber-baslandze-ai-productivity-workforce-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER exec survey: routine clerical share to fall >2pp over next 3 years"
+    },
+    {
       "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
@@ -1828,6 +1837,15 @@
       "evidenceTier": 3,
       "datePublished": "2026-06-10",
       "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs."
+    },
+    {
+      "id": "nber-baslandze-ai-productivity-workforce-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://www.nber.org/papers/w34984",
+      "publisher": "NBER (Baslandze, Edwards, Graham, McClure, Meyer, Sparks, Waddell, Weitz)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives."
     }
   ]
 }

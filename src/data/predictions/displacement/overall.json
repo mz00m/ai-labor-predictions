@@ -267,6 +267,19 @@
       "dataType": "observed"
     },
     {
+      "date": "2026-03-01",
+      "value": 0.2,
+      "confidenceLow": 0,
+      "confidenceHigh": 0.4,
+      "sourceIds": [
+        "nber-baslandze-ai-productivity-workforce-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "survey",
+      "sampleSize": 750
+    },
+    {
       "date": "2026-03-13",
       "value": 0.37,
       "confidenceLow": 0.01,
@@ -3274,6 +3287,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-07-02",
       "excerpt": "EIG applies five different measures of AI exposure (drawn from four different research papers) to test whether current labor market data shows an AI signature. The startling finding: which exposure measure you pick determines not just the SCALE but the DIRECTION of AI's estimated effect on employment. Under some measures AI appears to be hurting employment; under others it appears to be helping. Companion piece 'A New Threat to Economic Data' documents the deteriorating federal statistical system (falling response rates, funding cuts) that Casselman NYT (July 2) also foregrounds. Goldschlag is EIG's Director of Research and formerly Principal Economist at Census's Center for Economic Studies."
+    },
+    {
+      "id": "nber-baslandze-ai-productivity-workforce-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://www.nber.org/papers/w34984",
+      "publisher": "NBER (Baslandze, Edwards, Graham, McClure, Meyer, Sparks, Waddell, Weitz)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives."
     }
   ]
 }

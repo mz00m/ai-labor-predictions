@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 599,
-  "verifiedCount": 589,
+  "totalSources": 600,
+  "verifiedCount": 590,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8504,6 +8504,21 @@
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-baslandze-ai-productivity-workforce-2026": {
+      "id": "nber-baslandze-ai-productivity-workforce-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://www.nber.org/papers/w34984",
+      "publisher": "NBER (Baslandze, Edwards, Graham, McClure, Meyer, Sparks, Waddell, Weitz)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false

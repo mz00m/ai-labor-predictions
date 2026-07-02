@@ -1,0 +1,15 @@
+{
+  "id": "nber-baslandze-ai-productivity-workforce-2026",
+  "abstract": "Survey of nearly 750 corporate executives (Atlanta Fed/Duke/Richmond Fed collaboration) on AI investment, productivity, and workforce effects. Finds positive but sector-concentrated productivity gains, little evidence of near-term aggregate employment declines due to AI, and a composition shift from routine clerical roles toward skilled technical roles.",
+  "keyFindings": [
+    "Firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026.",
+    "Mean reported labor productivity increase attributable to AI investment was 1.8% in 2025, expected to reach 3.0% in 2026; implied measures are smaller (0.6% in 2025, 1.8-1.9% in 2026).",
+    "Routine clerical employment share expected to decline by more than 2 percentage points over the next three years, mostly among large firms, partially offset by skilled technical roles.",
+    "Large firms expect to reduce headcount by 0.7% in 2026 due to AI; smaller firms expect modest gains.",
+    "In 2025, high-skill services - particularly finance - saw the largest gains, with implied annual labor productivity growth of about 0.8%, expected to exceed 2% in 2026.",
+    "As of year-end 2025, 42% of non-adopting firms view AI as too immature; 36% cite untrained workforce; 36% cite privacy concerns."
+  ],
+  "methodology": "Executive survey of nearly 750 corporate executives, fielded through Federal Reserve business survey panels with firm-size-and-sector weighting; measures both reported and implied (revenue-based TFP) productivity effects. NBER Working Paper 34984, March 2026.",
+  "qualifiers": "Perceived productivity gains are larger than measured gains, likely reflecting a delay in revenue realizations. Employment effects are executive expectations, not realized outcomes.",
+  "fetchedAt": "2026-07-02"
+}
