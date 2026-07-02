@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 600,
-  "verifiedCount": 590,
+  "totalSources": 601,
+  "verifiedCount": 591,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8515,6 +8515,21 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-26",
       "excerpt": "Using the National Survey of College Graduates 2013-2021 (n=375,991 unweighted, weighted to ~228.8M), Table 2 reports education field GenAI exposure z-scores of 0.68 for language modeling and -0.69 for image generation, indicating moderate text-based AI exposure and low image-generation exposure. The paper cites Bick et al. (2024): '46 percent of workers who majored in STEM use generative AI at work, compared with 40 percent for workers who majored in business...and 22 percent for all other majors.'",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-scale-ai-k12-evidence-2026": {
+      "id": "stanford-scale-ai-k12-evidence-2026",
+      "title": "The Evidence Base on AI in K-12: A 2026 Review",
+      "url": "https://scale.stanford.edu/research-in-action/understanding-evidence-base-ai-k12-education",
+      "publisher": "Stanford SCALE Initiative (Graduate School of Education)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-11",
+      "excerpt": "Reviewed more than 800 academic papers related to AI and K-12 education (Repository now over 1,100 papers) and identified only 20 high-quality causal studies that rigorously examine how AI tools affect students or educators. 'Student performance often improves with access to AI tools, but once removed, results are mixed.' No high-quality causal studies of student AI use conducted in U.S. K-12 classrooms. AI tools designed with pedagogical guardrails show more promising outcomes than general-purpose chatbots.",
       "dateAdded": "2026-07-02",
       "usedIn": [
         "education-sector-displacement"
