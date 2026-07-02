@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 605,
-  "verifiedCount": 595,
+  "totalSources": 606,
+  "verifiedCount": 596,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8584,6 +8584,18 @@
       "publisher": "Yale Insights / Yale Chief Executive Leadership Institute (Sonnenfeld, Henriques, Griessel, Alam-Nist, Yu)",
       "evidenceTier": 2,
       "datePublished": "2026-05-04"
+    },
+    "mercer-global-talent-trends-2026": {
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Investors say companies combining human and AI capabilities gain a competitive advantage, according to Mercer's Global Talent Trends 2026 report",
+      "url": "https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/",
+      "publisher": "Mercer / Marsh McLennan",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-25"
     }
   }
 }
