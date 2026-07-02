@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 603,
-  "verifiedCount": 593,
+  "totalSources": 604,
+  "verifiedCount": 594,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8560,6 +8560,18 @@
       "publisher": "Gallup (with Journal of Cultural Economics)",
       "evidenceTier": 2,
       "datePublished": "2026-05-01"
+    },
+    "unesco-reshaping-creativity-2026": {
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Artists face steep income decline due to AI, UNESCO finds",
+      "url": "https://news.un.org/en/story/2026/02/1166989",
+      "publisher": "UNESCO (via UN News; Re|Shaping Policies for Creativity report)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18"
     }
   }
 }

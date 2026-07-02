@@ -310,6 +310,15 @@
       "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
     },
     {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "unesco-reshaping-creativity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "UNESCO: Music creators -24% revenue, audiovisual -21% income by 2028"
+    },
+    {
       "date": "2026-02-19",
       "direction": "down",
       "sourceIds": [
@@ -691,6 +700,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-05-01",
       "excerpt": "Employees in artistic occupations report somewhat higher AI use than the workforce overall, with roughly one in four saying they use AI frequently, compared with about one in five workers across the broader economy. Estimates are slightly positive, though they are not statistically distinguishable from zero when examining earnings trends between highly and less exposed artistic occupations. Total hours worked rise more clearly beginning in 2022 and remain elevated through 2024 for artists in more exposed occupations. Some highly exposed artistic occupations experienced weaker job growth in 2023 relative to those with less exposure, though the differences are modest and far from the widespread job losses often assumed.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "unesco-reshaping-creativity-2026",
+      "title": "Artists face steep income decline due to AI, UNESCO finds",
+      "url": "https://news.un.org/en/story/2026/02/1166989",
+      "publisher": "UNESCO (via UN News; Re|Shaping Policies for Creativity report)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18",
+      "excerpt": "Music creators face a projected 24% revenue loss and audiovisual sector workers a 21% income loss by 2028. The report stresses that these disruptions are occurring at a pace that outstrips current policy responses, exacerbating inequalities and threatening the livelihoods of millions of cultural workers. Report covers more than 120 countries and includes 8,100+ policy measures.",
       "dateAdded": "2026-07-02"
     }
   ]
