@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-30",
-  "totalSources": 596,
-  "verifiedCount": 586,
+  "lastUpdated": "2026-07-02",
+  "totalSources": 599,
+  "verifiedCount": 589,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8459,6 +8459,50 @@
         "genai-work-adoption",
         "workforce-ai-exposure",
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-casselman-ai-measurement-2026": {
+      "id": "nyt-casselman-ai-measurement-2026",
+      "title": "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
+      "url": "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-02",
+      "excerpt": "NYT chief economics correspondent Casselman synthesizes the measurement problem: different data sources give contradictory answers on basic questions (how many companies use AI, which workers are most vulnerable, whether AI is helping or hurting employment, whether the productivity boom is real). Reports on Nathan Goldschlag's (Economic Innovation Group) new report documenting the measurement challenge; a bipartisan Senate bill (led by Sen. Mark Kelly, D-AZ, introduced June 2026) that would expand federal AI labor data collection; Yale Budget Lab's new monthly 'occupational churn' analysis as an early-warning system; Stanford DEL's ADP-based Canaries dashboard; and new Ramp/Revelio research finding companies using AI most intensely are adding jobs FASTER than laggards \u2014 the opposite direction from displacement narratives. Frames the current confusion as J-curve territory: companies still on the downward experimentation phase before productivity gains materialize. Notes federal statistical system is under stress from falling survey response rates and funding cuts; former BLS Commissioner Erika McEntarfer (fired by Trump last year) says $10M/yr would meaningfully expand the monthly labor market survey.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ramp-revelio-ai-jobs-impact-2026": {
+      "id": "ramp-revelio-ai-jobs-impact-2026",
+      "title": "A New Look at AI's Impact on Jobs: Firm-Level AI Spending and Workforce Adjustment",
+      "url": "https://ramp.com/data/ai-jobs-impact/paper",
+      "publisher": "Ramp Economics Lab / Revelio Labs (Ara Kharazian et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-30",
+      "excerpt": "First study to link observed firm-level AI spending to workforce outcomes at scale. Tracked AI spending across 21,599 US firms via Ramp expense-management data, matched to Revelio Labs employment records. Companies that invest heavily in AI grew headcount 10% over the two years following adoption; entry-level headcount grew 12%. Gains are ENTIRELY driven by high-intensity adopters \u2014 low-intensity adopters see no statistically significant change. Direction is opposite to the displacement narrative: heavy AI adopters ADD jobs faster than laggards. Caveats: AI adopters are already larger, more engineering-intensive, more likely to be venture-backed, and faster-growing than non-adopters; effect may partly reflect selection into adoption rather than causal effect of adoption.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "eig-goldschlag-ai-jobs-final-word-2026": {
+      "id": "eig-goldschlag-ai-jobs-final-word-2026",
+      "title": "AI and Jobs: The Final Word (Until the Next One)",
+      "url": "https://eig.org/ai-and-jobs-the-final-word/",
+      "publisher": "Economic Innovation Group (Nathan Goldschlag & Sarah Eckhardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-02",
+      "excerpt": "EIG applies five different measures of AI exposure (drawn from four different research papers) to test whether current labor market data shows an AI signature. The startling finding: which exposure measure you pick determines not just the SCALE but the DIRECTION of AI's estimated effect on employment. Under some measures AI appears to be hurting employment; under others it appears to be helping. Companion piece 'A New Threat to Economic Data' documents the deteriorating federal statistical system (falling response rates, funding cuts) that Casselman NYT (July 2) also foregrounds. Goldschlag is EIG's Director of Research and formerly Principal Economist at Census's Center for Economic Studies.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

@@ -1,0 +1,16 @@
+{
+  "abstract": "Nathan Goldschlag (EIG Director of Research) and Sarah Eckhardt apply five different AI exposure measures, drawn from four separate research papers, to test whether current US labor market data shows a coherent AI signature. Their startling finding: the choice of exposure measure determines not just the SCALE but the DIRECTION of estimated AI effects on employment. Under some measures AI appears to be hurting employment; under others it appears to be helping. Companion EIG piece 'A New Threat to Economic Data' documents the deteriorating federal statistical system (falling survey response rates, funding cuts, Trump administration's dismissal of BLS commissioner McEntarfer) that undermines any effort to resolve the measurement question. Referenced as a key voice in Ben Casselman's July 2, 2026 NYT synthesis piece on the AI measurement problem.",
+  "keyFindings": [
+    "Applied 5 different AI exposure measures from 4 different research papers",
+    "Different exposure measures produce different DIRECTIONS of estimated AI-employment effect, not just different scales",
+    "'It's like going to the doctor and getting three different diagnoses for the same condition' (echoing Michelle Yin, Northwestern)",
+    "Companion piece: federal statistical system deteriorating (falling response rates, funding cuts, BLS commissioner fired)",
+    "Frames the current confusion as measurement-driven, not just an empirical-data-scarcity problem",
+    "Policy implication: cannot get the policy right without getting the measurement right",
+    "Goldschlag brings Census Bureau background (former Principal Economist, Center for Economic Studies) to the measurement critique"
+  ],
+  "methodology": "Applies 5 published AI exposure measures to current US employment data using standard econometric techniques. Compares direction and magnitude of estimated AI-employment relationship across measures. Publishes both technical results and a policy-focused framing.",
+  "qualifiers": "Tier 1 \u2014 institutional research from EIG, drawing on established methods. The 'final word' framing is intentionally ironic \u2014 the piece's core finding is that the current answer depends on which measure you pick, so no single 'final word' is available. Useful as a citable anchor for jobsdata.ai's methodology-uncertainty framing. Companion piece on statistical-system funding is more of a policy op-ed.",
+  "id": "eig-goldschlag-ai-jobs-final-word-2026",
+  "fetchedAt": "2026-07-02"
+}

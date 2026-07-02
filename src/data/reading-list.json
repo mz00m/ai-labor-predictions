@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
+      "author": "Ben Casselman",
+      "publisher": "The New York Times",
+      "date": "2026-07-02",
+      "url": "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
+      "takeaway": "Casselman synthesizes the AI measurement problem: different data sources give contradictory answers on basic questions — is AI causing job losses or gains, which workers are most exposed, is the productivity boom real? Highlights: a new Yale Budget Lab monthly 'occupational churn' measure designed as an early-warning system that tracks how the composition of an industry's jobs shifts before total headcount does; new Ramp/Revelio Labs research showing the companies using AI most intensely are ADDING jobs faster than laggards (opposite direction from displacement narrative, but Ramp's clients skew tech-savvy so representativeness is uncertain); a Nathan Goldschlag/Economic Innovation Group report on the measurement challenge with concrete policy recommendations; and a bipartisan Senate bill (Sen. Mark Kelly, D-AZ) that would expand federal AI labor data collection and mandate an annual federal report. Notes the underlying federal statistical system is deteriorating from falling response rates and funding cuts (former BLS Commissioner McEntarfer says $10M/yr would help). Frames current confusion as J-curve territory — most firms still on the downward experimentation phase before productivity gains materialize. Companion to Casselman's June 10 'Hidden Workers' piece; the current article is a stronger external validation of jobsdata.ai's own operating premise (show the source mix, don't collapse to a single number).",
+      "weekFeatured": "2026-07-01",
+      "tier": 3
+    },
+    {
       "title": "AI and the Supply and Demand for Labor",
       "author": "Bharat Chandar",
       "publisher": "What's Next (Substack)",

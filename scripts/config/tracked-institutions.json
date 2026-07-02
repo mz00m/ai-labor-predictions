@@ -2,7 +2,8 @@
   "_comment": "Institutional research feeds polled weekly by the trackedInstitutions adapter. Each entry declares a feedType: 'rss', 'atom', or 'sitemap'. Failing institutions are skipped with a warning (not fatal). Sitemap mode is used when an institution has abandoned RSS but exposes a sitemap.xml — the adapter filters by lastmod date + URL path substring and fetches metadata per candidate page.",
   "_added": "2026-06-30",
   "_history": [
-    "2026-06-30: initial scaffold. Discovered that many institutions abandoned RSS (Yale BL, Stanford DEL, Brookings, IMF Blog all return 200 but with empty/redirect bodies). Pivoted to sitemap-based polling for those, RSS for ones that still publish proper feeds (Hamilton Project verified working)."
+    "2026-06-30: initial scaffold. Discovered that many institutions abandoned RSS (Yale BL, Stanford DEL, Brookings, IMF Blog all return 200 but with empty/redirect bodies). Pivoted to sitemap-based polling for those, RSS for ones that still publish proper feeds (Hamilton Project verified working).",
+    "2026-07-02: added Economic Innovation Group (EIG), Ramp Economics Lab (via /leading-indicators sub-sitemap), Revelio Labs, and Ara Kharazian's Econ Lab substack. Prompted by the Casselman NYT July 2 piece which named EIG/Goldschlag and Ramp/Revelio as the three most notable non-academic institutional voices on AI labor measurement."
   ],
   "institutions": [
     {
@@ -48,6 +49,39 @@
       "tier": 2,
       "pathInclude": "/research/",
       "notes": "Economic Index reports (Primitives Jan, Learning Curves Mar, Cadences Jun 2026) + labor research. No public RSS. Anthropic has commercial interest — apply Tier 2."
+    },
+    {
+      "publisher": "Economic Innovation Group",
+      "domain": "eig.org",
+      "feedUrl": "https://eig.org/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "notes": "Nathan Goldschlag's shop; publishes rigorous measurement-focused research on AI labor impacts (see 'AI and Jobs: The Final Word' July 2026). Small sitemap — no pathInclude needed."
+    },
+    {
+      "publisher": "Ramp Economics Lab",
+      "domain": "ramp.com",
+      "feedUrl": "https://ramp.com/sitemap/leading-indicators.xml",
+      "feedType": "sitemap",
+      "tier": 2,
+      "notes": "Ara Kharazian's Economics Lab publishes at /leading-indicators — firm-level spending data cross-referenced to Revelio Labs workforce records. The June 30 2026 'AI Jobs Impact' paper (heavy AI adopters +10% headcount, +12% entry-level) is the current headline finding."
+    },
+    {
+      "publisher": "Revelio Labs",
+      "domain": "reveliolabs.com",
+      "feedUrl": "https://www.reveliolabs.com/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 2,
+      "pathInclude": "/news/",
+      "notes": "Labor market data firm publishing weekly analytical pieces on /news/. Nested sitemap index — adapter resolves automatically."
+    },
+    {
+      "publisher": "Econ Lab (Ara Kharazian)",
+      "domain": "econlab.substack.com",
+      "feedUrl": "https://econlab.substack.com/feed",
+      "feedType": "rss",
+      "tier": 3,
+      "notes": "Ara Kharazian (Ramp Economics Lab lead economist) weekly newsletter. Substack RSS verified working."
     }
   ],
   "_planned_but_not_yet_working": [
