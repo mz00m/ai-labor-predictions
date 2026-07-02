@@ -8,6 +8,7 @@ import { getPredictionBySlug } from "@/lib/data-loader";
 import { getSourceCountsByTier } from "@/lib/search-sources";
 import { getTierConfig } from "@/lib/evidence-tiers";
 import { computeAggregate } from "@/lib/prediction-stats";
+import { getFreshness } from "@/lib/data-freshness";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionChart from "@/components/PredictionChart";
 import AIAdoptionChart from "@/components/AIAdoptionChart";
@@ -185,6 +186,22 @@ export default function PredictionDetailPage() {
       <div className="max-w-3xl">
         <p className="text-base font-bold uppercase tracking-widest text-[var(--muted)] mb-4">
           {prediction.category === "displacement" ? "Job Displacement" : prediction.category === "wages" ? "Wage Impact" : prediction.category === "adoption" ? "AI Adoption" : "Other"} | {prediction.timeHorizon}
+          {(() => {
+            const freshness = getFreshness(prediction.slug, prediction.history);
+            if (!freshness.throughLabel) return null;
+            return (
+              <span
+                className={freshness.stale ? "text-amber-600" : undefined}
+                title={
+                  freshness.stale
+                    ? "The newest data point is more than two release cycles behind the series feeding this chart"
+                    : "Date of the newest data point on this chart"
+                }
+              >
+                {" "}| Data through {freshness.throughLabel}
+              </span>
+            );
+          })()}
         </p>
         <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-6 font-serif">
           {prediction.title}

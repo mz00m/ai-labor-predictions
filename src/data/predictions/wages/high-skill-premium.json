@@ -152,6 +152,15 @@
       "label": "Microsoft: Cloud revenue $35.1B, up 23%; 65%+ of Fortune 500 use Azure OpenAI"
     },
     {
+      "date": "2024-05-01",
+      "direction": "down",
+      "sourceIds": [
+        "nber-bloom-prettner-ai-skill-premium-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER model: AI scaling cuts skill premium from ~2.0x to 1.62x"
+    },
+    {
       "date": "2024-09-01",
       "direction": "up",
       "sourceIds": [
@@ -204,6 +213,15 @@
       ],
       "evidenceTier": 1,
       "label": "Marguerit: Augmentation AI fosters new work and raises wages for high-skilled occupations"
+    },
+    {
+      "date": "2025-04-04",
+      "direction": "down",
+      "sourceIds": [
+        "imf-rockall-ai-adoption-inequality-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF model: AI cuts wage Gini 1.73pp (high earners exposed); wealth Gini +7.18pp"
     },
     {
       "date": "2025-05-01",
@@ -420,6 +438,15 @@
       ],
       "evidenceTier": 1,
       "label": "Oxford/OII: AI roles 2x more likely to require resilience/agility; 5-10% premium for complementary skills (12M vacancies)"
+    },
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "makela-stephany-complement-substitute-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Oxford/OII: 5-10% wage premium for AI-complementary skills (12M vacancies)"
     },
     {
       "date": "2026-04-24",
@@ -861,6 +888,24 @@
       "datePublished": "2026-02-25",
       "excerpt": "65% expect 11%-30% of their workforce to be redeployed or reskilled due to AI within the next two years. 63% of employees said they would trade a 10% pay increase for opportunities to upskill in AI and digital skills. 72% of investors believe companies integrating human and AI capabilities gain competitive advantage. 40% of employees are concerned about job loss from AI (up from 28% in 2024). Compensation growth in technology and professional services has cooled as hiring normalizes.",
       "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "nber-bloom-prettner-ai-skill-premium-2024",
+      "title": "Artificial Intelligence and the Skill Premium",
+      "url": "https://www.nber.org/papers/w32430",
+      "publisher": "NBER (Bloom, Prettner, Saadaoui, Veruete)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-01",
+      "excerpt": "We show that AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers. [...] This leads to a skill premium of about 2, i.e., wages of high-skill workers are twice the wages of low-skill workers. In the second row, G_t is half the value of P_t and the skill premium decreases to about 1.7. In the third row, the value of G_t is now the same as the value of P_t so that the skill premium shrinks further to 1.62."
+    },
+    {
+      "id": "imf-rockall-ai-adoption-inequality-2025",
+      "title": "AI Adoption and Inequality (IMF Working Paper 2025/068)",
+      "url": "https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729",
+      "publisher": "IMF (Rockall, Mendes Tavares, Pizzinelli)",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-04",
+      "excerpt": "Under the baseline assumption that occupational exposure to AI is directly associated with task displacement, the model predicts a decrease in the Gini coefficient for wage inequality of 1.73 p.p. Wealth inequality, however, is predicted to widen, with the wealth Gini rising 7.18 p.p. [...] roughly 60 percent of workers at the 90th income percentile are in an occupation where a large share of tasks can be performed by AI, at the 10th percentile only 15 percent of workers are in this situation. For comparison, the model calibrated to routine-biased automation produces a substantial increase in both wage and wealth inequality, with the Gini rising by 2.05 p.p. and 6.89 p.p., respectively."
     }
   ]
 }

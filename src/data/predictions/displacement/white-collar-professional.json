@@ -707,6 +707,15 @@
       "label": "MIT/USC: Lawyer case counts flat but pro se filings +79% as AI enables self-representation"
     },
     {
+      "date": "2026-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "nber-baslandze-ai-productivity-workforce-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER exec survey: routine clerical share to fall >2pp over next 3 years"
+    },
+    {
       "date": "2026-03-02",
       "direction": "up",
       "sourceIds": [
@@ -1866,6 +1875,15 @@
       "datePublished": "2026-07-01",
       "excerpt": "US-based employers announced 45,849 job cuts in June 2026, down 53% from May. AI led all reasons for job cuts with 14,029 announced (31% of monthly total). Year-to-date, AI has been cited in 101,743 job cut announcements, approximately 23% of all cuts. Technology announced 15,503 cuts in June for a total of 139,156 YTD \u2014 an increase of 83% from H1 2025. Tech now accounts for nearly a third of all job cuts announced this year. Tech remains the epicenter of this year's cuts. AI is the dominant force as companies are restructuring around it.",
       "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "nber-baslandze-ai-productivity-workforce-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://www.nber.org/papers/w34984",
+      "publisher": "NBER (Baslandze, Edwards, Graham, McClure, Meyer, Sparks, Waddell, Weitz)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives."
     }
   ]
 }

@@ -14,6 +14,7 @@ import {
   TOOL_PREFERENCE_LABELS,
 } from "@/lib/assessment/types";
 import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
+import { HttpError, isNonRetryable } from "@/lib/assessment/http-error";
 import AiScorePreview from "@/components/assessment/AiScorePreview";
 import {
   useSpringPress,
@@ -275,11 +276,13 @@ export default function AssessmentStartPage() {
 
           if (!res.ok) {
             const data = await res.json().catch(() => ({}));
-            // Don't retry on validation errors (4xx) — only on server/network errors
-            if (res.status >= 400 && res.status < 500) {
-              throw new Error(data.error || "Please check your inputs and try again.");
-            }
-            throw new Error(data.error || "Server error — please try again.");
+            throw new HttpError(
+              data.error ||
+                (res.status < 500
+                  ? "Please check your inputs and try again."
+                  : "Server error — please try again."),
+              res.status
+            );
           }
 
           const data = await res.json();
@@ -291,8 +294,9 @@ export default function AssessmentStartPage() {
           return; // Success — exit the function
         } catch (err) {
           lastErr = err instanceof Error ? err : new Error("An error occurred");
-          // Don't retry on validation/client errors
-          if (lastErr.message.includes("check your inputs")) throw lastErr;
+          // Don't retry on validation/client errors (any 4xx) — status-based,
+          // not message-based, so custom server messages don't defeat the guard
+          if (isNonRetryable(lastErr)) throw lastErr;
           // Don't retry on abort (timeout) — show error immediately
           if (lastErr.name === "AbortError") {
             throw new Error("The request took too long. Please try again — it usually works on the second attempt.");

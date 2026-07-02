@@ -405,17 +405,25 @@ export async function mergePartialReport(assessmentId: string, partial: Partial<
   `;
 }
 
+/** True when a database connection is configured. Routes use this to report
+ * infrastructure failures as 503s instead of misattributing them to the user. */
+export function isDbAvailable(): boolean {
+  return getDb() !== null;
+}
+
+export type CreateCodeResult = "created" | "db_unavailable" | "invalid_email" | "rate_limited";
+
 /**
  * Create a verification code for an email. Invalidates prior unused codes.
  */
-export async function createVerificationCode(email: string, code: string): Promise<boolean> {
+export async function createVerificationCode(email: string, code: string): Promise<CreateCodeResult> {
   const sql = getDb();
-  if (!sql) return false;
+  if (!sql) return "db_unavailable";
 
   await initAssessmentTables();
 
   const canon = canonicalizeEmail(email);
-  if (!canon) return false;
+  if (!canon) return "invalid_email";
 
   // Invalidate prior unused codes for this email (case-insensitive)
   await sql`
@@ -429,14 +437,14 @@ export async function createVerificationCode(email: string, code: string): Promi
     SELECT COUNT(*) as count FROM email_verification_codes
     WHERE LOWER(email) = ${canon} AND created_at > NOW() - INTERVAL '1 hour'
   ` as CountRow[];
-  if (parseInt(rateLimitRows[0]?.count || "0") >= 3) return false;
+  if (parseInt(rateLimitRows[0]?.count || "0") >= 3) return "rate_limited";
 
   const id = generateId();
   await sql`
     INSERT INTO email_verification_codes (id, email, code, expires_at)
     VALUES (${id}, ${canon}, ${code}, NOW() + INTERVAL '10 minutes')
   `;
-  return true;
+  return "created";
 }
 
 /**

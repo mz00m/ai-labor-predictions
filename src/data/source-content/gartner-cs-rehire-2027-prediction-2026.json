@@ -1,0 +1,13 @@
+{
+  "id": "gartner-cs-rehire-2027-prediction-2026",
+  "abstract": "Gartner prediction based on an October 2025 poll of 321 customer service and support leaders: despite speculation about AI-driven headcount cuts, only about 20% of CS leaders have actually reduced agent staffing due to AI, and by 2027 half of the companies that attributed headcount reduction to AI are predicted to rehire staff for similar functions under different job titles.",
+  "keyFindings": [
+    "By 2027, half of companies that attributed headcount reduction to AI are predicted to rehire staff to perform similar functions, but under different job titles.",
+    "Only a fifth (20%) of customer service leaders have actually reduced agent staffing due to AI.",
+    "Most recent workforce reductions were influenced by broader economic conditions rather than automation alone.",
+    "Survey: 321 customer service and support leaders, polled October 2025."
+  ],
+  "methodology": "Gartner survey of 321 customer service and support leaders (October 2025) plus analyst prediction, announced February 3, 2026 (analysts Kathy Ross, Emily Potosky). Gartner press release is fetch-blocked; quotes verified via iTnews Asia coverage.",
+  "qualifiers": "Analyst prediction, not observed outcome. Staffing-based finding on an interactions-based chart, hence overlay. Rehiring 'under different job titles' complicates future measurement of reversals.",
+  "fetchedAt": "2026-07-02"
+}

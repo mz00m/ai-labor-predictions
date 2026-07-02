@@ -173,24 +173,6 @@
   ],
   "overlays": [
     {
-      "date": "2026-06-26",
-      "direction": "up",
-      "sourceIds": [
-        "anthropic-economic-index-cadences-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Anthropic Economic Index 'Cadences' (n\u22489,700 Claude users, biased sample): ~50% say AI already handles 50%+ of their work tasks; 4% say Claude could do their entire job today; >33% expect AI to do most/all tasks within 12 months"
-    },
-    {
-      "date": "2026-02-23",
-      "direction": "up",
-      "sourceIds": [
-        "acemoglu-autor-johnson-pro-worker-ai-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "Schneider Electric (cited in Acemoglu/Autor/Johnson 2026): AI tool helps field electricians troubleshoot; cuts average maintenance-report completion time roughly in half"
-    },
-    {
       "date": "2024-02-01",
       "direction": "up",
       "sourceIds": [
@@ -288,6 +270,24 @@
       ],
       "evidenceTier": 2,
       "label": "Deloitte: ~60% of workers at AI-using firms now have sanctioned AI access"
+    },
+    {
+      "date": "2026-02-23",
+      "direction": "up",
+      "sourceIds": [
+        "acemoglu-autor-johnson-pro-worker-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Schneider Electric (cited in Acemoglu/Autor/Johnson 2026): AI tool helps field electricians troubleshoot; cuts average maintenance-report completion time roughly in half"
+    },
+    {
+      "date": "2026-02-23",
+      "direction": "up",
+      "sourceIds": [
+        "acemoglu-autor-johnson-pro-worker-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Schneider Electric: AI troubleshooting halves maintenance-report time"
     },
     {
       "date": "2026-03-01",
@@ -495,6 +495,24 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman Sachs: most forecasters assume slow AI adoption pace through 2030 despite optimism"
+    },
+    {
+      "date": "2026-06-26",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-cadences-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Economic Index 'Cadences' (n\u22489,700 Claude users, biased sample): ~50% say AI already handles 50%+ of their work tasks; 4% say Claude could do their entire job today; >33% expect AI to do most/all tasks within 12 months"
+    },
+    {
+      "date": "2026-06-26",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-cadences-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Cadences: ~50% of users say AI already handles 50%+ of their tasks"
     }
   ],
   "sources": [
@@ -886,6 +904,24 @@
       "datePublished": "2026-05-01",
       "excerpt": "Generative AI Adoption Tracker (Bick, Blandin, Deming), May 2026 update: '45.2% of the employed respondents used genAI for work.' Based on the Real-Time Population Survey (RPS), a nationally representative online labor market survey of US adults 18-64 running continuously since 2020. Tracker visualizes findings from 8 combined survey waves encompassing approximately 40,000 respondents, weighted to be nationally representative.",
       "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "acemoglu-autor-johnson-pro-worker-ai-2026",
+      "title": "Building Pro-Worker Artificial Intelligence",
+      "url": "https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf",
+      "publisher": "Brookings Institution / Hamilton Project (Acemoglu, Autor, Johnson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-23",
+      "excerpt": "Identifies five categories of labor-affecting technology: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Only new task-creating technologies are unambiguously pro-worker because they expand the range of valuable work humans can do and raise the value of human expertise; the other four can lift productivity while reducing the scarcity value of expertise. Cites Schneider Electric AI tool for field electricians that cuts average maintenance-report completion time roughly in half as augmentation evidence. As reported in MIT Sloan Ideas Made to Matter, June 17, 2026."
+    },
+    {
+      "id": "anthropic-economic-index-cadences-2026",
+      "title": "Anthropic Economic Index Report: Cadences (June 2026)",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "publisher": "Anthropic Economic Index",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-26",
+      "excerpt": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage patterns with a survey of ~9,700 Claude users. Headline findings: about half of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users \u2014 experienced users automate substantially more of their work. Biggest automation increases occur in business sales, automated trading, and routine market-research tasks, flagging those roles as near-term automation candidates."
     }
   ]
 }

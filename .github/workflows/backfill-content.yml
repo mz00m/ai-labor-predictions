@@ -1,0 +1,75 @@
+# .github/workflows/backfill-content.yml
+#
+# Self-heals the chatbot source-content store. Every source referenced by a
+# prediction graph must have src/data/source-content/[id].json; this runs
+# the backfill for any that are missing (bounded per run) and opens a PR.
+# As of 2026-07-02 the store is ~151 files behind.
+
+name: Backfill Source Content
+
+on:
+  schedule:
+    - cron: '0 10 * * 2'  # Tuesday 10am UTC (after Monday research/digest runs)
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Max sources to backfill this run'
+        default: '60'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Backfill missing source-content files
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/backfill-source-content.ts --skip-existing --limit ${{ inputs.limit || '60' }}
+
+      - name: Check for new content files
+        id: check
+        run: |
+          if [ -n "$(git status --porcelain src/data/source-content/)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "count=$(git status --porcelain src/data/source-content/ | wc -l)" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create PR with backfilled content
+        if: steps.check.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          BRANCH="backfill-content-${DATE}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+          git add src/data/source-content/
+          git commit -m "chore: backfill ${{ steps.check.outputs.count }} source-content files ${DATE}
+
+          Automated chatbot content-store backfill."
+
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "Backfill source content: ${DATE} (${{ steps.check.outputs.count }} files)" \
+            --body "Automated backfill of missing chatbot source-content files. Spot-check a few for quality (abstract, keyFindings with numbers, methodology) before merging. Remaining gap is reported by \`node scripts/autoresearch/auto-audit.js\`."

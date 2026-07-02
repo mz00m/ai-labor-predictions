@@ -10,50 +10,6 @@
   "aggregationMethod": "weighted",
   "history": [
     {
-      "date": "2026-06-15",
-      "value": 0,
-      "confidenceLow": -0.5,
-      "confidenceHigh": 0.5,
-      "sourceIds": [
-        "yale-budgetlab-not-yet-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
-      "date": "2026-06-10",
-      "value": 0.2,
-      "confidenceLow": 0.1,
-      "confidenceHigh": 0.3,
-      "sourceIds": [
-        "stanford-del-canaries-april-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "YoY % decline in most-AI-exposed occupations (April 2026 ADP data)",
-        "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 1.5,
-        "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly"
-      }
-    },
-    {
-      "date": "2026-06-01",
-      "value": 9,
-      "confidenceLow": 7,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "goldman-briggs-15m-displacement-revision-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
       "date": "2023-08-01",
       "value": 2.4,
       "confidenceLow": 1.2,
@@ -311,6 +267,19 @@
       "dataType": "observed"
     },
     {
+      "date": "2026-03-01",
+      "value": 0.2,
+      "confidenceLow": 0,
+      "confidenceHigh": 0.4,
+      "sourceIds": [
+        "nber-baslandze-ai-productivity-workforce-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "projected",
+      "metricType": "survey",
+      "sampleSize": 750
+    },
+    {
       "date": "2026-03-13",
       "value": 0.37,
       "confidenceLow": 0.01,
@@ -393,54 +362,53 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
+    },
+    {
+      "date": "2026-06-01",
+      "value": 9,
+      "confidenceLow": 7,
+      "confidenceHigh": 12,
+      "sourceIds": [
+        "goldman-briggs-15m-displacement-revision-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
+      "date": "2026-06-10",
+      "value": 0.2,
+      "confidenceLow": 0.1,
+      "confidenceHigh": 0.3,
+      "sourceIds": [
+        "stanford-del-canaries-april-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "YoY % decline in most-AI-exposed occupations (April 2026 ADP data)",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly"
+      }
+    },
+    {
+      "date": "2026-06-15",
+      "value": 0,
+      "confidenceLow": -0.5,
+      "confidenceHigh": 0.5,
+      "sourceIds": [
+        "yale-budgetlab-not-yet-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
-    {
-      "date": "2026-07-02",
-      "direction": "neutral",
-      "label": "NYT (Casselman) — 'A.I. Is Reshaping the Economy. Good Luck Measuring How.' Different data sources give contradictory answers on basic questions: whether AI is currently causing job losses or gains, which workers are most exposed, whether productivity gains are real. Cites new Yale Budget Lab 'occupational churn' monthly measure, Ramp/Revelio data showing intense AI users add jobs faster, and EIG (Goldschlag) report on the measurement challenge itself",
-      "sourceIds": [
-        "nyt-casselman-ai-measurement-2026"
-      ],
-      "evidenceTier": 3
-    },
-    {
-      "date": "2026-07-02",
-      "direction": "neutral",
-      "label": "EIG (Goldschlag & Eckhardt): applied 5 different AI-exposure measures from 4 papers. Which measure you pick determines not just the SCALE but the DIRECTION of estimated AI-employment effect — some show AI hurting jobs, others show it helping. 'Getting the policy right depends on getting the measurement right.'",
-      "sourceIds": [
-        "eig-goldschlag-ai-jobs-final-word-2026"
-      ],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2026-06-30",
-      "direction": "down",
-      "label": "Ramp Economics Lab / Revelio Labs (n=21,599 US firms): companies investing heavily in AI grew headcount +10% over 2 years post-adoption; entry-level +12%. Direction opposite to pure-displacement narrative. Caveat: heavy adopters were already larger, more VC-backed, faster-growing — causality vs. selection unclear",
-      "sourceIds": [
-        "ramp-revelio-ai-jobs-impact-2026"
-      ],
-      "evidenceTier": 2
-    },
-    {
-      "date": "2026-06-29",
-      "direction": "neutral",
-      "label": "WSJ 16-economist panel (via Chandar): 5/16 predict net job loss (incl. Acemoglu, Henderson, Restrepo, Wolfers, Chandar), 8/16 no change, 2/16 net growth — 16/16 unanimous on AI boosting productivity. Net-loss group also unanimous that AI replaces rather than complements and reduces white-collar demand",
-      "sourceIds": [
-        "chandar-supply-demand-labor-2026"
-      ],
-      "evidenceTier": 3
-    },
-    {
-      "date": "2026-06-25",
-      "direction": "neutral",
-      "label": "RAISE US launches (WSJ): bipartisan coalition (Raimondo/Holcomb) with $500M+ raised to build workforce-transition infrastructure — Amazon, Microsoft, BofA, Eli Lilly, OpenAI, Anthropic; first state pilots in AR, MD, UT, CT",
-      "sourceIds": [
-        "wsj-raise-us-coalition-2026"
-      ],
-      "evidenceTier": 3
-    },
     {
       "date": "2013-09-17",
       "direction": "up",
@@ -736,7 +704,7 @@
         "autor-thompson-expertise-2025"
       ],
       "evidenceTier": 1,
-      "label": "MIT (Autor/Thompson): 0.1σ rise in occupational task expertise predicts 5-7 log pt fall in employment per decade (303 occs, 1980-2018) — opposite to task-quantity prediction"
+      "label": "MIT (Autor/Thompson): more occupational expertise, less employment 1980-2018"
     },
     {
       "date": "2025-06-20",
@@ -745,7 +713,7 @@
         "autor-thompson-expertise-2025"
       ],
       "evidenceTier": 1,
-      "label": "MIT (Autor/Thompson): Accounting clerks 1980-2018 — employment 1.62M→1.11M (-31%), wages $13.07→$18.17 (+39%); Inventory clerks — emp 0.54M→1.48M (+175%), wages $14.30→$12.43 (-13%)"
+      "label": "MIT (Autor/Thompson): accounting clerks -31% jobs, +39% wages 1980-2018"
     },
     {
       "date": "2025-07-02",
@@ -1081,6 +1049,15 @@
       "label": "FRED JOLTS Feb 2026: Job openings 6,882K, continued cooling"
     },
     {
+      "date": "2026-02-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mercer-global-talent-trends-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Mercer: 65% of execs expect 11-30% of workforce redeployed/reskilled due to AI"
+    },
+    {
       "date": "2026-02-05",
       "direction": "down",
       "sourceIds": [
@@ -1384,7 +1361,7 @@
         "imas-shukla-oring-exposure-2026"
       ],
       "evidenceTier": 4,
-      "label": "Imas/Shukla: Low-dimensional jobs (trucking, warehousing) face higher displacement risk than high-exposure knowledge work"
+      "label": "Imas/Shukla: low-dimensional jobs at higher risk than knowledge work"
     },
     {
       "date": "2026-03-23",
@@ -1844,6 +1821,51 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: little firm evidence AI has hurt the labor market as a whole"
+    },
+    {
+      "date": "2026-06-25",
+      "direction": "neutral",
+      "label": "WSJ: RAISE US bipartisan coalition raises $500M+ for workforce transition",
+      "sourceIds": [
+        "wsj-raise-us-coalition-2026"
+      ],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2026-06-29",
+      "direction": "neutral",
+      "label": "WSJ panel of 16 economists: 5 predict net job loss, 8 no change, 2 growth",
+      "sourceIds": [
+        "chandar-supply-demand-labor-2026"
+      ],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2026-06-30",
+      "direction": "down",
+      "label": "Ramp/Revelio: heavy AI adopters grew headcount +10% in 2 yrs (selection caveat)",
+      "sourceIds": [
+        "ramp-revelio-ai-jobs-impact-2026"
+      ],
+      "evidenceTier": 2
+    },
+    {
+      "date": "2026-07-02",
+      "direction": "neutral",
+      "label": "NYT (Casselman): data sources contradict on AI job losses vs gains",
+      "sourceIds": [
+        "nyt-casselman-ai-measurement-2026"
+      ],
+      "evidenceTier": 3
+    },
+    {
+      "date": "2026-07-02",
+      "direction": "neutral",
+      "label": "EIG (Goldschlag): choice of exposure measure flips direction of AI job effect",
+      "sourceIds": [
+        "eig-goldschlag-ai-jobs-final-word-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "sources": [
@@ -3202,6 +3224,96 @@
       "evidenceTier": 3,
       "datePublished": "2026-06-10",
       "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs."
+    },
+    {
+      "id": "goldman-briggs-15m-displacement-revision-2026",
+      "title": "Goldman Sachs Revised Forecast: ~9% / 15M US Workers Displaced over 10 Years",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Research (Joseph Briggs)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-01",
+      "excerpt": "Goldman Sachs revised its US labor displacement forecast upward from 6-7% to ~9% (about 15 million workers) over the next decade. The change reflects a new methodology measuring total flow of workers leaving jobs due to AI-driven productivity gains, rather than steady-state unemployed count. Briggs estimates each 1% increase in technology-driven productivity yields a 0.5-0.6% increase in the job-destruction rate over the following two years. Goldman maintains the long-run benefits outweigh the disruption (US churns 25-35M jobs annually, and AI will generate new employment), and that unemployment rises less than 1 percentage point at peak under standard adoption timing. As of mid-2026, Goldman estimates AI is erasing ~16,000 net jobs per month, concentrated in entry-level and administrative roles."
+    },
+    {
+      "id": "stanford-del-canaries-april-2026",
+      "title": "Stanford DEL Canaries Dashboard: April 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-10",
+      "excerpt": "Monthly-updated dashboard built on anonymized ADP payroll data covering 4.6 million workers across 730+ occupations. April 2026 reading: most AI-exposed occupations contracted 0.2% YoY, least-exposed grew 0.1% YoY — a small but consistent gap. For workers ages 22-25 in highly AI-exposed occupations, employment is now shrinking at 3.8% per year, with the early-career decline sharpening from -2.8% to April 2024 to over -4% per year since. Builds on Brynjolfsson, Chandar, Chen (2025) 'Canaries in the Coal Mine.' Live update of the underlying employment story behind the 'overall not yet, early-career already' pattern."
+    },
+    {
+      "id": "yale-budgetlab-not-yet-2026",
+      "title": "AI Is Probably Not (Yet) the Reason for Labor Market Weakening",
+      "url": "https://budgetlab.yale.edu/research/ai-probably-not-yet-reason-labor-market-weakening",
+      "publisher": "Yale Budget Lab (Gimbel, Tedeschi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-15",
+      "excerpt": "Yale Budget Lab's preferred econometric strategy finds no strong evidence of AI's impact on aggregate US employment or unemployment 33 months post-ChatGPT. Measures of AI usage show no detectable connection to changes in employment or unemployment. The labor market in early 2026 features low layoffs but also low hiring, with payroll growth ~20,000 net new jobs per month and unemployment 4.3% in March 2026. Authors caution that historically technological disruption unfolds over decades, not months — AI is likely to leave its mark eventually, but the macro signature is not yet visible. A companion to the lab's March 2026 CPS update."
+    },
+    {
+      "id": "wsj-raise-us-coalition-2026",
+      "title": "The New Push to Ready Millions for AI Career Upheaval",
+      "url": "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
+      "publisher": "The Wall Street Journal (Chip Cutter)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-25",
+      "excerpt": "A bipartisan consortium called RAISE US launches with a 'people strategy' for the AI era — led by former Commerce Secretary Gina Raimondo (CEO) and former Indiana Gov. Eric Holcomb. Founding employers include Amazon, Microsoft, Bank of America, and Eli Lilly; OpenAI and Anthropic are involved; MIT economist David Autor sits on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah, and Connecticut. Mandate goes beyond retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and developing corporate incentives for employers to retain and reskill rather than lay off."
+    },
+    {
+      "id": "chandar-supply-demand-labor-2026",
+      "title": "AI and the Supply and Demand for Labor",
+      "url": "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
+      "publisher": "Bharat Chandar (What's Next Substack)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-29",
+      "excerpt": "Chandar — coauthor of the Brynjolfsson-Chandar-Chen 'Canaries' paper — explains why he was one of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss (others: Acemoglu, Henderson, Restrepo, Wolfers; 8 said no change, 2 said net growth). All 16 agreed AI would boost productivity. The 5 net-loss economists also unanimously said AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's argument: his net-job-loss prediction is not a 'jobs bloodbath' story — he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering labor force participation in the long run (~50yr horizon). He explicitly cites Kinder's 'messy middle' framing as the short-to-medium-run risk. Useful disambiguation of what economists mean by 'net job loss' — long-run LFP decline driven by post-scarcity income, not displacement-driven destitution."
+    },
+    {
+      "id": "ramp-revelio-ai-jobs-impact-2026",
+      "title": "A New Look at AI's Impact on Jobs: Firm-Level AI Spending and Workforce Adjustment",
+      "url": "https://ramp.com/data/ai-jobs-impact/paper",
+      "publisher": "Ramp Economics Lab / Revelio Labs (Ara Kharazian et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-30",
+      "excerpt": "First study to link observed firm-level AI spending to workforce outcomes at scale. Tracked AI spending across 21,599 US firms via Ramp expense-management data, matched to Revelio Labs employment records. Companies that invest heavily in AI grew headcount 10% over the two years following adoption; entry-level headcount grew 12%. Gains are ENTIRELY driven by high-intensity adopters — low-intensity adopters see no statistically significant change. Direction is opposite to the displacement narrative: heavy AI adopters ADD jobs faster than laggards. Caveats: AI adopters are already larger, more engineering-intensive, more likely to be venture-backed, and faster-growing than non-adopters; effect may partly reflect selection into adoption rather than causal effect of adoption."
+    },
+    {
+      "id": "nyt-casselman-ai-measurement-2026",
+      "title": "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
+      "url": "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-02",
+      "excerpt": "NYT chief economics correspondent Casselman synthesizes the measurement problem: different data sources give contradictory answers on basic questions (how many companies use AI, which workers are most vulnerable, whether AI is helping or hurting employment, whether the productivity boom is real). Reports on Nathan Goldschlag's (Economic Innovation Group) new report documenting the measurement challenge; a bipartisan Senate bill (led by Sen. Mark Kelly, D-AZ, introduced June 2026) that would expand federal AI labor data collection; Yale Budget Lab's new monthly 'occupational churn' analysis as an early-warning system; Stanford DEL's ADP-based Canaries dashboard; and new Ramp/Revelio research finding companies using AI most intensely are adding jobs FASTER than laggards — the opposite direction from displacement narratives. Frames the current confusion as J-curve territory: companies still on the downward experimentation phase before productivity gains materialize. Notes federal statistical system is under stress from falling survey response rates and funding cuts; former BLS Commissioner Erika McEntarfer (fired by Trump last year) says $10M/yr would meaningfully expand the monthly labor market survey."
+    },
+    {
+      "id": "eig-goldschlag-ai-jobs-final-word-2026",
+      "title": "AI and Jobs: The Final Word (Until the Next One)",
+      "url": "https://eig.org/ai-and-jobs-the-final-word/",
+      "publisher": "Economic Innovation Group (Nathan Goldschlag & Sarah Eckhardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-02",
+      "excerpt": "EIG applies five different measures of AI exposure (drawn from four different research papers) to test whether current labor market data shows an AI signature. The startling finding: which exposure measure you pick determines not just the SCALE but the DIRECTION of AI's estimated effect on employment. Under some measures AI appears to be hurting employment; under others it appears to be helping. Companion piece 'A New Threat to Economic Data' documents the deteriorating federal statistical system (falling response rates, funding cuts) that Casselman NYT (July 2) also foregrounds. Goldschlag is EIG's Director of Research and formerly Principal Economist at Census's Center for Economic Studies."
+    },
+    {
+      "id": "nber-baslandze-ai-productivity-workforce-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://www.nber.org/papers/w34984",
+      "publisher": "NBER (Baslandze, Edwards, Graham, McClure, Meyer, Sparks, Waddell, Weitz)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives."
+    },
+    {
+      "id": "mercer-global-talent-trends-2026",
+      "title": "Global Talent Trends 2026",
+      "url": "https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/",
+      "publisher": "Mercer",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "65% expect 11%-30% of their workforce to be redeployed or reskilled due to AI [over the next two years]. Employee concern about job loss due to AI has surged from 28% in 2024 to 40% in 2026. 98% of executives are planning organizational design changes over the next two years. The report draws on insights from nearly 12,000 business executives, HR leaders, investors, and employees worldwide gathered via a survey conducted from September to October 2025."
     }
   ]
 }

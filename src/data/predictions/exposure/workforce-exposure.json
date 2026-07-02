@@ -5,9 +5,9 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "exposure",
   "unit": "% of jobs exposed",
-  "currentValue": 67,
+  "currentValue": 43.3,
   "timeHorizon": "Current estimate",
-  "aggregationMethod": "latest",
+  "aggregationMethod": "weighted",
   "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' — from individual task overlap to full occupation-level capability mapping. The 23–93% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
   "history": [
     {
@@ -178,24 +178,6 @@
   ],
   "overlays": [
     {
-      "date": "2026-06-19",
-      "direction": "down",
-      "label": "UCLA Anderson (Siddiq & Zhang, 49,610 Upwork workers): post-ChatGPT, contract volume fell ~9.6% in late period for max-exposure categories vs. unexposed; human capital signals (credentials, reputation, self-presentation) lost 10.1% of their importance in hiring",
-      "sourceIds": [
-        "siddiq-zhang-labor-commoditization-2026"
-      ],
-      "evidenceTier": 1
-    },
-    {
-      "date": "2026-02-23",
-      "direction": "neutral",
-      "label": "Acemoglu/Autor/Johnson (Brookings Hamilton Project): only 'new task-creating' AI is unambiguously pro-worker — automation and expertise-leveling can erode the value of human expertise even while raising productivity",
-      "sourceIds": [
-        "acemoglu-autor-johnson-pro-worker-ai-2026"
-      ],
-      "evidenceTier": 1
-    },
-    {
       "date": "2013-09-17",
       "direction": "up",
       "label": "Oxford (Frey & Osborne): 47% of US jobs at risk of computerisation",
@@ -277,6 +259,15 @@
       "label": "PNAS Nexus: AI-exposed occupations face higher unemployment"
     },
     {
+      "date": "2025-04-04",
+      "direction": "neutral",
+      "sourceIds": [
+        "imf-rockall-ai-adoption-inequality-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: 60% of 90th-percentile earners in high-AI-task jobs vs 15% at 10th pctile"
+    },
+    {
       "date": "2025-04-24",
       "direction": "up",
       "sourceIds": [
@@ -301,7 +292,7 @@
         "autor-thompson-expertise-2025"
       ],
       "evidenceTier": 1,
-      "label": "MIT (Autor/Thompson): Routine share of US job tasks fell 50.4%→32.2% (1977-2018); abstract share rose 33.2%→53.6%. 66% of removed tasks were routine; 77% of added were abstract"
+      "label": "MIT (Autor/Thompson): routine task share fell 50%->32% 1977-2018; abstract rose"
     },
     {
       "date": "2025-06-20",
@@ -310,7 +301,7 @@
         "autor-thompson-expertise-2025"
       ],
       "evidenceTier": 1,
-      "label": "MIT (Autor/Thompson): Cross-occupation expertise premium NEARLY DOUBLED 1980-2018: 1σ expertise = +16 log pts wages in 1980, +31 log pts in 2018"
+      "label": "MIT (Autor/Thompson): expertise wage premium nearly doubled 1980-2018"
     },
     {
       "date": "2025-07-01",
@@ -437,6 +428,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: 6 exposure metrics agree on who's exposed, disagree on magnitude (778 occupations)"
+    },
+    {
+      "date": "2026-02-23",
+      "direction": "neutral",
+      "label": "Acemoglu/Autor/Johnson: only new task-creating AI is unambiguously pro-worker",
+      "sourceIds": [
+        "acemoglu-autor-johnson-pro-worker-ai-2026"
+      ],
+      "evidenceTier": 1
     },
     {
       "date": "2026-03-01",
@@ -679,7 +679,7 @@
         "makela-stephany-complement-substitute-2024"
       ],
       "evidenceTier": 1,
-      "label": "Oxford/OII: Complementary effects 1.7x larger than substitution; AI demand doubling → 5% rise in complementary skill demand"
+      "label": "Oxford/OII: AI complementary effects 1.7x larger than substitution"
     },
     {
       "date": "2026-04-03",
@@ -851,6 +851,15 @@
       ],
       "evidenceTier": 1,
       "label": "Low precarity occupations: mean LLM exposure 0.386 (CI 0.356–0.417)"
+    },
+    {
+      "date": "2026-06-19",
+      "direction": "down",
+      "label": "UCLA (Siddiq/Zhang): Upwork contracts -9.6% in max-AI-exposure categories",
+      "sourceIds": [
+        "siddiq-zhang-labor-commoditization-2026"
+      ],
+      "evidenceTier": 1
     }
   ],
   "sources": [
@@ -1513,6 +1522,33 @@
       "evidenceTier": 2,
       "datePublished": "2026-06-01",
       "excerpt": "an expanding series of economic dashboards that connects policymakers, business executives, and individual workers to timely and reliable information on the economic impact of AI"
+    },
+    {
+      "id": "acemoglu-autor-johnson-pro-worker-ai-2026",
+      "title": "Building Pro-Worker Artificial Intelligence",
+      "url": "https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf",
+      "publisher": "Brookings Institution / Hamilton Project (Acemoglu, Autor, Johnson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-23",
+      "excerpt": "Identifies five categories of labor-affecting technology: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Only new task-creating technologies are unambiguously pro-worker because they expand the range of valuable work humans can do and raise the value of human expertise; the other four can lift productivity while reducing the scarcity value of expertise. Cites Schneider Electric AI tool for field electricians that cuts average maintenance-report completion time roughly in half as augmentation evidence. As reported in MIT Sloan Ideas Made to Matter, June 17, 2026."
+    },
+    {
+      "id": "siddiq-zhang-labor-commoditization-2026",
+      "title": "Human Capital, AI, and Labor Commoditization",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6968139",
+      "publisher": "UCLA Anderson School of Management (Siddiq & Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-19",
+      "excerpt": "Difference-in-differences study on 49,610 Upwork workers and 2.26M contracts (2021Q1–2026Q1) around the release of ChatGPT. Uses text embeddings of worker profiles and Shapley values to quantify the predictive importance of human capital signals (self-presentation, credentials, reputation) and price. In max AI-exposed categories vs. unexposed, contract volume fell ~7.0% post-ChatGPT (9.6% late period, 2025Q2–2026Q1); the combined importance of human capital signals fell 7.8% (10.1% late) while price importance rose 1.1% (1.8% late). Demand premium for high-human-capital workers compressed by 6.2% (10.3% late), and demand reallocated toward lower-priced workers by 3.2% (7.9% late). Authors interpret as empirical evidence of AI-driven labor commoditization — clients view differently-skilled workers as more substitutable when AI compresses output quality."
+    },
+    {
+      "id": "imf-rockall-ai-adoption-inequality-2025",
+      "title": "AI Adoption and Inequality (IMF Working Paper 2025/068)",
+      "url": "https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729",
+      "publisher": "IMF (Rockall, Mendes Tavares, Pizzinelli)",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-04",
+      "excerpt": "Under the baseline assumption that occupational exposure to AI is directly associated with task displacement, the model predicts a decrease in the Gini coefficient for wage inequality of 1.73 p.p. Wealth inequality, however, is predicted to widen, with the wealth Gini rising 7.18 p.p. [...] roughly 60 percent of workers at the 90th income percentile are in an occupation where a large share of tasks can be performed by AI, at the 10th percentile only 15 percent of workers are in this situation. For comparison, the model calibrated to routine-biased automation produces a substantial increase in both wage and wealth inequality, with the Gini rising by 2.05 p.p. and 6.89 p.p., respectively."
     }
   ]
 }
