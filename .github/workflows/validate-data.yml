@@ -51,6 +51,9 @@ jobs:
             console.log(`${n} JSON files parsed OK`);
           '
 
+      - name: Unit tests
+        run: npx vitest run
+
       - name: Lint
         run: npm run lint
 

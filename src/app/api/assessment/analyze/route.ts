@@ -19,6 +19,7 @@ import {
   saveStepContext,
   saveStepFeedback,
   mergePartialReport,
+  isDbAvailable,
 } from "@/lib/assessment/db";
 import { sendReportReadyEmail } from "@/lib/assessment/send-report-email";
 import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
@@ -229,18 +230,34 @@ export async function POST(req: NextRequest) {
         }
       }
 
-      // Create user and assessment record (only for initial calls without existing ID)
+      // Create user and assessment record (only for initial calls without existing ID).
+      // Infrastructure failures here must NOT fall through to the multi-step
+      // "Assessment ID required" 400 below — that misreports a server problem
+      // as a user error.
       if (!assessmentIdParam) {
-        const user = await getOrCreateUser(email);
-        if (user) {
-          assessmentId = await createAssessment(user.id, intake);
-          if (assessmentId) {
-            await updateAssessmentStatus(assessmentId, "analyzing");
-          }
-          // Mark that we need to set the session cookie so the progress/report
-          // pages can authenticate without requiring a separate login step
-          sessionEmail = email.toLowerCase().trim();
+        if (!isDbAvailable()) {
+          console.error("Analyze: database unavailable, cannot create assessment");
+          return NextResponse.json(
+            { error: "We're having trouble on our end — please try again in a few minutes." },
+            { status: 503 }
+          );
         }
+        const user = await getOrCreateUser(email);
+        if (!user) {
+          return NextResponse.json({ error: "Valid email required" }, { status: 400 });
+        }
+        assessmentId = await createAssessment(user.id, intake);
+        if (!assessmentId) {
+          console.error("Analyze: createAssessment failed with database available");
+          return NextResponse.json(
+            { error: "We couldn't start your assessment — please try again." },
+            { status: 500 }
+          );
+        }
+        await updateAssessmentStatus(assessmentId, "analyzing");
+        // Mark that we need to set the session cookie so the progress/report
+        // pages can authenticate without requiring a separate login step
+        sessionEmail = email.toLowerCase().trim();
       }
     }
 

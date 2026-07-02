@@ -12,6 +12,7 @@ import type {
 } from "@/lib/assessment/types";
 import { AUTO_STEPS, STEP_LABELS, STEP_DESCRIPTIONS, AI_MATURITY_LABELS } from "@/lib/assessment/types";
 import { STEP_TIMEOUT_MS, tryRecoverStepFromDb } from "./recovery";
+import { HttpError, isNonRetryable } from "@/lib/assessment/http-error";
 
 // The progress page only drives the AUTO pipeline (profile → tasks → tools).
 // Roadmap, ROI, and risks are opt-in — generated from the report page.
@@ -169,10 +170,11 @@ export default function ProgressPage() {
 
           if (!res.ok) {
             const data = await res.json().catch(() => ({}));
-            if (res.status >= 400 && res.status < 500) {
-              throw new Error(data.error || `Failed to generate ${step}`);
-            }
-            throw new Error(data.error || "Server error — please try again.");
+            throw new HttpError(
+              data.error ||
+                (res.status < 500 ? `Failed to generate ${step}` : "Server error — please try again."),
+              res.status
+            );
           }
 
           const data = await res.json();
@@ -181,8 +183,9 @@ export default function ProgressPage() {
         } catch (err) {
           lastErr = err instanceof Error ? err : new Error("An error occurred");
           // 4xx client errors: no point retrying and no point polling — the
-          // request was malformed; surface immediately.
-          if (lastErr.message.startsWith("Failed to generate")) {
+          // request was malformed; surface immediately. Status-based, not
+          // message-based, so custom server messages don't defeat the guard.
+          if (isNonRetryable(lastErr)) {
             throw lastErr;
           }
           if (lastErr.name !== "AbortError" && attempt < 1) {
