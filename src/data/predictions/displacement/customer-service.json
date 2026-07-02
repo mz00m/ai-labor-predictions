@@ -274,6 +274,15 @@
       "label": "Brookings: CS reps face high AI exposure + low adaptive capacity"
     },
     {
+      "date": "2026-02-03",
+      "direction": "down",
+      "sourceIds": [
+        "gartner-cs-rehire-2027-prediction-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gartner: half of firms that cut CS staff for AI will rehire by 2027 (n=321)"
+    },
+    {
       "date": "2026-02-16",
       "direction": "down",
       "sourceIds": [
@@ -370,7 +379,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario \u2192 AI surpasses all human customer service agents by 2030"
+      "label": "FRI: Rapid scenario → AI surpasses all human customer service agents by 2030"
     },
     {
       "date": "2026-04-01",
@@ -471,7 +480,7 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch \u2014 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -534,7 +543,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,
@@ -696,7 +705,7 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
+      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
       "excerpt": "Customer service agents (SSYK 4222) display the same age gradient as the economy-wide canaries effect, lying between the augmentation and automation poles. All four spotlight occupations show young workers declining, older workers stable or rising.",
@@ -739,7 +748,7 @@
       "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
       "evidenceTier": 2,
       "datePublished": "2026-03-24",
-      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives\u2014Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
+      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives—Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
       "dateAdded": "2026-03-24"
     },
     {
@@ -820,6 +829,15 @@
       "datePublished": "2026-05-29",
       "excerpt": "In the last three months of 2025, call centers fielded 150,000 questions. Three-quarters of the time, A.I. was able to provide the right answer to straightforward questions. The agent then reviews and if necessary, modifies and refines the answer with the caller.",
       "dateAdded": "2026-05-29"
+    },
+    {
+      "id": "gartner-cs-rehire-2027-prediction-2026",
+      "title": "Gartner Predicts Half of Companies That Cut Customer Service Staff Due to AI Will Rehire by 2027",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-predicts-half-of-companies-that-cut-customer-service-staff-due-to-ai-will-rehire-by-2027",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-03",
+      "excerpt": "By 2027, Gartner predicts that half of companies that attributed headcount reduction to AI will rehire staff to perform similar functions, but under different job titles. Despite speculation that AI will drastically reduce customer service headcount, Gartner's report found that only a fifth of customer service leaders have actually reduced agent staffing due to AI. Gartner's report polled 321 customer service and support leaders in October 2025."
     }
   ]
 }

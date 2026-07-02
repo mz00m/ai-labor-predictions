@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 601,
-  "verifiedCount": 591,
+  "totalSources": 602,
+  "verifiedCount": 592,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8533,6 +8533,20 @@
       "excerpt": "We show that AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers. [...] This leads to a skill premium of about 2, i.e., wages of high-skill workers are twice the wages of low-skill workers. In the second row, G_t is half the value of P_t and the skill premium decreases to about 1.7. In the third row, the value of G_t is now the same as the value of P_t so that the skill premium shrinks further to 1.62.",
       "usedIn": [
         "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gartner-cs-rehire-2027-prediction-2026": {
+      "id": "gartner-cs-rehire-2027-prediction-2026",
+      "title": "Gartner Predicts Half of Companies That Cut Customer Service Staff Due to AI Will Rehire by 2027",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-predicts-half-of-companies-that-cut-customer-service-staff-due-to-ai-will-rehire-by-2027",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-03",
+      "excerpt": "By 2027, Gartner predicts that half of companies that attributed headcount reduction to AI will rehire staff to perform similar functions, but under different job titles. Despite speculation that AI will drastically reduce customer service headcount, Gartner's report found that only a fifth of customer service leaders have actually reduced agent staffing due to AI. Gartner's report polled 321 customer service and support leaders in October 2025.",
+      "usedIn": [
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false
