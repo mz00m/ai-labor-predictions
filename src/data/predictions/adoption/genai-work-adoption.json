@@ -151,6 +151,16 @@
       "dataType": "observed"
     },
     {
+      "date": "2026-02-11",
+      "value": 50,
+      "sourceIds": [
+        "gallup-workplace-ai-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
       "date": "2026-05-01",
       "value": 45.2,
       "sourceIds": [
