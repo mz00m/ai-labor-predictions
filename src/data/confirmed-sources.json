@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 607,
-  "verifiedCount": 597,
+  "totalSources": 608,
+  "verifiedCount": 598,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8608,6 +8608,18 @@
       "publisher": "Business Record (Iowa) / UnityPoint Health / Becker's Hospital Review",
       "evidenceTier": 3,
       "datePublished": "2026-04-15"
+    },
+    "upwork-in-demand-skills-2026": {
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Upwork's In-Demand Skills 2026: Demand for Top AI Skills More Than Doubles as AI Is Embedded Into Everyday Work",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "publisher": "Upwork (Investor Relations / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-04"
     }
   }
 }
