@@ -10,10 +10,20 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "April each year",
-      "checkUrls": ["https://hai.stanford.edu/ai-index"],
+      "checkUrls": [
+        "https://hai.stanford.edu/ai-index"
+      ],
       "searchQuery": "Stanford AI Index Report {year} labor workforce",
-      "targetGraphs": ["ai-adoption-rate", "tech-sector-displacement", "healthcare-admin-displacement", "genai-work-adoption"],
-      "lastIngested": { "date": "2026-04-13", "edition": "AI Index Report 2026" },
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "tech-sector-displacement",
+        "healthcare-admin-displacement",
+        "genai-work-adoption"
+      ],
+      "lastIngested": {
+        "date": "2026-04-13",
+        "edition": "AI Index Report 2026"
+      },
       "lastChecked": null,
       "nextExpected": "2027-04-01",
       "priority": "high",
@@ -26,10 +36,21 @@
       "tier": 1,
       "cadence": "monthly",
       "releasePattern": "Dashboard refreshes roughly monthly with ~2-month data lag; occasional paper revisions",
-      "checkUrls": ["https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"],
+      "checkUrls": [
+        "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
+      ],
       "searchQuery": "Stanford Digital Economy Lab canaries coal mine update {year}",
-      "targetGraphs": ["overall-us-displacement", "tech-sector-displacement", "entry-level-wage-impact", "white-collar-professional-displacement", "workforce-ai-exposure"],
-      "lastIngested": { "date": "2026-06-10", "edition": "Canaries Dashboard: April 2026 data update" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
+      ],
+      "lastIngested": {
+        "date": "2026-06-10",
+        "edition": "Canaries Dashboard: April 2026 data update"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-10",
       "priority": "high",
@@ -42,10 +63,23 @@
       "tier": 2,
       "cadence": "quarterly",
       "releasePattern": "Roughly quarterly reports (Sep 2025, Jan 2026, Mar 2026, Jun 2026) plus interim research posts",
-      "checkUrls": ["https://www.anthropic.com/economic-index"],
+      "checkUrls": [
+        "https://www.anthropic.com/economic-index"
+      ],
       "searchQuery": "Anthropic Economic Index report {year}",
-      "targetGraphs": ["genai-work-adoption", "workforce-ai-exposure", "ai-adoption-rate", "tech-sector-displacement", "customer-service-automation", "median-wage-impact", "high-skill-wage-premium"],
-      "lastIngested": { "date": "2026-06-26", "edition": "Cadences (June 2026)" },
+      "targetGraphs": [
+        "genai-work-adoption",
+        "workforce-ai-exposure",
+        "ai-adoption-rate",
+        "tech-sector-displacement",
+        "customer-service-automation",
+        "median-wage-impact",
+        "high-skill-wage-premium"
+      ],
+      "lastIngested": {
+        "date": "2026-06-26",
+        "edition": "Cadences (June 2026)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-09-15",
       "priority": "high",
@@ -58,10 +92,17 @@
       "tier": 1,
       "cadence": "quarterly",
       "releasePattern": "AI-mention counts published ~6-8 weeks after each quarter ends (mid-Feb, mid-May, mid-Aug, mid-Nov)",
-      "checkUrls": ["https://insight.factset.com/"],
+      "checkUrls": [
+        "https://insight.factset.com/"
+      ],
       "searchQuery": "FactSet Earnings Insight S&P 500 earnings calls AI {quarter} {year}",
-      "targetGraphs": ["earnings-call-ai-mentions"],
-      "lastIngested": { "date": "2026-02-15", "edition": "Q4 2025 (65% of S&P 500 calls cited AI)" },
+      "targetGraphs": [
+        "earnings-call-ai-mentions"
+      ],
+      "lastIngested": {
+        "date": "2026-02-15",
+        "edition": "Q4 2025 (65% of S&P 500 calls cited AI)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-15",
       "priority": "high",
@@ -74,10 +115,17 @@
       "tier": 1,
       "cadence": "biweekly",
       "releasePattern": "Biweekly national data tables; ingest when the AI-use share moves materially (>= 0.5pp) or quarterly at minimum",
-      "checkUrls": ["https://www.census.gov/hfp/btos/data"],
+      "checkUrls": [
+        "https://www.census.gov/hfp/btos/data"
+      ],
       "searchQuery": "Census BTOS AI adoption {month} {year}",
-      "targetGraphs": ["ai-adoption-rate"],
-      "lastIngested": { "date": "2026-02-26", "edition": "Biweekly national tables, Feb 2026" },
+      "targetGraphs": [
+        "ai-adoption-rate"
+      ],
+      "lastIngested": {
+        "date": "2026-02-26",
+        "edition": "Biweekly national tables, Feb 2026"
+      },
       "lastChecked": null,
       "nextExpected": "2026-03-26",
       "priority": "high",
@@ -90,10 +138,17 @@
       "tier": 1,
       "cadence": "monthly",
       "releasePattern": "Monthly release ~2nd week; AI-relevant slices need cross-tabulation",
-      "checkUrls": ["https://www.census.gov/econ/bfs/"],
+      "checkUrls": [
+        "https://www.census.gov/econ/bfs/"
+      ],
       "searchQuery": "Census business formation statistics AI startups {year}",
-      "targetGraphs": ["ai-business-formation"],
-      "lastIngested": { "date": "2021-01-01", "edition": "Baseline monthly/quarterly data" },
+      "targetGraphs": [
+        "ai-business-formation"
+      ],
+      "lastIngested": {
+        "date": "2021-01-01",
+        "edition": "Baseline monthly/quarterly data"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-10",
       "priority": "low",
@@ -106,10 +161,19 @@
       "tier": 1,
       "cadence": "monthly",
       "releasePattern": "First Friday of each month, 8:30am ET",
-      "checkUrls": ["https://www.bls.gov/news.release/empsit.toc.htm"],
+      "checkUrls": [
+        "https://www.bls.gov/news.release/empsit.toc.htm"
+      ],
       "searchQuery": "BLS employment situation {month} {year} information sector",
-      "targetGraphs": ["overall-us-displacement", "white-collar-professional-displacement", "tech-sector-displacement"],
-      "lastIngested": { "date": "2026-04-05", "edition": "March 2026 (nonfarm payrolls, information sector, unemployment rate)" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-04-05",
+        "edition": "March 2026 (nonfarm payrolls, information sector, unemployment rate)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-08",
       "priority": "high",
@@ -122,10 +186,18 @@
       "tier": 1,
       "cadence": "monthly",
       "releasePattern": "Monthly, ~5 weeks after reference month",
-      "checkUrls": ["https://www.bls.gov/news.release/jolts.toc.htm"],
+      "checkUrls": [
+        "https://www.bls.gov/news.release/jolts.toc.htm"
+      ],
       "searchQuery": "BLS JOLTS job openings {month} {year}",
-      "targetGraphs": ["overall-us-displacement", "white-collar-professional-displacement"],
-      "lastIngested": { "date": "2026-02-05", "edition": "December 2025" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-02-05",
+        "edition": "December 2025"
+      },
       "lastChecked": null,
       "nextExpected": "2026-03-10",
       "priority": "medium",
@@ -138,10 +210,22 @@
       "tier": 1,
       "cadence": "annual",
       "releasePattern": "Late August / early September",
-      "checkUrls": ["https://www.bls.gov/emp/"],
+      "checkUrls": [
+        "https://www.bls.gov/emp/"
+      ],
       "searchQuery": "BLS employment projections {startYear}-{endYear} AI occupations",
-      "targetGraphs": ["overall-us-displacement", "tech-sector-displacement", "customer-service-automation", "healthcare-admin-displacement", "white-collar-professional-displacement", "financial-services-displacement"],
-      "lastIngested": { "date": "2026-01-10", "edition": "2024-2034 projections (incl. computer programmers case study)" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "customer-service-automation",
+        "healthcare-admin-displacement",
+        "white-collar-professional-displacement",
+        "financial-services-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-01-10",
+        "edition": "2024-2034 projections (incl. computer programmers case study)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-09-01",
       "priority": "high",
@@ -154,10 +238,20 @@
       "tier": 1,
       "cadence": "annual",
       "releasePattern": "March-April release of prior-May reference data",
-      "checkUrls": ["https://www.bls.gov/oes/"],
+      "checkUrls": [
+        "https://www.bls.gov/oes/"
+      ],
       "searchQuery": "BLS OEWS occupational wages May {year}",
-      "targetGraphs": ["median-wage-impact", "high-skill-wage-premium", "entry-level-wage-impact", "creative-industry-displacement"],
-      "lastIngested": { "date": "2025-11-15", "edition": "May 2024 reference data" },
+      "targetGraphs": [
+        "median-wage-impact",
+        "high-skill-wage-premium",
+        "entry-level-wage-impact",
+        "creative-industry-displacement"
+      ],
+      "lastIngested": {
+        "date": "2025-11-15",
+        "edition": "May 2024 reference data"
+      },
       "lastChecked": null,
       "nextExpected": "2026-04-15",
       "priority": "medium",
@@ -170,10 +264,19 @@
       "tier": 2,
       "cadence": "monthly",
       "releasePattern": "First week of each month for the prior month",
-      "checkUrls": ["https://www.challengergray.com/blog/"],
+      "checkUrls": [
+        "https://www.challengergray.com/blog/"
+      ],
       "searchQuery": "Challenger report job cuts AI {month} {year}",
-      "targetGraphs": ["overall-us-displacement", "tech-sector-displacement", "white-collar-professional-displacement"],
-      "lastIngested": { "date": "2026-04-02", "edition": "March 2026 report (via Forbes)" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-04-02",
+        "edition": "March 2026 report (via Forbes)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-05",
       "priority": "high",
@@ -186,10 +289,20 @@
       "tier": 1,
       "cadence": "monthly",
       "releasePattern": "Roughly monthly-to-bimonthly CPS updates by Gimbel et al.",
-      "checkUrls": ["https://budgetlab.yale.edu/topics/artificial-intelligence"],
+      "checkUrls": [
+        "https://budgetlab.yale.edu/topics/artificial-intelligence"
+      ],
       "searchQuery": "Yale Budget Lab AI labor market update {month} {year}",
-      "targetGraphs": ["overall-us-displacement", "workforce-ai-exposure", "median-wage-impact", "entry-level-wage-impact"],
-      "lastIngested": { "date": "2026-06-15", "edition": "AI Is Probably Not (Yet) the Reason for Labor Market Weakening" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "median-wage-impact",
+        "entry-level-wage-impact"
+      ],
+      "lastIngested": {
+        "date": "2026-06-15",
+        "edition": "AI Is Probably Not (Yet) the Reason for Labor Market Weakening"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-20",
       "priority": "high",
@@ -202,10 +315,22 @@
       "tier": 2,
       "cadence": "monthly",
       "releasePattern": "Monthly US labor market updates plus rolling postings/wage trackers",
-      "checkUrls": ["https://www.hiringlab.org/"],
+      "checkUrls": [
+        "https://www.hiringlab.org/"
+      ],
       "searchQuery": "Indeed Hiring Lab US labor market update {month} {year} AI",
-      "targetGraphs": ["tech-sector-displacement", "customer-service-automation", "creative-industry-displacement", "entry-level-wage-impact", "genai-work-adoption", "overall-us-displacement"],
-      "lastIngested": { "date": "2026-01-22", "edition": "January 2026 US Labor Market Update" },
+      "targetGraphs": [
+        "tech-sector-displacement",
+        "customer-service-automation",
+        "creative-industry-displacement",
+        "entry-level-wage-impact",
+        "genai-work-adoption",
+        "overall-us-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-01-22",
+        "edition": "January 2026 US Labor Market Update"
+      },
       "lastChecked": null,
       "nextExpected": "2026-02-25",
       "priority": "high",
@@ -218,10 +343,18 @@
       "tier": 2,
       "cadence": "quarterly",
       "releasePattern": "Workplace AI items surface roughly quarterly in Gallup workplace research",
-      "checkUrls": ["https://www.gallup.com/workplace/"],
+      "checkUrls": [
+        "https://www.gallup.com/workplace/"
+      ],
       "searchQuery": "Gallup AI adoption workplace survey {year}",
-      "targetGraphs": ["genai-work-adoption", "ai-adoption-rate"],
-      "lastIngested": { "date": "2026-04-13", "edition": "Rising AI Adoption Spurs Workforce Changes" },
+      "targetGraphs": [
+        "genai-work-adoption",
+        "ai-adoption-rate"
+      ],
+      "lastIngested": {
+        "date": "2026-04-13",
+        "edition": "Rising AI Adoption Spurs Workforce Changes"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-15",
       "priority": "medium",
@@ -234,10 +367,19 @@
       "tier": 2,
       "cadence": "semiannual",
       "releasePattern": "Flagship survey ~annually (autumn) with interim updates",
-      "checkUrls": ["https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"],
+      "checkUrls": [
+        "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+      ],
       "searchQuery": "McKinsey State of AI survey {year}",
-      "targetGraphs": ["ai-adoption-rate", "overall-us-displacement", "white-collar-professional-displacement"],
-      "lastIngested": { "date": "2025-11-05", "edition": "State of AI 2025 (Nov 2025)" },
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "lastIngested": {
+        "date": "2025-11-05",
+        "edition": "State of AI 2025 (Nov 2025)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-08-01",
       "priority": "medium",
@@ -250,10 +392,18 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "April-May each year, plus occasional special reports",
-      "checkUrls": ["https://www.microsoft.com/en-us/worklab/work-trend-index"],
+      "checkUrls": [
+        "https://www.microsoft.com/en-us/worklab/work-trend-index"
+      ],
       "searchQuery": "Microsoft Work Trend Index {year}",
-      "targetGraphs": ["genai-work-adoption", "ai-adoption-rate"],
-      "lastIngested": { "date": "2025-11-20", "edition": "2025 WTI (Apr 2025) + 'AI at Work Is Here' special report (Nov 2025)" },
+      "targetGraphs": [
+        "genai-work-adoption",
+        "ai-adoption-rate"
+      ],
+      "lastIngested": {
+        "date": "2025-11-20",
+        "edition": "2025 WTI (Apr 2025) + 'AI at Work Is Here' special report (Nov 2025)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-01",
       "priority": "medium",
@@ -266,10 +416,22 @@
       "tier": 2,
       "cadence": "biennial",
       "releasePattern": "January, every two years (2023, 2025, 2027)",
-      "checkUrls": ["https://www.weforum.org/publications/"],
+      "checkUrls": [
+        "https://www.weforum.org/publications/"
+      ],
       "searchQuery": "WEF Future of Jobs Report {year}",
-      "targetGraphs": ["overall-us-displacement", "creative-industry-displacement", "education-sector-displacement", "financial-services-displacement", "tech-sector-displacement", "robots-physical-automation-displacement"],
-      "lastIngested": { "date": "2025-12-01", "edition": "Future of Jobs Report 2025" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "creative-industry-displacement",
+        "education-sector-displacement",
+        "financial-services-displacement",
+        "tech-sector-displacement",
+        "robots-physical-automation-displacement"
+      ],
+      "lastIngested": {
+        "date": "2025-12-01",
+        "edition": "Future of Jobs Report 2025"
+      },
       "lastChecked": null,
       "nextExpected": "2027-01-10",
       "priority": "medium",
@@ -282,10 +444,20 @@
       "tier": 1,
       "cadence": "annual",
       "releasePattern": "Early-to-mid July each year",
-      "checkUrls": ["https://www.oecd.org/en/publications/serials/oecd-employment-outlook.html"],
+      "checkUrls": [
+        "https://www.oecd.org/en/publications/serials/oecd-employment-outlook.html"
+      ],
       "searchQuery": "OECD Employment Outlook {year} AI",
-      "targetGraphs": ["overall-us-displacement", "white-collar-professional-displacement", "high-skill-wage-premium", "workforce-ai-exposure"],
-      "lastIngested": { "date": "2025-07-01", "edition": "Employment Outlook 2025 (AI and high-skill occupations)" },
+      "targetGraphs": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "high-skill-wage-premium",
+        "workforce-ai-exposure"
+      ],
+      "lastIngested": {
+        "date": "2025-07-01",
+        "edition": "Employment Outlook 2025 (AI and high-skill occupations)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-09",
       "priority": "high",
@@ -298,10 +470,20 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "May-June each year",
-      "checkUrls": ["https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer.html"],
+      "checkUrls": [
+        "https://www.pwc.com/gx/en/issues/artificial-intelligence/job-barometer.html"
+      ],
       "searchQuery": "PwC AI Jobs Barometer {year}",
-      "targetGraphs": ["high-skill-wage-premium", "median-wage-impact", "overall-us-displacement", "entry-level-wage-impact"],
-      "lastIngested": { "date": "2025-10-15", "edition": "2025 Barometer (wage premium analysis)" },
+      "targetGraphs": [
+        "high-skill-wage-premium",
+        "median-wage-impact",
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
+      "lastIngested": {
+        "date": "2025-10-15",
+        "edition": "2025 Barometer (wage premium analysis)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-06-15",
       "priority": "high",
@@ -314,10 +496,20 @@
       "tier": 2,
       "cadence": "quarterly",
       "releasePattern": "Quarterly, ~first month of each quarter",
-      "checkUrls": ["https://kpmg.com/us/en/media/news.html"],
+      "checkUrls": [
+        "https://kpmg.com/us/en/media/news.html"
+      ],
       "searchQuery": "KPMG AI Quarterly Pulse Survey Q{n} {year}",
-      "targetGraphs": ["ai-adoption-rate", "genai-work-adoption", "white-collar-professional-displacement", "high-skill-wage-premium"],
-      "lastIngested": { "date": "2026-03-01", "edition": "Q1 2026" },
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "genai-work-adoption",
+        "white-collar-professional-displacement",
+        "high-skill-wage-premium"
+      ],
+      "lastIngested": {
+        "date": "2026-03-01",
+        "edition": "Q1 2026"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-10",
       "priority": "medium",
@@ -330,10 +522,20 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "January each year (was quarterly waves in 2024)",
-      "checkUrls": ["https://www.deloitte.com/us/en/services/consulting/research/state-of-generative-ai-in-enterprise.html"],
+      "checkUrls": [
+        "https://www.deloitte.com/us/en/services/consulting/research/state-of-generative-ai-in-enterprise.html"
+      ],
       "searchQuery": "Deloitte State of AI in the Enterprise {year}",
-      "targetGraphs": ["ai-adoption-rate", "genai-work-adoption", "overall-us-displacement", "workforce-ai-exposure"],
-      "lastIngested": { "date": "2026-01-15", "edition": "2026 report ('The untapped edge')" },
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "genai-work-adoption",
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "lastIngested": {
+        "date": "2026-01-15",
+        "edition": "2026 report ('The untapped edge')"
+      },
       "lastChecked": null,
       "nextExpected": "2027-01-15",
       "priority": "medium",
@@ -346,10 +548,18 @@
       "tier": 1,
       "cadence": "quarterly",
       "releasePattern": "Early Feb / May / Aug / Nov",
-      "checkUrls": ["https://investors.upwork.com/"],
+      "checkUrls": [
+        "https://investors.upwork.com/"
+      ],
       "searchQuery": "Upwork Q{n} {year} earnings GSV freelancer AI",
-      "targetGraphs": ["freelancer-rate-impact", "creative-industry-displacement"],
-      "lastIngested": { "date": "2026-02-10", "edition": "Q4 2025 / FY2025 results" },
+      "targetGraphs": [
+        "freelancer-rate-impact",
+        "creative-industry-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-02-10",
+        "edition": "Q4 2025 / FY2025 results"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-05",
       "priority": "medium",
@@ -362,10 +572,17 @@
       "tier": 1,
       "cadence": "semiannual",
       "releasePattern": "Survey waves roughly every 6 months with St. Louis Fed 'On the Economy' write-ups",
-      "checkUrls": ["https://www.stlouisfed.org/on-the-economy"],
+      "checkUrls": [
+        "https://www.stlouisfed.org/on-the-economy"
+      ],
       "searchQuery": "Bick Blandin Deming generative AI adoption survey wave {year}",
-      "targetGraphs": ["genai-work-adoption"],
-      "lastIngested": { "date": "2025-11-01", "edition": "Fall 2025 wave (GenAI Adoption Tracker)" },
+      "targetGraphs": [
+        "genai-work-adoption"
+      ],
+      "lastIngested": {
+        "date": "2025-11-01",
+        "edition": "Fall 2025 wave (GenAI Adoption Tracker)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-01",
       "priority": "high",
@@ -378,10 +595,19 @@
       "tier": 1,
       "cadence": "monthly",
       "releasePattern": "Monthly AI adoption index from corporate card/bill-pay data; occasional joint studies (e.g., with Revelio Labs)",
-      "checkUrls": ["https://ramp.com/data"],
+      "checkUrls": [
+        "https://ramp.com/data"
+      ],
       "searchQuery": "Ramp AI Index business adoption {month} {year}",
-      "targetGraphs": ["ai-adoption-rate", "overall-us-displacement", "freelancer-rate-impact"],
-      "lastIngested": { "date": "2026-06-30", "edition": "Ramp Economics Lab / Revelio Labs firm-level AI spending study" },
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "freelancer-rate-impact"
+      ],
+      "lastIngested": {
+        "date": "2026-06-30",
+        "edition": "Ramp Economics Lab / Revelio Labs firm-level AI spending study"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-31",
       "priority": "medium",
@@ -394,10 +620,18 @@
       "tier": 2,
       "cadence": "quarterly",
       "releasePattern": "Irregular press releases, several per year; concentrated around Gartner symposia (Oct) and year-start predictions",
-      "checkUrls": ["https://www.gartner.com/en/newsroom"],
+      "checkUrls": [
+        "https://www.gartner.com/en/newsroom"
+      ],
       "searchQuery": "Gartner customer service AI agents prediction {year}",
-      "targetGraphs": ["customer-service-automation", "white-collar-professional-displacement"],
-      "lastIngested": { "date": "2026-02-18", "edition": "91% of CS leaders under pressure to implement AI" },
+      "targetGraphs": [
+        "customer-service-automation",
+        "white-collar-professional-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-02-18",
+        "edition": "91% of CS leaders under pressure to implement AI"
+      },
       "lastChecked": null,
       "nextExpected": "2026-08-01",
       "priority": "medium",
@@ -410,10 +644,19 @@
       "tier": 2,
       "cadence": "quarterly",
       "releasePattern": "Irregular; AI hiring and skills reports several times per year",
-      "checkUrls": ["https://economicgraph.linkedin.com/research"],
+      "checkUrls": [
+        "https://economicgraph.linkedin.com/research"
+      ],
       "searchQuery": "LinkedIn Economic Graph AI hiring skills report {year}",
-      "targetGraphs": ["workforce-ai-exposure", "high-skill-wage-premium", "tech-sector-displacement"],
-      "lastIngested": { "date": "2025-02-01", "edition": "AI reports and resources hub" },
+      "targetGraphs": [
+        "workforce-ai-exposure",
+        "high-skill-wage-premium",
+        "tech-sector-displacement"
+      ],
+      "lastIngested": {
+        "date": "2025-02-01",
+        "edition": "AI reports and resources hub"
+      },
       "lastChecked": null,
       "nextExpected": "2026-07-02",
       "priority": "medium",
@@ -426,10 +669,19 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "Index refined roughly annually (May 2023, May 2025); related WESO reports in January",
-      "checkUrls": ["https://www.ilo.org/publications"],
+      "checkUrls": [
+        "https://www.ilo.org/publications"
+      ],
       "searchQuery": "ILO generative AI jobs occupational exposure index {year}",
-      "targetGraphs": ["workforce-ai-exposure", "customer-service-automation", "white-collar-professional-displacement"],
-      "lastIngested": { "date": "2025-05-20", "edition": "Refined Global Index of Occupational Exposure (2025)" },
+      "targetGraphs": [
+        "workforce-ai-exposure",
+        "customer-service-automation",
+        "white-collar-professional-displacement"
+      ],
+      "lastIngested": {
+        "date": "2025-05-20",
+        "edition": "Refined Global Index of Occupational Exposure (2025)"
+      },
       "lastChecked": null,
       "nextExpected": "2026-05-20",
       "priority": "medium",
@@ -442,10 +694,17 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "February each year",
-      "checkUrls": ["https://www.caqh.org/insights/caqh-index-report"],
+      "checkUrls": [
+        "https://www.caqh.org/insights/caqh-index-report"
+      ],
       "searchQuery": "CAQH Index report {year} healthcare administrative automation savings",
-      "targetGraphs": ["healthcare-admin-displacement"],
-      "lastIngested": { "date": "2026-02-19", "edition": "2025 CAQH Index" },
+      "targetGraphs": [
+        "healthcare-admin-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-02-19",
+        "edition": "2025 CAQH Index"
+      },
       "lastChecked": null,
       "nextExpected": "2027-02-15",
       "priority": "medium",
@@ -458,14 +717,45 @@
       "tier": 2,
       "cadence": "annual",
       "releasePattern": "March each year",
-      "checkUrls": ["https://www.ellucian.com/news"],
+      "checkUrls": [
+        "https://www.ellucian.com/news"
+      ],
       "searchQuery": "Ellucian higher education AI survey {year}",
-      "targetGraphs": ["education-sector-displacement"],
-      "lastIngested": { "date": "2026-03-04", "edition": "3rd Annual Higher Education AI Survey" },
+      "targetGraphs": [
+        "education-sector-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-03-04",
+        "edition": "3rd Annual Higher Education AI Survey"
+      },
       "lastChecked": null,
       "nextExpected": "2027-03-01",
       "priority": "medium",
       "notes": "One of few recurring series for education-sector-displacement (a data-hungry graph)."
+    },
+    {
+      "id": "mercer-global-talent-trends",
+      "series": "Mercer Global Talent Trends",
+      "publisher": "Mercer",
+      "tier": 2,
+      "cadence": "annual",
+      "releasePattern": "February each year (11th edition in 2026); survey fielded prior autumn",
+      "checkUrls": [
+        "https://www.mercer.com/insights/people-strategy/future-of-work/global-talent-trends/"
+      ],
+      "searchQuery": "Mercer Global Talent Trends {year} AI workforce",
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "lastIngested": {
+        "date": "2026-02-01",
+        "edition": "Global Talent Trends 2026"
+      },
+      "lastChecked": "2026-07-02",
+      "nextExpected": "2027-02-15",
+      "priority": "medium",
+      "notes": "n~12,000 global panel; redeployment/reskilling expectations and employee job-loss concern trend (28% 2024 -> 40% 2026)."
     }
   ]
 }

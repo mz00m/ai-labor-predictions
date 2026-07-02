@@ -1049,6 +1049,15 @@
       "label": "FRED JOLTS Feb 2026: Job openings 6,882K, continued cooling"
     },
     {
+      "date": "2026-02-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "mercer-global-talent-trends-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Mercer: 65% of execs expect 11-30% of workforce redeployed/reskilled due to AI"
+    },
+    {
       "date": "2026-02-05",
       "direction": "down",
       "sourceIds": [
@@ -3296,6 +3305,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
       "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives."
+    },
+    {
+      "id": "mercer-global-talent-trends-2026",
+      "title": "Global Talent Trends 2026",
+      "url": "https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/",
+      "publisher": "Mercer",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "65% expect 11%-30% of their workforce to be redeployed or reskilled due to AI [over the next two years]. Employee concern about job loss due to AI has surged from 28% in 2024 to 40% in 2026. 98% of executives are planning organizational design changes over the next two years. The report draws on insights from nearly 12,000 business executives, HR leaders, investors, and employees worldwide gathered via a survey conducted from September to October 2025."
     }
   ]
 }

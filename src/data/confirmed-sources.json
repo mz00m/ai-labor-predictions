@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 602,
-  "verifiedCount": 592,
+  "totalSources": 603,
+  "verifiedCount": 593,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8547,6 +8547,20 @@
       "excerpt": "By 2027, Gartner predicts that half of companies that attributed headcount reduction to AI will rehire staff to perform similar functions, but under different job titles. Despite speculation that AI will drastically reduce customer service headcount, Gartner's report found that only a fifth of customer service leaders have actually reduced agent staffing due to AI. Gartner's report polled 321 customer service and support leaders in October 2025.",
       "usedIn": [
         "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mercer-global-talent-trends-2026": {
+      "id": "mercer-global-talent-trends-2026",
+      "title": "Global Talent Trends 2026",
+      "url": "https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/",
+      "publisher": "Mercer",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-01",
+      "excerpt": "65% expect 11%-30% of their workforce to be redeployed or reskilled due to AI [over the next two years]. Employee concern about job loss due to AI has surged from 28% in 2024 to 40% in 2026. 98% of executives are planning organizational design changes over the next two years. The report draws on insights from nearly 12,000 business executives, HR leaders, investors, and employees worldwide gathered via a survey conducted from September to October 2025.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
