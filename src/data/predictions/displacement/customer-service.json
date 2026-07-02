@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 41.2,
+  "currentValue": 39.3,
   "timeHorizon": "By 2028",
   "aggregationMethod": "weighted",
   "disclaimer": "Measures interaction automation, not job elimination. Actual headcount effects depend on demand response and service quality. A high automation rate may reduce headcount but does not imply equivalent job loss.",
@@ -69,6 +69,17 @@
       "evidenceTier": 2,
       "metricType": "survey",
       "dataType": "projected"
+    },
+    {
+      "date": "2025-11-13",
+      "value": 30,
+      "sourceIds": [
+        "salesforce-state-of-service-7th-2025"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "survey",
+      "sampleSize": 6500
     },
     {
       "date": "2026-02-01",
@@ -245,6 +256,15 @@
       ],
       "evidenceTier": 2,
       "label": "Gartner: 20-30% of CS agents replaced by 2026"
+    },
+    {
+      "date": "2025-11-13",
+      "direction": "up",
+      "sourceIds": [
+        "salesforce-state-of-service-7th-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Salesforce: service teams project AI to handle 50% of cases by 2027"
     },
     {
       "date": "2025-11-25",
@@ -838,6 +858,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-02-03",
       "excerpt": "By 2027, Gartner predicts that half of companies that attributed headcount reduction to AI will rehire staff to perform similar functions, but under different job titles. Despite speculation that AI will drastically reduce customer service headcount, Gartner's report found that only a fifth of customer service leaders have actually reduced agent staffing due to AI. Gartner's report polled 321 customer service and support leaders in October 2025."
+    },
+    {
+      "id": "salesforce-state-of-service-7th-2025",
+      "title": "Salesforce State of Service Report (7th Edition)",
+      "url": "https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/",
+      "publisher": "Salesforce",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-13",
+      "excerpt": "Service teams estimate 30% of cases are currently handled by AI. By 2027, as AI agents - or digital labor - gain momentum, they project that figure will reach 50%. Data is sourced from a double-anonymous survey of 6,500 service professionals and decision makers conducted from April 25 through June 6, 2025."
     }
   ]
 }

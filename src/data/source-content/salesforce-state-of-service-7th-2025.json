@@ -1,0 +1,14 @@
+{
+  "id": "salesforce-state-of-service-7th-2025",
+  "abstract": "Salesforce's 7th State of Service report, based on a double-anonymous survey of 6,500 service professionals and decision makers (April 25 - June 6, 2025). Service teams estimate 30% of customer service cases are currently handled by AI, projected to reach 50% by 2027 as AI agents gain momentum.",
+  "keyFindings": [
+    "Service teams estimate 30% of cases are currently handled by AI (2025).",
+    "Teams project AI will handle 50% of cases by 2027.",
+    "Service reps using AI spend 20% less time on routine cases.",
+    "71% of service reps with AI say it's creating growth opportunities.",
+    "51% of service leaders cite security as their top AI implementation concern."
+  ],
+  "methodology": "Double-anonymous survey of 6,500 service professionals and decision makers, fielded April 25 - June 6, 2025; published November 13, 2025.",
+  "qualifiers": "Practitioner self-estimates of AI case handling, not measured deflection rates. Vendor-published research (Salesforce sells the AI agents in question) - treat projections with that interest in mind.",
+  "fetchedAt": "2026-07-02"
+}

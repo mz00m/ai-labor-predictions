@@ -756,6 +756,29 @@
       "nextExpected": "2027-02-15",
       "priority": "medium",
       "notes": "n~12,000 global panel; redeployment/reskilling expectations and employee job-loss concern trend (28% 2024 -> 40% 2026)."
+    },
+    {
+      "id": "salesforce-state-of-service",
+      "series": "Salesforce State of Service",
+      "publisher": "Salesforce",
+      "tier": 2,
+      "cadence": "annual",
+      "releasePattern": "Roughly annual editions (7th edition November 2025)",
+      "checkUrls": [
+        "https://www.salesforce.com/resources/research-reports/state-of-service/"
+      ],
+      "searchQuery": "Salesforce State of Service report {year} AI cases",
+      "targetGraphs": [
+        "customer-service-automation"
+      ],
+      "lastIngested": {
+        "date": "2025-11-13",
+        "edition": "7th Edition (30% of cases handled by AI)"
+      },
+      "lastChecked": "2026-07-02",
+      "nextExpected": "2026-11-15",
+      "priority": "medium",
+      "notes": "n=6,500 service professionals; direct unit match for customer-service-automation. Vendor research - keep T2."
     }
   ]
 }

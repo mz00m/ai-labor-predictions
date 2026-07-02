@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 603,
-  "verifiedCount": 593,
+  "totalSources": 604,
+  "verifiedCount": 594,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8561,6 +8561,20 @@
       "excerpt": "65% expect 11%-30% of their workforce to be redeployed or reskilled due to AI [over the next two years]. Employee concern about job loss due to AI has surged from 28% in 2024 to 40% in 2026. 98% of executives are planning organizational design changes over the next two years. The report draws on insights from nearly 12,000 business executives, HR leaders, investors, and employees worldwide gathered via a survey conducted from September to October 2025.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "salesforce-state-of-service-7th-2025": {
+      "id": "salesforce-state-of-service-7th-2025",
+      "title": "Salesforce State of Service Report (7th Edition)",
+      "url": "https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/",
+      "publisher": "Salesforce",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-13",
+      "excerpt": "Service teams estimate 30% of cases are currently handled by AI. By 2027, as AI agents - or digital labor - gain momentum, they project that figure will reach 50%. Data is sourced from a double-anonymous survey of 6,500 service professionals and decision makers conducted from April 25 through June 6, 2025.",
+      "usedIn": [
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false
