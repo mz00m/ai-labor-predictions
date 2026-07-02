@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 602,
-  "verifiedCount": 592,
+  "totalSources": 603,
+  "verifiedCount": 593,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8548,6 +8548,18 @@
       "publisher": "Forrester (via CX Dive; analysts Kate Leggett & Laura Ramos)",
       "evidenceTier": 2,
       "datePublished": "2026-05-20"
+    },
+    "gallup-arts-ai-creative-2026": {
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "AI Is Changing Creative Work, but the Arts Aren't Disappearing",
+      "url": "https://www.gallup.com/workplace/708575/ai-changing-creative-work-arts-arent-disappearing.aspx",
+      "publisher": "Gallup (with Journal of Cultural Economics)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01"
     }
   }
 }
