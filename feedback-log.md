@@ -28,6 +28,11 @@ once decided.
    with empty URL and this note, (b) remove the source and its data points,
    (c) someone with GS Research access supplies the gspublishing.com link.
    *(Not yet decided — agent recommendation is (a).)*
+2. **10 unverified orphan entries** (`verified: false`, e.g.
+   adobe-creative-survey-2024, bls-contingent-2025, x-ai-salaries-thread)
+   claim `usedIn` graphs they don't actually feed. Distinct from the 38
+   verified context orphans dispositioned 2026-07-02 — these need either
+   verification + wiring or removal. Present in next /review-queue run.
 
 ---
 
