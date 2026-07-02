@@ -11,13 +11,23 @@ Audit target: $ARGUMENTS
 
 ## Audit Process
 
+### Step 0: Run the Automated Baseline
+
+Run `node scripts/autoresearch/auto-audit.js` (optionally `--category=X` or `--slug=Y`) and read its report before doing anything manually. It already covers drift, source ID integrity, duplicates, sort order, schema, hero stats, registry counts, orphans, and URL patterns — do not redo those by hand; verify and extend.
+
+**Known script limitations** (verify these manually, don't trust the script):
+- Its hero-stat check compares against a hardcoded `heroValue = 3` and greps `src/app/page.tsx` for labels that have moved — see Step 3 for how hero stats actually work now.
+- It does not check sign conventions, `dataType` sanity, the source-content store, or `recurring-sources.json` (Steps 2i-2k and 4c-4d below).
+
 ### Step 1: Load All Data
 
 Read the following files:
-- All 17 prediction JSON files in `src/data/predictions/`
+- All 18 prediction JSON files in `src/data/predictions/` (17 predictions + 1 signal-only chart, `signals/earnings-call-mentions.json`; skip `displacement/_archived/`)
 - `src/data/confirmed-sources.json`
+- `src/data/recurring-sources.json` (recurring release registry)
 - `src/data/last-updated.json`
-- `src/app/page.tsx` (hero stats)
+- `src/lib/data-loader.ts` (`getHeroStats()` — computed hero stats)
+- `src/components/HeroTriad.tsx` (hardcoded productivity stat)
 - `src/lib/prediction-stats.ts` (weighting logic)
 
 ### Step 2: Per-Prediction Checks
@@ -54,11 +64,11 @@ For each `history` entry, verify:
 - `value` is a number
 - `evidenceTier` is 1, 2, 3, or 4
 - `sourceIds` is a non-empty array
-- If `confidenceLow`/`confidenceHigh` exist: low < value < high
+- If `confidenceLow`/`confidenceHigh` exist: low ≤ value ≤ high (a midpoint may equal a bound for one-sided ranges)
 
 For each `overlay` entry, verify:
 - `direction` is one of: "up", "down", "neutral"
-- `label` is ≤ 120 characters
+- `label` is ≤ 120 characters (hard limit; the authoring guideline is ≤ 80 — flag 81-120 as SHOULD FIX, > 120 as MUST FIX)
 - `evidenceTier` is 1, 2, 3, or 4
 
 #### 2f. Statistical Outlier Detection
@@ -86,13 +96,30 @@ For each data point with `isProxy: true`:
 #### 2h. Required Fields
 - `id`, `slug`, `title`, `description`, `category`, `unit`, `timeHorizon` all present and non-empty
 
+#### 2i. Sign Convention Checks
+Per the category conventions in CLAUDE.md:
+- **Displacement** charts: displacement is positive. A negative value must represent employment *growth* (counter-displacement) — spot-check the source excerpt to confirm it isn't a sign error.
+- **Wage** charts: declines are negative. A positive value must represent a wage *gain* or *premium* — spot-check against the excerpt.
+- **Adoption/exposure** charts: values should be positive percentages in [0, 100].
+Flag any data point whose sign contradicts its source excerpt as MUST FIX.
+
+#### 2j. dataType Sanity
+- `dataType: "observed"` points must not be dated in the future
+- Points describing forecasts ("by 2030", "will reach") must be `projected`, not `observed`
+- Predictions with `aggregationMethod: "latest"` must have an unambiguous most-recent point (no date ties with conflicting values)
+
+#### 2k. Source Content Store Coverage
+Every source ingested via `/autoresearch` requires `src/data/source-content/[source-id].json` (the chatbot content store). For each source referenced in the prediction files, check whether the content file exists. Report missing files as SHOULD FIX (list them; they can be backfilled with `npm run backfill:content`).
+
 ### Step 3: Hero Stat Checks
 
-Read `src/app/page.tsx` and extract the three hero stat values. Compare each to its data source:
+Hero stats are no longer hardcoded in `page.tsx`. How they work now:
 
-1. **Productivity boost (~21%)** — flag if the median of productivity studies has changed
-2. **Projected job loss (~3%)** — recompute weighted average of `overall-us-displacement` history with all tiers. Flag if differs by > 1pp from displayed value
-3. **Measured job loss (~0%)** — check that observed-only displacement data still rounds to 0%
+1. **Productivity boost (~21%)** — hardcoded in `src/components/HeroTriad.tsx` (`center={21} low={14} high={35}`). Flag if the median/range of productivity studies has drifted from these values.
+2. **Projected job loss** — computed at build time by `getHeroStats()` in `src/lib/data-loader.ts` (weighted average of `overall-us-displacement`, all tiers, rounded absolute value). No drift is possible, but verify the *inputs*: the graph's history is clean (Steps 2a-2j) and the rounded value is still consistent with what CLAUDE.md/program.md claim.
+3. **Measured job loss** — computed by `getHeroStats()` from the most recent `dataType: "observed"` point of `overall-us-displacement`. Verify observed points exist, are correctly dated, and the latest one is legitimate (not a proxy that should sort earlier).
+
+Also flag if documentation (`CLAUDE.md` "Hero Stats" section, `program.md` "Hero Stats Sync") disagrees with the computed values — stale docs are a finding too.
 
 ### Step 4: Cross-File Consistency
 
@@ -104,6 +131,16 @@ Read `src/app/page.tsx` and extract the three hero stat values. Compare each to 
 #### 4b. Last Updated
 - `src/data/last-updated.json` should reflect the most recent `dateAdded` across all sources
 - `confirmed-sources.json` `lastUpdated` should match
+
+#### 4c. Recurring Sources Registry
+For each series in `src/data/recurring-sources.json`:
+- `lastIngested.date` should not be older than the newest matching source in `confirmed-sources.json` (if a newer edition was ingested without updating the registry, that's a SHOULD FIX)
+- Flag series where today is past `nextExpected` by more than one cadence interval as **stale coverage** (the graphs this series feeds are falling behind — recommend an `/autoresearch` sweep)
+- `targetGraphs` entries must be valid prediction slugs
+
+#### 4d. Reading List / Featured Reads Sync
+- Every article in the `FeaturedReads` component array (`src/components/FeaturedReads.tsx`) should also exist in `src/data/reading-list.json`
+- The FeaturedReads array must have exactly 5 entries
 
 ### Step 5: Output Report
 
