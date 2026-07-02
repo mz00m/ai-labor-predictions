@@ -1037,7 +1037,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "challenger-tech-layoffs-2025": {
       "id": "challenger-tech-layoffs-2025",
@@ -1721,7 +1722,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "fortune-ai-earnings-surge-2026": {
       "id": "fortune-ai-earnings-surge-2026",
@@ -1902,7 +1904,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "glassdoor-ai-salaries-2025": {
       "id": "glassdoor-ai-salaries-2025",
@@ -2183,7 +2186,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "humlum-vestergaard-chatgpt-adoption-2025": {
       "id": "humlum-vestergaard-chatgpt-adoption-2025",
@@ -2327,7 +2331,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "imf-inequality-2024": {
       "id": "imf-inequality-2024",
@@ -2538,7 +2543,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "indeed-wage-tracker-2025": {
       "id": "indeed-wage-tracker-2025",
@@ -2935,7 +2941,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "meta-10k-2024": {
       "id": "meta-10k-2024",
@@ -3136,7 +3143,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "nber-entry-wage-2023": {
       "id": "nber-entry-wage-2023",
@@ -3269,7 +3277,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "oecd-employment-2025": {
       "id": "oecd-employment-2025",
@@ -3412,7 +3421,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "pwbm-ai-adoption-2025": {
       "id": "pwbm-ai-adoption-2025",
@@ -3634,7 +3644,8 @@
         "total-us-jobs-lost"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "stanford-ai-index-2025": {
       "id": "stanford-ai-index-2025",
@@ -3914,7 +3925,8 @@
       "usedIn": [
         "total-us-jobs-lost"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "wef-future-jobs-2025": {
       "id": "wef-future-jobs-2025",
@@ -4362,7 +4374,8 @@
         "total-us-jobs-lost"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "eisfeldt-genai-exposure-2025": {
       "id": "eisfeldt-genai-exposure-2025",
@@ -6875,7 +6888,8 @@
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "bls-contingent-2025": {
       "id": "bls-contingent-2025",
@@ -6903,7 +6917,8 @@
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "bls-tech-vs-nontechmetro-2025": {
       "id": "bls-tech-vs-nontechmetro-2025",
@@ -6931,7 +6946,8 @@
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "brynjolfsson-bls-productivity-2026": {
       "id": "brynjolfsson-bls-productivity-2026",
@@ -6989,7 +7005,8 @@
         "education-sector-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "harvard-health-policy-2024": {
       "id": "harvard-health-policy-2024",
@@ -7018,7 +7035,8 @@
         "geographic-wage-divergence"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "moneypenny-regional-ai-2025": {
       "id": "moneypenny-regional-ai-2025",
@@ -7031,7 +7049,8 @@
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "muro-kinder-geography-2025": {
       "id": "muro-kinder-geography-2025",
@@ -7044,7 +7063,8 @@
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "nber-ai-wages-2023": {
       "id": "nber-ai-wages-2023",
@@ -7072,7 +7092,8 @@
       "usedIn": [
         "geographic-wage-divergence"
       ],
-      "verified": true
+      "verified": true,
+      "contextOnly": true
     },
     "pearson-smarthinking-2025": {
       "id": "pearson-smarthinking-2025",
@@ -7609,7 +7630,8 @@
       "excerpt": "Here, through a series of randomized controlled trials on human-AI interactions (N = 1, 222), we provide causal evidence for two key consequences of AI assistance: reduced persistence and impairment of unassisted performance. Although AI assistance improves performance in the short-term, people perform significantly worse without AI and are more likely to give up.",
       "usedIn": [],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "british-progress-uk-labour-market-2026": {
       "id": "british-progress-uk-labour-market-2026",
@@ -7621,7 +7643,8 @@
       "excerpt": "Three years after generative AI reached the market, there is no detectable employment effect for the most exposed occupations on UK data, regardless of which exposure metric is used. The estimates are noisy, the confidence intervals are wide, and neither measure produces a statistically distinguishable effect on aggregate employment.",
       "usedIn": [],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "garicano-task-not-job-2026": {
       "id": "garicano-task-not-job-2026",
@@ -7771,7 +7794,8 @@
       "excerpt": "Major AI industry figures (Altman, Jensen Huang, Andreessen) are pivoting from displacement-focused messaging to augmentation-focused messaging amid deteriorating public opinion on AI. The new pitch: AI will create new tasks in the short term (task creation, Jevons Paradox), and in the long term humans will be paid for the 'relational sector' where the human element is the product itself. Noah Smith cautiously endorses the new pitch as better PR and potentially self-fulfilling for research direction, while noting it may be partly competitive positioning by OpenAI against Anthropic.",
       "usedIn": [],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "eurostat-ai-enterprises-2025": {
       "id": "eurostat-ai-enterprises-2025",
@@ -8188,7 +8212,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "narayanan-kapoor-ai-normal-tech-2025": {
       "id": "narayanan-kapoor-ai-normal-tech-2025",
@@ -8202,7 +8227,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "andreessen-techno-optimist-manifesto-2023": {
       "id": "andreessen-techno-optimist-manifesto-2023",
@@ -8216,7 +8242,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "brynjolfsson-turing-trap-2022": {
       "id": "brynjolfsson-turing-trap-2022",
@@ -8231,7 +8258,8 @@
         "median-wage-impact"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "buterin-d-acc-techno-optimism-2023": {
       "id": "buterin-d-acc-techno-optimism-2023",
@@ -8245,7 +8273,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "drago-laine-intelligence-curse-2025": {
       "id": "drago-laine-intelligence-curse-2025",
@@ -8259,7 +8288,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "kulveit-soares-gradual-disempowerment-2025": {
       "id": "kulveit-soares-gradual-disempowerment-2025",
@@ -8273,7 +8303,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "aschenbrenner-situational-awareness-2024": {
       "id": "aschenbrenner-situational-awareness-2024",
@@ -8287,7 +8318,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "amodei-machines-of-loving-grace-2024": {
       "id": "amodei-machines-of-loving-grace-2024",
@@ -8301,7 +8333,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "altman-moores-law-for-everything-2021": {
       "id": "altman-moores-law-for-everything-2021",
@@ -8315,7 +8348,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "doctorow-reverse-centaur-guide-2026": {
       "id": "doctorow-reverse-centaur-guide-2026",
@@ -8329,7 +8363,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "kinder-messy-middle-2026": {
       "id": "kinder-messy-middle-2026",
@@ -8344,7 +8379,8 @@
         "white-collar-professional-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "juijn-europe-2031-scenario-2026": {
       "id": "juijn-europe-2031-scenario-2026",
@@ -8358,7 +8394,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "korinek-scenario-planning-agi-2023": {
       "id": "korinek-scenario-planning-agi-2023",
@@ -8372,7 +8409,8 @@
         "overall-us-displacement"
       ],
       "verified": true,
-      "synthetic": false
+      "synthetic": false,
+      "contextOnly": true
     },
     "chandar-supply-demand-labor-2026": {
       "id": "chandar-supply-demand-labor-2026",

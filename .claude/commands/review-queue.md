@@ -54,8 +54,9 @@ accept free-form batch verdicts like "1,3 ingest; 2 drop; rest archive".
   With sign-off, remove the entry and decrement `totalSources`/`verifiedCount`;
   without it, tag the entry `"archived": true` so audits stop counting it as
   active.
-- **Keep as context** → leave in place; note the decision so it isn't
-  re-surfaced next run (log the URL/id in feedback-log.md).
+- **Keep as context** → tag the registry entry `"contextOnly": true` —
+  auto-audit.js skips contextOnly entries in its orphan check, so the item
+  stops resurfacing. Remove the tag if the source is later wired into a graph.
 - **Open questions** → apply whatever the human decides; move the question
   from "Open questions" to a dated entry.
 

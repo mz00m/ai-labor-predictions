@@ -522,6 +522,8 @@ function checkConfirmedSourcesCounts(confirmedSources, predictions, report) {
   }
 }
 
+// Sources tagged contextOnly: true were dispositioned via /review-queue as
+// deliberate context (essays, retired-graph sources) — not flagged as orphans.
 function checkOrphanSources(confirmedSources, predictions, report) {
   // Collect all source IDs referenced across all prediction files
   const referencedIds = new Set();
@@ -531,7 +533,7 @@ function checkOrphanSources(confirmedSources, predictions, report) {
 
   const orphans = [];
   for (const [id, source] of Object.entries(confirmedSources.sources)) {
-    if (!referencedIds.has(id)) {
+    if (!referencedIds.has(id) && !source.contextOnly) {
       orphans.push(id);
     }
   }
