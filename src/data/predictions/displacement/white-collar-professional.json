@@ -1002,6 +1002,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: back-office jobs (HR, billing, payroll) flagged as most AI-vulnerable"
+    },
+    {
+      "date": "2026-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-june-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Challenger: AI cited in 101,743 US layoffs YTD 2026 (23%); tech +83% vs H1 2025"
     }
   ],
   "sources": [
@@ -1846,6 +1855,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-05-04",
       "excerpt": "Recent graduate unemployment climbed to nearly 6%, rising twice as fast as the rest of the workforce since 2022. Computer science majors (ages 22-27) unemployment is 7.0%, computer engineering 7.8%. Early-career software developers aged 22-25 have seen nearly a 20% employment drop from the late-2022 peak; software development job postings are down 53%. 41% of ~100 university presidents surveyed at the January 2026 Yale Higher Education Summit are highly concerned about entry-level white-collar role vulnerability.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "challenger-june-2026",
+      "title": "Challenger Report: June Layoffs Cool to 45,849, Down 53% From May; AI Leads Reasons for Fourth Consecutive Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-june-layoffs-cool-to-45849-down-53-from-may-ai-leads-reasons-for-fourth-consecutive-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01",
+      "excerpt": "US-based employers announced 45,849 job cuts in June 2026, down 53% from May. AI led all reasons for job cuts with 14,029 announced (31% of monthly total). Year-to-date, AI has been cited in 101,743 job cut announcements, approximately 23% of all cuts. Technology announced 15,503 cuts in June for a total of 139,156 YTD \u2014 an increase of 83% from H1 2025. Tech now accounts for nearly a third of all job cuts announced this year. Tech remains the epicenter of this year's cuts. AI is the dominant force as companies are restructuring around it.",
       "dateAdded": "2026-07-02"
     }
   ]

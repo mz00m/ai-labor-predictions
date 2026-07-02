@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-02",
-  "totalSources": 608,
-  "verifiedCount": 598,
+  "totalSources": 609,
+  "verifiedCount": 599,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8620,6 +8620,18 @@
       "publisher": "Upwork (Investor Relations / Press Release)",
       "evidenceTier": 1,
       "datePublished": "2026-02-04"
+    },
+    "challenger-june-2026": {
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Challenger Report: June Layoffs Cool to 45,849, Down 53% From May; AI Leads Reasons for Fourth Consecutive Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-june-layoffs-cool-to-45849-down-53-from-may-ai-leads-reasons-for-fourth-consecutive-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01"
     }
   }
 }
