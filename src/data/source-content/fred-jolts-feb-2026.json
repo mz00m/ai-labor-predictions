@@ -1,0 +1,13 @@
+{
+  "id": "fred-jolts-feb-2026",
+  "abstract": "The FRED JOLTS (Job Openings and Labor Turnover Survey) total nonfarm job openings time series provides monthly data on the number of job openings across the US economy. The February 2026 update captures the latest reading in a series that has become a key indicator for measuring labor market tightness and demand-side dynamics. Job openings peaked at approximately 12 million in March 2022 during the post-pandemic labor shortage and have since declined substantially, reflecting a normalization of labor market conditions. The JOLTS data are critical context for AI labor market analysis because they help distinguish between AI-driven demand reduction and cyclical cooling. A decline in openings concentrated in AI-exposed occupations or sectors, relative to the broader trend, would suggest AI-specific displacement effects beyond normal business cycle dynamics.",
+  "keyFindings": [
+    "JOLTS job openings provide a demand-side indicator of labor market conditions, complementing employment and wage data for a complete picture of AI's labor market effects.",
+    "Job openings peaked near 12 million in March 2022 and have declined substantially, reflecting post-pandemic labor market normalization.",
+    "The ratio of job openings to unemployed workers is a key indicator of labor market tightness, with implications for workers' bargaining power and ability to transition between occupations.",
+    "Sector-level JOLTS data enable comparison of demand trends in AI-exposed vs. AI-insulated industries, helping isolate AI effects from cyclical factors."
+  ],
+  "methodology": "Monthly survey conducted by the Bureau of Labor Statistics, collecting data on job openings, hires, and separations from a sample of approximately 21,000 nonfarm business and government establishments. Data are seasonally adjusted. Published via FRED (Federal Reserve Economic Data) with historical time series.",
+  "qualifiers": "JOLTS captures total openings but does not disaggregate by AI exposure level or technology requirements. Establishment-level survey data are subject to sampling error. Job openings reflect posted positions, which may not correspond one-to-one with actual hiring intent. The series does not distinguish between openings for new positions vs. replacement hires. Seasonal adjustment methodology may smooth over short-term AI-related shifts.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "carlyle-compass-ai-saas-2026",
+  "abstract": "The Carlyle Compass newsletter by Jason Thomas presents findings from Carlyle's proprietary survey of corporate management teams on AI integration efforts and their expected impact on software spending and workforce. The central finding is that only 11% of management teams expect AI to replace existing software subscriptions, contradicting market fears about wholesale SaaS disintermediation. Instead, companies expect AI to reduce maintenance spending on legacy infrastructure, save on consulting fees, and increase the productivity of existing workers, thereby reducing future headcount needs. The most striking workforce finding is that 26% of respondents cited internal headcount as the primary spending category they expect AI to offset — the largest single category — followed by IT services and consultants at 22%. This suggests that companies view AI less as a tool for replacing software and more as a mechanism for reducing labor costs and external service dependencies while maintaining existing technology stacks.",
+  "keyFindings": [
+    "Only 11% of management teams expect AI to replace existing software subscriptions, suggesting SaaS disintermediation fears may be overstated.",
+    "26% of respondents cited internal headcount as the spending category AI would most offset — the largest single category in the survey.",
+    "22% cited IT services and consultants as the second-largest AI spending offset, signaling reduced demand for external advisory and implementation services.",
+    "Companies view AI primarily as complementary to existing software stacks rather than as a replacement, with productivity gains from existing workers as the primary value driver.",
+    "The data suggests AI's labor market impact may be more significant than its software market impact, despite greater investor attention to the latter."
+  ],
+  "methodology": "Proprietary survey conducted by Carlyle Group of management teams at companies undergoing AI integration. Published in The Carlyle Compass newsletter by Jason Thomas. The survey does not publicly disclose sample size, respondent profiles, industry composition, or survey administration methodology. Carlyle's portfolio of technology and business services companies likely informs the respondent pool.",
+  "qualifiers": "Survey methodology is opaque — no publicly disclosed sample size, industry breakdown, or respondent selection criteria. Carlyle is a private equity firm with significant portfolio company exposure to both AI adoption and workforce optimization, creating potential framing incentives. Management team expectations about AI offsets may not translate to actual spending shifts or headcount reductions. The 26% headcount offset figure represents expectations, not realized changes. The survey was distributed via newsletter and may reflect a curated subset of findings.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "barth-hoen-kerr-declining-occupations-nber-2026",
+  "abstract": "Barth, Hoen, and Kerr use comprehensive Norwegian administrative registry data to examine career outcomes for workers employed in occupations that declined by at least 25% between 2007 and 2024. The study tracks individual workers over a 17-year panel, comparing those who remained in declining occupations to observably similar workers in stable or growing fields. Workers in declining occupations experienced 0.4 fewer years of employment over the study period and a 4.7% reduction in cumulative future earnings relative to their starting earnings — economically equivalent to losing approximately one full year of earnings across the 17-year span. However, the authors find that much of the employment gap is attributable to individual characteristics (selection) rather than the occupational decline itself, suggesting that the workers most vulnerable to occupational decline also carry other labor market disadvantages. The paper provides important evidence on the human cost of structural labor market change, including automation-driven occupation loss, while highlighting the difficulty of separating occupational effects from worker selection.",
+  "keyFindings": [
+    "Workers in occupations declining 25%+ experienced a 4.7% reduction in cumulative future earnings, equivalent to losing one year's earnings over 17 years",
+    "Workers in declining occupations had 0.4 fewer years of employment over the 2007-2024 study period",
+    "Employment gaps were mostly explained by individual characteristics, suggesting selection effects are substantial",
+    "Earnings losses from occupational decline are persistent but moderate at the individual level",
+    "Published in AEA Papers and Proceedings (2026), vol. 116, pp. 251-255"
+  ],
+  "methodology": "Longitudinal analysis using Norwegian administrative registry data covering the full working-age population, 2007-2024. Identifies occupations declining by at least 25% over the study period. Compares career trajectories (employment years, cumulative earnings) of workers in declining occupations to observably similar workers in non-declining occupations. Supported by the Norwegian Research Council.",
+  "qualifiers": "Norwegian labor market has strong social safety nets, active labor market policies, and high union density — earnings losses would likely be larger in less protected labor markets like the US. Selection effects make it difficult to isolate the causal impact of occupational decline from worker heterogeneity. Study defines 'declining' based on aggregate headcount reduction, not cause (automation, trade, demand shifts). Short publication format (5 pages) limits methodological detail.",
+  "fetchedAt": "2026-05-26"
+}

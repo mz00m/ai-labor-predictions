@@ -1,0 +1,13 @@
+{
+  "id": "adobe-creative-survey-2024",
+  "abstract": "Adobe's Future of Creativity Survey 2024 examines how AI tools are reshaping the creative profession. The study finds that 74% of creative professionals report using AI tools in their workflow, reflecting rapid adoption across the industry. However, the survey also reveals a significant displacement signal: 30% of creative professionals say AI has reduced the scope of work they are hired for, suggesting that clients and employers are substituting AI-generated outputs for tasks previously performed by human creatives. This tension between widespread adoption and scope reduction captures the dual nature of AI's impact on creative work — professionals are using AI themselves while simultaneously seeing their addressable market shrink as clients adopt the same tools independently.",
+  "keyFindings": [
+    "74% of creative professionals report using AI tools in their work, indicating near-ubiquitous adoption across the creative industry.",
+    "30% of creative professionals say AI has reduced the scope of work they are hired for, signaling meaningful demand-side displacement.",
+    "The findings reveal a paradox: creatives are adopting AI to stay competitive while the same technology erodes their market by enabling non-specialists to produce creative outputs.",
+    "The survey captures an early-stage shift in how creative labor is valued and contracted, with implications for freelancers and agencies alike."
+  ],
+  "methodology": "Survey of creative professionals conducted by Adobe in 2024. The full methodology, sample size, and demographic breakdown were not accessible from the PDF summary. Adobe's position as a major creative tools vendor that has integrated generative AI features into its product suite should be noted as context for the survey design.",
+  "qualifiers": "The survey is conducted by Adobe, which has a commercial interest in AI-powered creative tools (Firefly, Photoshop Generative Fill, etc.), potentially introducing framing bias. The 30% scope reduction figure does not distinguish between types of creative work or severity of reduction. Sample composition (freelancers vs. full-time employees, geographic distribution) is unclear from the available summary. WebFetch was unable to extract the full PDF content.",
+  "fetchedAt": "2026-05-26"
+}

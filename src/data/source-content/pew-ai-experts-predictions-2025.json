@@ -1,0 +1,14 @@
+{
+  "id": "pew-ai-experts-predictions-2025",
+  "abstract": "Pew Research Center surveys both the U.S. general public and AI experts to compare predictions about AI's impact over the next 20 years. The study reveals a stark optimism gap: 56% of AI experts predict positive AI impact on the U.S. compared to just 17% of adults, while 35% of the public anticipates negative effects versus only 15% of experts. On employment specifically, 64% of U.S. adults believe AI will eliminate jobs within two decades, while experts hold more balanced views — 39% foresee job losses, 19% expect job creation, and 33% see minimal difference. Sector-specific assessments show the largest gaps in jobs/economy (73% of experts vs. 23% of public expect positive impacts) and healthcare (84% vs. 44%). The two groups converge on skepticism about AI's effects on elections and news integrity. Gender consistently shapes predictions across both groups, with male experts substantially more optimistic than female counterparts regarding K-12 education (68% vs. 42%) and broader societal benefits. Only 17% of the public believes AI will boost human productivity, compared to 74% of experts.",
+  "keyFindings": [
+    "56% of AI experts predict positive AI impact vs. only 17% of the general public, revealing a major optimism gap",
+    "64% of adults believe AI will eliminate jobs within 20 years; experts are split — 39% foresee losses, 19% expect gains, 33% see minimal change",
+    "Largest expert-public gap on jobs/economy: 73% of experts positive vs. 23% of public",
+    "Gender consistently shapes predictions — male experts substantially more optimistic than female counterparts across sectors",
+    "Rare convergence: both groups express skepticism about AI's impact on elections and news (11% and 9% positive respectively)"
+  ],
+  "methodology": "Dual-track survey design: nationally representative survey of U.S. adults paired with a survey of AI experts (researchers, industry practitioners, and thought leaders). Specific sample sizes and fielding dates not available from the summary; full methodology in Pew report appendix.",
+  "qualifiers": "Expert sample selection methodology may introduce biases toward particular AI subfields or institutional perspectives. Public survey captures sentiment at a single point in time during a period of rapid AI development. Expert predictions about 20-year horizons carry inherent uncertainty. The study measures perceptions and predictions, not observed outcomes.",
+  "fetchedAt": "2026-05-26"
+}

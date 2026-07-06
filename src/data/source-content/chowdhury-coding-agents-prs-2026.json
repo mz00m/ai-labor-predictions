@@ -1,0 +1,14 @@
+{
+  "id": "chowdhury-coding-agents-prs-2026",
+  "abstract": "This study examines the rapidly growing phenomenon of autonomous coding agents generating pull requests at scale. OpenAI Codex alone created over 400,000 pull requests in a two-month period. The researchers analyzed 19,450 PRs from AIDev, focusing on 3,109 unique PRs in commented review state, comparing merge rates and review quality between AI-only and human-only workflows. CRA-only PRs achieved a 45.20% merge rate, 23.17 percentage points lower than human-only PRs at 68.37%. Signal quality analysis revealed that 60.2% of closed CRA-only PRs showed signal-to-noise ratios between 0-30%, and 12 of 13 code review agents exhibited average signal ratios below 60%. The study directly challenges industry claims that code review agents can manage 80% of PRs without human involvement, finding higher abandonment rates for AI-only reviewed code. The authors conclude that CRAs should augment rather than replace human reviewers.",
+  "keyFindings": [
+    "OpenAI Codex generated over 400,000 pull requests in two months, demonstrating unprecedented scale of autonomous code generation.",
+    "CRA-only PRs achieve a 45.20% merge rate, 23.17 percentage points lower than human-only PRs (68.37%).",
+    "60.2% of closed CRA-only PRs showed signal-to-noise ratios between 0-30%, indicating low-quality review feedback.",
+    "12 of 13 code review agents exhibited average signal ratios below 60%, contradicting industry claims of 80% autonomous management capability.",
+    "Higher abandonment rates were associated with CRA-only feedback, suggesting developers find AI-only reviews insufficient."
+  ],
+  "methodology": "Empirical analysis of 19,450 PRs from AIDev platform, with deep analysis of 3,109 unique PRs in commented review state. Compared merge rates, signal-to-noise ratios, and abandonment rates between CRA-only and human-only reviewed PRs. Examined 98 closed CRA-only PRs to assess whether low signal quality contributed to abandonment.",
+  "qualifiers": "Study focuses on open-source repositories via the AIDev platform, which may not reflect enterprise usage patterns. The 45% merge rate for AI PRs may partly reflect that AI-generated PRs tackle different types of issues than human PRs. Industry adoption is evolving rapidly, and newer agent versions may improve on these benchmarks.",
+  "fetchedAt": "2026-05-26"
+}

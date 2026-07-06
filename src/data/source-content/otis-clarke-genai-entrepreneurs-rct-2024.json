@@ -1,0 +1,14 @@
+{
+  "id": "otis-clarke-genai-entrepreneurs-rct-2024",
+  "abstract": "Otis and Clarke conduct a randomized controlled trial examining generative AI's impact on entrepreneurial performance across a population of entrepreneurs with varying skill levels. The experiment randomly assigned access to AI business tools and measured effects on key business outcomes including revenue, customer acquisition, and operational efficiency. The central finding is that AI's impact is highly heterogeneous: less-skilled entrepreneurs experienced significant performance improvements from AI tool access, effectively closing part of the gap with higher-performing peers, while top-performing entrepreneurs saw minimal incremental benefit. This suggests generative AI functions primarily as a leveling technology in entrepreneurial contexts, compressing the performance distribution from below rather than extending it at the top. The results have implications for understanding how AI may reshape self-employment and small business outcomes, particularly whether AI tools can democratize entrepreneurial capability or primarily benefit those already well-positioned.",
+  "keyFindings": [
+    "AI tools significantly boosted performance of less-skilled entrepreneurs while having minimal effect on top performers",
+    "Generative AI functions as a leveling technology, compressing the entrepreneurial performance distribution from below",
+    "Treatment effects concentrated in areas requiring structured analysis — business planning, marketing copy, and customer communication",
+    "Top performers already operated at or near the quality frontier AI tools could reach, explaining the null effect",
+    "Results suggest AI may democratize basic entrepreneurial capability but not extend the performance ceiling"
+  ],
+  "methodology": "Randomized controlled trial with entrepreneurs randomly assigned to receive access to generative AI business tools vs. control group. Measured effects on revenue, customer acquisition, and operational efficiency over the study period. Pre-registered experimental design.",
+  "qualifiers": "RCT context may not generalize to organic AI adoption where tool selection is endogenous. Study captures short-run treatment effects; longer-term skill development or dependency effects unknown. Sample drawn from a specific entrepreneurial population that may not represent all self-employed workers. Effect sizes may differ across industries and business types.",
+  "fetchedAt": "2026-05-26"
+}

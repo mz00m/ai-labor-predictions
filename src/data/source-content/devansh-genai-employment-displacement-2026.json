@@ -1,0 +1,14 @@
+{
+  "id": "devansh-genai-employment-displacement-2026",
+  "abstract": "Published in IJRASET, this paper maps both the opportunities generative AI creates and the structural challenges it poses to workers across skill levels. The analysis underscores the uneven distribution of displacement risk, with routine cognitive roles facing the greatest exposure to AI substitution. The paper examines how generative AI differs from previous automation technologies in its ability to affect white-collar and knowledge work — domains that were historically considered safe from automation. It categorizes workforce impacts along a spectrum from full displacement (routine data processing, standard content generation) through augmentation (complex analysis, creative work with AI tools) to new role creation (AI oversight, prompt engineering, human-AI workflow design). The framework emphasizes that the transition will not be uniform across industries, geographies, or skill levels, with workers in developing economies and those without access to reskilling opportunities facing compounded disadvantage.",
+  "keyFindings": [
+    "Routine cognitive roles face the greatest exposure to generative AI displacement, departing from earlier automation patterns that primarily affected manual labor.",
+    "Displacement risk is unevenly distributed across skill levels, industries, and geographies.",
+    "The impact spectrum ranges from full displacement (routine data processing) through augmentation (complex analysis) to new role creation (AI oversight).",
+    "Workers in developing economies and those without reskilling access face compounded disadvantage.",
+    "Generative AI uniquely threatens white-collar and knowledge work domains historically considered automation-resistant."
+  ],
+  "methodology": "Literature review and conceptual framework analysis published in IJRASET (International Journal for Research in Applied Science & Engineering Technology). Synthesizes existing research on AI employment impacts across sectors and skill levels.",
+  "qualifiers": "The paper is a review and framework piece rather than an original empirical study with novel data. IJRASET is an open-access journal with variable peer review standards. The displacement spectrum (full displacement to new role creation) is a conceptual taxonomy rather than an empirically calibrated model. Specific quantitative estimates of displacement scale are not provided. The analysis may underweight the speed of capability improvement in non-routine cognitive tasks.",
+  "fetchedAt": "2026-05-26"
+}

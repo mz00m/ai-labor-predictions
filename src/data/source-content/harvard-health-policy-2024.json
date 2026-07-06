@@ -1,0 +1,14 @@
+{
+  "id": "harvard-health-policy-2024",
+  "abstract": "This Harvard T.H. Chan School of Public Health analysis examines AI's potential impact on healthcare employment across clinical and administrative roles. The piece synthesizes expert perspectives on how AI technologies — including diagnostic imaging AI, clinical decision support systems, and administrative automation tools — are reshaping the healthcare workforce. The analysis highlights that healthcare AI adoption follows distinct patterns across role types: administrative and clerical functions face the highest near-term automation risk, while clinical roles involving patient interaction, complex judgment, and physical procedures are more likely to be augmented than replaced. The discussion addresses workforce planning implications, noting that healthcare's persistent labor shortages may accelerate AI adoption as a complement to human workers rather than a substitute, particularly in underserved areas where provider access is limited.",
+  "keyFindings": [
+    "Administrative and clerical healthcare roles face the highest near-term displacement risk from AI, including medical coding, billing, scheduling, and documentation tasks.",
+    "Clinical roles involving direct patient interaction, complex medical judgment, and physical procedures are more likely to be augmented by AI than replaced, shifting the nature of work rather than eliminating positions.",
+    "Healthcare's persistent labor shortages — particularly in nursing, primary care, and rural medicine — may drive AI adoption as a workforce extender rather than a labor substitute.",
+    "Diagnostic imaging and pathology represent areas where AI performance approaches or matches clinician accuracy, creating the strongest case for task-level substitution within clinical domains.",
+    "The uneven distribution of AI adoption across healthcare settings risks exacerbating existing disparities between well-resourced and under-resourced health systems."
+  ],
+  "methodology": "Expert analysis and synthesis of emerging evidence on AI in healthcare, drawing on faculty expertise at Harvard T.H. Chan School of Public Health. The piece integrates findings from clinical AI deployment studies, workforce surveys, and health system case studies rather than presenting original empirical research.",
+  "qualifiers": "This is a news feature and expert commentary rather than a peer-reviewed empirical study. The analysis draws on available evidence as of 2024, a period of rapid change in healthcare AI capabilities. Predictions about healthcare workforce effects are inherently uncertain given regulatory barriers, clinical validation requirements, and the pace of health system technology adoption. The original URL has been redirected, suggesting the content may have been updated or reorganized.",
+  "fetchedAt": "2026-05-26"
+}

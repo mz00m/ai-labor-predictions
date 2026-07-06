@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-02",
-  "totalSources": 618,
-  "verifiedCount": 608,
+  "lastUpdated": "2026-07-06",
+  "totalSources": 621,
+  "verifiedCount": 611,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7710,7 +7710,8 @@
       "datePublished": "2026-05-05",
       "excerpt": "responses to a recent survey suggest that most forecasters are quite optimistic about AI's potential but are assuming only a slow pace of AI adoption through 2030",
       "usedIn": [
-        "genai-work-adoption"
+        "genai-work-adoption",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -8592,7 +8593,8 @@
     "mercer-global-talent-trends-2026": {
       "id": "mercer-global-talent-trends-2026",
       "usedIn": [
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false,
@@ -8764,6 +8766,55 @@
       "excerpt": "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans. A Gartner poll of 163 customer service and support leaders conducted in March 2025 [found] 95% of customer service leaders plan to retain human agents to strategically define AI's role.",
       "usedIn": [
         "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bloomberg-boesler-tech-finance-ai-2026": {
+      "id": "bloomberg-boesler-tech-finance-ai-2026",
+      "title": "Tech and Finance Sectors Losing 28,000 Jobs Monthly Show AI Impact on Labor",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-01/tech-and-finance-sectors-losing-28-000-jobs-monthly-show-ai-impact-on-labor",
+      "publisher": "Bloomberg (Boesler & Prakash)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01",
+      "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "overall-us-displacement",
+        "financial-services-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-claude-code-expertise-2026": {
+      "id": "anthropic-claude-code-expertise-2026",
+      "title": "Agentic coding and persistent returns to expertise",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "publisher": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-16",
+      "excerpt": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory \u2014 Jun 16, 2026). Analysis of ~400,000 Claude Code sessions from ~235,000 users between Oct 2025 and Apr 2026. Verified success rates: 'Novice: 15%; Intermediate/Expert: 28-33%.' Partial success rates: 77% (novice) vs 91-92% (intermediate/expert). Abandonment when troubled: novice 19% vs intermediate+ 5-7%. 'Every one of the ten largest occupations in our dataset lands within seven points of software engineers' (29-34% verified success). 'The estimated value of the average session rose by 27% between October and April.' Division of labor: 'people make about 70% of the planning decisions but only 20% of the execution decisions.' Work mix: code writing/fixing/testing 56%, ops 17%, planning/exploration 14%, analysis/prose 13%. Novice: ~5 actions, 600 words output/prompt; Expert: ~12 actions, 3,200 words/prompt.",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-coding-agents-social-sci-2026": {
+      "id": "anthropic-coding-agents-social-sci-2026",
+      "title": "Coding agents in the social sciences",
+      "url": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "publisher": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-27",
+      "excerpt": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers \u2014 May 27, 2026). Survey of 1,260 quantitative social scientists. '81% of respondents said yes' to using generative AI to aid research. '20% of respondents use coding agents' regularly (weekly). '86% of users reporting Claude Code use.' Demographic disparities: 'those with typically male names have adopted coding agents at more than twice the rate of respondents with typically female names.' Career stage: 'Just over a quarter of doctoral students and postdocs use coding agents' vs tenured professors at less than half that rate. University prestige: 'Researchers at top universities are 40% more likely than others to use coding agents.' Task usage: '97% of coding agent users and 77% of other AI users report using it to generate code.' Productivity effects over 6 months: users show approximately 'a quarter of a paper more' in project starts and 'around a half of a working paper more' in working papers, but 'no evidence that coding agent users are submitting more new papers to journals.' '88% of respondents were above a 5' on 10-point AI productivity scale.",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "genai-work-adoption",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

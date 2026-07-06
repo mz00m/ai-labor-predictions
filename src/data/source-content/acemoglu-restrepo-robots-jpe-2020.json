@@ -1,0 +1,14 @@
+{
+  "id": "acemoglu-restrepo-robots-jpe-2020",
+  "abstract": "Acemoglu and Restrepo examine the labor market effects of industrial robot adoption across US commuting zones from 1990 to 2007. Using a theoretical framework in which robots compete with human labor across a range of tasks, they estimate the causal impact of robot exposure on local employment and wages. By combining international robot adoption data with pre-existing industry employment shares across commuting zones, they construct an instrument for local robot exposure that accounts for confounding factors including import competition from China and Mexico, routine-task decline, offshoring, and other IT capital investment. Their central estimates find that one additional robot per thousand workers reduces the employment-to-population ratio by 0.18-0.34 percentage points and depresses wages by 0.25-0.5 percent. At the commuting-zone level, one new robot correlates with the displacement of approximately 5.6 workers. Between 1990 and 2007, the increase in US industrial robot adoption reduced aggregate employment by roughly 400,000 jobs. The effects are concentrated among workers without college degrees and in routine-intensive occupations, suggesting robots most directly substitute for manual and repetitive production tasks.",
+  "keyFindings": [
+    "One additional robot per thousand workers reduces the employment-to-population ratio by 0.18-0.34 percentage points and wages by 0.25-0.5%",
+    "Each new robot displaces approximately 5.6 workers in affected local labor markets",
+    "Between 1990 and 2007, increased robot adoption reduced US employment by roughly 400,000 jobs",
+    "Effects are concentrated among non-college workers and routine-intensive occupations",
+    "Robot exposure is only weakly correlated with other technology and trade shocks, supporting causal identification"
+  ],
+  "methodology": "Regression analysis of employment and wage changes across 722 US commuting zones, 1990-2007. Uses international robot adoption rates by industry as an instrument for local robot exposure, combined with pre-existing local industry employment shares. Data from IFR (International Federation of Robotics), Census, and ACS. Controls for Chinese/Mexican import competition, routine-task intensity, IT capital, and pre-trends.",
+  "qualifiers": "Study period ends in 2007, predating the current wave of AI and advanced robotics. Focuses on industrial robots (welding, assembly, material handling) rather than AI or software automation. US-specific results may not generalize to economies with different labor market institutions. Commuting-zone-level analysis may miss within-zone heterogeneity.",
+  "fetchedAt": "2026-05-26"
+}

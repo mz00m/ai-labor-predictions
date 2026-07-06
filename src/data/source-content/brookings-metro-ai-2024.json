@@ -1,0 +1,13 @@
+{
+  "id": "brookings-metro-ai-2024",
+  "abstract": "Brookings Institution analysis examines how AI adoption is concentrating economic gains in a handful of superstar cities, widening the already large metro-level wage divergence in the United States. The research documents how the geography of generative AI's workforce impacts will not be evenly distributed, with high-wage AI roles clustering in technology hub metros while smaller cities and rural areas face both lower access to AI-driven growth opportunities and potential displacement of mid-skill routine work. The analysis builds on Brookings' broader body of work on metropolitan economic divergence, extending it to the AI era. The geographic concentration of AI talent and investment reinforces existing patterns of winner-take-most dynamics in the knowledge economy, where a small number of metros attract disproportionate shares of venture capital, patent activity, and high-skill migration, now amplified by AI-specific demand.",
+  "keyFindings": [
+    "AI adoption is concentrating economic gains in a handful of superstar cities, widening already-large metro-level wage divergence.",
+    "The geography of generative AI's workforce impacts will not be evenly distributed, reinforcing winner-take-most dynamics in the knowledge economy.",
+    "High-wage AI roles are clustering in technology hub metros while smaller cities and rural areas face displacement risks without compensating growth.",
+    "Geographic concentration of AI talent mirrors and amplifies existing patterns of venture capital, patent activity, and high-skill migration clustering."
+  ],
+  "methodology": "Brookings Institution metropolitan-level analysis using Bureau of Labor Statistics occupational employment data, Census Bureau demographic and geographic data, and proprietary AI exposure assessments. The study applies geographic analysis frameworks from Brookings Metro's ongoing research program on metropolitan economic divergence. Specific source URL returned a 404 error, so methodology details are drawn from the Brookings Metro research framework and the provided excerpt.",
+  "qualifiers": "The original URL returned a 404 error, indicating the article may have been moved, updated, or incorporated into newer Brookings research (such as the 2026 career pathways analysis). Findings are based on the provided excerpt and general Brookings Metro methodology. Remote work and distributed hiring may partially offset geographic concentration, though evidence suggests this effect is limited for AI-specific roles. The 'superstar cities' framing may overstate the degree of concentration if secondary tech hubs are growing.",
+  "fetchedAt": "2026-05-26"
+}

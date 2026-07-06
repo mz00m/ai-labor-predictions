@@ -1,0 +1,14 @@
+{
+  "id": "deeplearning-ai-ng-no-jobpocalypse-2026",
+  "abstract": "Andrew Ng argues that the AI 'jobpocalypse' narrative is overblown, pointing to a U.S. unemployment rate of 4.3% as evidence that AI has not yet caused economy-wide disruption. Ng identifies three structural reasons the job-loss narrative persists despite weak evidence: (1) AI labs exaggerate capabilities to appear powerful and attract investment, (2) companies anchor AI product pricing to employee salaries ($100K+) rather than typical SaaS rates ($100-$1,000/year), making AI seem more job-threatening than it is, and (3) corporations frame layoffs as AI-driven productivity gains rather than admitting pandemic-era overhiring. Ng draws historical analogies to nuclear power fears, population bomb predictions, and dietary fat misconceptions — cases where public panic led to counterproductive policy. He predicts an 'AI jobapalooza' with expanded AI engineering roles and job market transformation, noting that software engineering hiring remains strong despite being the occupation most directly affected by AI coding tools.",
+  "keyFindings": [
+    "U.S. unemployment remains at 4.3%, showing no economy-wide AI disruption despite rapid capability advances.",
+    "Software engineering hiring remains strong despite being the occupation most directly affected by AI tools — contradicting displacement predictions.",
+    "AI labs have incentives to exaggerate capabilities, inflating perceived job threat beyond actual impact.",
+    "Companies price AI products relative to employee salaries (anchoring to $100K+), not software norms ($100-$1,000/year), which amplifies the replacement narrative.",
+    "Corporate layoffs attributed to AI often reflect pandemic-era overhiring corrections rather than genuine automation displacement."
+  ],
+  "methodology": "Commentary and analysis by Andrew Ng, drawing on aggregate U.S. labor market statistics, historical analogies to past technology panics, and observed industry pricing and messaging patterns. Not a formal empirical study.",
+  "qualifiers": "This is an opinion piece from a prominent AI industry figure who has financial interests in AI adoption. The aggregate unemployment rate can mask occupation-specific or demographic-specific displacement. The historical analogies (nuclear, population bomb, dietary fat) are imperfect parallels. Ng's optimism about net job creation is a prediction, not an empirical finding, and his analysis does not engage with occupation-level data showing emerging white-collar impacts.",
+  "fetchedAt": "2026-05-26"
+}

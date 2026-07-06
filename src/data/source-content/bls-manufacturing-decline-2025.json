@@ -1,0 +1,14 @@
+{
+  "id": "bls-manufacturing-decline-2025",
+  "abstract": "Manufacturing Dive reports that US manufacturing employment continues its multi-decade decline, with 78,000 jobs lost over the past year and 12,000 cuts in August 2025 alone. Employment has declined continuously since February 2023, reaching its lowest level since the COVID-19 pandemic onset. Job openings in manufacturing fell 12% year-over-year, with 313,000 job separations. The decline reflects the convergence of several structural forces: automation and AI adoption (with approximately 15% of US jobs across all industries — roughly 23 million positions — facing high displacement risk from automation according to the Society for Human Resource Management), persistent labor shortages (nearly 2 million manufacturing positions may remain unfilled by decade's end), tariff uncertainty creating hiring freezes, immigration policy changes including $100,000 H-1B visa fees, and an aging workforce. High-volume repetitive-task subsectors are most affected, including automotive, semiconductors, electronics, aerospace, and pharmaceuticals. Experts emphasize that while factories will continue automating, workers will not disappear entirely — rather, roles are shifting from traditional assembly to technical positions requiring robotics expertise and AI literacy.",
+  "keyFindings": [
+    "US manufacturing lost 78,000 jobs over the past year, with employment declining continuously since February 2023",
+    "Approximately 15% of US jobs (23 million positions) face high displacement risk from automation (SHRM estimate)",
+    "Manufacturing job openings fell 12% year-over-year, with 313,000 job separations",
+    "Most affected subsectors: automotive, semiconductors, electronics, aerospace, and pharmaceuticals",
+    "Nearly 2 million manufacturing positions may remain unfilled by decade's end due to workforce aging and skills mismatch"
+  ],
+  "methodology": "Industry trade journalism drawing on BLS employment data, SHRM analysis, and expert interviews. Not a peer-reviewed study. Employment figures from BLS Current Employment Statistics. Displacement risk estimates from Society for Human Resource Management analysis.",
+  "qualifiers": "Trade publication reporting, not peer-reviewed research. Manufacturing employment decline is multi-causal — automation/AI is one factor alongside trade policy uncertainty, labor shortages, immigration restrictions, and demographic change. The 15% displacement risk figure (SHRM) is an economy-wide estimate, not manufacturing-specific. 'Decline' in manufacturing employment has been ongoing since 1979, predating AI by decades. Does not separate output effects (production may be rising even as employment falls).",
+  "fetchedAt": "2026-05-26"
+}

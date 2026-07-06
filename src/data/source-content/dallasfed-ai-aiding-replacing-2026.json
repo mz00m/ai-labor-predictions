@@ -1,0 +1,13 @@
+{
+  "id": "dallasfed-ai-aiding-replacing-2026",
+  "abstract": "This Dallas Fed analysis examines wage data to demonstrate that AI is simultaneously augmenting and displacing workers across the US economy. The researchers find that occupations with high AI exposure exhibit wage polarization: workers at the top of the wage distribution in AI-exposed occupations see wage gains (consistent with AI-augmented productivity), while workers at the bottom of the distribution in those same occupations experience wage stagnation or decline (consistent with displacement). This dual effect challenges simplistic narratives that AI is purely complementary or purely substitutive. The analysis uses detailed wage microdata to decompose the AI effect by occupation, skill level, and position within the within-occupation wage distribution, revealing that the augmentation vs. replacement distinction depends critically on a worker's role and comparative advantage within their occupation rather than the occupation's overall AI exposure level.",
+  "keyFindings": [
+    "Occupations with high AI exposure show wage polarization: top earners within those occupations gain while lower earners stagnate or lose ground, indicating AI simultaneously aids and replaces workers within the same occupation.",
+    "The augmentation vs. displacement effect depends on a worker's position within their occupation's wage distribution rather than the occupation's overall exposure level alone.",
+    "Wage data provide a more granular signal of AI's labor market impact than employment data alone, capturing shifts in bargaining power and task reallocation before headcount changes become visible.",
+    "The findings challenge both techno-optimist (all augmentation) and techno-pessimist (all displacement) narratives by showing both effects operating concurrently."
+  ],
+  "methodology": "Empirical analysis of US wage microdata, examining within-occupation wage distributions for occupations classified by AI exposure level. Uses established AI exposure indices to categorize occupations and tracks wage changes across the distribution (e.g., 10th, 50th, 90th percentiles) over time. Published February 2026.",
+  "qualifiers": "Wage effects may reflect compositional changes (different workers entering/exiting occupations) rather than direct AI impact on incumbent workers. The analysis captures correlations between AI exposure and wage changes but cannot fully establish causality. Short post-AI time horizon limits ability to distinguish transitional adjustment from permanent structural shifts. Dallas Fed regional focus may not fully represent national patterns.",
+  "fetchedAt": "2026-05-26"
+}

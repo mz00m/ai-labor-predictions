@@ -1,0 +1,14 @@
+{
+  "id": "goldman-physical-ai-2025",
+  "abstract": "Goldman Sachs analysis examines the emerging market for humanoid robots and physical AI, arguing that physically demanding or outdoor work remains largely insulated from current AI capabilities. The report projects 50,000 to 100,000 humanoid robot shipments in 2026, marking an early commercialization phase. Unit economics are expected to reach the $15,000-$20,000 range per robot, though this remains significantly above the price points needed for mass adoption across industries. The analysis distinguishes between cognitive AI (which threatens knowledge work) and physical AI (which targets manual and physical labor), noting that the latter faces substantially higher technical barriers including dexterity, navigation of unstructured environments, and real-time physical reasoning. This suggests a bifurcated timeline for AI labor market disruption: knowledge work faces near-term pressure while physical work remains protected for a longer horizon.",
+  "keyFindings": [
+    "Physically demanding or outdoor work unlikely to be affected by current AI capabilities",
+    "Projected 50,000-100,000 humanoid robot shipments in 2026, marking early commercialization",
+    "Unit economics expected to reach $15,000-$20,000 per robot, still above mass-adoption price points",
+    "Physical AI faces higher technical barriers than cognitive AI: dexterity, unstructured environments, real-time reasoning",
+    "Bifurcated disruption timeline: knowledge work faces near-term pressure, physical work remains protected longer"
+  ],
+  "methodology": "Goldman Sachs industry analysis and market forecasting based on manufacturer projections, technology assessment, and economic modeling of unit cost trajectories for humanoid robots.",
+  "qualifiers": "Shipment projections are forward-looking estimates subject to manufacturing and demand uncertainty. Unit economics of $15,000-$20,000 may not include deployment, maintenance, and integration costs. The analysis focuses on humanoid robots specifically and may understate progress in specialized industrial robotics. Timeline for physical AI disruption is inherently speculative given the early stage of the technology.",
+  "fetchedAt": "2026-05-26"
+}

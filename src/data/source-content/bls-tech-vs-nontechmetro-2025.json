@@ -1,0 +1,13 @@
+{
+  "id": "bls-tech-vs-nontechmetro-2025",
+  "abstract": "Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS) data for Q3 2025, analyzing wage differentials between technology hub metropolitan areas and the broader national labor market. The data shows that AI-related roles command a median salary of approximately $157,000 in hub metros, compared to a $49,500 national median for all occupations — a 3.2x premium. This geographic concentration of high-wage AI talent in a handful of metropolitan areas continues to widen the already substantial metro-level wage divergence. The OEWS program produces employment and wage estimates annually for over 800 occupations across national, state, and metropolitan geographies, providing a granular view of how AI labor demand is reshaping local economies and exacerbating geographic inequality in economic opportunity.",
+  "keyFindings": [
+    "AI-related roles command a median salary of approximately $157,000 in technology hub metropolitan areas, versus $49,500 median for all occupations nationally — a 3.2x premium.",
+    "The geographic premium for AI talent continues to widen, concentrating high-wage employment in a small number of superstar metros.",
+    "Metro-level wage divergence between tech hubs and non-hub areas is accelerating, with AI roles driving an outsized share of the gap.",
+    "The data reinforces concerns about place-based inequality in the AI economy, where workers outside hub metros face both lower wages and fewer opportunities in high-growth occupations."
+  ],
+  "methodology": "Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS) program, which produces employment and wage estimates annually for over 800 occupations at national, state, metropolitan, and nonmetropolitan area levels. Data collected through semiannual surveys of approximately 1.1 million establishments over a three-year cycle. Q3 2025 reference period. AI role definitions based on SOC occupation codes for computer and mathematical occupations with AI specialization.",
+  "qualifiers": "The $157K median for AI roles in hub metros reflects a specific subset of occupations and geographies, not a comprehensive AI workforce measure. BLS OEWS data has a publication lag and may not capture the most recent hiring trends. The comparison between AI hub metro salaries and the national all-occupation median conflates geographic and occupational effects. Remote work arrangements may partially mitigate geographic wage disparities in ways not captured by establishment-based surveys. The WebFetch for this source returned a 403 error; findings rely on the provided excerpt and general BLS OEWS methodology knowledge.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "bls-information-sector-mar-2026",
+  "abstract": "BLS Current Employment Statistics data for the information sector (NAICS sector 51) shows sustained employment contraction through early 2026. As of April 2026 (preliminary), the sector employed 2,762 thousand workers, down from 2,854 thousand in March and 2,851 thousand in January — a loss of approximately 89,000 jobs in four months. Year-over-year, the sector shed roughly 92,000 jobs from April 2025 to April 2026. This decline represents a sharp reversal from the sector's pandemic-era growth, which peaked at 3,121 thousand in June 2022. The information sector has been contracting steadily since that peak, with the downward trend accelerating into 2026. The sector encompasses telecommunications, publishing, broadcasting, data processing, and technology firms — industries at the frontier of AI adoption. The persistent employment decline in a sector that is simultaneously investing heavily in AI raises important questions about whether AI is already displacing information workers or whether the decline reflects other factors (post-pandemic normalization, interest rate effects on tech valuations, cyclical advertising revenue declines).",
+  "keyFindings": [
+    "Information sector employment fell to 2,762 thousand in April 2026, down ~89,000 jobs in four months",
+    "Year-over-year decline of approximately 92,000 jobs (April 2025 to April 2026)",
+    "Sector peaked at 3,121 thousand in June 2022 and has contracted continuously since",
+    "Decline is accelerating in 2026, with month-over-month losses steepening",
+    "The sector most exposed to AI adoption is simultaneously showing the steepest employment declines"
+  ],
+  "methodology": "BLS Current Employment Statistics (CES) survey. Series ID: CEU5000000001. Information sector defined as NAICS sector 51 (telecommunications, publishing, broadcasting, motion pictures, data processing, internet services). Seasonally adjusted. April 2026 figure is preliminary. Data extracted May 26, 2026.",
+  "qualifiers": "April 2026 figure is preliminary and subject to revision. NAICS sector 51 is a broad category mixing industries with very different AI exposure profiles (e.g., traditional broadcasting vs. cloud computing). Employment decline may reflect post-pandemic normalization, tech sector correction, interest rate effects, and advertising market weakness rather than AI displacement specifically. Does not capture contractor and gig workers who may substitute for direct employees. Seasonal adjustment methodology may not fully account for changing patterns in tech hiring cycles.",
+  "fetchedAt": "2026-05-26"
+}

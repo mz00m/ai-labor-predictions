@@ -1,0 +1,14 @@
+{
+  "id": "stlouisfed-ai-unemployment-2025",
+  "abstract": "The St. Louis Federal Reserve examines whether occupations with high AI exposure show elevated unemployment rates, using occupational-level labor market data through mid-2025. The study maps AI exposure indices to occupation-level unemployment data from the Current Population Survey to test whether the theoretical displacement risk from AI has begun materializing in measurable unemployment differentials. The central finding is that through mid-2025, there is limited evidence of AI-driven unemployment at the occupational level — occupations with high AI exposure do not show statistically significant increases in unemployment rates relative to low-exposure occupations after controlling for standard labor market factors. The authors note that this null finding is consistent with several interpretations: AI adoption may still be too early-stage to generate measurable displacement; productivity gains may be absorbing displaced workers; or occupational-level data may be too coarse to capture within-occupation compositional shifts that other studies have identified.",
+  "keyFindings": [
+    "Limited evidence of AI-driven unemployment at the occupational level through mid-2025",
+    "High AI-exposure occupations do not show statistically significant unemployment increases relative to low-exposure occupations",
+    "Null finding consistent with multiple interpretations: early-stage adoption, productivity absorption, or data granularity limitations",
+    "Occupational-level analysis may miss within-occupation compositional shifts detected by other studies",
+    "Results suggest AI displacement effects, if present, are not yet large enough to dominate cyclical and structural labor market dynamics"
+  ],
+  "methodology": "Cross-sectional analysis mapping AI occupational exposure indices to occupation-level unemployment rates from the Current Population Survey (CPS) through mid-2025. Controls for standard labor market factors including industry, education, and demographic composition.",
+  "qualifiers": "Occupational-level unemployment data is relatively coarse and may miss within-occupation displacement patterns. The analysis period (through mid-2025) may be too early to capture AI displacement effects that accumulate over longer horizons. AI exposure indices based on capability overlap may not accurately predict which occupations experience actual deployment. CPS occupation codes may not perfectly align with AI exposure measures.",
+  "fetchedAt": "2026-05-26"
+}

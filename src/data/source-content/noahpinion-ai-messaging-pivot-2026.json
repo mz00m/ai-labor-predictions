@@ -1,0 +1,14 @@
+{
+  "id": "noahpinion-ai-messaging-pivot-2026",
+  "abstract": "Noah Smith documents a coordinated messaging pivot among major AI industry figures — from displacement-focused narratives to augmentation-focused ones — driven by deteriorating public opinion on AI. Sam Altman, who in 2014 warned of a 'new idle class,' now contends that humans will find 'new things to do, new ways to be useful to each other.' Jensen Huang has 'consistently predicted that AI will create more jobs than it destroys' and criticized peers spreading job-killer narratives. Marc Andreessen has aggressively countered the AI job-loss narrative. The new augmentation pitch rests on two economic arguments: task creation (historical technologies spawned new occupational categories) and Jevons' Paradox / induced demand (AI efficiency creates abundance that triggers demand for new services). A longer-term argument points to the 'relational sector' — nurses, therapists, teachers, hospitality and care workers — where interpersonal connection constitutes the product itself and thus resists automation. Smith notes that polls show Americans, particularly independents, are increasingly skeptical of AI, creating political vulnerability that motivates the messaging shift.",
+  "keyFindings": [
+    "Major AI industry leaders (Altman, Huang, Andreessen) have coordinated a pivot from job-displacement to job-augmentation messaging.",
+    "The shift is driven by deteriorating public opinion, with polls showing increasing AI skepticism especially among political independents.",
+    "The augmentation narrative relies on task creation (new job categories) and Jevons' Paradox (efficiency creates demand for new services).",
+    "A longer-term argument centers on the 'relational sector' — care, education, hospitality — as durable human-centric employment.",
+    "Altman's personal trajectory is notable: from warning of a 'new idle class' (2014) to emphasizing human complementarity (2026)."
+  ],
+  "methodology": "Commentary and analysis by economist Noah Smith, drawing on public statements from AI industry leaders, historical economic analogies, polling data on public AI sentiment, and economic theory (Jevons' Paradox, induced demand).",
+  "qualifiers": "The piece analyzes industry messaging strategy rather than empirical labor market evidence. Whether the augmentation narrative is more accurate than the displacement narrative is an empirical question this piece does not resolve. The relational sector thesis is speculative and may underestimate AI's eventual capacity for interpersonal work. Industry messaging shifts may reflect strategic communication needs rather than genuine updated beliefs about AI's labor impact.",
+  "fetchedAt": "2026-05-26"
+}

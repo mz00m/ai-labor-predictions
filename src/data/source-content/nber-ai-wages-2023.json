@@ -1,0 +1,14 @@
+{
+  "id": "nber-ai-wages-2023",
+  "abstract": "This NBER survey paper synthesizes the empirical literature on AI's measured impact on wages and employment, drawing together evidence from multiple studies across different methodologies, time periods, and labor markets. The review examines both the theoretical channels through which AI affects labor markets — including task automation, new task creation, productivity enhancement, and labor reallocation — and the empirical evidence on actual wage and employment outcomes. The survey finds that while theoretical models predict substantial potential displacement, empirical evidence through the early 2020s shows relatively modest aggregate effects on wages and employment, with significant heterogeneity across occupations, industries, and demographic groups. The paper identifies key methodological challenges in measuring AI's labor market impact, including the difficulty of constructing valid AI exposure measures and disentangling AI effects from other concurrent technological and economic changes.",
+  "keyFindings": [
+    "Empirical evidence through the early 2020s shows relatively modest aggregate effects of AI on wages and employment, despite theoretical models predicting substantial displacement potential.",
+    "AI's labor market effects are highly heterogeneous across occupations, industries, and demographic groups, with routine cognitive tasks showing the most measurable impact.",
+    "Key methodological challenges include constructing valid AI exposure measures and isolating AI effects from concurrent technological and economic changes.",
+    "The gap between theoretical predictions and empirical findings may reflect early-stage adoption, measurement lags, or offsetting effects through new task creation and productivity gains.",
+    "Wage effects appear more concentrated at the task level than the occupation level, suggesting AI changes what workers do more than whether they work or what they earn in aggregate."
+  ],
+  "methodology": "Literature survey synthesizing empirical studies on AI's labor market effects. The review covers studies using diverse methodologies including difference-in-differences, instrumental variables, task-based frameworks, and firm-level analyses. The paper evaluates the strengths and limitations of different AI exposure measures and identification strategies used across the literature.",
+  "qualifiers": "As a survey paper, the findings reflect the state of evidence at the time of writing and may not capture rapid developments in GenAI adoption since 2023. The reviewed studies primarily cover pre-ChatGPT AI adoption patterns. The modest empirical effects documented may reflect genuine small impacts, early-stage adoption with larger effects forthcoming, or measurement limitations in capturing AI's full labor market consequences.",
+  "fetchedAt": "2026-05-26"
+}

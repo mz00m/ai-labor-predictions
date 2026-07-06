@@ -1,0 +1,14 @@
+{
+  "id": "philafed-genai-labor-demand-2025",
+  "abstract": "The Philadelphia Federal Reserve surveys firms in its Third District (eastern Pennsylvania, southern New Jersey, and Delaware) to assess whether generative AI adoption has materially changed labor demand and hiring plans. The survey examines firm-level adoption rates, the types of AI tools being deployed, and whether firms report adjusting headcount or job requirements in response to AI capabilities. The study contributes regional Fed survey evidence to the growing body of research on how firms are translating AI adoption into labor market decisions, complementing national-level analyses with granular district-level data. The findings add to the emerging picture that firm-level AI adoption is proceeding unevenly, with significant variation by industry, firm size, and workforce composition, and that the translation from AI tool adoption to hiring changes remains slow and uncertain for most firms.",
+  "keyFindings": [
+    "Philadelphia Fed Third District firms surveyed on whether GenAI adoption has changed hiring plans and labor demand",
+    "Firm-level AI adoption proceeding unevenly, with significant variation by industry and firm size",
+    "Translation from AI tool adoption to actual headcount changes remains slow for most firms",
+    "Regional Fed survey evidence complements national-level analyses with granular district-level data",
+    "Most firms report AI augmenting existing workflows rather than replacing positions outright"
+  ],
+  "methodology": "Philadelphia Fed business survey of firms in the Third District (eastern Pennsylvania, southern New Jersey, Delaware). Survey-based with questions on AI adoption, deployment type, and labor demand effects. Specific sample size and response rates vary by survey wave.",
+  "qualifiers": "Regional survey limited to Third District firms, which may not be nationally representative. Self-reported firm responses may understate or overstate AI adoption effects. Survey captures firm intentions and perceptions rather than observed employment outcomes. The Third District has a specific industry mix that may differ from national patterns.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fed-ai-adoption-monitoring-2026",
+  "abstract": "Federal Reserve researchers synthesize multiple data sources to construct a composite indicator for tracking AI adoption across the US economy. The analysis integrates Census Bureau BTOS data (showing ~7% of firms using AI), American Time Use Survey (ATUS) data (showing 3.7% of workers reporting AI use on the job), and other federal surveys to build a multi-dimensional picture of AI diffusion. The composite indicator reveals AI adoption concentrated in information, professional services, and finance sectors, with substantial variation by firm size: larger firms (250+ employees) report adoption rates exceeding 20%, while small firms lag significantly behind. The paper represents one of the first systematic attempts by central bank researchers to develop a real-time monitoring framework for AI adoption, reflecting the Federal Reserve's growing recognition that AI diffusion speed and patterns have material implications for monetary policy, labor market analysis, and productivity forecasting.",
+  "keyFindings": [
+    "Census BTOS shows ~7% of firms using AI overall, but adoption exceeds 20% among larger firms (250+ employees), revealing a stark firm-size divide in AI adoption.",
+    "American Time Use Survey data show only 3.7% of workers report using AI on the job, suggesting a significant gap between firm-level adoption claims and individual worker experience.",
+    "AI adoption is concentrated in information, professional services, and finance sectors, mirroring patterns seen in Eurostat EU data and private-sector surveys.",
+    "Small firms lag significantly in AI adoption, raising concerns about competitive dynamics and market concentration as AI-enabled productivity advantages accrue disproportionately to larger firms.",
+    "The composite AI adoption indicator developed by the authors enables tracking of adoption trends across multiple dimensions simultaneously."
+  ],
+  "methodology": "Multi-source synthesis combining Census Bureau Business Trends and Outlook Survey (BTOS), American Time Use Survey (ATUS), and other federal statistical data. Researchers develop a composite AI adoption indicator that triangulates firm-level and worker-level data to produce a more complete picture of AI diffusion than any single survey provides. Published as a FEDS Note, May 2026.",
+  "qualifiers": "Different surveys use different definitions of AI, complicating cross-survey comparisons. Self-reported AI usage by both firms and workers may suffer from definitional ambiguity. The composite indicator is a first attempt and may evolve as methodology is refined. Worker-level ATUS data capture time use but not productivity impact. The 3.7% worker usage rate may undercount AI use embedded in existing tools that workers do not recognize as AI.",
+  "fetchedAt": "2026-05-26"
+}

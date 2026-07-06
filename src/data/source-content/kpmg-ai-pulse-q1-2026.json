@@ -1,0 +1,14 @@
+{
+  "id": "kpmg-ai-pulse-q1-2026",
+  "abstract": "KPMG's AI Quarterly Pulse Survey for Q1 2026, fielded February 17-March 17, 2026, surveyed 237 C-suite leaders from US organizations with $1B+ revenue (33%+ with $10B+ revenue) and 2,110 respondents globally across 20 countries. Key findings: US organizations project $207 million average AI spending over the next 12 months — nearly double the prior year — with a global average of $186 million. AI agent deployment has surged to 54% of organizations (up from 33% in Q2 2024 and 12% in early 2024), with the technology sector leading at 80%. A workforce readiness crisis is emerging: 62% cite skills gaps as a barrier to ROI (up from 25% the previous quarter), 65% report difficulty scaling use cases (up from 33%), and 87% prioritize upskilling existing workers. The AI talent premium is significant: 54% of banking leaders are willing to pay 11-15% more for AI talent (up 18 points from Q4 2025), and 46% of asset management/private equity leaders would pay similar premiums (up 26 points). For entry-level roles, adaptability and learning ability (83%) now outweigh technical programming skills (67%). Human oversight requirements are growing: 63% now require human validation of AI outputs, nearly tripling from 22% in Q1 2025.",
+  "keyFindings": [
+    "US organizations project $207M average AI spending over next 12 months — nearly double prior year; 54% now actively deploy AI agents (up from 12% in early 2024)",
+    "Workforce readiness crisis: 62% cite skills gaps as ROI barrier (up from 25% last quarter), 87% prioritize upskilling existing workforce",
+    "54% of banking leaders willing to pay 11-15% premium for AI talent (up 18 points from Q4 2025)",
+    "For entry-level hiring, adaptability/learning (83%) now outweighs technical programming skills (67%)",
+    "Human oversight growing: 63% require human validation of AI outputs (up from 22% in Q1 2025); 94% of banking/AM leaders say AI remains priority even in recession"
+  ],
+  "methodology": "Quarterly survey of 237 C-suite leaders from US organizations with $1B+ revenue (33%+ with $10B+ revenue) and 2,110 respondents globally across 20 countries. Fielded February 17-March 17, 2026. Published by KPMG.",
+  "qualifiers": "Survey sample skews toward large enterprises ($1B+ revenue) — findings may not apply to smaller organizations. C-suite respondents may overstate AI adoption and spending plans. Spending projections are intentions, not actual expenditures. Quarter-over-quarter changes in skills gap concerns (25% to 62%) may reflect question framing changes rather than real shifts. 'Willingness to pay premiums' does not confirm actual compensation increases. Global sample composition across 20 countries not detailed.",
+  "fetchedAt": "2026-05-26"
+}

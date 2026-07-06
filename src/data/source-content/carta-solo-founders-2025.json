@@ -1,0 +1,13 @@
+{
+  "id": "carta-solo-founders-2025",
+  "abstract": "Carta's Solo Founders Report 2025 documents a significant structural shift in startup formation: the share of new startups with solo founders rose from 23.7% in 2019 to 36.3% in H1 2025. The acceleration from 30.5% to 36.3% during 2024-2025 coincides with AI coding assistants (GitHub Copilot, Cursor, Claude Code, etc.) going mainstream, suggesting that AI tools are enabling individuals to build and ship products that previously required co-founders with complementary technical skills. Carta's dataset covers startups that use its equity management platform, providing a large and representative sample of venture-backed company formation in the United States. The trend implies that AI may be fundamentally changing the minimum viable team size for technology startups, with implications for venture funding patterns, company structures, and the distribution of founding equity.",
+  "keyFindings": [
+    "Solo-founder share of new startups rose from 23.7% in 2019 to 36.3% in H1 2025, a 53% relative increase over six years.",
+    "The acceleration from 30.5% to 36.3% in 2024-2025 coincides with AI coding assistants going mainstream, suggesting a causal link between AI tools and reduced co-founder dependency.",
+    "The trend implies AI is reducing the minimum viable team size for technology startups, enabling individuals to perform tasks that previously required technical co-founders.",
+    "The shift has implications for venture funding patterns, equity structures, and the labor market for early-stage technical talent."
+  ],
+  "methodology": "Analysis of startup formation data from Carta's equity management platform, which serves a large share of US venture-backed startups. The report tracks founder count at incorporation across the Carta customer base from 2019 through H1 2025. WebFetch returned a 403 error for the source URL; findings are based on the provided excerpt and Carta's established data methodology.",
+  "qualifiers": "Carta's dataset is limited to companies using its equity management platform, which skews toward venture-track startups and may not represent all small business formation. Correlation between AI tool availability and solo founder growth does not establish causation — other factors (remote work normalization, no-code tools, funding environment changes) may contribute. The 36.3% figure is for H1 2025 and may not reflect annualized trends. Solo founding does not necessarily mean solo operation — solo founders may hire contractors or use agencies. The WebFetch returned a 403 error; content relies on the provided excerpt.",
+  "fetchedAt": "2026-05-26"
+}

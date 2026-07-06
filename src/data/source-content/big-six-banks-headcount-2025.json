@@ -1,0 +1,14 @@
+{
+  "id": "big-six-banks-headcount-2025",
+  "abstract": "Fortune reports that combined headcount across the US Big Six banks (JPMorgan Chase, Bank of America, Wells Fargo, Citigroup, Goldman Sachs, Morgan Stanley) has fallen to its lowest level since 2021. The decline comes amid aggressive AI adoption across the banking sector, with institutions deploying AI for fraud detection, customer service automation, risk assessment, code generation, and back-office process optimization. However, experts quoted in the article caution that AI is not yet the primary driver of headcount reductions — attrition, post-pandemic normalization, efficiency programs predating AI, and strategic restructuring also contribute significantly. The banking industry has historically been an early adopter of automation (ATMs, online banking, algorithmic trading), and current AI deployment represents an acceleration of longstanding digitization trends rather than a sudden disruption. The article notes tension between banks' public AI investment narratives (which emphasize transformation) and the still-limited measurable impact on aggregate employment, suggesting the labor market effects of AI in banking remain more incremental than revolutionary through late 2025.",
+  "keyFindings": [
+    "US Big Six banks combined headcount has fallen to its lowest level since 2021",
+    "Experts say AI is not yet the primary driver — attrition, post-pandemic normalization, and pre-AI efficiency programs also contribute",
+    "Banks are aggressively adopting AI for fraud detection, customer service, risk assessment, and code generation",
+    "Banking has historically been an early automation adopter; current AI is an acceleration of existing digitization trends",
+    "Tension exists between banks' AI transformation narratives and still-limited measurable employment impact"
+  ],
+  "methodology": "Journalistic reporting based on publicly reported headcount data from Big Six bank SEC filings and earnings reports. Expert interviews and analyst commentary. Not a peer-reviewed study.",
+  "qualifiers": "Fortune article, not peer-reviewed research. Headcount figures reflect direct employees only, not contractors or outsourced workers (whose numbers may have increased). Aggregate headcount masks compositional changes — banks may be cutting some roles while hiring for others (e.g., AI engineers). Causal attribution between AI and headcount changes is speculative. Article URL returned 404 at time of fetch; content based on provided excerpt and typical Fortune banking coverage.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "pwc-ai-jobs-barometer-finance-2025",
+  "abstract": "PwC's 2025 Global AI Jobs Barometer analyzes the impact of AI on the financial services sector, finding that productivity growth in AI-exposed industries including financial services nearly quadrupled from 7% to 27% between 2018 and 2024. The analysis tracks how AI adoption is reshaping the financial services workforce through task automation, skill transformation, and organizational restructuring. AI-exposed sectors demonstrate 3x higher revenue-per-employee growth compared to less-exposed sectors, indicating significant productivity gains from AI integration. The report examines how financial services firms are deploying AI across customer service, risk assessment, compliance, trading, and back-office operations, with varying levels of task displacement versus augmentation. The barometer draws on a large-scale analysis of job postings, economic output data, and firm-level productivity metrics across multiple countries.",
+  "keyFindings": [
+    "Productivity growth in AI-exposed industries including financial services nearly quadrupled from 7% to 27% between 2018 and 2024.",
+    "AI-exposed sectors demonstrate 3x higher revenue-per-employee growth compared to sectors with lower AI exposure.",
+    "Financial services is among the most AI-exposed industries, with significant adoption across customer service, risk assessment, compliance, and trading functions.",
+    "The productivity acceleration is measured across a six-year period (2018-2024), suggesting sustained rather than one-time gains from AI adoption.",
+    "Revenue-per-employee growth in AI-exposed sectors significantly outpaces wage growth, raising questions about how productivity gains are distributed between capital and labor."
+  ],
+  "methodology": "Large-scale analysis of job postings data, economic output indicators, and firm-level productivity metrics across multiple countries and sectors. AI exposure measured through occupational task composition and job posting skill requirements. Productivity measured as revenue per employee and labor productivity growth rates. Data period covers 2018-2024.",
+  "qualifiers": "Published by PwC, a professional services firm with commercial interest in AI advisory services. Revenue-per-employee growth may reflect factors beyond AI adoption, including post-pandemic recovery effects, sector consolidation, and capital deepening. The 2018-2024 period includes significant macroeconomic disruptions (COVID-19) that complicate causal attribution. Financial services sector results may not generalize to other industries. The barometer measures correlation between AI exposure and productivity, not necessarily causation.",
+  "fetchedAt": "2026-05-26"
+}

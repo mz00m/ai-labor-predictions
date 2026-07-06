@@ -1,0 +1,14 @@
+{
+  "id": "ilo-nask-genai-exposure-2025",
+  "abstract": "The International Labour Organization (ILO), in collaboration with NASK (Poland's National Research Institute), presents a refined global index of occupational exposure to generative AI. The study finds that 25% of global employment falls within occupations potentially exposed to GenAI, with exposure rates significantly higher in high-income countries (34%) compared to low- and middle-income nations. Clerical support roles remain the most exposed occupational category, consistent with earlier ILO findings. The refined index builds on previous work by incorporating more granular task-level analysis to distinguish between tasks that GenAI can augment versus those it may substitute. The research underscores that exposure does not automatically translate to displacement — many exposed occupations may see task restructuring and augmentation rather than outright job elimination. The geographic disparity in exposure rates reflects differences in occupational composition, with high-income economies having larger shares of workers in knowledge-intensive and clerical roles where GenAI capabilities are strongest.",
+  "keyFindings": [
+    "25% of global employment is in occupations potentially exposed to generative AI",
+    "Exposure is significantly higher in high-income countries (34%) vs. low- and middle-income nations",
+    "Clerical support roles remain the most exposed occupational category globally",
+    "Exposure does not equal displacement — many exposed occupations may see augmentation rather than substitution",
+    "Geographic disparity in exposure reflects differences in occupational composition across income levels"
+  ],
+  "methodology": "Refined global index of occupational exposure to GenAI, developed by ILO and NASK. Task-level analysis mapping GenAI capabilities against occupational task profiles using international occupational classifications. Builds on previous ILO exposure assessments with more granular task decomposition.",
+  "qualifiers": "Measures potential exposure, not actual displacement or adoption. Task-level analysis relies on current GenAI capabilities and may underestimate or overestimate future exposure as technology evolves. Does not account for institutional, regulatory, or cultural barriers to AI adoption. High-income country figures may be inflated by broad occupational categories that include both exposed and non-exposed tasks. 'Clerical support' encompasses a wide range of roles with varying actual AI substitution risk.",
+  "fetchedAt": "2026-05-26"
+}

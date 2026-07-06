@@ -1,0 +1,13 @@
+{
+  "id": "ft-gig-economy-squeeze",
+  "abstract": "The Financial Times reports on growing pressure that AI is placing on gig economy workers across platforms. As AI systems become capable of performing tasks previously outsourced to freelancers — including content writing, graphic design, translation, data labeling, and basic coding — gig workers face declining demand, downward wage pressure, and increased competition. The article examines how platform dynamics amplify these effects: gig platforms can rapidly substitute AI-generated outputs for human labor without the friction of traditional employment contracts, making gig workers among the most immediately exposed to AI displacement. The piece explores how different categories of gig work face varying levels of threat, with routine cognitive tasks most vulnerable and complex creative or interpersonal work more resilient.",
+  "keyFindings": [
+    "Gig economy workers face acute AI displacement pressure due to the absence of employment protections and low switching costs for platforms.",
+    "Content writing, graphic design, translation, data labeling, and basic coding gig work face the steepest demand declines.",
+    "Platform dynamics amplify displacement: gig platforms can substitute AI for human labor more rapidly than traditional employers.",
+    "Downward wage pressure affects gig workers even in categories not yet fully automatable, as AI-augmented workers undercut peers."
+  ],
+  "methodology": "Financial Times investigative reporting based on interviews with gig workers, platform executives, and labor economists. Supplemented by platform data and industry trend analysis.",
+  "qualifiers": "Full article content unavailable behind FT paywall; summary based on available excerpt and topic context. Specific quantitative data from the article could not be verified. Gig economy measurement is inherently difficult due to inconsistent definitions and limited official statistics. Regional variation in gig economy impact is likely significant.",
+  "fetchedAt": "2026-05-26"
+}
