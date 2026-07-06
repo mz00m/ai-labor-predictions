@@ -1,0 +1,17 @@
+{
+  "id": "anthropic-coding-agents-social-sci-2026",
+  "abstract": "Anthropic Economic Research surveys 1,260 quantitative social scientists to measure AI-tool adoption in academic research. Overall generative AI adoption is very high (81%), but weekly use of full coding agents (like Claude Code) is much lower at 20%. Adoption is highly uneven: men adopt at 2x the rate of women, top-university researchers adopt 40% more than others, and doctoral students/postdocs adopt at 2x the rate of tenured professors. Users write more working papers than non-users but do not submit more papers to journals — suggesting the productivity gain accrues to earlier stages of the research pipeline.",
+  "keyFindings": [
+    "81% of surveyed quantitative social scientists use generative AI to aid research; only 20% use full coding agents weekly",
+    "Among coding-agent adopters, 86% use Claude Code",
+    "Adoption gender gap: researchers with typically male names adopt coding agents at more than 2x the rate of those with typically female names",
+    "Career-stage gap: >25% of doctoral students and postdocs use coding agents; tenured professors use them at less than half that rate",
+    "University-prestige gap: researchers at top universities are 40% more likely than others to use coding agents",
+    "97% of coding-agent users report using it to generate code; 33% of any AI users have drafted prose with AI",
+    "Coding-agent users produce ~0.25 more project starts and ~0.5 more working papers over 6 months, but no significant difference in new journal submissions",
+    "88% of respondents rate AI's productivity benefit above 5 on a 10-point scale; 70% are more optimistic about their own paper productivity than about the field-wide impact"
+  ],
+  "methodology": "Survey of 1,260 quantitative social scientists (economists, sociologists, political scientists, others) about their generative AI and coding-agent adoption, task usage, demographic attributes, and productivity outcomes over the preceding six months. Demographic disparities inferred from name-based gender classification and university affiliation.",
+  "qualifiers": "Sample is a specialized academic population (quantitative social scientists), not the general workforce. Findings on adoption gaps generalize best to knowledge-work contexts with autonomous project structure. The 'no journal submissions' finding may reflect the short window (journal submissions lag working papers by months to years) rather than a null effect. Gender classification via names is noisy. Self-reported productivity attribution to AI is subject to recall and self-selection biases.",
+  "fetchedAt": "2026-07-06"
+}

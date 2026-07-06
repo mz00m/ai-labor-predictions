@@ -1,0 +1,14 @@
+{
+  "id": "dimon-jpmorgan-ceo-letter-2026",
+  "abstract": "In JPMorgan Chase's 2025 Annual Report CEO letter, Jamie Dimon addresses AI's workforce implications with unusual candor. He states that AI will 'definitely eliminate some jobs' while enhancing and creating others, including roles in cybersecurity and AI itself, as well as jobs that cannot yet be foreseen. Dimon flags a critical timing risk: AI deployment may move faster than workforce adaptation to new job creation, unlike past technological shifts that allowed gradual labor market adjustment. He characterizes AI adoption as uniquely rapid compared to electricity or the internet, which took decades to diffuse. Dimon notes that AI will affect 'virtually every function, application and process' at JPMorgan Chase, and commits to redeploying affected workers. He cites massive AI-driven capital spending across the economy — $450 billion in 2025 rising to approximately $725 billion in 2026 — while acknowledging uncertainty about ultimate winners and losers. He also flags emerging risks including deepfakes, misinformation, and cybersecurity vulnerabilities.",
+  "keyFindings": [
+    "AI will 'definitely eliminate some jobs' while creating new ones in cybersecurity, AI engineering, and unforeseen categories.",
+    "AI deployment may outpace workforce adaptation, unlike past technological transitions that allowed gradual adjustment over decades.",
+    "AI-driven capital spending across the economy is projected at $450 billion in 2025, rising to approximately $725 billion in 2026.",
+    "AI will affect 'virtually every function, application and process' at JPMorgan Chase, one of the world's largest employers.",
+    "JPMorgan commits to supporting and redeploying workers displaced by AI, while acknowledging uncertainty about which industries will ultimately benefit or lose."
+  ],
+  "methodology": "Annual CEO letter to shareholders from JPMorgan Chase's 2025 Annual Report. Reflects executive-level assessment of AI's impact on workforce and operations, informed by the firm's internal AI deployment experience and market observations. Not a formal research study.",
+  "qualifiers": "CEO letters are strategic communications documents that balance candor with investor relations objectives. Dimon's specific capital spending figures ($450B/$725B) represent economy-wide estimates, not JPMorgan-specific commitments, and the sourcing is unclear. The commitment to redeploy affected workers may not reflect actual outcomes. As CEO of a major AI adopter, Dimon has interests in framing AI as both transformative (justifying investment) and manageable (reassuring stakeholders).",
+  "fetchedAt": "2026-05-26"
+}

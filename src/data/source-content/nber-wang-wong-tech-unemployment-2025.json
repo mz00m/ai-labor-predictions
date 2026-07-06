@@ -1,0 +1,14 @@
+{
+  "id": "nber-wang-wong-tech-unemployment-2025",
+  "abstract": "Wang and Wong develop a labor-search equilibrium model treating AI as a learning-by-using technology to investigate conditions under which AI could cause technological unemployment. The model yields three possible equilibria: no AI adoption, partial AI adoption with elevated unemployment, or unbounded AI growth with sustained productivity gains and minimal employment disruption. Calibrated to U.S. data, the model predicts more than threefold productivity improvements under moderate AI adoption but projects long-run employment losses of 23%, with approximately half occurring within the initial five-year transition period. The framework reveals that displacement effects can dominate in the short run as wage negotiations break down, but productivity effects typically dominate over a 5-15 year horizon. The authors find that targeted subsidies for jobs facing AI replacement risk could generate welfare gains ranging from 26.6% in the short run to over 50% in the long run, suggesting active labor market policy can substantially mitigate transition costs.",
+  "keyFindings": [
+    "Model predicts 23% long-run employment loss under partial AI adoption, with roughly half occurring in the first five years",
+    "Three distinct equilibria emerge: no adoption, partial adoption with elevated unemployment, or unbounded AI growth with minimal disruption",
+    "Displacement effects dominate in the short run but productivity effects typically dominate over 5-15 year transition periods",
+    "Targeted job subsidies for at-risk workers could generate welfare gains of 26.6% short-run to 50%+ long-run",
+    "AI modeled as learning-by-using technology yields more than threefold productivity improvements under moderate adoption"
+  ],
+  "methodology": "Calibrated labor-search equilibrium model using U.S. labor market data, incorporating endogenous technological advancement, job-finding dynamics, and wage negotiation mechanisms. Theoretical framework with numerical calibration rather than empirical estimation.",
+  "qualifiers": "Theoretical model with considerable parameter uncertainty — variations can produce multiple equilibria. Results depend heavily on calibration assumptions about AI learning rates, bargaining dynamics, and labor market frictions. The equilibria prove inefficient even under standard labor market conditions, suggesting real-world outcomes could diverge further from model predictions.",
+  "fetchedAt": "2026-05-26"
+}

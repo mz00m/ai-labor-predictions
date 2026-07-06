@@ -1,0 +1,14 @@
+{
+  "id": "oecd-ai-adoption-firms-individuals-2026",
+  "abstract": "The OECD reports a widening gap between individual and firm-level AI adoption across member countries. While consumer-facing AI tools like chatbots and AI assistants have seen rapid uptake among individuals, enterprise AI adoption has stalled, with firms citing integration complexity, regulatory uncertainty, data readiness challenges, and unclear ROI as barriers. This divergence has implications for labor market dynamics: individual workers are gaining AI skills and capabilities faster than their employers are deploying AI systems at organizational scale. The pattern suggests that near-term labor market disruption may come less from firm-level automation decisions and more from shifts in individual worker productivity and skill differentiation. The report highlights that the consumer-enterprise AI gap varies significantly across OECD countries, with Nordic and English-speaking countries showing higher individual adoption rates while firm-level adoption remains relatively uniform across advanced economies.",
+  "keyFindings": [
+    "Individual AI use is surging across OECD countries while firm-level adoption has stalled, creating a widening consumer-enterprise gap",
+    "Firms cite integration complexity, regulatory uncertainty, and unclear ROI as primary barriers to organizational AI deployment",
+    "Workers are acquiring AI skills faster than employers are deploying AI systems, creating a bottom-up adoption pattern",
+    "The consumer-enterprise AI gap varies significantly across OECD countries, with Nordic and English-speaking nations leading individual adoption",
+    "Near-term labor market disruption may stem more from individual productivity differentiation than firm-level automation decisions"
+  ],
+  "methodology": "OECD cross-country comparative analysis drawing on national statistics agencies' surveys of individual technology use and firm-level business surveys across member countries. Specific survey instruments and sample sizes vary by country.",
+  "qualifiers": "Aggregated across diverse national survey methodologies with varying definitions of AI use. Firm-level adoption metrics may undercount informal or departmental AI tool use not captured in enterprise IT surveys. Individual AI use includes a wide range of activities from simple chatbot queries to sophisticated professional applications.",
+  "fetchedAt": "2026-05-26"
+}

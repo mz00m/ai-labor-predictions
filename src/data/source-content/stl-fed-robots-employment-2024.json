@@ -1,0 +1,14 @@
+{
+  "id": "stl-fed-robots-employment-2024",
+  "abstract": "The St. Louis Federal Reserve analyzes the relationship between industrial robot adoption and employment outcomes, examining whether robots function primarily as substitutes for human workers or as complements that enhance productivity and create new roles. The analysis draws on data linking robot installations to local labor market outcomes across U.S. metropolitan areas and industries. The findings suggest that the relationship is context-dependent: in manufacturing, robots tend to substitute for routine manual tasks, leading to measurable employment declines in specific occupations, while in other sectors robots more frequently complement human workers by automating dangerous or repetitive subtasks and enabling workers to focus on higher-value activities. The net employment effect depends on the balance between direct displacement, productivity-driven demand expansion, and the creation of new tasks and occupations. The analysis contributes to the broader automation literature by emphasizing that the helper-vs-substitute framing is too binary — most robot deployments involve elements of both, with the net effect depending on industry structure, labor market institutions, and the pace of new task creation.",
+  "keyFindings": [
+    "Robot-employment relationship is context-dependent: substitution dominates in routine manufacturing tasks while complementarity is more common in other sectors",
+    "Net employment effect depends on the balance between direct displacement, productivity-driven demand expansion, and new task creation",
+    "The helper-vs-substitute framing is too binary — most robot deployments involve elements of both",
+    "Manufacturing sees measurable employment declines in specific occupations following robot adoption",
+    "Outcomes depend heavily on industry structure, labor market institutions, and the pace of new task creation"
+  ],
+  "methodology": "Analysis linking robot installation data (International Federation of Robotics) to local labor market outcomes using U.S. metropolitan area and industry-level employment data. Comparative analysis across sectors and occupation types.",
+  "qualifiers": "Industrial robot analysis may not directly translate to AI and software automation, which affect different occupational categories. Data on robot installations captures hardware automation but not software-based automation. Local labor market effects may be offset by general equilibrium adjustments at the national level. Causal identification is challenging due to simultaneous determination of robot adoption and employment trends.",
+  "fetchedAt": "2026-05-26"
+}

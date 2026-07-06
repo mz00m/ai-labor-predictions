@@ -1,0 +1,14 @@
+{
+  "id": "goldman-sachs-ai-headcount-survey-2025",
+  "abstract": "A Goldman Sachs client survey reported via Fortune reveals that only 11% of companies are actively linking layoffs to AI currently, but the financial sector faces significantly steeper projected cuts. Financial institutions could see a 14% headcount reduction over the next three years — the worst of any industry category surveyed. The disparity between the low current displacement rate (11%) and the high expected displacement in finance (14%) suggests the industry is in an early but accelerating phase of AI-driven workforce restructuring. Financial services are particularly exposed due to the high proportion of knowledge work, structured data processing, and rules-based decision-making that aligns with current AI capabilities. The survey results indicate that while broad AI-driven layoffs remain limited across the economy, sector-specific impacts are beginning to concentrate in industries with high cognitive task density.",
+  "keyFindings": [
+    "Only 11% of companies are actively cutting employees due to AI currently",
+    "Financial institutions face projected 14% headcount reduction over next 3 years — worst of any sector surveyed",
+    "Large gap between current AI displacement (11%) and projected financial sector cuts (14%) suggests accelerating trajectory",
+    "Financial services particularly exposed due to high concentration of knowledge work and rules-based decision-making",
+    "AI-driven layoffs remain limited economy-wide but are concentrating in high cognitive-task-density industries"
+  ],
+  "methodology": "Goldman Sachs client survey. Specific sample size, fielding dates, and detailed methodology not disclosed in the Fortune coverage. Results represent client self-reports of current and planned AI-related workforce changes.",
+  "qualifiers": "Reported via Fortune, not directly from Goldman Sachs — some methodological detail may be lost. Survey of Goldman Sachs clients may skew toward larger, more sophisticated firms. The 14% financial sector figure is a projection, not an observed outcome. 'Actively linking layoffs to AI' may undercount indirect AI-driven headcount reduction (attrition, hiring freezes). Three-year projection timeline subject to significant uncertainty.",
+  "fetchedAt": "2026-05-26"
+}

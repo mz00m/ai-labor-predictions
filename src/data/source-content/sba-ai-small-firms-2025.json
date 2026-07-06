@@ -1,0 +1,14 @@
+{
+  "id": "sba-ai-small-firms-2025",
+  "abstract": "The SBA Office of Advocacy releases a research spotlight examining AI adoption patterns among small businesses relative to larger firms. The analysis finds that small firms are closing the AI adoption gap with larger enterprises, though from a significantly lower base. Small businesses are increasingly deploying AI tools for customer service, marketing, accounting, and operational efficiency — areas where off-the-shelf AI applications have reduced the cost and technical barriers to entry. However, the adoption gap remains substantial for more complex AI applications requiring custom development, large datasets, or specialized technical talent. The report notes that the rapid proliferation of low-cost and free AI tools has been a key enabler for small firm adoption, democratizing access to capabilities that were previously available only to large enterprises with dedicated data science teams. The findings suggest that AI may be reducing some scale advantages in technology deployment while creating new ones in areas requiring proprietary data and custom model development.",
+  "keyFindings": [
+    "Small firms are closing the AI adoption gap with larger enterprises, driven primarily by low-cost off-the-shelf AI tools",
+    "Adoption gap narrows for customer service, marketing, and operational AI but persists for complex custom AI applications",
+    "Proliferation of free and low-cost AI tools has democratized access to capabilities previously limited to large firms",
+    "AI may be reducing scale advantages in routine technology deployment while creating new advantages in proprietary data and custom models",
+    "Small business AI adoption concentrated in areas with immediate, measurable productivity gains and low implementation costs"
+  ],
+  "methodology": "SBA Office of Advocacy research spotlight drawing on business survey data and Census Bureau statistics on technology adoption by firm size. Comparative analysis of AI adoption rates across firm size categories.",
+  "qualifiers": "Small firm AI adoption rates may be inflated by broad definitions of AI use that include simple chatbot interactions. Survey data subject to self-reporting bias. Firm size categories and AI definitions vary across data sources. The research spotlight format provides summary findings rather than detailed empirical analysis.",
+  "fetchedAt": "2026-05-26"
+}

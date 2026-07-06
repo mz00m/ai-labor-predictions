@@ -1,0 +1,14 @@
+{
+  "id": "gartner-cs-leaders-survey-2026",
+  "abstract": "Gartner surveyed 321 customer service (CS) leaders in September-October 2025 and found a striking gap between AI expectations and current action. While 91% of CS leaders report being under pressure to adopt AI, only 20% have actually reduced agent staffing as a result of AI deployment. However, the expectations are accelerating: more than 80% of respondents expect to reduce headcount over the next 18 months as AI handles more routine customer interactions. Notably, the survey reveals that leadership is not simply planning layoffs — nearly 80% of CS leaders plan to transition displaced agents into new roles rather than eliminate positions outright. This suggests organizations anticipate a significant restructuring of customer service work rather than pure elimination, with AI absorbing routine inquiries while human agents shift toward complex, high-value interactions requiring judgment and empathy.",
+  "keyFindings": [
+    "Only 20% of customer service leaders have actually reduced agent staffing due to AI, despite widespread adoption",
+    "Over 80% of CS leaders expect to reduce headcount within the next 18 months",
+    "Nearly 80% plan to transition agents into new roles rather than simply eliminating positions",
+    "91% of CS leaders report being under pressure from leadership to adopt AI in their operations",
+    "Gap between current AI displacement (20%) and expected displacement (80%+) suggests a coming inflection point in CS workforce restructuring"
+  ],
+  "methodology": "Survey of 321 customer service leaders conducted September-October 2025. Gartner proprietary survey methodology targeting senior CS leadership across industries.",
+  "qualifiers": "Survey captures leader expectations and intentions, not actual outcomes — 18-month headcount reduction projections may prove optimistic or delayed. Self-reported data from leaders may overstate AI readiness. Does not distinguish between types of customer service operations (call center vs. digital vs. field service). Role transition plans (80%) may not materialize as smoothly as anticipated.",
+  "fetchedAt": "2026-05-26"
+}

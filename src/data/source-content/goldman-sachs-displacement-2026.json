@@ -1,0 +1,14 @@
+{
+  "id": "goldman-sachs-displacement-2026",
+  "abstract": "Goldman Sachs research, reported via Fortune in April 2026, quantifies the net displacement effect of AI on the US job market. The analysis finds AI is erasing roughly 16,000 net jobs per month over the past year, with substitution wiping out approximately 25,000 jobs per month while augmentation adds back about 9,000. The research identifies disproportionate impact on Gen Z and entry-level workers, who concentrate in roles most susceptible to automation: data entry, customer service, legal support, and billing. A one standard-deviation increase in AI substitution exposure widens the entry-level-to-experienced wage gap by roughly 3.3 percentage points. The unemployment rate gap between workers under 30 and those aged 31-50 has widened sharply relative to pre-pandemic averages in AI-exposed occupations. Unlike experienced employees with specialized judgment and accumulated expertise, entry-level Gen Z workers lack protective buffers against displacement. The framework, developed by Goldman Sachs economist Elsie Peng, combines standard AI exposure scores with a complementarity index developed by IMF economists to measure substitution risk versus augmentation potential.",
+  "keyFindings": [
+    "AI erases roughly 16,000 net jobs per month (25,000 substitution minus 9,000 augmentation)",
+    "One standard-deviation increase in AI substitution exposure widens entry-level-to-experienced wage gap by 3.3 percentage points",
+    "Gen Z workers disproportionately affected due to concentration in automatable roles: data entry, customer service, legal support, billing",
+    "Unemployment rate gap between under-30 and 31-50 workers has widened sharply in AI-exposed occupations relative to pre-pandemic averages",
+    "Entry-level workers lack protective buffers (specialized judgment, accumulated expertise) that shield experienced workers from displacement"
+  ],
+  "methodology": "Econometric framework by Goldman Sachs economist Elsie Peng combining standard AI exposure scores with a complementarity index developed by IMF economists. Regression modeling approach analyzing substitution vs. augmentation effects across occupations. Analysis relies on regression modeling rather than direct job-loss tallies.",
+  "qualifiers": "Regression-based estimates rather than direct job counts introduce uncertainty. May underestimate AI's positive effects from infrastructure investments and productivity-driven market expansion. The 3.3pp wage gap figure applies to a one standard-deviation change in AI exposure, not an absolute measure. One-year observation window may be too short for definitive conclusions. Reported via Fortune, not directly from Goldman Sachs research publication.",
+  "fetchedAt": "2026-05-26"
+}

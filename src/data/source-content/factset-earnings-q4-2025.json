@@ -1,0 +1,13 @@
+{
+  "id": "factset-earnings-q4-2025",
+  "abstract": "FactSet's analysis of S&P 500 Q4 2025 earnings calls finds that 68% of companies (331 out of 485 reporting) cited AI during their earnings calls, representing the highest level in the past decade and significantly above both the 5-year average of 149 and 10-year average of 94 mentions. The Information Technology and Financials sectors led with 67 calls each, while by percentage, IT (94%), Financials (91%), and Communication Services (89%) had the highest share of companies mentioning AI. Compared to Q3 2025, Financials (+13 calls) and Health Care (+8 calls) showed the largest quarter-over-quarter increases. Notably, companies citing AI underperformed in stock price: AI-mentioning companies saw a 1.5% price increase from December 31, 2025 to March 10, 2026, while non-AI-mentioning companies gained 5.6% over the same period, suggesting the market may be skeptical of AI-related corporate narratives or pricing in execution risk.",
+  "keyFindings": [
+    "68% of S&P 500 companies (331 of 485) cited AI in Q4 2025 earnings calls, a record high and more than double the 5-year average of 149 mentions.",
+    "Information Technology (94%) and Financials (91%) had the highest percentage of companies mentioning AI, with Financials showing the largest quarter-over-quarter increase (+13 calls).",
+    "Companies citing AI underperformed those that did not: 1.5% vs. 5.6% price increase from Dec 31, 2025 to Mar 10, 2026, suggesting market skepticism about AI corporate narratives.",
+    "AI mentions have become nearly universal in certain sectors, transitioning from a competitive differentiator to a baseline expectation in corporate communications."
+  ],
+  "methodology": "FactSet text analysis of S&P 500 earnings call transcripts for Q4 2025, counting companies that mentioned 'AI' or 'artificial intelligence' during their calls. Covers 485 of approximately 500 S&P 500 companies that had reported by the analysis date. Sector-level and quarter-over-quarter comparisons provided.",
+  "qualifiers": "Mention counts capture discussion frequency but not substance, depth, or actual AI deployment. A company citing AI as a risk factor counts the same as one reporting material AI-driven revenue. The stock performance comparison is short-term and may reflect many factors beyond AI strategy. The analysis does not distinguish between companies discussing AI investments, AI products, AI risks, or AI in passing.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "fiverr-fy2025-earnings",
+  "abstract": "Fiverr's FY2025 financial results provide a market-based signal of AI's impact on freelance labor demand, particularly in knowledge work categories. The company reported revenue declines in AI-exposed service categories — writing, translation, and simple coding tasks — where generative AI tools can directly substitute for human freelancers. Simultaneously, complex creative and strategic services that require human judgment, taste, or client interaction showed growth, revealing a bifurcation in freelance demand along the AI-substitutability axis. Fiverr operates as a leading marketplace for freelance digital services, making its category-level performance data a real-time indicator of which types of knowledge work face the most immediate AI displacement pressure. The divergence between AI-substitutable and AI-complementary service categories within the same platform provides unusually clean evidence of how AI is reshaping demand for human labor across different task types.",
+  "keyFindings": [
+    "AI-exposed categories (writing, translation, simple coding) experienced the largest revenue declines, directly reflecting reduced demand for human labor in tasks where generative AI can substitute.",
+    "Complex creative and strategic services grew, indicating that AI displacement is concentrated in routinizable knowledge work while demand for judgment-intensive human services remains robust.",
+    "The within-platform divergence between AI-substitutable and AI-complementary categories provides real-time market evidence of task-level displacement that aligns with theoretical predictions.",
+    "Fiverr's results serve as a leading indicator for broader freelance and gig economy trends, where workers lack the institutional buffers (contracts, retraining programs) available to traditional employees."
+  ],
+  "methodology": "Publicly reported quarterly and annual financial results from Fiverr International Ltd., a major online marketplace for freelance digital services. Category-level revenue and active buyer data provide granular insight into demand shifts across service types. Market data covering FY2025 (calendar year 2025).",
+  "qualifiers": "Fiverr represents one marketplace platform and may not fully represent the broader freelance economy. Revenue declines in specific categories could reflect pricing pressure, competitive dynamics, or platform-specific factors beyond AI substitution. The company does not publicly report granular category-level revenue breakdowns, limiting precise quantification. Fiverr's user base skews toward cost-sensitive buyers who may be more willing to switch to AI alternatives than enterprise clients.",
+  "fetchedAt": "2026-05-26"
+}

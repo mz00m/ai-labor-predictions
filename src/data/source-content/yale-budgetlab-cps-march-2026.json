@@ -1,0 +1,14 @@
+{
+  "id": "yale-budgetlab-cps-march-2026",
+  "abstract": "The Yale Budget Lab tracks AI's labor market impact using Current Population Survey (CPS) microdata through March 2026, providing one of the most rigorous ongoing assessments of whether AI deployment is affecting aggregate employment. The analysis finds no statistically significant aggregate employment effects attributable to AI through March 2026 — overall employment levels, unemployment rates, and labor force participation in AI-exposed occupations have not diverged meaningfully from non-exposed occupations after controlling for standard economic factors. However, the study identifies compositional shifts within occupations and sectors that are suggestive of early AI influence: changes in the mix of tasks performed, shifts in hours worked across skill levels within occupations, and altered patterns of job-to-job transitions. These compositional changes are consistent with AI augmenting and reorganizing work within existing occupational categories rather than eliminating occupations wholesale. The Yale Budget Lab's approach of tracking CPS microdata longitudinally provides higher statistical power than cross-sectional studies and can detect subtler shifts that aggregate statistics miss.",
+  "keyFindings": [
+    "No statistically significant aggregate employment effects attributable to AI through March 2026",
+    "Compositional shifts within AI-exposed occupations are suggestive of early AI influence on task mix and hours allocation",
+    "AI appears to be reorganizing work within occupational categories rather than eliminating occupations wholesale",
+    "Job-to-job transition patterns showing altered flows in AI-exposed occupations, consistent with internal labor market restructuring",
+    "Aggregate employment stability may mask meaningful within-occupation changes in task composition and skill requirements"
+  ],
+  "methodology": "Longitudinal analysis of CPS microdata tracking employment, hours, wages, and occupational transitions for individuals in AI-exposed vs. non-exposed occupations. Controls for standard cyclical and structural labor market factors. Uses established AI occupational exposure indices mapped to CPS occupation codes.",
+  "qualifiers": "CPS data has limited occupational detail compared to administrative records, potentially missing fine-grained within-occupation shifts. AI exposure indices may not accurately reflect actual AI deployment timing and intensity. The null aggregate finding could reflect genuine absence of effects, insufficient statistical power, or data granularity limitations. Through March 2026 may still be too early to detect displacement effects that accumulate over longer periods.",
+  "fetchedAt": "2026-05-26"
+}

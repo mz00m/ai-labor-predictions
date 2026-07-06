@@ -1,0 +1,14 @@
+{
+  "id": "mit-sloan-bcg-agentic-enterprise-2025",
+  "abstract": "Joint research by MIT Sloan Management Review and Boston Consulting Group examining the emergence of agentic AI in enterprise settings. The study documents rapid adoption trajectories: traditional AI reached 72% adoption over eight years, generative AI achieved 70% adoption in just three years, and agentic AI has already reached 35% adoption with 44% of organizations planning deployment. A striking finding is that 76% of respondents view agentic AI as more like a coworker than a tool, reflecting a fundamental shift in how organizations conceptualize AI systems. Among organizations with extensive agentic AI adoption, 45% expect reductions in middle management layers, suggesting significant organizational restructuring as AI agents take over coordination and supervisory functions. The report identifies a critical strategic gap: organizations are rapidly adopting agentic AI well before they have a strategy in place, creating risks around governance, accountability, and workforce planning. The research highlights the 'tool-coworker duality' as a central challenge for leaders navigating agentic AI integration.",
+  "keyFindings": [
+    "Agentic AI already at 35% adoption with 44% planning deployment — adoption trajectory far faster than traditional AI (72% over 8 years) or GenAI (70% in 3 years)",
+    "76% of executives view agentic AI as more like a coworker than a tool, signaling a conceptual shift in human-AI interaction",
+    "45% of organizations with extensive agentic AI adoption expect reductions in middle management layers",
+    "Organizations are adopting agentic AI before developing strategy, creating governance and accountability gaps",
+    "Adoption acceleration: traditional AI (8 years to 72%), GenAI (3 years to 70%), agentic AI (35% and climbing rapidly)"
+  ],
+  "methodology": "Global executive survey conducted by MIT Sloan Management Review and Boston Consulting Group. Sample includes executives across industries and geographies. Specific sample size not disclosed in available materials. Survey examines adoption rates, organizational perceptions, and strategic readiness for agentic AI.",
+  "qualifiers": "The 45% middle management reduction figure applies specifically to organizations with 'extensive agentic AI adoption,' not all organizations — this is a subset. Survey sample composition and size not fully disclosed. Executive self-reports may overstate adoption levels and strategic sophistication. The 'coworker vs. tool' framing may reflect aspirational positioning rather than actual operational integration. Rapid adoption trajectories may plateau or reverse as organizations encounter implementation challenges. Comparison across AI generations (traditional, generative, agentic) may use inconsistent definitions of 'adoption.'",
+  "fetchedAt": "2026-05-26"
+}

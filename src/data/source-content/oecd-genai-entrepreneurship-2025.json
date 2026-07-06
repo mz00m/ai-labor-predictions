@@ -1,0 +1,14 @@
+{
+  "id": "oecd-genai-entrepreneurship-2025",
+  "abstract": "This OECD report examines the effects of generative AI on productivity, innovation, and entrepreneurship. The analysis finds that GenAI enhances productivity across multiple sectors by automating routine cognitive tasks and augmenting creative and analytical work. The report documents how GenAI boosts innovation by enhancing idea generation, accelerating R&D cycles, and reducing time-to-market for new products. A central finding is that GenAI fosters entrepreneurship by significantly lowering barriers to entry—reducing the cost and technical expertise required to launch new ventures in software development, content creation, marketing, and professional services. The report notes that early productivity gains are concentrated among less-experienced workers and in routine task-intensive occupations, with potential implications for skill premiums and wage structures. However, the report cautions that productivity measurement challenges and short observation windows limit confidence in long-term projections.",
+  "keyFindings": [
+    "Generative AI boosts innovation by enhancing idea generation, accelerating R&D processes, and reducing the time and cost of bringing new products to market.",
+    "GenAI fosters entrepreneurship by lowering barriers to entry, enabling individuals with less technical expertise to start businesses in sectors previously requiring specialized skills.",
+    "Early productivity gains are most pronounced for less-experienced workers and in routine cognitive task categories, suggesting a compression of skill premiums.",
+    "AI-driven automation of routine tasks allows workers to reallocate time to higher-value creative and strategic activities, though organizational adaptation is required to realize these gains.",
+    "Policy frameworks need updating to address new challenges including data governance, intellectual property in AI-generated content, and workforce transition support."
+  ],
+  "methodology": "Synthesis of existing empirical studies, case analyses, and OECD survey data examining AI adoption across member countries. Draws on firm-level productivity data, innovation metrics, and business formation statistics from OECD databases.",
+  "qualifiers": "Productivity measurement in the context of AI remains methodologically challenging, as traditional metrics may not capture quality improvements or new types of output. Most empirical evidence comes from early adoption phases and may not represent steady-state effects. Cross-country comparisons are complicated by differing regulatory environments, digital infrastructure maturity, and sectoral composition. The report acknowledges significant uncertainty about whether short-term productivity gains will compound or plateau.",
+  "fetchedAt": "2026-05-26"
+}

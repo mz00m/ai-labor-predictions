@@ -1,0 +1,14 @@
+{
+  "id": "gofman-jin-ai-education-entrepreneurship-2024",
+  "abstract": "This study examines how occupational exposure to artificial intelligence relates to educational pathways and entrepreneurial entry. Using data on AI-related patents, job postings, and individual career trajectories, Gofman and Jin find that workers in AI-exposed occupations increasingly pursue entrepreneurship rather than traditional employment. The paper documents a significant shift in human capital investment patterns: workers facing higher AI exposure invest more in business-relevant education and are more likely to start new ventures. The findings suggest that AI exposure functions as both a push factor (displacing routine analytical work) and a pull factor (creating new market opportunities that entrepreneurially-minded workers can exploit). The authors provide evidence that this entrepreneurial response is not simply workers fleeing job loss, but rather reflects genuine opportunity recognition enabled by AI-augmented capabilities and newly viable business models.",
+  "keyFindings": [
+    "Workers in AI-exposed occupations are significantly more likely to pursue entrepreneurship, suggesting AI creates new venture opportunities alongside displacement effects.",
+    "AI exposure drives changes in educational investment, with workers shifting toward business-relevant coursework and skills that complement entrepreneurial activity.",
+    "The entrepreneurial response to AI exposure is not primarily driven by job displacement but reflects genuine opportunity recognition in newly viable AI-enabled business domains.",
+    "Higher AI exposure correlates with increased rates of self-employment and new business formation, particularly in technology-adjacent sectors.",
+    "The relationship between AI exposure and entrepreneurship is mediated by educational attainment and the type of skills workers invest in acquiring."
+  ],
+  "methodology": "Empirical analysis using AI patent data and job posting data to construct occupational AI exposure measures, linked to individual career and education records. The study employs regression analysis to identify relationships between AI exposure, educational choices, and entrepreneurial entry, with instrumental variable approaches to address endogeneity concerns.",
+  "qualifiers": "Published in Journal of Finance, which focuses on financial economics rather than labor economics, potentially emphasizing entrepreneurial finance aspects over broader labor market dynamics. The causal direction between AI exposure and entrepreneurship is difficult to establish definitively — individuals predisposed to entrepreneurship may self-select into AI-exposed fields. The study primarily captures formal entrepreneurship (registered businesses) and may miss informal or gig economy responses to AI exposure.",
+  "fetchedAt": "2026-05-26"
+}

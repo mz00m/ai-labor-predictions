@@ -1,0 +1,14 @@
+{
+  "id": "nyfed-sce-ai-workplace-training-2026",
+  "abstract": "Using supplemental questions added to the November 2025 Survey of Consumer Expectations, the NY Fed examines GenAI workplace usage patterns and the mediating role of employer-provided training. The study finds 39% of employed respondents used AI tools at work in the past 12 months, with stark demographic disparities: 58.7% of college graduates vs. 22.9% of non-graduates, and 66.3% of workers earning over $200K vs. 15.9% earning under $50K. Among AI users, 66% reported increased personal productivity, with 40% citing faster task completion and 22% noting ability to handle more work. However, only 15.9% of employees received employer-sponsored AI training despite 38% valuing such training as important. Workers without AI training access showed average willingness to pay 11.4% of salary to gain access, while those with access required an average 24.2% salary increase to surrender it. The findings reveal that access to training mediates the relationship between AI exposure and worker outcomes, with undertrained workers expressing greater job displacement anxiety.",
+  "keyFindings": [
+    "39% of employed respondents used AI tools at work in the past 12 months, with usage strongly correlated to education and income",
+    "Only 15.9% of employees received employer-sponsored AI training despite 38% valuing it as important",
+    "Workers without training access willing to pay 11.4% of salary for it; those with access require 24.2% raise to give it up",
+    "66% of AI users report increased productivity, but 19% report slower task completion due to learning curves",
+    "College graduates use AI at 2.6x the rate of non-graduates (58.7% vs 22.9%), creating a widening skills gap"
+  ],
+  "methodology": "Supplemental survey questions fielded as part of the November 2025 Survey of Consumer Expectations (SCE) to a nationally representative sample of the U.S. population. Cross-sectional analysis of AI usage, training access, and worker valuations.",
+  "qualifiers": "Self-reported survey data subject to social desirability and recall bias. Single cross-section limits causal inference. The SCE panel skews slightly higher-education and higher-income than the general population. Willingness-to-pay measures are hypothetical, not revealed preferences.",
+  "fetchedAt": "2026-05-26"
+}

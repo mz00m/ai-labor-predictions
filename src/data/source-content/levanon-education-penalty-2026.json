@@ -1,0 +1,14 @@
+{
+  "id": "levanon-education-penalty-2026",
+  "abstract": "Gad Levanon of the Burning Glass Institute identifies an emerging 'education penalty' in U.S. labor markets. In 2022, there was essentially no relationship between a metro area's share of college graduates and its relative unemployment rate (correlation of -0.01). By 2025, that correlation had shifted to 0.26 — modest but meaningful across more than 300 metropolitan areas, representing an entirely new pattern that emerged in just three years. Highly educated metros experienced dramatic unemployment percentile increases: San Jose rose from the 11th to the 41st percentile, San Francisco from the 14th to the 46th, Seattle from the 26th to the 54th, Boston from the 20th to the 53rd, Washington D.C. from the 16th to the 51st, and Omaha from the 6th to the 46th. Levanon traces this to the Finance, Insurance, Information, and Professional & Business Services (FIIPB) sector, which accounts for over 40% of GDP. In this sector, output keeps climbing while employment does not — a decoupling that disproportionately affects college-educated workers concentrated in these metros. The timing aligns with generative AI adoption, suggesting direct substitution for entry-level cognitive work.",
+  "keyFindings": [
+    "The correlation between metro-level college graduate share and relative unemployment shifted from -0.01 (2022) to 0.26 (2025) — an entirely new pattern across 300+ metros.",
+    "Highly educated metros saw dramatic unemployment percentile jumps: San Jose +30 points, Omaha +40 points, Boston +33 points, D.C. +35 points.",
+    "The FIIPB sector (Finance, Insurance, Information, Professional & Business Services) shows output growth decoupled from employment growth.",
+    "FIIPB accounts for over 40% of GDP and concentrates in educated metros, amplifying the geographic pattern.",
+    "The 2022-2025 timing aligns with generative AI adoption, suggesting substitution for entry-level cognitive work."
+  ],
+  "methodology": "Cross-sectional analysis of 300+ U.S. metropolitan areas comparing college graduate share to relative unemployment rates (each metro measured against its own historical norm). Uses BLS metro-level employment data, ACS educational attainment data, and sector-level output and employment trends from 2022 to 2025.",
+  "qualifiers": "A correlation of 0.26, while statistically meaningful at this sample size, explains only about 7% of the variance in metro unemployment. The analysis is correlational and does not establish that AI is the causal driver — other factors (tech layoffs, remote work rebalancing, interest rate effects on information sector) could contribute. The FIIPB employment-output decoupling could reflect cyclical rather than structural factors. Three years is a short window for identifying structural shifts.",
+  "fetchedAt": "2026-05-26"
+}

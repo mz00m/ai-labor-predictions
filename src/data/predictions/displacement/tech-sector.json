@@ -884,6 +884,15 @@
       "label": "Stanford DEL Canaries: ages 22-25 in AI-exposed jobs shrinking ~3.8%/yr"
     },
     {
+      "date": "2026-06-16",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-claude-code-expertise-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: humans keep 70% of planning vs 20% of execution decisions in coding"
+    },
+    {
       "date": "2026-07-01",
       "direction": "up",
       "sourceIds": [
@@ -1657,6 +1666,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-07-01",
       "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
+      "dateAdded": "2026-07-06"
+    },
+    {
+      "id": "anthropic-claude-code-expertise-2026",
+      "title": "Agentic coding and persistent returns to expertise",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "publisher": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-16",
+      "excerpt": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory \u2014 Jun 16, 2026). Analysis of ~400,000 Claude Code sessions from ~235,000 users between Oct 2025 and Apr 2026. Verified success rates: 'Novice: 15%; Intermediate/Expert: 28-33%.' Partial success rates: 77% (novice) vs 91-92% (intermediate/expert). Abandonment when troubled: novice 19% vs intermediate+ 5-7%. 'Every one of the ten largest occupations in our dataset lands within seven points of software engineers' (29-34% verified success). 'The estimated value of the average session rose by 27% between October and April.' Division of labor: 'people make about 70% of the planning decisions but only 20% of the execution decisions.' Work mix: code writing/fixing/testing 56%, ops 17%, planning/exploration 14%, analysis/prose 13%. Novice: ~5 actions, 600 words output/prompt; Expert: ~12 actions, 3,200 words/prompt.",
       "dateAdded": "2026-07-06"
     }
   ],

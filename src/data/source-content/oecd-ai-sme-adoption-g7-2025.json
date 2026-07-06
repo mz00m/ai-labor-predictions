@@ -1,0 +1,14 @@
+{
+  "id": "oecd-ai-sme-adoption-g7-2025",
+  "abstract": "OECD report examining AI adoption patterns among small and medium-sized enterprises (SMEs) across G7 and OECD countries. The research finds that AI adoption in core business functions remains remarkably low, ranging from 1.9% in Japan to 6.1% in the United States as of 2024. Even among SMEs that have adopted generative AI, only 29% report using it in their core business activities — the majority confine GenAI use to peripheral or experimental applications. The report estimates that annual labor productivity growth stemming from AI could range from 0.4 to 1.3 percentage points for the US over the next decade, conditional on adoption rates. Approximately a quarter of OECD workers are in occupations exposed to generative AI, consistent with other international estimates. A significant skills barrier persists: 50% of SMEs report that their employees lack the skills to use generative AI effectively, constraining both adoption and productive use. The findings suggest that the AI productivity revolution, if it materializes, will be substantially mediated by the pace of SME adoption — and that pace currently remains very slow.",
+  "keyFindings": [
+    "AI adoption in core business functions ranges from 1.9% (Japan) to 6.1% (US) in 2024 — remarkably low",
+    "Among SMEs using generative AI, only 29% use it in core business activities",
+    "Annual US labor productivity growth from AI could range from 0.4 to 1.3 percentage points over the next decade",
+    "About 25% of OECD workers are in occupations exposed to generative AI",
+    "50% of SMEs report employees lack skills to use generative AI effectively"
+  ],
+  "methodology": "OECD cross-country analysis drawing on national enterprise surveys, the OECD AI Policy Observatory, and G7 member country data. Combines firm-level adoption surveys with occupational exposure indices and productivity growth modeling. Published December 2025.",
+  "qualifiers": "SME adoption data relies on national surveys with varying definitions, timing, and sampling across countries. 'Core business functions' definition may vary across surveys. The 0.4-1.3pp productivity range reflects conditional estimates dependent on adoption speed assumptions. 29% core usage figure is among SMEs already using GenAI — a small subset of all SMEs. Skills gap self-reports (50%) may reflect awareness or framing effects rather than actual capability measurement. OECD worker exposure estimate (25%) is broadly consistent with ILO findings but uses different methodology. Full PDF not accessible via WebFetch — some detail may be missing.",
+  "fetchedAt": "2026-05-26"
+}

@@ -483,6 +483,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fregin et al.: high-skill AI augmenters capturing widening wage premium"
+    },
+    {
+      "date": "2026-06-16",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-claude-code-expertise-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: expert Claude Code success 28-33% vs 15% novice (n=235K users)"
     }
   ],
   "sources": [
@@ -906,6 +915,16 @@
       "evidenceTier": 2,
       "datePublished": "2025-04-04",
       "excerpt": "Under the baseline assumption that occupational exposure to AI is directly associated with task displacement, the model predicts a decrease in the Gini coefficient for wage inequality of 1.73 p.p. Wealth inequality, however, is predicted to widen, with the wealth Gini rising 7.18 p.p. [...] roughly 60 percent of workers at the 90th income percentile are in an occupation where a large share of tasks can be performed by AI, at the 10th percentile only 15 percent of workers are in this situation. For comparison, the model calibrated to routine-biased automation produces a substantial increase in both wage and wealth inequality, with the Gini rising by 2.05 p.p. and 6.89 p.p., respectively."
+    },
+    {
+      "id": "anthropic-claude-code-expertise-2026",
+      "title": "Agentic coding and persistent returns to expertise",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "publisher": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-16",
+      "excerpt": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory \u2014 Jun 16, 2026). Analysis of ~400,000 Claude Code sessions from ~235,000 users between Oct 2025 and Apr 2026. Verified success rates: 'Novice: 15%; Intermediate/Expert: 28-33%.' Partial success rates: 77% (novice) vs 91-92% (intermediate/expert). Abandonment when troubled: novice 19% vs intermediate+ 5-7%. 'Every one of the ten largest occupations in our dataset lands within seven points of software engineers' (29-34% verified success). 'The estimated value of the average session rose by 27% between October and April.' Division of labor: 'people make about 70% of the planning decisions but only 20% of the execution decisions.' Work mix: code writing/fixing/testing 56%, ops 17%, planning/exploration 14%, analysis/prose 13%. Novice: ~5 actions, 600 words output/prompt; Expert: ~12 actions, 3,200 words/prompt.",
+      "dateAdded": "2026-07-06"
     }
   ]
 }

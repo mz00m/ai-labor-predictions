@@ -497,6 +497,15 @@
       "label": "Goldman Sachs: most forecasters assume slow AI adoption pace through 2030 despite optimism"
     },
     {
+      "date": "2026-05-27",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-coding-agents-social-sci-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: 81% of 1,260 quant social scientists use GenAI for research"
+    },
+    {
       "date": "2026-06-26",
       "direction": "up",
       "sourceIds": [
@@ -922,6 +931,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-06-26",
       "excerpt": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage patterns with a survey of ~9,700 Claude users. Headline findings: about half of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users \u2014 experienced users automate substantially more of their work. Biggest automation increases occur in business sales, automated trading, and routine market-research tasks, flagging those roles as near-term automation candidates."
+    },
+    {
+      "id": "anthropic-coding-agents-social-sci-2026",
+      "title": "Coding agents in the social sciences",
+      "url": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "publisher": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-27",
+      "excerpt": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers \u2014 May 27, 2026). Survey of 1,260 quantitative social scientists. '81% of respondents said yes' to using generative AI to aid research. '20% of respondents use coding agents' regularly (weekly). '86% of users reporting Claude Code use.' Demographic disparities: 'those with typically male names have adopted coding agents at more than twice the rate of respondents with typically female names.' Career stage: 'Just over a quarter of doctoral students and postdocs use coding agents' vs tenured professors at less than half that rate. University prestige: 'Researchers at top universities are 40% more likely than others to use coding agents.' Task usage: '97% of coding agent users and 77% of other AI users report using it to generate code.' Productivity effects over 6 months: users show approximately 'a quarter of a paper more' in project starts and 'around a half of a working paper more' in working papers, but 'no evidence that coding agent users are submitting more new papers to journals.' '88% of respondents were above a 5' on 10-point AI productivity scale.",
+      "dateAdded": "2026-07-06"
     }
   ]
 }

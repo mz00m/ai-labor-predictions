@@ -1,0 +1,14 @@
+{
+  "id": "amazon-robotics-2025",
+  "abstract": "Amazon has deployed more than 1 million robots across its global fulfillment and logistics network since acquiring Kiva Systems in 2012, making it one of the largest private deployers of industrial robotics worldwide. The fleet includes nine distinct robotic systems: Sequoia (inventory consolidation, 75% faster with AI and computer vision), Hercules and Titan (autonomous mobile drive units that bring product pods to workers), Vulcan (first robot with tactile sensing for picking and stowing), Sparrow (robotic arm using computer vision to sort items into totes), Cardinal (AI-powered arm handling packages up to 50 lbs), Robin (package sorting arm), Proteus (fully autonomous mobile robot navigating freely through facilities), and automated packaging systems that have eliminated over 130 million plastic bags annually across 120+ US sites. Amazon frames these deployments as complementary to human labor rather than substitutive, emphasizing ergonomic improvements, injury reduction, and worker productivity enhancement. Vulcan, for example, can request human assistance with items it cannot manipulate, illustrating the collaborative model. Amazon has continued to increase headcount alongside robotics expansion, though the company does not disclose net employment effects or productivity gains at the facility level.",
+  "keyFindings": [
+    "Amazon has deployed more than 1 million robots across its operations network since 2012",
+    "Nine distinct robotic systems handle tasks from inventory consolidation to package sorting to autonomous navigation",
+    "Sequoia system consolidates inventory 75% faster using AI and computer vision",
+    "Automated packaging systems eliminated over 130 million plastic bags annually across 120+ US facilities",
+    "Amazon claims continued human hiring alongside robotics expansion, framing robots as complementary rather than substitutive"
+  ],
+  "methodology": "Corporate disclosure and press reporting. Not a peer-reviewed study. Figures are company-reported without independent verification. No controlled comparison of employment outcomes at automated vs. non-automated facilities.",
+  "qualifiers": "Self-reported corporate data with inherent framing bias toward positive employment narrative. No disclosure of net employment effects, labor productivity metrics, or facility-level headcount changes attributable to robotics. Does not address contractor vs. direct employment shifts, turnover rates, or wage effects. Amazon's total workforce has fluctuated significantly with seasonal hiring and post-pandemic adjustments.",
+  "fetchedAt": "2026-05-26"
+}

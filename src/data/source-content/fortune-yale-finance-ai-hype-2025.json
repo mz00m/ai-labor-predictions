@@ -1,0 +1,14 @@
+{
+  "id": "fortune-yale-finance-ai-hype-2025",
+  "abstract": "Fortune reports on analysis from the Yale Budget Lab and other experts examining whether AI is actually killing finance and banking jobs. The investigation finds no economy-wide employment disruption detected since ChatGPT's release in late 2022, but this aggregate stability masks significant occupation-specific impacts, particularly for early-career cognitive workers in finance. The article explores the gap between Wall Street's aggressive AI adoption rhetoric — with major banks announcing billions in AI investment and workforce restructurings — and the actual employment data, which shows a more nuanced picture. Experts cited suggest that while headline layoff numbers grab attention, the finance sector's overall headcount has remained relatively stable, with AI primarily changing the composition of roles rather than eliminating net positions. However, the impact falls disproportionately on entry-level positions in areas like financial analysis, compliance review, and operations support.",
+  "keyFindings": [
+    "No economy-wide employment disruption detected since ChatGPT's release, based on aggregate labor market data.",
+    "Aggregate stability masks occupation-specific impacts concentrated among early-career cognitive workers.",
+    "Finance sector overall headcount has remained relatively stable despite aggressive AI adoption rhetoric from major banks.",
+    "Entry-level positions in financial analysis, compliance review, and operations support face disproportionate impact.",
+    "There is a significant gap between Wall Street's AI displacement narrative and actual net employment data."
+  ],
+  "methodology": "Journalistic investigation drawing on Yale Budget Lab research, interviews with labor economists and finance industry experts, and analysis of aggregate and sector-level employment data from BLS and corporate disclosures.",
+  "qualifiers": "Article published December 2025 and may not capture more recent workforce changes. The aggregate stability finding may reflect a lag between AI adoption and measurable employment effects. Entry-level impact claims are based on expert assessment rather than rigorous causal identification. Finance sector is not representative of all industries facing AI adoption.",
+  "fetchedAt": "2026-05-26"
+}

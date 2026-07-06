@@ -1,0 +1,14 @@
+{
+  "id": "openai-industrial-policy-superintelligence-2026",
+  "abstract": "OpenAI's policy paper outlines an industrial policy framework for what it terms the 'Intelligence Age,' arguing that AI systems are approaching capability levels that will fundamentally reshape organizational operations, knowledge creation, and economic opportunity. The paper projects that if current progress continues, AI systems will soon be capable of carrying out projects that currently take people months to complete. It advocates for proactive government policy to ensure broad distribution of AI benefits, including investments in energy infrastructure, compute capacity, workforce transition programs, and regulatory frameworks that enable innovation while managing risks. The paper calls for the United States to lead in AI infrastructure development, warning that failure to invest will cede strategic advantage to competitors. It frames AI as a general-purpose technology comparable to electricity or the internet in its transformative potential, while acknowledging that the transition will create significant economic disruption requiring policy intervention.",
+  "keyFindings": [
+    "AI systems are approaching capability to carry out projects that currently take people months, fundamentally reshaping how organizations operate and how knowledge is created.",
+    "The transition requires massive infrastructure investment in energy and compute capacity to support AI development and deployment at scale.",
+    "Workforce transition programs and social safety nets need significant expansion to manage economic disruption from AI-driven automation.",
+    "The US faces strategic competition in AI infrastructure development, and industrial policy is needed to maintain technological leadership.",
+    "AI is characterized as a general-purpose technology with transformative potential comparable to electricity and the internet, requiring coordinated policy responses."
+  ],
+  "methodology": "Policy analysis and position paper drawing on OpenAI's internal research on AI capability trajectories, economic modeling of infrastructure requirements, and comparative analysis of industrial policy frameworks across nations. Not an empirical study.",
+  "qualifiers": "Published by OpenAI, which has direct commercial interest in increased AI infrastructure investment and favorable regulatory frameworks. Capability projections are forward-looking and based on internal assessments of AI progress trajectories that are not independently verifiable. The paper does not provide detailed empirical evidence for its economic impact claims. Infrastructure cost estimates and timeline projections carry significant uncertainty. The framing emphasizes US competitiveness, limiting applicability to other national contexts.",
+  "fetchedAt": "2026-05-26"
+}
