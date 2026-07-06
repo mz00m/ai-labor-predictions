@@ -1,0 +1,15 @@
+{
+  "id": "bloomberg-boesler-tech-finance-ai-2026",
+  "abstract": "Bloomberg reporters Matthew Boesler and Maya Prakash synthesize BLS payroll data, Challenger Gray & Christmas layoff announcements, and California Policy Lab unemployment insurance claims to argue that AI's labor-market fingerprints are now measurable at the sector level. The financial-activities and information sectors — where AI adoption has been fastest — are shedding an average of 28,000 jobs per month in 2026, dragging on an otherwise resilient labor market that created 113,000 jobs monthly through May. The piece was published July 1-2, 2026.",
+  "keyFindings": [
+    "Financial-activities and information sectors are losing 28,000 jobs per month on average in 2026 (accelerated from prior years) — BLS payroll data",
+    "Broader labor market created 113,000+ jobs per month through May 2026, so tech+finance are the drag",
+    "Challenger data: almost 102,000 announced job cuts attributed to AI so far in 2026 year-to-date",
+    "Tech sector accounted for a third of all 2026 announced layoffs (Challenger)",
+    "Office and administrative support occupations (customer service reps, bank tellers, insurance claims processors) make up about a quarter of employment in financial activities (BLS)",
+    "California Policy Lab: finance and insurance had the highest concentration of state unemployment insurance claims from workers in highly AI-exposed occupations"
+  ],
+  "methodology": "Journalism synthesizing three underlying datasets: (1) BLS Current Employment Statistics for sector-level payrolls; (2) Challenger Gray & Christmas monthly job-cut announcements report, which classifies AI as an attributed reason; (3) California Policy Lab research linking unemployment insurance filings to occupational AI-exposure scores. Not a primary research study.",
+  "qualifiers": "This is a Tier 3 journalistic synthesis, not a Tier 1 causal study. The 28,000/month figure is a Bloomberg calculation from BLS sector payrolls, not published directly by BLS. Challenger's AI-attributed layoff counts rely on self-reported firm rationales, which can lag or overstate. The California Policy Lab finding is state-specific. All quoted figures are early-2026 through mid-year; final-year figures may differ.",
+  "fetchedAt": "2026-07-06"
+}

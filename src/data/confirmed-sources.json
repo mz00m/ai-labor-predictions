@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-02",
-  "totalSources": 618,
-  "verifiedCount": 608,
+  "lastUpdated": "2026-07-06",
+  "totalSources": 619,
+  "verifiedCount": 609,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8764,6 +8764,23 @@
       "excerpt": "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans. A Gartner poll of 163 customer service and support leaders conducted in March 2025 [found] 95% of customer service leaders plan to retain human agents to strategically define AI's role.",
       "usedIn": [
         "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bloomberg-boesler-tech-finance-ai-2026": {
+      "id": "bloomberg-boesler-tech-finance-ai-2026",
+      "title": "Tech and Finance Sectors Losing 28,000 Jobs Monthly Show AI Impact on Labor",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-01/tech-and-finance-sectors-losing-28-000-jobs-monthly-show-ai-impact-on-labor",
+      "publisher": "Bloomberg (Boesler & Prakash)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01",
+      "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "overall-us-displacement",
+        "financial-services-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
