@@ -278,7 +278,7 @@
         "acemoglu-autor-johnson-pro-worker-ai-2026"
       ],
       "evidenceTier": 1,
-      "label": "Schneider Electric (cited in Acemoglu/Autor/Johnson 2026): AI tool helps field electricians troubleshoot; cuts average maintenance-report completion time roughly in half"
+      "label": "Schneider Electric (cited AAJ 2026): AI helps field electricians ~halve maintenance-report time"
     },
     {
       "date": "2026-02-23",
@@ -512,7 +512,7 @@
         "anthropic-economic-index-cadences-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic Economic Index 'Cadences' (n\u22489,700 Claude users, biased sample): ~50% say AI already handles 50%+ of their work tasks; 4% say Claude could do their entire job today; >33% expect AI to do most/all tasks within 12 months"
+      "label": "Anthropic Cadences (n=9,700 biased Claude users): ~50% say AI handles 50%+ of their tasks; 4% say entire job"
     },
     {
       "date": "2026-06-26",

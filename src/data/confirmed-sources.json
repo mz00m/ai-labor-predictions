@@ -7710,7 +7710,8 @@
       "datePublished": "2026-05-05",
       "excerpt": "responses to a recent survey suggest that most forecasters are quite optimistic about AI's potential but are assuming only a slow pace of AI adoption through 2030",
       "usedIn": [
-        "genai-work-adoption"
+        "genai-work-adoption",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -8592,7 +8593,8 @@
     "mercer-global-talent-trends-2026": {
       "id": "mercer-global-talent-trends-2026",
       "usedIn": [
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false,
