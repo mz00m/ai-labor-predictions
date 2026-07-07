@@ -1,0 +1,13 @@
+{
+  "id": "microsoft-working-with-ai-2025",
+  "abstract": "This study analyzes a dataset of 200,000 anonymized conversations with Microsoft Bing Copilot to measure generative AI applicability across occupations. Using an LLM-based pipeline to classify O*NET work activities, the authors find that AI is most applicable to information work—the creation, processing, and communication of information. AI applicability cuts across sectors, with most occupations having information work components, and the methodology enables prediction of which occupations are more likely to delegate tasks to AI versus use it to assist existing workflows.",
+  "keyFindings": [
+    "The most common and successful AI-assisted work activities involve information work, specifically the creation, processing, and communication of information.",
+    "Widespread AI applicability exists across sectors, with most occupations containing information work components that can be assisted by AI.",
+    "Highest AI applicability scores are found in knowledge work occupation groups such as computer and mathematical, office and administrative support, and sales occupations involving information provision and communication.",
+    "The study's methodology enables prediction of which occupations are more likely to delegate tasks entirely to AI versus use AI to assist existing workflows."
+  ],
+  "methodology": "Analysis of a dataset of 200,000 anonymized and privacy-scrubbed conversations between users and Microsoft Bing Copilot. An LLM-based pipeline was used to classify O*NET work activities assisted or performed by AI in each conversation. The study draws on real-world AI usage data rather than predictions of AI capabilities or firm-level analysis.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-07-07"
+}

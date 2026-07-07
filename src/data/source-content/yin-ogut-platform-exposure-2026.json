@@ -1,0 +1,14 @@
+{
+  "id": "yin-ogut-platform-exposure-2026",
+  "abstract": "This study examines how AI platform user logs are used to measure occupational AI exposure, revealing significant measurement error due to selection bias in platform user bases. The authors show that exposure scores reflect both task-level AI applicability and the occupational composition of platform users rather than the actual workforce. When reweighting estimates to match Bureau of Labor Statistics employment shares, AI exposure coefficients are attenuated by 42 to 93 percent, with consumer and enterprise channels within the same vendor sometimes disagreeing in sign.",
+  "keyFindings": [
+    "Changing only the platform input changes post-ChatGPT employment coefficients by a factor of 1.9, demonstrating high sensitivity to platform selection.",
+    "Consumer and enterprise channels within the same vendor disagree in sign regarding AI employment effects.",
+    "Reweighting platform-derived exposure scores to Bureau of Labor Statistics employment shares attenuates estimates by 42 to 93 percent.",
+    "Platform-derived exposure scores conflate task-level AI applicability with occupational composition of the platform's user base.",
+    "The observed measurement bias captures augmentation among platform users more directly than substitution effects in the actual workforce."
+  ],
+  "methodology": "Analysis of conversation logs from AI platforms combined with task-level AI applicability measures. The authors reweight platform-derived exposure scores using Bureau of Labor Statistics employment share data to construct workforce-adjusted partial-identification bounds. Decomposition analysis separates between-occupation and within-occupation selection bias.",
+  "qualifiers": "The study relies on platform user logs which do not represent the actual workforce composition. Results are sensitive to platform selection and channel (consumer vs. enterprise). The bounds-based approach acknowledges inherent uncertainty in causal inference from platform data.",
+  "fetchedAt": "2026-07-07"
+}
