@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-06",
-  "totalSources": 621,
-  "verifiedCount": 611,
+  "lastUpdated": "2026-07-13",
+  "totalSources": 622,
+  "verifiedCount": 612,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8815,6 +8815,21 @@
       "usedIn": [
         "genai-work-adoption",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wemustactnow-statement-2026": {
+      "id": "wemustactnow-statement-2026",
+      "title": "We Must Act Now: A Statement on AI's Economic Transformation",
+      "url": "https://www.wemustactnow.ai/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Agrawal, Korinek, Cunningham)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-13",
+      "excerpt": "Statement organized by Erik Brynjolfsson, Ajay Agrawal, Anton Korinek, and Tom Cunningham. Signed by 16 Nobel Laureates (including Michael Spence and Daron Acemoglu) and 200+ economists and AI researchers. Core thesis: AI 'may become radically more powerful over the next 10 years,' potentially producing an economic transformation 'larger than the Industrial Revolution' on 'a vastly shorter time frame,' with 'large-scale job displacement' as a primary risk. Calls for deeper research on AI's economic impacts and for building policies and institutions to ensure AI complements human capabilities. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.' Brynjolfsson: 'AI capabilities are advancing far faster than our understanding of economic implications.' Agrawal: 'Whether rapidly advancing AI broadly elevates living standards or concentrates wealth depends on choices we make today.' Cunningham: 'We are driving in the fog, and it is extraordinarily difficult to anticipate what will happen next.'",
+      "dateAdded": "2026-07-13",
+      "usedIn": [
+        "reading-list"
       ],
       "verified": true,
       "synthetic": false
