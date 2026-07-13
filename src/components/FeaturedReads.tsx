@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Brynjolfsson, Agrawal, Korinek, Cunningham et al.",
+    title: "We Must Act Now: A Statement on AI's Economic Transformation",
+    summary:
+      "Statement organized by Brynjolfsson, Agrawal, Korinek, and Cunningham; signed by 16 Nobel Laureates (Spence and Acemoglu named) and 200+ economists and AI researchers. Warns AI could drive an economic transformation 'larger than the Industrial Revolution' but on 'a vastly shorter time frame,' with large-scale job displacement as a primary risk. Calls for deeper research, policy frameworks, and institutions ensuring AI complements human capabilities. Four asks: deepen research, build enabling policy, redirect AI to benefit workers, re-architect political and economic systems before transformation arrives. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.'",
+    date: "Jul 13",
+    url: "https://www.wemustactnow.ai/",
+  },
+  {
     author: "Ben Casselman (NYT)",
     title: "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Economic analysis of AI is migrating out of universities and into labs and government. Even under a 'rapid' AI scenario by 2030, the median academic economist expects US GDP growth of just 3.5% in 2050 — versus 5.3% for AI researchers — and only 11% of leading economists (Chicago survey) think AI will substantially raise unemployment. Junior lab economist roles pay $300K+; by 2019 two-thirds of AI researchers worked in industry, up from under half in 2001. Anthropic hired Anton Korinek, OpenAI hired Ronnie Chatterji, DeepMind hired Alex Imas. A sharp map of who is actually studying AI's economic impact.",
     date: "Jun 15",
     url: "https://www.economist.com/finance-and-economics/2026/06/15/meet-the-worlds-top-ai-pilled-economists",
-  },
-  {
-    author: "Erik Brynjolfsson et al. (Stanford DEL)",
-    title: "The AI Economic Indicators",
-    summary:
-      "Stanford's Digital Economy Lab launches a monthly-updated dashboard suite tracking AI's real economic footprint — the live successor to the Canaries research. An Employment & AI Exposure dashboard built on ADP payroll records covering millions of workers; a Canaries dashboard showing a 16% relative employment decline for workers 22–25 in the most AI-exposed occupations, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macro indicators — productivity, capital share, energy use — that currently read mostly neutral. A standing answer to 'what does the data show right now?'",
-    date: "Jun 2026",
-    url: "https://digitaleconomy.stanford.edu/project/indicators/",
   },
 ];
 
