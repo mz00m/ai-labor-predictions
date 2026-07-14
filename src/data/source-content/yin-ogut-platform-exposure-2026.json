@@ -1,0 +1,14 @@
+{
+  "id": "yin-ogut-platform-exposure-2026",
+  "abstract": "This study examines how conversation logs from AI platforms are used to measure occupational exposure to artificial intelligence, revealing significant measurement error when platform user bases do not represent the actual workforce. The authors demonstrate that platform-derived exposure scores conflate task-level AI applicability with the occupational composition of platform users, showing that changing platforms can alter employment coefficients by a factor of 1.9. After reweighting to Bureau of Labor Statistics employment shares, estimates of AI exposure are attenuated by 42 to 93 percent, suggesting that previous measures have substantially overestimated AI's impact on employment by capturing augmentation among observed platform users rather than broader workforce substitution.",
+  "keyFindings": [
+    "Platform selection significantly affects measurement of occupational AI exposure, with changing platforms causing post-ChatGPT employment coefficients to vary by a factor of 1.9 while holding the empirical design fixed.",
+    "Consumer and enterprise channels within the same AI vendor show disagreement in sign regarding employment effects, indicating channel-level selection bias.",
+    "Reweighting exposure scores to Bureau of Labor Statistics workforce employment shares attenuates estimates by 42 to 93 percent.",
+    "Platform-derived exposure scores combine task-level AI applicability with occupational composition of the platform's user base, creating non-classical measurement error decomposable into between- and within-occupation selection effects.",
+    "The measurement bias in platform-based exposure scores captures augmentation among observed users more directly than substitution effects in the broader workforce."
+  ],
+  "methodology": "The study uses conversation logs from AI platforms to construct occupational exposure scores and employs partial-identification bounds with workforce reweighting to Bureau of Labor Statistics employment shares. The analysis includes reweighting procedures applied to platform-derived data, with comparisons across multiple platforms and channels (consumer versus enterprise). Specific sample size and time period not stated in excerpt.",
+  "qualifiers": "The source material provided is limited to the abstract and metadata; full methodological details are not available. The study relies on the assumption that BLS employment shares represent the true workforce composition. Partial-identification bounds suggest uncertainty in point estimates. The analysis focuses on post-ChatGPT period employment coefficients.",
+  "fetchedAt": "2026-07-14"
+}
