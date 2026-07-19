@@ -1,0 +1,14 @@
+{
+  "id": "pew-workers-ai-exposure-2023",
+  "abstract": "This Pew Research Center study analyzes AI exposure across U.S. occupations by classifying 41 work activities as having low, medium, or high AI exposure based on likelihood of replacement or assistance by AI. The analysis finds that 19% of American workers held jobs most exposed to AI in 2022, with higher exposure concentrated among college-educated, female, Asian, and higher-paid workers, while workers in highly exposed industries expressed more optimism than concern about AI's personal impact.",
+  "keyFindings": [
+    "In 2022, 19% of American workers were in jobs with the most exposure to AI, while 23% worked in jobs with the least exposure, with the remaining 58% experiencing varying levels of exposure.",
+    "Workers with a bachelor's degree or more (27%) were more than twice as likely as those with only a high school diploma (12%) to have the most exposure to AI.",
+    "Women (21%), Asian workers (24%), and White workers (20%) had higher AI exposure than Black (15%) and Hispanic (13%) workers, primarily due to differences in job types held by these groups.",
+    "Workers in the most exposed jobs earned an average of $33 per hour compared with $20 per hour in jobs with the least exposure to AI.",
+    "In highly exposed industries like information and technology, 32% of workers said AI will help more than hurt them personally, compared with only 11% who said it would hurt more than help."
+  ],
+  "methodology": "Analysis based on Occupational Information Network (O*NET) Version 27.3 data rating importance of 41 work activities across 873 detailed occupations, grouped into high, medium, and low AI-exposure categories. Employment and earnings data from Current Population Survey (IPUMS) monthly files January-December 2022 matched to 485 broader occupations. Survey component: Pew Research Center survey of 11,004 U.S. adults conducted December 12-18, 2022, recruited through national random sampling with weighting to represent U.S. adult population by gender, race, ethnicity, partisan affiliation, and education.",
+  "qualifiers": "The study focuses on likelihood that job activities may be replaced or assisted by AI but makes no determination as to whether workers will actually lose or gain jobs. Does not consider the role of robots or AI-enabled machines that perform mechanical or physical tasks. As of 2020, fewer than 3% of U.S. businesses reported using advanced AI technologies like machine learning or machine vision, limiting observed current implementation. The analysis uses researcher judgment to classify work activities by AI exposure. Occupational exposure rankings from 873 O*NET occupations were matched to 485 broader CPS occupations, potentially losing granularity. Earnings data available only for a quarter of the CPS sample.",
+  "fetchedAt": "2026-07-14"
+}
