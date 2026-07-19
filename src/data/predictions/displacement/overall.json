@@ -132,18 +132,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2025-11-01",
-      "value": 12,
-      "confidenceLow": 6,
-      "confidenceHigh": 18,
-      "sourceIds": [
-        "worldbank-liu-wang-yu-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
       "date": "2025-12-01",
       "value": 8,
       "confidenceLow": 5,
@@ -804,6 +792,15 @@
       ],
       "evidenceTier": 1,
       "label": "Denmark study: zero effects on earnings and hours from AI (11 occupations)"
+    },
+    {
+      "date": "2025-11-01",
+      "direction": "up",
+      "sourceIds": [
+        "worldbank-liu-wang-yu-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "World Bank: postings for high-AI-substitution jobs fell 12% (6% Y1->18% Y3, n=285M)"
     },
     {
       "date": "2025-11-05",
