@@ -112,14 +112,24 @@ jobs:
           git checkout -b "$BRANCH"
           git add src/data/digests/ src/data/predictions/ src/data/confirmed-sources.json src/data/last-updated.json 2>/dev/null || true
           git commit -m "chore: weekly research digest ${WEEK_ID} [automated]"
-          git push -u origin "$BRANCH"
+          # --force-with-lease so a manual re-run for the same ISO week can update
+          # the branch instead of hard-failing on non-fast-forward. Preserves any
+          # existing open PR on that branch; new commits appear as updates.
+          git push -u --force-with-lease origin "$BRANCH"
 
-          gh pr create \
-            --title "Weekly Digest: ${WEEK_ID}" \
-            --body "$SUMMARY" \
-            --draft \
-            --assignee "${{ github.repository_owner }}" \
-            --label "automated,digest"
+          # Only create a new PR if one doesn't already exist for this branch.
+          # (A re-run for the same week updates the branch and the existing PR
+          # picks up the commits automatically.)
+          if ! gh pr view "$BRANCH" --json state -q .state 2>/dev/null | grep -q OPEN; then
+            gh pr create \
+              --title "Weekly Digest: ${WEEK_ID}" \
+              --body "$SUMMARY" \
+              --draft \
+              --assignee "${{ github.repository_owner }}" \
+              --label "automated,digest"
+          else
+            echo "PR for $BRANCH already open — branch updated in place."
+          fi
 
       - name: Skip message
         if: steps.changes.outputs.has_changes == 'false'
