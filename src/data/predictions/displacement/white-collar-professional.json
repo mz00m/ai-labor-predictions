@@ -1013,6 +1013,15 @@
       "label": "NYT: back-office jobs (HR, billing, payroll) flagged as most AI-vulnerable"
     },
     {
+      "date": "2026-06-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC: entry-level roles 7x more likely to require senior skills (n=1B+ postings, 27 countries)"
+    },
+    {
       "date": "2026-07-01",
       "direction": "up",
       "sourceIds": [
@@ -1884,6 +1893,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-03-01",
       "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives."
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-2026",
+      "title": "PwC 2026 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html",
+      "publisher": "PwC (Atkinson, Brown)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-15",
+      "excerpt": "PwC 2026 Global AI Jobs Barometer (Atkinson & Brown, Jun 15, 2026). Analyzed 1+ billion job advertisements across 27 countries and territories, including 2.4M entry-level US jobs. Key findings: entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills'; job openings for 'seniorised' entry-level roles grew 35% since 2019 while other entry-level roles declined 10%. AI-skills wage premium reached 62% (up from 57% in the 2025 barometer), ranging from 16% (government) to 118% (consumer markets). AI-skill jobs growing 69% vs 9% for the total jobs market \u2014 'almost twice as high as 2024.' Companies most exposed to AI: 52% headcount growth vs 36% (least exposed); wage growth 24% vs 17%; productivity 34% vs 24% (2018-2025), with the top-20% 'super-stars' at 163% productivity gain. 'Professionalised' roles growing twice as fast with 42% faster salary increases. Technology/media/telecom: 11% AI job share; health: <1%.",
+      "dateAdded": "2026-07-19"
     }
   ]
 }

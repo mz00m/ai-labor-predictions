@@ -1,0 +1,15 @@
+{
+  "id": "ft-ai-changing-entry-level-2026",
+  "abstract": "Financial Times opinion piece published mid-July 2026 (shared on FT's X account 2026-07-16) synthesizing the PwC 2026 Global AI Jobs Barometer findings on how AI is reshaping entry-level work. The piece rejects the 'AI is destroying entry-level jobs' framing in favor of a compositional argument: the traditional learning-by-doing rung — the simple, repetitive tasks new hires used to cut their teeth on — has been the specific target of AI automation, and what remains for entry-level workers now leans on judgment, idea generation, and interpersonal skill. The framing has direct implications for how firms design early-career pathways and how universities prepare graduates.",
+  "keyFindings": [
+    "Editorial framing: 'AI isn't destroying entry-level jobs. It's changing them.' Rejects the mass-displacement narrative in favor of a compositional-shift argument",
+    "Underlying data (PwC 2026 Barometer, cited): entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills",
+    "Underlying data: 'seniorised' entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%",
+    "The 'apprenticeship rung' argument: newcomers historically learned the job by doing simple repetitive work — the exact tasks AI has automated first",
+    "Implication: what remains for entry-level workers now leans on judgment, generating fresh ideas, and dealing with people — skills historically expected of more senior workers",
+    "Consistent with Yale CELI (Sonnenfeld) 2026 finding of ~6% recent-grad unemployment and Brynjolfsson/Chandar/Chen (2025) 'Canaries' finding of 16% employment decline for 22-25 year olds in most-AI-exposed occupations"
+  ],
+  "methodology": "Opinion/synthesis piece. Not a primary research artifact — draws on the PwC 2026 Global AI Jobs Barometer and adjacent labor-market research for its empirical claims. The FT contribution is the compositional-shift framing (learning-by-doing rung has been automated) rather than new data.",
+  "qualifiers": "As an opinion piece, this is a Tier 3 signal — cite for framing and rhetorical position, not as a data source. The underlying quantitative claims are the PwC 2026 Barometer's (see pwc-ai-jobs-barometer-2026). The 'seniorised roles' phenomenon is one interpretation of the barometer data; other framings (e.g., that entry-level roles are being genuinely eliminated at scale) are defensible on the same numbers.",
+  "fetchedAt": "2026-07-19"
+}
