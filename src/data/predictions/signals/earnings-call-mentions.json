@@ -10,18 +10,6 @@
   "timeHorizon": "Latest quarter",
   "history": [
     {
-      "date": "2023-01-15",
-      "value": 8,
-      "confidenceLow": 5,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "factset-earnings-q4-2022"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
       "date": "2023-04-15",
       "value": 18,
       "confidenceLow": 14,
@@ -154,18 +142,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2025-12-01",
-      "value": 61,
-      "confidenceLow": 56,
-      "confidenceHigh": 66,
-      "sourceIds": [
-        "factset-earnings-q4-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-01-15",
       "value": 68,
       "confidenceLow": 65,
@@ -218,18 +194,8 @@
   ],
   "sources": [
     {
-      "id": "factset-earnings-q4-2022",
-      "title": "FactSet Earnings Insight Q4 2022 — AI Mentions",
-      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
-      "publisher": "FactSet",
-      "evidenceTier": 1,
-      "datePublished": "2023-01-15",
-      "excerpt": "Only 8% of S&P 500 companies mentioned AI in Q4 2022 calls. Pre-ChatGPT baseline for corporate AI discussion.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "factset-earnings-q1-2023",
-      "title": "FactSet Earnings Insight Q1 2023 — AI Mentions Surge",
+      "title": "FactSet Earnings Insight Q1 2023 \u2014 AI Mentions Surge",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
@@ -239,7 +205,7 @@
     },
     {
       "id": "factset-earnings-q2-2023",
-      "title": "FactSet Earnings Insight Q2 2023 — AI Dominates Calls",
+      "title": "FactSet Earnings Insight Q2 2023 \u2014 AI Dominates Calls",
       "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q2-earnings-calls-in-over-10-years",
       "publisher": "FactSet",
       "evidenceTier": 1,
@@ -284,7 +250,7 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2024-07-15",
-      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational — specific ROI figures cited.",
+      "excerpt": "Slight dip to 41% as initial AI hype normalizes. Discussion shifting from aspirational to operational \u2014 specific ROI figures cited.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -328,23 +294,13 @@
       "dateAdded": "2026-03-07"
     },
     {
-      "id": "factset-earnings-q4-2025",
-      "title": "FactSet Earnings Insight Q4 2025",
-      "url": "https://insight.factset.com/more-than-65-of-sp-500-earnings-calls-for-q4-cited-ai",
-      "publisher": "FactSet",
-      "evidenceTier": 1,
-      "datePublished": "2025-12-01",
-      "excerpt": "61% of S&P 500 companies cited AI in Q4 2025 earnings calls, maintaining near-record levels from Q3.",
-      "dateAdded": "2026-03-16"
-    },
-    {
       "id": "factset-earnings-q3-2025",
-      "title": "FactSet Earnings Insight Q3 2025 — Record AI Mentions",
+      "title": "FactSet Earnings Insight Q3 2025 \u2014 Record AI Mentions",
       "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-1",
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2025-11-15",
-      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls — a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%.",
+      "excerpt": "Record 306 S&P 500 companies (61%) cited AI in Q3 2025 earnings calls \u2014 a new 10-year high, surpassing the prior record of 292. 95% of IT and Communications sectors mentioned AI. AI-citing companies outperformed 13.9% vs. 5.7%.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -393,7 +349,7 @@
       "publisher": "FactSet",
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
-      "excerpt": "68% (331 out of 485) of S&P 500 earnings calls in Q4 2025 cited AI — a new 10-year high. Financials and IT had highest counts (67 each). IT (94%), Financials (91%), Communication Services (89%) had highest sector percentages."
+      "excerpt": "68% (331 out of 485) of S&P 500 earnings calls in Q4 2025 cited AI \u2014 a new 10-year high. Financials and IT had highest counts (67 each). IT (94%), Financials (91%), Communication Services (89%) had highest sector percentages."
     },
     {
       "id": "a16z-ai-job-apocalypse-fantasy-2026",
