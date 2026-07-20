@@ -1442,6 +1442,15 @@
       "label": "NBER: economists assign only 14% avg probability to rapid AI progress by 2030"
     },
     {
+      "date": "2026-04-01",
+      "direction": "down",
+      "sourceIds": [
+        "johnston-makridis-ai-output-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Johnston & Makridis: AI exposure linked to SECTOR-LEVEL employment INCREASES (US data thru 2024)"
+    },
+    {
       "date": "2026-04-02",
       "direction": "up",
       "sourceIds": [
@@ -3330,6 +3339,22 @@
       "datePublished": "2026-07-01",
       "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
       "dateAdded": "2026-07-06"
+    },
+    {
+      "id": "johnston-makridis-ai-output-employment-2026",
+      "title": "AI, Output, and Employment",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6460358",
+      "publisher": "Johnston & Makridis (SSRN)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "Johnston & Makridis (2026, SSRN 6460358) use US data through 2024 and find that exposure to AI is associated with SECTOR-LEVEL INCREASES in employment, not declines. Cited in Stanford DEL Research Note #1 as a key counter to the Brynjolfsson-Chandar-Chen Canaries finding of early-career declines \u2014 same period, different unit of analysis, opposite sign at the sector level. Illustrates the current dataset-and-methodology dependence of the AI-labor debate.",
+      "dateAdded": "2026-07-20",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   ]
 }

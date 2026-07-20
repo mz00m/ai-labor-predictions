@@ -1,0 +1,14 @@
+{
+  "id": "lambert-schindler-broken-ladder-2026",
+  "abstract": "Lambert and Schindler (2026, SSRN Working Paper 6787638) study the observed decline in junior-hiring share in AI-exposed occupations and argue that the pattern is at least partly a remote-work confound, not a causal AI effect. Cited in Stanford Digital Economy Lab Research Note #1 as a key counter-evidence entry in the current debate over whether early-career employment declines in AI-exposed occupations are causally attributable to generative AI adoption or to other coincident forces (remote work, macro cycles, industry-specific dynamics).",
+  "keyFindings": [
+    "Replicates the observed decline in junior-hiring share within AI-exposed occupations",
+    "Shows that the same pattern can be explained by exposure to remote work — a coincident structural shift",
+    "Cited in Stanford DEL Research Note #1 (June 2026) alongside Brynjolfsson-Chandar-Chen (Canaries), Hosseini-Lichtinger, Humlum-Vestergaard, Yale Budget Lab, and others as evidence that the AI-early-career causality question is not settled",
+    "Complements Tucker (2026) 'You're (Not) Hired' which similarly finds that some of the trends may predate ChatGPT after adjustment",
+    "Implication for policy design: transition systems keyed to 'AI is causing this' can misfire if the underlying driver is remote work or another confound; the Stanford AIEI note is explicit that the labor-market impacts of AI 'remain a subject of active debate'"
+  ],
+  "methodology": "SSRN working paper. Uses posting-based and hiring-share data to disentangle the effects of AI exposure from remote-work exposure on early-career hiring outcomes.",
+  "qualifiers": "Working paper, not peer-reviewed. The 'remote work confounds AI' finding is an alternative explanation, not a definitive refutation of the Canaries paper — same data can support multiple decompositions. Should be cited alongside the Canaries result, not as a replacement.",
+  "fetchedAt": "2026-07-20"
+}

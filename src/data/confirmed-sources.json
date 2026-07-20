@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-19",
-  "totalSources": 622,
-  "verifiedCount": 612,
+  "lastUpdated": "2026-07-20",
+  "totalSources": 624,
+  "verifiedCount": 614,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8092,11 +8092,11 @@
     "stanford-del-ai-economic-indicators-2026": {
       "id": "stanford-del-ai-economic-indicators-2026",
       "title": "The AI Economic Indicators",
-      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/06/AIEI_RN01_Jun26.pdf",
       "publisher": "Stanford Digital Economy Lab",
       "evidenceTier": 2,
       "datePublished": "2026-06-01",
-      "excerpt": "an expanding series of economic dashboards that connects policymakers, business executives, and individual workers to timely and reliable information on the economic impact of AI",
+      "excerpt": "Stanford Digital Economy Lab Research Note #1: AI Economic Indicators June 2026 Update (Brynjolfsson, director). Three linked dashboards: (1) Canaries \u2014 5-year balanced ADP payroll sample of 25,000 firms, 4.6M workers, 730+ occupations. Across all ages, most-exposed occupations growing 1.1%/yr vs 2.0%/yr for least-exposed since ChatGPT. For early-career workers (22-25, 7.4% of sample), most-exposed occupations contracting 3.8%/yr vs +2.0%/yr for least-exposed. The AUTOMATION ratio (using Anthropic Economic Index) correlates with employment declines; the augmentation ratio does not. Software developers and customer service reps show substantial early-career declines; home health aides grow. (2) Takeoff Tracker \u2014 12 aggregate US indicators of AI-driven takeoff. As of May 2026: 7 show no evidence, 3 mild, 2 strong. Capital share = strong evidence (persistent upward trend); TFP growth = neutral (no break from recent levels); IP equipment share of private nonresidential equipment = mild (recovering to early-2000s levels). 'No decisive evidence of takeoff.' (3) Adoption Monitor \u2014 individual work adoption trending up in most surveys but reversing in some recent workplace data; firm adoption widespread and US-led; robotics and autonomous vehicles show largest current-vs-expected adoption gaps.",
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure"
@@ -8835,6 +8835,38 @@
       "dateAdded": "2026-07-19",
       "usedIn": [
         "reading-list"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "lambert-schindler-broken-ladder-2026": {
+      "id": "lambert-schindler-broken-ladder-2026",
+      "title": "The Broken Ladder: AI, Remote Work, and Early-Career Hiring",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6787638",
+      "publisher": "Lambert & Schindler (SSRN)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-15",
+      "excerpt": "Lambert & Schindler (2026, SSRN 6787638) find declines in the junior hiring share in AI-exposed jobs, replicating the Canaries pattern \u2014 BUT show these patterns can be explained by exposure to remote work, not AI per se. A key counter-evidence paper cited in Stanford DEL Research Note #1 as one of the candidate confounds in the current debate over whether the entry-level employment decline is causally attributable to generative AI adoption.",
+      "dateAdded": "2026-07-20",
+      "usedIn": [
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "johnston-makridis-ai-output-employment-2026": {
+      "id": "johnston-makridis-ai-output-employment-2026",
+      "title": "AI, Output, and Employment",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6460358",
+      "publisher": "Johnston & Makridis (SSRN)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-01",
+      "excerpt": "Johnston & Makridis (2026, SSRN 6460358) use US data through 2024 and find that exposure to AI is associated with SECTOR-LEVEL INCREASES in employment, not declines. Cited in Stanford DEL Research Note #1 as a key counter to the Brynjolfsson-Chandar-Chen Canaries finding of early-career declines \u2014 same period, different unit of analysis, opposite sign at the sector level. Illustrates the current dataset-and-methodology dependence of the AI-labor debate.",
+      "dateAdded": "2026-07-20",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

@@ -1,0 +1,14 @@
+{
+  "id": "johnston-makridis-ai-output-employment-2026",
+  "abstract": "Johnston and Makridis (2026, SSRN Working Paper 6460358) use US data through 2024 to study the relationship between AI exposure and employment at the sector level, and find that exposure to AI is associated with sector-level INCREASES in employment. Cited in Stanford Digital Economy Lab Research Note #1 as a key counter to the Brynjolfsson-Chandar-Chen 'Canaries' finding: same country, similar period, but different unit of analysis (sector-level aggregation rather than worker-level) yields opposite sign. A leading example of how the AI-labor-market debate depends heavily on dataset and level of aggregation.",
+  "keyFindings": [
+    "Sector-level analysis of US data through 2024 finds AI exposure associated with EMPLOYMENT INCREASES at the sector level",
+    "Directly contrasts with worker-level results (Brynjolfsson-Chandar-Chen 'Canaries') showing 3.8%/yr contraction for early-career workers in most-exposed occupations",
+    "Cited in Stanford DEL Research Note #1 (June 2026) as one of the anchor counter-evidence papers in the current debate",
+    "Illustrates why aggregate metrics can look benign or positive while specific worker cohorts experience concentrated harm",
+    "Consistent with Bessen's 'inverted-U' argument that AI-driven cost reductions can expand demand in elastic sectors enough to increase net employment"
+  ],
+  "methodology": "SSRN working paper. Analyzes sector-level US employment data through 2024, joining with AI-exposure measures. Level of aggregation is sector, not worker or firm, which materially changes the estimand and can produce different signs from more granular studies.",
+  "qualifiers": "Working paper, not peer-reviewed. Sector-level effects are net of within-sector reallocation, so a 'positive' sector-level finding is compatible with concentrated worker-level harm; the two need not be inconsistent, though they read as opposing results in headline framing. Data ends in 2024 — recent 2025-2026 trends (accelerating early-career decline) may not be captured.",
+  "fetchedAt": "2026-07-20"
+}

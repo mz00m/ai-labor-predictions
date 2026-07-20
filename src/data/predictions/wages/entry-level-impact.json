@@ -548,6 +548,15 @@
       "label": "Yale Budget Lab: 16-34 cohort unemployment ~+0.5pp but statistically insignificant"
     },
     {
+      "date": "2026-05-15",
+      "direction": "up",
+      "sourceIds": [
+        "lambert-schindler-broken-ladder-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Lambert & Schindler: junior-hiring declines in AI-exposed jobs may be remote-work confound"
+    },
+    {
       "date": "2026-06-15",
       "direction": "down",
       "sourceIds": [
@@ -1044,6 +1053,22 @@
       "datePublished": "2026-06-15",
       "excerpt": "PwC 2026 Global AI Jobs Barometer (Atkinson & Brown, Jun 15, 2026). Analyzed 1+ billion job advertisements across 27 countries and territories, including 2.4M entry-level US jobs. Key findings: entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills'; job openings for 'seniorised' entry-level roles grew 35% since 2019 while other entry-level roles declined 10%. AI-skills wage premium reached 62% (up from 57% in the 2025 barometer), ranging from 16% (government) to 118% (consumer markets). AI-skill jobs growing 69% vs 9% for the total jobs market \u2014 'almost twice as high as 2024.' Companies most exposed to AI: 52% headcount growth vs 36% (least exposed); wage growth 24% vs 17%; productivity 34% vs 24% (2018-2025), with the top-20% 'super-stars' at 163% productivity gain. 'Professionalised' roles growing twice as fast with 42% faster salary increases. Technology/media/telecom: 11% AI job share; health: <1%.",
       "dateAdded": "2026-07-19"
+    },
+    {
+      "id": "lambert-schindler-broken-ladder-2026",
+      "title": "The Broken Ladder: AI, Remote Work, and Early-Career Hiring",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6787638",
+      "publisher": "Lambert & Schindler (SSRN)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-15",
+      "excerpt": "Lambert & Schindler (2026, SSRN 6787638) find declines in the junior hiring share in AI-exposed jobs, replicating the Canaries pattern \u2014 BUT show these patterns can be explained by exposure to remote work, not AI per se. A key counter-evidence paper cited in Stanford DEL Research Note #1 as one of the candidate confounds in the current debate over whether the entry-level employment decline is causally attributable to generative AI adoption.",
+      "dateAdded": "2026-07-20",
+      "usedIn": [
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   ]
 }
