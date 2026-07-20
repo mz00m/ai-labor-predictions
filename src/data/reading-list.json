@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI isn't destroying entry-level jobs. It's changing them",
+      "author": "Financial Times",
+      "publisher": "Financial Times",
+      "date": "2026-07-16",
+      "url": "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
+      "takeaway": "FT synthesis of the PwC 2026 Global AI Jobs Barometer: entry-level roles are being 'seniorised' rather than eliminated. Newcomers used to learn by doing simple repetitive work (the apprenticeship rung) \u2014 AI took exactly that. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal skills \u2014 historically senior. Job openings for seniorised entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%; entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills.",
+      "weekFeatured": "2026-07-19",
+      "tier": 3
+    },
+    {
       "title": "We Must Act Now: A Statement on AI's Economic Transformation",
       "author": "Brynjolfsson, Agrawal, Korinek, Cunningham et al.",
       "publisher": "Stanford Digital Economy Lab",
