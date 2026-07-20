@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Financial Times",
+    title: "AI isn't destroying entry-level jobs. It's changing them",
+    summary:
+      "FT synthesis of the PwC 2026 Global AI Jobs Barometer (n=1B+ postings, 27 countries). The 'apprenticeship rung' argument: newcomers used to learn by doing simple repetitive work — the exact tasks AI has automated first. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal skill — historically senior. Job openings for 'seniorised' entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%; entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills. Reframes the entry-level story as compositional shift, not mass displacement — but the collapsed learning-by-doing path has real implications for how firms design early careers and how universities prepare graduates.",
+    date: "Jul 16",
+    url: "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
+  },
+  {
     author: "Brynjolfsson, Agrawal, Korinek, Cunningham et al.",
     title: "We Must Act Now: A Statement on AI's Economic Transformation",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "RAISE US launches as a bipartisan consortium with a 'people strategy' for the AI era — led by former Commerce Secretary Gina Raimondo and former Indiana Gov. Eric Holcomb, with founding employers Amazon, Microsoft, Bank of America, Eli Lilly, OpenAI and Anthropic, plus MIT's David Autor on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah and Connecticut. Mandate goes beyond conventional retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and designing corporate incentives for employers to retain and reskill rather than lay off. The first large bipartisan, multi-state institutional response treating AI labor disruption as a policy problem.",
     date: "Jun 25",
     url: "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
-  },
-  {
-    author: "The Economist",
-    title: "Meet the world's top AI-pilled economists",
-    summary:
-      "Economic analysis of AI is migrating out of universities and into labs and government. Even under a 'rapid' AI scenario by 2030, the median academic economist expects US GDP growth of just 3.5% in 2050 — versus 5.3% for AI researchers — and only 11% of leading economists (Chicago survey) think AI will substantially raise unemployment. Junior lab economist roles pay $300K+; by 2019 two-thirds of AI researchers worked in industry, up from under half in 2001. Anthropic hired Anton Korinek, OpenAI hired Ronnie Chatterji, DeepMind hired Alex Imas. A sharp map of who is actually studying AI's economic impact.",
-    date: "Jun 15",
-    url: "https://www.economist.com/finance-and-economics/2026/06/15/meet-the-worlds-top-ai-pilled-economists",
   },
 ];
 

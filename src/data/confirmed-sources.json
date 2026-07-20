@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-19",
-  "totalSources": 620,
-  "verifiedCount": 610,
+  "totalSources": 622,
+  "verifiedCount": 612,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8801,6 +8801,38 @@
       "datePublished": "2026-07-13",
       "excerpt": "Statement organized by Erik Brynjolfsson, Ajay Agrawal, Anton Korinek, and Tom Cunningham. Signed by 16 Nobel Laureates (including Michael Spence and Daron Acemoglu) and 200+ economists and AI researchers. Core thesis: AI 'may become radically more powerful over the next 10 years,' potentially producing an economic transformation 'larger than the Industrial Revolution' on 'a vastly shorter time frame,' with 'large-scale job displacement' as a primary risk. Calls for deeper research on AI's economic impacts and for building policies and institutions to ensure AI complements human capabilities. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.' Brynjolfsson: 'AI capabilities are advancing far faster than our understanding of economic implications.' Agrawal: 'Whether rapidly advancing AI broadly elevates living standards or concentrates wealth depends on choices we make today.' Cunningham: 'We are driving in the fog, and it is extraordinarily difficult to anticipate what will happen next.'",
       "dateAdded": "2026-07-13",
+      "usedIn": [
+        "reading-list"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pwc-ai-jobs-barometer-2026": {
+      "id": "pwc-ai-jobs-barometer-2026",
+      "title": "PwC 2026 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html",
+      "publisher": "PwC (Atkinson, Brown)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-15",
+      "excerpt": "PwC 2026 Global AI Jobs Barometer (Atkinson & Brown, Jun 15, 2026). Analyzed 1+ billion job advertisements across 27 countries and territories, including 2.4M entry-level US jobs. Key findings: entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills'; job openings for 'seniorised' entry-level roles grew 35% since 2019 while other entry-level roles declined 10%. AI-skills wage premium reached 62% (up from 57% in the 2025 barometer), ranging from 16% (government) to 118% (consumer markets). AI-skill jobs growing 69% vs 9% for the total jobs market \u2014 'almost twice as high as 2024.' Companies most exposed to AI: 52% headcount growth vs 36% (least exposed); wage growth 24% vs 17%; productivity 34% vs 24% (2018-2025), with the top-20% 'super-stars' at 163% productivity gain. 'Professionalised' roles growing twice as fast with 42% faster salary increases. Technology/media/telecom: 11% AI job share; health: <1%.",
+      "dateAdded": "2026-07-19",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ft-ai-changing-entry-level-2026": {
+      "id": "ft-ai-changing-entry-level-2026",
+      "title": "AI isn't destroying entry-level jobs. It's changing them",
+      "url": "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-16",
+      "excerpt": "FT opinion piece (mid-July 2026) synthesizing the PwC 2026 Global AI Jobs Barometer findings on entry-level work. Argues AI is not eliminating entry-level jobs but transforming them: newcomers previously learned by doing simple, repetitive tasks \u2014 the apprenticeship rung \u2014 but AI has automated that rung. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal capability \u2014 historically senior skills. The piece frames the 'seniorisation' finding (entry-level roles 7x more likely to need senior skills; seniorised roles +35% since 2019 vs -10% for other entry-level roles) as a collapse of the traditional learning-by-doing path, not a jobs bloodbath.",
+      "dateAdded": "2026-07-19",
       "usedIn": [
         "reading-list"
       ],
