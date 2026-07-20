@@ -1,0 +1,14 @@
+{
+  "abstract": "Cory Doctorow's book-length argument that AI is mostly deployed not to replace workers but to make them serve machines \u2014 the 'reverse centaur' configuration. In automation theory a centaur is a human using technology as a tool; a reverse centaur is a human conscripted as a helper to a machine, working at inhuman pace (Amazon delivery drivers tracked second-by-second, warehouse pickers denied bathroom breaks, programmers held to AI-throughput quotas). Doctorow argues the $16T+ AI valuation thesis only mathematically works if AI replaces large swathes of wage labor, and that AI deployers are actively trying to build a class alliance between investors and AI-product-enjoyers against workers. Published 2026 by Farrar, Straus and Giroux; companion talk delivered at University of Washington 'Neuroscience, AI and Society' lecture series.",
+  "keyFindings": [
+    "Reframes AI labor harm as 'reverse centaur' configurations: human serves machine, not vice versa",
+    "$16T+ AI valuation thesis is incoherent unless AI substitutes for the human wage bill at scale \u2014 the math forces the labor-displacement story",
+    "AI deployers attempt to construct a political coalition with AI-product enjoyers against workers; Doctorow argues the better coalition is workers against deployers",
+    "Names specific case studies: gig delivery drivers (algorithmic dispatch), warehouse workers (AI-pace quotas), programmers (code-throughput surveillance)",
+    "Counters techno-optimist framings by separating capability (often real) from deployment (often coercive)"
+  ],
+  "methodology": "Polemical essay / book; synthesizes labor reporting, automation history, and economic critique. Not empirical estimation.",
+  "qualifiers": "Tier 4 \u2014 popular book, advocacy stance. Strong on cases, light on quantitative claims. Best cited as a position-defining text for the reverse-centaur framing, not as evidence on displacement magnitudes.",
+  "id": "doctorow-reverse-centaur-guide-2026",
+  "fetchedAt": "2026-06-26"
+}

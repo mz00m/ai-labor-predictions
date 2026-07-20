@@ -1,0 +1,14 @@
+{
+  "id": "bloomberg-wall-st-ai-cuts-2025",
+  "abstract": "Secondary reporting on the Bloomberg Intelligence analysis of AI-driven job displacement in global banking, published via BobsGuide. The report projects that global banks will shed approximately 200,000 roles over 3-5 years, representing roughly a 3% headcount drop across the industry. The article highlights Citigroup's finding that 54% of banking jobs have high automation potential — the highest proportion of any industry sector — and that AI could lift bank pre-tax profits by 12-17% by 2027. The piece frames the transformation as concentrated in routine, repetitive tasks while noting that some banks' leadership sees augmentation rather than outright replacement as the dominant near-term pattern. The report provides additional context to the Bloomberg Intelligence survey findings with sector-specific comparisons and profit uplift projections.",
+  "keyFindings": [
+    "Global banks expected to shed 200,000 roles over 3-5 years, representing approximately a 3% headcount reduction.",
+    "Citigroup analysis found 54% of banking jobs have high automation potential, the highest proportion across all industry sectors.",
+    "AI could increase bank pre-tax profits by 12-17% by 2027, potentially adding $180 billion across the industry.",
+    "Some predictions suggest cuts could reach up to 10% of total workforce at more aggressive institutions.",
+    "JPMorgan's AI leadership characterized current effects as augmentation rather than replacement, though this balance may shift with generative AI acceleration."
+  ],
+  "methodology": "Secondary reporting on Bloomberg Intelligence survey data. The underlying survey included 93 respondents from major global banks (Citigroup, JPMorgan Chase, Goldman Sachs). Citigroup's 54% automation potential figure comes from a separate June report. Profit projections are Bloomberg Intelligence estimates.",
+  "qualifiers": "This is secondary reporting on the same Bloomberg Intelligence survey covered in bloomberg-intelligence-bank-ai-jobs-2025, providing complementary framing rather than independent data. The 200,000 figure and 3% reduction are projections, not confirmed outcomes. The 54% automation potential figure from Citigroup represents technical feasibility, not expected implementation. Profit uplift projections of 12-17% depend on successful AI integration, which faces regulatory, technical, and organizational barriers.",
+  "fetchedAt": "2026-05-26"
+}

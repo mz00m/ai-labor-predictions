@@ -1,0 +1,14 @@
+{
+  "id": "imf-skill-gaps-it-2026",
+  "abstract": "IMF Staff Discussion Note by Jaumotte et al. examines the challenge of bridging skill gaps for the future workforce, with particular attention to IT and AI-related skills. A central finding challenges the assumption that rising demand for IT skills will proportionally increase demand for IT and AI specialists: the authors argue that high demand for new IT skills may not translate into a one-for-one rise in specialist hiring, especially as many IT tasks may themselves be progressively automated by AI. This creates a paradoxical dynamic where the very technology driving demand for AI expertise simultaneously reduces the need for certain categories of IT workers. The paper examines how AI reshapes skill requirements across the economy, the policy implications for education and training systems, and the fiscal and structural reforms needed to prepare workforces for an AI-intensive labor market. The analysis has implications for workforce planning, suggesting that organizations and policymakers should focus on adaptable, cross-functional AI literacy rather than narrow technical specialization.",
+  "keyFindings": [
+    "High demand for new IT skills may not translate into proportional increases in IT/AI specialist hiring",
+    "Many IT tasks may be progressively automated by AI, creating a paradox where AI drives demand for skills it simultaneously renders obsolete",
+    "Cross-functional AI literacy may be more valuable than narrow technical specialization for workforce resilience",
+    "Skill gaps require structural reforms in education and training systems, not just incremental upskilling",
+    "Fiscal and policy interventions needed to prepare workforces for AI-intensive labor markets"
+  ],
+  "methodology": "IMF Staff Discussion Note format — analytical paper combining economic modeling, labor market data analysis, and policy review. Authors: Jaumotte et al. Published 2026. Specific datasets and modeling approaches detailed in the full PDF (not accessible via WebFetch).",
+  "qualifiers": "Staff Discussion Notes represent the views of the authors and do not necessarily represent IMF policy. Full methodology not accessible — PDF behind access barrier. Findings about IT task automation are forward-looking projections. The 'not one-for-one' framing is qualitative rather than providing specific substitution ratios. Policy recommendations are general and may not apply uniformly across countries with different labor market structures.",
+  "fetchedAt": "2026-05-26"
+}

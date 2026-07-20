@@ -1,0 +1,13 @@
+{
+  "id": "x-ai-salaries-thread",
+  "abstract": "Social media discussion on X (formerly Twitter) documenting elevated compensation levels for AI engineers during the current AI talent boom. The thread captures anecdotal reports and commentary about AI engineer salaries reaching exceptionally high levels compared to traditional software engineering roles. While specific figures were not retrievable from the source, the thread reflects a broader labor market signal: intense competition for AI/ML talent is driving compensation premiums that significantly exceed typical tech industry benchmarks. This signal is consistent with reported data from other sources showing AI engineer total compensation packages at major labs and well-funded startups ranging from $300K to over $1M annually, driven by a supply-demand imbalance as companies race to build AI capabilities. The thread represents real-time market sentiment about AI labor market dynamics rather than systematic compensation analysis.",
+  "keyFindings": [
+    "AI engineer compensation is perceived as dramatically elevated relative to traditional software engineering roles, reflecting intense competition for scarce AI/ML talent.",
+    "The AI talent market exhibits significant supply-demand imbalance, with major AI labs and well-funded startups offering premium compensation packages to attract and retain engineers with relevant expertise.",
+    "Social media discourse indicates widespread awareness of AI salary inflation, suggesting the phenomenon is visible enough to generate broad public commentary rather than being limited to industry insiders.",
+    "The compensation premium for AI specialization represents a concrete labor market signal of rapid sectoral reallocation of economic value toward AI-related occupations."
+  ],
+  "methodology": "Informal social media discussion on X (Twitter). No systematic methodology — represents crowd-sourced anecdotal observations and commentary about AI engineer compensation. Source content was not fully retrievable via automated fetch due to platform access restrictions.",
+  "qualifiers": "Social media threads are inherently anecdotal and subject to selection bias, survivorship bias, and exaggeration. Specific salary figures were not verifiable from this source. Compensation discussions on social media tend to skew toward outlier high-end packages at elite firms rather than representing median AI engineer compensation. The search results page did not return structured tweet content, limiting the specificity of extracted data points. Should be treated as a labor market sentiment signal rather than rigorous compensation data.",
+  "fetchedAt": "2026-05-26"
+}

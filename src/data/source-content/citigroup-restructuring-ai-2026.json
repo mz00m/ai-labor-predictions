@@ -1,0 +1,13 @@
+{
+  "id": "citigroup-restructuring-ai-2026",
+  "abstract": "Citigroup is undertaking one of the largest workforce restructurings in the banking sector, planning to cut approximately 20,000 jobs — roughly 8% of its workforce — by 2026 as part of a broader automation-driven transformation. The reductions are tied to Citigroup's multi-year restructuring plan under CEO Jane Fraser, which includes streamlining operations through AI and automation across back-office and middle-office functions. Broader plans envision up to 60,000 total reductions when including the Banamex IPO separation and related divestitures. The restructuring reflects a sector-wide trend among major banks to reduce headcount in operations and support functions while investing heavily in technology infrastructure and AI capabilities.",
+  "keyFindings": [
+    "Citigroup plans to cut approximately 20,000 jobs (8% of workforce) by 2026, tied directly to automation and restructuring.",
+    "Broader workforce reduction target of 60,000 total when including the Banamex IPO and related divestitures.",
+    "Cuts are concentrated in back-office and middle-office operations functions most susceptible to AI automation.",
+    "The restructuring is part of CEO Jane Fraser's multi-year transformation plan to simplify Citigroup's organizational structure."
+  ],
+  "methodology": "Corporate announcements and SEC filings from Citigroup, supplemented by financial press reporting on the restructuring timeline and workforce targets.",
+  "qualifiers": "The 60,000 figure includes reductions from the Banamex IPO (a divestiture) and should not be entirely attributed to automation. Actual job losses may differ from announced targets as restructuring plans evolve. Some displaced workers may be redeployed internally. The automation attribution reflects corporate framing that may overstate technology's role relative to strategic simplification.",
+  "fetchedAt": "2026-05-26"
+}

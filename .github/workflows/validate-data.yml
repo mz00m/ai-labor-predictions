@@ -1,0 +1,61 @@
+name: Validate Data & Build
+
+# Data-integrity gate: every PR and push to main must pass the audit
+# (zero must-fix issues) and produce a clean production build. This is
+# the front door that keeps agent-committed data errors out of main.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Data quality audit (fails on must-fix issues)
+        run: node scripts/autoresearch/auto-audit.js
+
+      - name: Validate all prediction JSON parses
+        run: |
+          node -e '
+            const fs = require("fs"), path = require("path");
+            const dirs = ["src/data/predictions", "src/data/source-content"];
+            let n = 0;
+            for (const dir of dirs) {
+              const walk = (d) => {
+                for (const f of fs.readdirSync(d)) {
+                  const p = path.join(d, f);
+                  if (fs.statSync(p).isDirectory()) walk(p);
+                  else if (f.endsWith(".json")) { JSON.parse(fs.readFileSync(p, "utf-8")); n++; }
+                }
+              };
+              walk(dir);
+            }
+            for (const f of ["src/data/confirmed-sources.json", "src/data/recurring-sources.json", "src/data/last-updated.json", "src/data/reading-list.json"]) {
+              JSON.parse(fs.readFileSync(f, "utf-8")); n++;
+            }
+            console.log(`${n} JSON files parsed OK`);
+          '
+
+      - name: Unit tests
+        run: npx vitest run
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Production build
+        run: npm run build

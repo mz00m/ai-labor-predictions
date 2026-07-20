@@ -1,0 +1,14 @@
+{
+  "id": "gupta-qian-simintzi-sun-genai-entrepreneurship-2025",
+  "abstract": "This paper examines the impact of generative AI on entrepreneurship using high-frequency business formation data from the U.S. Census Bureau. Gupta, Qian, Simintzi, and Sun analyze new business applications across industries with varying levels of exposure to generative AI tools, leveraging the launch of ChatGPT in November 2022 as a natural experiment. The authors find that generative AI is associated with a significant increase in new business applications in sectors with higher AI exposure, suggesting that GenAI tools lower barriers to entry by reducing the cost of tasks like coding, content creation, marketing, and business planning. The study provides early causal evidence that generative AI stimulates entrepreneurial activity rather than merely displacing existing workers, with effects concentrated in knowledge-intensive and digitally-enabled business categories.",
+  "keyFindings": [
+    "Generative AI tools are associated with a significant increase in new business applications in AI-exposed sectors following ChatGPT's November 2022 launch.",
+    "The entrepreneurial stimulus effect is concentrated in knowledge-intensive industries where GenAI reduces barriers to entry for key business functions like coding, content creation, and marketing.",
+    "Business formation data suggests GenAI creates new venture opportunities rather than simply displacing existing employment, as the increase appears in new market entrants.",
+    "The effect is robust across multiple measures of industry-level AI exposure and persists beyond initial novelty effects.",
+    "GenAI appears to democratize entrepreneurship by lowering the minimum viable skill set required to launch technology-enabled businesses."
+  ],
+  "methodology": "Empirical analysis using U.S. Census Bureau business application data combined with industry-level measures of generative AI exposure. The study employs a difference-in-differences design around the ChatGPT launch (November 2022), comparing business formation rates in high- versus low-AI-exposure industries before and after the availability of GenAI tools.",
+  "qualifiers": "SSRN working paper, not yet peer-reviewed. Business applications are an imperfect proxy for actual entrepreneurship — many applications do not result in operating businesses. The study captures only the initial period after GenAI availability and cannot assess long-term entrepreneurial survival rates. Industry-level AI exposure measures may not capture within-industry variation in actual tool adoption. The causal identification assumes parallel trends in business formation across high- and low-exposure industries absent GenAI.",
+  "fetchedAt": "2026-05-26"
+}

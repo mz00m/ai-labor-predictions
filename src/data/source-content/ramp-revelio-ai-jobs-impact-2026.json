@@ -1,0 +1,16 @@
+{
+  "abstract": "Ramp Economics Lab and Revelio Labs published the first study to link observed firm-level AI spending to workforce outcomes at scale. Using Ramp's expense-management data, the authors tracked AI spending across 21,599 US firms and matched to Revelio Labs employment records. Companies that invest heavily in AI grew headcount 10% over the two years following adoption; entry-level headcount grew 12%. The gains are entirely driven by high-intensity adopters \u2014 low-intensity adopters saw no statistically significant change from baseline. Direction is opposite to the pure-displacement narrative: the firms doing the most with AI are ADDING jobs faster than laggards, not shedding them. Authors caveat that AI adopters are non-random \u2014 already larger, more engineering-intensive, more likely to be venture-backed, faster-growing \u2014 so the observed effect may reflect selection into adoption rather than a causal effect of adoption itself.",
+  "keyFindings": [
+    "Sample: 21,599 US firms tracked via Ramp expense data, matched to Revelio Labs employment",
+    "Heavy AI adopters: +10% headcount over 2 years post-adoption vs. non-adopters",
+    "Entry-level headcount: +12% for heavy adopters (contradicting entry-level displacement narrative)",
+    "Low-intensity adopters: no statistically significant employment effect",
+    "Direction contradicts pure-displacement story \u2014 heavy AI investment correlates with faster hiring, not layoffs",
+    "Ara Kharazian (Ramp lead economist): 'a simple chat subscription does not drive productivity for a firm' \u2014 sustained investment is what matters",
+    "Selection concern: AI adopters were already larger, more VC-backed, more engineering-intensive, faster-growing \u2014 causality unclear"
+  ],
+  "methodology": "Difference-in-differences using firm-level AI spending (Ramp expense data) as the treatment and Revelio Labs employment records as the outcome. 21,599 US firms across sectors. Compares high-intensity adopters, low-intensity adopters, and non-adopters over the 2 years following adoption.",
+  "qualifiers": "Tier 2 \u2014 private-sector research paper, methodologically substantive but not peer-reviewed. Sample is Ramp customers (tech-savvy, growth-oriented firms) which is not representative of the whole US economy. Selection into adoption is a major identification challenge \u2014 the paper's honest framing is that firms self-selecting into heavy AI adoption were already growing, so results likely overstate the causal effect. Best cited as the strongest available counter to the pure-displacement narrative, with the caveat that heavy AI adoption is currently a phenomenon of growth-stage firms.",
+  "id": "ramp-revelio-ai-jobs-impact-2026",
+  "fetchedAt": "2026-07-02"
+}

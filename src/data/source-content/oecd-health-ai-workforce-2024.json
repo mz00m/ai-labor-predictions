@@ -1,0 +1,14 @@
+{
+  "id": "oecd-health-ai-workforce-2024",
+  "abstract": "This OECD report examines the impact of artificial intelligence on the health workforce, focusing on the automation potential of tasks performed by healthcare professionals. The analysis estimates that up to 30% of all administrative tasks performed by physicians, dentists, pharmacists, and specialists can be automated by AI by 2030. The report distinguishes between clinical tasks (diagnosis, treatment decisions) and administrative tasks (documentation, scheduling, billing, compliance), finding that administrative burden represents a significant share of healthcare workers' time and is highly amenable to AI automation. The study discusses implications for workforce planning, noting that AI-driven administrative automation could free significant clinical capacity without reducing headcount, potentially alleviating healthcare workforce shortages in OECD countries. The report also examines AI applications in clinical decision support, medical imaging, and drug discovery, while emphasizing that regulatory frameworks, trust barriers, and integration costs will pace adoption.",
+  "keyFindings": [
+    "Up to 30% of administrative tasks performed by physicians, dentists, pharmacists, and specialists can be automated by AI technologies by 2030.",
+    "Administrative burden consumes a substantial portion of healthcare workers' time—AI automation of these tasks could free significant clinical capacity without reducing headcount.",
+    "AI-driven clinical decision support and medical imaging analysis are advancing rapidly, but adoption is constrained by regulatory approval processes and clinician trust.",
+    "Healthcare workforce shortages across OECD countries create strong demand-side pull for AI tools that augment existing workers rather than replace them.",
+    "Integration costs, interoperability challenges with legacy health IT systems, and data privacy requirements represent significant barriers to adoption in healthcare settings."
+  ],
+  "methodology": "Analysis of task composition data for healthcare occupations across OECD countries, combined with expert assessments of AI automation feasibility for specific task categories. Draws on workforce surveys, health system administrative data, and case studies of AI deployment in clinical settings.",
+  "qualifiers": "The 30% automation estimate applies to administrative tasks specifically, not to the full scope of healthcare professional work. Clinical task automation faces higher regulatory and safety barriers. Adoption timelines depend heavily on country-specific regulatory frameworks, health IT infrastructure maturity, and institutional willingness to change workflows. The analysis focuses on technical feasibility rather than actual deployment rates. Healthcare AI applications face unique challenges around liability, patient consent, and algorithmic bias in clinical populations.",
+  "fetchedAt": "2026-05-26"
+}

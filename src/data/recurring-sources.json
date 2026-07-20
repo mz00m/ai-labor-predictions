@@ -1,0 +1,30 @@
+{
+  "description": "Registry of recurring research series tracked by /autoresearch. Before gap-driven discovery, the agent sweeps every series whose nextExpected date has passed (or is null) and searches for the newest edition. After each sweep the agent updates lastChecked; after each ingestion it updates lastIngested and recomputes nextExpected from the cadence. lastChecked: null means the series has never been swept. All dates are YYYY-MM-DD.",
+  "asOf": "2026-07-02",
+  "lastSweep": null,
+  "series": [
+    {
+      "id": "ellucian-highered-ai",
+      "series": "Ellucian Annual Higher Education AI Survey",
+      "publisher": "Ellucian",
+      "tier": 2,
+      "cadence": "annual",
+      "releasePattern": "March each year",
+      "checkUrls": [
+        "https://www.ellucian.com/news"
+      ],
+      "searchQuery": "Ellucian higher education AI survey {year}",
+      "targetGraphs": [
+        "education-sector-displacement"
+      ],
+      "lastIngested": {
+        "date": "2026-03-04",
+        "edition": "3rd Annual Higher Education AI Survey"
+      },
+      "lastChecked": null,
+      "nextExpected": "2027-03-01",
+      "priority": "medium",
+      "notes": "One of few recurring series for education-sector-displacement (a data-hungry graph)."
+    }
+  ]
+}

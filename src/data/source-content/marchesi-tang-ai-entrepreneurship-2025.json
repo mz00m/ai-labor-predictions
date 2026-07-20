@@ -1,0 +1,14 @@
+{
+  "id": "marchesi-tang-ai-entrepreneurship-2025",
+  "abstract": "Marchesi and Tang study entrepreneurial activity following ChatGPT's commercial availability in November 2022, using business formation data to assess whether generative AI stimulates new venture creation. The paper finds a significant increase in business applications in sectors with higher AI exposure after ChatGPT's launch, providing event-study evidence that generative AI tools catalyze entrepreneurship. The authors leverage the sudden and largely unanticipated public release of ChatGPT as a natural experiment to estimate causal effects on business formation. The results contribute to the growing body of evidence that generative AI's primary labor market effect in the near term may be enabling new economic activity rather than simply displacing existing workers, though the long-term viability of AI-enabled startups remains uncertain.",
+  "keyFindings": [
+    "Business applications increased significantly in AI-exposed sectors following ChatGPT's November 2022 launch, providing event-study evidence of a causal link between GenAI availability and entrepreneurship.",
+    "The entrepreneurial response was concentrated in sectors where ChatGPT-type tools could directly reduce barriers to entry, such as software development, content creation, and professional services.",
+    "The timing of the increase aligns closely with ChatGPT's public availability, supporting a causal interpretation rather than pre-existing trends in business formation.",
+    "Generative AI appears to lower the minimum viable skill threshold for launching technology-enabled businesses, expanding the pool of potential entrepreneurs.",
+    "The findings suggest near-term AI labor market effects may be more about enabling new economic activity than displacing existing workers, though long-term effects remain uncertain."
+  ],
+  "methodology": "Event-study design exploiting the sudden public release of ChatGPT in November 2022 as a natural experiment. The analysis uses business application data from the U.S. Census Bureau, comparing formation rates in AI-exposed versus non-exposed sectors before and after the ChatGPT launch. Difference-in-differences estimation with industry-level AI exposure measures.",
+  "qualifiers": "SSRN working paper, not yet peer-reviewed. Business applications are a noisy proxy for actual entrepreneurship — many do not result in operational businesses. The study cannot assess the quality, survival rates, or employment generation of newly formed ventures. The ChatGPT launch coincided with other macroeconomic changes that may confound identification. Short post-treatment period limits the ability to distinguish sustained entrepreneurial activity from a temporary novelty-driven spike.",
+  "fetchedAt": "2026-05-26"
+}

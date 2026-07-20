@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { PREDICTION_COUNT } from "@/lib/constants";
 
 /* ─── Table of Contents ────────────────────────────────────────────── */
 
 const TOC = [
   { id: "overview", label: "Overview" },
+  { id: "expert-consensus", label: "What Experts Agree & Disagree About" },
   { id: "predictions", label: "Prediction Graphs" },
   { id: "evidence-tiers", label: "Evidence Tiers" },
   { id: "weighted-average", label: "Weighted Average" },
@@ -209,7 +211,7 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
         <p>
           jobsdata.ai is a <Strong>live meta-analysis</Strong> of AI&rsquo;s
           impact on jobs, not a forecast. We track {sourceCount}+ individually cited
-          sources across 18 prediction graphs, a 5-dimensional occupation risk
+          sources across {PREDICTION_COUNT} prediction graphs, a 5-dimensional occupation risk
           framework, and real-time automation signals. Peer-reviewed research
           (Tier 1) counts 8&times; more than blog posts (Tier 4). Newer studies
           get up to 1.5&times; more weight. The headline number on every graph
@@ -260,9 +262,10 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
         </P>
         <ul className="text-md text-[var(--muted)] leading-relaxed space-y-2 mb-4 pl-5 list-disc">
           <li>
-            <Strong>Prediction graphs</Strong> (16 graphs across displacement,
-            wages, and adoption) &mdash; each plotting every published estimate
-            we can find, weighted by evidence quality and recency.
+            <Strong>Prediction graphs</Strong> ({PREDICTION_COUNT} graphs across
+            displacement, wages, adoption, and AI exposure) &mdash; each plotting
+            every published estimate we can find, weighted by evidence quality
+            and recency.
           </li>
           <li>
             <Strong>Occupation risk framework</Strong> (342 occupations scored
@@ -283,15 +286,134 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
       </Section>
 
       {/* ════════════════════════════════════════════════════════════════
+          01a. WHAT EXPERTS AGREE & DISAGREE ABOUT
+      ════════════════════════════════════════════════════════════════ */}
+      <Section id="expert-consensus" title="What Experts Agree & Disagree About">
+        <TLDR>
+          <p>
+            The productivity question is settled. The jobs question is not.
+            Among labor economists,{" "}
+            <Strong>16 of 16</Strong> on a June 2026 WSJ panel agreed AI will
+            boost productivity &mdash; but only{" "}
+            <Strong>5 of 16</Strong> predict net job loss,{" "}
+            <Strong>8 of 16</Strong> predict no change, and{" "}
+            <Strong>2 of 16</Strong> predict net growth. The site exists because
+            of that second number.
+          </p>
+        </TLDR>
+
+        <div className="space-y-4">
+          <P>
+            A first-time reader of jobsdata.ai may reasonably ask: do experts
+            actually disagree about AI&rsquo;s labor impact, or are we
+            manufacturing controversy? The answer is the former &mdash; and
+            <em> what</em> they agree and disagree about is informative.
+          </P>
+
+          <div>
+            <P>
+              <Strong>Settled (or nearly so):</Strong>{" "}
+              AI will raise measured productivity. The June 2026 WSJ panel of
+              16 labor economists was{" "}
+              <a
+                href="https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                unanimous
+              </a>
+              {" "}on this, including the panel&rsquo;s most skeptical voices.
+              The historical record (railroads, electricity, computers, the
+              internet) supports a productivity boost from general-purpose
+              technologies on a multi-decade horizon, even when the immediate
+              productivity statistics lag adoption.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Contested:</Strong>{" "}
+              Net employment, sectoral composition, the speed of adjustment,
+              and the distribution of gains. On the same WSJ panel,{" "}
+              <Strong>5 of 16</Strong> (Acemoglu, Henderson, Restrepo, Wolfers,
+              Chandar) predicted AI would cause net job loss. The same 5
+              unanimously predicted AI would replace rather than complement
+              workers, and would reduce demand for white-collar jobs. The
+              other 11 saw a mix &mdash; including 2 who expect net growth.
+              The Chicago{" "}
+              <a
+                href="https://www.kentclarkcenter.org/surveys/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                IGM survey
+              </a>
+              {" "}of leading economists shows only 11% agree AI will
+              substantially raise unemployment in advanced countries over the
+              next decade &mdash; a different framing of the same uncertainty.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Disagreements aren&rsquo;t random &mdash; they cluster.</Strong>{" "}
+              On the WSJ panel, the same 5 economists who expected net job loss
+              also unanimously predicted AI would replace rather than
+              complement workers and reduce white-collar demand. Their views
+              are mutually consistent rather than arbitrary. The 11 in the
+              other groups hold a different but internally coherent worldview.
+              This is why the site shows the source mix on every graph: which
+              cluster a given headline number comes from often matters more
+              than the number itself.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Three meanings of &ldquo;net job loss.&rdquo;</Strong>{" "}
+              Even within the net-loss camp, the mechanism is contested.
+              Acemoglu&rsquo;s account is closer to <em>misdirected
+              automation</em>: AI replaces workers in places where augmentation
+              would have created more value. Chandar&rsquo;s account is{" "}
+              <em>long-run income effects</em>: AI makes the economy rich
+              enough &mdash; via capital income or transfers &mdash; that
+              labor force participation falls voluntarily, not because work is
+              unavailable. Restrepo&rsquo;s account leans on{" "}
+              <em>capital&ndash;labor substitution</em>: the labor share of
+              income compresses. The headline number is the same; the welfare
+              implications are very different. We surface the source mix to
+              keep these mechanisms distinguishable.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>How to read this site:</Strong>{" "}
+              Treat every headline number as a snapshot of expert disagreement,
+              not as a forecast. Read the confidence interval, not just the
+              midpoint. Click through to the source mix. Compare the Tier 1
+              academic mean to the Tier 2 institutional mean &mdash; when they
+              diverge, the disagreement is the signal.
+            </P>
+          </div>
+        </div>
+      </Section>
+
+      {/* ════════════════════════════════════════════════════════════════
           02. PREDICTION GRAPHS
       ════════════════════════════════════════════════════════════════ */}
       <Section id="predictions" title="Prediction Graphs">
         <TLDR>
           <p>
-            16 graphs covering displacement (8), wages (4), and adoption (4).
-            Each graph plots every published estimate as a data point, color-coded
-            by evidence tier. The headline number is a weighted average across all
-            sources. You can toggle tiers on and off to see how the number shifts.
+            {PREDICTION_COUNT} graphs covering displacement (9), wages (4),
+            adoption (3), and AI exposure (1), plus 1 corporate-behavior signal
+            (S&amp;P 500 earnings-call AI mentions) tracked alongside but counted
+            separately. Each graph plots every published estimate as a data
+            point, color-coded by evidence tier. The headline number is a
+            weighted average across all sources. You can toggle tiers on and off
+            to see how the number shifts.
           </p>
         </TLDR>
         <P>
@@ -300,20 +422,30 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
           2030&rdquo;) across all published estimates we can find.
         </P>
 
-        <DeepDive title="What the 16 graphs cover">
+        <DeepDive title={`What the ${PREDICTION_COUNT} graphs cover`}>
           <p className="mb-3">
-            <Strong>Displacement (8 graphs):</Strong> Overall US jobs, white-collar
+            <Strong>Displacement (9 graphs):</Strong> Overall US jobs, white-collar
             professionals, tech sector, creative industries, education, healthcare
-            admin, financial services, and customer service automation.
+            admin, financial services, customer service automation, and
+            robots/physical automation.
           </p>
           <p className="mb-3">
             <Strong>Wages (4 graphs):</Strong> Median wage impact, entry-level
             wages, high-skill wage premium, and freelancer/gig worker rates.
           </p>
+          <p className="mb-3">
+            <Strong>Adoption (3 graphs):</Strong> AI adoption rate (Census BTOS),
+            generative AI adoption at work, and AI business formation.
+          </p>
+          <p className="mb-3">
+            <Strong>Exposure (1 graph):</Strong> Workforce AI exposure (share of
+            US workers in occupations most exposed to AI tasks).
+          </p>
           <p>
-            <Strong>Adoption &amp; Signals (4 graphs):</Strong> AI adoption rate
-            (Census BTOS), generative AI adoption at work, workforce AI exposure,
-            and S&amp;P 500 AI mentions in earnings calls.
+            <Strong>Signals (1, not counted toward the {PREDICTION_COUNT}):</Strong>{" "}
+            S&amp;P 500 AI mentions in earnings calls &mdash; a corporate-behavior
+            signal tracked alongside the predictions but treated as a current
+            measure rather than a forward-looking forecast.
           </p>
         </DeepDive>
 
@@ -1224,6 +1356,31 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
               they earlier announced; that reversal is rarely reflected in the
               same data point. Treat company press-release values as one
               point in a wider distribution, not as the central estimate.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Productivity gains aren&rsquo;t the same as worker gains.</Strong>{" "}
+              Acemoglu, Autor, and Johnson (Brookings Hamilton Project,{" "}
+              <a
+                href="https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                Feb 2026
+              </a>
+              ) argue that AI breaks into five categories &mdash; labor-augmenting,
+              capital-augmenting, automating, expertise-leveling, and new
+              task-creating &mdash; and that only new task-creating AI is
+              unambiguously pro-worker. The other four can raise firm productivity
+              while reducing the scarcity value of human expertise. Our
+              displacement, wage, and exposure scores measure outcomes, not which
+              category an AI deployment falls into. A graph showing strong
+              productivity adoption with flat or declining wage gains for the same
+              workers is consistent with the automation or expertise-leveling
+              modes the authors warn about.
             </P>
           </div>
 

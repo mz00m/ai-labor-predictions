@@ -1,0 +1,14 @@
+{
+  "id": "yale-budgetlab-cps-update-2026",
+  "abstract": "The Yale Budget Lab releases an updated analysis of CPS data through January/February 2026, reinforcing their earlier finding of no aggregate employment decline attributable to AI while identifying accelerating compositional shifts in AI-exposed occupations. This update extends the tracking methodology established in their earlier report, providing additional months of data to test whether AI displacement effects are emerging or whether the null aggregate finding persists. The updated analysis confirms that overall employment, unemployment rates, and labor force participation in AI-exposed occupations remain statistically indistinguishable from non-exposed occupations at the aggregate level. However, the compositional shifts identified in earlier reports appear to be accelerating: within AI-exposed occupations, there are growing divergences in hours worked by skill level, increasing rates of task reorganization, and shifts in the education and experience composition of workers. The acceleration of compositional changes against a backdrop of aggregate stability suggests that AI is transforming work content and worker profiles within existing occupational categories rather than eliminating jobs outright, a pattern consistent with augmentation-dominated early adoption phases.",
+  "keyFindings": [
+    "Aggregate employment in AI-exposed occupations remains statistically indistinguishable from non-exposed occupations through early 2026",
+    "Compositional shifts within AI-exposed occupations are accelerating relative to earlier reporting periods",
+    "Growing divergences in hours worked by skill level within AI-exposed occupations suggest internal restructuring",
+    "Education and experience composition of workers in AI-exposed occupations shifting, indicating changing hiring profiles",
+    "Pattern consistent with augmentation-dominated early adoption: work content transforms while aggregate job counts remain stable"
+  ],
+  "methodology": "Updated longitudinal analysis of CPS microdata extending the Yale Budget Lab's AI labor market tracking methodology. Compares employment, hours, wages, and compositional metrics for workers in AI-exposed vs. non-exposed occupations through January/February 2026. Uses established AI occupational exposure indices.",
+  "qualifiers": "Same CPS data limitations as the March 2026 report — limited occupational granularity and potential measurement gaps for within-occupation shifts. The January/February 2026 data covers a slightly earlier period than the March update, suggesting these are companion analyses rather than sequential updates. Accelerating compositional shifts are relative to a short baseline period, making trend extrapolation uncertain. Seasonal adjustment of CPS data may affect early-year estimates.",
+  "fetchedAt": "2026-05-26"
+}

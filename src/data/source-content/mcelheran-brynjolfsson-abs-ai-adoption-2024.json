@@ -1,0 +1,14 @@
+{
+  "id": "mcelheran-brynjolfsson-abs-ai-adoption-2024",
+  "abstract": "McElheran, Brynjolfsson, and colleagues use data from the U.S. Census Bureau's Annual Business Survey (ABS) to map AI adoption across American firms, providing the most comprehensive picture of which firms adopt AI, what types of AI they use, and where adoption is concentrated geographically. The study finds that AI adoption remains concentrated in larger firms, the information sector, and coastal metropolitan areas, revealing significant disparities in AI diffusion across the economy. The analysis covers multiple AI technology types — including machine learning, natural language processing, computer vision, and robotics — and examines how adoption patterns vary by firm size, industry, geography, and workforce characteristics. The findings have important implications for understanding which segments of the economy are positioned to capture AI-driven productivity gains and which risk falling further behind.",
+  "keyFindings": [
+    "AI adoption is heavily concentrated in larger firms, with small and medium enterprises significantly lagging in deployment of AI technologies across all categories.",
+    "The information sector leads in AI adoption rates, followed by professional services and finance, while manufacturing, retail, and other service sectors show substantially lower adoption.",
+    "Geographic concentration of AI adoption follows existing knowledge-economy patterns, with coastal metros (San Francisco, New York, Boston, Seattle) leading and rural areas and interior cities trailing.",
+    "Adoption varies significantly by AI technology type — machine learning and natural language processing are more widely adopted than computer vision or robotics, reflecting different cost and implementation barriers.",
+    "The concentration of AI adoption in already-productive firms and regions suggests AI may amplify existing economic disparities rather than creating convergence."
+  ],
+  "methodology": "Empirical analysis using the U.S. Census Bureau's Annual Business Survey (ABS), which provides nationally representative firm-level data on technology adoption. The ABS covers hundreds of thousands of firms across all sectors and sizes, enabling detailed breakdowns of AI adoption by firm characteristics, industry, and geography. The study employs descriptive statistics and regression analysis to characterize adoption patterns.",
+  "qualifiers": "The ABS data captures self-reported AI adoption, which depends on firms' understanding of what constitutes AI — smaller firms may underreport AI use if they don't recognize embedded AI in their tools. The survey is cross-sectional, limiting causal inference about what drives adoption. Adoption rates change rapidly; the data may already be outdated given the pace of GenAI diffusion since the survey period. The study measures adoption, not intensity of use or productivity impact.",
+  "fetchedAt": "2026-05-26"
+}

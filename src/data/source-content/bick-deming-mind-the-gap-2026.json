@@ -1,0 +1,14 @@
+{
+  "id": "bick-deming-mind-the-gap-2026",
+  "abstract": "Bick and Deming document a significant gap in AI adoption between the United States and Europe, finding that US adoption substantially outpaces European adoption across multiple measures. The paper examines differences in AI uptake at the firm and worker level, analyzing why the transatlantic gap exists and what it implies for productivity divergence and labor market outcomes. Potential explanations include differences in regulatory environment (the EU AI Act vs. lighter US regulation), venture capital availability, labor market flexibility, digital infrastructure, and cultural attitudes toward technology adoption. The gap is particularly notable given that Europe has comparable levels of education and technological capability, suggesting institutional and regulatory factors play a decisive role in adoption speed. The findings have implications for the future of transatlantic productivity growth, as AI-adopting economies may see compounding advantages over time through learning-by-doing, data accumulation, and ecosystem development.",
+  "keyFindings": [
+    "US AI adoption significantly outpaces European adoption across multiple measures",
+    "The adoption gap exists despite comparable European education levels and technological capability",
+    "Institutional and regulatory factors (including EU AI Act) appear to play a decisive role in adoption speed",
+    "The gap has implications for transatlantic productivity divergence as AI advantages compound over time",
+    "Differences in venture capital availability, labor market flexibility, and digital infrastructure contribute to the gap"
+  ],
+  "methodology": "Cross-country comparative analysis of AI adoption rates using firm-level and worker-level survey data from the US and European countries. NBER working paper (w34995). Specific survey instruments and sample sizes were not available from the abstract page (full PDF exceeded fetch limits).",
+  "qualifiers": "Working paper, not yet peer reviewed. Measuring 'AI adoption' is inherently difficult — definitions and survey instruments vary across countries. Regulatory differences (EU AI Act) were still being implemented during the study period, so their full effect may not yet be captured. Does not directly measure productivity or labor market outcomes, focusing on adoption rates as a leading indicator. European AI adoption may be underestimated if firms adopt AI through different channels than those measured.",
+  "fetchedAt": "2026-05-26"
+}

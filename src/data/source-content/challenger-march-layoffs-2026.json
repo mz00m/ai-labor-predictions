@@ -1,0 +1,13 @@
+{
+  "id": "challenger-march-layoffs-2026",
+  "abstract": "Challenger, Gray & Christmas reported that U.S.-based employers announced 60,620 job cuts in March 2026, a 25% increase from 48,307 in February. AI was cited as the leading reason for job cuts, accounting for 25% of all layoff announcements, surpassing closings, restructuring, and economic conditions. This marks a significant milestone in corporate workforce disclosure, as AI transitions from an ancillary factor in layoff decisions to the primary driver cited by employers. The data suggests companies are increasingly willing to attribute workforce reductions directly to AI-driven automation and efficiency gains rather than framing cuts under traditional categories. The Challenger report, which tracks announced layoffs from corporate press releases and regulatory filings, provides one of the most granular monthly views into employer-stated reasons for workforce reductions in the U.S. economy.",
+  "keyFindings": [
+    "U.S. employers announced 60,620 job cuts in March 2026, up 25% from 48,307 in February.",
+    "AI was the leading reason cited for job cuts, appearing in 25% of all layoff announcements — the first time AI topped the list of stated reasons.",
+    "AI surpassed traditional layoff drivers including business closings, restructuring, and deteriorating economic conditions.",
+    "The data signals a normalization of AI-attributed workforce reductions in corporate communications."
+  ],
+  "methodology": "Challenger, Gray & Christmas monthly layoff tracker, which aggregates publicly announced job cuts from corporate press releases, SEC filings, and news reports. Categorizes employer-stated reasons for reductions. Covers U.S.-based employers across all industries.",
+  "qualifiers": "Challenger data tracks announced layoffs, not confirmed separations, and relies on employer-stated reasons which may reflect corporate messaging strategy rather than actual causal drivers. Companies may attribute layoffs to AI for investor signaling even when the underlying cause is broader cost-cutting. The data does not capture layoffs at firms that do not issue public announcements.",
+  "fetchedAt": "2026-05-26"
+}

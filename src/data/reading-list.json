@@ -2,12 +2,82 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI isn't destroying entry-level jobs. It's changing them",
+      "author": "Financial Times",
+      "publisher": "Financial Times",
+      "date": "2026-07-16",
+      "url": "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
+      "takeaway": "FT synthesis of the PwC 2026 Global AI Jobs Barometer: entry-level roles are being 'seniorised' rather than eliminated. Newcomers used to learn by doing simple repetitive work (the apprenticeship rung) \u2014 AI took exactly that. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal skills \u2014 historically senior. Job openings for seniorised entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%; entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills.",
+      "weekFeatured": "2026-07-19",
+      "tier": 3
+    },
+    {
+      "title": "We Must Act Now: A Statement on AI's Economic Transformation",
+      "author": "Brynjolfsson, Agrawal, Korinek, Cunningham et al.",
+      "publisher": "Stanford Digital Economy Lab",
+      "date": "2026-07-13",
+      "url": "https://www.wemustactnow.ai/",
+      "takeaway": "A landmark statement signed by 16 Nobel Laureates and 200+ economists and AI researchers, organized by Brynjolfsson, Agrawal, Korinek, and Cunningham. Warns AI could drive an economic transformation larger than the Industrial Revolution but on a vastly shorter timeline, with large-scale job displacement as a primary risk. Calls for deeper research, policy frameworks, and institutions to ensure AI complements human capabilities. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.'",
+      "weekFeatured": "2026-07-13",
+      "tier": 2
+    },
+    {
+      "title": "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
+      "author": "Ben Casselman",
+      "publisher": "The New York Times",
+      "date": "2026-07-02",
+      "url": "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
+      "takeaway": "Casselman synthesizes the AI measurement problem: different data sources give contradictory answers on basic questions \u2014 is AI causing job losses or gains, which workers are most exposed, is the productivity boom real? Highlights: a new Yale Budget Lab monthly 'occupational churn' measure designed as an early-warning system that tracks how the composition of an industry's jobs shifts before total headcount does; new Ramp/Revelio Labs research showing the companies using AI most intensely are ADDING jobs faster than laggards (opposite direction from displacement narrative, but Ramp's clients skew tech-savvy so representativeness is uncertain); a Nathan Goldschlag/Economic Innovation Group report on the measurement challenge with concrete policy recommendations; and a bipartisan Senate bill (Sen. Mark Kelly, D-AZ) that would expand federal AI labor data collection and mandate an annual federal report. Notes the underlying federal statistical system is deteriorating from falling response rates and funding cuts (former BLS Commissioner McEntarfer says $10M/yr would help). Frames current confusion as J-curve territory \u2014 most firms still on the downward experimentation phase before productivity gains materialize. Companion to Casselman's June 10 'Hidden Workers' piece; the current article is a stronger external validation of jobsdata.ai's own operating premise (show the source mix, don't collapse to a single number).",
+      "weekFeatured": "2026-07-01",
+      "tier": 3
+    },
+    {
+      "title": "AI and the Supply and Demand for Labor",
+      "author": "Bharat Chandar",
+      "publisher": "What's Next (Substack)",
+      "date": "2026-06-29",
+      "url": "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
+      "takeaway": "Chandar (coauthor of the 'Canaries' paper) explains why he was one of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss \u2014 alongside Acemoglu, Henderson, Restrepo, and Wolfers. All 16 agreed AI would boost productivity; 8 predicted no change in net jobs and 2 predicted net growth. The 5 net-loss economists also unanimously said AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's key clarification: his prediction is not a 'jobs bloodbath' story. He expects AI to make the economy rich enough \u2014 via capital income from AI assets or transfers \u2014 that the income effect dominates the substitution effect, lowering long-run labor force participation. Historically, prime-age LFP has been flat since the 1960s and labor-supply adjustments have come through hours, not participation. He frames Kinder's 'messy middle' as the short-to-medium-run risk lens. A useful disambiguation of what mainstream labor economists actually mean by 'AI net job loss.'",
+      "weekFeatured": "2026-06-29",
+      "tier": 3
+    },
+    {
+      "title": "The New Push to Ready Millions for AI Career Upheaval",
+      "author": "Chip Cutter",
+      "publisher": "The Wall Street Journal",
+      "date": "2026-06-25",
+      "url": "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
+      "takeaway": "A bipartisan consortium called RAISE US launches with a 'people strategy' for the AI era, led by former Commerce Secretary Gina Raimondo (CEO) and former Indiana Gov. Eric Holcomb. Founding employers include Amazon, Microsoft, Bank of America, and Eli Lilly; OpenAI and Anthropic are involved; MIT economist David Autor sits on the advisory board. The group has raised more than $500M \u2014 roughly half its multiyear goal \u2014 and will initially work with state governments in Arkansas, Maryland, Utah, and Connecticut. Beyond conventional retraining, the mandate explicitly includes revisiting decades-old policies like unemployment insurance (e.g., letting displaced workers keep benefits while starting AI-enabled businesses) and developing corporate incentives for employers to retain and reskill workers whose jobs AI disrupts. Holcomb: 'The scale of change and reshaping of jobs and careers is different \u2014 and more so than it has ever been, I think, in human history.' Notable for jobsdata.ai readers because it is the first large bipartisan, multi-state institutional response treating AI labor disruption as a policy problem rather than a technology problem \u2014 and because the founding employers are the same firms whose AI deployments are driving displacement signals tracked on this site.",
+      "weekFeatured": "2026-06-22",
+      "tier": 3
+    },
+    {
+      "title": "Meet the world's top AI-pilled economists",
+      "author": "The Economist",
+      "publisher": "The Economist",
+      "date": "2026-06-15",
+      "url": "https://www.economist.com/finance-and-economics/2026/06/15/meet-the-worlds-top-ai-pilled-economists",
+      "takeaway": "The Economist argues the center of gravity in AI economics is shifting out of universities and into AI labs and government statistical offices. Academic economists have been comparatively slow: the share of NBER papers on AI is rising but not fast, and even in 2024 COVID-related papers outnumbered AI ones. A core reason is skepticism \u2014 a survey by Basil Halperin and colleagues found that even under a 'rapid' AI scenario by 2030 (AI matching or surpassing the brainiest humans), the median academic economist expects US GDP growth of just 3.5% in 2050, versus 5.3% for AI researchers, and only 11% of leading economists (University of Chicago IGM survey) agree AI will substantially raise unemployment in advanced countries over the next decade. Daron Acemoglu's early-2024 model (1,000+ citations) implies modest aggregate productivity gains, a result Tyler Cowen attributes to its assumption that AI won't do new things. Meanwhile labs are hiring economists: Anthropic appointed Anton Korinek, OpenAI hired Ronnie Chatterji as chief economist, and Google DeepMind hired Alex Imas as 'director of AGI economics.' By 2019 more than two-thirds of AI researchers worked in industry (up from under half in 2001, per Ufuk Akcigit), and junior lab economist roles can pay $300,000+. The piece flags conflicts of interest and the risk that AI economics drifts from open science toward proprietary innovation.",
+      "weekFeatured": "2026-06-17",
+      "tier": 3
+    },
+    {
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "author": "Ben Casselman",
+      "publisher": "The New York Times",
+      "date": "2026-06-10",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "takeaway": "Casselman reframes the AI-displacement debate away from software engineers toward the larger, quieter population economists worry about most: customer service representatives, bookkeepers, payroll clerks, and HR specialists \u2014 tens of millions of jobs, disproportionately held by women, many without college degrees. Molly Kinder: 'I worry that AI will be to high-school-educated women what deindustrialization was to high-school-educated men.' Cites Northwestern's Yin & Ogut reweighting showing usage-based exposure measures understate impacts on workers without degrees, older workers, and people of color; GovAI's exposure-times-adaptive-capacity framework identifying back-office workers as both highly exposed and least able to adapt; and Muro/Heck's 'gateway jobs' research on AI carving out the career ladder's middle rungs. Balances with Forsythe's caution that prior automation waves created jobs, and notes there is still little firm evidence AI has hurt the labor market as a whole.",
+      "weekFeatured": "2026-06-10",
+      "tier": 3
+    },
+    {
       "title": "The AI Economic Indicators",
       "author": "Erik Brynjolfsson et al.",
       "publisher": "Stanford Digital Economy Lab",
       "date": "2026-06-01",
       "url": "https://digitaleconomy.stanford.edu/project/indicators/",
-      "takeaway": "Stanford's Digital Economy Lab launched a monthly-updated public dashboard suite tracking AI's real economic footprint — the live, continuously refreshed successor to the Canaries research. Three components: an Employment & AI Exposure dashboard built with ADP Research on payroll records covering millions of workers at thousands of private companies; the Canaries dashboard tracking early-career employment in AI-exposed occupations, now showing a 16% relative employment decline for workers aged 22-25 in the most-exposed roles, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macroeconomic indicators (productivity, capital share, energy use) that currently read mostly neutral — no macro takeoff visible yet. A standing, citable answer to 'what does the data show right now?'",
+      "takeaway": "Stanford's Digital Economy Lab launched a monthly-updated public dashboard suite tracking AI's real economic footprint \u2014 the live, continuously refreshed successor to the Canaries research. Three components: an Employment & AI Exposure dashboard built with ADP Research on payroll records covering millions of workers at thousands of private companies; the Canaries dashboard tracking early-career employment in AI-exposed occupations, now showing a 16% relative employment decline for workers aged 22-25 in the most-exposed roles, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macroeconomic indicators (productivity, capital share, energy use) that currently read mostly neutral \u2014 no macro takeoff visible yet. A standing, citable answer to 'what does the data show right now?'",
       "weekFeatured": "2026-06-10",
       "tier": 2
     },
@@ -17,7 +87,7 @@
       "publisher": "The New York Times Magazine",
       "date": "2026-06-09",
       "url": "https://www.nytimes.com/2026/06/09/magazine/ai-jobs-workforce-labor.html",
-      "takeaway": "A four-expert panel — Daron Acemoglu, Dean Ball, Ethan Mollick, and Clara Shih — on how workers should prepare for a hybrid AI-human workforce. Mollick cites a Procter & Gamble experiment with 776 employees in which individuals using AI performed as well as two-person teams without it, and warns that the apprenticeship model for training junior workers has 'all collapsed.' Acemoglu challenges the agent-supervisor vision of work ('How many Marcus Chens can the American economy employ?') and argues AI investment is misdirected toward automation rather than augmenting trades facing shortages — a novice electrician with the right AI tool could be 10x as productive. Shih reports a 'tale of two cities' in entry-level hiring: candidates fluent in AI agents land jobs while others see those roles disappear. Consensus advice: curious generalists, AI-augmented skilled trades, and owning projects end to end.",
+      "takeaway": "A four-expert panel \u2014 Daron Acemoglu, Dean Ball, Ethan Mollick, and Clara Shih \u2014 on how workers should prepare for a hybrid AI-human workforce. Mollick cites a Procter & Gamble experiment with 776 employees in which individuals using AI performed as well as two-person teams without it, and warns that the apprenticeship model for training junior workers has 'all collapsed.' Acemoglu challenges the agent-supervisor vision of work ('How many Marcus Chens can the American economy employ?') and argues AI investment is misdirected toward automation rather than augmenting trades facing shortages \u2014 a novice electrician with the right AI tool could be 10x as productive. Shih reports a 'tale of two cities' in entry-level hiring: candidates fluent in AI agents land jobs while others see those roles disappear. Consensus advice: curious generalists, AI-augmented skilled trades, and owning projects end to end.",
       "weekFeatured": "2026-06-10",
       "tier": 3
     },
@@ -27,7 +97,7 @@
       "publisher": "The New York Times",
       "date": "2026-05-29",
       "url": "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
-      "takeaway": "A well-reported case study of Schneider Electric (160K employees) choosing augmentation over replacement. In Q4 2025, AI answered 75% of 150K customer service queries correctly — but agents still review and deliver every response, preserving headcount while cutting response times. On the factory floor in Le Vaudreuil, AI optimized silver-tip washing cycles (73% waste reduction) and quality inspection without eliminating operators. Erik Brynjolfsson frames the thesis: businesses can reap bigger gains by making workers productive than by cutting them. The counterpoint emerges from within: Schneider's own AI-assisted workforce developed a plug-and-play contactor that no longer requires an electrician to wire. Anton Korinek (now at Anthropic) voices the deeper concern: the direction of AI development is increasingly hard to steer, and the augmentation window may narrow. A useful companion to the Goldman Sachs op-ed from the same week — two different frames for the same optimist position, one from a CEO and one from the factory floor.",
+      "takeaway": "A well-reported case study of Schneider Electric (160K employees) choosing augmentation over replacement. In Q4 2025, AI answered 75% of 150K customer service queries correctly \u2014 but agents still review and deliver every response, preserving headcount while cutting response times. On the factory floor in Le Vaudreuil, AI optimized silver-tip washing cycles (73% waste reduction) and quality inspection without eliminating operators. Erik Brynjolfsson frames the thesis: businesses can reap bigger gains by making workers productive than by cutting them. The counterpoint emerges from within: Schneider's own AI-assisted workforce developed a plug-and-play contactor that no longer requires an electrician to wire. Anton Korinek (now at Anthropic) voices the deeper concern: the direction of AI development is increasingly hard to steer, and the augmentation window may narrow. A useful companion to the Goldman Sachs op-ed from the same week \u2014 two different frames for the same optimist position, one from a CEO and one from the factory floor.",
       "weekFeatured": "2026-05-25",
       "tier": 3
     },
@@ -37,7 +107,7 @@
       "publisher": "The New York Times",
       "date": "2026-05-22",
       "url": "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
-      "takeaway": "Goldman Sachs CEO argues the 'job apocalypse' narrative overshoots. Acknowledges Goldman economists estimate AI may automate 25% of current work hours over the next decade, and cites a Stanford finding that entry-level employment in the most AI-exposed occupations has already declined 16% relative to least-exposed roles. But argues this won't translate to net job elimination: complexity expands to fill freed capacity (his own analyst example — stock charting went from 6 hours to seconds, yet Goldman employs more people than ever), cultural preferences preserve human roles (ATMs didn't reduce bank employment), and gross US job churn of 25–35M annually dwarfs net creation of a few million. Notes Goldman's own data center demand has created 200K+ construction jobs since 2022. Calls for joint public-private reskilling investment. A Tier 3 opinion piece, but notable as a major CEO staking out the optimist position with specific internal data.",
+      "takeaway": "Goldman Sachs CEO argues the 'job apocalypse' narrative overshoots. Acknowledges Goldman economists estimate AI may automate 25% of current work hours over the next decade, and cites a Stanford finding that entry-level employment in the most AI-exposed occupations has already declined 16% relative to least-exposed roles. But argues this won't translate to net job elimination: complexity expands to fill freed capacity (his own analyst example \u2014 stock charting went from 6 hours to seconds, yet Goldman employs more people than ever), cultural preferences preserve human roles (ATMs didn't reduce bank employment), and gross US job churn of 25\u201335M annually dwarfs net creation of a few million. Notes Goldman's own data center demand has created 200K+ construction jobs since 2022. Calls for joint public-private reskilling investment. A Tier 3 opinion piece, but notable as a major CEO staking out the optimist position with specific internal data.",
       "weekFeatured": "2026-05-25",
       "tier": 3
     },
@@ -47,7 +117,7 @@
       "publisher": "Stripe Economics",
       "date": "2026-05-19",
       "url": "https://www.stripeeconomics.com/p/solopreneurs-solow-and-the-saaspocalypse",
-      "takeaway": "Stripe's internal data on two AI-economy signals. First, new business formation: total US business applications are accelerating but 'high-propensity' (likely-to-hire) applications aren't keeping pace — Stripe Atlas data confirms solo founders are the overwhelming driver of the acceleration, especially in Q1 2026, consistent with AI lowering barriers to solopreneurship. Second, the SaaSpocalypse: when software stocks shed ~$1T in early 2026 on AI disruption fears, Stripe's pay-in volumes for the 100 largest non-AI SaaS companies showed only a brief dip and swift recovery — the sell-off was expectations, not current activity. Also frames the Solow paradox for AI: the near-term absence of aggregate productivity acceleration shouldn't be read as evidence that none is coming, citing electrification's 30-year lag before productivity doubled.",
+      "takeaway": "Stripe's internal data on two AI-economy signals. First, new business formation: total US business applications are accelerating but 'high-propensity' (likely-to-hire) applications aren't keeping pace \u2014 Stripe Atlas data confirms solo founders are the overwhelming driver of the acceleration, especially in Q1 2026, consistent with AI lowering barriers to solopreneurship. Second, the SaaSpocalypse: when software stocks shed ~$1T in early 2026 on AI disruption fears, Stripe's pay-in volumes for the 100 largest non-AI SaaS companies showed only a brief dip and swift recovery \u2014 the sell-off was expectations, not current activity. Also frames the Solow paradox for AI: the near-term absence of aggregate productivity acceleration shouldn't be read as evidence that none is coming, citing electrification's 30-year lag before productivity doubled.",
       "weekFeatured": "2026-05-25",
       "tier": 2
     },
@@ -57,7 +127,7 @@
       "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
       "date": "2026-05-14",
       "url": "https://libertystreeteconomics.newyorkfed.org/2026/05/do-job-postings-show-early-labor-market-effects-of-ai/",
-      "takeaway": "NY Fed researchers combine Anthropic's AI exposure measure with Lightcast vacancy data (through January 2026) and BLS OEWS employment data to test whether AI is already affecting hiring. Key finding: while AI-exposed occupations show relative vacancy declines, the divergence began before ChatGPT's release in late 2022 and shows no additional break in trajectory afterward. There is no divergence between junior and senior positions within highly exposed occupations — undermining the thesis that AI is specifically hollowing out entry-level roles. The authors conclude that 'while AI may be contributing to recent labor market developments, it is not the main driver of the slowdown in hiring.' NY Fed business surveys indicate firms intend to incorporate AI mainly via retraining, with limited effects on hiring. An important empirical check on the displacement narrative from a Tier 1 government source.",
+      "takeaway": "NY Fed researchers combine Anthropic's AI exposure measure with Lightcast vacancy data (through January 2026) and BLS OEWS employment data to test whether AI is already affecting hiring. Key finding: while AI-exposed occupations show relative vacancy declines, the divergence began before ChatGPT's release in late 2022 and shows no additional break in trajectory afterward. There is no divergence between junior and senior positions within highly exposed occupations \u2014 undermining the thesis that AI is specifically hollowing out entry-level roles. The authors conclude that 'while AI may be contributing to recent labor market developments, it is not the main driver of the slowdown in hiring.' NY Fed business surveys indicate firms intend to incorporate AI mainly via retraining, with limited effects on hiring. An important empirical check on the displacement narrative from a Tier 1 government source.",
       "weekFeatured": "2026-05-25",
       "tier": 1
     },
@@ -67,7 +137,7 @@
       "publisher": "The Holy See",
       "date": "2026-05-15",
       "url": "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
-      "takeaway": "The first papal encyclical to treat artificial intelligence as a central topic. Chapter Four directly addresses AI and labor: warns of a 'significant and rapid contraction in available jobs' creating chain reactions for families and local economies (¶151), notes wealthy societies 'automate rapidly and chaotically, reducing the need for a workforce' while poorer regions are trapped in hybrid economies of underpaid labor and partial technology (¶153), and flags wage polarization — 'outsized remuneration for a highly specialized minority alongside declining wages for a large portion of the workforce' (¶151). The encyclical also warns AI can 'paradoxically de-skill workers, subject them to automated surveillance and relegate them to rigid and repetitive tasks' (¶150). Frames the policy response around subsidiarity, integral human development, and the principle that 'the pursuit of greater profits cannot justify choices that systematically sacrifice jobs' (¶152). Builds on Leo XIII's Rerum Novarum (1891) tradition of Catholic Social Doctrine applied to labor.",
+      "takeaway": "The first papal encyclical to treat artificial intelligence as a central topic. Chapter Four directly addresses AI and labor: warns of a 'significant and rapid contraction in available jobs' creating chain reactions for families and local economies (\u00b6151), notes wealthy societies 'automate rapidly and chaotically, reducing the need for a workforce' while poorer regions are trapped in hybrid economies of underpaid labor and partial technology (\u00b6153), and flags wage polarization \u2014 'outsized remuneration for a highly specialized minority alongside declining wages for a large portion of the workforce' (\u00b6151). The encyclical also warns AI can 'paradoxically de-skill workers, subject them to automated surveillance and relegate them to rigid and repetitive tasks' (\u00b6150). Frames the policy response around subsidiarity, integral human development, and the principle that 'the pursuit of greater profits cannot justify choices that systematically sacrifice jobs' (\u00b6152). Builds on Leo XIII's Rerum Novarum (1891) tradition of Catholic Social Doctrine applied to labor.",
       "weekFeatured": "2026-05-25",
       "tier": 2
     },
@@ -77,7 +147,7 @@
       "publisher": "Saanya Ojha (Substack)",
       "date": "2026-05-22",
       "url": "https://saanyaojha.substack.com/p/the-frontier-and-the-froth",
-      "takeaway": "A 'two realities' essay on the widening gap between AI's frontier capability and its enterprise implementation. On the frontier: an OpenAI model made progress on the Erdős unit-distance problem — given n points in a plane, how many pairs can be exactly one unit apart — a question open since 1946, finding an infinite family of constructions via algebraic number theory through cross-domain reasoning rather than brute-force search, a Lean formalization, or a recovered proof. Outside mathematicians reviewed it and Fields Medalist Timothy Gowers called it 'a milestone in AI mathematics.' On the floor: Starbucks rolled out an AI inventory-counting tool across more than 11,000 North American company-owned stores in 2025, then scrapped it nine months later over persistent inaccuracies (including confusing similar milk types), reverting to manual counting and daily replenishment. Ojha's central claim is that capability does not automatically become productivity — it must pass through incentives, politics, procurement, org charts, and the competence of the people implementing it. She warns of 'metric theater': companies routing existing workflows through AI features, bundling AI into existing contracts, and subsidizing adoption, then reporting usage numbers that, like adjusted EBITDA, require reading the footnotes. The firms that benefit most won't have the loudest mandates or highest internal usage numbers; they'll redesign workflows, train people, set real standards, and measure actual output.",
+      "takeaway": "A 'two realities' essay on the widening gap between AI's frontier capability and its enterprise implementation. On the frontier: an OpenAI model made progress on the Erd\u0151s unit-distance problem \u2014 given n points in a plane, how many pairs can be exactly one unit apart \u2014 a question open since 1946, finding an infinite family of constructions via algebraic number theory through cross-domain reasoning rather than brute-force search, a Lean formalization, or a recovered proof. Outside mathematicians reviewed it and Fields Medalist Timothy Gowers called it 'a milestone in AI mathematics.' On the floor: Starbucks rolled out an AI inventory-counting tool across more than 11,000 North American company-owned stores in 2025, then scrapped it nine months later over persistent inaccuracies (including confusing similar milk types), reverting to manual counting and daily replenishment. Ojha's central claim is that capability does not automatically become productivity \u2014 it must pass through incentives, politics, procurement, org charts, and the competence of the people implementing it. She warns of 'metric theater': companies routing existing workflows through AI features, bundling AI into existing contracts, and subsidizing adoption, then reporting usage numbers that, like adjusted EBITDA, require reading the footnotes. The firms that benefit most won't have the loudest mandates or highest internal usage numbers; they'll redesign workflows, train people, set real standards, and measure actual output.",
       "weekFeatured": "2026-05-22",
       "tier": 4
     },
@@ -87,7 +157,7 @@
       "publisher": "Strada Institute for the Future of Work",
       "date": "2026-05-01",
       "url": "https://www.strada.org/news-insights/entry-level-hiring-in-the-ai-era-what-employers-are-thinking-and-doing",
-      "takeaway": "Strada Institute (with Artemis Strategy Group) surveyed 1,498 US executives and senior talent leaders March 3-22, 2026, weighted to represent employers with 5+ staff that hire at the entry level. The headline: AI is a net positive for entry-level hiring so far. In 2025, 46% of employers that have at least explored AI report it increased entry-level hiring vs 13% reporting a decrease (nearly 4-to-1); for 2026, 2.7x as many expect AI to raise hiring as to cut it (46% positive vs 17% negative). Greater AI use is the most frequently cited single positive driver (27% of firms naming a significant positive factor). But the bar is rising: 42% say AI increased analytical/judgment tasks for entry-level staff while 41% say routine admin tasks shrank, and the minority reducing headcount concentrate cuts in administrative/data-entry (46%), customer support (44%), and data analytics (41%) roles. 92% of employers are engaging with AI in some way (22% strategically integrated); only 8% have no plans. Notably, employers rank AI literacy the least important entry-level skill — behind critical thinking, communication, and collaboration — and value relevant work experience over a 4.0 GPA with no work history.",
+      "takeaway": "Strada Institute (with Artemis Strategy Group) surveyed 1,498 US executives and senior talent leaders March 3-22, 2026, weighted to represent employers with 5+ staff that hire at the entry level. The headline: AI is a net positive for entry-level hiring so far. In 2025, 46% of employers that have at least explored AI report it increased entry-level hiring vs 13% reporting a decrease (nearly 4-to-1); for 2026, 2.7x as many expect AI to raise hiring as to cut it (46% positive vs 17% negative). Greater AI use is the most frequently cited single positive driver (27% of firms naming a significant positive factor). But the bar is rising: 42% say AI increased analytical/judgment tasks for entry-level staff while 41% say routine admin tasks shrank, and the minority reducing headcount concentrate cuts in administrative/data-entry (46%), customer support (44%), and data analytics (41%) roles. 92% of employers are engaging with AI in some way (22% strategically integrated); only 8% have no plans. Notably, employers rank AI literacy the least important entry-level skill \u2014 behind critical thinking, communication, and collaboration \u2014 and value relevant work experience over a 4.0 GPA with no work history.",
       "weekFeatured": "2026-05-20",
       "tier": 2
     },
@@ -97,7 +167,7 @@
       "publisher": "automationatlas.org",
       "date": "2026-05-18",
       "url": "https://automationatlas.org/",
-      "takeaway": "The first global task-level automation atlas: 18,797 O*NET tasks scored across 124 countries, producing 2.33M task-country labels. Core insight: automation risk is not fixed at the task level — the same task carries different exposure depending on local wages, technology adoption rates, workforce skills, and production environment. Covers nations representing 99%+ of global GDP and population. Provides the cross-country comparative baseline that US-centric indices (Eloundou, Felten, Tomei) cannot offer, and directly challenges the assumption that AI displaces uniformly across geographies.",
+      "takeaway": "The first global task-level automation atlas: 18,797 O*NET tasks scored across 124 countries, producing 2.33M task-country labels. Core insight: automation risk is not fixed at the task level \u2014 the same task carries different exposure depending on local wages, technology adoption rates, workforce skills, and production environment. Covers nations representing 99%+ of global GDP and population. Provides the cross-country comparative baseline that US-centric indices (Eloundou, Felten, Tomei) cannot offer, and directly challenges the assumption that AI displaces uniformly across geographies.",
       "weekFeatured": "2026-05-18",
       "tier": 2
     },
@@ -107,7 +177,7 @@
       "publisher": "DeepLearning.AI (The Batch)",
       "date": "2026-05-08",
       "url": "https://charonhub.deeplearning.ai/ai-will-not-destroy-the-job-market/",
-      "takeaway": "Ng argues the 'AI jobpocalypse' narrative is overblown, citing U.S. unemployment at 4.3% and strong software engineer hiring despite coding agents. He identifies three drivers of the narrative: frontier AI labs incentivized to overstate capability, SaaS companies anchoring pricing to employee salaries rather than software benchmarks, and businesses attributing pandemic-era overhiring corrections to AI. Predicts an 'AI jobapalooza' — net job creation through AI engineering roles and transformed non-AI work. Complements the Ezra Klein (NYT) and Yale Budget Lab pieces from the same week with an industry-insider perspective on why incumbents amplify displacement fears.",
+      "takeaway": "Ng argues the 'AI jobpocalypse' narrative is overblown, citing U.S. unemployment at 4.3% and strong software engineer hiring despite coding agents. He identifies three drivers of the narrative: frontier AI labs incentivized to overstate capability, SaaS companies anchoring pricing to employee salaries rather than software benchmarks, and businesses attributing pandemic-era overhiring corrections to AI. Predicts an 'AI jobapalooza' \u2014 net job creation through AI engineering roles and transformed non-AI work. Complements the Ezra Klein (NYT) and Yale Budget Lab pieces from the same week with an industry-insider perspective on why incumbents amplify displacement fears.",
       "weekFeatured": "2026-05-11",
       "tier": 3
     },
@@ -117,7 +187,7 @@
       "publisher": "Brookings (Forum for Cooperation on AI)",
       "date": "2026-05-05",
       "url": "https://www.brookings.edu/articles/ai-growth-acceleration-versus-distributional-fairness/",
-      "takeaway": "Brookings FCAI briefing synthesizing the productivity–diffusion–distribution trilemma. Frontier capability is racing ahead (Stanford AI Index: training compute doubling every 5 months; private industry produced ~90% of notable 2024 models), but real-world productivity is lagging. The headline finding: an NBER Feb 2026 survey of ~6,000 executives (US/UK/DE/AU) reports ~70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% of firms report no impact on employment or productivity over the past three years. Micro-evidence remains bimodal: a customer-support GenAI study showed +15% productivity (concentrated in novices), while METR's randomized trial found experienced open-source developers using early-2025 AI tools were 19% SLOWER on their own repos. Adoption stats: US BTOS Feb 2026 shows 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat 2025 shows 19.95% of EU firms with 10+ employees. Distributional risk concentrates at entry-level (Stanford Digital Economy Lab); ~88% of language-tagged models on Hugging Face are English-only, widening Global North/South divides. Task-based macro estimates put AI's TFP contribution at <0.66% over 10 years.",
+      "takeaway": "Brookings FCAI briefing synthesizing the productivity\u2013diffusion\u2013distribution trilemma. Frontier capability is racing ahead (Stanford AI Index: training compute doubling every 5 months; private industry produced ~90% of notable 2024 models), but real-world productivity is lagging. The headline finding: an NBER Feb 2026 survey of ~6,000 executives (US/UK/DE/AU) reports ~70% of firms 'actively use AI,' yet executives spend only ~1.5 hrs/wk on it and ~90% of firms report no impact on employment or productivity over the past three years. Micro-evidence remains bimodal: a customer-support GenAI study showed +15% productivity (concentrated in novices), while METR's randomized trial found experienced open-source developers using early-2025 AI tools were 19% SLOWER on their own repos. Adoption stats: US BTOS Feb 2026 shows 17.5% of US businesses used AI in at least one function in the last two weeks; Eurostat 2025 shows 19.95% of EU firms with 10+ employees. Distributional risk concentrates at entry-level (Stanford Digital Economy Lab); ~88% of language-tagged models on Hugging Face are English-only, widening Global North/South divides. Task-based macro estimates put AI's TFP contribution at <0.66% over 10 years.",
       "weekFeatured": "2026-05-11",
       "tier": 2
     },
@@ -127,7 +197,7 @@
       "publisher": "The Budget Lab at Yale",
       "date": "2026-05-07",
       "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
-      "takeaway": "The strongest null-result paper to date. Using synthetic differences-in-differences to compare AI-exposed (top tercile) vs. a synthetic-control group built from unexposed occupations, the authors find no statistically significant AI effect on employment shares or real hourly wages through 2026Q1. Unemployment rose ~0.5pp in the latest quarter for the AI-exposed group (more for 16–34 year olds) but remains statistically insignificant. Honest about the limits: LLMs are still improving, exposure metrics may misclassify, CPS is underpowered for the 22–27 cohort. Required reading for anyone calibrating confidence about what the data already shows.",
+      "takeaway": "The strongest null-result paper to date. Using synthetic differences-in-differences to compare AI-exposed (top tercile) vs. a synthetic-control group built from unexposed occupations, the authors find no statistically significant AI effect on employment shares or real hourly wages through 2026Q1. Unemployment rose ~0.5pp in the latest quarter for the AI-exposed group (more for 16\u201334 year olds) but remains statistically insignificant. Honest about the limits: LLMs are still improving, exposure metrics may misclassify, CPS is underpowered for the 22\u201327 cohort. Required reading for anyone calibrating confidence about what the data already shows.",
       "weekFeatured": "2026-05-11",
       "tier": 1
     },
@@ -137,7 +207,7 @@
       "publisher": "NBER Working Paper w35192",
       "date": "2026-05-11",
       "url": "https://www.nber.org/papers/w35192",
-      "takeaway": "Blair and Guo introduce the concept of 'algorithmic credentialism' — AI-powered hiring screens trained on historical data encode bachelor's-degree requirements as skill proxies, potentially violating civil rights law under disparate-impact doctrine. The framework matters as AI screening proliferates: it implies entry-level access could narrow not because AI replaces workers but because algorithmic filters silently re-impose credential bias that human screens were being pushed to drop.",
+      "takeaway": "Blair and Guo introduce the concept of 'algorithmic credentialism' \u2014 AI-powered hiring screens trained on historical data encode bachelor's-degree requirements as skill proxies, potentially violating civil rights law under disparate-impact doctrine. The framework matters as AI screening proliferates: it implies entry-level access could narrow not because AI replaces workers but because algorithmic filters silently re-impose credential bias that human screens were being pushed to drop.",
       "weekFeatured": "2026-05-11",
       "tier": 1
     },
@@ -147,7 +217,7 @@
       "publisher": "NBER Working Paper w35171",
       "date": "2026-05-11",
       "url": "https://www.nber.org/papers/w35171",
-      "takeaway": "Not an AI paper — but a critical baseline for thinking about customer-service automation. Dube finds California's AB 1228 (April 2024) raised fast-food wages ~7% with a tight employment own-wage elasticity bracket (−0.29 to +0.26, median −0.02 across 32 specs) despite the floor reaching ~77% of state median hourly wages. The result: even an aggressive wage floor in a sector facing kiosk and ordering automation produced near-zero employment effects through 2025Q3. Useful prior for separating regulation-driven from AI-driven wage and employment changes.",
+      "takeaway": "Not an AI paper \u2014 but a critical baseline for thinking about customer-service automation. Dube finds California's AB 1228 (April 2024) raised fast-food wages ~7% with a tight employment own-wage elasticity bracket (\u22120.29 to +0.26, median \u22120.02 across 32 specs) despite the floor reaching ~77% of state median hourly wages. The result: even an aggressive wage floor in a sector facing kiosk and ordering automation produced near-zero employment effects through 2025Q3. Useful prior for separating regulation-driven from AI-driven wage and employment changes.",
       "weekFeatured": "2026-05-11",
       "tier": 1
     },
@@ -157,7 +227,7 @@
       "publisher": "FAccT 2025 (arXiv)",
       "date": "2026-05-05",
       "url": "https://arxiv.org/abs/2605.03295",
-      "takeaway": "Wolfe and Dangol analyze public communications from five leading AI companies and argue that the demand for high-skill data annotation has created an 'expert gig economy' — commodifying professional expertise into scalable, lower-paid task work. The piece is qualitative, but it names a mechanism that quantitative studies miss: AI labs increasingly source expert judgment via gig platforms, which compresses the professional wage premium even when overall white-collar employment looks stable.",
+      "takeaway": "Wolfe and Dangol analyze public communications from five leading AI companies and argue that the demand for high-skill data annotation has created an 'expert gig economy' \u2014 commodifying professional expertise into scalable, lower-paid task work. The piece is qualitative, but it names a mechanism that quantitative studies miss: AI labs increasingly source expert judgment via gig platforms, which compresses the professional wage premium even when overall white-collar employment looks stable.",
       "weekFeatured": "2026-05-11",
       "tier": 2
     },
@@ -167,7 +237,7 @@
       "publisher": "The New York Times",
       "date": "2026-05-03",
       "url": "https://www.nytimes.com/2026/05/03/opinion/ai-jobs-unemployment-silicon-valley.html",
-      "takeaway": "Klein argues mass unemployment is unlikely because the macrodata isn't matching the anecdata — unemployment was 4.3% in March 2026 vs 4.4% in March 2020, average hourly earnings are stable, and demand for software engineers is booming despite Claude Code. Drawing on Alex Imas's 'what becomes scarce' framework, he predicts labor will shift toward the 'relational sector' as wealthier consumers pay premiums for human-made goods and services. The harder scenario, he warns, is partial displacement of ~8M workers — the U.S. responds poorly to localized shocks (cf. the China shock's 2M jobs).",
+      "takeaway": "Klein argues mass unemployment is unlikely because the macrodata isn't matching the anecdata \u2014 unemployment was 4.3% in March 2026 vs 4.4% in March 2020, average hourly earnings are stable, and demand for software engineers is booming despite Claude Code. Drawing on Alex Imas's 'what becomes scarce' framework, he predicts labor will shift toward the 'relational sector' as wealthier consumers pay premiums for human-made goods and services. The harder scenario, he warns, is partial displacement of ~8M workers \u2014 the U.S. responds poorly to localized shocks (cf. the China shock's 2M jobs).",
       "weekFeatured": "2026-05-03",
       "tier": 3
     },
@@ -177,7 +247,7 @@
       "publisher": "The New York Times (Opinion)",
       "date": "2026-04-30",
       "url": "https://www.nytimes.com/2026/04/30/opinion/ai-labor-work-force-silicon-valley.html",
-      "takeaway": "A reported essay from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed, and even doomers, accelerationists, and labs differ mostly on what to do about it. Amodei's '50% of entry-level white-collar by 2030' anchors the discourse; Block CEO Jack Dorsey laid off ~half his staff in March citing coding agents; OpenAI's GDPVal benchmark went from sub-human to >80% win rate vs human professionals in months; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week, public wealth fund, and capital-gains hikes; Anthropic has set up an institute but not yet endorsed specific policy. David Shor finds 72% of voters fear AI will drive down wages — the rare populist message that polls across the political spectrum.",
+      "takeaway": "A reported essay from inside the SF AI bubble: the 'San Francisco consensus' is that the median worker is screwed, and even doomers, accelerationists, and labs differ mostly on what to do about it. Amodei's '50% of entry-level white-collar by 2030' anchors the discourse; Block CEO Jack Dorsey laid off ~half his staff in March citing coding agents; OpenAI's GDPVal benchmark went from sub-human to >80% win rate vs human professionals in months; Anthropic enterprise-agent revenue jumped from $9B to $30B annualized. OpenAI's new white paper floats a 32-hour week, public wealth fund, and capital-gains hikes; Anthropic has set up an institute but not yet endorsed specific policy. David Shor finds 72% of voters fear AI will drive down wages \u2014 the rare populist message that polls across the political spectrum.",
       "weekFeatured": "2026-04-30",
       "tier": 3
     },
@@ -187,17 +257,17 @@
       "publisher": "Faster, Please! (AEI Substack)",
       "date": "2026-04-28",
       "url": "https://fasterplease.substack.com/p/the-future-of-work-in-an-age-of-ai",
-      "takeaway": "Pethokoukis interviews Wharton's Daniel Rock on AI and work. Key framing: exposure ≠ automation. Rock covers the productivity J-curve (slow early gains as firms reorganize workflows), adoption bottlenecks, and a measured growth outlook that pushes back on Silicon Valley claims of imminent white-collar doom.",
+      "takeaway": "Pethokoukis interviews Wharton's Daniel Rock on AI and work. Key framing: exposure \u2260 automation. Rock covers the productivity J-curve (slow early gains as firms reorganize workflows), adoption bottlenecks, and a measured growth outlook that pushes back on Silicon Valley claims of imminent white-collar doom.",
       "weekFeatured": "2026-04-29",
       "tier": 4
     },
     {
       "title": "The intelligence is plenty but the workers are few",
-      "author": "Daniel Björkegren",
+      "author": "Daniel Bj\u00f6rkegren",
       "publisher": "dan.bjorkegren.com (Brown University)",
       "date": "2026-04-28",
       "url": "https://dan.bjorkegren.com/blog/2026/04/the-intelligence-is-plenty-but-the-workers-are-few/",
-      "takeaway": "LMICs employ <10% of workers in skilled knowledge work vs. 41% in high-income countries, limiting the 'grafting' strategy rich countries use for AI adoption. But cheap intelligence could leapfrog: full automation may benefit LMICs differently than augmentation strategies. Key open question: will AI augment scarce knowledge workers or automate knowledge work entirely? LMICs face less political resistance and fewer legacy institutions — a different optimization landscape.",
+      "takeaway": "LMICs employ <10% of workers in skilled knowledge work vs. 41% in high-income countries, limiting the 'grafting' strategy rich countries use for AI adoption. But cheap intelligence could leapfrog: full automation may benefit LMICs differently than augmentation strategies. Key open question: will AI augment scarce knowledge workers or automate knowledge work entirely? LMICs face less political resistance and fewer legacy institutions \u2014 a different optimization landscape.",
       "weekFeatured": "2026-04-29",
       "tier": 4
     },
@@ -207,7 +277,7 @@
       "publisher": "MIT Stone Center / NBER",
       "date": "2026-04-24",
       "url": "https://mitstonecenter.substack.com/p/what-makes-new-work-different-from",
-      "takeaway": "NBER WP 34986 (forthcoming Annual Review of Economics): 18% of US workers hold jobs introduced since 1970. New work commands a wage premium 4× larger for tech-linked roles. Advanced-degree workers are 2.9pp more likely to land new work. Public policy can drive new work creation. New work is the central mechanism counteracting automation-driven displacement.",
+      "takeaway": "NBER WP 34986 (forthcoming Annual Review of Economics): 18% of US workers hold jobs introduced since 1970. New work commands a wage premium 4\u00d7 larger for tech-linked roles. Advanced-degree workers are 2.9pp more likely to land new work. Public policy can drive new work creation. New work is the central mechanism counteracting automation-driven displacement.",
       "weekFeatured": "2026-04-27",
       "tier": 1
     },
@@ -217,7 +287,7 @@
       "publisher": "Nature",
       "date": "2026-01-01",
       "url": "https://www.nature.com/articles/d41586-026-01257-6",
-      "takeaway": "Nature surveys the existential-risk debate: only 3% of ~4,000 AI researchers name extinction as their top worry (UCL preprint), yet 53% give it ≥10% probability — up from 47% in 2023 (AI Impacts). Dario Amodei puts P(doom) at 25%. Critics including Gary Marcus and Casey Mock argue doom narratives distract from documented current harms and give firms a regulatory shield.",
+      "takeaway": "Nature surveys the existential-risk debate: only 3% of ~4,000 AI researchers name extinction as their top worry (UCL preprint), yet 53% give it \u226510% probability \u2014 up from 47% in 2023 (AI Impacts). Dario Amodei puts P(doom) at 25%. Critics including Gary Marcus and Casey Mock argue doom narratives distract from documented current harms and give firms a regulatory shield.",
       "weekFeatured": "2026-04-27",
       "tier": 3
     },
@@ -227,7 +297,7 @@
       "publisher": "Silicon Continent",
       "date": "2026-04-24",
       "url": "https://www.siliconcontinent.com/p/why-desk-jobs-survive-and-amodei",
-      "takeaway": "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Frey/Osborne in 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M accountants and auditors at $81,680 median pay and projects +5% growth through 2034, while bookkeeping clerks (a 'weak bundle') are projected -6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025). Also: organizations need residual decision rights — a human who can be sued, fired, and held accountable — that AI agents don't yet have.",
+      "takeaway": "A supply-side rebuttal to Amodei's claim that AI will eliminate half of entry-level white-collar jobs in 1-5 years. Labour markets price jobs, not tasks: when components of a bundle are expensive to separate from the rest, AI helps with parts while humans keep the work. Frey/Osborne in 2013 put 94% automation probability on accountants; a decade later BLS counts 1.6M accountants and auditors at $81,680 median pay and projects +5% growth through 2034, while bookkeeping clerks (a 'weak bundle') are projected -6%. Travel agent employment is 60% below its dot-com peak, yet surviving agents' weekly earnings rose from 87% to 99% of the private-sector average (2000-2025). Also: organizations need residual decision rights \u2014 a human who can be sued, fired, and held accountable \u2014 that AI agents don't yet have.",
       "weekFeatured": "2026-04-24",
       "tier": 3
     },
@@ -247,17 +317,17 @@
       "publisher": "MIT / USC",
       "date": "2026-03-01",
       "url": "https://avshah1.github.io/assets/pdf/papers/pro-se/Pro_Se_Automation.pdf",
-      "takeaway": "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows self-represented (pro se) filings broke a 20-year steady state of ~11% to reach 16.8% in FY2025, with pro se case counts nearly doubling from a pre-AI average of 23,210 to 41,490. The rise is concentrated in 'simple' case types (civil rights, consumer credit, foreclosure) and essentially absent in patent or securities fraud. An AI-text detector applied to 1,600 random complaints finds AI-generated text rising from 1.0% (2023) to 18.0% (early 2026). Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI — the supply of judicial capacity is fixed while demand has surged.",
+      "takeaway": "Analysis of 4.5M+ federal civil cases and 46M PACER docket entries shows self-represented (pro se) filings broke a 20-year steady state of ~11% to reach 16.8% in FY2025, with pro se case counts nearly doubling from a pre-AI average of 23,210 to 41,490. The rise is concentrated in 'simple' case types (civil rights, consumer credit, foreclosure) and essentially absent in patent or securities fraud. An AI-text detector applied to 1,600 random complaints finds AI-generated text rising from 1.0% (2023) to 18.0% (early 2026). Case durations and disposition mix are unchanged, but docket entries per court from pro se cases are up 158% vs pre-AI \u2014 the supply of judicial capacity is fixed while demand has surged.",
       "weekFeatured": "2026-04-23",
       "tier": 1
     },
     {
       "title": "AI and the UK Labour Market: The Evidence So Far",
-      "author": "Dr Pedro Serôdio",
+      "author": "Dr Pedro Ser\u00f4dio",
       "publisher": "Centre for British Progress",
       "date": "2026-04-22",
       "url": "https://britishprogress.org/reports/ai-and-the-uk-labour-market-the-evidence-so-far",
-      "takeaway": "Comprehensive UK survey of 412 occupations (24.8M workers): no detectable displacement signal three years post-ChatGPT, though occupation-level divergence is sharp — IT analysts up 38%, call centre workers down 19% since 2021. Software sector is the strongest early signal: employment fell 4.5% in H2 2025 as AI coding tools arrived, productivity growth accelerated from 0.8%/yr to 3.8%/yr post-ChatGPT, and expert exposure models systematically overstate actual adoption.",
+      "takeaway": "Comprehensive UK survey of 412 occupations (24.8M workers): no detectable displacement signal three years post-ChatGPT, though occupation-level divergence is sharp \u2014 IT analysts up 38%, call centre workers down 19% since 2021. Software sector is the strongest early signal: employment fell 4.5% in H2 2025 as AI coding tools arrived, productivity growth accelerated from 0.8%/yr to 3.8%/yr post-ChatGPT, and expert exposure models systematically overstate actual adoption.",
       "weekFeatured": "2026-04-22",
       "tier": 2
     },
@@ -267,7 +337,7 @@
       "publisher": "The Burning Glass Institute",
       "date": "2026-04-21",
       "url": "https://www.linkedin.com/pulse/technology-driven-productivity-regime-shift-gad-levanon-mqyge/",
-      "takeaway": "US labor productivity surged from 1.3% annually (2013–2019) to 2.2% (2019–2025), concentrated in three tech-exposed sectors posting 3.2–3.9% growth while the rest of the economy grew at 0.1%, driven by AI deployment and digital transformation that is hollowing out entry-level white-collar jobs even as output accelerates.",
+      "takeaway": "US labor productivity surged from 1.3% annually (2013\u20132019) to 2.2% (2019\u20132025), concentrated in three tech-exposed sectors posting 3.2\u20133.9% growth while the rest of the economy grew at 0.1%, driven by AI deployment and digital transformation that is hollowing out entry-level white-collar jobs even as output accelerates.",
       "weekFeatured": "2026-04-21",
       "tier": 3
     },
@@ -307,7 +377,7 @@
       "publisher": "Federal Reserve Bank of New York (Liberty Street Economics)",
       "date": "2026-04-14",
       "url": "https://libertystreeteconomics.newyorkfed.org/2026/04/use-of-gen-ai-in-the-workplace-and-the-value-of-access-to-training/",
-      "takeaway": "Only 39% of employed Americans use AI at work, with stark disparities by education (58.7% college vs. 22.9% non-college) and income ($15.9% under $50K vs. 66.3% over $200K); among users, 66% report productivity gains, yet a critical training gap exists—38% of workers value AI training but only 15.9% receive it from employers, with untrained workers willing to pay 11.4% of salary for access.",
+      "takeaway": "Only 39% of employed Americans use AI at work, with stark disparities by education (58.7% college vs. 22.9% non-college) and income ($15.9% under $50K vs. 66.3% over $200K); among users, 66% report productivity gains, yet a critical training gap exists\u201438% of workers value AI training but only 15.9% receive it from employers, with untrained workers willing to pay 11.4% of salary for access.",
       "weekFeatured": "2026-04-14",
       "tier": 1
     },
@@ -347,7 +417,7 @@
       "publisher": "OpenAI",
       "date": "2026-04-01",
       "url": "https://cdn.openai.com/pdf/561e7512-253e-424b-9734-ef4098440601/Industrial%20Policy%20for%20the%20Intelligence%20Age.pdf",
-      "takeaway": "OpenAI proposes a comprehensive policy framework for the AI transition including a public wealth fund, 32-hour workweeks, portable benefits, and tax shifts from payroll to capital—warning that productivity gains won't automatically benefit workers without deliberate intervention. The blueprint also calls for AI safety auditing, international coordination, and worker voice in deployment decisions.",
+      "takeaway": "OpenAI proposes a comprehensive policy framework for the AI transition including a public wealth fund, 32-hour workweeks, portable benefits, and tax shifts from payroll to capital\u2014warning that productivity gains won't automatically benefit workers without deliberate intervention. The blueprint also calls for AI safety auditing, international coordination, and worker voice in deployment decisions.",
       "weekFeatured": "2026-04-07",
       "tier": 2
     },
@@ -357,7 +427,7 @@
       "publisher": "MIT Center for Collective Intelligence (arXiv)",
       "date": "2026-03-27",
       "url": "https://arxiv.org/abs/2603.20619",
-      "takeaway": "AI applications concentrate deeply in narrow task categories, with 92% of AI apps targeting just 6.8% of work activities—primarily information creation and software tasks—while physical and interactive work remain largely unaffected despite 6x growth in AI tools from 2022-2024.",
+      "takeaway": "AI applications concentrate deeply in narrow task categories, with 92% of AI apps targeting just 6.8% of work activities\u2014primarily information creation and software tasks\u2014while physical and interactive work remain largely unaffected despite 6x growth in AI tools from 2022-2024.",
       "weekFeatured": "2026-04-04",
       "tier": 1
     },
@@ -407,7 +477,7 @@
       "publisher": "Noahpinion (Substack)",
       "date": "2026-03-28",
       "url": "https://www.noahpinion.blog/p/plentiful-high-paying-jobs-in-the-ff9",
-      "takeaway": "AI's comparative advantage constraint means cheaper compute won't eliminate human jobs—opportunity costs keep human labor valuable even if AI outperforms humans at every task. However, wages will decline at full automation, with major risks from energy scarcity, wealth concentration, and transition disruptions.",
+      "takeaway": "AI's comparative advantage constraint means cheaper compute won't eliminate human jobs\u2014opportunity costs keep human labor valuable even if AI outperforms humans at every task. However, wages will decline at full automation, with major risks from energy scarcity, wealth concentration, and transition disruptions.",
       "weekFeatured": "2026-03-28",
       "tier": 4
     },
@@ -457,7 +527,7 @@
       "publisher": "Journal of Economic Perspectives",
       "date": "2015-07-01",
       "url": "https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.29.3.31",
-      "takeaway": "Despite 250 years of predictions that technological advancement would cause mass unemployment, those forecasts proved largely wrong—though the study acknowledges real costs to displaced workers. Annual working hours fell from 2,950 in 1870 to 1,500 in 1998, demonstrating that technology's long-run economic benefits outweigh short-term disruption.",
+      "takeaway": "Despite 250 years of predictions that technological advancement would cause mass unemployment, those forecasts proved largely wrong\u2014though the study acknowledges real costs to displaced workers. Annual working hours fell from 2,950 in 1870 to 1,500 in 1998, demonstrating that technology's long-run economic benefits outweigh short-term disruption.",
       "weekFeatured": "2026-03-20",
       "tier": 1
     },
@@ -503,7 +573,7 @@
     },
     {
       "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
-      "author": "Salomé Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
+      "author": "Salom\u00e9 Baslandze, Brent Meyer, John Robertson, Emil Verner, Erick Zwick",
       "publisher": "Federal Reserve Bank of Atlanta / Duke University",
       "date": "2026-03-13",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410338",
@@ -513,8 +583,8 @@
     },
     {
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
-      "author": "Magnus Lodefalk, Lydia Löthman, Michael Koch, Erik Engberg",
-      "publisher": "RATIO Institute / Örebro University",
+      "author": "Magnus Lodefalk, Lydia L\u00f6thman, Michael Koch, Erik Engberg",
+      "publisher": "RATIO Institute / \u00d6rebro University",
       "date": "2026-03-16",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
       "takeaway": "Swedish employer data show that employment of 22-25-year-olds in high-AI occupations declined 5.5% relative to low-AI occupations by 2025H1, while workers 50+ saw 1.3% gains, with effects twice as large for young women. This replicates prior US findings of AI disproportionately affecting young workers' hiring prospects.",
@@ -527,7 +597,7 @@
       "publisher": "Washington Post",
       "date": "2026-03-16",
       "url": "https://www.washingtonpost.com/technology/interactive/2026/jobs-most-affected-ai-automation/",
-      "takeaway": "6.1 million clerical and administrative workers—86% women—face the highest AI threat due to low adaptability, while white-collar jobs are positioned to be disrupted first despite no measurable job displacement occurring yet.",
+      "takeaway": "6.1 million clerical and administrative workers\u201486% women\u2014face the highest AI threat due to low adaptability, while white-collar jobs are positioned to be disrupted first despite no measurable job displacement occurring yet.",
       "weekFeatured": "2026-03-16",
       "tier": 3
     },
@@ -742,7 +812,7 @@
       "tier": 1
     },
     {
-      "title": "AI Won't Just Automate Jobs — It Will Challenge the Meaning of Work",
+      "title": "AI Won't Just Automate Jobs \u2014 It Will Challenge the Meaning of Work",
       "author": "Vox Future Perfect",
       "publisher": "Vox",
       "date": "2026-03-16",
@@ -767,7 +837,7 @@
       "publisher": "a16z",
       "date": "2026-05-06",
       "url": "https://www.a16z.news/p/the-ai-job-apocalypse-is-a-complete",
-      "takeaway": "a16z's bullish counter to the displacement narrative: historical precedent (agriculture, electrification, spreadsheets) shows productivity gains expand labor markets rather than shrink them. Current data backs this — 90%+ of firms report no AI employment impact, software dev jobs are rising, and augmentation out-mentions substitution 8:1 on earnings calls. The aggregate picture is neutral-to-positive, with task reallocation underway but no economy-wide job destruction.",
+      "takeaway": "a16z's bullish counter to the displacement narrative: historical precedent (agriculture, electrification, spreadsheets) shows productivity gains expand labor markets rather than shrink them. Current data backs this \u2014 90%+ of firms report no AI employment impact, software dev jobs are rising, and augmentation out-mentions substitution 8:1 on earnings calls. The aggregate picture is neutral-to-positive, with task reallocation underway but no economy-wide job destruction.",
       "weekFeatured": "2026-05-06",
       "tier": 3
     },
@@ -777,7 +847,7 @@
       "publisher": "Noahpinion",
       "date": "2026-05-05",
       "url": "https://www.noahpinion.blog/p/ais-big-messaging-pivot",
-      "takeaway": "Noah Smith traces the AI industry's pivot from 'AI will make humans obsolete' to 'AI will augment workers and expand jobs' — driven by deteriorating public opinion, political risk, and competitive positioning (OpenAI vs Anthropic). The new pitch rests on task creation and Jevons Paradox (induced demand), plus the 'relational sector' thesis (humans paid just to be human). Smith endorses it as better PR and possibly self-fulfilling for AI research direction, though notes the pivot is partly strategic.",
+      "takeaway": "Noah Smith traces the AI industry's pivot from 'AI will make humans obsolete' to 'AI will augment workers and expand jobs' \u2014 driven by deteriorating public opinion, political risk, and competitive positioning (OpenAI vs Anthropic). The new pitch rests on task creation and Jevons Paradox (induced demand), plus the 'relational sector' thesis (humans paid just to be human). Smith endorses it as better PR and possibly self-fulfilling for AI research direction, though notes the pivot is partly strategic.",
       "weekFeatured": "2026-05-05",
       "tier": 3
     }

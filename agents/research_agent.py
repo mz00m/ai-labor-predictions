@@ -63,6 +63,24 @@ RESEARCH_PROMPT = """## Your Task
 Search for AI labor market research published in the **last 7 days** (since {since_date}).
 Produce a structured research digest.
 
+## Step 0: Recurring Releases and Researcher Watchlist (do this FIRST)
+
+Fetch these two registry files from the repo:
+- https://raw.githubusercontent.com/mz00m/ai-labor-predictions/main/src/data/recurring-sources.json
+- https://raw.githubusercontent.com/mz00m/ai-labor-predictions/main/src/data/researcher-watchlist.json
+
+1. For every series in recurring-sources.json whose `nextExpected` date is on or
+   before today, search for an edition newer than its `lastIngested` (use the
+   series' `searchQuery` with current values). A new edition of a tracked series
+   (Stanford AI Index, Anthropic Economic Index, FactSet Earnings Insight,
+   Census BTOS, Challenger Report, Yale Budget Lab, BLS releases, PwC Barometer,
+   etc.) is a top-priority digest entry — mark it **RECURRING SERIES UPDATE**.
+2. For each researcher in researcher-watchlist.json whose `lastChecked` is more
+   than 30 days old, run one search for new publications
+   (`"[name]" AI labor {year}`). Mark finds as **WATCHLIST**.
+
+Then proceed to the general search strategy below.
+
 ## Step 1: Search Strategy
 
 Run at least 8 targeted searches:
@@ -95,36 +113,37 @@ For each statistic capture:
 
 ## Step 3: Map to Prediction Graphs
 
-These are the 17 prediction graphs. Map each statistic to exactly one.
+These are the prediction graphs (17 predictions + 1 signal-only chart). Map each statistic to exactly one.
 
-**Displacement (8):**
+**Displacement (9):**
 | Slug | Unit |
 |---|---|
 | `overall-us-displacement` | % of US jobs displaced by 2030 |
-| `total-us-jobs-lost` | % of US labor force lost to AI |
 | `white-collar-professional-displacement` | % of white-collar roles displaced by 2030 |
 | `tech-sector-displacement` | % of tech jobs displaced by 2030 |
 | `creative-industry-displacement` | % of creative roles displaced by 2030 |
 | `education-sector-displacement` | % of education roles displaced by 2030 |
 | `healthcare-admin-displacement` | % of healthcare admin roles displaced by 2030 |
+| `financial-services-displacement` | % of financial services roles displaced by 2030 |
 | `customer-service-automation` | % of customer service interactions automated by 2028 |
+| `robots-physical-automation-displacement` | % of physical tasks automated |
 
-**Wages (5):**
+**Wages (4):**
 | Slug | Unit |
 |---|---|
 | `median-wage-impact` | % change in real median wage by 2030 |
-| `geographic-wage-divergence` | % AI hub wage premium by 2030 |
 | `entry-level-wage-impact` | % entry-level wage change by 2030 |
 | `high-skill-wage-premium` | % high-skill wage premium over median by 2030 |
 | `freelancer-rate-impact` | % freelancer rate change by 2028 |
 
-**Adoption & Exposure (4):**
+**Adoption, Exposure & Signals (5):**
 | Slug | Unit |
 |---|---|
 | `ai-adoption-rate` | % of US firms using AI (Census BTOS) |
 | `genai-work-adoption` | % of adults using GenAI at work |
+| `ai-business-formation` | % of new businesses that are AI-related |
 | `workforce-ai-exposure` | % of US jobs exposed to AI |
-| `earnings-call-ai-mentions` | % of S&P 500 mentioning AI workforce |
+| `earnings-call-ai-mentions` | % of S&P 500 mentioning AI workforce (signal-only) |
 
 **Mapping rules:**
 - Unit compatibility is the primary criterion
@@ -145,6 +164,9 @@ Use this exact structure:
 
 ## Summary
 [2-3 sentences: sources found, major findings, any Tier 1 highlights]
+
+## Recurring Series Status
+[One line per series that was due: "series-id: new edition found ([title], [date])" or "series-id: no new release"]
 
 ## New Sources
 

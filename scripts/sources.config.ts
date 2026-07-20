@@ -9,6 +9,7 @@
 import { fetchWithRetry } from "./utils/retry";
 import { fetchNBER } from "./adapters/nber";
 import { fetchOpenAlex } from "./adapters/open-alex";
+import { fetchTrackedInstitutions } from "./adapters/tracked-institutions";
 import type { SourceName, RawItem, SourceAdapter } from "./types";
 
 // Re-export shared types
@@ -356,6 +357,11 @@ export const ADAPTERS: SourceAdapter[] = [
   { name: "nber", tier: "policy", fetch: fetchNBER },
   { name: "bls", tier: "policy", fetch: fetchBLS },
   { name: "fred", tier: "policy", fetch: fetchFRED },
+  {
+    name: "trackedInstitutions",
+    tier: "policy",
+    fetch: fetchTrackedInstitutions,
+  },
   // Signal
   { name: "googleCse", tier: "signal", fetch: fetchGoogleCSE },
   { name: "hnAlgolia", tier: "signal", fetch: fetchHNAlgolia },

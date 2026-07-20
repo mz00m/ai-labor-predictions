@@ -1,0 +1,13 @@
+{
+  "id": "factset-sp500-ai-q3-2025",
+  "abstract": "FactSet's analysis of S&P 500 earnings calls covering the Q2 2025 reporting period (June-September 2025) documents 287 companies mentioning AI, the highest count in a decade of tracking and a 32% surge from Q1 2025's 218 mentions. This figure far exceeds the previous record of 247 calls in Q4 2024, the 5-year average of 124, and the 10-year average of 79. Information Technology dominated with 65 calls (98% of IT companies mentioning AI). Ten of eleven S&P 500 sectors increased AI mentions versus the prior quarter, with standout gains in Financials (+19 calls), Industrials (+14 calls), and Consumer Staples (+11 calls). The broadening of AI mentions beyond technology into traditional sectors like industrials and consumer staples signals that AI is transitioning from a tech-sector phenomenon to a cross-industry strategic priority. The acceleration in mention frequency across consecutive quarters suggests growing corporate urgency around AI strategy.",
+  "keyFindings": [
+    "287 S&P 500 companies mentioned AI in Q2 2025 earnings calls, the highest in 10 years and a 32% increase from Q1 2025 (218 mentions).",
+    "Previous record was 247 calls in Q4 2024; the new figure far exceeds the 5-year average of 124 and the 10-year average of 79 calls.",
+    "IT sector led with 65 calls (98% of IT companies), but the fastest growth came from traditionally non-tech sectors: Financials (+19), Industrials (+14), Consumer Staples (+11).",
+    "10 of 11 S&P 500 sectors increased AI mentions quarter-over-quarter, indicating AI discussion has become a cross-industry phenomenon rather than a tech-sector specialty."
+  ],
+  "methodology": "FactSet text analysis of S&P 500 earnings call transcripts for the Q2 2025 reporting period (calls made June 15 - September 5, 2025). Counts companies mentioning 'AI' or 'artificial intelligence' during calls. Sector-level breakdown and historical comparisons over 10-year period provided.",
+  "qualifiers": "Analysis captures mention frequency, not the substance or materiality of AI discussions. A company mentioning AI risks counts equally with one reporting AI-driven revenue growth. Quarter-over-quarter trends in mentions may partly reflect changing corporate communications norms rather than changing AI adoption. The analysis does not track what companies specifically said about AI or whether mentions represent concrete plans vs. aspirational language.",
+  "fetchedAt": "2026-05-26"
+}

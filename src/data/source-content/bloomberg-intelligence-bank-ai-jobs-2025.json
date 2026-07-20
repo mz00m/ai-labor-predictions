@@ -1,0 +1,14 @@
+{
+  "id": "bloomberg-intelligence-bank-ai-jobs-2025",
+  "abstract": "Bloomberg Intelligence analysis published in January 2025 projects that global banks will cut up to 200,000 jobs over the next 3-5 years as AI reshapes banking operations. The expected average net workforce reduction is approximately 3%, though nearly a quarter of surveyed bank CIOs and CTOs foresee 5-10% headcount reductions. The survey drew on 93 respondents from major institutions including Citigroup, JPMorgan Chase, and Goldman Sachs. Chief information and technology officers cited growing adoption of AI tools as a key driver of anticipated cuts. Back-office, middle-office, and operational positions face the greatest automation exposure, particularly roles involving routine, repetitive processes such as customer service and know-your-customer compliance. JPMorgan's AI leadership noted that technology has augmented jobs rather than replaced them outright so far, though this balance may shift as generative AI deployment accelerates.",
+  "keyFindings": [
+    "Global banks expected to shed up to 200,000 jobs over 3-5 years, with an average net workforce reduction of approximately 3%.",
+    "Nearly a quarter of bank CIOs/CTOs foresee 5-10% headcount reductions, suggesting some institutions will cut more aggressively than the average.",
+    "Back-office, middle-office, and operational roles face the greatest automation exposure, particularly customer service and KYC compliance.",
+    "AI could lift bank pre-tax profits by 12-17% by 2027, potentially adding $180 billion collectively across the industry.",
+    "More than 80% of surveyed executives anticipate productivity and revenue gains of at least 5% within five years."
+  ],
+  "methodology": "Bloomberg Intelligence survey of 93 respondents from major global banking institutions including Citigroup, JPMorgan Chase, and Goldman Sachs. Respondents included chief information officers and chief technology officers. Published January 2025.",
+  "qualifiers": "The 200,000 figure represents expectations, not confirmed cuts, and depends on the pace and success of AI deployment. The sample of 93 respondents, while from major institutions, is small and skewed toward the largest global banks. The survey captures executive expectations, which may overestimate or underestimate actual displacement. The 3-5 year timeframe is inherently uncertain. The source article was behind a Bloomberg paywall; data drawn from secondary reporting.",
+  "fetchedAt": "2026-05-26"
+}

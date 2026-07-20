@@ -1,0 +1,14 @@
+{
+  "id": "nyt-sun-silicon-valley-ai-fear-2026",
+  "abstract": "Jasmine Sun writes in the New York Times about a growing fear within Silicon Valley itself: that AI systems are advancing faster than even their creators anticipated, with implications for professional labor markets. A central data point is the GDPVal benchmark, which measures AI performance against human domain experts. When originally released just months prior, no AI models matched human expert performance. Months later, AI systems achieved an 80%+ win rate compared to human professionals — a rapid capability jump that surprised even researchers tracking the field closely. Sun argues this acceleration is generating anxiety among technologists who previously assumed human cognitive advantages would persist for years or decades. The piece explores how Silicon Valley insiders — people building these systems — are themselves worried about the pace of displacement, particularly in knowledge work domains like analysis, strategy, and professional services.",
+  "keyFindings": [
+    "The GDPVal benchmark showed AI models going from below human expert parity to an 80%+ win rate against professionals in just months.",
+    "The speed of capability improvement surprised even researchers who track AI progress closely.",
+    "Silicon Valley insiders — the people building AI systems — are increasingly worried about the pace of professional labor displacement.",
+    "Knowledge work domains including analysis, strategy, and professional services are identified as particularly vulnerable.",
+    "The fear is distinctly different from public anxiety: it comes from people with deep technical understanding of what the systems can do."
+  ],
+  "methodology": "New York Times opinion piece by Jasmine Sun, drawing on the GDPVal benchmark results, interviews with Silicon Valley technologists and researchers, and observation of industry sentiment shifts. Published April 2026.",
+  "qualifiers": "Full article content unavailable due to NYT paywall; summary based on available excerpt. The GDPVal benchmark methodology and specific domains tested are not fully described in the available excerpt. An 80% win rate on a benchmark does not necessarily translate to 80% displacement of professional work, as benchmarks may not capture full job complexity. The piece reflects Silicon Valley sentiment rather than systematic labor market evidence. Insider anxiety could be inflated by proximity bias and social contagion within the tech community.",
+  "fetchedAt": "2026-05-26"
+}

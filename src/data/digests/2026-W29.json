@@ -1,0 +1,120 @@
+{
+  "week": "2026-W29",
+  "generatedAt": "2026-07-13T11:09:31.687Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "AI Has Torched the Market for Junior Programmers",
+      "summary": "A widely discussed post argues that AI coding tools have severely compressed demand for entry-level software developers, with firms increasingly relying on AI-assisted senior engineers rather than hiring junior talent. The Hacker News discussion (101 points, 195 comments) reflects broad practitioner consensus that this structural shift is already underway. The piece represents one of the clearest practitioner-level signals of tech-sector displacement concentrated at the bottom of the experience ladder.",
+      "source": "https://seldo.com/posts/ai-has-torched-the-market-for-junior-programmers/",
+      "publishedAt": "2026-07-04",
+      "score": 0.48,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Generative AI in the Labor Force: Multivariate Modeling and Cluster Typologies of Participation and Cost Dynamics",
+      "summary": "This cross-sectional study analyzes how generative AI use among active workers correlates with labor market participation rates and labor cost dynamics across multiple cluster typologies. The authors find heterogeneous adoption patterns that produce meaningfully different wage and employment outcomes depending on sector and worker profile. Published in Systems (MDPI), the paper provides empirical grounding for understanding genAI's uneven workforce penetration.",
+      "source": "https://doi.org/10.3390/systems14070815",
+      "authors": [
+        "Claudiu George Bocean",
+        "Luminiţa Popescu",
+        "Dalia Simion",
+        "Natalița Maria Sperdea",
+        "Carmen Puiu",
+        "Roxana Marinescu",
+        "Enescu Maria"
+      ],
+      "publishedAt": "2026-07-09",
+      "doi": "10.3390/systems14070815",
+      "score": 0.452,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "AI and the Evolving Employment Landscape: Moving Beyond Exposure to Understand Real Workforce Impact",
+      "summary": "Jonathan Westover synthesizes recent empirical evidence from major AI platforms to propose a multidimensional framework for assessing workforce impact, arguing that simple occupational-exposure metrics understate AI's true labor market effects. The framework incorporates task-level substitution, complementarity, and organizational adoption lag. Published in HCL Review, it offers a richer analytical lens for forecasting displacement across worker categories.",
+      "source": "https://www.semanticscholar.org/paper/c453c76f432efbf6bb330ef40829a716d08960be",
+      "authors": [
+        "Jonathan H. Westover"
+      ],
+      "publishedAt": "2026-07-01",
+      "doi": "10.70175/hclreview.2020.36.1.5",
+      "score": 0.731,
+      "sourceAdapter": "semanticScholar",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "How Might Fiscal Policy Respond to the Rise of Artificial Intelligence? (NBER w35437)",
+      "summary": "Dynan, Elmendorf, and Sheiner model long-term fiscal scenarios under different AI trajectories, including faster productivity growth, rising income inequality, and job displacement, finding that the distributional consequences for workers may require significant fiscal accommodation. The paper highlights that wage polarization and displacement effects could strain existing social insurance systems. This NBER working paper is among the most policy-relevant recent treatments of AI's macroeconomic labor market consequences.",
+      "source": "https://www.nber.org/papers/w35437",
+      "authors": [
+        "Karen Dynan",
+        "Douglas Elmendorf",
+        "Louise Sheiner"
+      ],
+      "publishedAt": "2026-07-13",
+      "score": 0.678,
+      "sourceAdapter": "nber",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Structural Transformation of Employment in the Context of Artificial Intelligence Diffusion",
+      "summary": "Rakhimbekova and colleagues review international empirical literature to map how AI diffusion is reshaping employment structures, identifying both displacement in routine cognitive tasks and emerging demand for AI-complementary skills. The study finds that white-collar professional roles face accelerating structural adjustment as AI capabilities expand into non-routine domains. Published in a Kazakhstani economics journal, it adds cross-national perspective to the displacement debate.",
+      "source": "https://www.semanticscholar.org/paper/1251d2e99402da049b138fbc8a1590b8e8039f94",
+      "authors": [
+        "A. Rakhimbekova",
+        "N. Kurmanov",
+        "A. Mussabekova",
+        "A. Imanbekova"
+      ],
+      "publishedAt": "2026-06-30",
+      "doi": "10.52260/2304-7216.2026.2(63).24",
+      "score": 0.573,
+      "sourceAdapter": "semanticScholar",
+      "graphSlug": "white-collar-professional-displacement"
+    }
+  ],
+  "themes": [
+    "Entry-level and junior tech roles are bearing a disproportionate share of AI-driven labor market contraction, with AI coding tools substituting directly for onboarding-stage work.",
+    "Multidimensional exposure frameworks are supplanting simple task-automation metrics as the preferred lens for forecasting AI's workforce impact.",
+    "Generative AI adoption across the labor force is clustered and uneven, producing divergent wage and participation outcomes by sector and skill tier.",
+    "Macroeconomic and fiscal institutions are increasingly modeling AI-driven displacement and inequality as baseline planning scenarios rather than tail risks.",
+    "Structural employment transformation is accelerating in white-collar professional roles as AI capabilities penetrate non-routine cognitive tasks across multiple economies."
+  ],
+  "watching": [
+    {
+      "title": "AI Premium (NBER w35451) — AI consumption data linked to firm, market, and worker outcomes",
+      "source": "https://www.nber.org/papers/w35451",
+      "reason": "Uses 380 trillion tokens of real AI consumption data to trace effects on workers and firms; could directly inform wage-premium and adoption-rate graphs when full text is available."
+    },
+    {
+      "title": "Ask HN: Add flag for AI-generated articles",
+      "source": "https://news.ycombinator.com/item?id=48886741",
+      "reason": "720-point HN discussion signals growing societal concern about AI content provenance, with downstream implications for creative-industry displacement and freelancer demand."
+    },
+    {
+      "title": "How Software Professionals Evaluate AI-Generated Code (Registered Report)",
+      "source": "https://arxiv.org/abs/2607.09434v1",
+      "reason": "Registered report methodology on AI code evaluation by practitioners; findings will shed light on tech-sector adoption pace and skill-premium dynamics for senior engineers."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 107,
+    "afterDedup": 107
+  }
+}

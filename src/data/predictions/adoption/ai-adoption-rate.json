@@ -82,8 +82,6 @@
     {
       "date": "2026-01-15",
       "value": 18,
-      "confidenceLow": null,
-      "confidenceHigh": null,
       "sourceIds": [
         "census-ces-ai-diffusion-2026"
       ],

@@ -1,0 +1,14 @@
+{
+  "id": "pearson-smarthinking-2025",
+  "abstract": "Pearson announces the retirement of Smarthinking, its human-powered online tutoring service, replacing it with AI-driven tutoring capabilities. This represents one of the most concrete and documented cases of direct human-to-AI worker substitution in the education sector. Smarthinking employed hundreds of human tutors who provided one-on-one academic support to college students across subjects including writing, math, and science. Pearson's decision to retire the service in favor of AI tutoring reflects the company's broader strategic pivot toward AI-powered education products, driven by cost efficiency and scalability considerations. The move is notable as a named, publicly announced case of AI replacing an entire category of human knowledge workers at a major corporation, contrasting with the more diffuse and harder-to-measure displacement patterns observed in most sectors. It also raises questions about tutoring quality, the role of human connection in education, and whether AI tutoring can match human effectiveness for struggling students who may benefit most from personalized human interaction.",
+  "keyFindings": [
+    "Pearson retired its Smarthinking human tutoring service entirely in favor of AI-powered tutoring, a direct human-to-AI substitution event",
+    "Hundreds of human tutors displaced in a single corporate decision, representing one of the clearest documented cases of AI worker replacement",
+    "Decision driven by cost efficiency and scalability — AI tutoring can serve more students at lower marginal cost",
+    "Represents a broader strategic pivot by Pearson toward AI-first education products across its portfolio",
+    "Raises unresolved questions about whether AI tutoring matches human effectiveness for students who struggle most"
+  ],
+  "methodology": "Corporate announcement and press release. No independent study design — this is a documented business decision rather than a research finding.",
+  "qualifiers": "Single company decision that may not generalize across the education sector. No publicly available data on comparative tutoring quality between human and AI alternatives. Pearson's stated rationale may not fully capture internal cost-benefit analysis. The number of affected tutors has not been precisely disclosed publicly.",
+  "fetchedAt": "2026-05-26"
+}

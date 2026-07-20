@@ -1,0 +1,13 @@
+{
+  "abstract": "Aschenbrenner argues AGI by 2027 and superintelligence shortly after are 'strikingly plausible,' with massive concentration of economic and geopolitical power in a handful of frontier labs. The essay series forecasts trillion-dollar compute clusters, national-security primacy of AI capability, and a near-term step-change in productivity that current economic frameworks underestimate.",
+  "keyFindings": [
+    "Timeline: AGI plausibly by 2027, superintelligence by ~2028\u20132030",
+    "Compute build-out reaches trillion-dollar single-cluster scale within the decade",
+    "Power concentrates dramatically in firms and states that control frontier capability",
+    "Labor displacement framed as a second-order concern below geopolitical and existential considerations"
+  ],
+  "methodology": "Forecasting essay extrapolating scaling-law trends and intelligence-explosion arguments; not empirical labor analysis.",
+  "qualifiers": "Tier 4 \u2014 influential independent essay. Author is a former OpenAI superalignment researcher with significant industry stake. Timelines are aggressive and contested by mainstream economists. Treat as one anchor in the takeoff-speed spectrum, not as forecast consensus.",
+  "id": "aschenbrenner-situational-awareness-2024",
+  "fetchedAt": "2026-06-26"
+}

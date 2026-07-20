@@ -52,10 +52,11 @@ Ask: Does the site tell a coherent story, or do the charts contradict each other
 
 ### Step 1: Identify What's Being Shown
 
-Read the relevant prediction JSON file(s) from `src/data/predictions/` and answer:
+Read the relevant prediction JSON file(s) from `src/data/predictions/` (18 files: 17 predictions + 1 signal-only chart, `signals/earnings-call-mentions.json` — the signal-only chart is excluded from prediction counts and should be framed as an indicator, not a prediction) and answer:
 - What is the metric exactly? (What does "displacement" mean for this particular tile?)
 - What's the unit, time horizon, and geographic scope?
 - Is this observed, projected, or estimated?
+- When is the newest data point, and is that consistent with the source series' release cadence?
 
 ### Step 2: Audit the Sources
 
@@ -75,8 +76,10 @@ Use the weighting formula from `src/lib/prediction-stats.ts`:
 ### Step 3: Evaluate the Current Visualization
 
 Read the chart component(s) that render this data:
-- `src/components/PredictionChart.tsx` — primary prediction chart (942 lines)
+- `src/components/PredictionChart.tsx` — primary prediction chart (ComposedChart; ~740 lines)
+- `src/components/SignalStrip.tsx` — directional overlays rendered as a timeline strip BELOW the chart (not on the chart itself)
 - `src/components/AIAdoptionChart.tsx` — dual-line adoption chart (genai-work-adoption)
+- `src/components/HeroTriad.tsx` — homepage hero stats (hardcoded productivity 21% with 14-35 wobble range; job-loss stats computed by `getHeroStats()` in `src/lib/data-loader.ts`)
 - `src/app/predictions/[slug]/PredictionDetailClient.tsx` — detail page with context, filters, sources
 
 Check:
@@ -87,13 +90,16 @@ Check:
 - Are observed vs. projected data points visually distinct? (solid vs. dashed line)
 - Do metric type shapes (circle, diamond, square, triangle, star) correctly encode source types?
 - Are overlays (directional signals) adding signal or noise?
+- **Is the data fresh?** Cross-check the newest data point against `src/data/recurring-sources.json` — if the series feeding a chart is past its release cadence, the chart is presenting stale data as current. Recommend an `/autoresearch` sweep.
+- **Overlay color semantics**: SignalStrip colors by direction (up=green, down=red). On displacement charts "up" means MORE displacement — verify green/red doesn't invert the good/bad reading for the viewer, per the CLAUDE.md convention that up=bad on displacement charts.
+- **Colorblind safety**: tier and direction encodings should survive deuteranopia — shapes and labels must carry the information without color.
 
-Key visualization elements to check:
-- Evidence tier colors: T1=#6B7BF7, T2=#3ECFAE, T3=#F7C96B, T4=#9A9AAF
-- Metric type shapes: employment=circle, postings=diamond, survey=square, projection=triangle, corporate=star
-- Overlay colors: down=#ef4444, up=#22c55e, neutral=#94a3b8
-- Confidence bands: stacked transparent + colored areas (#5C61F6, opacity 0.22)
-- Trend line: linear regression on observed points only (dashed, gray)
+Key visualization elements to check (verify against source before citing — these drift):
+- Evidence tier colors (`src/lib/evidence-tiers.ts`): T1=#6B7BF7, T2=#3ECFAE, T3=#F7C96B, T4=#9A9AAF
+- Metric type shapes (`src/lib/metric-types.ts`): employment=circle, postings=diamond, survey=square, projection=triangle, corporate=star
+- Overlay strip colors (`src/components/SignalStrip.tsx`): up=#16a34a, down=#dc2626, neutral=#94a3b8
+- Confidence bands: stacked transparent + colored areas (#5C61F6)
+- Trend line: least-squares linear regression on observed points only
 
 ### Step 4: Check for Known Visualization Challenges
 
@@ -125,6 +131,9 @@ Charts mixing forecasts from 2022 with observations from 2025. Check that:
 
 #### The Absence-of-Evidence Problem
 Charts showing "no effect found" (especially Measured Loss) should be framed as "we've looked and haven't found it yet" rather than "the effect is small."
+
+#### The Stale-Data Problem
+A chart whose newest point is several release cycles old presents outdated evidence with the same visual authority as fresh evidence. Cross-check each chart's latest data point against the feeding series' cadence in `src/data/recurring-sources.json`. If the site displays "Updated [recent date]" while a chart's underlying series is months behind, that mismatch misleads — the update date reflects the last ingestion anywhere on the site, not this chart.
 
 ### Step 5: Suggest Specific Improvements
 
@@ -218,9 +227,11 @@ HONEST LIMITS
 ## Site Structure Reference
 
 Key rendering components:
-- `src/components/PredictionChart.tsx` — Primary prediction chart (ComposedChart with Lines, Areas, ReferenceLines)
+- `src/components/PredictionChart.tsx` — Primary prediction chart (ComposedChart with Lines and Areas)
+- `src/components/SignalStrip.tsx` — Directional overlay timeline strip below the chart
 - `src/components/AIAdoptionChart.tsx` — Dual-line adoption chart
-- `src/components/PredictionCard.tsx` — Homepage grid tiles (compact mode, 80px sparklines)
+- `src/components/PredictionCard.tsx` — Homepage grid tiles (compact mode, sparklines)
+- `src/components/HeroTriad.tsx` — Homepage hero stats (hardcoded productivity value + wobble ranges)
 - `src/app/predictions/[slug]/PredictionDetailClient.tsx` — Detail page with tier filtering, context map, source highlighting
 - `src/components/EvidenceFilter.tsx` — Tier selection UI
 - `src/components/task-visualizer/` — Task breakdown, compute cost, economy charts
@@ -229,7 +240,9 @@ Key rendering components:
 Key data files:
 - `src/data/predictions/{category}/{slug}.json` — Per-prediction source history and overlays
 - `src/data/confirmed-sources.json` — Master source registry
+- `src/data/recurring-sources.json` — Recurring release registry (use to judge data freshness)
 - `src/lib/types.ts` — TypeScript interfaces
 - `src/lib/evidence-tiers.ts` — Tier colors and labels
 - `src/lib/metric-types.ts` — Metric type shapes and colors
 - `src/lib/prediction-stats.ts` — Weighting formula
+- `src/lib/data-loader.ts` — `getHeroStats()` (computed hero stats)

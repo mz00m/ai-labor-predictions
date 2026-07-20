@@ -1,0 +1,14 @@
+{
+  "id": "quickbooks-small-biz-ai-2025",
+  "abstract": "QuickBooks/Intuit's April 2025 small business survey of over 2,200 US businesses finds that AI adoption among small businesses has accelerated dramatically, with 68% now using AI regularly—up from 48% in July 2024, representing a 20 percentage point increase in less than a year. The survey captures a critical inflection point in small business AI adoption, with nearly three-quarters (74%) of small business owners reporting that AI makes them more productive. The findings document how small businesses are deploying AI across accounting, customer service, marketing, inventory management, and administrative tasks. The rapid adoption curve suggests that cost reductions and improved accessibility of AI tools—particularly through platforms small businesses already use—are overcoming previous barriers to adoption including cost, complexity, and lack of technical expertise.",
+  "keyFindings": [
+    "68% of small businesses now use AI regularly as of April 2025, up from 48% in July 2024—a 20 percentage point increase in under a year.",
+    "74% of small business owners report that AI makes them more productive, indicating strong perceived value from adoption.",
+    "The acceleration from 48% to 68% adoption in less than a year suggests AI tools have crossed a usability and affordability threshold for small businesses.",
+    "AI adoption is broadening beyond early-adopter sectors to mainstream small business operations including accounting, customer service, and marketing.",
+    "Small businesses are increasingly accessing AI through platforms they already use (accounting software, CRM, e-commerce platforms) rather than through standalone AI tools."
+  ],
+  "methodology": "Survey of 2,200+ US small businesses conducted in April 2025 by QuickBooks/Intuit. Survey captures self-reported AI usage frequency, perceived productivity impacts, and deployment areas. Comparison baseline from July 2024 survey using comparable methodology.",
+  "qualifiers": "Published by Intuit/QuickBooks, which has commercial interest in promoting AI adoption through its platform. Self-reported AI usage may reflect varying definitions of 'AI'—respondents may include simple automation or algorithmic features not typically classified as AI by researchers. Productivity claims are self-reported perceptions, not measured output data. Sample drawn through QuickBooks customer base, which may skew toward digitally-engaged businesses and overrepresent AI adoption rates relative to the full small business population. The survey does not measure impact on employment levels or worker displacement within small businesses.",
+  "fetchedAt": "2026-05-26"
+}

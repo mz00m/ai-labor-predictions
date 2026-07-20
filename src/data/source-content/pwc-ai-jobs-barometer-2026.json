@@ -1,0 +1,18 @@
+{
+  "id": "pwc-ai-jobs-barometer-2026",
+  "abstract": "PwC's 2026 Global AI Jobs Barometer (Joe Atkinson, Global Chief AI Officer, and Pete Brown, Global Workforce Leader; published June 15, 2026) analyzed more than 1 billion job advertisements across 27 countries and territories, including 2.4 million US entry-level jobs, to measure how AI is reshaping labor demand. The headline finding is a bifurcating labor market: AI-exposed jobs and companies are growing faster in headcount, wages, and productivity than the least-exposed, while entry-level work is being 'seniorised' — the tasks that historically formed the apprenticeship rung are being automated, and what remains for early-career workers now leans on senior-level judgment, creativity, and interpersonal skill. Companion FT opinion piece frames this as a collapse of the traditional learning-by-doing pathway rather than a bloodbath.",
+  "keyFindings": [
+    "Entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills' like leadership, creativity, judgment, and face-to-face interaction",
+    "Job openings for 'seniorised' entry-level roles have grown 35% since 2019, while other entry-level roles have declined 10%",
+    "AI-skills wage premium reached 62% on average (up from 57% in the 2025 barometer), ranging from 16% in government to 118% in consumer markets",
+    "Jobs requiring specific AI skills grew 69% vs 9% for the total jobs market — 'almost twice as high as 2024'",
+    "AI-exposed companies grew headcount 52% vs 36% for the least-exposed; wages grew 24% vs 17%",
+    "AI-exposed sectors saw 34% productivity growth (2018-2025) vs 24% for least-exposed; top-quintile 'super-star' companies grew productivity 163%",
+    "'Professionalised' roles (higher-skill AI-augmented) grew at twice the rate of 'democratised' roles with 42% faster salary increases",
+    "AI share of job postings by sector: Technology/Media/Telecom 11%; Health <1%",
+    "Methodology: 1+ billion job advertisements across 27 countries and territories, including 2.4M US entry-level jobs; combined with company financial and occupational task data"
+  ],
+  "methodology": "Analysis of over 1 billion job advertisements from 27 countries and territories, joined to company financial data and occupational task data (O*NET-style). The dataset covers 2.4 million US entry-level jobs specifically. Job postings are classified by AI exposure and by whether the role is 'professionalised' (augmented) vs 'democratised' (broadened by AI). Salary, headcount, and productivity trends are computed per exposure quintile and compared to a pre-AI baseline (typically 2019 or 2018).",
+  "qualifiers": "Job postings measure demand, not employment. Postings-based studies can overstate change if firms post more (or fewer) job ads for reasons unrelated to AI. Wage premiums are conditional on postings that specify a wage; specification rate varies by sector and country. The 'seniorised' vs 'other' entry-level distinction is a PwC classification, not a labor-market statistic reported by BLS. Cross-country pooling can obscure US-specific dynamics. The finding is consistent with, and reinforces, the Brynjolfsson/Chandar/Chen 'Canaries' research on early-career employment decline.",
+  "fetchedAt": "2026-07-19"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "goldman-ai-agents-labor-impact-2026",
+  "abstract": "Goldman Sachs analysis quantifies the net labor market impact of AI in the United States, decomposing effects into substitution (job displacement) and augmentation (job creation) channels. The research finds that AI substitution has reduced monthly payroll growth by roughly 25,000 jobs while augmentation has added approximately 9,000 jobs per month, producing a net drag of about 16,000 jobs per month on payroll growth over the past year. This translates to a 0.16 percentage point increase in the unemployment rate from substitution, partially offset by a 0.06pp decrease from augmentation, for a net 0.1pp boost to unemployment. The analysis reveals sharply uneven distributional effects: negative impacts fall disproportionately on less experienced workers, widening the entry-level-to-experienced wage gap by 1.3% and the unemployment rate gap by 0.6 percentage points. The framework combines standard AI exposure scores with a complementarity index developed by IMF economists to distinguish substitution risk from augmentation potential across occupations.",
+  "keyFindings": [
+    "AI substitution reduces monthly US payroll growth by ~25,000 jobs; augmentation adds back ~9,000, for a net drag of ~16,000 jobs per month",
+    "Net effect raises unemployment rate by 0.1 percentage points (0.16pp from substitution minus 0.06pp from augmentation)",
+    "Entry-level-to-experienced wage gap widened by 1.3% due to AI, with unemployment rate gap widening by 0.6pp",
+    "Negative effects disproportionately affect less experienced workers, particularly those in data entry, customer service, legal support, and billing roles",
+    "Framework combines AI exposure scores with IMF complementarity index to separate substitution from augmentation effects"
+  ],
+  "methodology": "Econometric analysis by Goldman Sachs economist Elsie Peng combining standard AI exposure scores with a complementarity index developed by IMF economists. Regression modeling approach measuring substitution vs. augmentation effects across occupations over approximately one year of data.",
+  "qualifiers": "Relies on regression modeling rather than direct job-loss tallies, which introduces estimation uncertainty. May underestimate AI's positive effects from infrastructure investments and productivity-driven market expansion. The substitution/augmentation decomposition depends on the accuracy of the underlying exposure and complementarity indices. One-year observation window may be too short to capture longer-term adjustment dynamics. Does not account for new job categories created by AI that lack historical occupation codes.",
+  "fetchedAt": "2026-05-26"
+}

@@ -8,7 +8,7 @@ Optional scope:
 
 $ARGUMENTS
 
-- If blank or "all": audit all 17 prediction files
+- If blank or "all": audit all 18 prediction files (17 predictions + 1 signal-only chart, `signals/earnings-call-mentions.json`)
 - If a category (e.g., "wages"): audit only that category
 - If a slug (e.g., "median-wage-impact"): audit only that prediction
 
@@ -38,6 +38,10 @@ Read the output carefully. It checks:
 - Orphan sources
 - Last-updated consistency
 - URL patterns
+
+**Known script limitations — verify these findings manually:**
+- The hero-stat check compares against a hardcoded `heroValue = 3` and greps `src/app/page.tsx` for labels that no longer live there. In reality, projected and measured job loss are *computed* at build time by `getHeroStats()` in `src/lib/data-loader.ts`, and the ~21% productivity stat is hardcoded in `src/components/HeroTriad.tsx`. Treat script hero-drift findings as "check the inputs to `getHeroStats()`", not "edit page.tsx".
+- The script does not cover sign conventions, `dataType` sanity, the source-content store, or `recurring-sources.json` — see Step 4b.
 
 ## Step 2: Triage the Results
 
@@ -75,6 +79,8 @@ node scripts/autoresearch/auto-audit.js
 
 ## Step 4: Investigate Remaining Issues
 
+### Step 4a: Script-Reported Issues
+
 For each non-auto-fixable issue:
 
 1. Read the affected prediction JSON file
@@ -86,6 +92,14 @@ For **missing source IDs**: check if the source exists in confirmed-sources.json
 For **duplicate entries**: present both to the user and ask which to keep.
 
 For **confidence bounds**: check if low and high are swapped, or if the midpoint value is wrong.
+
+### Step 4b: Extended Checks (not covered by the script)
+
+Run these manually each pass (see `/data-quality-audit` for full definitions):
+1. **Sign conventions** — displacement positive, wage declines negative, adoption in [0, 100]. Spot-check any point whose sign looks inverted against its source excerpt.
+2. **dataType sanity** — no `observed` points dated in the future; forecasts must be `projected`.
+3. **Source-content coverage** — every ingested source should have `src/data/source-content/[source-id].json`; list missing files.
+4. **Recurring sources freshness** — flag any series in `src/data/recurring-sources.json` more than one cadence interval past `nextExpected` (recommend an `/autoresearch` sweep rather than fixing here).
 
 ## Step 5: Commit Fixes
 

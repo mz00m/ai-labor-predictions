@@ -1,0 +1,14 @@
+{
+  "id": "wolfe-dangol-expert-gig-economy-2026",
+  "abstract": "Wolfe and Dangol examine how leading digital platforms, specifically AI data annotation companies, are discursively constructing the future of the 'expert gig economy' through their public communications and social media presence. The researchers analyze public communications from five industry organizations and their leaders to identify how expertise is being repositioned in the AI era. The study identifies three central perspectives: (1) AI expertise is framed as delivering better return on investment than human expertise, (2) professional human knowledge is conceptualized as an extractable resource whose value is judged relative to AI capability, and (3) traditional institutional knowledge (universities, corporate expertise) is characterized as requiring disruption or reform to integrate with AI systems. The findings reveal how major gig platforms are strategically shifting their rhetoric and service mix from commodity services toward complex, judgment-intensive work as AI automates routine freelance tasks. The paper argues this discursive reframing has significant consequences for professional workers whose roles face transformation and commodification through AI-mediated labor markets.",
+  "keyFindings": [
+    "Platforms frame AI expertise as delivering better ROI than human expertise, repositioning the value of human knowledge",
+    "Professional knowledge is conceptualized as an extractable resource to be judged relative to AI capability",
+    "Traditional institutional expertise (universities, corporations) is characterized as needing disruption to integrate with AI",
+    "Gig platforms strategically shifting rhetoric from commodity services toward complex, judgment-intensive expert work",
+    "Discursive reframing has real consequences for how professional workers' roles are valued and compensated"
+  ],
+  "methodology": "Qualitative discourse analysis of public communications from five AI data annotation organizations and their leaders, including social media feeds and podcast appearances. Interpretive methodology identifying patterns in how expertise is being repositioned. To appear at CHIWORK 2026.",
+  "qualifiers": "Qualitative discourse analysis of a small number of organizations — findings may not generalize to all gig platforms. Analysis focuses on public-facing communications, which may differ from internal strategy. The study examines rhetoric and framing rather than measuring actual labor market outcomes. Data annotation companies represent a specific segment of the gig economy and may not reflect broader platform dynamics.",
+  "fetchedAt": "2026-05-26"
+}

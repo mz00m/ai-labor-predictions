@@ -1,0 +1,16 @@
+{
+  "id": "acemoglu-autor-johnson-pro-worker-ai-2026",
+  "abstract": "Acemoglu, Autor, and Johnson argue that AI's effects on workers depend on how the technology is designed and deployed, not just on whether it raises productivity. They identify five categories of labor-affecting technology — labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating — and contend that only new task-creating technologies are unambiguously pro-worker, because they create demand for new forms of human expertise rather than narrowing or substituting existing expertise. 'Pro-worker AI' is defined as AI that expands what workers can do and raises the value of human skill, judgment, and expertise. The paper warns that today's corporate AI adoption defaults to automation, which can lift firm productivity while reducing the scarcity value of human expertise and shifting income from labor to capital. It calls for redirecting AI design, investment, and policy toward augmentation and new task creation, including in healthcare, education, and skilled trades.",
+  "keyFindings": [
+    "Five-category technology taxonomy: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating",
+    "Only new task-creating technologies are unambiguously pro-worker — they expand the range of valuable human work and raise the value of expertise",
+    "Productivity gains are not sufficient to make AI pro-worker; the path to those gains determines whether expertise becomes more or less valuable",
+    "Expertise-leveling tools (e.g., pulse oximeters substituting for specialist judgment) can benefit some workers while reducing scarcity value for incumbent specialists",
+    "Schneider Electric AI tool for field electricians cuts average maintenance-report completion time roughly in half — cited as augmentation evidence",
+    "USPTO AI-assisted prior-art search is presented as conditional: pro-worker only if it enables deeper analysis, not merely if it speeds existing work",
+    "Calls for public investment, antitrust enforcement, worker voice, IP protections for worker expertise, and tax changes that reduce capital-over-labor incentives"
+  ],
+  "methodology": "Conceptual policy paper synthesizing labor economics, technology-adoption research, and case examples. Builds on the authors' prior work on automation, technological change, and institutions. Draws on case studies of patent examination, electrical work, medical technology, and field-service AI tools. Not an empirical estimation paper; offers a taxonomy and decision framework rather than displacement or wage point estimates.",
+  "qualifiers": "Framework-and-policy paper, not an empirical measurement. Categorization of any specific technology as 'pro-worker' is judgment-dependent and may shift with deployment context. The Schneider Electric maintenance-report stat is the paper's own example and is not a peer-reviewed effect size. The pro-worker direction the authors advocate is contingent on management choice and policy environment; the paper does not predict the share of AI deployments likely to follow it. Authors' prior advocacy positions are reflected in the framing.",
+  "fetchedAt": "2026-06-18"
+}

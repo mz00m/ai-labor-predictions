@@ -1,0 +1,13 @@
+{
+  "id": "fed-atl-duke-cfo-ai-productivity-2026",
+  "abstract": "This paper, based on the Atlanta Fed/Duke CFO Survey of approximately 600 chief financial officers, provides firm-level evidence on AI's productivity effects and workforce implications. The survey finds that 42% of CFOs report measurable productivity gains from AI adoption, with the median reported gain at 5%. Critically, the study reveals a strong link between AI-driven productivity and workforce reduction plans: companies reporting AI-driven productivity gains are three times more likely to plan workforce reductions than workforce expansion. This asymmetry between productivity gains and employment plans represents one of the clearest firm-level signals that AI productivity improvements may translate into labor displacement rather than labor augmentation at the margin. The CFO survey perspective is particularly valuable because CFOs are the decision-makers most directly responsible for translating productivity gains into headcount and budget decisions.",
+  "keyFindings": [
+    "42% of surveyed CFOs report measurable productivity gains from AI, with a median reported gain of 5%, suggesting modest but real firm-level productivity effects.",
+    "Companies with AI-driven productivity gains are 3x more likely to plan workforce reductions than expansion, providing direct firm-level evidence that AI productivity may translate to displacement.",
+    "The median 5% productivity gain is consistent with micro-level evidence from academic studies (Brynjolfsson et al., Noy and Zhang) but below some more optimistic projections.",
+    "CFO-level data provide a uniquely actionable signal: these are the executives who translate productivity observations into hiring, firing, and budget allocation decisions."
+  ],
+  "methodology": "Survey of approximately 600 CFOs conducted through the Atlanta Fed/Duke CFO Survey, a recurring quarterly survey of senior financial executives at US firms. The survey asked about AI adoption, perceived productivity effects, and planned workforce changes. Analysis compares workforce plans between firms reporting AI productivity gains and those not reporting gains.",
+  "qualifiers": "CFO self-reported productivity estimates may not correspond to measured output gains. The 3x workforce reduction ratio captures plans and intentions, not yet-realized outcomes. Survey respondents skew toward larger, more sophisticated firms that may not represent the broader economy. The causal direction is ambiguous: firms planning layoffs for other reasons may attribute those plans to AI. Sample of ~600 CFOs, while substantial, may not be representative across all industries and firm sizes.",
+  "fetchedAt": "2026-05-26"
+}

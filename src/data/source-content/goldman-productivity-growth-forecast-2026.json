@@ -1,0 +1,14 @@
+{
+  "id": "goldman-productivity-growth-forecast-2026",
+  "abstract": "Goldman Sachs US Daily research note examines productivity growth forecasting in the context of AI adoption. Survey responses from professional forecasters reveal broad optimism about AI's productivity potential but an assumption of only slow adoption through 2030. This creates a notable tension: forecasters believe AI could substantially boost productivity but do not expect these gains to materialize quickly due to institutional, regulatory, and implementation barriers. The report suggests that consensus productivity forecasts may be underestimating the pace of AI integration in some scenarios or overestimating near-term gains in others, depending on adoption speed. The finding highlights the critical role of adoption timelines — rather than raw AI capability — in determining when productivity gains will appear in macroeconomic data.",
+  "keyFindings": [
+    "Most professional forecasters are optimistic about AI's productivity potential but assume slow adoption through 2030",
+    "Tension between high capability expectations and low adoption speed assumptions creates forecast uncertainty",
+    "Adoption pace, not AI capability, is the binding constraint on near-term productivity gains",
+    "Consensus productivity forecasts may be underestimating or overestimating gains depending on actual adoption speed",
+    "Institutional, regulatory, and implementation barriers cited as primary reasons for expected slow adoption"
+  ],
+  "methodology": "Survey of professional economic forecasters combined with Goldman Sachs macroeconomic modeling. Specific survey sample size and fielding dates not disclosed in available materials.",
+  "qualifiers": "Full report not publicly available — analysis based on excerpted findings. Survey captures forecaster expectations, which may diverge from actual outcomes. 'Slow adoption through 2030' is subjective and depends on baseline expectations. Does not provide specific productivity growth point estimates. Forecaster consensus has historically underestimated the speed of technology diffusion in some cases and overestimated in others.",
+  "fetchedAt": "2026-05-26"
+}

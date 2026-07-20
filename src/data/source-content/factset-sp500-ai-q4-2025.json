@@ -1,0 +1,13 @@
+{
+  "id": "factset-sp500-ai-q4-2025",
+  "abstract": "FactSet's Q4 2025 earnings call analysis documents that more than 65% of S&P 500 companies cited AI during their quarterly earnings calls, continuing the upward trajectory observed throughout 2025. This represents a further acceleration from the already record levels seen in Q2 and Q3 2025. Companies are increasingly reporting concrete efficiency gains from AI deployment rather than aspirational language about future plans, suggesting a maturation in how corporate leaders discuss AI. The shift from aspirational to operational AI narratives in earnings calls aligns with other adoption indicators (Census BTOS, Federal Reserve surveys) showing AI moving from pilot programs to production deployment. The persistence of AI as a dominant earnings call theme across multiple consecutive quarters, with increasing specificity about operational impact, distinguishes the current AI wave from previous technology hype cycles in corporate communications.",
+  "keyFindings": [
+    "65%+ of S&P 500 companies mentioned AI in Q4 2025 earnings calls, sustaining record levels and confirming AI as a durable theme in corporate communications.",
+    "Companies increasingly reported concrete efficiency gains rather than aspirational language, indicating a shift from AI as a strategic aspiration to an operational reality.",
+    "The sustained and growing frequency of AI mentions across consecutive quarters differentiates this from previous technology hype cycles that faded quickly from earnings call language.",
+    "Cross-sector breadth of AI discussion continues to widen, with traditional industries increasingly reporting AI adoption alongside technology-native sectors."
+  ],
+  "methodology": "FactSet text analysis of S&P 500 earnings call transcripts for Q4 2025 reporting period. Counts companies mentioning 'AI' or 'artificial intelligence' and tracks trends over time. Qualitative assessment of shifting language from aspirational to operational AI narratives.",
+  "qualifiers": "Earnings call mentions remain a proxy for corporate attention rather than actual AI deployment or impact. Self-reported efficiency gains in earnings calls are not independently verified. Companies have incentives to emphasize AI in calls to signal innovation to investors. The analysis does not distinguish between AI as a product, a cost-reduction tool, or a risk factor in corporate discussions.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "imf-rockall-ai-adoption-inequality-2025",
+  "abstract": "IMF working paper using household microdata and a calibrated task-based model to examine AI's effect on inequality. Unlike previous automation waves, AI could reduce wage inequality by displacing high-income workers - but wealth inequality widens because high earners' tasks are complementary with AI and they benefit from higher capital returns.",
+  "keyFindings": [
+    "Baseline model predicts the wage Gini coefficient decreases 1.73 percentage points under AI (displacement of high-income workers).",
+    "Wealth Gini is predicted to rise 7.18 percentage points.",
+    "Roughly 60% of workers at the 90th income percentile are in occupations where a large share of tasks can be performed by AI, vs only 15% at the 10th percentile.",
+    "By comparison, routine-biased automation raised the wage Gini 2.05pp and wealth Gini 6.89pp.",
+    "A 15% capital tax could lower the wage Gini 3.4pp and wealth Gini 3.7pp post-transfer.",
+    "Endogenous firm adoption amplifies the wealth-inequality effect - cost savings from automating high-wage tasks drive higher adoption."
+  ],
+  "methodology": "Household microdata plus a calibrated task-based general equilibrium model with endogenous AI adoption. IMF Working Paper 2025/068 (Rockall, Mendes Tavares, Pizzinelli), April 2025.",
+  "qualifiers": "Model-based predictions, not observed outcomes. The often-quoted +2.05/+6.89 Gini figures are the routine-automation comparison, NOT the AI scenario - AI's predicted wage-Gini effect is negative (-1.73pp). IMF working papers do not represent IMF official views.",
+  "fetchedAt": "2026-07-02"
+}

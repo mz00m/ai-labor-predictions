@@ -5,7 +5,7 @@
   "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
-  "currentValue": 43,
+  "currentValue": 45.2,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
@@ -149,6 +149,26 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-02-11",
+      "value": 50,
+      "sourceIds": [
+        "gallup-workplace-ai-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-05-01",
+      "value": 45.2,
+      "sourceIds": [
+        "genai-adoption-tracker-may-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -250,6 +270,24 @@
       ],
       "evidenceTier": 2,
       "label": "Deloitte: ~60% of workers at AI-using firms now have sanctioned AI access"
+    },
+    {
+      "date": "2026-02-23",
+      "direction": "up",
+      "sourceIds": [
+        "acemoglu-autor-johnson-pro-worker-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Schneider Electric (cited AAJ 2026): AI helps field electricians ~halve maintenance-report time"
+    },
+    {
+      "date": "2026-02-23",
+      "direction": "up",
+      "sourceIds": [
+        "acemoglu-autor-johnson-pro-worker-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Schneider Electric: AI troubleshooting halves maintenance-report time"
     },
     {
       "date": "2026-03-01",
@@ -457,6 +495,33 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman Sachs: most forecasters assume slow AI adoption pace through 2030 despite optimism"
+    },
+    {
+      "date": "2026-05-27",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-coding-agents-social-sci-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic: 81% of 1,260 quant social scientists use GenAI for research"
+    },
+    {
+      "date": "2026-06-26",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-cadences-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Cadences (n=9,700 biased Claude users): ~50% say AI handles 50%+ of their tasks; 4% say entire job"
+    },
+    {
+      "date": "2026-06-26",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-economic-index-cadences-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Cadences: ~50% of users say AI already handles 50%+ of their tasks"
     }
   ],
   "sources": [
@@ -482,12 +547,12 @@
     },
     {
       "id": "genai-adoption-tracker-2025",
-      "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
+      "title": "GenAI Adoption Tracker snapshot (Feb & May 2025 estimates)",
       "url": "https://pw.hks.harvard.edu/post/the-generative-ai-adoption-tracker",
       "publisher": "Harvard / St. Louis Fed RPS",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
-      "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper.",
+      "excerpt": "Snapshot of the GenAIAdoptionTracker.com dashboard at the time of ingestion (Nov 2025). Used here for the Feb 2025 (33.5%) and May 2025 (35.5%) quarterly waves \u2014 both estimated from the tracker chart before those results were published in the working paper. Later quarterly waves are captured in separate source entries (bick-blandin-deming-wp-2025 for Aug/Nov 2025; bick-deming-mind-the-gap-2026 for Feb 2026; genai-adoption-tracker-may-2026 for May 2026). The underlying RPS runs continuously and updates each quarter.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -838,6 +903,44 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-22",
       "excerpt": "In 23% (41%, employment-weighted) of firms, workers use AI in work-related tasks. Writing, document analysis, and information search are the leading Generative AI use in tasks, though 65% of firms limit use to three or fewer tasks."
+    },
+    {
+      "id": "genai-adoption-tracker-may-2026",
+      "title": "Generative AI Adoption Tracker \u2014 May 2026 Update",
+      "url": "https://www.genaiadoptiontracker.com/",
+      "publisher": "Bick, Blandin, Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Generative AI Adoption Tracker (Bick, Blandin, Deming), May 2026 update: '45.2% of the employed respondents used genAI for work.' Based on the Real-Time Population Survey (RPS), a nationally representative online labor market survey of US adults 18-64 running continuously since 2020. Tracker visualizes findings from 8 combined survey waves encompassing approximately 40,000 respondents, weighted to be nationally representative.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "acemoglu-autor-johnson-pro-worker-ai-2026",
+      "title": "Building Pro-Worker Artificial Intelligence",
+      "url": "https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf",
+      "publisher": "Brookings Institution / Hamilton Project (Acemoglu, Autor, Johnson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-23",
+      "excerpt": "Identifies five categories of labor-affecting technology: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Only new task-creating technologies are unambiguously pro-worker because they expand the range of valuable work humans can do and raise the value of human expertise; the other four can lift productivity while reducing the scarcity value of expertise. Cites Schneider Electric AI tool for field electricians that cuts average maintenance-report completion time roughly in half as augmentation evidence. As reported in MIT Sloan Ideas Made to Matter, June 17, 2026."
+    },
+    {
+      "id": "anthropic-economic-index-cadences-2026",
+      "title": "Anthropic Economic Index Report: Cadences (June 2026)",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "publisher": "Anthropic Economic Index",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-26",
+      "excerpt": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage patterns with a survey of ~9,700 Claude users. Headline findings: about half of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users \u2014 experienced users automate substantially more of their work. Biggest automation increases occur in business sales, automated trading, and routine market-research tasks, flagging those roles as near-term automation candidates."
+    },
+    {
+      "id": "anthropic-coding-agents-social-sci-2026",
+      "title": "Coding agents in the social sciences",
+      "url": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "publisher": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-27",
+      "excerpt": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers \u2014 May 27, 2026). Survey of 1,260 quantitative social scientists. '81% of respondents said yes' to using generative AI to aid research. '20% of respondents use coding agents' regularly (weekly). '86% of users reporting Claude Code use.' Demographic disparities: 'those with typically male names have adopted coding agents at more than twice the rate of respondents with typically female names.' Career stage: 'Just over a quarter of doctoral students and postdocs use coding agents' vs tenured professors at less than half that rate. University prestige: 'Researchers at top universities are 40% more likely than others to use coding agents.' Task usage: '97% of coding agent users and 77% of other AI users report using it to generate code.' Productivity effects over 6 months: users show approximately 'a quarter of a paper more' in project starts and 'around a half of a working paper more' in working papers, but 'no evidence that coding agent users are submitting more new papers to journals.' '88% of respondents were above a 5' on 10-point AI productivity scale.",
+      "dateAdded": "2026-07-06"
     }
   ]
 }

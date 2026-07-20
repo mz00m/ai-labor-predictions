@@ -1,0 +1,14 @@
+{
+  "id": "makela-stephany-complement-substitute-2024",
+  "abstract": "Mäkelä and Stephany examine whether AI acts as a substitute or complement to human labor by analyzing 12 million online job vacancies from the United States spanning 2018-2023. The study takes a dual approach, examining both internal effects (within AI-focused roles) and external effects (across industries and occupations exposed to AI adoption). The findings strongly favor complementarity: AI-focused positions are nearly twice as likely to require resilience, agility, or analytical thinking compared to non-AI roles. Data scientists with resilience or ethics capabilities receive 5-10% higher salary offers. A doubling of AI-specific demand correlates with a 5% increase in demand for complementary human skills even outside AI-related roles. Overall, complementary effects are up to 1.7 times larger than substitution effects. Results are consistent across the United States, United Kingdom, and Australia.",
+  "keyFindings": [
+    "AI-focused positions are nearly twice as likely to require resilience, agility, or analytical thinking compared to non-AI roles, indicating AI adoption drives demand for distinctly human capabilities.",
+    "Data scientists with resilience or ethics capabilities receive 5-10% higher salary offers, demonstrating a measurable wage premium for complementary human skills in AI-adjacent roles.",
+    "A doubling of AI-specific demand correlates with a 5% increase in demand for complementary skills even outside AI-related roles, showing spillover effects across the broader labor market.",
+    "Complementary effects of AI on human skill demand are up to 1.7 times larger than substitution effects, suggesting net positive impact on demand for human capabilities.",
+    "Results are consistent across the United States, United Kingdom, and Australia, providing cross-national validation of the complementarity finding."
+  ],
+  "methodology": "Empirical analysis of 12 million online job vacancies from the United States (2018-2023), with cross-national validation using UK and Australian job posting data. The study measures both internal effects (skill demands within AI-focused roles) and external effects (how AI adoption in industries affects demand for complementary skills in non-AI roles). Regression analysis links AI exposure measures to changes in skill requirements and wage offers.",
+  "qualifiers": "arXiv preprint, not yet peer-reviewed. Job postings capture employer demand signals but not actual hiring outcomes or worker experiences. The 2018-2023 period captures early AI adoption and may not reflect longer-term equilibrium effects. Online job vacancy data may underrepresent certain sectors or occupation types. The complementarity finding at the skill-demand level does not preclude net employment losses at the occupation level if some roles are entirely automated.",
+  "fetchedAt": "2026-05-26"
+}

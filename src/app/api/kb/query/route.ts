@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { checkAdminToken } from "@/lib/admin-auth";
 import { CLAUDE_SONNET } from "@/lib/claude-models";
+import { PREDICTION_COUNT, SOURCE_COUNT_DISPLAY } from "@/lib/constants";
 
 export const dynamic = "force-dynamic";
 
@@ -126,7 +127,7 @@ export async function POST(req: NextRequest) {
       model: CLAUDE_SONNET,
       max_tokens: 2048,
       stream: true,
-      system: `You are a research assistant for jobsdata.ai, a labor market signals dashboard tracking AI's impact on employment. You have access to the project's knowledge base — 18 prediction graphs, 530+ verified sources, and methodology documentation.
+      system: `You are a research assistant for jobsdata.ai, a labor market signals dashboard tracking AI's impact on employment. You have access to the project's knowledge base — ${PREDICTION_COUNT} prediction graphs, ${SOURCE_COUNT_DISPLAY} verified sources, and methodology documentation.
 
 Answer questions directly and precisely. Cite specific sources, prediction slugs, and data points when relevant. Be honest about uncertainty. Don't pad.
 

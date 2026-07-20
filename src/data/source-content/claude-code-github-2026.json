@@ -1,0 +1,14 @@
+{
+  "id": "claude-code-github-2026",
+  "abstract": "Tracking data on Claude Code's presence in public GitHub commits, measured by the 'Co-Authored-By: Claude' attribution tag in commit metadata. As of the observation date, Claude Code reached approximately 135,000+ daily commits on public GitHub repositories, representing roughly 4% of all public commits. This reflects growth of approximately 42,896x in 13 months from launch, one of the fastest adoption curves for a developer tool in GitHub's history. At the current growth trajectory, projections suggest Claude Code could reach 20%+ of daily public commits by end of 2026. A GitHub search for the co-author tag shows approximately 9.5 million total commits with Claude attribution across the platform, spanning multiple Claude model versions (Opus, Sonnet, and generic Claude attributions). This metric serves as a proxy for AI-assisted software development adoption and the changing nature of developer workflows.",
+  "keyFindings": [
+    "Claude Code reached approximately 135,000+ daily commits on public GitHub, representing roughly 4% of all public daily commits.",
+    "Growth of approximately 42,896x in 13 months from launch, reflecting extremely rapid developer adoption.",
+    "Approximately 9.5 million total public GitHub commits carry Claude co-author attribution as of the search date.",
+    "At current trajectory, Claude Code is projected to reach 20%+ of daily public commits by end of 2026.",
+    "The data represents a measurable shift in how software is produced, with AI-assisted development becoming a significant share of public open-source contribution."
+  ],
+  "methodology": "Measurement based on GitHub commit metadata containing 'Co-Authored-By: Claude' tags in public repositories. Data collected via GitHub search API. Daily commit estimates derived from search result volumes and GitHub's public commit activity baselines. Growth rate calculated from launch date to current observation period. The 4% share estimate uses GitHub's reported total daily public commit volume as denominator.",
+  "qualifiers": "Public GitHub commits represent only a fraction of all software development — private repositories, enterprise Git servers, and non-GitHub platforms are excluded. The co-author tag is voluntarily added and may undercount AI-assisted commits where developers don't use attribution (or overcount if tags are added to trivial commits). The 20%+ projection assumes sustained growth rates, which typically decelerate. The metric captures commit volume, not lines of code, complexity, or economic value. Not all Claude-attributed commits represent meaningful AI contribution — some may be minor formatting or boilerplate. Anthropic is the maker of Claude Code, so this data inherently reflects their product's adoption.",
+  "fetchedAt": "2026-05-26"
+}

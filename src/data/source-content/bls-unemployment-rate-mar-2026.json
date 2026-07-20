@@ -1,0 +1,14 @@
+{
+  "id": "bls-unemployment-rate-mar-2026",
+  "abstract": "The BLS unemployment rate time series (Series LNS14000000) from the Current Population Survey shows the seasonally adjusted unemployment rate at 4.4% as of January 2026, reflecting a gradual increase from 3.9% in December 2024 through 2025. The rate has remained in the 4.0-4.5% range throughout late 2024 and 2025, a moderate elevation from the 3.4% cycle trough but well within the range considered consistent with a healthy labor market. Notably, October 2025 data is unavailable due to the 2025 lapse in federal appropriations. The unemployment rate contrasts sharply with the dramatic spike to 14.8% in April 2020 and subsequent recovery, demonstrating that the labor market has broadly normalized from the pandemic shock. As an aggregate indicator, the unemployment rate is critical for assessing whether AI adoption is producing detectable macro-level employment effects. Through early 2026, the data shows no AI-driven employment crisis — the rate remains historically moderate, though its gradual upward drift bears monitoring as AI deployment accelerates.",
+  "keyFindings": [
+    "Unemployment rate stood at 4.4% in January 2026, gradually rising from 3.9% in December 2024",
+    "Rate has remained in the 4.0-4.5% range through late 2024-2025, historically moderate",
+    "October 2025 data unavailable due to federal appropriations lapse",
+    "No evidence of AI-driven employment crisis in aggregate unemployment data through early 2026",
+    "Gradual upward drift from cycle trough of 3.4% bears monitoring as AI deployment accelerates"
+  ],
+  "methodology": "BLS Current Population Survey (CPS), a monthly survey of approximately 60,000 households. Seasonally adjusted. Measures the percentage of the civilian labor force that is unemployed and actively seeking work. Series ID: LNS14000000. Covers persons aged 16 and older. Data extracted May 26, 2026.",
+  "qualifiers": "Latest available data point is January 2026 (with population control adjustments); March 2026 data was not separately available at time of fetch. Unemployment rate is a lagging indicator and may not capture early-stage AI displacement. Does not count discouraged workers who have stopped looking, underemployed part-time workers, or workers who have left the labor force entirely. Aggregate rate masks significant variation by demographic group, education level, and occupation. October 2025 gap due to appropriations lapse creates a discontinuity in the time series.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "levanon-productivity-regime-shift-2026",
+  "abstract": "Gad Levanon of the Burning Glass Institute presents evidence for a technology-driven productivity regime shift in the U.S. economy. Labor productivity growth has accelerated from 1.3% per year during the pre-pandemic expansion (2013-2019) to 2.2% in the post-pandemic period (2019-2025), a substantial increase in the context of decades of sluggish productivity growth. Critically, this acceleration is concentrated in technology-exposed sectors. Three groups — white-collar services, retail trade, and advanced manufacturing — are posting annualized productivity growth of 3.2% to 3.9%, while the rest of the private economy is growing at just 0.1%. This stark divergence suggests that technology adoption, including AI, is driving a two-speed economy: sectors that can leverage new tools are seeing transformative productivity gains, while sectors that cannot are stagnating. The concentration of gains in white-collar services is particularly notable, as it aligns with the pattern of generative AI adoption in knowledge work.",
+  "keyFindings": [
+    "U.S. labor productivity growth accelerated from 1.3% per year (2013-2019) to 2.2% (2019-2025).",
+    "Three technology-exposed groups — white-collar services, retail trade, and advanced manufacturing — post 3.2% to 3.9% annualized productivity growth.",
+    "The rest of the private economy is growing at just 0.1% — a near-complete divergence from technology-exposed sectors.",
+    "The concentration of productivity gains in white-collar services aligns with generative AI adoption patterns in knowledge work.",
+    "The productivity divergence suggests a structural two-speed economy driven by differential technology adoption."
+  ],
+  "methodology": "Analysis of BLS labor productivity data segmented by industry sector, comparing pre-pandemic (2013-2019) and post-pandemic (2019-2025) periods. Sectors classified by technology exposure level. Published through the Burning Glass Institute.",
+  "qualifiers": "The 2019-2025 period includes pandemic distortions (particularly in retail trade) that may inflate measured productivity gains. Causally attributing the acceleration to AI specifically is difficult given simultaneous changes in remote work, supply chains, and labor composition. The 0.1% growth figure for non-exposed sectors may reflect measurement challenges in service sectors. Productivity gains do not necessarily translate to employment changes — they could manifest as output growth, wage growth, or labor displacement.",
+  "fetchedAt": "2026-05-26"
+}

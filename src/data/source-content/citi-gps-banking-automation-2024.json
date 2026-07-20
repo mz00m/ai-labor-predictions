@@ -1,0 +1,14 @@
+{
+  "id": "citi-gps-banking-automation-2024",
+  "abstract": "Citigroup GPS (Global Perspectives & Solutions) report analyzing AI's potential impact on the financial services sector, finding that banking has the highest automation potential of any industry. The analysis concludes that 54% of banking jobs have high potential for automation by AI, while an additional 12% could be augmented, meaning two-thirds of banking roles face significant AI-driven transformation. Sector comparisons show insurance at 46% (noted as 48% in some reporting), energy at 43%, and capital markets at 40% high automation potential. The report warns that AI-powered fintech and BigTech competitors could accelerate adoption faster than traditional banks burdened by legacy systems, potentially shifting competitive dynamics. Citi also cautions about risks including AI hallucinations that could create non-existent information, leading to financial or reputational harm. The report positions banking as the sector most urgently requiring workforce adaptation strategies.",
+  "keyFindings": [
+    "54% of banking jobs have high potential for automation — the highest proportion of any industry sector surveyed.",
+    "An additional 12% of banking jobs could be augmented by AI, meaning 66% of banking roles face significant AI-driven transformation.",
+    "Insurance (46-48%), energy (43%), and capital markets (40%) also show high automation potential, but all trail banking.",
+    "Digitally native firms (fintechs, BigTechs) may adopt AI faster than incumbents burdened by legacy systems, reshaping competitive dynamics.",
+    "AI hallucination risks are flagged as a particular concern for financial services, where inaccurate information can cause material financial and reputational damage."
+  ],
+  "methodology": "Citi GPS analysis assessing task-level automation potential across industry sectors. The methodology for calculating the 54% automation figure is not publicly detailed in available reporting. The analysis likely draws on occupational task decomposition frameworks similar to those used by Frey & Osborne (2017) and Eloundou et al. (2023), applied to sector-specific job profiles. Published as part of Citi's GPS research series in 2024.",
+  "qualifiers": "The 54% figure represents technical automation potential, not expected or predicted automation — actual displacement will depend on implementation costs, regulatory constraints, client acceptance, and organizational inertia. Citi is itself a major bank with interest in framing AI transformation narratives. The methodology for calculating automation percentages is not publicly documented. The augmentation vs. automation distinction (12% augmented vs. 54% automated) may be more fluid in practice than the report suggests. Secondary reporting introduces slight discrepancies in sector figures (insurance reported as both 46% and 48%).",
+  "fetchedAt": "2026-05-26"
+}

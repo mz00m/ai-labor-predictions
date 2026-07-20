@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
-import { validateVerificationCode } from "@/lib/assessment/db";
+import { validateVerificationCode, isDbAvailable } from "@/lib/assessment/db";
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,6 +8,14 @@ export async function POST(req: NextRequest) {
 
     if (!email || !code) {
       return NextResponse.json({ error: "Email and code required" }, { status: 400 });
+    }
+
+    if (!isDbAvailable()) {
+      console.error("Verify code: database unavailable");
+      return NextResponse.json(
+        { error: "We're having trouble on our end — please try again in a few minutes." },
+        { status: 503 }
+      );
     }
 
     const valid = await validateVerificationCode(email.toLowerCase().trim(), code.trim());

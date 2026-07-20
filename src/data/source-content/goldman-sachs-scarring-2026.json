@@ -1,0 +1,14 @@
+{
+  "id": "goldman-sachs-scarring-2026",
+  "abstract": "Goldman Sachs research on long-term scarring effects of AI-driven job displacement, reported via CNN in April 2026. The analysis finds that technology-displaced workers suffer persistent earnings losses: 10 years after a job loss, their real earnings remain 10 percentage points below non-displaced workers. In the near term, technology-displaced workers take approximately one month longer to find new employment compared to workers displaced for other reasons, and their inflation-adjusted earnings take larger hits (more than 3%). Recessions amplify these scarring effects significantly, adding three additional weeks of unemployment and a 5 percentage point higher likelihood of subsequent joblessness. Goldman estimates that 6-7% of US workers (approximately 11 million people) could have jobs displaced by AI, suggesting the potential for widespread long-term economic damage if adequate retraining and transition support are not provided. The research draws on historical patterns of technology-driven displacement to project AI-specific outcomes.",
+  "keyFindings": [
+    "Technology-displaced workers' real earnings remain 10 percentage points below non-displaced workers after 10 years",
+    "Technology-displaced workers take approximately one month longer to find new jobs and face inflation-adjusted earnings hits exceeding 3%",
+    "Recessions amplify scarring: three additional weeks of unemployment and 5pp higher likelihood of subsequent joblessness",
+    "Goldman estimates 6-7% of US workers (~11 million people) could have jobs displaced by AI",
+    "Long-term earnings scarring persists for a decade, suggesting AI displacement could cause lasting economic damage without intervention"
+  ],
+  "methodology": "Goldman Sachs economic research drawing on historical patterns of technology-driven displacement. Combines empirical analysis of past technology displacement episodes with projections for AI-specific labor market impacts. Specific datasets and econometric methods not detailed in CNN coverage.",
+  "qualifiers": "Reported via CNN, not directly from Goldman Sachs — methodological details limited. Historical technology displacement patterns may not map precisely onto AI-driven displacement. The 6-7% / 11M figure is a projection based on current AI capability trajectories. Scarring estimates derive from past displacement episodes that may differ from AI displacement in speed, breadth, and affected demographics. Recession amplification effects assume future recessions coincide with AI displacement waves. CNN reporting may simplify or omit nuances from the underlying research.",
+  "fetchedAt": "2026-05-26"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "cai-yeckehzaare-mit-ontology-2026",
+  "abstract": "Cai and Yeckehzaare develop a comprehensive ontology of work activities and systematically map AI capabilities onto them, providing a granular bottom-up assessment of where AI can be applied across the economy. The researchers reorganized approximately 20,000 activities from the Department of Labor's O*NET database into a detailed classification framework, then classified 13,275 AI software applications and 20.8 million robotic systems against this framework. The key finding is that AI is applicable across more than 70% of work activities when including both software-based AI and AI with physical interfaces (robotics). However, deployment is highly concentrated: the top 1.6% of activities account for over 60% of AI market value, indicating that while AI's potential reach is broad, its actual economic impact is narrowly focused. Information-based activities dominate AI deployment at 72% of market value, with creating information alone representing 36%. Physical activities account for only 12% of AI market value. Interactive activities (combining information and physical work) comprise 48%, with 26% focused on information transfer. These findings suggest that AI's labor market impact will be far more uneven than headline 'percentage of tasks automatable' figures imply — a small number of high-value activities drive the vast majority of economic impact.",
+  "keyFindings": [
+    "AI is applicable across more than 70% of work activities when including AI with physical interfaces (robotics)",
+    "Deployment is highly concentrated: top 1.6% of activities account for over 60% of AI market value",
+    "Information-based activities dominate at 72% of AI market value; physical activities account for only 12%",
+    "Creating information alone represents 36% of all AI market value",
+    "Classified 13,275 AI software applications and 20.8 million robotic systems against the work activity ontology"
+  ],
+  "methodology": "Reorganization of approximately 20,000 O*NET work activities into a deep ontological framework. Systematic classification of 13,275 AI software applications and 20.8 million robotic systems mapped to the activity ontology. Market value analysis of AI deployment across activity categories. arXiv preprint (2603.20619).",
+  "qualifiers": "arXiv preprint, not yet peer reviewed. 'Applicability' is defined by existence of relevant AI tools, not by economic viability or actual adoption. The 70% figure includes AI with physical interfaces, which may overstate near-term practical applicability. Market value concentration (top 1.6% of activities = 60% of value) suggests headline applicability figures are misleading for predicting actual impact. O*NET activity descriptions may not perfectly match real workplace task performance. Does not model adoption barriers, implementation costs, or worker displacement directly.",
+  "fetchedAt": "2026-05-26"
+}

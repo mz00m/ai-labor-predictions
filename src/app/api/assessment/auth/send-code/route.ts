@@ -16,9 +16,19 @@ export async function POST(req: NextRequest) {
     }
 
     const code = generateCode();
-    const created = await createVerificationCode(email.toLowerCase().trim(), code);
+    const result = await createVerificationCode(email.toLowerCase().trim(), code);
 
-    if (!created) {
+    if (result === "db_unavailable") {
+      console.error("Send code: database unavailable");
+      return NextResponse.json(
+        { error: "We're having trouble on our end — please try again in a few minutes." },
+        { status: 503 }
+      );
+    }
+    if (result === "invalid_email") {
+      return NextResponse.json({ error: "Valid email required" }, { status: 400 });
+    }
+    if (result === "rate_limited") {
       return NextResponse.json(
         { error: "Too many requests. Please wait before trying again." },
         { status: 429 }

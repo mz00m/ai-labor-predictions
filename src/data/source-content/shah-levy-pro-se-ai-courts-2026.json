@@ -1,0 +1,14 @@
+{
+  "id": "shah-levy-pro-se-ai-courts-2026",
+  "abstract": "Shah and Levy study the impact of AI legal tools on pro se (self-represented) litigation in U.S. federal courts, examining whether AI-assisted filing tools improve access to justice for litigants who cannot afford attorney representation. The analysis finds that AI legal tools increased pro se filings by approximately 8%, suggesting that reduced barriers to legal document preparation expand access to the courts. More significantly, pro se litigants using AI filing assistance achieved outcomes on procedural measures — such as surviving motions to dismiss and meeting filing requirements — comparable to attorney-represented parties, substantially closing the justice gap on these dimensions. However, substantive case outcomes (such as final judgments and settlement values) still favored represented parties, indicating that AI tools improve form and process more effectively than legal strategy. The authors estimate that AI legal tools could save consumers $6-10 billion annually in legal fees for routine matters such as simple filings, standard contracts, and procedural compliance, representing a significant potential transfer of value from legal service providers to consumers.",
+  "keyFindings": [
+    "AI legal tools increased pro se federal court filings by approximately 8%, expanding access to justice",
+    "Pro se litigants with AI assistance achieved procedural outcomes comparable to attorney-represented parties",
+    "Substantive case outcomes still favored represented parties, indicating AI improves process more than legal strategy",
+    "Estimated $6-10 billion annual consumer savings potential from AI legal tools for routine legal matters",
+    "AI legal tools most effective for structured, form-driven tasks like filing compliance and standard document preparation"
+  ],
+  "methodology": "Empirical analysis of U.S. federal court administrative data, comparing pro se filing rates, procedural outcomes, and case results before and after the availability of AI legal filing tools. Uses variation in AI tool availability across jurisdictions and time for identification.",
+  "qualifiers": "Federal court data may not generalize to state courts where the vast majority of pro se litigation occurs. AI tool usage is inferred rather than directly observed in court records. Cost savings estimates are projections based on current legal fee structures and may not account for market adjustments. Selection effects possible if AI tools attract different types of cases or litigants.",
+  "fetchedAt": "2026-05-26"
+}

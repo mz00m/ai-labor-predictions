@@ -1,0 +1,14 @@
+{
+  "id": "bls-employment-projections-2026",
+  "abstract": "The Bureau of Labor Statistics projects total US employment growth of 6.7 million jobs from 2024 to 2034 in its decennial occupational and industry projections. Healthcare and social assistance sectors are expected to lead growth, driven by an aging population and expanding demand for care services. Manufacturing and retail trade are projected to continue long-term employment declines, reflecting ongoing automation, e-commerce displacement, and structural shifts in consumer behavior. These projections represent the BLS's most comprehensive forward-looking labor market assessment, incorporating demographic trends, productivity assumptions, macroeconomic forecasts, and industry-specific models. The 2024-2034 projection period is notable because it is the first BLS projection cycle to grapple explicitly with the potential for generative AI to reshape occupational demand at scale, though the BLS methodology is inherently conservative and relies on historical trend extrapolation that may understate the pace of AI-driven structural change. The projections serve as a baseline against which actual labor market developments — including AI-driven disruption — can be measured.",
+  "keyFindings": [
+    "BLS projects total employment growth of 6.7 million from 2024 to 2034",
+    "Healthcare and social assistance sectors are projected to lead job growth, driven by aging population",
+    "Manufacturing and retail trade are projected to continue declining employment trends",
+    "First BLS projection cycle to contend with generative AI's potential impact on occupational demand",
+    "Projections serve as a baseline for measuring actual AI-driven labor market disruption against historical trends"
+  ],
+  "methodology": "BLS Employment Projections program using macroeconomic models (BLS macro model), industry-occupation staffing patterns (National Employment Matrix), demographic projections (Census Bureau), and historical trend extrapolation. Published in Monthly Labor Review. Covers all nonfarm industries and 800+ detailed occupations. 10-year projection horizon (2024-2034).",
+  "qualifiers": "BLS projections returned 403 at time of fetch; content based on provided excerpt and known BLS methodology. BLS methodology is inherently conservative, relying on historical trend extrapolation that may not capture discontinuous technological change. Previous BLS projections have systematically underestimated automation's impact in manufacturing and overestimated growth in some service sectors. Does not model AI-specific displacement scenarios. Assumes no major policy changes (immigration, trade, regulation).",
+  "fetchedAt": "2026-05-26"
+}

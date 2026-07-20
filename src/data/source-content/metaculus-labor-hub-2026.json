@@ -1,0 +1,14 @@
+{
+  "id": "metaculus-labor-hub-2026",
+  "abstract": "The Metaculus Labor Automation Forecasting Hub, supported by Renaissance Philanthropy, aggregates community prediction market forecasts for AI's impact on the US labor market through 2030 and 2035. The platform provides consensus forecasts across multiple dimensions: overall US employment is expected to decline 1.9% by 2030 and 3.4% by 2035. The most vulnerable AI-exposed occupations face steeper projected declines of 11.4% by 2030 and 17.2% by 2035. Software developers are among the hardest-hit categories with projected declines of 15.1% by 2030 and 22.3% by 2035. Other occupation-specific forecasts include financial specialists (-8.1%/-15.3%), services sales (-11%/-14%), lawyers (-5.4%/-9.6%), and designers (-4%/-8.4%). K-12 teachers show relative resilience at -1.3% by 2030 and a slight positive of +1.3% by 2035. Overall median wage is forecast to decline 0.6% by 2030 but recover to +1.4% by 2035. Daily AI usage among workers is projected to reach 52.5% by 2030 and 70.9% by 2035. New-graduate unemployment is forecast at approximately 10% by 2030 and 12% by 2035.",
+  "keyFindings": [
+    "Overall US employment forecast: -1.9% by 2030, -3.4% by 2035; most vulnerable AI-exposed occupations: -11.4%/-17.2%",
+    "Software developers face steepest projected declines: -15.1% by 2030, -22.3% by 2035",
+    "Financial specialists (-8.1%/-15.3%), services sales (-11%/-14%), lawyers (-5.4%/-9.6%), designers (-4%/-8.4%)",
+    "K-12 teachers show relative resilience (-1.3% by 2030, +1.3% by 2035); median wage -0.6% by 2030, +1.4% by 2035",
+    "Daily AI usage projected at 52.5% by 2030, 70.9% by 2035; new-grad unemployment ~10%/12%"
+  ],
+  "methodology": "Community prediction market platform aggregating forecasts from registered Metaculus forecasters. Forecasters submit probability distributions and point estimates for defined labor market questions. Platform uses proprietary aggregation algorithms to produce consensus forecasts. Supported by Renaissance Philanthropy. Continuously updated as new information becomes available.",
+  "qualifiers": "Prediction market forecasts reflect community consensus, not expert analysis or empirical measurement. Metaculus forecasters skew toward technically sophisticated, AI-aware demographics which may bias estimates. Forecasts are point-in-time snapshots that update continuously. Occupation-specific projections carry higher uncertainty due to difficulty defining and measuring AI impact at granular levels. Software developer decline projections (-22.3% by 2035) are among the most aggressive estimates across sources. No confidence intervals or uncertainty ranges provided in the excerpted data.",
+  "fetchedAt": "2026-05-26"
+}

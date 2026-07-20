@@ -1,0 +1,13 @@
+{
+  "id": "eurostat-ai-enterprises-2025",
+  "abstract": "Eurostat's enterprise AI adoption survey (isoc_eb_ai) provides standardized data on AI usage across EU member states, covering enterprises with 10 or more employees. The 2024 survey wave found that 13.5% of EU enterprises used at least one AI technology, a substantial increase from 8% in 2023, representing nearly 70% year-over-year growth in adoption rates. The data reveal significant cross-country variation: Denmark leads at 30.3%, followed by Finland at 25.4% and Luxembourg at 24.6%, while other member states lag well below the EU average. The survey tracks multiple AI technology types including natural language processing, image recognition, machine learning, and robotic process automation. This dataset provides the most comprehensive cross-national comparison of enterprise AI adoption in Europe and serves as an important benchmark against US adoption data from Census BTOS and Federal Reserve surveys.",
+  "keyFindings": [
+    "13.5% of EU enterprises with 10+ employees used AI in 2024, up sharply from 8% in 2023, representing approximately 70% year-over-year growth in adoption.",
+    "AI adoption varies dramatically across EU member states: Denmark (30.3%), Finland (25.4%), and Luxembourg (24.6%) lead, while several member states remain below 5%.",
+    "The EU-wide 13.5% rate is roughly double the US Census BTOS figure of ~7%, though differences in survey methodology, firm-size thresholds, and AI definitions complicate direct comparison.",
+    "The rapid acceleration from 8% to 13.5% in a single year suggests the EU may be entering a steeper part of the AI adoption S-curve, particularly in Nordic and Western European economies."
+  ],
+  "methodology": "Annual enterprise survey conducted by national statistical offices across EU member states under Eurostat coordination. Covers enterprises with 10 or more employees across all NACE sectors (excluding financial sector in some waves). Respondents report on use of specific AI technology types. Harmonized questionnaire enables cross-country comparison. Data reported via the isoc_eb_ai table in the Eurostat database.",
+  "qualifiers": "Survey covers only enterprises with 10+ employees, excluding micro-enterprises and sole proprietorships. Self-reported AI usage depends on respondent understanding of what constitutes AI. Different member states may have varying response rates and data quality. The financial sector is excluded in some survey waves. Cross-country differences may partly reflect different industrial compositions rather than pure adoption differences.",
+  "fetchedAt": "2026-05-26"
+}

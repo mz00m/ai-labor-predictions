@@ -1,0 +1,14 @@
+{
+  "id": "tucker-qwi-early-career-hires-2026",
+  "abstract": "Tucker uses Quarterly Workforce Indicators (QWI) data from the Census Bureau's Longitudinal Employer-Household Dynamics (LEHD) program to measure AI's impact on early-career hiring patterns across U.S. industries and occupations. The analysis finds a 15-20% decline in early-career hires in occupations with high AI exposure since 2023, with the effects concentrated in technology, finance, and professional services sectors. Entry-level positions are most affected, consistent with firms using AI tools to automate tasks traditionally assigned to junior workers as training and onboarding activities. The findings suggest that AI may be compressing the bottom of organizational hierarchies by reducing the need for entry-level cognitive workers, with implications for career ladders, skill development pipelines, and intergenerational economic mobility. The use of QWI data provides a significant methodological advantage over survey-based studies, as it captures actual hiring flows from administrative records rather than self-reported intentions or perceptions. The early-career hiring decline appears to accelerate through the study period, suggesting the effect is growing rather than stabilizing.",
+  "keyFindings": [
+    "15-20% decline in early-career hires in high AI-exposure occupations since 2023, measured from administrative hiring records",
+    "Effects concentrated in tech, finance, and professional services — sectors with highest GenAI adoption rates",
+    "Entry-level positions most affected, consistent with AI automating tasks traditionally used for junior worker onboarding",
+    "Hiring decline accelerating through the study period, suggesting growing rather than stabilizing displacement",
+    "AI may be compressing organizational hierarchies from the bottom, with implications for career ladders and economic mobility"
+  ],
+  "methodology": "Empirical analysis using Quarterly Workforce Indicators (QWI) from the Census Bureau's LEHD program, which provides administrative records of actual hiring flows by age, industry, and geography. Uses variation in AI occupational exposure across industries and time to identify differential hiring effects for early-career workers.",
+  "qualifiers": "QWI data captures hiring flows but not the reasons behind them — the AI attribution relies on differential effects across exposure levels rather than direct observation of AI deployment. Industry-level analysis may not perfectly map to occupational AI exposure. The post-2023 period coincides with broader tech sector layoffs and hiring slowdowns that could confound AI-specific effects. Early-career hiring declines could partly reflect demographic shifts or changing educational pathways rather than AI displacement alone.",
+  "fetchedAt": "2026-05-26"
+}

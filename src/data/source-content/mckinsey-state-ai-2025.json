@@ -1,0 +1,14 @@
+{
+  "id": "mckinsey-state-ai-2025",
+  "abstract": "McKinsey's annual Global Survey on AI (State of AI, 2025 edition) documents the rapid mainstreaming of artificial intelligence across organizations worldwide. The survey finds that 88% of organizations now use AI in at least one business function, reflecting near-ubiquitous adoption at some level. Looking ahead, 32% of companies expect AI to reduce their workforce by 3% or more within the next year — a significant share anticipating near-term headcount impacts. Within organizations already deploying AI, a median of 17% of respondents report that workforce declines have already occurred within their functions attributable to AI use, providing early empirical evidence of actual displacement alongside the more commonly cited projections. The survey captures the tension between broad AI adoption (88%) and the still-minority share experiencing or expecting meaningful workforce reductions, suggesting that most organizations are in an augmentation phase rather than a substitution phase, though the balance may be shifting.",
+  "keyFindings": [
+    "88% of organizations now use AI in at least one business function, reflecting near-ubiquitous adoption",
+    "32% of companies expect AI to reduce workforce by 3%+ within the next year",
+    "Median 17% of respondents report workforce declines within their functions attributable to AI use",
+    "Tension between broad adoption (88%) and minority experiencing workforce reductions suggests most organizations remain in augmentation phase",
+    "Near-term headcount reduction expectations (32%) are growing but still represent a minority of organizations"
+  ],
+  "methodology": "McKinsey annual Global Survey on AI. Large-scale survey of business executives and practitioners across industries and geographies. Specific sample size for 2025 edition not disclosed in available materials. Conducted by McKinsey & Company's QuantumBlack AI practice.",
+  "qualifiers": "Survey respondents are predominantly large enterprise executives — may not reflect SME experience. '88% using AI in at least one function' sets a low bar (any AI use counts). The 32% expecting 3%+ workforce reduction is a forward-looking expectation, not an observed outcome. Median 17% reporting declines reflects self-assessment within functions, not organization-wide headcount data. Specific sample size and industry breakdown for 2025 survey not available in public materials. McKinsey surveys may oversample AI-forward organizations.",
+  "fetchedAt": "2026-05-26"
+}

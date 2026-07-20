@@ -1,0 +1,14 @@
+{
+  "id": "stlouisfed-genai-adoption-2025",
+  "abstract": "The St. Louis Federal Reserve provides an overview of generative AI adoption patterns across the U.S. economy as of late 2025, synthesizing data from multiple surveys and administrative sources. The analysis finds that GenAI adoption is heavily concentrated in technology, finance, and professional services sectors, with these industries accounting for a disproportionate share of both organizational deployment and individual worker usage. Adoption rates are substantially lower in healthcare, education, manufacturing, and government sectors, reflecting a combination of regulatory constraints, data sensitivity concerns, and workflow integration challenges. The report notes that even within high-adoption sectors, usage patterns vary significantly — most workers use GenAI for text generation, summarization, and brainstorming rather than for core production tasks. The sectoral concentration of adoption raises questions about whether GenAI's productivity and labor market effects will be similarly concentrated or will diffuse more broadly as tools mature and integration barriers fall.",
+  "keyFindings": [
+    "GenAI adoption concentrated in tech, finance, and professional services — these sectors account for disproportionate share of both organizational and individual usage",
+    "Healthcare, education, manufacturing, and government lag substantially in adoption due to regulatory, data sensitivity, and integration barriers",
+    "Most workers use GenAI for text generation, summarization, and brainstorming rather than core production tasks",
+    "Even within high-adoption sectors, usage patterns vary significantly across job functions and seniority levels",
+    "Sectoral concentration raises questions about whether AI's labor market effects will remain concentrated or diffuse broadly"
+  ],
+  "methodology": "Synthesis of multiple survey sources and administrative data on AI adoption across U.S. industries and occupations. Draws on Census Bureau, BLS, and private sector surveys to characterize adoption patterns by sector, firm size, and worker demographics.",
+  "qualifiers": "Adoption measurement depends on survey definitions of GenAI use, which vary across sources. Self-reported usage may overstate meaningful adoption. Rapid pace of AI tool development means adoption snapshots become outdated quickly. Sectoral adoption rates may not capture informal or personal-device AI usage that bypasses enterprise IT channels.",
+  "fetchedAt": "2026-05-26"
+}
