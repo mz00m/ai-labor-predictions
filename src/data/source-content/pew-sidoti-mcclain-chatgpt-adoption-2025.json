@@ -1,0 +1,18 @@
+{
+  "id": "pew-sidoti-mcclain-chatgpt-adoption-2025",
+  "abstract": "Pew Research Center short-read by Olivia Sidoti and Colleen McClain, published June 25, 2025, based on an American Trends Panel survey of 5,123 US adults fielded February 24 - March 2, 2025. Reports that 34% of US adults have ever used ChatGPT (up from ~17% in summer 2023), with sharp gradients by age and education. Provides one of the cleanest overall-population ChatGPT-adoption benchmarks in the public literature, cited in the Stanford Digital Economy Lab's AI Economic Indicators Research Note #1 as part of the Adoption Monitor evidence base.",
+  "keyFindings": [
+    "34% of US adults have ever used ChatGPT, up from ~17% in summer 2023 (approximately doubling in 2 years)",
+    "Work usage among employed adults: 28%, up from 8% in early 2023 (3.5x increase)",
+    "Age gradient (any use): under-30 = 58% (up from 43% in 2024); 30-49 = 41%; 50-64 = 25%; 65+ = 10%",
+    "Age gradient (work use, employed adults): 18-29 = 38%; 30-49 = 30%; 50+ = 18%",
+    "Education gradient (any use): postgraduate degree = 52%; bachelor's = 51%; some college = 33%; high school or less = 18%",
+    "Education gradient (work use, employed): postgrad = 45%; bachelor's = 36%; some college = 25%; HS or less = 17%",
+    "Other use cases: learning = 26% (up from 8% in 2023); entertainment = 22% (up from 11%)",
+    "Awareness: 79% have heard at least a little about ChatGPT (up from 58% in March 2023); 34% have heard 'a lot'",
+    "Sample: 5,123 US adults, American Trends Panel, weighted by gender, race, ethnicity, partisan affiliation, education"
+  ],
+  "methodology": "Nationally representative online survey of 5,123 US adults via Pew's American Trends Panel (ATP), fielded February 24 - March 2, 2025. ATP uses national random sampling of residential addresses. Respondents complete surveys online or by phone. Results weighted by gender, race, ethnicity, partisan affiliation, education, and other factors to match the US adult population.",
+  "qualifiers": "ChatGPT-specific (not all generative AI); a respondent who uses Claude, Gemini, or Copilot but not ChatGPT would report 'no' here. Self-reported; recall bias possible. 'Ever used' is a very loose threshold — captures anyone who has tried it once. The 28% work-use figure is a subset of employed adults, not the same population as the Bick/Blandin/Deming RPS work-adoption series (which measures 'used AI for work' more broadly). Cited in Stanford DEL Research Note #1 as one of the Adoption Monitor sources.",
+  "fetchedAt": "2026-07-20"
+}

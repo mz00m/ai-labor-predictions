@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-20",
-  "totalSources": 624,
-  "verifiedCount": 614,
+  "totalSources": 626,
+  "verifiedCount": 616,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -8867,6 +8867,36 @@
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-richardson-adp-representativeness-2025": {
+      "id": "brynjolfsson-richardson-adp-representativeness-2025",
+      "title": "How Representative Is ADP Employment Data?",
+      "url": "https://www.adpresearch.com/research/how-representative-is-adp-employment-data",
+      "publisher": "Stanford DEL / ADP Research (Brynjolfsson, Richardson)",
+      "evidenceTier": 1,
+      "datePublished": "2025-10-30",
+      "excerpt": "Brynjolfsson (Stanford DEL) & Richardson (ADP chief economist), 'How Representative Is ADP Employment Data?' \u2014 Oct 30, 2025. Methodology companion to the Canaries line of work. ADP covers 'more than 26 million U.S. workers at more than 500,000 employers' \u2014 '1 in 6 workers in the country and 1 in 5 workers in the private sector.' QCEW private-sector benchmark is 131.3M workers. ADP overrepresents manufacturing (9% vs QCEW 3.5%) and underrepresents construction (4.6% vs 6.1%); ADP is 'more representative of employment for small and medium employers than the BLS survey' (32.4% of active ADP is <50 workers vs QCEW 43.9%). Establishments lean larger and concentrate in manufacturing and the Northeast; growth bias exists because 'employers that outsource payroll services are likely to be more profitable than those that don't.' ADP re-weights by industry, state, and employer size to correct. Jan-Jun 2025 revision comparison: ADP net revision +2K jobs vs BLS -488K, with final convergence to 14K difference \u2014 evidence of ADP's greater month-to-month stability. Overall conclusion: 'ADP's National Employment Report ... is overall representative of U.S. employment.'",
+      "dateAdded": "2026-07-20",
+      "usedIn": [
+        "reading-list"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pew-sidoti-mcclain-chatgpt-adoption-2025": {
+      "id": "pew-sidoti-mcclain-chatgpt-adoption-2025",
+      "title": "34% of U.S. Adults Have Used ChatGPT, About Double the Share in 2023",
+      "url": "https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/",
+      "publisher": "Pew Research Center (Sidoti, McClain)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-25",
+      "excerpt": "Pew Research Center (Sidoti & McClain), '34% of U.S. Adults Have Used ChatGPT, About Double the Share in 2023' \u2014 Jun 25, 2025. Survey of 5,123 U.S. adults via American Trends Panel, Feb 24 - Mar 2, 2025. Overall: '34% of U.S. adults say they have ever used ChatGPT' (up from ~17% in summer 2023). By age: under-30 = 58% (up from 43% in 2024); 30-49 = 41%; 50-64 = 25%; 65+ = 10%. By education: postgrad 52%; bachelor's 51%; some college 33%; HS or less 18%. Work usage (employed adults): overall 28% (up from 8% in early 2023); 18-29 = 38%; 30-49 = 30%; 50+ = 18%; postgrad 45%; bachelor's 36%. Other use cases: learning 26% (up from 8% in 2023); entertainment 22% (up from 11% in 2023). Awareness: 79% have heard at least a little about ChatGPT (up from 58% in March 2023).",
+      "dateAdded": "2026-07-20",
+      "usedIn": [
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
