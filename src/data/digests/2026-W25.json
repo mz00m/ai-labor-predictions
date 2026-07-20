@@ -1,0 +1,136 @@
+{
+  "week": "2026-W25",
+  "generatedAt": "2026-06-15T13:54:48.364Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Explainable AI Framework Maps Automation Risk and Occupational Transformation to 2030",
+      "summary": "A new Explainable AI-Driven Workforce Intelligence Framework analyzes automation risk across occupational categories, projecting significant structural transformation in labor markets by 2030. The study applies XAI methods to disaggregate which job tasks and roles face highest displacement probability, offering granular forecasts for workforce planners. Published in the Digital Signal Processing and AI Applications journal, it represents one of the most comprehensive occupation-level automation risk models to date (Chung, 2026).",
+      "source": "https://doi.org/10.6025/dspaial/2026/5/2/80-105",
+      "authors": [
+        "Yao-Liang Chung"
+      ],
+      "publishedAt": "2026-06-01",
+      "doi": "10.6025/dspaial/2026/5/2/80-105",
+      "score": 0.388,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Digitised Workflows Expose Workforce Segments Missed by Conventional AI Exposure Measures",
+      "summary": "A preprint study identifies a significant blind spot in existing AI exposure indices: workers whose tasks have been digitised into structured workflows are more exposed to AI automation than standard occupation-level measures suggest. The research proposes revised exposure metrics that capture task-level digitisation, materially changing which workforce segments are considered high-risk. These findings imply current AI adoption and displacement forecasts may systematically undercount vulnerable workers (Wang et al., 2026).",
+      "source": "https://doi.org/10.21203/rs.3.rs-9638548/v1",
+      "authors": [
+        "Chuhong Wang",
+        "Junjun Li",
+        "Xingfei Liu",
+        "Jin Sun"
+      ],
+      "publishedAt": "2026-06-09",
+      "doi": "10.21203/rs.3.rs-9638548/v1",
+      "score": 0.365,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "From Chatbot to Digital Colleague: Autonomous AI Systems Poised to Replace Knowledge Work Functions",
+      "summary": "A comprehensive survey paper argues that LLMs are transitioning from passive conversational tools into persistent 'Digital Colleagues' capable of autonomous reasoning, memory, tool use, and self-improvement — directly substituting for white-collar cognitive tasks. The authors identify agentic AI architectures as the primary near-term vector for professional-role disruption, with implications for knowledge worker employment across sectors. This paradigm shift is expected to accelerate GenAI adoption in enterprise workflows well beyond current levels (Zhang et al., 2026).",
+      "source": "https://arxiv.org/abs/2606.14502v1",
+      "authors": [
+        "Yongheng Zhang",
+        "Ziang Liu",
+        "Jiaxuan Zhu",
+        "Shuai Wang",
+        "Xiangqi Chen",
+        "Haojing Huang",
+        "Jiayi Kuang",
+        "Siyu Chen",
+        "Ao Shen",
+        "Hao Wu",
+        "Qiufeng Wang",
+        "Qian-Wen Zhang",
+        "Junnan Dong",
+        "Wenhao Jiang",
+        "Ying Shen",
+        "Hai-Tao Zheng",
+        "Yinghui Li",
+        "Di Yin",
+        "Xing Sun",
+        "Philip S. Yu"
+      ],
+      "publishedAt": "2026-06-12",
+      "score": 0.518,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "Labor Market Polarization Driven by Income-Elastic Sectors, Not Just Automation Alone",
+      "summary": "An NBER working paper by Comin, Danieli, and Mestieri develops a heterogeneous-consumer framework showing that income elasticity of demand — not automation alone — drives labor market polarization by concentrating employment growth in high- and low-skill occupations. Shocks that raise income dispersion amplify polarization through consumer demand channels, suggesting wage impacts are more nuanced than standard automation displacement models predict. The findings have direct implications for median and entry-level wage trajectories as AI reshapes income distribution (Comin et al., 2026).",
+      "source": "https://www.nber.org/papers/w35315",
+      "authors": [
+        "Diego A. Comin",
+        "Ana Danieli",
+        "Martí Mestieri"
+      ],
+      "publishedAt": "2026-06-15",
+      "score": 0.567,
+      "sourceAdapter": "nber",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Automation and Political Repression: Capital-Labor Inequality Raises Revolt Risk, Potentially Constraining AI Deployment",
+      "summary": "Acemoglu, Gitmez, and Shadmehr model how decentralized automation decisions increase capital's share of national income beyond socially optimal levels, heightening political instability risk as inequality between capital and labor grows. The paper finds governments may use repression to suppress worker backlash, but this dynamic could also induce policy constraints on automation adoption. The analysis adds a political-economy dimension to forecasts of AI-driven displacement trajectories across the economy (Acemoglu et al., 2026).",
+      "source": "https://www.nber.org/papers/w35336",
+      "authors": [
+        "Daron Acemoglu",
+        "A. Arda Gitmez",
+        "Mehdi Shadmehr"
+      ],
+      "publishedAt": "2026-06-15",
+      "score": 0.567,
+      "sourceAdapter": "nber",
+      "graphSlug": "white-collar-professional-displacement"
+    }
+  ],
+  "themes": [
+    "Agentic AI systems transitioning from assistants to autonomous 'Digital Colleagues,' accelerating white-collar displacement risk beyond what current exposure indices capture",
+    "Labor market polarization is amplified by income-distribution effects of AI and automation, not just direct task substitution — complicating wage impact forecasts",
+    "Conventional AI exposure measures systematically undercount workers in digitised workflows, suggesting displacement and adoption statistics need methodological revision",
+    "Political economy constraints — including inequality-driven instability — may act as a brake on unchecked automation deployment, introducing policy uncertainty into adoption timelines",
+    "Explainable AI tools are increasingly being applied to workforce intelligence, enabling more granular, occupation-level automation risk analysis through 2030"
+  ],
+  "watching": [
+    {
+      "title": "Regulating the Machine Contributor: Governance and Policy Alignment in Open Source",
+      "source": "https://arxiv.org/abs/2606.14594v1",
+      "reason": "AI agents autonomously submitting code PRs signals near-term displacement pressure on junior software developer roles; governance gaps could accelerate tech-sector displacement."
+    },
+    {
+      "title": "Thoughts on AI and Jobs",
+      "source": "https://blog.keyvan.net/p/thoughts-on-ai-and-jobs",
+      "reason": "Active HN discussion (56 comments) reflects growing public and practitioner concern about AI job impact; useful sentiment signal for adoption and displacement narratives."
+    },
+    {
+      "title": "Teaching Machine Learning to Software Engineers",
+      "source": "https://arxiv.org/abs/2606.14618v1",
+      "reason": "Curriculum reform to embed AI/ML skills in SE education signals rising demand for high-skill AI-adjacent roles, relevant to high-skill wage premium and tech workforce transformation."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "googleCse",
+      "hnAlgolia"
+    ],
+    "failed": [],
+    "totalCandidates": 86,
+    "afterDedup": 86
+  }
+}
