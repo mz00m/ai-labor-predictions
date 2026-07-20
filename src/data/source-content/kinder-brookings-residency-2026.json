@@ -1,0 +1,14 @@
+{
+  "id": "kinder-brookings-residency-2026",
+  "abstract": "Brookings Institution article by Senior Fellow Molly Kinder (published January 23, 2026) argues for a medical residency-style model to protect entry-level knowledge work jobs from AI displacement. Kinder cites warnings from technology leaders at Davos: Google DeepMind CEO Demis Hassabis expects AI to impact junior-level jobs and internships in 2026, while Anthropic CEO Dario Amodei projects that 50% of entry-level jobs could disappear within five years. The article identifies a fundamental problem: AI excels at exactly the routine knowledge tasks (researching, writing, coding) that traditionally served as entry-level training grounds. These roles served dual purposes — completing routine work and preparing junior workers for advanced roles — creating a training pipeline that AI disruption threatens to break. Kinder proposes replacing traditional entry-level structures with mentored, real-work learning modeled on medical residencies, where junior professionals shadow seniors and progress from observation to leading client work with debriefing. Policy recommendations include an AI Workforce Reinvestment Fund (companies automating entry-level roles contribute to pooled residency program funding), philanthropic funding for curriculum infrastructure, and government adaptation of youth service programs.",
+  "keyFindings": [
+    "Google DeepMind CEO expects AI to impact junior-level jobs and internships in 2026; Anthropic CEO projects 50% of entry-level jobs could disappear within five years",
+    "AI threatens the dual-purpose function of entry-level jobs: completing routine work and training junior workers for advanced roles",
+    "Proposes medical residency model for white-collar professions: mentored, real-work learning with progressive autonomy",
+    "Recommends AI Workforce Reinvestment Fund where companies automating entry-level roles fund residency programs",
+    "Judgment, intuition, and embodied presence require years of supervised practice and cannot be replicated by AI"
+  ],
+  "methodology": "Policy analysis and proposal by Brookings Senior Fellow. Draws on technology leader statements (Davos 2026), labor market trends, and analogies to medical education. Not an empirical study — argumentative and prescriptive in nature.",
+  "qualifiers": "Policy proposal, not empirical research — the medical residency model is untested in white-collar contexts. Technology leader predictions (Hassabis, Amodei) may be self-interested or inaccurate. Kinder acknowledges current labor market evidence does not conclusively show AI is already displacing entry-level positions. The AI Workforce Reinvestment Fund is a conceptual proposal without implementation details or cost estimates. UK apprenticeship levy comparison may not translate to US policy context.",
+  "fetchedAt": "2026-05-26"
+}

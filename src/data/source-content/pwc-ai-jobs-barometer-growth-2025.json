@@ -1,0 +1,14 @@
+{
+  "id": "pwc-ai-jobs-barometer-growth-2025",
+  "abstract": "PwC's 2025 Global AI Jobs Barometer provides a comprehensive analysis of how AI is transforming labor markets across multiple countries, finding that job growth has remained robust even in AI-exposed occupations, with 38% growth in these roles. A striking finding is that degree requirements have fallen by 7 percentage points for AI-augmented jobs, suggesting that AI tools are democratizing access to roles previously gated by formal educational credentials. AI-exposed professions experienced 55% faster skill churn in job postings compared to non-exposed roles, indicating rapid transformation of required competencies rather than simple job elimination. The barometer analyzes millions of job postings and economic data across over a dozen countries, tracking how AI adoption correlates with employment, wages, skill demands, and organizational restructuring patterns.",
+  "keyFindings": [
+    "Job growth remained robust in AI-exposed occupations at 38%, countering narratives of widespread AI-driven job destruction.",
+    "Degree requirements fell by 7 percentage points for AI-augmented jobs, suggesting AI tools are lowering educational barriers to employment.",
+    "AI-exposed professions saw 55% faster skill churn in job postings compared to non-exposed occupations, reflecting rapid competency transformation.",
+    "The combination of strong job growth and declining degree requirements suggests AI is restructuring how work is done rather than eliminating positions wholesale.",
+    "Skill transformation is outpacing job displacement as the primary labor market effect of AI adoption across most sectors and countries studied."
+  ],
+  "methodology": "Analysis of millions of job postings across over a dozen countries combined with macroeconomic employment and productivity data. AI exposure measured through occupational task composition analysis. Skill churn calculated by tracking changes in required competencies within job posting categories over time. Degree requirement analysis based on changes in educational prerequisite language in postings for comparable roles.",
+  "qualifiers": "Published by PwC, which has commercial interest in AI advisory services. Job posting data reflects employer demand signals, which may not directly translate to actual employment outcomes. The 38% job growth figure for AI-exposed occupations requires context about the baseline period and comparison group. Skill churn in postings may reflect changing employer preferences rather than actual changes in job content. Degree requirement changes may partly reflect tight labor market conditions rather than AI-specific effects. Cross-country aggregation may mask significant national variation.",
+  "fetchedAt": "2026-05-26"
+}

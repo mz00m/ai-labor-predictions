@@ -1,0 +1,13 @@
+{
+  "abstract": "Marc Andreessen's manifesto argues technology \u2014 including AI \u2014 produces broad prosperity, and that resistance to deployment is itself the primary risk. Frames AI development as a moral imperative and rejects framings that focus on concentrated harms.",
+  "keyFindings": [
+    "AI development is framed as morally good and politically urgent",
+    "Resistance to AI deployment (regulation, safety prioritization, slowdown advocacy) framed as the principal danger",
+    "Does not engage empirically with labor displacement evidence or distributional outcomes",
+    "Influential in venture-capital and accelerationist circles as a rallying document"
+  ],
+  "methodology": "Polemical essay; no empirical methodology.",
+  "qualifiers": "Tier 4 \u2014 opinion/advocacy from a major AI investor with direct financial interest in deployment speed. Treat as a position to be cited, not an evidentiary source.",
+  "id": "andreessen-techno-optimist-manifesto-2023",
+  "fetchedAt": "2026-06-26"
+}

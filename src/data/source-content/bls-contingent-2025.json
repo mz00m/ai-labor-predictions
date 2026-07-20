@@ -1,0 +1,14 @@
+{
+  "id": "bls-contingent-2025",
+  "abstract": "The Bureau of Labor Statistics Contingent and Alternative Employment Arrangements supplement to the Current Population Survey provides the most comprehensive federal survey of non-traditional work arrangements in the US. The survey measures the prevalence of contingent workers (those who do not expect their jobs to last or who report their jobs are temporary) and workers in alternative employment arrangements, including independent contractors, on-call workers, temporary help agency workers, and workers provided by contract firms. This periodic supplement is the primary federal data source for tracking the share of the US workforce engaged in freelance, contract, and gig work. The 2025 release updates prior surveys (most recently 2017) and provides data on whether the growth of platform-based gig work, remote freelancing, and AI-enabled task marketplaces has materially changed the share of workers in non-traditional arrangements. The survey is particularly relevant in the AI context because some forecasts predict AI will shift employment from traditional jobs toward more fragmented, task-based work arrangements.",
+  "keyFindings": [
+    "BLS periodic survey provides the most authoritative federal measure of contingent and alternative work arrangements",
+    "Tracks four categories: independent contractors, on-call workers, temp agency workers, and contract firm workers",
+    "Updates from the 2017 survey allow assessment of whether gig and platform work have materially expanded",
+    "Data provides baseline for evaluating whether AI is accelerating the shift toward non-traditional employment",
+    "Survey methodology uses the Current Population Survey supplement, covering approximately 60,000 households"
+  ],
+  "methodology": "Supplement to the Current Population Survey (CPS), the same household survey underlying the monthly unemployment rate. Nationally representative sample of approximately 60,000 households. Workers are classified as contingent based on self-reported job duration expectations. Alternative arrangement categories based on employment relationship structure. Conducted periodically (previously 1995, 1997, 1999, 2001, 2005, 2017).",
+  "qualifiers": "BLS page returned 403 at time of fetch; content based on known BLS methodology and provided excerpt. Survey relies on worker self-classification, which may not capture all gig or platform work. Periodic (not annual) survey makes trend analysis difficult. Previous gap between 2005 and 2017 surveys means some trend data is interpolated. Does not directly measure AI-driven shifts in work arrangements. Definition of 'contingent' may not fully capture modern freelance and platform work patterns.",
+  "fetchedAt": "2026-05-26"
+}

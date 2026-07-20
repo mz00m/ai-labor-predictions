@@ -1,0 +1,19 @@
+{
+  "id": "yale-sonnenfeld-entry-level-ai-2026",
+  "abstract": "May 2026 Yale Insights analysis from the Yale Chief Executive Leadership Institute (Sonnenfeld, Henriques, Griessel, Alam-Nist, Yu) argues that AI's real job destruction is concentrated at the entry-level, before careers begin. Recent-graduate unemployment has climbed to nearly 6% — roughly twice the pace of the overall workforce since 2022 — with computer-science majors at 7.0% and computer-engineering majors at 7.8% for ages 22-27. Early-career software-developer employment is down nearly 20% from its late-2022 peak, and software job postings are down 53%.",
+  "keyFindings": [
+    "Recent-graduate unemployment climbed to nearly 6%, rising twice as fast as the rest of the workforce since 2022 (Yale CELI, May 2026)",
+    "Computer science majors ages 22-27 unemployment rate: 7.0%; computer engineering: 7.8%",
+    "Early-career software developer employment (ages 22-25) down nearly 20% from late-2022 peak",
+    "Software development job postings down 53% from late-2022 baseline",
+    "Goldman Sachs estimates AI reducing US employment by roughly 16,000 jobs monthly",
+    "BCG projects 10-15% of existing jobs could be eliminated by 2031",
+    "Job-market confidence among workers fell from roughly 70% (2022) to 28%",
+    "Only 19% of college graduates say it's a 'good time' to find quality employment vs. 35% of non-degree holders",
+    "Only 10% of higher-education leaders reported graduates are 'sufficiently or very well prepared' for AI-enabled workplaces",
+    "41% of university presidents surveyed at Yale Higher Education Summit (Jan 2026, n=100) are highly concerned about entry-level white-collar role vulnerability"
+  ],
+  "methodology": "Yale Chief Executive Leadership Institute synthesis combining BLS Current Population Survey graduate unemployment data, Indeed job-posting tracking, Goldman Sachs employment estimates, Yale Higher Education Summit survey of ~100 university presidents (January 2026), and sector case studies (banking, telecom, manufacturing, logistics).",
+  "qualifiers": "Yale Insights is a Tier 2 institutional-analysis outlet. Some cited figures (Goldman 16K jobs/month, BCG 10-15% by 2031) are cross-cited third-party estimates rather than original Yale research. The graduate-unemployment numbers themselves are BLS-derived; the AI attribution is interpretive. Piece is opinion/analysis framed by CELI, not peer-reviewed.",
+  "fetchedAt": "2026-07-02"
+}

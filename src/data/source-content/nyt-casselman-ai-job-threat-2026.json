@@ -1,0 +1,14 @@
+{
+  "id": "nyt-casselman-ai-job-threat-2026",
+  "abstract": "Ben Casselman reports on a significant shift in the economics profession's stance toward AI and employment. Economists who previously dismissed AI job displacement concerns — drawing on decades of evidence that automation creates as many jobs as it destroys — are beginning to take seriously the possibility that this time could be different. Most economists still do not see much evidence that AI is currently disrupting the labor market at scale, but they are increasingly worried that disruption could arrive soon and that policymakers are unprepared to respond. The article captures a pivotal moment in expert consensus: the shift from confident dismissal to cautious concern. Key economists cited acknowledge that generative AI's capacity to perform cognitive and creative tasks distinguishes it from previous automation waves that primarily affected routine manual labor. The concern is less about whether disruption will happen and more about the speed and scale of displacement relative to the economy's capacity to create replacement employment.",
+  "keyFindings": [
+    "Economists who previously dismissed AI job threats are now taking the possibility of significant disruption seriously.",
+    "Most economists still see limited evidence of current AI labor market disruption, but concern about near-term disruption is growing.",
+    "A key worry is that policymakers are not prepared to respond if large-scale displacement materializes.",
+    "Generative AI's capacity for cognitive and creative tasks distinguishes it from previous automation waves that primarily affected manual labor.",
+    "The central concern is the speed and scale of potential displacement relative to the economy's capacity for job creation."
+  ],
+  "methodology": "New York Times reporting by economics correspondent Ben Casselman, based on interviews with prominent labor economists, survey data on economist opinions, and analysis of current labor market indicators. Published April 2026.",
+  "qualifiers": "Full article content unavailable due to NYT paywall; summary based on available excerpt and headline. The piece captures a snapshot of shifting expert opinion rather than presenting new empirical evidence. 'Taking seriously' is a qualitative assessment that could range from mild concern to fundamental reassessment. The article may overweight voices of economists who have changed their minds, potentially overstating the degree of consensus shift.",
+  "fetchedAt": "2026-05-26"
+}

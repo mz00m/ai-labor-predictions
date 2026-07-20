@@ -1,0 +1,14 @@
+{
+  "id": "stanford-del-ai-economic-indicators-2026",
+  "abstract": "The AI Economic Indicators is an expanding series of economic dashboards developed by the Stanford Digital Economy Lab to provide policymakers, business executives, and workers with timely and reliable information on AI's economic impact. The project addresses a critical gap in evidence-based understanding by combining regularly updated data from government agencies, researchers, and private companies to track employment, productivity, adoption, and skill changes across occupations and worker groups.",
+  "keyFindings": [
+    "Employment growth is lowest for occupations with the highest AI exposure, with modest differences observed across five exposure groups.",
+    "Early-career workers aged 22-25 in the most AI-exposed occupations show noticeable employment declines since ChatGPT's introduction, while employment gains appear for older workers in the same occupations.",
+    "No decisive evidence of transformative economic growth from AI is currently observed when tracking 12 macroeconomic transformation indicators.",
+    "Self-reported generative AI adoption rates for work diverge across recent surveys, with some reporting decreases while others report continued increases toward 50% adoption.",
+    "U.S. firms lead AI adoption but show little gap between current and expected adoption, contrasting with firms in the UK, Germany, and Australia that expect significant adoption increases."
+  ],
+  "methodology": "The AI Economic Indicators combines and regularly updates data from government statistical agencies, researchers, and private companies through multiple dashboards: the Canaries Dashboard (collaboration with ADP Research tracking employment across occupations by AI exposure using payroll data), the Transformation Tracker (monitoring macroeconomic signals associated with AI advances), and the Adoption Monitor (tracking generative AI adoption trends from available surveys and datasets). The project is designed as a low-latency economic observatory providing continuous updates rather than point-in-time analysis.",
+  "qualifiers": "The source notes that 'AI is advancing faster than our ability to understand its economic consequences' and that current decision-makers 'rely on limited evidence.' The early-career worker sample (22-25 years old) accounts for just 7.0% of employment in the baseline sample, limiting the representativeness of findings for this group. Adoption data shows divergence across surveys with unclear reconciliation of conflicting trends. The project explicitly states 'we see no decisive evidence of transformation at present,' indicating preliminary findings subject to change.",
+  "fetchedAt": "2026-07-14"
+}

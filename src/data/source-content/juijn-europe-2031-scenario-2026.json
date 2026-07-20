@@ -1,0 +1,15 @@
+{
+  "abstract": "An 18,000-word fictional five-year scenario published June 11, 2026 by European AI researchers, warning that the EU risks becoming AI-dependent on the US or China by 2031. The scenario puts Europe at 5% of global AI compute (versus ~80% US). Three 2025 misjudgements drive the trajectory: underestimating AI's pace, underestimating its scope of change, and overestimating Europe's catch-up capacity. Beats include a 2027 ransomware wave triggered by an open-source frontier model, hollowing-out of European cybersecurity, and US/Chinese acquisition of distressed European carmakers and machine-tool firms with conversion to robot production. Narrative form, with two protagonists \u2014 a French Commission official in Brussels and a German AI founder who relocated to Silicon Valley. Not a policy paper; deliberately story-shaped to spread.",
+  "keyFindings": [
+    "Scenario puts Europe at 5% of global AI compute by 2031 vs. ~80% US",
+    "Three 2025 misjudgements: AI's pace, scope, and Europe's catch-up capacity",
+    "2027 ransomware wave (open-source frontier model) becomes structural \u2014 European orgs routinely pay ransom",
+    "US/Chinese firms acquire distressed European auto and machine-tool manufacturers and convert factory floors to robot production",
+    "Three individual US AI labs in the scenario outpace the entire EU",
+    "Foundational text in the European AI sovereignty debate; widely cited in EU policy circles within weeks of publication"
+  ],
+  "methodology": "Speculative fiction scenario, deliberately not policy paper. Drafted by researchers across Arq Foundation, Delta Institute, Oxford Martin AI Governance Initiative, KIRA Center, and MIT.",
+  "qualifiers": "Tier 3 \u2014 fiction-format scenario, not empirical or formal model. Contributors include legitimate AI governance scholars, but the document is intentionally aggressive on timeline and outcomes to provoke European policy response. Cite as a foundational text in European AI-sovereignty debate, not as forecast.",
+  "id": "juijn-europe-2031-scenario-2026",
+  "fetchedAt": "2026-06-26"
+}

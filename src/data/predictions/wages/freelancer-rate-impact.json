@@ -82,18 +82,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2026-02-01",
-      "value": -32,
-      "confidenceLow": -44,
-      "confidenceHigh": -22,
-      "sourceIds": [
-        "sciencedirect-freelancer-demand-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
       "date": "2025-11-14",
       "value": -5,
       "sourceIds": [
@@ -110,18 +98,21 @@
         "conversionHigh": 1.5,
         "rationale": "Counterfactual wage decline from LLM signal degradation; single platform (Freelancer.com), coding category only; graph covers all AI-exposed freelance categories"
       }
+    },
+    {
+      "date": "2026-02-01",
+      "value": -32,
+      "confidenceLow": -44,
+      "confidenceHigh": -22,
+      "sourceIds": [
+        "sciencedirect-freelancer-demand-2025"
+      ],
+      "evidenceTier": 1,
+      "metricType": "projection",
+      "dataType": "projected"
     }
   ],
   "overlays": [
-    {
-      "date": "2026-06-19",
-      "direction": "down",
-      "sourceIds": [
-        "siddiq-zhang-labor-commoditization-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "UCLA Anderson (Siddiq & Zhang, 49,610 Upwork workers, 2.26M contracts): in late 2025–early 2026, demand shifts toward lower-priced workers by ~7.9% in most AI-exposed categories vs. unexposed — evidence of AI-driven labor commoditization"
-    },
     {
       "date": "2025-01-01",
       "direction": "down",
@@ -165,7 +156,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: freelance spend fell 0.66% → 0.14% of total"
+      "label": "Ramp: freelance spend fell 0.66% \u2192 0.14% of total"
     },
     {
       "date": "2025-10-30",
@@ -175,6 +166,24 @@
       ],
       "evidenceTier": 1,
       "label": "CAIS/Scale AI: Best AI agent captures only $1,720 of $143,991 freelance value (1.2%)"
+    },
+    {
+      "date": "2025-11-14",
+      "direction": "down",
+      "sourceIds": [
+        "galdin-silbert-llm-signaling-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Galdin & Silbert: employer WTP for freelancer signals fell 42% post-LLM; 1.5% hiring decline"
+    },
+    {
+      "date": "2026-02-04",
+      "direction": "down",
+      "sourceIds": [
+        "upwork-in-demand-skills-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Upwork: AI-applied freelance skills +109% YoY; video gen +329%"
     },
     {
       "date": "2026-02-10",
@@ -210,16 +219,16 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Moderate scenario → almost all 5-day freelance SW jobs automatable by 2030"
+      "label": "FRI: Moderate scenario \u2192 almost all 5-day freelance SW jobs automatable by 2030"
     },
     {
-      "date": "2025-11-14",
+      "date": "2026-04-30",
       "direction": "down",
       "sourceIds": [
-        "galdin-silbert-llm-signaling-2025"
+        "fiverr-q1-2026-earnings"
       ],
-      "evidenceTier": 2,
-      "label": "Galdin & Silbert: employer WTP for freelancer signals fell 42% post-LLM; 1.5% hiring decline"
+      "evidenceTier": 1,
+      "label": "Fiverr Q1 2026: Active buyers -17.8%; marketplace rev -13.6%; $1K+ projects +18%"
     },
     {
       "date": "2026-05-05",
@@ -229,6 +238,24 @@
       ],
       "evidenceTier": 1,
       "label": "Wolfe & Dangol: AI labs frame experts as interchangeable, pressuring freelancer rates"
+    },
+    {
+      "date": "2026-06-19",
+      "direction": "down",
+      "sourceIds": [
+        "siddiq-zhang-labor-commoditization-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "UCLA Anderson (Siddiq/Zhang, n=49,610 Upwork, 2.26M contracts): AI-exposed demand shifts to lower-priced workers ~7.9%"
+    },
+    {
+      "date": "2026-06-19",
+      "direction": "down",
+      "sourceIds": [
+        "siddiq-zhang-labor-commoditization-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "UCLA (Siddiq/Zhang): Upwork demand shifts 7.9% toward lower-priced workers"
     }
   ],
   "sources": [
@@ -306,7 +333,7 @@
       "id": "sciencedirect-freelancer-demand-2025",
       "title": "Winners and losers of generative AI: Early Evidence of Shifts in Freelancer Demand",
       "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
-      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, Kässi, Braesemann, Mishkin, del Rio-Chanona)",
+      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, K\u00e4ssi, Braesemann, Mishkin, del Rio-Chanona)",
       "evidenceTier": 1,
       "datePublished": "2025-01-29",
       "excerpt": "Demand for substitutable skills (writing, translation) decreased 20-50% relative to counterfactual after ChatGPT launch. Short-term (1-3 week) jobs saw sharpest decline. ML programming demand grew 24%; AI chatbot development nearly tripled. Novice worker demand declined across complementary skill clusters.",
@@ -329,7 +356,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -369,7 +396,7 @@
       "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
-      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects — capturing only 1.2% of economic value. Automation rate: 2.5%.",
+      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects \u2014 capturing only 1.2% of economic value. Automation rate: 2.5%.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -411,6 +438,35 @@
       "datePublished": "2026-05-05",
       "excerpt": "Analysis of public communications from five major AI labs finds a consistent narrative framing domain experts as interchangeable data suppliers rather than irreplaceable professionals. The reframing creates a cheap-expertise gig economy with downward pressure on credentialed knowledge-worker wage premiums and freelancer rates.",
       "dateAdded": "2026-05-18"
+    },
+    {
+      "id": "upwork-in-demand-skills-2026",
+      "title": "Upwork's In-Demand Skills 2026: Demand for Top AI Skills More Than Doubles as AI Is Embedded Into Everyday Work",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "publisher": "Upwork (Investor Relations / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-04",
+      "excerpt": "Top skills explicitly tied to applying AI within existing roles grew 109% year over year. AI video generation and editing +329%, AI integration +178%, AI data annotation and labeling +154%, AI image generation and editing +95%, AI chatbot development +71%. The most sought-after skills including full stack development, general virtual assistance, data analytics, and graphic design have remained consistently strong year over year. Nearly half of business leaders say they would pay a premium to work with independent talent who are creative and innovative. Analysis of completed-job freelancer earnings Jan 1-Dec 31, 2025.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "fiverr-q1-2026-earnings",
+      "title": "Fiverr Announces First Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-first-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-30",
+      "excerpt": "Q1 2026 revenue of $105.5 million, down 1.6% year-over-year. Marketplace revenue fell 13.6% to $67.1 million, while Services revenue jumped 30% to $38.4 million. Annual active buyers slipped to 2.9 million as of March 31, down 17.8 percent from 3.5 million a year earlier, but spend per buyer rose 15.4 percent to $356. Projects priced over $1,000 grew at a strong double-digit clip, and clients completing those engagements were up 18 percent year over year. The pivot is partly a response to a flood of low-quality AI output eroding marketplace trust.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "siddiq-zhang-labor-commoditization-2026",
+      "title": "Human Capital, AI, and Labor Commoditization",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6968139",
+      "publisher": "UCLA Anderson School of Management (Siddiq & Zhang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-19",
+      "excerpt": "Difference-in-differences study on 49,610 Upwork workers and 2.26M contracts (2021Q1\u20132026Q1) around the release of ChatGPT. Uses text embeddings of worker profiles and Shapley values to quantify the predictive importance of human capital signals (self-presentation, credentials, reputation) and price. In max AI-exposed categories vs. unexposed, contract volume fell ~7.0% post-ChatGPT (9.6% late period, 2025Q2\u20132026Q1); the combined importance of human capital signals fell 7.8% (10.1% late) while price importance rose 1.1% (1.8% late). Demand premium for high-human-capital workers compressed by 6.2% (10.3% late), and demand reallocated toward lower-priced workers by 3.2% (7.9% late). Authors interpret as empirical evidence of AI-driven labor commoditization \u2014 clients view differently-skilled workers as more substitutable when AI compresses output quality."
     }
   ]
 }

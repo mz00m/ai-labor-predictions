@@ -1,0 +1,13 @@
+{
+  "id": "dallasfed-young-workers-ai-2026",
+  "abstract": "This Dallas Fed research paper documents a significant decline in employment among young workers (aged 16-24) in occupations with high AI exposure, even as overall employment in those occupations remains relatively stable. The finding suggests that AI's initial labor market displacement effects are concentrated among entry-level and early-career workers rather than experienced workers, consistent with models where AI substitutes for routine tasks typically assigned to junior employees while augmenting the productivity of experienced workers who handle more complex, judgment-intensive work. The age-differentiated pattern of AI impact has important implications for workforce development policy, educational investment, and intergenerational economic mobility. The research provides early empirical evidence of a specific channel through which AI may reduce economic opportunity for younger cohorts entering the labor market.",
+  "keyFindings": [
+    "Employment among young workers (16-24) has declined significantly in occupations with high AI exposure, even as overall employment in those occupations remains stable.",
+    "The displacement effect is concentrated at the entry level, suggesting AI substitutes for tasks typically assigned to junior workers while augmenting experienced workers.",
+    "Older workers in AI-exposed occupations have not experienced comparable employment declines, indicating AI's labor market effects are age-differentiated.",
+    "The pattern is consistent with firms reducing entry-level hiring rather than laying off existing experienced workers, with AI tools absorbing tasks that would have gone to new hires."
+  ],
+  "methodology": "Empirical analysis using labor market microdata to track employment trends by age group across occupations classified by AI exposure level. Compares pre- and post-AI employment shares of young workers (16-24) relative to older workers in high- vs. low-AI-exposure occupations. Published January 2026 by the Federal Reserve Bank of Dallas.",
+  "qualifiers": "The analysis cannot fully distinguish AI-driven displacement from other factors affecting youth employment (e.g., changing educational enrollment patterns, post-pandemic labor market shifts). Occupational AI exposure indices may not perfectly capture actual AI adoption within specific firms. The short post-AI observation window limits conclusions about whether the youth employment decline is a transitional or permanent effect.",
+  "fetchedAt": "2026-05-26"
+}

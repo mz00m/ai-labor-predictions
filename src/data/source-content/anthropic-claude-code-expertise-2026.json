@@ -1,0 +1,17 @@
+{
+  "id": "anthropic-claude-code-expertise-2026",
+  "abstract": "Anthropic Economic Research examines Claude Code usage patterns and finds persistent — not shrinking — returns to human expertise. Analyzing ~400,000 Claude Code sessions from ~235,000 users between October 2025 and April 2026, the team documents large performance gaps between novice and expert Claude Code users on verified coding success, session recovery when things go wrong, and the estimated economic value of a session. Expertise does not get commoditized by the agent; if anything, experts extract more value.",
+  "keyFindings": [
+    "Verified success rate: novice 15%, intermediate/expert 28-33% — a persistent 13-18pp expert premium",
+    "Partial success rate: novice 77%, intermediate/expert 91-92%",
+    "Session abandonment when troubled: novice 19%, intermediate+ 5-7%",
+    "'Every one of the ten largest occupations in our dataset lands within seven points of software engineers' on verified success in code-producing sessions (29-34% range)",
+    "'The estimated value of the average session rose by 27% between October and April' (7 months)",
+    "Division of labor: 'people make about 70% of the planning decisions but only 20% of the execution decisions'",
+    "Work mix: 56% code writing/fixing/testing, 17% software operations, 14% planning/exploration, 13% analysis/prose",
+    "Novice: ~5 actions and 600 words of Claude output per prompt; expert: ~12 actions and 3,200 words per prompt"
+  ],
+  "methodology": "Observational analysis of ~400,000 Claude Code sessions from ~235,000 unique users spanning October 2025 through April 2026. Users classified by expertise using session-level behavior. Success rates computed against verified outcomes on coding tasks; economic value of sessions estimated from task-completion signals over the observation window.",
+  "qualifiers": "Sample is Claude Code users, not a general population. Expertise classification is behavioral rather than credential-based. Success rates measure coding outcomes on tasks users choose to bring to the agent, not the full labor-market distribution of tasks. The '27% value increase' is a model-driven estimate, not a market-price measurement. Findings support 'persistent returns to expertise' rather than skill compression, but generalization to non-coding agentic settings requires additional evidence.",
+  "fetchedAt": "2026-07-06"
+}

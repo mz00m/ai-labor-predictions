@@ -1,0 +1,13 @@
+{
+  "id": "morgan-stanley-workforce-cut-2026",
+  "abstract": "Morgan Stanley announced a 3% workforce reduction in early 2026, cutting approximately 2,000 positions amid record-breaking profits. The cuts came alongside a 47% increase in investment banking revenue, making the juxtaposition between financial performance and headcount reduction especially stark. The move signals a new era of efficiency-driven workforce management at major financial institutions, where technology and AI investments allow firms to grow revenue without proportional headcount growth. Morgan Stanley joins peers JPMorgan Chase, Goldman Sachs, and Citigroup in pursuing headcount reductions concurrent with strong or growing business performance, establishing a pattern of 'profitable pruning' across the banking sector.",
+  "keyFindings": [
+    "Morgan Stanley cut approximately 3% of its workforce (roughly 2,000 positions) despite record profits.",
+    "Investment banking revenue increased 47%, demonstrating that cuts were efficiency-driven rather than defensive.",
+    "The simultaneous profit growth and headcount reduction exemplifies a broader banking sector pattern of technology-enabled 'profitable pruning.'",
+    "Morgan Stanley joins JPMorgan, Goldman Sachs, and Citigroup in reducing staff while posting strong financial results."
+  ],
+  "methodology": "Corporate financial disclosures and press reporting on Morgan Stanley's workforce actions and quarterly earnings. The 3% reduction figure comes from internal communications and regulatory filings.",
+  "qualifiers": "The 3% figure represents a relatively modest reduction that could reflect normal business-cycle workforce management rather than structural AI displacement. The article does not specify which roles were cut or the degree to which AI/automation versus other efficiency measures drove the reductions. Record profits may partly reflect favorable market conditions (strong M&A and IPO activity) rather than technology-driven efficiency gains.",
+  "fetchedAt": "2026-05-26"
+}

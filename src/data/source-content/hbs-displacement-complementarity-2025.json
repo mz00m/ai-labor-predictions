@@ -1,0 +1,14 @@
+{
+  "id": "hbs-displacement-complementarity-2025",
+  "abstract": "This Harvard Business School study examines whether generative AI displaces or complements workers, finding that the effects are highly heterogeneous across task types and worker roles. The researchers analyze how GenAI adoption affects employment and task allocation within firms, distinguishing between routine analytical tasks (where AI tends to substitute for human labor) and complex problem-solving roles (where AI acts as a complement that enhances worker productivity). The paper contributes to the displacement-versus-augmentation debate by showing that the same technology can simultaneously displace some workers while making others more productive, depending on the nature of their tasks and the organizational context. The findings underscore that aggregate labor market statistics obscure critical within-firm and within-occupation heterogeneity in AI's workforce effects.",
+  "keyFindings": [
+    "Generative AI's labor market effects are highly heterogeneous — the same technology displaces workers in routine analytical tasks while complementing those in complex problem-solving roles.",
+    "Within-firm analysis reveals that AI adoption leads to task reallocation rather than uniform workforce reduction, with displaced routine tasks offset by expanded demand for judgment-intensive work.",
+    "Workers whose roles involve complex reasoning, synthesis, and strategic decision-making experience productivity gains from GenAI augmentation rather than displacement.",
+    "The displacement-complementarity balance depends heavily on organizational context, including how firms redesign workflows around AI capabilities.",
+    "Aggregate labor market statistics significantly understate the magnitude of AI's redistributive effects by averaging across workers who gain and those who lose from adoption."
+  ],
+  "methodology": "Empirical analysis using firm-level data on generative AI adoption and workforce outcomes. The study examines within-firm variation in AI's effects across different task types and worker roles, employing econometric methods to separate displacement from complementarity channels.",
+  "qualifiers": "As an HBS working paper, the findings are subject to revision through the peer review process. The heterogeneity finding, while important, makes it difficult to derive clear aggregate predictions about AI's net employment effect. The study focuses on early GenAI adoption and may not capture longer-run equilibrium effects as firms and workers adapt. Firm-level data may not be representative of the full economy, particularly smaller firms with less capacity to reorganize around AI.",
+  "fetchedAt": "2026-05-26"
+}

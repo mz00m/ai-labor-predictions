@@ -1,0 +1,13 @@
+{
+  "abstract": "Vitalik Buterin introduces 'd/acc' \u2014 defensive accelerationism \u2014 as a third path between effective acceleration (e/acc) and pause-AI camps. Argues for accelerating defensive technologies (AI safety, decentralized infrastructure, bio-defense, info-defense) so that capability gains translate into diffuse and robust welfare rather than concentrated capture.",
+  "keyFindings": [
+    "Introduces 'd/acc' as a heuristic for which technologies to accelerate (defense, decentralization) vs. which to slow",
+    "Critiques unconditional e/acc as ignoring distributional and security risks",
+    "Critiques pause-AI as ceding capability to less-aligned actors",
+    "Framework adopted broadly in techno-pluralist policy circles"
+  ],
+  "methodology": "Personal essay; no formal model.",
+  "qualifiers": "Tier 4 \u2014 influential individual essay, not an empirical study or institutional position.",
+  "id": "buterin-d-acc-techno-optimism-2023",
+  "fetchedAt": "2026-06-26"
+}

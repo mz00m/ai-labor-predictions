@@ -1,0 +1,14 @@
+{
+  "id": "gartner-edtech-2025",
+  "abstract": "In its annual Top Predictions report for IT organizations and users in 2025, Gartner projected that by 2026, 20% of organizations will use AI to flatten their organizational structures, eliminating more than half of current middle management positions in those adopting organizations. This prediction reflects a broader trend toward AI-enabled organizational restructuring, where AI systems take over coordination, reporting, and supervisory tasks traditionally handled by middle managers. Gartner frames this as part of a wider set of technology-driven workforce transformations expected to reshape enterprise hierarchies. The prediction is notable for its specificity — targeting middle management rather than frontline or executive roles — and its aggressive timeline, suggesting significant structural changes within just one to two years of the prediction's publication. Despite the 'EdTech' label sometimes associated with this report, the prediction is a general workforce and organizational design forecast applicable across sectors.",
+  "keyFindings": [
+    "20% of organizations predicted to use AI to flatten organizational structure by 2026",
+    "More than half of middle management positions expected to be eliminated in AI-adopting organizations",
+    "AI takes over coordination, reporting, and supervisory tasks traditionally performed by middle managers",
+    "Prediction targets organizational hierarchy restructuring rather than frontline automation",
+    "Aggressive 1-2 year timeline for structural changes (published October 2024, targeting 2026)"
+  ],
+  "methodology": "Gartner Top Predictions series, based on analyst research, client advisory engagements, and market trend analysis. Specific survey or data methodology for this prediction not disclosed in the press release.",
+  "qualifiers": "This is an analyst prediction, not an empirical finding — Gartner predictions carry inherent uncertainty and the firm does not always publish hit rates. The '20% of organizations' framing makes the prediction harder to falsify. 'More than half' of middle management is an ambiguous threshold. General workforce prediction not specific to any industry. Actual adoption timelines for AI-driven organizational restructuring may lag significantly behind Gartner's projections.",
+  "fetchedAt": "2026-05-26"
+}

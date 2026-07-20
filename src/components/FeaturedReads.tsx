@@ -9,44 +9,44 @@ interface Article {
 
 const articles: Article[] = [
   {
-    author: "The Economist",
-    title: "Meet the world's top AI-pilled economists",
+    author: "Financial Times",
+    title: "AI isn't destroying entry-level jobs. It's changing them",
     summary:
-      "Economic analysis of AI is migrating out of universities and into labs and government. Even under a 'rapid' AI scenario by 2030, the median academic economist expects US GDP growth of just 3.5% in 2050 — versus 5.3% for AI researchers — and only 11% of leading economists (Chicago survey) think AI will substantially raise unemployment. Junior lab economist roles pay $300K+; by 2019 two-thirds of AI researchers worked in industry, up from under half in 2001. Anthropic hired Anton Korinek, OpenAI hired Ronnie Chatterji, DeepMind hired Alex Imas. A sharp map of who is actually studying AI's economic impact.",
-    date: "Jun 15",
-    url: "https://www.economist.com/finance-and-economics/2026/06/15/meet-the-worlds-top-ai-pilled-economists",
+      "FT synthesis of the PwC 2026 Global AI Jobs Barometer (n=1B+ postings, 27 countries). The 'apprenticeship rung' argument: newcomers used to learn by doing simple repetitive work — the exact tasks AI has automated first. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal skill — historically senior. Job openings for 'seniorised' entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%; entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills. Reframes the entry-level story as compositional shift, not mass displacement — but the collapsed learning-by-doing path has real implications for how firms design early careers and how universities prepare graduates.",
+    date: "Jul 16",
+    url: "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
   },
   {
-    author: "Erik Brynjolfsson et al. (Stanford DEL)",
-    title: "The AI Economic Indicators",
+    author: "Brynjolfsson, Agrawal, Korinek, Cunningham et al.",
+    title: "We Must Act Now: A Statement on AI's Economic Transformation",
     summary:
-      "Stanford's Digital Economy Lab launches a monthly-updated dashboard suite tracking AI's real economic footprint — the live successor to the Canaries research. An Employment & AI Exposure dashboard built on ADP payroll records covering millions of workers; a Canaries dashboard showing a 16% relative employment decline for workers 22–25 in the most AI-exposed occupations, concentrated where AI automates rather than augments; and a Takeoff Tracker scanning 12 macro indicators — productivity, capital share, energy use — that currently read mostly neutral. A standing answer to 'what does the data show right now?'",
-    date: "Jun 2026",
-    url: "https://digitaleconomy.stanford.edu/project/indicators/",
+      "Statement organized by Brynjolfsson, Agrawal, Korinek, and Cunningham; signed by 16 Nobel Laureates (Spence and Acemoglu named) and 200+ economists and AI researchers. Warns AI could drive an economic transformation 'larger than the Industrial Revolution' but on 'a vastly shorter time frame,' with large-scale job displacement as a primary risk. Calls for deeper research, policy frameworks, and institutions ensuring AI complements human capabilities. Four asks: deepen research, build enabling policy, redirect AI to benefit workers, re-architect political and economic systems before transformation arrives. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.'",
+    date: "Jul 13",
+    url: "https://www.wemustactnow.ai/",
   },
   {
-    author: "Bill Wasik, mod. (NYT Magazine)",
-    title: "Who Will Actually Thrive in the Hybrid A.I.-Human Work Force",
+    author: "Ben Casselman (NYT)",
+    title: "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
     summary:
-      "Four experts — Daron Acemoglu, Dean Ball, Ethan Mollick and Clara Shih — debate how workers should prepare. Mollick cites a P&G experiment with 776 employees where individuals using AI matched two-person teams without it — and warns the apprenticeship model for training juniors has 'all collapsed.' Acemoglu challenges the agent-supervisor future ('How many Marcus Chens can the American economy employ?') and argues investment should flow to augmenting shortage trades — a novice electrician with the right AI tool could be 10x as productive. Shih sees a 'tale of two cities': entry-level candidates fluent in AI agents get hired; the rest watch those roles disappear.",
-    date: "Jun 9",
-    url: "https://www.nytimes.com/2026/06/09/magazine/ai-jobs-workforce-labor.html",
+      "Casselman's synthesis of the measurement problem: different data sources give contradictory answers on basic questions — is AI causing job losses or gains, which workers are most exposed, is the productivity boom real? Highlights new Yale Budget Lab 'occupational churn' monthly measure; Ramp/Revelio data finding companies using AI most intensely are adding jobs FASTER than laggards (opposite direction from displacement narrative); Nathan Goldschlag/EIG report on the measurement challenge itself; and a bipartisan Senate bill (Kelly D-AZ) to expand federal AI labor data collection. Frames the confusion as J-curve territory — most firms still on the downward experimentation phase before productivity gains materialize. Companion to Casselman's June 10 'Hidden Workers' piece.",
+    date: "Jul 2",
+    url: "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
   },
   {
-    author: "Patricia Cohen (NYT)",
-    title: "A.I. Doesn't Have to Mean Layoffs",
+    author: "Bharat Chandar",
+    title: "AI and the Supply and Demand for Labor",
     summary:
-      "Schneider Electric (160K employees) chose augmentation over replacement. In Q4 2025, AI answered 75% of 150K customer service queries — but agents still review every response, preserving headcount while cutting response times. On the factory floor, AI cut manufacturing waste 73%. Erik Brynjolfsson argues bigger gains come from making workers productive than from cutting them. The counterpoint comes from within: Schneider's own AI-assisted workforce built a product that eliminates the need for an electrician.",
-    date: "May 29",
-    url: "https://www.nytimes.com/2026/05/29/business/economy/ai-jobs-productivity.html",
+      "Chandar (coauthor of the 'Canaries' paper) was 1 of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss — with Acemoglu, Henderson, Restrepo, Wolfers. All 16 agreed AI boosts productivity; 8 predicted no change; 2 net growth. The 5 net-loss economists unanimously said AI replaces rather than complements and reduces white-collar demand. Chandar's key clarification: this isn't a 'jobs bloodbath' story — he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering long-run labor force participation. A disambiguation of what economists actually mean by 'net job loss.'",
+    date: "Jun 29",
+    url: "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
   },
   {
-    author: "David M. Solomon (NYT)",
-    title: "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
+    author: "Chip Cutter (WSJ)",
+    title: "The New Push to Ready Millions for AI Career Upheaval",
     summary:
-      "Goldman's CEO argues AI will automate 25% of work hours but won't eliminate 25% of jobs — complexity expands to fill freed capacity. Cites a Stanford study showing entry-level employment in the most AI-exposed occupations has already declined 16%, but notes US companies churn 25–35M jobs annually and Goldman's own data center demand has created 200K+ construction jobs since 2022. A major CEO staking out the optimist position with internal data.",
-    date: "May 22",
-    url: "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
+      "RAISE US launches as a bipartisan consortium with a 'people strategy' for the AI era — led by former Commerce Secretary Gina Raimondo and former Indiana Gov. Eric Holcomb, with founding employers Amazon, Microsoft, Bank of America, Eli Lilly, OpenAI and Anthropic, plus MIT's David Autor on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah and Connecticut. Mandate goes beyond conventional retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and designing corporate incentives for employers to retain and reskill rather than lay off. The first large bipartisan, multi-state institutional response treating AI labor disruption as a policy problem.",
+    date: "Jun 25",
+    url: "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
   },
 ];
 

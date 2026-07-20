@@ -1,0 +1,13 @@
+{
+  "id": "fred-unemploy-mar-2026",
+  "abstract": "The FRED unemployment level time series tracks the total number of unemployed persons in the US economy, based on the Current Population Survey (CPS) conducted by the Bureau of Labor Statistics. The March 2026 update provides the latest reading in a series that serves as a fundamental macroeconomic indicator for assessing labor market health. The unemployment level must be tracked alongside AI adoption metrics to determine whether AI-driven displacement is manifesting in aggregate labor market statistics or remains masked by offsetting factors (e.g., strong aggregate demand, demographic changes, labor force exits). Historical context matters: unemployment spiked to approximately 23 million during the April 2020 pandemic peak and subsequently recovered to pre-pandemic levels. Any future AI-driven unemployment increase would need to be distinguished from cyclical fluctuations and demographic trends in labor force participation.",
+  "keyFindings": [
+    "The unemployment level provides the broadest measure of labor market slack, essential context for interpreting whether AI-driven displacement signals from micro-level studies are manifesting at the macro level.",
+    "Unemployment peaked at approximately 23 million in April 2020 and has since recovered, with the March 2026 level reflecting normalized post-pandemic labor market conditions.",
+    "The gap between micro-level evidence of AI displacement (e.g., Crane-Soto coder study, young worker effects) and stable aggregate unemployment is a key puzzle in AI labor economics.",
+    "Tracking unemployment alongside JOLTS openings and AI adoption rates enables triangulation of whether AI is reducing labor demand, shifting it across occupations, or being absorbed without aggregate employment effects."
+  ],
+  "methodology": "Monthly data from the Current Population Survey (CPS), a household survey of approximately 60,000 households conducted by the Bureau of Labor Statistics. Unemployment is defined as persons who are jobless, actively looking for work, and available to take a job. Data are seasonally adjusted. Published via FRED with historical time series back to 1948.",
+  "qualifiers": "The unemployment level captures only actively job-seeking individuals and misses discouraged workers who have left the labor force. AI-driven labor market changes may manifest as labor force exits (lower participation) rather than higher unemployment. The aggregate level masks compositional shifts across occupations, industries, and demographics. Seasonal adjustment may smooth over short-term AI-related disruptions. CPS is a household survey subject to sampling error.",
+  "fetchedAt": "2026-05-26"
+}

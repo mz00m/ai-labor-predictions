@@ -1,0 +1,17 @@
+{
+  "id": "fiverr-q1-2026-earnings",
+  "abstract": "Fiverr Q1 2026 earnings (April 30, 2026) reveal an accelerating bifurcation of the freelance marketplace. Revenue fell 1.6% YoY to $105.5M but adjusted EBITDA rose 16.3%; marketplace revenue dropped 13.6% while Services revenue jumped 30%. Annual active buyers fell 17.8% YoY to 2.9M, but spend per buyer rose 15.4% to $356. Projects over $1,000 grew at a strong double-digit clip. Management explicitly attributes the shift to 'a flood of low-quality AI output eroding marketplace trust,' with the company pivoting toward high-value, complex work.",
+  "keyFindings": [
+    "Fiverr Q1 2026 revenue: $105.5M, -1.6% YoY",
+    "Marketplace revenue: -13.6% to $67.1M; Services revenue: +30% to $38.4M",
+    "Annual active buyers: 2.9M as of March 31, 2026 — down 17.8% from 3.5M a year earlier",
+    "Spend per buyer: $356, +15.4% YoY",
+    "Projects priced over $1,000 grew at strong double-digit rate; clients completing those +18% YoY",
+    "Adjusted EBITDA: $22.6M, +16.3% YoY (21% margin, +330 bps YoY)",
+    "CEO Micha Kaufman: 'a flood of low-quality AI output eroding marketplace trust' motivating pivot to high-value work",
+    "Company acknowledges 'AI developments may present challenges for the industry and reduce the demand for some of the company's service offerings'"
+  ],
+  "methodology": "Fiverr International Ltd. Q1 2026 earnings release (April 30, 2026) and earnings call transcript. Fiverr is a public company (NYSE: FVRR) required to disclose material metrics; buyer counts, revenue by segment, and spend-per-buyer are audited quarterly.",
+  "qualifiers": "Fiverr is one platform — its metrics reflect the mid- and low-value freelance segment more than the enterprise-freelance market. Rate-per-hour is not directly disclosed; spend-per-buyer growth (+15%) reflects both fewer smaller buyers churning out and larger projects growing. The buyer-count decline is the strongest freelancer-rate signal, coming as low-complexity gig work is displaced by AI.",
+  "fetchedAt": "2026-07-02"
+}

@@ -302,7 +302,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → AI surpasses paralegals and clerical workers by 2030"
+      "label": "FRI: Rapid scenario \u2192 AI surpasses paralegals and clerical workers by 2030"
     },
     {
       "date": "2026-04-24",
@@ -312,6 +312,15 @@
       ],
       "evidenceTier": 3,
       "label": "Silicon Continent: Frey/Osborne put accountants at 94% automation risk; BLS now +5%"
+    },
+    {
+      "date": "2026-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "bloomberg-boesler-tech-finance-ai-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Bloomberg: finance+info sectors shedding 28k jobs/mo in 2026 (BLS data)"
     }
   ],
   "sources": [
@@ -352,7 +361,7 @@
       "publisher": "Morgan Stanley (via TechCrunch / Financial Times)",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "200,000+ European banking jobs could vanish by 2030 — roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
+      "excerpt": "200,000+ European banking jobs could vanish by 2030 \u2014 roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -362,7 +371,7 @@
       "publisher": "Multiple financial reporting (via Fortune)",
       "evidenceTier": 1,
       "datePublished": "2025-12-31",
-      "excerpt": "Combined headcount fell to 1.09 million — lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
+      "excerpt": "Combined headcount fell to 1.09 million \u2014 lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -372,7 +381,7 @@
       "publisher": "Citigroup Global Perspectives & Solutions",
       "evidenceTier": 2,
       "datePublished": "2024-06-19",
-      "excerpt": "54% of banking jobs have high potential for automation — more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
+      "excerpt": "54% of banking jobs have high potential for automation \u2014 more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -437,12 +446,12 @@
     },
     {
       "id": "bofa-q4-2025-ai-coding-2026",
-      "title": "Bank of America Q4 2025 Earnings Call — AI Coding Efficiency",
+      "title": "Bank of America Q4 2025 Earnings Call \u2014 AI Coding Efficiency",
       "url": "https://investor.bankofamerica.com/events-and-presentations/events/detail/20260114-q4-2025-bank-of-america-earnings-conference-call",
       "publisher": "Bank of America (Q4 2025 earnings call)",
       "evidenceTier": 1,
       "datePublished": "2026-01-14",
-      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've — using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
+      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've \u2014 using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
       "dateAdded": "2026-03-10"
     },
     {
@@ -609,6 +618,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-04-24",
       "excerpt": "In 2013, a study by Carl Frey and Michael Osborne put the probability that accountants and auditors would be automated at 94 percent. A decade later, the US Bureau of Labor Statistics counts 1.6 million accountants and auditors employed, median pay of $81,680, and projects the occupation to grow another 5 percent through 2034, faster than the average for all jobs."
+    },
+    {
+      "id": "bloomberg-boesler-tech-finance-ai-2026",
+      "title": "Tech and Finance Sectors Losing 28,000 Jobs Monthly Show AI Impact on Labor",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-01/tech-and-finance-sectors-losing-28-000-jobs-monthly-show-ai-impact-on-labor",
+      "publisher": "Bloomberg (Boesler & Prakash)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01",
+      "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
+      "dateAdded": "2026-07-06"
     }
   ]
 }

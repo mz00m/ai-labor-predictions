@@ -1,0 +1,14 @@
+{
+  "id": "pizzinelli-imf-complementarity-2023",
+  "abstract": "Pizzinelli et al. construct a novel AI exposure measure for occupations and map it across countries and income distributions to assess the global distributional implications of AI adoption. The analysis finds that advanced economies face substantially higher AI exposure than emerging markets, with approximately 60% of jobs in advanced economies having significant AI exposure compared to roughly 40% in emerging markets. This gap reflects differences in occupational structure — advanced economies have larger shares of cognitive, white-collar occupations that overlap with current AI capabilities. Within countries, the distributional implications are complex: higher-income workers face greater AI exposure but are also better positioned to complement AI, potentially amplifying rather than compressing income inequality. Women face slightly higher exposure than men in advanced economies due to occupational sorting into administrative and clerical roles with high AI overlap. The paper emphasizes the distinction between AI exposure (overlap with AI capabilities) and AI impact (net labor market effect), noting that exposure is necessary but not sufficient for displacement.",
+  "keyFindings": [
+    "Advanced economies face ~60% job AI exposure vs. ~40% in emerging markets, reflecting occupational structure differences",
+    "High-income workers face greater AI exposure but are better positioned to complement AI, potentially widening inequality",
+    "Women face slightly higher AI exposure in advanced economies due to occupational sorting into clerical and administrative roles",
+    "Critical distinction between AI exposure (capability overlap) and AI impact (net labor market effect) — exposure alone does not predict displacement",
+    "Cross-country variation in AI exposure driven primarily by differences in occupational mix rather than within-occupation technology differences"
+  ],
+  "methodology": "Constructs an AI occupational exposure index by mapping AI capabilities to occupational task requirements using O*NET data, then applying this index across countries using harmonized labor force survey data. Cross-country analysis covering advanced and emerging market economies.",
+  "qualifiers": "AI exposure measure based on current AI capabilities, which are evolving rapidly — exposure estimates may become outdated. Cross-country comparisons rely on mapping between different occupational classification systems. The distinction between exposure and impact means high-exposure occupations may not experience displacement. Analysis predates the generative AI surge beginning in late 2022.",
+  "fetchedAt": "2026-05-26"
+}

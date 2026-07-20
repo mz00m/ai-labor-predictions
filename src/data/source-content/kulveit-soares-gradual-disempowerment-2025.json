@@ -1,0 +1,13 @@
+{
+  "abstract": "Kulveit, Soares, and coauthors argue that even absent a discrete misaligned-AGI event, incremental AI capability gains can produce gradual systemic disempowerment of humans \u2014 through erosion of labor income (humans no longer needed economically), political representation (decisions delegated to AI), and culture (AI-mediated information environments). Each step is locally rational; the cumulative trajectory is not.",
+  "keyFindings": [
+    "Frames existential risk as a gradual systems-level erosion rather than a discrete catastrophe",
+    "Identifies three reinforcing channels: economic (labor displacement), political (delegation), and cultural (info environment)",
+    "Argues incentive structures of incremental AI deployment select against human leverage even with no malicious actor",
+    "Influential in AI safety / governance circles concerned with non-misalignment failure modes"
+  ],
+  "methodology": "Conceptual analysis; identifies feedback loops rather than estimates magnitudes.",
+  "qualifiers": "Tier 2 working paper (arXiv 2501.16946). Not peer-reviewed at submission. Mechanistically rich but not quantitatively calibrated; treat as a framework for risk identification, not as a forecast.",
+  "id": "kulveit-soares-gradual-disempowerment-2025",
+  "fetchedAt": "2026-06-26"
+}

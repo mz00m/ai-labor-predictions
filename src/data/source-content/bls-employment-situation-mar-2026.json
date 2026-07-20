@@ -1,0 +1,14 @@
+{
+  "id": "bls-employment-situation-mar-2026",
+  "abstract": "The BLS Current Employment Statistics (CES) survey reports total nonfarm payroll employment as of March 2026 (preliminary) at 157,769 thousand, part of a general upward trajectory through early 2026. Employment increased from 156,728 thousand in January 2026 to 158,695 thousand in April 2026 (preliminary). Year-over-year comparison shows an increase of approximately 327,000 nonfarm jobs from April 2025 to April 2026, a notably slower pace of growth compared to the 2021-2023 recovery period. The total nonfarm payroll series is the most widely watched monthly indicator of US labor market health and serves as a critical baseline for assessing whether AI adoption is producing detectable aggregate employment effects. Through early 2026, the data shows continued but decelerating job growth, consistent with a labor market that remains fundamentally stable despite significant AI investment and adoption across sectors.",
+  "keyFindings": [
+    "Total nonfarm payrolls reached 157,769 thousand in March 2026 (preliminary), continuing upward trajectory",
+    "Year-over-year employment growth of approximately 327,000 jobs (April 2025 to April 2026)",
+    "Employment growth pace has decelerated compared to 2021-2023 recovery period",
+    "Labor market remains fundamentally stable through early 2026 despite significant AI adoption",
+    "April 2026 preliminary figure of 158,695 thousand represents a post-pandemic high"
+  ],
+  "methodology": "BLS Current Employment Statistics (CES) survey, a monthly survey of approximately 119,000 businesses and government agencies representing approximately 629,000 individual worksites. Seasonally adjusted. Series ID: CEU0000000001. March and April 2026 figures are preliminary and subject to revision. Data extracted May 26, 2026.",
+  "qualifiers": "Preliminary figures subject to revision (March and April 2026 marked as preliminary). CES measures establishment payroll jobs, not individual workers — one person holding two jobs counts twice. Does not capture self-employment, gig work, or independent contracting. Aggregate nonfarm payrolls may mask significant compositional shifts (sector, occupation, wage level) driven by AI. Seasonal adjustment methodology assumes historical seasonal patterns persist.",
+  "fetchedAt": "2026-05-26"
+}

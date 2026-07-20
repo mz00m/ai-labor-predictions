@@ -1,0 +1,13 @@
+{
+  "id": "census-btos-dec-2025",
+  "abstract": "The Business Trends and Outlook Survey (BTOS) is a Census Bureau survey covering approximately 1.2 million businesses across all nonfarm sectors, providing biweekly economic data on revenues, employees, hours, and inventories with geographic and subsector detail. The survey added questions on artificial intelligence adoption in November 2025, with AI-specific results scheduled for release in 2026. Early data from the AI module indicate approximately 7% of US businesses currently use AI in production operations, with adoption rates varying significantly by industry: information sector leads at 18.1%, followed by professional services at 12.3%. These adoption rates establish a critical baseline for tracking how AI diffusion into the broader economy compares with historical technology adoption curves. The BTOS AI data complement other federal surveys by providing granular industry and firm-size breakdowns at higher frequency than annual surveys.",
+  "keyFindings": [
+    "Approximately 7% of US businesses report currently using AI in production, establishing a low but measurable baseline for economy-wide AI adoption as of late 2025.",
+    "AI adoption is highly concentrated by industry: information sector leads at 18.1%, professional services at 12.3%, with most other sectors well below the national average.",
+    "The survey covers ~1.2 million businesses across all nonfarm sectors, providing one of the most comprehensive firm-level snapshots of AI adoption available from federal statistical agencies.",
+    "AI adoption questions were added November 2025, with full results and detailed breakdowns scheduled for 2026 release."
+  ],
+  "methodology": "Biweekly pulse survey of approximately 1.2 million businesses across all nonfarm sectors, conducted by the US Census Bureau. Survey collects data on revenues, employees, hours worked, inventories, and (beginning November 2025) AI adoption. Results are reported with geographic and NAICS subsector detail.",
+  "qualifiers": "The December 2025 press release primarily announced the BTOS platform and new AI questions rather than publishing detailed AI adoption findings. Full AI adoption data with firm-size breakdowns are pending 2026 release. Self-reported AI usage may reflect inconsistent definitions of what constitutes AI across respondents. The 7% figure may undercount informal or embedded AI use (e.g., AI features within existing software) that respondents do not recognize as AI.",
+  "fetchedAt": "2026-05-26"
+}

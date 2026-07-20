@@ -1,0 +1,18 @@
+{
+  "id": "wemustactnow-statement-2026",
+  "abstract": "A landmark statement issued July 13, 2026 and hosted at wemustactnow.ai, organized by economists Erik Brynjolfsson (Stanford), Ajay Agrawal (Toronto), Anton Korinek (Virginia/Anthropic), and Tom Cunningham. Signed by more than 200 economists and AI researchers from leading universities and AI research organizations, including 16 Nobel Laureates (Michael Spence and Daron Acemoglu are named on the release page). The signatories argue that AI may become radically more powerful over the next decade and could drive an economic transformation larger than the Industrial Revolution — but on a vastly shorter timeline — and call on economists, policymakers, and technology leaders to urgently build the research base, policies, and institutions needed to ensure AI complements human capabilities and benefits society.",
+  "keyFindings": [
+    "Signed by 16 Nobel Laureates and 200+ economists and AI researchers from leading universities and AI labs worldwide",
+    "Core organizers: Erik Brynjolfsson, Ajay Agrawal, Anton Korinek, Tom Cunningham",
+    "Named Nobel Laureate signatories on the release page: Michael Spence and Daron Acemoglu",
+    "Central claim: AI could produce 'an unprecedented transformation of the economy, larger than the Industrial Revolution, but unfolding over a vastly shorter time frame,' with 'large-scale job displacement' as a primary risk",
+    "Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.'",
+    "Brynjolfsson: 'AI capabilities are advancing far faster than our understanding of economic implications.'",
+    "Agrawal: 'Whether rapidly advancing AI broadly elevates living standards or concentrates wealth depends on choices we make today.'",
+    "Cunningham: 'We are driving in the fog, and it is extraordinarily difficult to anticipate what will happen next.'",
+    "Four calls to action: (1) deepen research on AI's economic impacts, (2) build policies and institutions ensuring AI complements human capabilities, (3) redirect AI to minimize risks and benefit workers and society, (4) re-architect political and economic systems before transformation arrives"
+  ],
+  "methodology": "Consensus statement. Not a research study — a signed policy declaration by a broad coalition of economists (including 16 Nobel Laureates) and AI researchers, hosted at wemustactnow.ai and coordinated via Stanford Digital Economy Lab. Signatories publicly endorse the language of the statement; there is no underlying dataset or empirical estimate specific to this document.",
+  "qualifiers": "As a statement of consensus concern rather than a research finding, this piece is a policy signal, not a data source. It should be cited for what the signatory community believes and is calling for, not as evidence of a specific labor-market outcome. The 'larger than the Industrial Revolution / vastly shorter time frame' framing is a qualitative comparison, not a quantitative forecast. Individual signatories may hold varying views on specific mechanisms and probabilities.",
+  "fetchedAt": "2026-07-13"
+}

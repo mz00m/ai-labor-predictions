@@ -1,0 +1,14 @@
+{
+  "id": "anthropic-geographic-2025",
+  "abstract": "Anthropic's Economic Index report from September 2025 analyzes geographic and demographic patterns of AI adoption using 1 million Claude.ai conversations and 1 million API transcripts from August 2025, spanning 150+ countries and all US states. The analysis reveals stark geographic concentration: Singapore and Israel lead per-capita Claude usage at 4.57x and 7x their expected population share, while emerging economies fall far below (Indonesia 0.36x, India 0.27x, Nigeria 0.2x). Within the US, Washington DC (3.82x) and Utah (3.78x) unexpectedly outpace California (2.13x). Globally, each 1% increase in GDP per working-age capita correlates with 0.7% higher per-capita AI usage. Task patterns differ systematically by income level: lower-adoption countries concentrate heavily on coding (over 50% in India vs. 36% globally), while high-adoption regions show diversified usage across education, science, and business. Users in wealthier economies exhibit more collaborative, iterative engagement with AI, whereas emerging-market users favor complete task automation. Regional economic specialization shapes deployment within the US: California shows elevated IT usage, Florida emphasizes financial services, and DC leads in document editing and job applications at 1.84x the national average.",
+  "keyFindings": [
+    "AI adoption strongly correlates with GDP: each 1% income increase linked to 0.7% higher per-capita usage globally",
+    "Geographic concentration is extreme — Singapore (4.57x) and Israel (7x) lead, while India (0.27x) and Nigeria (0.2x) trail dramatically",
+    "Within the US, Washington DC (3.82x) and Utah (3.78x) outpace California (2.13x) in per-capita Claude usage",
+    "Lower-income countries concentrate AI use on coding (50%+ in India), while wealthier countries diversify across education, science, and business",
+    "Users in wealthier economies engage collaboratively and iteratively; emerging-market users favor full task automation"
+  ],
+  "methodology": "Analysis of 1 million Claude.ai conversations and 1 million API transcripts from first-party business customers during August 4-11, 2025. IP geolocation with privacy-preserving filters (minimum 15 conversations per geographic cell). Task categorization using O*NET taxonomy and bottom-up request classification across 150+ countries and US states.",
+  "qualifiers": "Data limited to Claude usage, not AI adoption broadly — excludes ChatGPT, Gemini, and other tools. Single-week snapshot may not capture seasonal or cyclical variation. IP geolocation introduces noise (VPNs, corporate proxies). API data reflects business customers, not general population. Adoption intensity (conversations per user) is not equivalent to economic impact. Emerging-market usage patterns may reflect infrastructure constraints rather than demand preferences.",
+  "fetchedAt": "2026-05-26"
+}

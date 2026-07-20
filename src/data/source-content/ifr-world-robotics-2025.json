@@ -1,0 +1,14 @@
+{
+  "id": "ifr-world-robotics-2025",
+  "abstract": "The International Federation of Robotics (IFR) World Robotics 2025 report documents that global demand for industrial robots in factories has doubled over the past decade, with 542,000 industrial robots installed worldwide in 2024. The global operational stock reached 4,664,000 robots. The United States saw 34,200 unit installations. The global industrial robot market reached $16.5 billion in value. China dominates the market with approximately 2 million operational units — roughly 4.5 times more than Japan, the global number two — and accounts for 54% of annual worldwide installations. Chinese domestic robot suppliers have grown their market share from 30% in 2020 to 57% in 2024. In the electronics industry, 64% of global installations occur in China, with Chinese manufacturers supplying 59%. In the metal/machinery sector, Chinese suppliers reached 85% domestic market share. The IFR notes that wide adoption of AI integrated with traditional industrial robotics is expected over the next five to ten years, signaling a new phase of intelligent automation in manufacturing.",
+  "keyFindings": [
+    "542,000 industrial robots installed globally in 2024 — more than double the number from 10 years ago",
+    "4,664,000 robots operational worldwide; global market value $16.5 billion",
+    "China dominates with ~2 million operational units (54% of annual installations), domestic supplier share grew from 30% (2020) to 57% (2024)",
+    "US installations at 34,200 units in 2024",
+    "Wide adoption of AI with traditional industrial robotics expected over the next 5-10 years"
+  ],
+  "methodology": "IFR annual industry census collecting data from robot manufacturers and national robot associations worldwide. Covers industrial robot installations, operational stock, and market value across countries and industries. Published annually since 1987.",
+  "qualifiers": "Industrial robots only — does not include service robots, collaborative robots (cobots) in some categories, or software-based automation. Installation figures reflect units shipped, not necessarily deployed and operational. Market value figures cover hardware only, excluding software, integration, and maintenance costs. China's dominance partly reflects manufacturing concentration rather than per-capita adoption. Five-to-ten-year AI integration timeline is an industry projection, not an empirical finding.",
+  "fetchedAt": "2026-05-26"
+}

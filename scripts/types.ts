@@ -13,6 +13,7 @@ export type SourceName =
   | "bls"
   | "fred"
   | "openAlex"
+  | "trackedInstitutions"
   | "twitter"
   | "googleCse"
   | "reddit"

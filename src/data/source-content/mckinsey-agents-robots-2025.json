@@ -1,0 +1,14 @@
+{
+  "id": "mckinsey-agents-robots-2025",
+  "abstract": "McKinsey Global Institute (MGI) report examining the convergence of AI agents and physical robots in reshaping the global workforce. The analysis finds that 57% of US work hours are technically automatable with current or near-term technology, encompassing both cognitive and physical tasks. Physical tasks comprise more than 50% of hours for 40% of the US workforce, representing a substantial share of employment that physical AI and robotics could eventually address. However, economic barriers remain significant: current robot unit costs of $150,000-$500,000 must fall to $20,000-$50,000 for mass adoption across industries. MGI estimates that at least 14% of employees globally may need to change careers by 2030 due to combined automation and AI pressures. The report frames the future of work as 'skill partnerships' between humans and AI/robotic systems, where the complementary capabilities of each determine new work arrangements rather than simple substitution.",
+  "keyFindings": [
+    "57% of US work hours are technically automatable with current or near-term technology",
+    "Physical tasks comprise 50%+ of hours for 40% of the US workforce",
+    "Robot unit costs ($150,000-$500,000) must fall to $20,000-$50,000 for mass adoption",
+    "At least 14% of employees globally may need career changes by 2030",
+    "Future of work framed as 'skill partnerships' between humans and AI/robotic systems, not simple substitution"
+  ],
+  "methodology": "McKinsey Global Institute analysis combining task-level automation potential assessment, economic modeling of robot cost trajectories, and labor market projections. Builds on MGI's established methodology for assessing automation potential of work activities across occupations and industries.",
+  "qualifiers": "57% 'technically automatable' measures theoretical potential, not economic feasibility or likely adoption — actual automation will be lower. Robot cost targets of $20,000-$50,000 are estimates for mass adoption thresholds, not firm projections. The 14% career change estimate depends on adoption speed assumptions. 'Skill partnerships' framing may understate displacement in some occupations while overstating it in others. Technical automation potential does not account for social, regulatory, or organizational resistance to automation.",
+  "fetchedAt": "2026-05-26"
+}

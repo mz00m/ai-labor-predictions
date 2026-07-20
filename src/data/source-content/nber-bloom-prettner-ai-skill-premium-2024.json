@@ -1,0 +1,14 @@
+{
+  "id": "nber-bloom-prettner-ai-skill-premium-2024",
+  "abstract": "Theoretical paper proposing a nested CES production function with three capital types (traditional capital, industrial robots, AI). Industrial robots predominantly substitute for low-skill workers while AI mainly performs tasks of high-skill workers; under this structure, AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers.",
+  "keyFindings": [
+    "AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers.",
+    "Numerical illustration: baseline skill premium of about 2 (high-skill wages twice low-skill wages).",
+    "When AI capital reaches half the industrial-robot stock, the skill premium decreases to about 1.7.",
+    "When AI capital equals the robot stock, the skill premium shrinks to 1.62.",
+    "Use of AI is neutral for the skill premium only if AI is equally substitutable for high- and low-skill workers."
+  ],
+  "methodology": "Nested constant elasticity of substitution (CES) production function with three capital types; comparative statics plus numerical simulation with calibrated parameters. NBER Working Paper 32430, May 2024. Theoretical model, not an empirical estimate.",
+  "qualifiers": "Model-based simulation, not observed wage data. Skill premium defined as high-skill over low-skill wages, which differs from the site's high-skill-over-median metric - hence classified as a directional overlay rather than a data point.",
+  "fetchedAt": "2026-07-02"
+}

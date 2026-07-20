@@ -1,0 +1,14 @@
+{
+  "id": "apoorv03-consumer-ai-usage-2026",
+  "abstract": "Apoorv Agrawal presents data on the state of consumer AI usage, documenting that AI applications have crossed 1 billion weekly active users globally, with ChatGPT alone accounting for approximately 900 million of that total. This milestone represents an extraordinarily rapid adoption curve — ChatGPT launched in November 2022, making the growth from zero to 900 million weekly active users a roughly three-year trajectory that outpaces the adoption curves of most prior technology platforms. The dominance of ChatGPT within the consumer AI market (approximately 90% of weekly active users) highlights significant market concentration. The data suggests AI tool usage has moved far beyond early adopters and tech enthusiasts into mainstream consumer behavior, with implications for how quickly AI capabilities translate into labor market effects as workers and employers integrate these tools into daily workflows.",
+  "keyFindings": [
+    "AI applications have crossed 1 billion weekly active users globally.",
+    "ChatGPT accounts for approximately 900 million weekly active users — roughly 90% of the consumer AI market.",
+    "The growth from zero to 1 billion weekly users occurred in approximately three years, outpacing most prior technology adoption curves.",
+    "Market concentration is extreme, with a single application dominating consumer AI usage.",
+    "Mainstream adoption levels suggest AI tool usage has moved well beyond early adopters into routine consumer and worker behavior."
+  ],
+  "methodology": "Data analysis and commentary by Apoorv Agrawal, published as a social media thread. Specific data sources for the 1 billion WAU and 900 million ChatGPT figures are not detailed in the available excerpt; likely draws on a combination of company disclosures, app analytics platforms (e.g., Sensor Tower, data.ai), and web traffic analysis.",
+  "qualifiers": "Weekly active user figures may include automated or API-driven usage alongside genuine consumer interactions. The definition of 'weekly active user' likely varies across platforms and may not represent meaningful engagement. ChatGPT's 900M figure likely includes both free and paid users across consumer and enterprise contexts. Data sourcing methodology is not transparent. Social media format limits methodological rigor. Consumer usage volume does not directly measure labor market displacement — many users may use AI for non-work purposes.",
+  "fetchedAt": "2026-05-26"
+}

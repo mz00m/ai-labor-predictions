@@ -1,0 +1,14 @@
+{
+  "id": "kim-koning-mapping-ai-firms-2026",
+  "abstract": "This field experiment studies how AI tools affect firm performance when systematically mapped into production processes. Kim and Koning work directly with firms to identify specific production tasks suitable for AI integration, then measure the resulting effects on productivity, output quality, and workforce outcomes. The study finds significant productivity gains from AI adoption when tools are carefully matched to appropriate production tasks, but the distribution of benefits is highly uneven across firm types. Firms with greater organizational capacity to redesign workflows around AI capabilities capture substantially larger gains, while firms that simply overlay AI on existing processes see more modest improvements. The experimental design provides unusually clean causal evidence on AI's firm-level effects by randomizing access to AI integration support.",
+  "keyFindings": [
+    "Significant productivity gains emerge when AI tools are systematically mapped into specific production tasks, rather than adopted ad hoc.",
+    "Benefits are unevenly distributed across firm types — firms with greater organizational capacity to redesign workflows capture substantially larger productivity gains.",
+    "Simply overlaying AI on existing processes yields modest improvements compared to firms that fundamentally restructure task allocation around AI capabilities.",
+    "The experimental evidence suggests that the 'implementation gap' between AI's technical potential and realized firm performance is primarily organizational rather than technological.",
+    "Randomized access to AI integration support provides causal evidence that structured deployment strategies significantly outperform unguided adoption."
+  ],
+  "methodology": "Randomized field experiment with firms receiving structured AI integration support versus control firms. Researchers worked directly with treatment firms to map AI tools to specific production tasks and measured outcomes including productivity, output quality, and workforce effects. The experimental design provides causal identification by randomizing access to AI deployment support.",
+  "qualifiers": "SSRN working paper, not yet peer-reviewed. Field experiments with firms face challenges of external validity — participating firms may differ systematically from non-participants. The structured AI integration support provided to treatment firms may not be replicable at scale. Results may be specific to the types of firms, industries, and AI tools studied. The experiment captures short-run effects and cannot assess long-term competitive dynamics or general equilibrium effects.",
+  "fetchedAt": "2026-05-26"
+}

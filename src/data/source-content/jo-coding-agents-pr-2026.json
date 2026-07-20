@@ -1,0 +1,14 @@
+{
+  "id": "jo-coding-agents-pr-2026",
+  "abstract": "Academic study by Jo, Chung, and Hassan analyzing how AI coding agents redistribute work across pull request (PR) lifecycles. The research examines 29,585 PR lifecycles across five major AI coding tools — OpenAI, Copilot, Devin, Cursor, and Claude Code — using a novel Initiator x Approver taxonomy with six interaction scenarios. The study finds that Collaborator workflows (Cursor, Devin, Copilot) are 96%+ agent-initiated, meaning AI agents predominantly open and advance pull requests. However, terminal merge authority remains almost exclusively human, with agent-classified approvers confined to a small fraction of PRs. The research positions tools on a 'Collaborator-Assistant spectrum' based on operational agency and merge governance patterns. A critical finding concerns the 'observation boundary' in governance tracking: when automation executes merges, logs record the executor but not the actual decision-maker, creating accountability gaps. The study highlights a significant structural tension between who starts work (predominantly agents) and who authorizes completion (predominantly humans).",
+  "keyFindings": [
+    "Collaborator workflows (Cursor, Devin, Copilot) are 96%+ agent-initiated — AI agents predominantly open and advance PRs",
+    "Terminal merge authority remains almost exclusively human across all five tools studied",
+    "Tools classified on a Collaborator-Assistant spectrum: Collaborator (Cursor, Devin, Copilot) vs. Assistant (OpenAI, Claude)",
+    "Governance gap identified: merge logs record the executor but not the decision-maker, creating an 'observation boundary'",
+    "Significant structural tension between agent-initiated work and human-authorized completion"
+  ],
+  "methodology": "Empirical analysis of 29,585 PR lifecycles across 5 AI coding tools (OpenAI, Copilot, Devin, Cursor, Claude Code). Novel Initiator x Approver taxonomy with six interaction scenarios. Tools positioned on Collaborator-Assistant spectrum based on operational agency and merge governance patterns. Published as arXiv preprint (2605.08017).",
+  "qualifiers": "Preprint — not yet peer reviewed. Sample of 29,585 PRs may not be representative of all AI-assisted software development. Tool categorization on Collaborator-Assistant spectrum may shift as tools evolve rapidly. The 96%+ agent-initiation rate applies to Collaborator workflows specifically, not all AI-assisted PRs. Does not measure code quality, bug rates, or productivity outcomes of agent-initiated vs. human-initiated PRs. Governance concerns are structural observations, not empirical measures of accountability failures.",
+  "fetchedAt": "2026-05-26"
+}

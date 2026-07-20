@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-06-22",
-  "totalSources": 574,
-  "verifiedCount": 564,
+  "lastUpdated": "2026-07-19",
+  "totalSources": 622,
+  "verifiedCount": 612,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -1567,19 +1567,6 @@
       ],
       "verified": true
     },
-    "factset-earnings-q4-2022": {
-      "id": "factset-earnings-q4-2022",
-      "title": "FactSet Earnings Insight Q4 2022 \u2014 AI Mentions",
-      "url": "https://insight.factset.com/highest-number-of-sp-500-companies-citing-ai-on-q1-earnings-calls-in-over-10-years",
-      "publisher": "FactSet",
-      "evidenceTier": 1,
-      "datePublished": "2023-01-15",
-      "excerpt": "Only 8% of S&P 500 companies mentioned AI in Q4 2022 calls. Pre-ChatGPT baseline for corporate AI discussion.",
-      "usedIn": [
-        "earnings-call-ai-mentions"
-      ],
-      "verified": true
-    },
     "factset-earnings-q4-2023": {
       "id": "factset-earnings-q4-2023",
       "title": "FactSet Earnings Insight Q4 2023",
@@ -1880,12 +1867,12 @@
     },
     "genai-adoption-tracker-2025": {
       "id": "genai-adoption-tracker-2025",
-      "title": "GenAI Adoption Tracker (Harvard / St. Louis Fed)",
+      "title": "GenAI Adoption Tracker snapshot (Feb & May 2025 estimates)",
       "url": "https://pw.hks.harvard.edu/post/the-generative-ai-adoption-tracker",
       "publisher": "Harvard / St. Louis Fed RPS",
       "evidenceTier": 2,
       "datePublished": "2025-11-01",
-      "excerpt": "Quarterly dashboard tracking generative AI adoption among U.S. working-age adults. Feb & May 2025 values estimated from tracker chart; all other values from published working paper.",
+      "excerpt": "Snapshot of the GenAIAdoptionTracker.com dashboard at the time of ingestion (Nov 2025). Used here for the Feb 2025 (33.5%) and May 2025 (35.5%) quarterly waves \u2014 both estimated from the tracker chart before those results were published in the working paper. Later quarterly waves are captured in separate source entries (bick-blandin-deming-wp-2025 for Aug/Nov 2025; bick-deming-mind-the-gap-2026 for Feb 2026; genai-adoption-tracker-may-2026 for May 2026). The underlying RPS runs continuously and updates each quarter.",
       "usedIn": [
         "genai-work-adoption"
       ],
@@ -5957,20 +5944,6 @@
       "verified": true,
       "synthetic": false
     },
-    "factset-earnings-q4-2025": {
-      "id": "factset-earnings-q4-2025",
-      "title": "FactSet Earnings Insight Q4 2025",
-      "url": "https://insight.factset.com/more-than-65-of-sp-500-earnings-calls-for-q4-cited-ai",
-      "publisher": "FactSet",
-      "evidenceTier": 1,
-      "datePublished": "2025-12-01",
-      "excerpt": "61% of S&P 500 companies cited AI in Q4 2025 earnings calls, maintaining near-record levels from Q3.",
-      "usedIn": [
-        "earnings-call-ai-mentions"
-      ],
-      "verified": true,
-      "synthetic": false
-    },
     "yale-restrepo-ai-automation-future-work-2026": {
       "id": "yale-restrepo-ai-automation-future-work-2026",
       "title": "Pascual Restrepo on AI, Automation, and the Future of Work",
@@ -7710,7 +7683,8 @@
       "datePublished": "2026-05-05",
       "excerpt": "responses to a recent survey suggest that most forecasters are quite optimistic about AI's potential but are assuming only a slow pace of AI adoption through 2030",
       "usedIn": [
-        "genai-work-adoption"
+        "genai-work-adoption",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -8141,6 +8115,726 @@
       "usedIn": [
         "freelancer-rate-impact",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wsj-raise-us-coalition-2026": {
+      "id": "wsj-raise-us-coalition-2026",
+      "title": "The New Push to Ready Millions for AI Career Upheaval",
+      "url": "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
+      "publisher": "The Wall Street Journal (Chip Cutter)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-25",
+      "excerpt": "A bipartisan consortium called RAISE US launches with a 'people strategy' for the AI era \u2014 led by former Commerce Secretary Gina Raimondo (CEO) and former Indiana Gov. Eric Holcomb. Founding employers include Amazon, Microsoft, Bank of America, and Eli Lilly; OpenAI and Anthropic are involved; MIT economist David Autor sits on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah, and Connecticut. Mandate goes beyond retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and developing corporate incentives for employers to retain and reskill rather than lay off.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-casselman-back-office-ai-2026": {
+      "id": "nyt-casselman-back-office-ai-2026",
+      "title": "The Hidden Workers Most Threatened by A.I.",
+      "url": "https://www.nytimes.com/2026/06/10/business/economy/back-office-workers-ai.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-10",
+      "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "healthcare-admin-displacement",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "agrawal-gans-goldfarb-turing-transformation-2023": {
+      "id": "agrawal-gans-goldfarb-turing-transformation-2023",
+      "title": "The Turing Transformation: Artificial Intelligence, Intelligence Augmentation, and Skill Premiums",
+      "url": "https://www.nber.org/papers/w31767",
+      "publisher": "NBER (Agrawal, Gans, Goldfarb)",
+      "evidenceTier": 1,
+      "datePublished": "2023-10-01",
+      "excerpt": "Frames the choice between AI-as-imitation (passing the Turing test by mimicking human work) versus AI-as-augmentation (raising human productivity). Argues the augmentation path raises skill premiums and broadens economic gains; the imitation path concentrates them. Positioned in the Economic Futures Map as 'strong augmentation, diffuse gains.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "narayanan-kapoor-ai-normal-tech-2025": {
+      "id": "narayanan-kapoor-ai-normal-tech-2025",
+      "title": "AI as Normal Technology",
+      "url": "https://knightcolumbia.org/content/ai-as-normal-technology",
+      "publisher": "Knight First Amendment Institute (Narayanan & Kapoor)",
+      "evidenceTier": 3,
+      "datePublished": "2025-04-14",
+      "excerpt": "Argues AI should be understood as a 'normal' general-purpose technology, with diffusion-bottlenecked adoption rather than a discontinuous economic break. Pushes back on transformative-AI framings and predicts gradual, sectorally uneven labor impacts with diffuse rather than concentrated welfare gains. Positioned in the Economic Futures Map as 'strong augmentation, diffuse gains.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "andreessen-techno-optimist-manifesto-2023": {
+      "id": "andreessen-techno-optimist-manifesto-2023",
+      "title": "The Techno-Optimist Manifesto",
+      "url": "https://a16z.com/the-techno-optimist-manifesto/",
+      "publisher": "Andreessen Horowitz (Marc Andreessen)",
+      "evidenceTier": 4,
+      "datePublished": "2023-10-16",
+      "excerpt": "Manifesto-style essay arguing technology \u2014 and AI specifically \u2014 produces broad-based prosperity, that resistance to deployment is itself the principal risk, and that AI should be celebrated rather than constrained. Listed as a position in the Economic Futures Map at 'strong augmentation, diffuse gains' (opinion/advocacy).",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-turing-trap-2022": {
+      "id": "brynjolfsson-turing-trap-2022",
+      "title": "The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence",
+      "url": "https://www.amacad.org/publication/turing-trap-promise-peril-human-like-artificial-intelligence",
+      "publisher": "Daedalus / American Academy of Arts and Sciences (Erik Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2022-05-01",
+      "excerpt": "Influential essay warning that AI's drive toward human-level imitation creates a 'Turing trap' \u2014 it concentrates economic gains in capital and AI developers and erodes labor share, even when total productivity rises. Argues for augmentation-oriented AI design that complements rather than substitutes human workers. Positioned in the Economic Futures Map at the borderline between concentrated and diffuse gains under strong augmentation.",
+      "usedIn": [
+        "overall-us-displacement",
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "buterin-d-acc-techno-optimism-2023": {
+      "id": "buterin-d-acc-techno-optimism-2023",
+      "title": "My techno-optimism (introducing d/acc \u2014 defensive accelerationism)",
+      "url": "https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html",
+      "publisher": "Vitalik Buterin (personal essay)",
+      "evidenceTier": 4,
+      "datePublished": "2023-11-27",
+      "excerpt": "Introduces 'd/acc' (defensive accelerationism) as an alternative to both e/acc (effective acceleration) and pause-AI camps. Argues for accelerating defensive technologies \u2014 including AI safety, decentralized infrastructure, and bio-defense \u2014 as the path to diffuse, robust welfare gains. Positioned in the Economic Futures Map at 'strong augmentation, diffuse gains.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "drago-laine-intelligence-curse-2025": {
+      "id": "drago-laine-intelligence-curse-2025",
+      "title": "The Intelligence Curse",
+      "url": "https://intelligence-curse.ai/",
+      "publisher": "Drago & Laine (independent essay)",
+      "evidenceTier": 3,
+      "datePublished": "2025-01-01",
+      "excerpt": "Argues advanced AI could trigger an 'intelligence curse' analogous to the resource curse \u2014 states and firms that capture AI capability concentrate economic and political power, hollowing out broader economic participation and weakening incentives to invest in human capital. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kulveit-soares-gradual-disempowerment-2025": {
+      "id": "kulveit-soares-gradual-disempowerment-2025",
+      "title": "Gradual Disempowerment: Systemic Existential Risks from Incremental AI Development",
+      "url": "https://arxiv.org/abs/2501.16946",
+      "publisher": "arXiv (Kulveit, Soares, et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2025-01-28",
+      "excerpt": "Argues that even without a discrete misaligned-AGI event, incremental AI capability gains can produce gradual systemic disempowerment of humans through erosion of labor income, political representation, and culture \u2014 with each step locally rational but cumulatively undermining human leverage. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "aschenbrenner-situational-awareness-2024": {
+      "id": "aschenbrenner-situational-awareness-2024",
+      "title": "Situational Awareness: The Decade Ahead",
+      "url": "https://situational-awareness.ai/",
+      "publisher": "Leopold Aschenbrenner (independent essay series)",
+      "evidenceTier": 4,
+      "datePublished": "2024-06-04",
+      "excerpt": "Argues AGI by 2027 and superintelligence shortly after are 'strikingly plausible,' with massive concentration of economic and geopolitical power in a handful of frontier labs. Forecasts trillion-dollar compute clusters and national-security primacy. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "amodei-machines-of-loving-grace-2024": {
+      "id": "amodei-machines-of-loving-grace-2024",
+      "title": "Machines of Loving Grace: How AI Could Transform the World for the Better",
+      "url": "https://darioamodei.com/machines-of-loving-grace",
+      "publisher": "Dario Amodei (Anthropic CEO essay)",
+      "evidenceTier": 4,
+      "datePublished": "2024-10-11",
+      "excerpt": "Anthropic CEO sets out an optimistic vision of 'powerful AI' (deliberately avoiding 'AGI'): 5\u201310\u00d7 compression of decades of biological, mental health, economic, and governance progress into a 5\u201310 year window after powerful AI arrives. Positioned in the Economic Futures Map at 'strong replacement, diffuse gains' \u2014 replacement-heavy in the sense that AI does the work, but welfare gains broadly distributed if governance succeeds.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "altman-moores-law-for-everything-2021": {
+      "id": "altman-moores-law-for-everything-2021",
+      "title": "Moore's Law for Everything",
+      "url": "https://moores.samaltman.com/",
+      "publisher": "Sam Altman (personal essay)",
+      "evidenceTier": 4,
+      "datePublished": "2021-03-16",
+      "excerpt": "Pre-ChatGPT essay arguing AI will drive prices of goods and services to near zero and that wealth must be redistributed via taxing capital (companies) and land. Proposes the American Equity Fund. Positioned in the Economic Futures Map at 'strong replacement, diffuse gains' \u2014 replacement-heavy but with diffuse welfare contingent on redistributive policy.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "doctorow-reverse-centaur-guide-2026": {
+      "id": "doctorow-reverse-centaur-guide-2026",
+      "title": "The Reverse Centaur's Guide to Life After AI",
+      "url": "https://us.macmillan.com/books/9780374621575/thereversecentaursguidetolifeafterai/",
+      "publisher": "Farrar, Straus and Giroux (Cory Doctorow)",
+      "evidenceTier": 4,
+      "datePublished": "2026-06-01",
+      "excerpt": "Doctorow's book-length argument that AI is mostly deployed not to automate work but to put workers into 'reverse centaur' configurations \u2014 humans serving as helpers to machines at inhuman pace (delivery drivers, warehouse pickers, AI-supervised coders). Argues the $16T+ AI investment thesis only makes sense if AI replaces vast swathes of the wage-earning workforce, and that workers, not 'AI-enjoyers,' are the political constituency for resisting that path. Companion talk delivered at University of Washington Neuroscience-AI-Society lecture series. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong augmentation' (augmentation in the cynical sense \u2014 humans augmenting machines, not the reverse).",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kinder-messy-middle-2026": {
+      "id": "kinder-messy-middle-2026",
+      "title": "The Messy Middle",
+      "url": "https://mollykinder2.substack.com/p/the-messy-middle",
+      "publisher": "Molly Kinder (Brookings; personal Substack)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-01",
+      "excerpt": "Kinder predicts a long, hard 'messy middle' between today's mostly intact labor market and any post-AGI abundance. In that period, most jobs survive but losses concentrate in some of the best-paid, most coveted jobs \u2014 cognitive computer work in offices and professional sectors, which are exactly the roles that have grown the most as a share of the US labor force over the last 50 years. Frames these concentrated losses as politically explosive. Her rule of thumb: 'if you can do your job locked in a closet with a computer, you're probably in trouble.' Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "juijn-europe-2031-scenario-2026": {
+      "id": "juijn-europe-2031-scenario-2026",
+      "title": "Europe 2031 \u2014 What getting AI wrong means for us",
+      "url": "https://europe2031.ai/",
+      "publisher": "Arq Foundation / Delta Institute (Juijn, van Baarsen, Dada, Stelling, Fox, Petropoulos, Bakker)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-11",
+      "excerpt": "An 18,000-word fictional five-year scenario (June 2026) by European AI researchers warning the EU risks becoming AI-dependent on the US or China by 2031. Puts Europe at 5% of global AI compute against ~80% for the US in the scenario. Three identified 2025 misjudgements drive the trajectory: underestimating AI's pace, underestimating its scope of change, and overestimating Europe's catch-up capacity. Scenario beats include a 2027 ransomware wave (open-source frontier model) hollowing out European cybersecurity, US and Chinese firms acquiring distressed European carmakers and machine-tool makers, and conversion of factory floors to robot production. Narrative form (two protagonists in Brussels and Silicon Valley), not policy paper. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "korinek-scenario-planning-agi-2023": {
+      "id": "korinek-scenario-planning-agi-2023",
+      "title": "Scenario Planning for an A(G)I Future",
+      "url": "https://www.imf.org/en/Publications/fandd/issues/2023/12/Scenario-Planning-for-an-AGI-Future-Korinek",
+      "publisher": "IMF Finance & Development (Anton Korinek)",
+      "evidenceTier": 2,
+      "datePublished": "2023-12-01",
+      "excerpt": "Korinek sets out a scenario-planning framework for economists and policymakers facing the possibility of human-level AI. Distinguishes scenarios ranging from business-as-usual (gradual GPT-style diffusion) to transformative AGI, with sharply different implications for output, wages, and labor share. Argues economists and policymakers should prepare contingency policy for labor displacement, education reform, market regulation, macroeconomic stability, and international AI governance across all scenarios rather than betting on one. Foundational paper for the scenario-planning approach later adopted by RAISE US and similar coalitions. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chandar-supply-demand-labor-2026": {
+      "id": "chandar-supply-demand-labor-2026",
+      "title": "AI and the Supply and Demand for Labor",
+      "url": "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
+      "publisher": "Bharat Chandar (What's Next Substack)",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-29",
+      "excerpt": "Chandar \u2014 coauthor of the Brynjolfsson-Chandar-Chen 'Canaries' paper \u2014 explains why he was one of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss (others: Acemoglu, Henderson, Restrepo, Wolfers; 8 said no change, 2 said net growth). All 16 agreed AI would boost productivity. The 5 net-loss economists also unanimously said AI would replace rather than complement workers and would reduce demand for white-collar jobs. Chandar's argument: his net-job-loss prediction is not a 'jobs bloodbath' story \u2014 he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering labor force participation in the long run (~50yr horizon). He explicitly cites Kinder's 'messy middle' framing as the short-to-medium-run risk. Useful disambiguation of what economists mean by 'net job loss' \u2014 long-run LFP decline driven by post-scarcity income, not displacement-driven destitution.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "acemoglu-autor-johnson-pro-worker-ai-2026": {
+      "id": "acemoglu-autor-johnson-pro-worker-ai-2026",
+      "title": "Building Pro-Worker Artificial Intelligence",
+      "url": "https://www.brookings.edu/wp-content/uploads/2026/02/20260223_THP_ProWorkerAI_Paper.pdf",
+      "publisher": "Brookings Institution / Hamilton Project (Acemoglu, Autor, Johnson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-23",
+      "excerpt": "Identifies five categories of labor-affecting technology: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Only new task-creating technologies are unambiguously pro-worker because they expand the range of valuable work humans can do and raise the value of human expertise; the other four can lift productivity while reducing the scarcity value of expertise. Cites Schneider Electric AI tool for field electricians that cuts average maintenance-report completion time roughly in half as augmentation evidence. As reported in MIT Sloan Ideas Made to Matter, June 17, 2026.",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "goldman-briggs-15m-displacement-revision-2026": {
+      "id": "goldman-briggs-15m-displacement-revision-2026",
+      "title": "Goldman Sachs Revised Forecast: ~9% / 15M US Workers Displaced over 10 Years",
+      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "publisher": "Goldman Sachs Research (Joseph Briggs)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-01",
+      "excerpt": "Goldman Sachs revised its US labor displacement forecast upward from 6-7% to ~9% (about 15 million workers) over the next decade. The change reflects a new methodology measuring total flow of workers leaving jobs due to AI-driven productivity gains, rather than steady-state unemployed count. Briggs estimates each 1% increase in technology-driven productivity yields a 0.5-0.6% increase in the job-destruction rate over the following two years. Goldman maintains the long-run benefits outweigh the disruption (US churns 25-35M jobs annually, and AI will generate new employment), and that unemployment rises less than 1 percentage point at peak under standard adoption timing. As of mid-2026, Goldman estimates AI is erasing ~16,000 net jobs per month, concentrated in entry-level and administrative roles.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-not-yet-2026": {
+      "id": "yale-budgetlab-not-yet-2026",
+      "title": "AI Is Probably Not (Yet) the Reason for Labor Market Weakening",
+      "url": "https://budgetlab.yale.edu/research/ai-probably-not-yet-reason-labor-market-weakening",
+      "publisher": "Yale Budget Lab (Gimbel, Tedeschi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-15",
+      "excerpt": "Yale Budget Lab's preferred econometric strategy finds no strong evidence of AI's impact on aggregate US employment or unemployment 33 months post-ChatGPT. Measures of AI usage show no detectable connection to changes in employment or unemployment. The labor market in early 2026 features low layoffs but also low hiring, with payroll growth ~20,000 net new jobs per month and unemployment 4.3% in March 2026. Authors caution that historically technological disruption unfolds over decades, not months \u2014 AI is likely to leave its mark eventually, but the macro signature is not yet visible. A companion to the lab's March 2026 CPS update.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-canaries-april-2026": {
+      "id": "stanford-del-canaries-april-2026",
+      "title": "Stanford DEL Canaries Dashboard: April 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-10",
+      "excerpt": "Monthly-updated dashboard built on anonymized ADP payroll data covering 4.6 million workers across 730+ occupations. April 2026 reading: most AI-exposed occupations contracted 0.2% YoY, least-exposed grew 0.1% YoY \u2014 a small but consistent gap. For workers ages 22-25 in highly AI-exposed occupations, employment is now shrinking at 3.8% per year, with the early-career decline sharpening from -2.8% to April 2024 to over -4% per year since. Builds on Brynjolfsson, Chandar, Chen (2025) 'Canaries in the Coal Mine.' Live update of the underlying employment story behind the 'overall not yet, early-career already' pattern.",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-economic-index-cadences-2026": {
+      "id": "anthropic-economic-index-cadences-2026",
+      "title": "Anthropic Economic Index Report: Cadences (June 2026)",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "publisher": "Anthropic Economic Index",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-26",
+      "excerpt": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage patterns with a survey of ~9,700 Claude users. Headline findings: about half of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users \u2014 experienced users automate substantially more of their work. Biggest automation increases occur in business sales, automated trading, and routine market-research tasks, flagging those roles as near-term automation candidates.",
+      "usedIn": [
+        "genai-work-adoption",
+        "workforce-ai-exposure",
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyt-casselman-ai-measurement-2026": {
+      "id": "nyt-casselman-ai-measurement-2026",
+      "title": "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
+      "url": "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
+      "publisher": "The New York Times (Ben Casselman)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-02",
+      "excerpt": "NYT chief economics correspondent Casselman synthesizes the measurement problem: different data sources give contradictory answers on basic questions (how many companies use AI, which workers are most vulnerable, whether AI is helping or hurting employment, whether the productivity boom is real). Reports on Nathan Goldschlag's (Economic Innovation Group) new report documenting the measurement challenge; a bipartisan Senate bill (led by Sen. Mark Kelly, D-AZ, introduced June 2026) that would expand federal AI labor data collection; Yale Budget Lab's new monthly 'occupational churn' analysis as an early-warning system; Stanford DEL's ADP-based Canaries dashboard; and new Ramp/Revelio research finding companies using AI most intensely are adding jobs FASTER than laggards \u2014 the opposite direction from displacement narratives. Frames the current confusion as J-curve territory: companies still on the downward experimentation phase before productivity gains materialize. Notes federal statistical system is under stress from falling survey response rates and funding cuts; former BLS Commissioner Erika McEntarfer (fired by Trump last year) says $10M/yr would meaningfully expand the monthly labor market survey.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ramp-revelio-ai-jobs-impact-2026": {
+      "id": "ramp-revelio-ai-jobs-impact-2026",
+      "title": "A New Look at AI's Impact on Jobs: Firm-Level AI Spending and Workforce Adjustment",
+      "url": "https://ramp.com/data/ai-jobs-impact/paper",
+      "publisher": "Ramp Economics Lab / Revelio Labs (Ara Kharazian et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-30",
+      "excerpt": "First study to link observed firm-level AI spending to workforce outcomes at scale. Tracked AI spending across 21,599 US firms via Ramp expense-management data, matched to Revelio Labs employment records. Companies that invest heavily in AI grew headcount 10% over the two years following adoption; entry-level headcount grew 12%. Gains are ENTIRELY driven by high-intensity adopters \u2014 low-intensity adopters see no statistically significant change. Direction is opposite to the displacement narrative: heavy AI adopters ADD jobs faster than laggards. Caveats: AI adopters are already larger, more engineering-intensive, more likely to be venture-backed, and faster-growing than non-adopters; effect may partly reflect selection into adoption rather than causal effect of adoption.",
+      "usedIn": [
+        "overall-us-displacement",
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "eig-goldschlag-ai-jobs-final-word-2026": {
+      "id": "eig-goldschlag-ai-jobs-final-word-2026",
+      "title": "AI and Jobs: The Final Word (Until the Next One)",
+      "url": "https://eig.org/ai-and-jobs-the-final-word/",
+      "publisher": "Economic Innovation Group (Nathan Goldschlag & Sarah Eckhardt)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-02",
+      "excerpt": "EIG applies five different measures of AI exposure (drawn from four different research papers) to test whether current labor market data shows an AI signature. The startling finding: which exposure measure you pick determines not just the SCALE but the DIRECTION of AI's estimated effect on employment. Under some measures AI appears to be hurting employment; under others it appears to be helping. Companion piece 'A New Threat to Economic Data' documents the deteriorating federal statistical system (falling response rates, funding cuts) that Casselman NYT (July 2) also foregrounds. Goldschlag is EIG's Director of Research and formerly Principal Economist at Census's Center for Economic Studies.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-timmerman-education-exposure-2025": {
+      "id": "fed-timmerman-education-exposure-2025",
+      "title": "Educational Exposure to Generative Artificial Intelligence",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/educational-exposure-to-generative-artificial-intelligence-20250226.html",
+      "publisher": "Federal Reserve Board (Timmerman)",
+      "evidenceTier": 1,
+      "datePublished": "2025-02-26",
+      "excerpt": "Using the National Survey of College Graduates 2013-2021 (n=375,991 unweighted, weighted to ~228.8M), Table 2 reports education field GenAI exposure z-scores of 0.68 for language modeling and -0.69 for image generation, indicating moderate text-based AI exposure and low image-generation exposure. The paper cites Bick et al. (2024): '46 percent of workers who majored in STEM use generative AI at work, compared with 40 percent for workers who majored in business...and 22 percent for all other majors.'",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-scale-ai-k12-evidence-2026": {
+      "id": "stanford-scale-ai-k12-evidence-2026",
+      "title": "The Evidence Base on AI in K-12: A 2026 Review",
+      "url": "https://scale.stanford.edu/research-in-action/understanding-evidence-base-ai-k12-education",
+      "publisher": "Stanford SCALE Initiative (Graduate School of Education)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-11",
+      "excerpt": "Reviewed more than 800 academic papers related to AI and K-12 education (Repository now over 1,100 papers) and identified only 20 high-quality causal studies that rigorously examine how AI tools affect students or educators. 'Student performance often improves with access to AI tools, but once removed, results are mixed.' No high-quality causal studies of student AI use conducted in U.S. K-12 classrooms. AI tools designed with pedagogical guardrails show more promising outcomes than general-purpose chatbots.",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "education-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "forrester-cs-half-jobs-2030-2026": {
+      "id": "forrester-cs-half-jobs-2030-2026",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Half of current customer service jobs will be lost to AI by 2030, Forrester predicts",
+      "url": "https://www.customerexperiencedive.com/news/forrester-predicts-half-customer-service-jobs-cut-AI/821797/",
+      "publisher": "Forrester (via CX Dive; analysts Kate Leggett & Laura Ramos)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-20"
+    },
+    "gallup-arts-ai-creative-2026": {
+      "id": "gallup-arts-ai-creative-2026",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "AI Is Changing Creative Work, but the Arts Aren't Disappearing",
+      "url": "https://www.gallup.com/workplace/708575/ai-changing-creative-work-arts-arent-disappearing.aspx",
+      "publisher": "Gallup (with Journal of Cultural Economics)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01"
+    },
+    "unesco-reshaping-creativity-2026": {
+      "id": "unesco-reshaping-creativity-2026",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Artists face steep income decline due to AI, UNESCO finds",
+      "url": "https://news.un.org/en/story/2026/02/1166989",
+      "publisher": "UNESCO (via UN News; Re|Shaping Policies for Creativity report)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18"
+    },
+    "yale-sonnenfeld-entry-level-ai-2026": {
+      "id": "yale-sonnenfeld-entry-level-ai-2026",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "The Real Job Destruction from AI Is Hitting Before Careers Can Start",
+      "url": "https://insights.som.yale.edu/insights/the-real-job-destruction-from-ai-is-hitting-before-careers-can-start",
+      "publisher": "Yale Insights / Yale Chief Executive Leadership Institute (Sonnenfeld, Henriques, Griessel, Alam-Nist, Yu)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-04"
+    },
+    "mercer-global-talent-trends-2026": {
+      "id": "mercer-global-talent-trends-2026",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Investors say companies combining human and AI capabilities gain a competitive advantage, according to Mercer's Global Talent Trends 2026 report",
+      "url": "https://www.mercer.com/about/newsroom/mercer-s-global-talent-trends-2026-report/",
+      "publisher": "Mercer / Marsh McLennan",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-25"
+    },
+    "unitypoint-health-layoffs-2026": {
+      "id": "unitypoint-health-layoffs-2026",
+      "usedIn": [
+        "healthcare-admin-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "UnityPoint Health to lay off 207 IT employees",
+      "url": "https://www.businessrecord.com/unitypoint-health-to-lay-off-207-it-employees/",
+      "publisher": "Business Record (Iowa) / UnityPoint Health / Becker's Hospital Review",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-15"
+    },
+    "upwork-in-demand-skills-2026": {
+      "id": "upwork-in-demand-skills-2026",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Upwork's In-Demand Skills 2026: Demand for Top AI Skills More Than Doubles as AI Is Embedded Into Everyday Work",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "publisher": "Upwork (Investor Relations / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-04"
+    },
+    "challenger-june-2026": {
+      "id": "challenger-june-2026",
+      "usedIn": [
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Challenger Report: June Layoffs Cool to 45,849, Down 53% From May; AI Leads Reasons for Fourth Consecutive Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-june-layoffs-cool-to-45849-down-53-from-may-ai-leads-reasons-for-fourth-consecutive-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01"
+    },
+    "fiverr-q1-2026-earnings": {
+      "id": "fiverr-q1-2026-earnings",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "Fiverr Announces First Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-first-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-30"
+    },
+    "adobe-creators-toolkit-2026": {
+      "id": "adobe-creators-toolkit-2026",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false,
+      "title": "87 Percent of Creators Say Creative AI Is Growing Their Business and Audience, According to Adobe's 2026 Creators' Toolkit Report",
+      "url": "https://news.adobe.com/news/2026/06/creators-toolkit-report-2026",
+      "publisher": "Adobe (Creators' Toolkit Report / Harris Poll)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-16"
+    },
+    "genai-adoption-tracker-may-2026": {
+      "id": "genai-adoption-tracker-may-2026",
+      "title": "Generative AI Adoption Tracker \u2014 May 2026 Update",
+      "url": "https://www.genaiadoptiontracker.com/",
+      "publisher": "Bick, Blandin, Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Generative AI Adoption Tracker (Bick, Blandin, Deming), May 2026 update: '45.2% of the employed respondents used genAI for work.' Based on the Real-Time Population Survey (RPS), a nationally representative online labor market survey of US adults 18-64 running continuously since 2020. Tracker visualizes findings from 8 combined survey waves encompassing approximately 40,000 respondents, weighted to be nationally representative.",
+      "dateAdded": "2026-07-02",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-baslandze-ai-productivity-workforce-2026": {
+      "id": "nber-baslandze-ai-productivity-workforce-2026",
+      "title": "Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives",
+      "url": "https://www.nber.org/papers/w34984",
+      "publisher": "NBER (Baslandze, Edwards, Graham, McClure, Meyer, Sparks, Waddell, Weitz)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-01",
+      "excerpt": "In particular, firm-size-and-sector-weighted aggregate employment is expected to decline by less than 0.4% due to AI in 2026. [...] little evidence of near-term aggregate employment declines due to AI. [...] Over the next three years, the share of routine clerical employment is expected to decline by more than 2 percentage points (mostly among large firms), with partially offsetting increases in skilled technical roles. [...] The mean reported increase in labor productivity attributable to AI investment was 1.8% in 2025 and is expected to reach 3.0% in 2026. Survey of nearly 750 corporate executives.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-bloom-prettner-ai-skill-premium-2024": {
+      "id": "nber-bloom-prettner-ai-skill-premium-2024",
+      "title": "Artificial Intelligence and the Skill Premium",
+      "url": "https://www.nber.org/papers/w32430",
+      "publisher": "NBER (Bloom, Prettner, Saadaoui, Veruete)",
+      "evidenceTier": 1,
+      "datePublished": "2024-05-01",
+      "excerpt": "We show that AI reduces the skill premium as long as it is more substitutable for high-skill workers than low-skill workers are for high-skill workers. [...] This leads to a skill premium of about 2, i.e., wages of high-skill workers are twice the wages of low-skill workers. In the second row, G_t is half the value of P_t and the skill premium decreases to about 1.7. In the third row, the value of G_t is now the same as the value of P_t so that the skill premium shrinks further to 1.62.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gartner-cs-rehire-2027-prediction-2026": {
+      "id": "gartner-cs-rehire-2027-prediction-2026",
+      "title": "Gartner Predicts Half of Companies That Cut Customer Service Staff Due to AI Will Rehire by 2027",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2026-02-03-gartner-predicts-half-of-companies-that-cut-customer-service-staff-due-to-ai-will-rehire-by-2027",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-03",
+      "excerpt": "By 2027, Gartner predicts that half of companies that attributed headcount reduction to AI will rehire staff to perform similar functions, but under different job titles. Despite speculation that AI will drastically reduce customer service headcount, Gartner's report found that only a fifth of customer service leaders have actually reduced agent staffing due to AI. Gartner's report polled 321 customer service and support leaders in October 2025.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "salesforce-state-of-service-7th-2025": {
+      "id": "salesforce-state-of-service-7th-2025",
+      "title": "Salesforce State of Service Report (7th Edition)",
+      "url": "https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/",
+      "publisher": "Salesforce",
+      "evidenceTier": 2,
+      "datePublished": "2025-11-13",
+      "excerpt": "Service teams estimate 30% of cases are currently handled by AI. By 2027, as AI agents - or digital labor - gain momentum, they project that figure will reach 50%. Data is sourced from a double-anonymous survey of 6,500 service professionals and decision makers conducted from April 25 through June 6, 2025.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "imf-rockall-ai-adoption-inequality-2025": {
+      "id": "imf-rockall-ai-adoption-inequality-2025",
+      "title": "AI Adoption and Inequality (IMF Working Paper 2025/068)",
+      "url": "https://www.imf.org/en/publications/wp/issues/2025/04/04/ai-adoption-and-inequality-565729",
+      "publisher": "IMF (Rockall, Mendes Tavares, Pizzinelli)",
+      "evidenceTier": 2,
+      "datePublished": "2025-04-04",
+      "excerpt": "Under the baseline assumption that occupational exposure to AI is directly associated with task displacement, the model predicts a decrease in the Gini coefficient for wage inequality of 1.73 p.p. Wealth inequality, however, is predicted to widen, with the wealth Gini rising 7.18 p.p. [...] roughly 60 percent of workers at the 90th income percentile are in an occupation where a large share of tasks can be performed by AI, at the 10th percentile only 15 percent of workers are in this situation. For comparison, the model calibrated to routine-biased automation produces a substantial increase in both wage and wealth inequality, with the Gini rising by 2.05 p.p. and 6.89 p.p., respectively.",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gartner-cs-abandon-reduction-plans-2025": {
+      "id": "gartner-cs-abandon-reduction-plans-2025",
+      "title": "Gartner Predicts 50% of Organizations Will Abandon Plans to Reduce Customer Service Workforce Due to AI",
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-10-gartner-predicts-50-percent-of-organizations-will-abandon-plans-to-reduce-customer-service-workforce-due-to-ai",
+      "publisher": "Gartner",
+      "evidenceTier": 2,
+      "datePublished": "2025-06-10",
+      "excerpt": "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans. A Gartner poll of 163 customer service and support leaders conducted in March 2025 [found] 95% of customer service leaders plan to retain human agents to strategically define AI's role.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bloomberg-boesler-tech-finance-ai-2026": {
+      "id": "bloomberg-boesler-tech-finance-ai-2026",
+      "title": "Tech and Finance Sectors Losing 28,000 Jobs Monthly Show AI Impact on Labor",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-01/tech-and-finance-sectors-losing-28-000-jobs-monthly-show-ai-impact-on-labor",
+      "publisher": "Bloomberg (Boesler & Prakash)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-01",
+      "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "overall-us-displacement",
+        "financial-services-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-claude-code-expertise-2026": {
+      "id": "anthropic-claude-code-expertise-2026",
+      "title": "Agentic coding and persistent returns to expertise",
+      "url": "https://www.anthropic.com/research/claude-code-expertise",
+      "publisher": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-16",
+      "excerpt": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory \u2014 Jun 16, 2026). Analysis of ~400,000 Claude Code sessions from ~235,000 users between Oct 2025 and Apr 2026. Verified success rates: 'Novice: 15%; Intermediate/Expert: 28-33%.' Partial success rates: 77% (novice) vs 91-92% (intermediate/expert). Abandonment when troubled: novice 19% vs intermediate+ 5-7%. 'Every one of the ten largest occupations in our dataset lands within seven points of software engineers' (29-34% verified success). 'The estimated value of the average session rose by 27% between October and April.' Division of labor: 'people make about 70% of the planning decisions but only 20% of the execution decisions.' Work mix: code writing/fixing/testing 56%, ops 17%, planning/exploration 14%, analysis/prose 13%. Novice: ~5 actions, 600 words output/prompt; Expert: ~12 actions, 3,200 words/prompt.",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-coding-agents-social-sci-2026": {
+      "id": "anthropic-coding-agents-social-sci-2026",
+      "title": "Coding agents in the social sciences",
+      "url": "https://www.anthropic.com/research/coding-agents-social-sciences",
+      "publisher": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-27",
+      "excerpt": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers \u2014 May 27, 2026). Survey of 1,260 quantitative social scientists. '81% of respondents said yes' to using generative AI to aid research. '20% of respondents use coding agents' regularly (weekly). '86% of users reporting Claude Code use.' Demographic disparities: 'those with typically male names have adopted coding agents at more than twice the rate of respondents with typically female names.' Career stage: 'Just over a quarter of doctoral students and postdocs use coding agents' vs tenured professors at less than half that rate. University prestige: 'Researchers at top universities are 40% more likely than others to use coding agents.' Task usage: '97% of coding agent users and 77% of other AI users report using it to generate code.' Productivity effects over 6 months: users show approximately 'a quarter of a paper more' in project starts and 'around a half of a working paper more' in working papers, but 'no evidence that coding agent users are submitting more new papers to journals.' '88% of respondents were above a 5' on 10-point AI productivity scale.",
+      "dateAdded": "2026-07-06",
+      "usedIn": [
+        "genai-work-adoption",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wemustactnow-statement-2026": {
+      "id": "wemustactnow-statement-2026",
+      "title": "We Must Act Now: A Statement on AI's Economic Transformation",
+      "url": "https://www.wemustactnow.ai/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Agrawal, Korinek, Cunningham)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-13",
+      "excerpt": "Statement organized by Erik Brynjolfsson, Ajay Agrawal, Anton Korinek, and Tom Cunningham. Signed by 16 Nobel Laureates (including Michael Spence and Daron Acemoglu) and 200+ economists and AI researchers. Core thesis: AI 'may become radically more powerful over the next 10 years,' potentially producing an economic transformation 'larger than the Industrial Revolution' on 'a vastly shorter time frame,' with 'large-scale job displacement' as a primary risk. Calls for deeper research on AI's economic impacts and for building policies and institutions to ensure AI complements human capabilities. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.' Brynjolfsson: 'AI capabilities are advancing far faster than our understanding of economic implications.' Agrawal: 'Whether rapidly advancing AI broadly elevates living standards or concentrates wealth depends on choices we make today.' Cunningham: 'We are driving in the fog, and it is extraordinarily difficult to anticipate what will happen next.'",
+      "dateAdded": "2026-07-13",
+      "usedIn": [
+        "reading-list"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pwc-ai-jobs-barometer-2026": {
+      "id": "pwc-ai-jobs-barometer-2026",
+      "title": "PwC 2026 Global AI Jobs Barometer",
+      "url": "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html",
+      "publisher": "PwC (Atkinson, Brown)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-15",
+      "excerpt": "PwC 2026 Global AI Jobs Barometer (Atkinson & Brown, Jun 15, 2026). Analyzed 1+ billion job advertisements across 27 countries and territories, including 2.4M entry-level US jobs. Key findings: entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills'; job openings for 'seniorised' entry-level roles grew 35% since 2019 while other entry-level roles declined 10%. AI-skills wage premium reached 62% (up from 57% in the 2025 barometer), ranging from 16% (government) to 118% (consumer markets). AI-skill jobs growing 69% vs 9% for the total jobs market \u2014 'almost twice as high as 2024.' Companies most exposed to AI: 52% headcount growth vs 36% (least exposed); wage growth 24% vs 17%; productivity 34% vs 24% (2018-2025), with the top-20% 'super-stars' at 163% productivity gain. 'Professionalised' roles growing twice as fast with 42% faster salary increases. Technology/media/telecom: 11% AI job share; health: <1%.",
+      "dateAdded": "2026-07-19",
+      "usedIn": [
+        "high-skill-wage-premium",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ft-ai-changing-entry-level-2026": {
+      "id": "ft-ai-changing-entry-level-2026",
+      "title": "AI isn't destroying entry-level jobs. It's changing them",
+      "url": "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
+      "publisher": "Financial Times",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-16",
+      "excerpt": "FT opinion piece (mid-July 2026) synthesizing the PwC 2026 Global AI Jobs Barometer findings on entry-level work. Argues AI is not eliminating entry-level jobs but transforming them: newcomers previously learned by doing simple, repetitive tasks \u2014 the apprenticeship rung \u2014 but AI has automated that rung. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal capability \u2014 historically senior skills. The piece frames the 'seniorisation' finding (entry-level roles 7x more likely to need senior skills; seniorised roles +35% since 2019 vs -10% for other entry-level roles) as a collapse of the traditional learning-by-doing path, not a jobs bloodbath.",
+      "dateAdded": "2026-07-19",
+      "usedIn": [
+        "reading-list"
       ],
       "verified": true,
       "synthetic": false

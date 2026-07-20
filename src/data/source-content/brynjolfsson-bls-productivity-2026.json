@@ -1,0 +1,14 @@
+{
+  "id": "brynjolfsson-bls-productivity-2026",
+  "abstract": "Erik Brynjolfsson argues in the Financial Times that US productivity data are beginning to show early signs of AI-driven improvement, though he acknowledges the signal remains noisy and concentrated in specific sectors rather than visible in aggregate statistics. Brynjolfsson — one of the leading economists studying technology and productivity — frames the current moment as potentially analogous to the late 1990s, when internet investments began translating into measurable productivity gains after years of the 'Solow paradox' (the observation that computers were everywhere except in the productivity statistics). He notes that productivity measurement is inherently lagged and that AI's effects may initially appear in firm-level and sector-level data before registering in national accounts. The analysis is particularly relevant because the longstanding puzzle of technology investment failing to produce aggregate productivity gains has been one of the strongest arguments against AI having a near-term economic impact. If Brynjolfsson's reading of the early data is correct, it could mark the beginning of a productivity acceleration with significant implications for wages, employment composition, and economic growth.",
+  "keyFindings": [
+    "Brynjolfsson argues US productivity data show early signs of AI-driven improvement",
+    "Signal remains noisy and concentrated in specific sectors rather than visible in aggregate statistics",
+    "Draws analogy to late 1990s when internet investments began translating into measurable productivity gains",
+    "Productivity measurement is inherently lagged — AI effects may appear at firm/sector level before national accounts",
+    "Finding is significant because the productivity paradox has been a key argument against near-term AI economic impact"
+  ],
+  "methodology": "Economic commentary and analysis by Erik Brynjolfsson published in the Financial Times. Draws on BLS productivity statistics, firm-level studies, and historical comparison to the 1990s IT productivity boom. Not a peer-reviewed study but expert analysis from a leading researcher in technology and productivity economics.",
+  "qualifiers": "FT article was behind paywall and could not be fetched; content based on provided excerpt and Brynjolfsson's known research positions. Commentary/opinion piece rather than peer-reviewed research. Productivity data is notoriously difficult to measure, especially for service-sector and knowledge-work output. 'Early signs' language acknowledges the evidence is preliminary and could be revised. Selection of which sectors and time periods to highlight involves judgment calls. The Solow paradox analogy is contested — some economists believe IT productivity gains were more modest than initially claimed.",
+  "fetchedAt": "2026-05-26"
+}

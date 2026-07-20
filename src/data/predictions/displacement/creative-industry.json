@@ -2,13 +2,13 @@
   "id": "displacement-creative",
   "slug": "creative-industry-displacement",
   "title": "Creative Industry Displacement by 2030",
-  "description": "Estimated share of creative work (design, writing, marketing, illustration) significantly affected by generative AI by 2030. Sources measure different things — freelance platform declines, job posting changes, executive surveys, and model projections — making direct comparison difficult. Effects are concentrated in commoditized, entry-level tasks; experienced creative professionals show wage growth and productivity gains from AI augmentation.",
+  "description": "Estimated share of creative work (design, writing, marketing, illustration) significantly affected by generative AI by 2030. Sources measure different things \u2014 freelance platform declines, job posting changes, executive surveys, and model projections \u2014 making direct comparison difficult. Effects are concentrated in commoditized, entry-level tasks; experienced creative professionals show wage growth and productivity gains from AI augmentation.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 23.8,
+  "currentValue": 20.7,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
-  "disclaimer": "Heterogeneous evidence — interpret with caution. This estimate aggregates 8 data points that measure fundamentally different things: freelance platform revenue declines, job posting volume changes, illustration upload trends, executive surveys, and model-based projections. These are not interchangeable metrics. The 14–33% range reflects both genuine uncertainty and definitional incompatibility across sources. Observed platform-level effects (Upwork, Pixiv) capture commoditized creative tasks — entry-level, template-driven work — not the full creative sector. Overlays show experienced designers saw +16.7% wage growth (Dallas Fed), and human-AI teams showed 73% higher productivity (Ju & Aral). The weighted average is a mathematical summary of mixed evidence, not a consensus estimate of sector-wide role elimination.",
+  "disclaimer": "Heterogeneous evidence \u2014 interpret with caution. This estimate aggregates 8 data points that measure fundamentally different things: freelance platform revenue declines, job posting volume changes, illustration upload trends, executive surveys, and model-based projections. These are not interchangeable metrics. The 14\u201333% range reflects both genuine uncertainty and definitional incompatibility across sources. Observed platform-level effects (Upwork, Pixiv) capture commoditized creative tasks \u2014 entry-level, template-driven work \u2014 not the full creative sector. Overlays show experienced designers saw +16.7% wage growth (Dallas Fed), and human-AI teams showed 73% higher productivity (Ju & Aral). The weighted average is a mathematical summary of mixed evidence, not a consensus estimate of sector-wide role elimination.",
   "history": [
     {
       "date": "2023-06-14",
@@ -253,7 +253,7 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: $1 reduced freelance → $0.03 AI spend"
+      "label": "Ramp: $1 reduced freelance \u2192 $0.03 AI spend"
     },
     {
       "date": "2025-10-30",
@@ -310,6 +310,15 @@
       "label": "Reimers & Waldfogel: Book releases tripled 2022-2025; consumer surplus +25-50%"
     },
     {
+      "date": "2026-02-18",
+      "direction": "down",
+      "sourceIds": [
+        "unesco-reshaping-creativity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "UNESCO: Music creators -24% revenue, audiovisual -21% income by 2028"
+    },
+    {
       "date": "2026-02-19",
       "direction": "down",
       "sourceIds": [
@@ -353,12 +362,30 @@
       ],
       "evidenceTier": 4,
       "label": "Imas/Mandel: AI art exclusivity premium only 21% vs 44% for human art"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "gallup-arts-ai-creative-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup: Artists' earnings not sharply lower despite AI exposure (2017-2024)"
+    },
+    {
+      "date": "2026-06-16",
+      "direction": "up",
+      "sourceIds": [
+        "adobe-creators-toolkit-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Adobe/Harris: 87% of creators say AI accelerated business/audience (n=16K)"
     }
   ],
   "sources": [
     {
       "id": "wef-creative-2023",
-      "title": "Future of Jobs Report 2023 — Creative and Media Professions",
+      "title": "Future of Jobs Report 2023 \u2014 Creative and Media Professions",
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2023/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
@@ -368,7 +395,7 @@
     },
     {
       "id": "mckinsey-creative-automation",
-      "title": "The economic potential of generative AI — Creative work",
+      "title": "The economic potential of generative AI \u2014 Creative work",
       "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier",
       "publisher": "McKinsey Global Institute",
       "evidenceTier": 2,
@@ -378,7 +405,7 @@
     },
     {
       "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
+      "title": "Upwork Q2 2024 Earnings \u2014 Freelancer Market Trends",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
       "publisher": "Upwork (Earnings Report)",
       "evidenceTier": 1,
@@ -398,7 +425,7 @@
     },
     {
       "id": "techcrunch-creative-layoffs",
-      "title": "As layoffs deepen, AI's role in the cuts is murky — but it definitely has one",
+      "title": "As layoffs deepen, AI's role in the cuts is murky \u2014 but it definitely has one",
       "url": "https://techcrunch.com/2024/01/29/as-layoffs-deepen-ais-role-in-the-cuts-is-murky-but-it-definitely-has-one/",
       "publisher": "TechCrunch",
       "evidenceTier": 3,
@@ -458,7 +485,7 @@
     },
     {
       "id": "autor-new-frontiers-qje-2024",
-      "title": "New Frontiers: The Origins and Content of New Work, 1940–2018",
+      "title": "New Frontiers: The Origins and Content of New Work, 1940\u20132018",
       "url": "https://academic.oup.com/qje/article-abstract/139/3/1399/7630187",
       "publisher": "QJE (Autor, Chin, Salomons, Seegmiller)",
       "evidenceTier": 1,
@@ -563,7 +590,7 @@
       "publisher": "NBER (Reimers, Waldfogel)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25–50 percent from market expansion.",
+      "excerpt": "New book releases tripled over this period, but average quality declined... the authors estimate a potential steady-state consumer surplus gain of 25\u201350 percent from market expansion.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -673,6 +700,36 @@
       "evidenceTier": 2,
       "datePublished": "2026-04-20",
       "excerpt": "Software developers -15.1%, customer-service sales reps -11%, financial specialists -8.1%, lawyers and law clerks -5.4%, designers -4%, K-12 teachers +1.3% employment change by 2030 (Metaculus community forecast)."
+    },
+    {
+      "id": "gallup-arts-ai-creative-2026",
+      "title": "AI Is Changing Creative Work, but the Arts Aren't Disappearing",
+      "url": "https://www.gallup.com/workplace/708575/ai-changing-creative-work-arts-arent-disappearing.aspx",
+      "publisher": "Gallup (with Journal of Cultural Economics)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Employees in artistic occupations report somewhat higher AI use than the workforce overall, with roughly one in four saying they use AI frequently, compared with about one in five workers across the broader economy. Estimates are slightly positive, though they are not statistically distinguishable from zero when examining earnings trends between highly and less exposed artistic occupations. Total hours worked rise more clearly beginning in 2022 and remain elevated through 2024 for artists in more exposed occupations. Some highly exposed artistic occupations experienced weaker job growth in 2023 relative to those with less exposure, though the differences are modest and far from the widespread job losses often assumed.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "unesco-reshaping-creativity-2026",
+      "title": "Artists face steep income decline due to AI, UNESCO finds",
+      "url": "https://news.un.org/en/story/2026/02/1166989",
+      "publisher": "UNESCO (via UN News; Re|Shaping Policies for Creativity report)",
+      "evidenceTier": 2,
+      "datePublished": "2026-02-18",
+      "excerpt": "Music creators face a projected 24% revenue loss and audiovisual sector workers a 21% income loss by 2028. The report stresses that these disruptions are occurring at a pace that outstrips current policy responses, exacerbating inequalities and threatening the livelihoods of millions of cultural workers. Report covers more than 120 countries and includes 8,100+ policy measures.",
+      "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "adobe-creators-toolkit-2026",
+      "title": "87 Percent of Creators Say Creative AI Is Growing Their Business and Audience, According to Adobe's 2026 Creators' Toolkit Report",
+      "url": "https://news.adobe.com/news/2026/06/creators-toolkit-report-2026",
+      "publisher": "Adobe (Creators' Toolkit Report / Harris Poll)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-16",
+      "excerpt": "87% of creators using creative AI report it has accelerated the growth of their business or audience. 75% describe creative AI as integrated or essential to how they work. 58% feel stronger competing against larger teams/studios since using creative AI. 48% feel more secure about their future as creators. 40% report AI-assisted content performs consistently better. Survey of more than 16,000 creators across US, UK, France, Germany, South Korea, Japan, India, Australia conducted with The Harris Poll.",
+      "dateAdded": "2026-07-02"
     }
   ]
 }

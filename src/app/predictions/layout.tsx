@@ -1,8 +1,7 @@
 import { Metadata } from "next";
-import { getAllPredictions } from "@/lib/data-loader";
-import { SOURCE_COUNT_DISPLAY } from "@/lib/constants";
+import { PREDICTION_COUNT, SOURCE_COUNT_DISPLAY } from "@/lib/constants";
 
-const count = getAllPredictions().length;
+const count = PREDICTION_COUNT;
 
 export const metadata: Metadata = {
   title: "AI Labor Market Predictions | jobsdata.ai",

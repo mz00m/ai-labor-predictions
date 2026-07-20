@@ -1,0 +1,17 @@
+{
+  "id": "upwork-in-demand-skills-2026",
+  "abstract": "Upwork's In-Demand Skills 2026 report (published February 4, 2026) analyzes actual completed-job freelancer earnings across six categories in 2025. Top AI-applied skills grew 109% year-over-year, with AI video generation +329%, AI integration +178%, and AI data annotation +154%. Traditional categories (full-stack dev, virtual assistance, data analytics, graphic design) stayed consistently strong. Nearly half of business leaders say they would pay a premium for creative, innovative independent talent — a bifurcation signal for freelancer rates.",
+  "keyFindings": [
+    "Top AI-applied freelance skills grew 109% year-over-year in 2025",
+    "AI video generation/editing skills: +329% YoY",
+    "AI integration skills: +178% YoY",
+    "AI data annotation/labeling skills: +154% YoY",
+    "AI image generation/editing skills: +95% YoY; AI chatbot development +71% YoY",
+    "Traditional skills (full-stack development, virtual assistance, data analytics, graphic design) remained consistently strong",
+    "Nearly 50% of business leaders say they'd pay a premium for creative, innovative independent talent",
+    "Human-AI collaboration boosts project completion by up to 70%, even on simple tasks"
+  ],
+  "methodology": "Analysis of completed-job freelancer earnings on the Upwork Marketplace from January 1 to December 31, 2025 (US-based demand). Minimum $100,000 in aggregate freelancer earnings per skill required for inclusion. Six work categories covered. Not survey- or posting-based — reflects actual client spend.",
+  "qualifiers": "Upwork is a Tier 1 corporate data source (earnings-derived) but has a commercial interest in framing the marketplace positively. Report emphasizes growth categories more than declining ones — writing and translation category-level rate declines are not disclosed in this release. Growth percentages are on spend by skill, not average freelancer hourly rates directly.",
+  "fetchedAt": "2026-07-02"
+}

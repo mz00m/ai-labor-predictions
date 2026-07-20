@@ -1,0 +1,14 @@
+{
+  "id": "teutloff-freelancer-demand-shifts-2025",
+  "abstract": "Teutloff analyzes Upwork marketplace data before and after the launch of ChatGPT (November 2022) to measure how generative AI has shifted demand for different categories of freelance work. The study provides some of the most granular evidence available on AI's impact on specific work categories in a major online labor marketplace. Writing, translation, and simple coding jobs declined 20-30% in demand following ChatGPT's release, consistent with these tasks being directly substitutable by generative AI tools. In contrast, demand for complex strategy, creative services, and specialized technical work increased, suggesting that clients are reallocating budgets from AI-automatable commodity tasks toward higher-value human services. The findings illustrate the compositional shift pattern: overall freelance demand may not decline dramatically, but the mix shifts substantially away from routine cognitive tasks toward complex, judgment-intensive work. This mirrors historical automation patterns where technology displaced specific task categories while expanding demand for complementary skills.",
+  "keyFindings": [
+    "Writing, translation, and simple coding freelance jobs declined 20-30% in demand post-ChatGPT launch",
+    "Complex strategy and creative services freelance demand increased, indicating budget reallocation from commodity to high-value tasks",
+    "Compositional shift pattern: overall freelance demand reshuffles rather than declining uniformly",
+    "Results provide granular evidence of AI substitution effects in specific cognitive task categories",
+    "Pattern mirrors historical automation: technology displaces specific tasks while expanding demand for complementary skills"
+  ],
+  "methodology": "Empirical analysis of Upwork marketplace data comparing job posting volumes, pricing, and category composition before and after ChatGPT's launch in November 2022. Uses the sharp timing of ChatGPT's release as a natural experiment to identify demand shifts by service category.",
+  "qualifiers": "Single marketplace (Upwork) may not represent the broader freelance or labor market. Demand shifts on the platform could reflect client substitution to AI tools or to other hiring channels. Short-run demand changes may not persist as market adjusts. Category-level analysis may mask within-category heterogeneity. Platform-specific factors (fee changes, algorithm updates) could confound AI attribution.",
+  "fetchedAt": "2026-05-26"
+}
