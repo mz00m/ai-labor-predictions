@@ -1,0 +1,18 @@
+{
+  "id": "brynjolfsson-richardson-adp-representativeness-2025",
+  "abstract": "Methodology companion to the Brynjolfsson/Chandar/Chen 'Canaries' line of work, co-authored by Erik Brynjolfsson (Stanford Digital Economy Lab) and Nela Richardson (ADP's chief economist), published Oct 30, 2025. Systematically compares the ADP payroll sample to the QCEW private-sector benchmark and concludes that ADP's National Employment Report — after re-weighting by industry, state, and employer size — is 'overall representative of U.S. employment.' Written to address the standard critique that Canaries findings are 'just one dataset' and to make ADP-based labor-market analysis defensible for policy and research use.",
+  "keyFindings": [
+    "ADP covers 'more than 26 million U.S. workers at more than 500,000 employers' — 1 in 6 US workers, 1 in 5 private-sector workers",
+    "QCEW benchmark: 131.3M private-sector workers, capturing more than 95% of US employment",
+    "Sectoral divergences (March 2025): ADP OVER-represents manufacturing (9% vs 3.5% QCEW), UNDER-represents construction (4.6% vs 6.1%); BLS survey over-represents Trade/Transport/Utilities (32.9% vs 21.6%)",
+    "ADP is 'more representative of employment for small and medium employers than the BLS survey': 32.4% of active ADP employment is <50-worker firms vs QCEW 43.9% employment (BLS <3%)",
+    "Establishment concentration: ADP leans larger and concentrates in manufacturing and the Northeast",
+    "Growth bias: 'Employers that outsource payroll services are likely to be more profitable than those that don't' — ADP corrects via re-weighting",
+    "Geographic representation is closely aligned with QCEW at the FIPS-county level",
+    "Revision stability (Jan-Jun 2025): ADP net revision +2,000 jobs vs BLS -488,000; final convergence to 14K-job gap — ADP is much more stable month-to-month",
+    "Conclusion: 'ADP's National Employment Report ... is overall representative of U.S. employment'"
+  ],
+  "methodology": "Head-to-head comparison of the ADP payroll sample against the QCEW (Quarterly Census of Employment and Wages, based on tax data covering ~95% of US employment) as the ground-truth benchmark. Compares distributions by industry, establishment size, and geography (FIPS county-level). Reports the re-weighting scheme ADP applies to correct for known sample biases (industry, state, employer size). Also compares revision behavior against BLS Current Employment Statistics over the same period.",
+  "qualifiers": "This is a methodology / representativeness paper, not a labor-market finding. It says the ADP sample IS defensibly representative after re-weighting — but it does not prove any specific Canaries-line result (early-career declines, automation-ratio correlation, etc.) is correct. Convenience-sample bias remains (self-selecting ADP clients); the paper argues re-weighting sufficiently corrects for it, but critics of the Canaries findings (e.g., Yale Budget Lab, Eckhardt-Goldschlag using CPS data) don't dispute ADP methodology per se — they get different results using different data. This paper is best cited for 'how trustworthy is the underlying ADP sample?' questions, not for 'is Canaries right?' questions.",
+  "fetchedAt": "2026-07-20"
+}

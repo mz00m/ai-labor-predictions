@@ -69,6 +69,17 @@
       "dataType": "observed"
     },
     {
+      "date": "2025-03-01",
+      "value": 28,
+      "sourceIds": [
+        "pew-sidoti-mcclain-chatgpt-adoption-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "sampleSize": 5123
+    },
+    {
       "date": "2025-05-01",
       "value": 35.5,
       "sourceIds": [
@@ -941,6 +952,16 @@
       "datePublished": "2026-05-27",
       "excerpt": "Anthropic Economic Research (Lyttelton, Massenkoff, Wilmers \u2014 May 27, 2026). Survey of 1,260 quantitative social scientists. '81% of respondents said yes' to using generative AI to aid research. '20% of respondents use coding agents' regularly (weekly). '86% of users reporting Claude Code use.' Demographic disparities: 'those with typically male names have adopted coding agents at more than twice the rate of respondents with typically female names.' Career stage: 'Just over a quarter of doctoral students and postdocs use coding agents' vs tenured professors at less than half that rate. University prestige: 'Researchers at top universities are 40% more likely than others to use coding agents.' Task usage: '97% of coding agent users and 77% of other AI users report using it to generate code.' Productivity effects over 6 months: users show approximately 'a quarter of a paper more' in project starts and 'around a half of a working paper more' in working papers, but 'no evidence that coding agent users are submitting more new papers to journals.' '88% of respondents were above a 5' on 10-point AI productivity scale.",
       "dateAdded": "2026-07-06"
+    },
+    {
+      "id": "pew-sidoti-mcclain-chatgpt-adoption-2025",
+      "title": "34% of U.S. Adults Have Used ChatGPT, About Double the Share in 2023",
+      "url": "https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/",
+      "publisher": "Pew Research Center (Sidoti, McClain)",
+      "evidenceTier": 1,
+      "datePublished": "2025-06-25",
+      "excerpt": "Pew Research Center (Sidoti & McClain), '34% of U.S. Adults Have Used ChatGPT, About Double the Share in 2023' \u2014 Jun 25, 2025. Survey of 5,123 U.S. adults via American Trends Panel, Feb 24 - Mar 2, 2025. Overall: '34% of U.S. adults say they have ever used ChatGPT' (up from ~17% in summer 2023). By age: under-30 = 58% (up from 43% in 2024); 30-49 = 41%; 50-64 = 25%; 65+ = 10%. By education: postgrad 52%; bachelor's 51%; some college 33%; HS or less 18%. Work usage (employed adults): overall 28% (up from 8% in early 2023); 18-29 = 38%; 30-49 = 30%; 50+ = 18%; postgrad 45%; bachelor's 36%. Other use cases: learning 26% (up from 8% in 2023); entertainment 22% (up from 11% in 2023). Awareness: 79% have heard at least a little about ChatGPT (up from 58% in March 2023).",
+      "dateAdded": "2026-07-20"
     }
   ]
 }
