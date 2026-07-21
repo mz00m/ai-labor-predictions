@@ -646,6 +646,40 @@ function checkDataTypeSanity(prediction, report, today) {
   if (clean) report.addPassing();
 }
 
+// Guard the MetricType/DataType enums — invalid values (e.g. a fabricated
+// "earnings-mentions") pass JSON validation but break next build at prerender
+// time. Keep this in sync with src/lib/types.ts.
+const VALID_METRIC_TYPES = new Set([
+  "employment", "postings", "survey", "projection", "corporate",
+]);
+const VALID_DATA_TYPES = new Set(["observed", "projected"]);
+
+function checkEnumValues(prediction, report) {
+  let clean = true;
+  for (let i = 0; i < prediction.history.length; i++) {
+    const h = prediction.history[i];
+    if (h.metricType !== undefined && !VALID_METRIC_TYPES.has(h.metricType)) {
+      report.addMustFix(
+        prediction.slug,
+        `history[${i}]: invalid metricType`,
+        `metricType="${h.metricType}" on ${h.date}. Valid: ${[...VALID_METRIC_TYPES].join(", ")}`,
+        `Change metricType to one of the valid values (see src/lib/types.ts MetricType union)`
+      );
+      clean = false;
+    }
+    if (h.dataType !== undefined && !VALID_DATA_TYPES.has(h.dataType)) {
+      report.addMustFix(
+        prediction.slug,
+        `history[${i}]: invalid dataType`,
+        `dataType="${h.dataType}" on ${h.date}. Valid: ${[...VALID_DATA_TYPES].join(", ")}`,
+        `Change dataType to "observed" or "projected"`
+      );
+      clean = false;
+    }
+  }
+  if (clean) report.addPassing();
+}
+
 // Every ingested source must have a chatbot content file (autoresearch rule).
 function checkSourceContentCoverage(allPredictions, report) {
   const referenced = new Set();
@@ -793,6 +827,7 @@ function main() {
     checkBrokenURLPatterns(p, report);
     checkSignConventions(p, report);
     checkDataTypeSanity(p, report, today);
+    checkEnumValues(p, report);
   }
 
   // Cross-file checks
