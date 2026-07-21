@@ -12,8 +12,11 @@
       "cadenceLabel": "Monthly",
       "releasePattern": "First Friday of each month, 8:30am ET",
       "url": "https://www.bls.gov/news.release/empsit.toc.htm",
-      "targetGraphs": ["overall-us-displacement", "white-collar-professional-displacement"],
-      "topicLine": "The headline US jobs report — nonfarm payrolls and unemployment rate.",
+      "targetGraphs": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "topicLine": "The headline US jobs report \u2014 nonfarm payrolls and unemployment rate.",
       "whatItMeasures": "Net change in nonfarm payroll employment and the unemployment rate, from two Census-run surveys (~119K businesses and ~60K households). Broken out by industry, age, race, and education.",
       "whyItMatters": "The single most-cited labor market signal. AI's aggregate effect (or lack thereof) shows up here first if it's happening at scale. Prior-month revisions often reveal that early estimates over- or under-stated the trend.",
       "lastIngested": {
@@ -32,10 +35,14 @@
       "cadenceLabel": "Monthly",
       "releasePattern": "First Thursday of each month",
       "url": "https://www.challengergray.com/blog/",
-      "targetGraphs": ["overall-us-displacement", "tech-sector-displacement", "white-collar-professional-displacement"],
+      "targetGraphs": [
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
       "topicLine": "Employer-announced layoffs with a specific 'AI-attributed' category.",
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
-      "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
+      "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy \u2014 attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
         "sourceId": "challenger-june-2026",
         "date": "2026-07-01",
@@ -52,10 +59,13 @@
       "cadenceLabel": "Monthly (rolling)",
       "releasePattern": "Ad hoc; typically monthly on ramp.com/velocity",
       "url": "https://ramp.com/velocity",
-      "targetGraphs": ["overall-us-displacement", "freelancer-rate-impact"],
+      "targetGraphs": [
+        "overall-us-displacement",
+        "freelancer-rate-impact"
+      ],
       "topicLine": "Firm-level AI spend and hiring signals from Ramp's business-card data.",
       "whatItMeasures": "Aggregated spend and hiring patterns across ~30K businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
-      "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS — private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
+      "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS \u2014 private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
       "lastIngested": {
         "sourceId": "ramp-revelio-ai-jobs-impact-2026",
         "date": "2026-06-30",
@@ -65,14 +75,17 @@
     },
     {
       "id": "fed-ai-adoption-monitoring",
-      "name": "Fed Reserve — Monitoring AI Adoption in the US Economy",
+      "name": "Fed Reserve \u2014 Monitoring AI Adoption in the US Economy",
       "publisher": "Federal Reserve Board (FEDS Notes)",
       "tier": 1,
       "cadence": "quarterly",
       "cadenceLabel": "~Quarterly",
       "releasePattern": "FEDS Notes format; typically every 3-4 months",
       "url": "https://www.federalreserve.gov/econres/notes/feds-notes/",
-      "targetGraphs": ["ai-adoption-rate", "workforce-ai-exposure"],
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "workforce-ai-exposure"
+      ],
       "topicLine": "Official Fed synthesis of the many US AI-adoption survey series.",
       "whatItMeasures": "Reconciles BTOS, ADP, NY Fed SCE, and academic-tracker series to produce the Fed's own reading of firm and worker AI adoption trends.",
       "whyItMatters": "One of the very few sources that formally reconciles disagreements between adoption surveys. Fed's involvement lends institutional weight to whatever the current best estimate is.",
@@ -85,14 +98,16 @@
     },
     {
       "id": "census-btos-ai",
-      "name": "Census Business Trends & Outlook Survey — AI Supplement",
+      "name": "Census Business Trends & Outlook Survey \u2014 AI Supplement",
       "publisher": "US Census Bureau",
       "tier": 1,
       "cadence": "biweekly",
       "cadenceLabel": "Every 2 weeks",
       "releasePattern": "Alternating Thursdays",
       "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
-      "targetGraphs": ["ai-adoption-rate"],
+      "targetGraphs": [
+        "ai-adoption-rate"
+      ],
       "topicLine": "The freshest firm-side AI adoption measure available in the US.",
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
@@ -101,7 +116,7 @@
         "date": "2026-05-03",
         "value": "19.8% national AI use; Info 39.7%; Finance 33.9%"
       },
-      "nextExpected": "~August 2026 (next BTOS release)"
+      "nextExpected": "~July 30 or Aug 2026 BTOS release. Note: the Jul 2, 2026 wave exists but the specific national AI% for that ref date is not yet in press-accessible form \u2014 needs manual pull from Census BTOS data files."
     },
     {
       "id": "factset-earnings-ai-mentions",
@@ -112,7 +127,9 @@
       "cadenceLabel": "Quarterly",
       "releasePattern": "Published mid-way through each S&P 500 reporting season (~Feb, May, Aug, Nov)",
       "url": "https://insight.factset.com/",
-      "targetGraphs": ["earnings-call-ai-mentions"],
+      "targetGraphs": [
+        "earnings-call-ai-mentions"
+      ],
       "topicLine": "How often S&P 500 companies mention 'AI' on their quarterly earnings calls.",
       "whatItMeasures": "The percentage of S&P 500 companies whose earnings call transcripts include the term 'AI.' Reported quarterly with an interim update after ~50% of companies have reported.",
       "whyItMatters": "The clearest cadence-consistent read of corporate AI focus. Q4 2025 hit an all-time high (68%); Q1 2026's slight dip to 65% was the first sequential decline in the ChatGPT era.",
@@ -132,7 +149,9 @@
       "cadenceLabel": "Quarterly",
       "releasePattern": "Roughly every 3 months at genaiadoptiontracker.com",
       "url": "https://www.genaiadoptiontracker.com/",
-      "targetGraphs": ["genai-work-adoption"],
+      "targetGraphs": [
+        "genai-work-adoption"
+      ],
       "topicLine": "The definitive quarterly measure of US worker generative AI adoption.",
       "whatItMeasures": "Share of US adults 18-64 using generative AI (a) overall and (b) at work. Fielded quarterly via the Real-Time Population Survey (RPS), which has published its GenAI module every 3 months since August 2024.",
       "whyItMatters": "The single cleanest time series on worker-side GenAI adoption in the US, cited by every major synthesis (Stanford DEL, IMF, Fed, OECD). Nationally representative and cadence-consistent.",
@@ -145,17 +164,20 @@
     },
     {
       "id": "yale-budgetlab-cps-tracker",
-      "name": "Yale Budget Lab — Tracking AI's Impact on the Labor Market",
+      "name": "Yale Budget Lab \u2014 Tracking AI's Impact on the Labor Market",
       "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
       "tier": 1,
       "cadence": "quarterly",
       "cadenceLabel": "Rolling quarterly (with CPS updates)",
       "releasePattern": "Each new CPS release; typically monthly commentary, quarterly deep-dives",
       "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
-      "targetGraphs": ["overall-us-displacement", "workforce-ai-exposure"],
-      "topicLine": "The main counter-evidence to the ADP 'Canaries' finding — no aggregate AI-labor effect visible in CPS.",
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "topicLine": "The main counter-evidence to the ADP 'Canaries' finding \u2014 no aggregate AI-labor effect visible in CPS.",
       "whatItMeasures": "Uses the Current Population Survey to test whether AI-exposed occupations are seeing employment declines. Complements the ADP-based Canaries with a different dataset and a different unit of analysis.",
-      "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field — anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
+      "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field \u2014 anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
       "lastIngested": {
         "sourceId": "yale-budgetlab-not-yet-2026",
         "date": "2026-06-15",
@@ -165,17 +187,22 @@
     },
     {
       "id": "stanford-del-aiei",
-      "name": "Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption)",
+      "name": "Stanford DEL \u2014 AI Economic Indicators (Canaries + Takeoff + Adoption)",
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson)",
       "tier": 1,
       "cadence": "quarterly",
       "cadenceLabel": "Quarterly Research Notes; monthly dashboard",
       "releasePattern": "Research notes ~quarterly; dashboards update monthly at digitaleconomy.stanford.edu",
       "url": "https://digitaleconomy.stanford.edu/project/indicators/",
-      "targetGraphs": ["overall-us-displacement", "workforce-ai-exposure", "tech-sector-displacement", "entry-level-wage-impact"],
-      "topicLine": "Three linked dashboards: employment by age × AI exposure, macro takeoff signals, and worker adoption.",
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "tech-sector-displacement",
+        "entry-level-wage-impact"
+      ],
+      "topicLine": "Three linked dashboards: employment by age \u00d7 AI exposure, macro takeoff signals, and worker adoption.",
       "whatItMeasures": "Canaries Dashboard tracks employment across 5-year balanced ADP payroll sample (25K firms, 4.6M workers). Takeoff Tracker follows 12 macro indicators for AI-driven growth. Adoption Monitor synthesizes surveys.",
-      "whyItMatters": "The Canaries finding — early-career workers 22-25 in most-exposed occupations contracting -3.8%/yr — is the most-cited AI-displacement evidence in the field. Takeoff Tracker's 7-no / 3-mild / 2-strong reading is the field's best macro summary.",
+      "whyItMatters": "The Canaries finding \u2014 early-career workers 22-25 in most-exposed occupations contracting -3.8%/yr \u2014 is the most-cited AI-displacement evidence in the field. Takeoff Tracker's 7-no / 3-mild / 2-strong reading is the field's best macro summary.",
       "lastIngested": {
         "sourceId": "stanford-del-canaries-april-2026",
         "date": "2026-06-10",
@@ -192,8 +219,12 @@
       "cadenceLabel": "Quarterly reports",
       "releasePattern": "Themed reports every ~3 months on anthropic.com/research",
       "url": "https://www.anthropic.com/economic-index",
-      "targetGraphs": ["genai-work-adoption", "workforce-ai-exposure", "customer-service-automation"],
-      "topicLine": "How Claude.ai users actually work with AI — the largest usage dataset in the field.",
+      "targetGraphs": [
+        "genai-work-adoption",
+        "workforce-ai-exposure",
+        "customer-service-automation"
+      ],
+      "topicLine": "How Claude.ai users actually work with AI \u2014 the largest usage dataset in the field.",
       "whatItMeasures": "Analyzes millions of Claude conversations to classify task types (automation vs augmentation), occupation coverage, and skill-formation effects. Each report covers a themed angle: economic primitives, learning curves, cadences, etc.",
       "whyItMatters": "The only source that grounds AI-labor claims in actual usage data at scale. Automation-ratio findings (used by Stanford DEL's Canaries analysis) have become a field standard for measuring 'how AI is being used' at the occupation level.",
       "lastIngested": {
@@ -212,10 +243,14 @@
       "cadenceLabel": "Annual (major release)",
       "releasePattern": "Once per year, typically ~June, with interim country updates",
       "url": "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html",
-      "targetGraphs": ["high-skill-wage-premium", "entry-level-wage-impact", "white-collar-professional-displacement"],
-      "topicLine": "The largest job-postings-based analysis of AI's labor market impact — 1B+ ads across 27 countries.",
+      "targetGraphs": [
+        "high-skill-wage-premium",
+        "entry-level-wage-impact",
+        "white-collar-professional-displacement"
+      ],
+      "topicLine": "The largest job-postings-based analysis of AI's labor market impact \u2014 1B+ ads across 27 countries.",
       "whatItMeasures": "Analyzes 1B+ job advertisements across 27 countries plus company financial and O*NET task data. Reports AI-skill wage premium, 'seniorised' entry-level shifts, and productivity growth by AI exposure.",
-      "whyItMatters": "The largest cross-country postings analysis. The 2026 edition's 'seniorisation' finding — entry-level roles 7x more likely to need senior skills — has reframed how the field talks about early-career displacement.",
+      "whyItMatters": "The largest cross-country postings analysis. The 2026 edition's 'seniorisation' finding \u2014 entry-level roles 7x more likely to need senior skills \u2014 has reframed how the field talks about early-career displacement.",
       "lastIngested": {
         "sourceId": "pwc-ai-jobs-barometer-2026",
         "date": "2026-06-15",
@@ -225,17 +260,20 @@
     },
     {
       "id": "ny-fed-sce",
-      "name": "NY Fed Survey of Consumer Expectations — AI Module",
+      "name": "NY Fed Survey of Consumer Expectations \u2014 AI Module",
       "publisher": "Federal Reserve Bank of New York",
       "tier": 1,
       "cadence": "quarterly",
       "cadenceLabel": "Quarterly (AI module)",
       "releasePattern": "Rolling ~quarterly special-topic releases at libertystreeteconomics.newyorkfed.org",
       "url": "https://libertystreeteconomics.newyorkfed.org/",
-      "targetGraphs": ["genai-work-adoption", "median-wage-impact"],
+      "targetGraphs": [
+        "genai-work-adoption",
+        "median-wage-impact"
+      ],
       "topicLine": "Worker-side self-reported AI use and training access, from the NY Fed's household panel.",
       "whatItMeasures": "Household survey covering ~1,300 US workers on AI-tool use at work, employer-provided training, and perceived job-security effects. Published as themed Liberty Street Economics posts.",
-      "whyItMatters": "One of the few sources measuring not just adoption but access to employer training on AI — where the divides (income, education, race) are widening fastest. April 2026 report: only 15.9% of employers offer AI training; 38% of workers want it.",
+      "whyItMatters": "One of the few sources measuring not just adoption but access to employer training on AI \u2014 where the divides (income, education, race) are widening fastest. April 2026 report: only 15.9% of employers offer AI training; 38% of workers want it.",
       "lastIngested": {
         "sourceId": "nyfed-sce-ai-workplace-training-2026",
         "date": "2026-04-14",
@@ -252,14 +290,17 @@
       "cadenceLabel": "Rolling quarterly reports",
       "releasePattern": "Themed workplace reports every ~3 months at gallup.com/workplace",
       "url": "https://www.gallup.com/workplace/ai-at-work.aspx",
-      "targetGraphs": ["genai-work-adoption", "ai-adoption-rate"],
+      "targetGraphs": [
+        "genai-work-adoption",
+        "ai-adoption-rate"
+      ],
       "topicLine": "Large-sample worker-side AI adoption and sentiment, from Gallup's employed-adult panel.",
       "whatItMeasures": "Surveys of 20K+ US employees on AI use frequency, workplace attitudes, productivity perceptions, and industry-specific reports (arts/creative most recently).",
       "whyItMatters": "The largest single-survey read of US worker AI adoption (Feb 2026 sample: 23,717). Frequency breakdown (13% daily / 28% weekly+ / 50% at-least-annually) is more granular than most trackers.",
       "lastIngested": {
         "sourceId": "gallup-arts-ai-creative-2026",
         "date": "2026-05-01",
-        "value": "AI in creative work — arts sector deep-dive"
+        "value": "AI in creative work \u2014 arts sector deep-dive"
       },
       "nextExpected": "~August-September 2026 (next Gallup workplace AI report)"
     },
@@ -272,10 +313,12 @@
       "cadenceLabel": "Annual",
       "releasePattern": "March each year",
       "url": "https://www.ellucian.com/news",
-      "targetGraphs": ["education-sector-displacement"],
+      "targetGraphs": [
+        "education-sector-displacement"
+      ],
       "topicLine": "The main annual measure of higher-ed AI adoption and workforce impact.",
       "whatItMeasures": "Surveys ~779 higher-ed faculty and administrators from 300+ US institutions on institutional AI adoption, use cases, and workforce effects.",
-      "whyItMatters": "Highest-cadence-consistent read of higher-ed AI. 3rd edition (Mar 2026) found 66% of institutions using AI (up from 49% YoY) — one of the steepest year-on-year jumps in any sector.",
+      "whyItMatters": "Highest-cadence-consistent read of higher-ed AI. 3rd edition (Mar 2026) found 66% of institutions using AI (up from 49% YoY) \u2014 one of the steepest year-on-year jumps in any sector.",
       "lastIngested": {
         "sourceId": "ellucian-higher-ed-ai-survey-2026",
         "date": "2026-03-04",
@@ -292,10 +335,12 @@
       "cadenceLabel": "Annual",
       "releasePattern": "Late spring / early summer",
       "url": "https://www.educause.edu/research",
-      "targetGraphs": ["education-sector-displacement"],
+      "targetGraphs": [
+        "education-sector-displacement"
+      ],
       "topicLine": "How higher-ed IT teams are adapting to AI, budget pressure, and strategic change.",
       "whatItMeasures": "Surveys higher-ed IT professionals on workforce composition, AI-driven role changes, budget dynamics, and burnout. The 2026 edition explicitly named AI adaptation as a top-3 workforce pressure.",
-      "whyItMatters": "Complements Ellucian by focusing specifically on the IT-professional workforce inside higher-ed — the fastest-changing job family in the sector.",
+      "whyItMatters": "Complements Ellucian by focusing specifically on the IT-professional workforce inside higher-ed \u2014 the fastest-changing job family in the sector.",
       "lastIngested": {
         "sourceId": "educause-workforce-report-2026",
         "date": "2026-06-08",
@@ -312,7 +357,12 @@
       "cadenceLabel": "Continuous (community forecasts)",
       "releasePattern": "Real-time updating as forecasters submit predictions",
       "url": "https://www.metaculus.com/labor-hub/",
-      "targetGraphs": ["overall-us-displacement", "customer-service-automation", "tech-sector-displacement", "white-collar-professional-displacement"],
+      "targetGraphs": [
+        "overall-us-displacement",
+        "customer-service-automation",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
       "topicLine": "Community forecasts on AI-related employment changes by 2030.",
       "whatItMeasures": "Structured forecast questions (probability distributions) on occupation-level employment changes through 2030 across ~50 major US occupations. Median community estimates update continuously.",
       "whyItMatters": "The only source giving quantitative 5-year forecasts by occupation. Latest reads: software developers -15.1%, CS/sales reps -11%, financial specialists -8.1%, lawyers -5.4%.",
@@ -332,16 +382,18 @@
       "cadenceLabel": "Monthly",
       "releasePattern": "Second Wednesday of each month",
       "url": "https://www.census.gov/econ/bfs/index.html",
-      "targetGraphs": ["ai-business-formation"],
+      "targetGraphs": [
+        "ai-business-formation"
+      ],
       "topicLine": "The official US count of new business applications and formations.",
       "whatItMeasures": "New business applications (any) and high-propensity applications (likely to become employer businesses), by state, industry, and month.",
       "whyItMatters": "The universe-scale ground truth on US business formation. AI's role is inferred from sectoral patterns (professional services growing 4x faster than construction since ChatGPT) rather than directly tagged.",
       "lastIngested": {
-        "sourceId": "census-bfs-baseline-2021",
-        "date": "2021-01-01",
-        "value": "Historical baseline — needs live monthly ingest"
+        "sourceId": "census-bfs-jun-2026",
+        "date": "2026-07-09",
+        "value": "531,423 business applications (+1.1% MoM); 29,741 projected formations"
       },
-      "nextExpected": "August 12, 2026 (July data). Not currently on an active ingest schedule."
+      "nextExpected": "August 12, 2026 (July data)"
     },
     {
       "id": "wef-future-of-jobs",
@@ -352,7 +404,10 @@
       "cadenceLabel": "Every 2 years",
       "releasePattern": "January of odd years (typically ahead of Davos)",
       "url": "https://www.weforum.org/reports/",
-      "targetGraphs": ["overall-us-displacement", "workforce-ai-exposure"],
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
       "topicLine": "The largest employer-side survey on jobs and skills through the AI transition.",
       "whatItMeasures": "Surveys 1,000+ large employers globally on hiring, displacement, reskilling, and skill demand over the following 5 years. Reports at country, industry, and role level.",
       "whyItMatters": "The most-cited employer-side projection. 2025 edition projected 92M roles displaced by 2030 offset by 170M created (net +78M). Sector-specific projections widely used in policy planning.",

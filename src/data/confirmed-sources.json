@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-07-21",
-  "totalSources": 655,
-  "verifiedCount": 645,
+  "totalSources": 656,
+  "verifiedCount": 646,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9310,6 +9310,21 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-bfs-jun-2026": {
+      "id": "census-bfs-jun-2026",
+      "title": "Business Formation Statistics \u2014 June 2026 (Released Jul 9, 2026)",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/business-formation-statistics-jul9.html",
+      "publisher": "US Census Bureau (BFS)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-09",
+      "excerpt": "US Census Bureau Business Formation Statistics for June 2026 (released July 9, 2026). Total Business Applications (seasonally adjusted): 531,423 in June 2026, an increase of 1.1% compared to May 2026. Projected Business Formations (within 4 quarters), seasonally adjusted: 29,741 in June 2026, an increase of 0.7% compared to May 2026. BFS provides monthly, high-frequency information on new business applications and formations. The high-propensity applications series (HBA) tracks applications most likely to become employer businesses; definition was updated in Nov 2021 and applied retroactively.",
+      "dateAdded": "2026-07-21",
+      "usedIn": [
+        "ai-business-formation"
       ],
       "verified": true,
       "synthetic": false

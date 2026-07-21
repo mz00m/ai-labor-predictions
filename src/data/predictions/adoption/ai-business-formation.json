@@ -237,6 +237,15 @@
       "label": "Stripe Atlas: 63% of Q2 2026 C corps have solo founders \u2014 all-time high"
     },
     {
+      "date": "2026-07-09",
+      "direction": "up",
+      "sourceIds": [
+        "census-bfs-jun-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BFS Jun 2026: 531K business applications (+1.1% MoM); 29.7K projected formations (+0.7%)"
+    },
+    {
       "date": "2026-07-20",
       "direction": "up",
       "sourceIds": [
@@ -443,6 +452,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-07-20",
       "excerpt": "IBTimes (Pham Binh, Jul 20 2026) synthesis of US Census Business Formation Statistics + Bloomberg analysis. Headline: '~29,700 new employer businesses are expected to form each month nationwide over the next year, a 17% increase compared to 2025 estimates.' Professional services sector (legal, architectural, advertising) forming at '>5,000 companies per month, a 24% year-over-year increase.' Bloomberg reporting: 'Since the launch of ChatGPT in 2022, new business filings in professional services grew four times faster than in construction.' Torsten Slok (Apollo Global chief economist): 'We've never created as many businesses. It does tell you that AI is playing a very big role.'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "census-bfs-jun-2026",
+      "title": "Business Formation Statistics \u2014 June 2026 (Released Jul 9, 2026)",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/business-formation-statistics-jul9.html",
+      "publisher": "US Census Bureau (BFS)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-09",
+      "excerpt": "US Census Bureau Business Formation Statistics for June 2026 (released July 9, 2026). Total Business Applications (seasonally adjusted): 531,423 in June 2026, an increase of 1.1% compared to May 2026. Projected Business Formations (within 4 quarters), seasonally adjusted: 29,741 in June 2026, an increase of 0.7% compared to May 2026. BFS provides monthly, high-frequency information on new business applications and formations. The high-propensity applications series (HBA) tracks applications most likely to become employer businesses; definition was updated in Nov 2021 and applied retroactively.",
       "dateAdded": "2026-07-21"
     }
   ]
