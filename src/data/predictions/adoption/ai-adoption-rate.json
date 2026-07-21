@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 17.5,
+  "currentValue": 19.8,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
@@ -100,6 +100,17 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-05-03",
+      "value": 19.8,
+      "sourceIds": [
+        "census-btos-ai-may-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "sampleSize": 1200000
     }
   ],
   "overlays": [
@@ -1382,6 +1393,16 @@
       "datePublished": "2026-06-01",
       "excerpt": "AI-driven investing has grown steadily since the early 2010s and is concentrated among hedge funds. Average AI labor intensity is 1.17% of job postings at SEC-registered investment advisers. AI hedge funds peaked at ~2.7% of all hedge funds in 2023, with AI-Autonomous funds accounting for over 90% of AI AUM by 2024.",
       "dateAdded": "2026-06-01"
+    },
+    {
+      "id": "census-btos-ai-may-2026",
+      "title": "Business Trends and Outlook Survey — AI Adoption (May 2026 wave, released Jun 18)",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/btos-june-18.html",
+      "publisher": "US Census Bureau (BTOS)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-18",
+      "excerpt": "US Census Bureau Business Trends and Outlook Survey (BTOS) biweekly release Jun 18, 2026. As of the May 3, 2026 reference date: national AI use rate = 19.8% of responding businesses. Between Dec 2025 and May 2026 the national AI use rate hovered between 17% and 20%, with 20-23% of firms expecting to use AI in the next six months. Sector breakdown: Information 39.7%; Finance & Insurance 33.9%; Retail Trade ~14%. Sample: approximately 1.2 million businesses with biweekly data collection.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "id": "bls-employment-situation-jun-2026",
+  "abstract": "US Bureau of Labor Statistics Employment Situation Summary for June 2026, released July 2, 2026. Total nonfarm payroll employment increased by 57,000 in June, well below the Wall Street consensus of 115,000. Unemployment rate dipped slightly to 4.2%. Health care continued expanding but at a slower pace; leisure and hospitality contracted sharply. Prior two months (April, May) revised down by a combined 74,000 jobs, signaling that the labor market has been softer than initially reported. Average hourly earnings rose 0.3% to $37.64.",
+  "keyFindings": [
+    "Nonfarm payrolls +57,000 in June 2026 — well below Wall Street consensus of 115,000",
+    "Unemployment rate: 4.2% (dipped slightly)",
+    "Average monthly change over prior 12 months: +36,000 (June result was in line with recent trend but below expectations)",
+    "Health care +22,000 (below prior 12-month average of +38,000) — decelerating",
+    "Leisure and hospitality -61,000 — weaker than usual seasonal hiring",
+    "Prior months revised sharply lower: April -31K (to +148K), May -43K (to +129K); combined -74K",
+    "Average hourly earnings +13 cents (+0.3%) to $37.64",
+    "Health care and government were the main sources of continued job growth; private-sector cyclical hiring is decelerating"
+  ],
+  "methodology": "BLS Current Employment Statistics (CES) monthly release. Nonfarm payroll estimate from the establishment survey (~119,000 businesses / government agencies). Unemployment rate from the Current Population Survey (~60,000 households). Revisions incorporate late-arriving establishment responses.",
+  "qualifiers": "Not a direct AI-attribution measure. The month-over-month softness is influenced by seasonal adjustment, weather, prior-month reference-week timing, and macro factors beyond AI. Downward revisions to April/May suggest the labor market has been weaker than initially reported for months — some of which likely reflects continued AI-related hiring adjustment in white-collar and information sectors, but attribution requires cross-referencing with sector-specific AI-exposure studies (Canaries, Yale Budget Lab, Fed FEDS Notes, etc.).",
+  "fetchedAt": "2026-07-21"
+}
