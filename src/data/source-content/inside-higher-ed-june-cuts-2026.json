@@ -1,0 +1,14 @@
+{
+  "id": "inside-higher-ed-june-cuts-2026",
+  "abstract": "Inside Higher Ed's July 7, 2026 rolling monthly tracker of June 2026 higher-ed cost-cutting: UMinn eliminated 230 jobs and cut ~$44M; Johns Hopkins laid off ~110 employees concentrated in the Bloomberg School of Public Health, Carey Business School, and central administration; The New School cut 87 (19 professors, 68 staff); Southern Oregon University eliminated 66 positions and shuttered three academic programs.",
+  "keyFindings": [
+    "UMinn: 230 jobs eliminated through layoffs and attrition; $44M budget cut",
+    "Johns Hopkins: ~110 layoffs concentrated in Bloomberg School, Carey Business School, central admin",
+    "The New School: 87 employees laid off (19 professors, 68 staff)",
+    "Southern Oregon University: 66 positions cut (23 faculty, 43 staff); three academic programs shuttered",
+    "Johns Hopkins driver: 'hundreds of millions of dollars in federal funding' lost since January 2025"
+  ],
+  "methodology": "Journalistic aggregation of institutional announcements and public filings during June 2026, part of Inside Higher Ed's rolling monthly cost-cutting series.",
+  "qualifiers": "Cuts driven primarily by federal funding loss (Trump administration policy changes), enrollment declines, and general budget pressure — AI is a secondary factor at best. Frame as funding + AI, not AI-only.",
+  "fetchedAt": "2026-07-21"
+}

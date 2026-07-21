@@ -1,0 +1,14 @@
+{
+  "id": "deloitte-global-insurance-outlook-2026",
+  "abstract": "Deloitte's 2026 Global Insurance Outlook (October 9, 2025) highlights a workforce-transformation gap: 90% of insurance executives recognize the urgency of reinventing the employee value proposition for human-machine collaboration, but only 25% have taken tangible action. The outlook frames agentic AI as reshaping the next stage of insurance work — Allianz, AXA, and AIG are cited exploring agentic claims processing.",
+  "keyFindings": [
+    "90% of insurance execs see urgency to reinvent work for human-machine collaboration",
+    "Only 25% have taken tangible action to elevate human skills — 65pp gap between recognition and action",
+    "Agentic AI shaping next stage of insurance development; carriers like Allianz, AXA, AIG cited",
+    "Industry shifting from 'What can AI do?' to 'How do we make AI work at scale?'",
+    "Many European carriers still focused on data modernization and cloud migration as prerequisites"
+  ],
+  "methodology": "Deloitte Human Capital survey of insurance executives combined with practitioner interviews across major carriers.",
+  "qualifiers": "Deloitte is a consulting firm with commercial interest in workforce-transformation projects. Survey population is executive-level and likely skews toward large multinational carriers. Recognition-vs-action gap is a common consulting narrative structure.",
+  "fetchedAt": "2026-07-21"
+}

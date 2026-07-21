@@ -110,6 +110,19 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-07-14",
+      "value": -13,
+      "confidenceLow": -20,
+      "confidenceHigh": -5,
+      "sourceIds": [
+        "upwork-future-workforce-index-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "corporate",
+      "sampleSize": 100000,
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -156,7 +169,16 @@
         "ramp-freelance-velocity-2025"
       ],
       "evidenceTier": 1,
-      "label": "Ramp: freelance spend fell 0.66% \u2192 0.14% of total"
+      "label": "Ramp: freelance spend fell 0.66% → 0.14% of total"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "fairwork-cloudwork-report-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Fairwork/OII: 16 global cloudwork platforms rated on 5 principles; most miss minimum fair-pay/conditions standards"
     },
     {
       "date": "2025-10-30",
@@ -219,7 +241,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Moderate scenario \u2192 almost all 5-day freelance SW jobs automatable by 2030"
+      "label": "FRI: Moderate scenario → almost all 5-day freelance SW jobs automatable by 2030"
     },
     {
       "date": "2026-04-30",
@@ -240,6 +262,15 @@
       "label": "Wolfe & Dangol: AI labs frame experts as interchangeable, pressuring freelancer rates"
     },
     {
+      "date": "2026-06-12",
+      "direction": "neutral",
+      "sourceIds": [
+        "ilo-decent-work-platform-convention-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ILO: Convention C193 adopted (406-8-36); first binding treaty on platform work covering 150M+ workers globally"
+    },
+    {
       "date": "2026-06-19",
       "direction": "down",
       "sourceIds": [
@@ -256,6 +287,15 @@
       ],
       "evidenceTier": 1,
       "label": "UCLA (Siddiq/Zhang): Upwork demand shifts 7.9% toward lower-priced workers"
+    },
+    {
+      "date": "2026-07-14",
+      "direction": "up",
+      "sourceIds": [
+        "upwork-future-workforce-index-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Upwork: AI freelancers earn 34% more/hr; complex-AI work +45% YoY earnings; skilled freelancing 38% of US knowledge"
     }
   ],
   "sources": [
@@ -333,7 +373,7 @@
       "id": "sciencedirect-freelancer-demand-2025",
       "title": "Winners and losers of generative AI: Early Evidence of Shifts in Freelancer Demand",
       "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
-      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, K\u00e4ssi, Braesemann, Mishkin, del Rio-Chanona)",
+      "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, Kässi, Braesemann, Mishkin, del Rio-Chanona)",
       "evidenceTier": 1,
       "datePublished": "2025-01-29",
       "excerpt": "Demand for substitutable skills (writing, translation) decreased 20-50% relative to counterfactual after ChatGPT launch. Short-term (1-3 week) jobs saw sharpest decline. ML programming demand grew 24%; AI chatbot development nearly tripled. Novice worker demand declined across complementary skill clusters.",
@@ -356,7 +396,7 @@
       "publisher": "Brookings Institution",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "High-skill freelancers disproportionately affected by AI \u2014 top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
+      "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -396,7 +436,7 @@
       "publisher": "Center for AI Safety / Scale AI (Mazeika et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-10-30",
-      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects \u2014 capturing only 1.2% of economic value. Automation rate: 2.5%.",
+      "excerpt": "Best AI agent (Manus) earned $1,720 out of a possible $143,991 across 240 real freelance projects — capturing only 1.2% of economic value. Automation rate: 2.5%.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -466,7 +506,37 @@
       "publisher": "UCLA Anderson School of Management (Siddiq & Zhang)",
       "evidenceTier": 1,
       "datePublished": "2026-06-19",
-      "excerpt": "Difference-in-differences study on 49,610 Upwork workers and 2.26M contracts (2021Q1\u20132026Q1) around the release of ChatGPT. Uses text embeddings of worker profiles and Shapley values to quantify the predictive importance of human capital signals (self-presentation, credentials, reputation) and price. In max AI-exposed categories vs. unexposed, contract volume fell ~7.0% post-ChatGPT (9.6% late period, 2025Q2\u20132026Q1); the combined importance of human capital signals fell 7.8% (10.1% late) while price importance rose 1.1% (1.8% late). Demand premium for high-human-capital workers compressed by 6.2% (10.3% late), and demand reallocated toward lower-priced workers by 3.2% (7.9% late). Authors interpret as empirical evidence of AI-driven labor commoditization \u2014 clients view differently-skilled workers as more substitutable when AI compresses output quality."
+      "excerpt": "Difference-in-differences study on 49,610 Upwork workers and 2.26M contracts (2021Q1–2026Q1) around the release of ChatGPT. Uses text embeddings of worker profiles and Shapley values to quantify the predictive importance of human capital signals (self-presentation, credentials, reputation) and price. In max AI-exposed categories vs. unexposed, contract volume fell ~7.0% post-ChatGPT (9.6% late period, 2025Q2–2026Q1); the combined importance of human capital signals fell 7.8% (10.1% late) while price importance rose 1.1% (1.8% late). Demand premium for high-human-capital workers compressed by 6.2% (10.3% late), and demand reallocated toward lower-priced workers by 3.2% (7.9% late). Authors interpret as empirical evidence of AI-driven labor commoditization — clients view differently-skilled workers as more substitutable when AI compresses output quality."
+    },
+    {
+      "id": "upwork-future-workforce-index-2026",
+      "title": "The Future Workforce Index 2026: AI, Freelancing, & the New Value of Work",
+      "url": "https://www.upwork.com/research/research-future-workforce-index-2026",
+      "publisher": "Upwork",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-14",
+      "excerpt": "Freelancers performing AI work on Upwork earn 34% more per hour than those not incorporating AI. GenAI/creative production contracts grew 90% YoY in contract starts but per-contract earnings fell 13% — a signal that 'lower-complexity AI execution may become less lucrative as it scales.' Freelancers doing more complex work with AI saw earnings rise 45% YoY; AI-augmented professional services grew 72% in volume with 22% earnings gains. Skilled freelancers now represent 38% of U.S. knowledge workers, up from 28% (a 10pp increase); 58% of full-time employees now consider freelancing, up from 36%.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "fairwork-cloudwork-report-2025",
+      "title": "Cloudwork Report 2025: Advancing Standards in Digital Labour and AI Supply Chain Governance",
+      "url": "https://fair.work/en/fw/publications/cloudwork-report-2025/",
+      "publisher": "Fairwork / Oxford Internet Institute",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-01",
+      "excerpt": "Fairwork's 2025 Cloudwork Report evaluates 16 global cloudwork platforms — ranging from freelance marketplaces to data annotation services — against five principles of fair work: pay, conditions, contracts, management, and representation. Findings show both encouraging improvements and persistent gaps in platform accountability and worker protections for 'millions of workers powering the digital and AI-driven economy,' highlighting 'the urgent need for stronger governance, transparency, and rights.' Most cloudwork platforms are not meeting minimum standards of fair pay, conditions, contracts, management, and representation.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "ilo-decent-work-platform-convention-2026",
+      "title": "Convention concerning decent work in the platform economy, 2026 (C193)",
+      "url": "https://www.ilo.org/resource/news/ilc/ilc114/international-labour-conference-ends-adoption-first-convention-decent-work",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-12",
+      "excerpt": "The 114th International Labour Conference adopted Convention C193 on Decent Work in the Platform Economy on June 12, 2026 — the first legally binding international treaty dedicated entirely to regulating the digital platform economy. Attendance: 5,700+ delegates from 187 ILO Member States. The Convention extends fundamental rights (freedom of association, collective bargaining, protection from discrimination and forced labor), occupational safety and health, adequate remuneration, data protection, and algorithmic decision-review mechanisms to platform workers. It establishes global protections for more than 150 million workers who earn their living through digital labour platforms.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

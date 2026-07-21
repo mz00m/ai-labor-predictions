@@ -128,7 +128,7 @@
         "ncbi-hospital-ai-billing-2024"
       ],
       "evidenceTier": 1,
-      "label": "NCBI: hospital AI billing automation surged 36% \u2192 61% in one year"
+      "label": "NCBI: hospital AI billing automation surged 36% → 61% in one year"
     },
     {
       "date": "2025-01-01",
@@ -192,6 +192,24 @@
       ],
       "evidenceTier": 2,
       "label": "UnitedHealth: 1,000+ AI apps deployed; AI chatbots handled 65M customer calls in 2024"
+    },
+    {
+      "date": "2025-12-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "experian-health-rcm-predictions-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Experian Health: 53% expect widespread AI adoption in RCM with human oversight; 69% AI users saw denial reductions"
+    },
+    {
+      "date": "2026-01-13",
+      "direction": "up",
+      "sourceIds": [
+        "finthrive-rcm-priorities-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "FinThrive: 76% of RCM leaders name automation #1 initiative for 2026; 60% plan RCM vendor consolidation in 3 yrs"
     },
     {
       "date": "2026-01-15",
@@ -302,6 +320,15 @@
       "label": "Fed/Duke: Healthcare NEI 0.69; AI enhances more roles than it replaces"
     },
     {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "beckers-rcm-ai-arms-race-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Becker's: RCM 'arms race' — payers ahead on AI; provider teams evolving with new AI-focused roles under strain"
+    },
+    {
       "date": "2026-04-13",
       "direction": "up",
       "sourceIds": [
@@ -318,6 +345,15 @@
       ],
       "evidenceTier": 3,
       "label": "UnityPoint: 207 IT roles + revenue-cycle cuts, outsourced to AI-driven Omega"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "oliver-wyman-ai-rcm-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Oliver Wyman: 63% of health orgs have integrated AI into RCM; up to 46% coding-time cuts; 90%+ accuracy in some domains"
     },
     {
       "date": "2026-06-10",
@@ -372,7 +408,7 @@
     },
     {
       "id": "deloitte-health-2025",
-      "title": "2025 Global Health Care Outlook \u2014 AI and Administrative Efficiency",
+      "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
       "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
       "publisher": "Deloitte",
       "evidenceTier": 2,
@@ -477,7 +513,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -492,7 +528,7 @@
     },
     {
       "id": "bls-jolts-december-2025",
-      "title": "Job Openings and Labor Turnover \u2014 December 2025",
+      "title": "Job Openings and Labor Turnover — December 2025",
       "url": "https://www.bls.gov/news.release/jolts.nr0.htm",
       "publisher": "U.S. Bureau of Labor Statistics",
       "evidenceTier": 1,
@@ -514,10 +550,10 @@
       "id": "gommers-masai-lancet-2026",
       "title": "Interval Cancer, Sensitivity, and Specificity Comparing AI-Supported Mammography Screening with Standard Double Reading without AI in the MASAI Study",
       "url": "https://doi.org/10.1016/S0140-6736(25)02464-X",
-      "publisher": "The Lancet (Gommers, Hernstr\u00f6m, Josefsson et al.)",
+      "publisher": "The Lancet (Gommers, Hernström, Josefsson et al.)",
       "evidenceTier": 1,
       "datePublished": "2026-01-15",
-      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248\u2014a 44 percent workload reduction\u2014while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
+      "excerpt": "In the AI group, screen readings fell from 109,692 to 61,248—a 44 percent workload reduction—while screen-detected cancers rose from 262 to 338, a 29 percent increase in detection.",
       "dateAdded": "2026-03-07"
     },
     {
@@ -588,7 +624,7 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-19",
       "dateAdded": "2026-03-16",
-      "excerpt": "Healthcare and social assistance sector: 4.44/10 weighted exposure (20.7M workers, lowest among white-collar sectors). However, medical records specialists score 9/10 and medical transcriptionists score 10/10 \u2014 the only occupation at maximum exposure."
+      "excerpt": "Healthcare and social assistance sector: 4.44/10 weighted exposure (20.7M workers, lowest among white-collar sectors). However, medical records specialists score 9/10 and medical transcriptionists score 10/10 — the only occupation at maximum exposure."
     },
     {
       "id": "fed-atl-duke-cfo-ai-productivity-2026",
@@ -646,6 +682,46 @@
       "datePublished": "2026-04-15",
       "excerpt": "UnityPoint Health will eliminate 207 of its Information Technology positions across the state. The system is also laying off some of its Revenue Cycle workers. UnityPoint Health's transition to Accenture is expected to occur later this year, while Omega Healthcare Management Services will be taking over billing and payment operations. Omega Healthcare Management Services describes itself as 'artificial intelligence-driven.'",
       "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "oliver-wyman-ai-rcm-2026",
+      "title": "AI in revenue cycle is delivering results across healthcare",
+      "url": "https://www.oliverwyman.com/our-expertise/perspectives/health/2026/may/ai-impact-revenue-cycle-healthcare.html",
+      "publisher": "Oliver Wyman",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Oliver Wyman finds '63% of healthcare organizations have already integrated AI-powered automation into their revenue cycle workflows.' Studies show 'up to nearly 46% reductions in coding time for complex cases' and clinical accuracy 'hit 90% or higher in specific clinical domains.' 80% of health systems are actively exploring, piloting, or implementing generative AI tools for RCM — a 38-percentage-point increase over less than two years. The survey encompassed over 200 decision-makers and 90 end users across US provider organizations. AI addresses long-standing friction points such as documentation burden and coding variability.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "finthrive-rcm-priorities-2026",
+      "title": "FinThrive Report: AI, Automation and Vendor Consolidation Lead Health System Revenue Cycle Investment Priorities for 2026",
+      "url": "https://finthrive.com/news/new-research-finthrive-report-finds-ai-automation-and-vendor-consolidation-lead-health-system-revenue-cycle-investment-priorities-for-2026",
+      "publisher": "FinThrive",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-13",
+      "excerpt": "FinThrive's 2026 RCM Investment Priorities Report: 76% of RCM leaders cite automation as their #1 initiative; 56% identify automation and AI as their most significant investment area. Top AI deployment areas: prior authorization (73%), denials/underpayment management (67%), clinical documentation/coding (60%). More than 70% plan to reduce reliance on third-party RCM vendors; nearly 60% will consolidate RCM vendors within three years. 85% report changing strategic investment in RCM technology in response to cybersecurity/clearinghouse disruptions. CEO Hemant Goel: 'The winners will be organizations that move from a siloed set of point solutions to an AI-enabled platform approach.'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "experian-health-rcm-predictions-2026",
+      "title": "5 revenue cycle management predictions for 2026",
+      "url": "https://www.experian.com/blogs/healthcare/5-revenue-cycle-management-predictions-for-2026/",
+      "publisher": "Experian Health",
+      "evidenceTier": 3,
+      "datePublished": "2025-12-15",
+      "excerpt": "Experian Health's 2026 RCM predictions: More than one-third of providers report denial rates of 10% or higher; '69% of those using AI have experienced a reduction in denials.' '53% anticipate that AI will be widely adopted but will still require oversight.' Early AI adoption focuses on high-volume front-end tasks like eligibility, scheduling, and registration where AI 'can save time, reduce errors and free staff to focus on more complex work.' Data privacy/security is the top adoption barrier; more than 40% of providers cite accuracy as a sticking point. Up to 700 rural hospitals, nursing homes, and clinics may face closure.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "beckers-rcm-ai-arms-race-2026",
+      "title": "Hospital revenue cycle teams evolve as AI 'arms race' heats up",
+      "url": "https://www.beckershospitalreview.com/finance/hospital-revenue-cycle-teams-shift-as-ai-arms-race-heats-up/",
+      "publisher": "Becker's Hospital Review",
+      "evidenceTier": 3,
+      "datePublished": "2026-04-01",
+      "excerpt": "Healthcare leaders describe RCM as 'an arms race, and payers are definitely ahead' — larger organizations with deeper pockets outpace providers on AI investment. Payers use AI to scale claims and automate denials at higher speed; providers use AI to improve accuracy in documentation, coding, and denial prevention. Cleveland Clinic sees more than 15% of claims initially denied, requiring lengthy appeals to bring the figure below 2%. 'Revenue cycle teams are entering a new era shaped by AI, intelligent tools and emerging roles.' At systems like Carle Health, workforce constraints compound the technological gap, requiring them to leverage technology wherever possible.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

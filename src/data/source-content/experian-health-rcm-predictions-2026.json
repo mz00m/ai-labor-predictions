@@ -1,0 +1,14 @@
+{
+  "id": "experian-health-rcm-predictions-2026",
+  "abstract": "Experian Health's 5 RCM Predictions for 2026 (December 15, 2025) forecast rising denials, AI-driven front-end automation, and evolving AI-plus-human staffing models. 53% of providers anticipate widespread AI adoption with human oversight; 69% of AI users have seen denial reductions. Data privacy/security and accuracy (40%+) are cited as top AI adoption barriers.",
+  "keyFindings": [
+    "53% of providers anticipate widespread RCM AI adoption with human oversight",
+    "69% of RCM AI users have experienced denial reductions",
+    "More than one-third of providers report denial rates of 10%+",
+    "40%+ of providers cite accuracy as a top barrier to trusting AI in RCM",
+    "One Big Beautiful Bill Act may add 10M uninsured Americans by 2034; up to 700 rural facilities may close"
+  ],
+  "methodology": "Vendor forecast informed by Experian Health's own provider surveys and industry data.",
+  "qualifiers": "Experian Health is an RCM/healthcare data vendor. Predictions are directional forecasts, not empirical measurements. Frames AI as complement rather than substitute — consistent with vendor incentives.",
+  "fetchedAt": "2026-07-21"
+}

@@ -188,6 +188,15 @@
       "label": "BLS: US manufacturing lost 78K jobs over past year as automation accelerates"
     },
     {
+      "date": "2025-10-21",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-amazon-1m-robots-2025"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT: Amazon aims to automate 75% of ops, avoid hiring 600K workers by 2033; 160K fewer US hires by 2027"
+    },
+    {
       "date": "2025-11-25",
       "direction": "neutral",
       "sourceIds": [
@@ -215,6 +224,15 @@
       "label": "Goldman: Projects 50-100K humanoid robot shipments in 2026"
     },
     {
+      "date": "2026-01-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "ifr-top5-robotics-trends-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IFR: 2026 industrial robot market hits all-time high $16.7B; humanoid reliability + labor-gap solutions named top trends"
+    },
+    {
       "date": "2026-01-15",
       "direction": "neutral",
       "sourceIds": [
@@ -231,6 +249,24 @@
       ],
       "evidenceTier": 1,
       "label": "BLS: Mining sector declining 1.6%, driven by robotics and drones"
+    },
+    {
+      "date": "2026-01-29",
+      "direction": "up",
+      "sourceIds": [
+        "motley-fool-ups-automation-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "UPS: 127 facilities automated; 68% of US package volume via automation by end-2026; 28% lower cost/piece"
+    },
+    {
+      "date": "2026-06-05",
+      "direction": "up",
+      "sourceIds": [
+        "cnbc-amazon-proteus-ai-layoffs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "CNBC: Amazon Proteus deployed in 25 US fulfillment centers; 30K corporate cuts since Oct amid AI push"
     }
   ],
   "sources": [
@@ -353,6 +389,46 @@
       "datePublished": "2024-09-01",
       "excerpt": "Robots have a mixed effect: replacing jobs that relatively high-wage manufacturing employees used to perform, while also making firms more efficient and productive. One robot per thousand workers replaced about six workers.",
       "dateAdded": "2026-03-10"
+    },
+    {
+      "id": "ifr-top5-robotics-trends-2026",
+      "title": "Top 5 Global Robotics Trends 2026",
+      "url": "https://ifr.org/ifr-press-releases/news/top-5-global-robotics-trends-2026",
+      "publisher": "International Federation of Robotics",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-08",
+      "excerpt": "The global market value of industrial robot installations has reached an all-time high of US$16.7 billion. IFR names five 2026 trends: (1) AI and Autonomy in Robotics, (2) Robots gain versatility as IT meets OT, (3) Humanoids to prove reliability and efficiency, (4) Safety and Security, (5) Robots as allies in tackling labor gaps. Humanoid robots need to match high industrial requirements towards cycle times, energy consumption and maintenance costs. Employers around the world are struggling to find people with the specialized skills required.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "nyt-amazon-1m-robots-2025",
+      "title": "Amazon's Automation Push: 1 Million Robots and Plans to Avoid Hiring 600,000 Workers",
+      "url": "https://gizmodo.com/leaked-amazon-plans-say-robots-will-help-it-avoid-hiring-600000-workers-2000674920",
+      "publisher": "Gizmodo (reporting NYT investigation)",
+      "evidenceTier": 3,
+      "datePublished": "2025-10-21",
+      "excerpt": "Amazon crossed 1 million robots deployed globally by mid-2025. Internal documents reviewed by The New York Times show Amazon's robotics team has an 'ultimate goal to automate 75 percent of the company's operations.' Executives told Amazon's board that robotic automation could prevent the need to hire more than 600,000 new workers as sales are expected to double by 2033. By 2027, Amazon's automation team expects to avoid hiring over 160,000 U.S. workers it would normally need, saving 'about 30 cents on every item it packs and delivers.'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "cnbc-amazon-proteus-ai-layoffs-2026",
+      "title": "Amazon unveils latest warehouse robot as tech giants continue AI layoffs",
+      "url": "https://www.cnbc.com/2026/06/05/amazon-robot-proteus-warehouse-ai-layoffs.html",
+      "publisher": "CNBC",
+      "evidenceTier": 3,
+      "datePublished": "2026-06-05",
+      "excerpt": "Amazon unveiled next-generation Proteus, an autonomous mobile robot that takes commands in conversational language, at its 'Delivering the Future' event in London. The original Proteus, deployed since 2022, is now in 25 U.S. fulfillment centers, with the new version rolling out in Europe in H1 2027. Amazon has eliminated 30,000 corporate positions since October as it prioritizes AI initiatives. Amazon UK/Ireland VP John Boumphrey told CNBC: 'our experience of robots is that it's driven up employment rather than the reverse.'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "motley-fool-ups-automation-2026",
+      "title": "UPS's Robot Army Just Cut Package Costs by 28%",
+      "url": "https://www.fool.com/investing/2026/01/29/upss-robot-army-just-cut-package-costs-by-28/",
+      "publisher": "The Motley Fool",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-29",
+      "excerpt": "UPS has automated 127 facilities to date. Package volume through automated facilities was 57% in 2023, projected to reach 68% by end of 2026. 24 additional facilities are slated for automation in 2026. CEO Carol Tomé stated 'the cost per piece in automated buildings is 28% lower than in conventional, non-automated buildings.' UPS uses pick-and-place systems for small package sorting, Pickle Robots to unload trucks, and autonomous guided vehicles.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

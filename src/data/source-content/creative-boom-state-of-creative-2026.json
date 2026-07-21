@@ -1,0 +1,14 @@
+{
+  "id": "creative-boom-state-of-creative-2026",
+  "abstract": "Creative Boom's flagship State of the Creative Industry 2026 survey (June 29, 2026) of 882 creative professionals (UK/US-weighted; 43% with 10+ years experience): nearly 47% of self-employed creatives earn <£30,000/year (vs UK median £39,039). 69% experienced burnout in past 12 months (77% mid-career, 74% early-career). 86% use AI tools but only 10% believe AI's overall impact on the industry is positive; 58% see it as mixed, 28% straightforwardly negative.",
+  "keyFindings": [
+    "47% of self-employed creatives earn <£30,000/year (below UK median £39,039)",
+    "69% experienced burnout in past 12 months (mid-career highest at 77%)",
+    "50% feel less financially secure than a year ago; 38% considering a job change; 7.5% planning to leave the industry",
+    "86% use AI tools; only 10% think AI's industry impact is positive, 58% mixed, 28% negative",
+    "'Creatives aren't refusing to use AI; they're adopting it because they feel they have to'"
+  ],
+  "methodology": "Online survey of 882 creative professionals worldwide, UK/US-weighted, fielded by Creative Boom in first half of 2026.",
+  "qualifiers": "Sample skews UK; Creative Boom audience is self-selecting toward independent creatives who consume industry media. Survey captures sentiment and self-reported earnings, not observed platform data.",
+  "fetchedAt": "2026-07-21"
+}

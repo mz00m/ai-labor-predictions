@@ -1,0 +1,14 @@
+{
+  "id": "motley-fool-ups-automation-2026",
+  "abstract": "The Motley Fool (January 29, 2026) analysis of UPS automation progress based on the company's Q4 2025 earnings disclosures: 127 facilities automated to date, with automated-facility package volume rising from 57% (2023) to a projected 68% by end-2026. Cost per piece in automated buildings is 28% lower than in conventional facilities; 24 more automated buildings slated for 2026.",
+  "keyFindings": [
+    "127 UPS facilities automated to date",
+    "Package volume through automated facilities: 57% (2023) → 68% projected end-2026",
+    "24 additional facilities slated for automation in 2026",
+    "Cost per piece in automated buildings 28% lower than conventional (CEO Carol Tomé)",
+    "Automation stack includes pick-and-place systems, Pickle Robots for truck unloading, autonomous guided vehicles"
+  ],
+  "methodology": "Financial-media synthesis of UPS Q4 2025 earnings-call disclosures and company communications.",
+  "qualifiers": "Motley Fool is investment media — analysis leans toward operational-efficiency narrative. Cost/piece reduction does not directly translate to headcount reduction; UPS is separately cutting 30,000 jobs across the network.",
+  "fetchedAt": "2026-07-21"
+}

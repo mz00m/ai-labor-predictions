@@ -1,0 +1,14 @@
+{
+  "id": "oliver-wyman-ai-rcm-2026",
+  "abstract": "Oliver Wyman's May 2026 analysis of AI in healthcare revenue-cycle management finds 63% of health organizations have integrated AI into RCM workflows. Studies show up to 46% coding-time reduction on complex cases and 90%+ accuracy in specific clinical domains. 80% of health systems are actively exploring, piloting, or implementing GenAI for RCM — a 38pp increase in less than two years.",
+  "keyFindings": [
+    "63% of healthcare organizations have integrated AI-powered automation into RCM workflows",
+    "Up to 46% reduction in coding time for complex cases",
+    "90%+ accuracy in specific clinical domains",
+    "80% of health systems exploring/piloting/implementing GenAI for RCM (+38pp in <2 years)",
+    "Survey sample: 200+ decision-makers and 90 end-users across US provider organizations"
+  ],
+  "methodology": "Oliver Wyman survey of 200+ RCM decision-makers plus 90 end-users at US healthcare provider organizations.",
+  "qualifiers": "Oliver Wyman is a consulting firm with commercial interest in RCM/AI transformation engagements. 'Integrated' is a broad term — includes early-stage integrations. Accuracy claims are domain-specific and don't imply general clinical AI accuracy.",
+  "fetchedAt": "2026-07-21"
+}

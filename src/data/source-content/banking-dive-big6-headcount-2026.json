@@ -1,0 +1,14 @@
+{
+  "id": "banking-dive-big6-headcount-2026",
+  "abstract": "Banking Dive (January 15, 2026) reporting on Q4 2025 earnings from big-6 US banks: combined headcount 1.09M at end-December, 10,600 fewer than a year earlier and the lowest total since 2021. Wells Fargo down ~25% from Q2 2020 peak, ending 2025 with ~205,000 employees. Citi CFO Mason confirmed the bank is on track to trim 20,000 jobs by end-2026.",
+  "keyFindings": [
+    "Big-6 US banks combined headcount: 1.09M at end-2025, -10,600 YoY (lowest since 2021)",
+    "Wells Fargo: ~205,000 employees at end-2025 (down ~25% since Q2 2020)",
+    "Citigroup on track to trim 20,000 jobs by end-2026; expects further decline in 2027+",
+    "BofA CEO Moynihan: 'work the headcount through operational excellence and applications of new technologies, including AI'",
+    "First Big-6 headcount decline since 2021"
+  ],
+  "methodology": "Journalistic aggregation of Q4 2025 earnings disclosures across the six largest US banks (JPMorgan, Bank of America, Citigroup, Wells Fargo, Goldman Sachs, Morgan Stanley).",
+  "qualifiers": "Headcount decline reflects multiple factors — AI-attributed layoffs, ongoing restructuring (Citi), branch consolidation — not AI alone. Best interpreted as directional signal that AI narratives are entering senior bank leadership's public labor plans.",
+  "fetchedAt": "2026-07-21"
+}

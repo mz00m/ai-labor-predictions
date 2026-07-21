@@ -1,0 +1,13 @@
+{
+  "id": "educause-workforce-report-2026",
+  "abstract": "EDUCAUSE's 2026 Workforce Report (June 8, 2026) examines how higher-education technology and data teams are adapting to AI, financial pressures, and shifting institutional priorities. Central themes: AI strategy, rising workloads, and expanding team responsibilities are reshaping the higher-ed workforce.",
+  "keyFindings": [
+    "Higher-ed IT and data teams adapting simultaneously to AI, budget pressures, and strategic change",
+    "AI strategy, rising workloads, and expanded responsibilities named as top workforce dynamics",
+    "Report frames workforce change as driven not by AI alone but by AI + financial/institutional pressures",
+    "Draws on survey and focus-group data from higher-ed technology/data professionals"
+  ],
+  "methodology": "Survey and focus-group data from EDUCAUSE members (higher-ed technology and data professionals).",
+  "qualifiers": "EDUCAUSE membership skews toward US higher-ed institutions with mature IT organizations; findings may under-represent smaller/less-resourced institutions. Report is thematic rather than displacement-quantifying — best used as overlay context, not headcount claim.",
+  "fetchedAt": "2026-07-21"
+}

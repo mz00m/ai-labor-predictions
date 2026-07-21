@@ -1,0 +1,14 @@
+{
+  "id": "nyt-amazon-1m-robots-2025",
+  "abstract": "New York Times investigation (reported by Gizmodo, October 21, 2025) using internal Amazon documents and interviews finds Amazon crossed 1 million deployed robots by mid-2025 and set an internal target to automate 75% of its operations. Executives told the board that automation could prevent hiring 600,000+ workers as sales double by 2033, saving ~30 cents per shipped item.",
+  "keyFindings": [
+    "1 million robots deployed globally at Amazon by mid-2025",
+    "Amazon robotics team internal goal: automate 75% of company operations",
+    "Executives project avoiding 600,000+ new hires by 2033 through automation, as sales are expected to double",
+    "By 2027, automation team expects to avoid hiring 160,000+ US workers Amazon would otherwise need",
+    "Estimated savings: ~30 cents on every item Amazon packs and delivers"
+  ],
+  "methodology": "New York Times investigation reviewed internal Amazon documents and conducted interviews with current and former employees. Numbers reflect internal executive-level projections and hiring-avoidance targets, not observed displacement.",
+  "qualifiers": "'Avoided hires' is a counterfactual metric, not observed layoffs — Amazon has continued growing headcount overall. Internal projections may not materialize as stated; leaked plans routinely change.",
+  "fetchedAt": "2026-07-21"
+}
