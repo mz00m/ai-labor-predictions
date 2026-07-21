@@ -1,0 +1,14 @@
+{
+  "id": "fed-feds-notes-ai-job-postings-2026",
+  "abstract": "Federal Reserve Board FEDS Notes (March 27, 2026) by Jessica Liu and Douglas Webber analyzing AI adoption and firms' job-posting behavior. Using Lightcast job postings and Census BTOS data (1.2M firms, Sept 2023 - Nov 2025), the authors find 'no evidence thus far that industries with higher levels of AI adoption are posting fewer jobs' and 'precisely-estimated null effects' at the firm level.",
+  "keyFindings": [
+    "'No evidence thus far that industries with higher levels of AI adoption are posting fewer jobs'",
+    "Firm-level analysis: 'precisely-estimated null effects' on job postings",
+    "45.9% of workers reported LLM use at work in June/July 2025 (up from 30.1% in Dec 2024)",
+    "Only 5.5% of firms had AI-related job postings in 2025",
+    "Analysis 'explicitly backward-looking' — does not forecast future labor impacts"
+  ],
+  "methodology": "Combines Lightcast job-postings database with Census Bureau's Business Trends and Outlook Survey (BTOS). Data period Sept 2023 - Nov 2025. Industry-level and firm-level regression analysis.",
+  "qualifiers": "Authors emphasize backward-looking scope. Job postings are a leading indicator of hiring intent, not a direct measure of headcount changes. Compatible with the possibility that AI-driven displacement shows up in future data.",
+  "fetchedAt": "2026-07-21"
+}

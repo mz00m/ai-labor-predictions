@@ -1,0 +1,14 @@
+{
+  "id": "biggo-jpmorgan-q2-ai-cuts-2026",
+  "abstract": "Reporting on JPMorgan's Q2 2026 earnings call (July 14, 2026): CEO Jamie Dimon disclosed AI has 'already reduced headcount by 30% to 40% in certain specific areas,' though most affected workers were redeployed internally rather than laid off. Dimon simultaneously warned that dramatic margin expansion from AI 'won't happen anytime soon' because competitors will neutralize any cost advantage.",
+  "keyFindings": [
+    "JPMorgan CEO: 30-40% headcount reduction in specific units already attributed to AI",
+    "Most affected workers redeployed internally rather than laid off",
+    "Dimon skeptical of dramatic margin expansion — 'in a competitive capitalist world, everybody is going to use AI'",
+    "CFO Jeremy Barnum: AI token spending will grow 'at a non-trivial pace' in H2 2026",
+    "JPMorgan runs ~1,000 active AI use cases"
+  ],
+  "methodology": "Reporting on JPMorgan Q2 2026 earnings call transcripts (July 14, 2026).",
+  "qualifiers": "'30-40% in some units' is not a firm-wide number — specific units are not identified. Redeployment vs layoff distinction matters for measuring displacement.",
+  "fetchedAt": "2026-07-21"
+}

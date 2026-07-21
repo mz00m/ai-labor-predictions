@@ -180,6 +180,15 @@
       "label": "PwC: AI-exposed professions saw 55% faster skill churn in job postings (US)"
     },
     {
+      "date": "2025-10-16",
+      "direction": "up",
+      "sourceIds": [
+        "times-higher-ed-ai-admin-cuts-2025"
+      ],
+      "evidenceTier": 3,
+      "label": "THE: 'Painful' job losses likely as AI fills university admin roles; leaders frame cuts as only path to savings"
+    },
+    {
       "date": "2025-12-01",
       "direction": "neutral",
       "sourceIds": [
@@ -213,7 +222,7 @@
         "cognizant-new-work-2026"
       ],
       "evidenceTier": 2,
-      "label": "Cognizant: education exposure jumped from 11% to 49% \u2014 a 4.5x increase"
+      "label": "Cognizant: education exposure jumped from 11% to 49% — a 4.5x increase"
     },
     {
       "date": "2026-01-28",
@@ -231,7 +240,7 @@
         "shrm-automation-education-2025"
       ],
       "evidenceTier": 2,
-      "label": "SHRM: only 7.3% of education jobs highly automated \u2014 lowest of any sector (n=20,262)"
+      "label": "SHRM: only 7.3% of education jobs highly automated — lowest of any sector (n=20,262)"
     },
     {
       "date": "2026-02-01",
@@ -268,6 +277,33 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford SCALE: only 20 of 800+ AI-in-K12 studies met rigorous causal standards"
+    },
+    {
+      "date": "2026-06-08",
+      "direction": "up",
+      "sourceIds": [
+        "educause-workforce-report-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EDUCAUSE: 2026 higher-ed IT/data teams reshaping under AI, financial pressures, and expanding responsibilities"
+    },
+    {
+      "date": "2026-07-07",
+      "direction": "up",
+      "sourceIds": [
+        "inside-higher-ed-june-cuts-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Inside Higher Ed: June 2026 higher-ed cuts include UMinn 230, Johns Hopkins ~110, New School 87, SOU 66 jobs"
+    },
+    {
+      "date": "2026-07-09",
+      "direction": "neutral",
+      "sourceIds": [
+        "digital-education-council-ai-he-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "DEC: 88% of students, 77% of faculty use AI (n=45,398, 35 countries); faculty intent drops in US/Canada"
     }
   ],
   "sources": [
@@ -303,7 +339,7 @@
     },
     {
       "id": "chegg-enrollment-decline",
-      "title": "Chegg Q2 2024 Earnings \u2014 ChatGPT Impact on Tutoring Market",
+      "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
       "evidenceTier": 2,
@@ -343,7 +379,7 @@
     },
     {
       "id": "pearson-10k-2024",
-      "title": "Pearson plc 2024 Annual Report \u2014 AI Strategy",
+      "title": "Pearson plc 2024 Annual Report — AI Strategy",
       "url": "https://plc.pearson.com/en-GB/investors",
       "publisher": "Pearson plc",
       "evidenceTier": 2,
@@ -408,7 +444,7 @@
       "publisher": "SHRM (Society for Human Resource Management)",
       "evidenceTier": 2,
       "datePublished": "2025-10-01",
-      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations \u2014 the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
+      "excerpt": "At least 50% of tasks are automated in only 7.3% of education and library occupations — the lowest of any occupational group. Survey of 20,262 U.S. workers fielded March-April 2025.",
       "dateAdded": "2026-03-08"
     },
     {
@@ -428,7 +464,7 @@
       "publisher": "Cognizant",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Education task exposure jumped from 11% to 49% \u2014 a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
+      "excerpt": "Education task exposure jumped from 11% to 49% — a 4.5x increase driven by multimodal AI, advanced reasoning, and agentic systems. Based on reassessment of 18,000 tasks across 1,000 O*NET occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -465,7 +501,7 @@
       "id": "nber-cruces-galiani-ai-productivity-gap-2026",
       "title": "Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment",
       "url": "https://www.nber.org/papers/w34851",
-      "publisher": "NBER (Cruces, Fern\u00e1ndez Meijide, Galiani, G\u00e1lvez, Lombardi)",
+      "publisher": "NBER (Cruces, Fernández Meijide, Galiani, Gálvez, Lombardi)",
       "evidenceTier": 1,
       "datePublished": "2026-02-01",
       "excerpt": "In a randomized experiment with 1,174 adults ages 25-45, AI access closed approximately three-quarters of the education-based productivity gap: higher-education participants outperform lower-education participants by 0.548 standard deviations without AI; with AI, this gap falls to 0.139 standard deviations.",
@@ -528,6 +564,46 @@
       "datePublished": "2026-03-11",
       "excerpt": "Reviewed more than 800 academic papers related to AI and K-12 education (Repository now over 1,100 papers) and identified only 20 high-quality causal studies that rigorously examine how AI tools affect students or educators. 'Student performance often improves with access to AI tools, but once removed, results are mixed.' No high-quality causal studies of student AI use conducted in U.S. K-12 classrooms. AI tools designed with pedagogical guardrails show more promising outcomes than general-purpose chatbots.",
       "dateAdded": "2026-07-02"
+    },
+    {
+      "id": "educause-workforce-report-2026",
+      "title": "2026 EDUCAUSE Workforce Report: How Teams Are Adapting to AI, External Pressures, and Strategic Change",
+      "url": "https://library.educause.edu/resources/2026/6/2026-educause-workforce-report-how-teams-are-adapting-to-ai-external-pressures-and-strategic-change",
+      "publisher": "EDUCAUSE",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-08",
+      "excerpt": "EDUCAUSE's 2026 Workforce Report examines how higher-education technology and data teams are adapting to AI, financial pressures, and shifting institutional priorities. The report draws on survey and focus-group data to trace how external forces reshape institutional strategies, roles, critical competencies, and skills. Central themes: AI strategy, rising workloads, and expanding team responsibilities are reshaping the workforce. The report is designed for higher-ed leaders, managers, and professionals navigating workforce change driven by AI, financial pressures, and evolving institutional needs.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "inside-higher-ed-june-cuts-2026",
+      "title": "June Brings Deep Cuts at Several Universities",
+      "url": "https://www.insidehighered.com/news/business/cost-cutting/2026/07/07/june-brings-deep-cuts-several-universities",
+      "publisher": "Inside Higher Ed",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-07",
+      "excerpt": "University of Minnesota regents approved an operating budget eliminating 230 jobs through layoffs and attrition (cutting ~$44M). Johns Hopkins laid off ~110 employees concentrated in the Bloomberg School of Public Health, Carey Business School, and central administration — the university 'has lost hundreds of millions of dollars in federal funding since President Trump took office in January 2025.' The New School laid off 87 employees (19 professors, 68 staff). Southern Oregon University will shutter three academic programs and cut 66 positions (23 faculty, 43 staff).",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "times-higher-ed-ai-admin-cuts-2025",
+      "title": "'Painful' job losses likely as AI fills university admin roles",
+      "url": "https://www.timeshighereducation.com/news/painful-job-losses-likely-ai-fills-university-admin-roles",
+      "publisher": "Times Higher Education",
+      "evidenceTier": 3,
+      "datePublished": "2025-10-16",
+      "excerpt": "University administrative roles are 'ripe for GenAI' according to sector leaders. Ant Bagshaw, deputy chief executive of the Australian Public Policy Institute, writes that AI adoption in universities means 'the net result is likely fewer jobs' and characterizes cost reduction as 'the only place that real and sustained savings can be made.' Framing positions retraining as more compassionate than sustaining roles machines can perform: 'it is more humane to help colleagues into new roles now than to sustain jobs which machines can do better and cheaper.' 'Reports, agendas, policies and minutes...are all ripe for GenAI to work on.'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "digital-education-council-ai-he-2026",
+      "title": "AI in Higher Education Global Survey 2026",
+      "url": "https://www.digitaleducationcouncil.com/post/student-voices-on-ai-an-actionable-guide-for-institutions-and-faculty",
+      "publisher": "Digital Education Council",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-09",
+      "excerpt": "The Digital Education Council's AI in Higher Education Global Survey 2026 draws on 45,398 responses from 27,284 students and 18,114 faculty across 35 countries. 88% of students now use AI in their learning; 77% of faculty use it in their teaching, up 16 percentage points on 2025. 57% of students say assessments come with inadequate AI guidance; only 29% believe instructors are equipped to guide them on AI use; 31% of faculty feel meaningfully involved in institutional AI policy. Faculty intent to use AI in teaching dropped from 76% to 67% in US/Canada — the lowest globally — while other regions show 89-94% intent.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

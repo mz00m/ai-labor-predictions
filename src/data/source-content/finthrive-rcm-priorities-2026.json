@@ -1,0 +1,14 @@
+{
+  "id": "finthrive-rcm-priorities-2026",
+  "abstract": "FinThrive's 2026 RCM Investment Priorities Report (January 13, 2026) finds 76% of RCM leaders name automation as their #1 initiative and 56% identify automation and AI as their most significant investment area. Top AI deployment areas: prior authorization (73%), denials/underpayment management (67%), clinical documentation/coding (60%). Over 70% plan to reduce third-party RCM vendors; nearly 60% will consolidate RCM vendors within 3 years.",
+  "keyFindings": [
+    "76% of RCM leaders name automation as #1 initiative for 2026",
+    "56% identify automation and AI as most significant investment area",
+    "Top AI deployment: prior authorization (73%), denials (67%), documentation/coding (60%)",
+    "70%+ plan to reduce third-party RCM vendors; 60% will consolidate within 3 years",
+    "85% report changing RCM strategy in response to cybersecurity/clearinghouse disruptions"
+  ],
+  "methodology": "FinThrive-fielded survey of RCM leaders at US health systems.",
+  "qualifiers": "FinThrive is an RCM technology vendor — the survey supports its own consolidation/AI narrative. 'Investment priority' is intent, not deployment. Directionally credible but self-serving in framing.",
+  "fetchedAt": "2026-07-21"
+}

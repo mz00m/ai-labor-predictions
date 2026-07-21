@@ -1,0 +1,14 @@
+{
+  "id": "fairwork-cloudwork-report-2025",
+  "abstract": "The Fairwork Cloudwork Report 2025 evaluates 16 global cloudwork platforms (freelance marketplaces to data-annotation services) against five fair-work principles: pay, conditions, contracts, management, and representation. Findings show both incremental improvements and persistent gaps; most platforms fail to meet minimum standards.",
+  "keyFindings": [
+    "16 cloudwork platforms rated globally against 5 fair-work principles",
+    "5 principles: fair pay, fair conditions, fair contracts, fair management, fair representation",
+    "Most cloudwork platforms fail to meet minimum standards on any principle",
+    "Report highlights 'urgent need for stronger governance, transparency, and rights' in AI-driven digital economy",
+    "Fairwork is based at Oxford Internet Institute (OII); 2025 report focuses on AI supply-chain governance"
+  ],
+  "methodology": "Multi-country research team applies a standardized rubric to each platform across five principles, drawing on platform documentation, worker interviews, and company responses. Ratings range 0-10.",
+  "qualifiers": "Fairwork's methodology is publicly documented and reproducible but ratings depend on evidence platforms elect to share. Report focus is on conditions and rights rather than wage-rate deltas.",
+  "fetchedAt": "2026-07-21"
+}

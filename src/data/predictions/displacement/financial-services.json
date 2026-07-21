@@ -197,6 +197,15 @@
       "label": "PwC: AI-exposed financial services productivity growth nearly quadrupled"
     },
     {
+      "date": "2025-10-09",
+      "direction": "up",
+      "sourceIds": [
+        "deloitte-global-insurance-outlook-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Deloitte 2026 Insurance Outlook: 90% of execs see urgency to reinvent work for AI; only 25% acting yet"
+    },
+    {
       "date": "2025-10-15",
       "direction": "down",
       "sourceIds": [
@@ -233,6 +242,15 @@
       "label": "BofA CEO: AI cut coding work 30%, saving ~2,000 of 18,000 developer roles"
     },
     {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "banking-dive-big6-headcount-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Banking Dive: Big-6 banks at 1.09M employees, -10,600 YoY (lowest since 2021); Citi trimming 20K by end-2026"
+    },
+    {
       "date": "2026-02-04",
       "direction": "down",
       "sourceIds": [
@@ -249,6 +267,15 @@
       ],
       "evidenceTier": 2,
       "label": "Deutsche Bank: AI platforms could advise 80% of retail investors by 2027"
+    },
+    {
+      "date": "2026-02-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "fed-barr-ai-labor-speech-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Gov. Barr (Fed): AI could add 0.3-0.9pp to TFP; early-career workers in AI-exposed roles seeing employment declines"
     },
     {
       "date": "2026-02-19",
@@ -296,13 +323,22 @@
       "label": "Anthropic: Automated trading & market ops usage doubled in 3mo"
     },
     {
+      "date": "2026-03-27",
+      "direction": "down",
+      "sourceIds": [
+        "fed-feds-notes-ai-job-postings-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed FEDS Notes: No evidence higher-AI-adoption industries post fewer jobs; firm-level effect precisely-estimated null"
+    },
+    {
       "date": "2026-03-31",
       "direction": "down",
       "sourceIds": [
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario \u2192 AI surpasses paralegals and clerical workers by 2030"
+      "label": "FRI: Rapid scenario → AI surpasses paralegals and clerical workers by 2030"
     },
     {
       "date": "2026-04-24",
@@ -321,6 +357,15 @@
       ],
       "evidenceTier": 3,
       "label": "Bloomberg: finance+info sectors shedding 28k jobs/mo in 2026 (BLS data)"
+    },
+    {
+      "date": "2026-07-14",
+      "direction": "up",
+      "sourceIds": [
+        "biggo-jpmorgan-q2-ai-cuts-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Dimon (JPMorgan Q2 2026): AI already cut 30-40% of staff in some units; most redeployed, not laid off"
     }
   ],
   "sources": [
@@ -361,7 +406,7 @@
       "publisher": "Morgan Stanley (via TechCrunch / Financial Times)",
       "evidenceTier": 2,
       "datePublished": "2025-12-01",
-      "excerpt": "200,000+ European banking jobs could vanish by 2030 \u2014 roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
+      "excerpt": "200,000+ European banking jobs could vanish by 2030 — roughly 10% of workforce at 35 major European lenders (2.12M staff). Efficiency gains of 30% quoted by banks.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -371,7 +416,7 @@
       "publisher": "Multiple financial reporting (via Fortune)",
       "evidenceTier": 1,
       "datePublished": "2025-12-31",
-      "excerpt": "Combined headcount fell to 1.09 million \u2014 lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
+      "excerpt": "Combined headcount fell to 1.09 million — lowest since 2021, down ~10,600 from prior year, largest annual reduction since 2016.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -381,7 +426,7 @@
       "publisher": "Citigroup Global Perspectives & Solutions",
       "evidenceTier": 2,
       "datePublished": "2024-06-19",
-      "excerpt": "54% of banking jobs have high potential for automation \u2014 more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
+      "excerpt": "54% of banking jobs have high potential for automation — more than any other sector. Another 12% could be augmented. Insurance at 48%, capital markets at 40%.",
       "dateAdded": "2026-03-10"
     },
     {
@@ -446,12 +491,12 @@
     },
     {
       "id": "bofa-q4-2025-ai-coding-2026",
-      "title": "Bank of America Q4 2025 Earnings Call \u2014 AI Coding Efficiency",
+      "title": "Bank of America Q4 2025 Earnings Call — AI Coding Efficiency",
       "url": "https://investor.bankofamerica.com/events-and-presentations/events/detail/20260114-q4-2025-bank-of-america-earnings-conference-call",
       "publisher": "Bank of America (Q4 2025 earnings call)",
       "evidenceTier": 1,
       "datePublished": "2026-01-14",
-      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've \u2014 using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
+      "excerpt": "CEO Brian Moynihan: 'We have 18,000 people on the company's payroll who code, and we've — using the AI techniques, we've taken 30% out of the coding part of the stream of introducing a new product or service or change that saved us about 2,000 people.'",
       "dateAdded": "2026-03-10"
     },
     {
@@ -626,8 +671,58 @@
       "publisher": "Bloomberg (Boesler & Prakash)",
       "evidenceTier": 3,
       "datePublished": "2026-07-01",
-      "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors \u2014 where AI adoption rates have been fastest \u2014 has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations \u2014 including customer service representatives, bank tellers and insurance claims processors \u2014 account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
+      "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors — where AI adoption rates have been fastest — has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations — including customer service representatives, bank tellers and insurance claims processors — account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
       "dateAdded": "2026-07-06"
+    },
+    {
+      "id": "biggo-jpmorgan-q2-ai-cuts-2026",
+      "title": "JPMorgan CEO Says AI Cut Up to 40% of Staff in Some Areas, Warns 'Sharp Cost Reductions Are an Illusion'",
+      "url": "https://finance.biggo.com/news/9786cdb9-1ea3-4444-8816-8f7345ea6a55",
+      "publisher": "BigGo Finance (reporting JPMorgan Q2 2026 earnings)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-14",
+      "excerpt": "On JPMorgan's Q2 2026 earnings call (July 14, 2026), CEO Jamie Dimon disclosed that AI has 'already reduced headcount by 30% to 40% in certain specific areas' — most affected workers redeployed internally rather than laid off. Dimon pushed back against expectations of dramatic margin gains: 'in a competitive capitalist world, everybody is going to use AI to serve their customers better,' and such improvements 'won't happen anytime soon.' CFO Jeremy Barnum warned AI token spending will grow 'at a non-trivial pace' in H2 2026. JPMorgan maintains ~1,000 active AI use cases.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "banking-dive-big6-headcount-2026",
+      "title": "BofA joins Citi, Wells in projecting lower headcounts this year",
+      "url": "https://www.bankingdive.com/news/bank-of-america-citi-wells-fargo-headcount-banking-job-cuts-2026/809756/",
+      "publisher": "Banking Dive",
+      "evidenceTier": 3,
+      "datePublished": "2026-01-15",
+      "excerpt": "The six largest US banks counted 1.09 million employees at end-December 2025 — 10,600 fewer than a year earlier and the lowest headcount total since 2021. Wells Fargo's headcount declined ~25% since Q2 2020, ending 2025 with ~205,000 employees. Citigroup CFO Mark Mason said the bank has made headway on its plan to trim 20,000 jobs by end of 2026 and 'expects a further decline in headcount in 2026 and subsequent years.' Bank of America CEO Brian Moynihan: 'the No. 1 thing...is work the headcount through operational excellence and applications of new technologies, including AI.'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "fed-feds-notes-ai-job-postings-2026",
+      "title": "AI Adoption and Firms' Job-Posting Behavior (FEDS Notes)",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-adoption-and-firms-job-posting-behavior-20260327.html",
+      "publisher": "Federal Reserve Board (Liu, Webber)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-27",
+      "excerpt": "'There is no evidence thus far that industries with higher levels of AI adoption are posting fewer jobs.' 5-40% of firms have adopted AI across various surveys. 45.9% of workers reported LLM adoption at work in June/July 2025 (up from 30.1% in Dec 2024). In 2025, only 5.5% of firms had AI-related job postings. Industry-level models showed generally positive but statistically insignificant coefficients; firm-level analysis revealed 'precisely-estimated null effects' on job postings. Data period: Sept 2023 – Nov 2025 using Lightcast job postings and Census BTOS (1.2M businesses surveyed). Analysis is 'explicitly backward-looking' and does not forecast future impacts.",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "deloitte-global-insurance-outlook-2026",
+      "title": "2026 Global Insurance Outlook",
+      "url": "https://www.deloitte.com/us/en/insights/industry/financial-services/financial-services-industry-outlooks/insurance-industry-outlook.html",
+      "publisher": "Deloitte",
+      "evidenceTier": 2,
+      "datePublished": "2025-10-09",
+      "excerpt": "Deloitte's 2026 Global Insurance Outlook: '90% of insurance executives surveyed agree on the urgency of reinventing the employee value proposition to reflect human-machine collaboration; only 25% of respondents have taken tangible action to elevate human skills.' The outlook emphasizes the growing importance of agentic AI: 'Gen AI and Agentic AI already shaping the next stage of development in the insurance industry.' Carriers like Allianz, AXA, and AIG are working to unlock agentic capabilities in areas like claims processing. Insurers are shifting from 'What can AI do?' to 'How do we make AI work at scale?'",
+      "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "fed-barr-ai-labor-speech-2026",
+      "title": "What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
+      "url": "https://www.federalreserve.gov/newsevents/speech/barr20260217a.htm",
+      "publisher": "Federal Reserve Board (Gov. Michael Barr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-02-17",
+      "excerpt": "Governor Barr's speech at the NY Association for Business Economics (Feb 17, 2026): 'AI could contribute between 0.3 and 0.9 of a percentage point to annual total factor productivity growth over the next decade.' '17 percent of businesses in the U.S. Census Business Trends and Outlook Survey report using AI in their business functions; about 30 percent of businesses with more than 250 employees report using AI.' 'Early-career workers in occupations highly exposed to AI — such as software developers and customer service representatives — have experienced a decline in employment relative to other early-career workers in less exposed fields.' A NY Fed survey found firms 'plan to retrain their existing workforce' rather than pursue significant layoffs.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

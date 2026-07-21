@@ -1,0 +1,14 @@
+{
+  "id": "beckers-rcm-ai-arms-race-2026",
+  "abstract": "Becker's Hospital Review (April 2026) documents an 'AI arms race' between payers and providers in revenue-cycle management. Payers use AI to scale claims automation and denials; providers respond with AI-driven documentation, coding, and denial-prevention. Cleveland Clinic reports 15%+ of claims initially denied, requiring appeals to bring the figure below 2%. Revenue cycle teams are entering a new era shaped by AI, intelligent tools, and emerging roles.",
+  "keyFindings": [
+    "RCM AI dynamics: 'become an arms race, and payers are definitely ahead'",
+    "Cleveland Clinic: 15%+ of claims initially denied, brought below 2% via appeals",
+    "AI-driven denial generation at machine speed creates more appeals workload for providers",
+    "Team composition shifting to accommodate AI tools and new AI-oversight roles",
+    "Systems like Carle Health cite workforce constraints compounding technological gap"
+  ],
+  "methodology": "Journalistic reporting drawing on interviews with health-system RCM leaders.",
+  "qualifiers": "Narrative reporting rather than quantitative survey. 'Team composition shift' is directional; specific headcount changes are not documented.",
+  "fetchedAt": "2026-07-21"
+}

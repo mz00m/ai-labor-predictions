@@ -1,0 +1,15 @@
+{
+  "id": "hollywood-reporter-sag-aftra-2026",
+  "abstract": "Hollywood Reporter (June 4, 2026) on SAG-AFTRA membership ratification of a 4-year deal with the AMPTP (91.42% approve, 8.58% oppose, 19.25% turnout). Key AI protections: synthetic AI performers only allowed when providing 'significant additional value'; studios need an 'articulable business reason' to scan a performer for a digital replica; independently created digital replicas require minimum payments and residuals; digital replicas cannot be used to circumvent strike participation. Deal effective July 1, 2026 through June 30, 2030.",
+  "keyFindings": [
+    "SAG-AFTRA 4-year deal ratified June 4, 2026 (91.42% approval)",
+    "Synthetic AI performers require 'significant additional value' vs live performers",
+    "Studios need 'articulable business reason' to scan performers for digital replicas",
+    "Minimum payment rates and residuals apply to independently created digital replicas",
+    "Digital replicas cannot be used to circumvent strike participation",
+    "Minimum wage increases 3% annually; deal runs July 1, 2026 – June 30, 2030"
+  ],
+  "methodology": "Union ratification reporting; specifics from published contract summary.",
+  "qualifiers": "Contract terms are legally binding within US SAG-AFTRA jurisdiction only. 'Significant additional value' is a subjective test that will be tested in future disputes. Overall a counter-displacement signal — union bargaining lifting AI floor.",
+  "fetchedAt": "2026-07-21"
+}

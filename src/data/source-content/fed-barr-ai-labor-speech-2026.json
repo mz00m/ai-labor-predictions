@@ -1,0 +1,14 @@
+{
+  "id": "fed-barr-ai-labor-speech-2026",
+  "abstract": "Fed Governor Michael Barr's speech at the NY Association for Business Economics (February 17, 2026): frames AI as capable of adding 0.3-0.9pp to annual TFP growth over the next decade, comparable to late-1990s ICT gains. Notes that 17% of US businesses (30% of firms with 250+ employees) report using AI. Cites early-career workers in AI-exposed occupations (software developers, customer service) seeing employment declines relative to less-exposed peers.",
+  "keyFindings": [
+    "AI could add 0.3-0.9pp to annual total factor productivity growth over next decade",
+    "17% of US businesses report using AI in business functions (BTOS); 30% of firms with 250+ employees",
+    "Early-career workers in AI-exposed occupations (SWEs, CSRs) seeing employment declines vs less-exposed peers",
+    "GenAI workplace adoption post-ChatGPT as fast as PC adoption post-1984 IBM PC",
+    "NY Fed survey: firms 'plan to retrain their existing workforce' rather than lay off"
+  ],
+  "methodology": "Speech synthesizing recent Fed research, Census BTOS data, NY Fed employer surveys, and external academic studies on AI adoption and productivity.",
+  "qualifiers": "Speech provides framing rather than novel data. Fed governors are cautious about strong displacement claims; 'plan to retrain' captures firm intent, not observed behavior.",
+  "fetchedAt": "2026-07-21"
+}

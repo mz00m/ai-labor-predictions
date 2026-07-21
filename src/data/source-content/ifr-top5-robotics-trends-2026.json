@@ -1,0 +1,14 @@
+{
+  "id": "ifr-top5-robotics-trends-2026",
+  "abstract": "The International Federation of Robotics' Top 5 Global Robotics Trends 2026 report (January 8, 2026) identifies AI/autonomy, IT/OT integration, humanoid reliability, safety/security, and labor-gap solutions as the year's defining themes. The global market value of industrial robot installations reached an all-time high of US$16.7 billion.",
+  "keyFindings": [
+    "Global industrial robot installation market value at all-time high of US$16.7 billion in 2026",
+    "Five trends named: AI/autonomy, IT-meets-OT versatility, humanoid reliability, safety/security, labor-gap solutions",
+    "Humanoid robots must match industrial requirements on cycle times, energy, and maintenance costs to reach commercial viability",
+    "Employers globally struggle to find specialized skills — 'labor gap solutions' framing positions robots as complement not substitute",
+    "Rise in hacking attempts targeting robot controllers and cloud platforms cited as growing risk"
+  ],
+  "methodology": "IFR press release summarizing analysis by IFR statistical and analytical staff based on member surveys and installation data.",
+  "qualifiers": "IFR is an industry federation with obvious interest in framing robotics adoption favorably. 'Labor gap' framing is common in industry-forward discourse but does not directly measure displacement.",
+  "fetchedAt": "2026-07-21"
+}

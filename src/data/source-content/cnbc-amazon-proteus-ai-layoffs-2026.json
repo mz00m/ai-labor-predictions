@@ -1,0 +1,14 @@
+{
+  "id": "cnbc-amazon-proteus-ai-layoffs-2026",
+  "abstract": "CNBC (June 5, 2026) coverage of Amazon's next-generation Proteus warehouse robot unveiled at 'Delivering the Future' in London. The autonomous mobile robot takes conversational-language commands. Original Proteus is now in 25 US fulfillment centers; new version rolls out in Europe H1 2027. Amazon has eliminated 30,000 corporate positions since October amid AI-driven prioritization.",
+  "keyFindings": [
+    "Amazon Proteus (2022) now deployed in 25 US fulfillment centers",
+    "Next-generation Proteus rolls out in Europe first half of 2027",
+    "Proteus accepts natural-language commands from workers",
+    "Amazon has cut 30,000 corporate roles since October 2025 as it prioritizes AI investment",
+    "Amazon UK/Ireland VP John Boumphrey: 'our experience of robots is that it's driven up employment rather than the reverse'"
+  ],
+  "methodology": "CNBC on-site reporting from Amazon's Delivering the Future event in London plus interviews with Amazon executives.",
+  "qualifiers": "Company-source claim that robots increase employment is contested by NYT-reported internal Amazon projections (see nyt-amazon-1m-robots-2025). Corporate layoffs are separate from warehouse workforce trends.",
+  "fetchedAt": "2026-07-21"
+}

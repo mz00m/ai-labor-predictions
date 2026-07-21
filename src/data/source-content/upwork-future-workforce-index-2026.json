@@ -1,0 +1,15 @@
+{
+  "id": "upwork-future-workforce-index-2026",
+  "abstract": "Upwork's Future Workforce Index 2026 (July 14, 2026) documents a bifurcated freelancer market under AI: freelancers doing AI work earn 34% more per hour, but generative-AI/creative production contracts saw per-contract earnings fall 13% even as volume rose 90% YoY. Complex AI-augmented work saw earnings rise 45%; AI-augmented professional services grew 72% in volume with 22% higher earnings. Skilled freelancers now make up 38% of US knowledge workers.",
+  "keyFindings": [
+    "Freelancers performing AI work earn 34% more per hour than non-AI freelancers",
+    "GenAI/creative production contracts: +90% YoY volume, -13% per-contract earnings — commoditization signal",
+    "Complex AI-augmented work: +45% YoY earnings",
+    "AI-augmented professional services: +72% volume, +22% earnings",
+    "Skilled freelancers = 38% of US knowledge workers, up from 28% (+10pp YoY)",
+    "58% of full-time employees now consider freelancing (up from 36%)"
+  ],
+  "methodology": "Combines proprietary Upwork marketplace transactional data with survey responses from skilled professionals across employees and freelancers. Sample size exceeds 3,000 professionals plus platform-wide contract data.",
+  "qualifiers": "Upwork is the platform hosting the transactions, giving both privileged visibility and commercial incentive to frame skilled/AI-augmented freelancing favorably. Per-contract earnings decline in GenAI/creative work is a strong commoditization signal even within a self-serving report.",
+  "fetchedAt": "2026-07-21"
+}

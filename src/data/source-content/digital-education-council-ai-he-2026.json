@@ -1,0 +1,14 @@
+{
+  "id": "digital-education-council-ai-he-2026",
+  "abstract": "The Digital Education Council's AI in Higher Education Global Survey 2026 (July 9, 2026) draws on 45,398 responses from 27,284 students and 18,114 faculty across 35 countries. 88% of students use AI in learning; 77% of faculty use it in teaching (+16pp YoY). Faculty intent to use AI in teaching dropped in US/Canada to 67% (lowest globally) while other regions run 89-94%.",
+  "keyFindings": [
+    "88% of students use AI in learning; 77% of faculty use AI in teaching",
+    "Faculty AI use up 16 percentage points from 2025 to 2026",
+    "45,398 total responses across 27,284 students and 18,114 faculty in 35 countries",
+    "57% of students report inadequate AI guidance in assessments; only 29% believe instructors are equipped to guide them",
+    "Faculty AI-use intent in US/Canada dropped from 76% to 67% — lowest globally"
+  ],
+  "methodology": "Global online survey of students and faculty across 35 countries fielded in first half of 2026 by the Digital Education Council.",
+  "qualifiers": "DEC is a self-appointed industry council with commercial interests in AI-in-education tooling. Survey is opt-in, so likely over-represents AI-engaged students and faculty. Adoption signal is strong; displacement is not directly measured.",
+  "fetchedAt": "2026-07-21"
+}
