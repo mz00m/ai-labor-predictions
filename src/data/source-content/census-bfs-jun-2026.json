@@ -1,0 +1,14 @@
+{
+  "id": "census-bfs-jun-2026",
+  "abstract": "US Census Bureau Business Formation Statistics for June 2026, released July 9, 2026. The BFS provide timely, high-frequency information on new business applications and formations across the US and Puerto Rico. Total seasonally-adjusted Business Applications reached 531,423 in June, up 1.1% from May. Projected Business Formations (within 4 quarters, seasonally adjusted) reached 29,741, up 0.7% month-over-month. This is the first live BFS data point on jobsdata.ai's ai-business-formation graph — prior coverage relied on the 2021 baseline plus academic estimates and private-data sources (Stripe, Gusto, Ramp).",
+  "keyFindings": [
+    "Total Business Applications (seasonally adjusted) June 2026: 531,423 (+1.1% MoM vs May 2026)",
+    "Projected Business Formations (within 4 quarters, seasonally adjusted) June 2026: 29,741 (+0.7% MoM)",
+    "Series is monthly, released on the second Wednesday of the following month",
+    "High-Propensity Business Applications (HBA) definition was updated in November 2021; applied retroactively to data from 2012-present",
+    "BFS is the ground-truth US business formation series — all headline 'US business formation' figures cited in journalism trace back here"
+  ],
+  "methodology": "Census Bureau administrative data on new Employer Identification Number (EIN) applications filed with the IRS. Total Business Applications counts all EIN applications; the High-Propensity Applications (HBA) subset uses characteristics to identify applications most likely to become employer businesses. Projected Business Formations combines HBA with a formation model. All series available seasonally-adjusted and not-seasonally-adjusted.",
+  "qualifiers": "BFS is a universe-scale administrative count, not a survey — extremely high statistical quality but does not tag applications by AI-relatedness or industry-technology profile. Any 'AI is driving business formation' claim must be inferred from sectoral patterns (e.g., professional services growing 4x faster than construction since ChatGPT) rather than directly from BFS itself. Seasonally adjusted figures are subject to revision as more data comes in.",
+  "fetchedAt": "2026-07-21"
+}
