@@ -1,0 +1,19 @@
+{
+  "id": "stripe-carey-solo-founder-traits-2026",
+  "abstract": "Stripe Atlas (Jesse Carey, Product Strategy and Operations), 'Solo founding is at an all-time high: Top performers have these traits in common' — published May 28, 2026. Analyzes thousands of solo-founded Atlas startups incorporated in 2022 and 2023 with at least two years of revenue data. Headline finding: solo founders account for 63% of C corps formed in Q2 2026 — an all-time high. Documents the widening gap between top-decile and median solo founders across revenue, international reach, retention, business model, and AI-nativeness.",
+  "keyFindings": [
+    "Solo founders account for 63% of C corps formed in Q2 2026 — an all-time high",
+    "Median solo-founder revenue declined 23% year-over-year in 2025; top-decile revenue increased 19% in the same period — sharply widening dispersion",
+    "Top-decile solo founders earn 61x median founder revenue (vs 34x four years prior)",
+    "Solopreneurs earning >$100K annually up ~33% since 2022",
+    "International reach: top-decile sold into avg 10 countries in month 1 vs 3 for median; 40 non-US countries by month 24 vs 6 for median",
+    "International revenue share: 51% for top-decile vs 2% for median solo founders",
+    "Month-one customer retention: top-decile 29% vs middle-decile 8%; customer spending by month 12: +47% top-decile vs +24% middle-decile",
+    "Top solo founders 20-26 percentage points more likely to use recurring-billing models",
+    "Top-decile founders approximately twice as likely to build AI-native companies",
+    "AI-native startups generated nearly 2x the revenue of non-AI alternatives by month 24"
+  ],
+  "methodology": "Stripe Atlas internal data on solo-founded startups incorporated in 2022 and 2023 (each with at least two years of subsequent revenue data). Compares top-decile, middle-decile, and median founder outcomes across revenue, international reach, customer retention, business model, and AI-nativeness. Q2 2026 solo-founder share (63%) drawn from current-quarter Atlas incorporations.",
+  "qualifiers": "Sample is Stripe Atlas startups — a self-selected slice of the founder population that skews toward tech-adjacent, US-and-international, and revenue-model-first businesses. 'Solo founding' as measured here refers to single-founder Atlas incorporations, which correlates with but is not identical to unincorporated solopreneur activity. AI-nativeness is a Stripe classification. Revenue comparisons over 2-year lookback don't fully capture businesses that scaled beyond Stripe processing or exited.",
+  "fetchedAt": "2026-07-21"
+}
