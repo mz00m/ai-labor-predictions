@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-20",
-  "totalSources": 626,
-  "verifiedCount": 616,
+  "lastUpdated": "2026-07-21",
+  "totalSources": 629,
+  "verifiedCount": 619,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -7938,7 +7938,7 @@
       "publisher": "Stripe Economics (Ernie Tedeschi)",
       "evidenceTier": 2,
       "datePublished": "2026-05-19",
-      "excerpt": "The rapid development of AI tools might be lowering both the barriers to starting a business and the returns to doing so for individual operators\u2014contributing to a rise in AI solopreneurs. Stripe Atlas data shows startups have accelerated since 2023, especially Q1 2026, with solo founders as the overwhelming driver. SaaS pay-in volumes on Stripe recovered quickly from the SaaSpocalypse sell-off.",
+      "excerpt": "Stripe Economics (Ernie Tedeschi, May 19 2026). New business applications rising worldwide with US divergence between total applications and 'high-propensity' employment-generating filings. Stripe Atlas data: 'startups have accelerated since 2023, and especially in the first quarter of 2026' \u2014 'overwhelming[ly]' driven by solo founders across both AI and non-AI ventures. SaaS market context: 'Over 30 days in early 2026, the software sector shed roughly $1 trillion in market capitalization,' but weekly transactions for the 100 largest non-AI SaaS companies on Stripe showed 'a brief dip followed by a swift recovery' \u2014 the SaaSpocalypse was expectations-driven, not economic-activity-driven. Historical framing: post-electrification (1882), inflation-adjusted output per worker grew just 0.5%/yr for three decades before productivity 'more than doubled' in the decade after 1917; PCs showed 'gains everywhere except the productivity statistics' (Solow 1987) with visible productivity acceleration mid-1990s.",
       "usedIn": [
         "ai-business-formation",
         "ai-adoption-rate"
@@ -8897,6 +8897,51 @@
       "dateAdded": "2026-07-20",
       "usedIn": [
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stripe-carey-solo-founder-traits-2026": {
+      "id": "stripe-carey-solo-founder-traits-2026",
+      "title": "Solo founding is at an all-time high: Top performers have these traits in common",
+      "url": "https://stripe.com/blog/top-solo-founder-traits",
+      "publisher": "Stripe Atlas (Jesse Carey)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-28",
+      "excerpt": "Stripe Atlas (Jesse Carey, May 28 2026). Analysis of thousands of solo-founded Atlas startups incorporated 2022-2023 with 2+ years of revenue data. Headline: solo founders account for '63% of C corps formed so far in the second quarter of 2026 \u2014 an all-time high.' Revenue split: median solo-founder revenue -23% YoY in 2025; top-decile +19%. Top decile earns 61x median (vs 34x four years prior). Top-decile founders sold into 10 countries in month 1 (vs 3 for median) and 40 non-US countries by month 24. International revenue share: 51% top-decile vs 2% median. Top-decile month-one retention 29% vs 8% middle-decile. AI angle: 'Top-decile founders approximately twice as likely building AI-native companies'; AI-native startups generated nearly 2x revenue of non-AI at month 24. Top founders 20-26pp more likely to use recurring-billing models.",
+      "dateAdded": "2026-07-21",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gusto-ai-advantage-new-business-2026": {
+      "id": "gusto-ai-advantage-new-business-2026",
+      "title": "2026 New Business Formation Report: How AI Is Reshaping Who Starts a Business",
+      "url": "https://gusto.com/resources/gusto-insights/new-business-formation-2026",
+      "publisher": "Gusto",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-14",
+      "excerpt": "Gusto 2026 New Business Formation Report (May 2026, 6th annual). '60% of new business owners used AI to help launch their business in 2025' \u2014 nearly 3x the 21% in 2023. Among AI-using founders: 75% used it to develop business ideas, 53% for administrative/legal tasks, 51% for setting up operations. Industry adoption: Professional Services 56% (highest); Goods-Producing 43%; Community Services 36%. Generational: 71% of Gen Z founders vs 42% of Boomers used AI. Growth linkage: 49% of AI-using new businesses plan headcount growth in 2026 vs 41% of non-AI-using \u2014 'AI adoption is associated with growth rather than job displacement.' Gusto also reports Gen Z entrepreneurs outnumber Boomers in new business starts for the first time.",
+      "dateAdded": "2026-07-21",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ibtimes-census-ai-business-surge-2026": {
+      "id": "ibtimes-census-ai-business-surge-2026",
+      "title": "AI Revolution Helps Fuel Surge In US Small Business Formation",
+      "url": "https://www.ibtimes.com/ai-revolution-startup-boom-small-business-formation-surges-3805510",
+      "publisher": "IBTimes (Pham Binh, citing US Census BFS + Bloomberg + Apollo)",
+      "evidenceTier": 3,
+      "datePublished": "2026-07-20",
+      "excerpt": "IBTimes (Pham Binh, Jul 20 2026) synthesis of US Census Business Formation Statistics + Bloomberg analysis. Headline: '~29,700 new employer businesses are expected to form each month nationwide over the next year, a 17% increase compared to 2025 estimates.' Professional services sector (legal, architectural, advertising) forming at '>5,000 companies per month, a 24% year-over-year increase.' Bloomberg reporting: 'Since the launch of ChatGPT in 2022, new business filings in professional services grew four times faster than in construction.' Torsten Slok (Apollo Global chief economist): 'We've never created as many businesses. It does tell you that AI is playing a very big role.'",
+      "dateAdded": "2026-07-21",
+      "usedIn": [
+        "ai-business-formation"
       ],
       "verified": true,
       "synthetic": false

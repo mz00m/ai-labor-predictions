@@ -1,0 +1,15 @@
+{
+  "id": "ibtimes-census-ai-business-surge-2026",
+  "abstract": "IBTimes (Pham Binh, July 20, 2026) synthesis of US Census Business Formation Statistics plus Bloomberg analysis on AI's role in the US business-formation surge. Reports ~29,700 new employer businesses expected to form monthly over the next year (a 17% year-over-year increase), with professional-services formation running at 5,000+/month (24% YoY) — the fastest-growing sector. Quotes Torsten Slok (Apollo Global chief economist) as the industry voice: 'We've never created as many businesses. It does tell you that AI is playing a very big role.'",
+  "keyFindings": [
+    "~29,700 new employer businesses forming per month nationwide, projected +17% vs 2025",
+    "Professional/scientific/technical services (legal, architectural, advertising) forming at >5,000 companies/month — a 24% year-over-year increase",
+    "Since ChatGPT's launch in November 2022, new business filings in professional services grew four times faster than in construction (per Bloomberg reporting)",
+    "Torsten Slok (Apollo Global chief economist): 'We've never created as many businesses. It does tell you that AI is playing a very big role'",
+    "Primary data source is the US Census Business Formation Statistics; Bloomberg reporting provides the sectoral comparison",
+    "The story is a Tier-3 synthesis but the underlying Census figures are Tier-1 government data"
+  ],
+  "methodology": "Journalism piece synthesizing three underlying data sources: (1) US Census Business Formation Statistics for the 29,700/month projection and sectoral breakdown; (2) Bloomberg analysis for the 4x professional-services-vs-construction growth comparison; (3) Apollo Global Management commentary via Torsten Slok. Not a primary research artifact.",
+  "qualifiers": "Tier 3 synthesis — cite for the framing and the direct Slok quote; use the underlying Census BFS series directly for authoritative growth figures. Note that Census BFS does not tag applications as 'AI-related' explicitly; the AI attribution is inferential from sectoral patterns (professional services growing 4x faster than construction is plausibly AI-linked but not conclusive). '29,700/month' is a projection, not an observed monthly figure. The '4x' construction comparison depends on Bloomberg's specific baseline and industry-code selection.",
+  "fetchedAt": "2026-07-21"
+}

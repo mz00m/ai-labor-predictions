@@ -1,0 +1,16 @@
+{
+  "id": "gusto-ai-advantage-new-business-2026",
+  "abstract": "Gusto's 6th annual New Business Formation Report (May 2026), 'The AI Advantage: How AI Is Reshaping New Business Formation.' Documents the sharp rise of AI usage among founders launching new businesses, with 60% of 2025 new-business owners using AI to help launch — nearly triple the 21% share in 2023. Also finds that AI-using new businesses are more likely than non-AI users to plan headcount growth in 2026, arguing 'AI adoption is associated with growth rather than job displacement.' Companion release: for the first time ever, Gen Z entrepreneurs outnumber Baby Boomers in new business starts.",
+  "keyFindings": [
+    "60% of 2025 new-business owners used AI to help launch their business — up from 21% in 2023 (roughly 3x in 2 years)",
+    "Among AI-using founders: 75% used AI to develop business ideas, 53% for administrative/legal tasks, 51% for setting up operations",
+    "Industry adoption ranking: Professional Services 56% (highest), Goods-Producing 43%, Community Services 36%",
+    "Generational: 71% of Gen Z founders used AI to launch vs 42% of Baby Boomers — nearly 30pp gap",
+    "AI-using new businesses more likely to plan 2026 headcount growth (49%) than non-AI-using (41%) — 8pp gap",
+    "Companion Gusto release (May 2026): Gen Z entrepreneurs outnumber Baby Boomers in new business starts for the first time ever",
+    "Gusto positions AI as an entrepreneurial enabler — 'AI adoption is associated with growth rather than job displacement'"
+  ],
+  "methodology": "Gusto surveys new-business owners annually about the formation experience, industry, demographics, and tools used. The 6th edition (2026 report, covering 2025 formations) draws on the Gusto payroll customer base of new small businesses. Sample size for the specific 60% AI-usage figure is not disclosed in public materials; full-report methodology is on Gusto's site.",
+  "qualifiers": "Sample is Gusto's small-business customer base — a slice that skews toward businesses using cloud payroll (typically newer, professional-services-heavy, US-centered). 'Used AI to launch' is self-reported and captures any AI use in the founding process, not a specific frequency threshold. The 'AI-using founders plan headcount growth more than non-AI' finding is correlational, not causal — AI-adopters may already be higher-quality founders on other dimensions. Industry percentages are share of that industry's Gusto founders, not overall industry share of formations.",
+  "fetchedAt": "2026-07-21"
+}
