@@ -1881,6 +1881,15 @@
         "eig-goldschlag-ai-jobs-final-word-2026"
       ],
       "evidenceTier": 1
+    },
+    {
+      "date": "2026-07-02",
+      "direction": "down",
+      "sourceIds": [
+        "bls-employment-situation-jun-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Jun 2026: nonfarm +57K (below 115K expected); U-rate 4.2%; Apr/May revised -74K"
     }
   ],
   "sources": [
@@ -3355,6 +3364,16 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    {
+      "id": "bls-employment-situation-jun-2026",
+      "title": "The Employment Situation \u2014 June 2026 (BLS Release, Jul 2, 2026)",
+      "url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-02",
+      "excerpt": "BLS Employment Situation, June 2026 (released July 2, 2026). Total nonfarm payroll employment changed little in June (+57,000), roughly in line with the average monthly change over the prior 12 months (+36,000). Unemployment rate 4.2% (dipped slightly). Health care +22,000 (below prior 12-month average of +38K); leisure and hospitality declined by 61,000 (weaker seasonal hiring). Prior months revised down: April -31K (to +148K), May -43K (to +129K); combined -74K. Average hourly earnings for private nonfarm payrolls +13 cents (0.3%), to $37.64. Wall Street had expected 115,000 jobs \u2014 actual well below.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

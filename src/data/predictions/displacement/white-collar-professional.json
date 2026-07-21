@@ -1029,6 +1029,15 @@
       ],
       "evidenceTier": 3,
       "label": "Challenger: AI cited in 101,743 US layoffs YTD 2026 (23%); tech +83% vs H1 2025"
+    },
+    {
+      "date": "2026-07-02",
+      "direction": "up",
+      "sourceIds": [
+        "bls-employment-situation-jun-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Jun 2026: total nonfarm +57K missed 115K expected; health +22K, leisure -61K"
     }
   ],
   "sources": [
@@ -1903,6 +1912,16 @@
       "datePublished": "2026-06-15",
       "excerpt": "PwC 2026 Global AI Jobs Barometer (Atkinson & Brown, Jun 15, 2026). Analyzed 1+ billion job advertisements across 27 countries and territories, including 2.4M entry-level US jobs. Key findings: entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills'; job openings for 'seniorised' entry-level roles grew 35% since 2019 while other entry-level roles declined 10%. AI-skills wage premium reached 62% (up from 57% in the 2025 barometer), ranging from 16% (government) to 118% (consumer markets). AI-skill jobs growing 69% vs 9% for the total jobs market \u2014 'almost twice as high as 2024.' Companies most exposed to AI: 52% headcount growth vs 36% (least exposed); wage growth 24% vs 17%; productivity 34% vs 24% (2018-2025), with the top-20% 'super-stars' at 163% productivity gain. 'Professionalised' roles growing twice as fast with 42% faster salary increases. Technology/media/telecom: 11% AI job share; health: <1%.",
       "dateAdded": "2026-07-19"
+    },
+    {
+      "id": "bls-employment-situation-jun-2026",
+      "title": "The Employment Situation \u2014 June 2026 (BLS Release, Jul 2, 2026)",
+      "url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-02",
+      "excerpt": "BLS Employment Situation, June 2026 (released July 2, 2026). Total nonfarm payroll employment changed little in June (+57,000), roughly in line with the average monthly change over the prior 12 months (+36,000). Unemployment rate 4.2% (dipped slightly). Health care +22,000 (below prior 12-month average of +38K); leisure and hospitality declined by 61,000 (weaker seasonal hiring). Prior months revised down: April -31K (to +148K), May -43K (to +129K); combined -74K. Average hourly earnings for private nonfarm payrolls +13 cents (0.3%), to $37.64. Wall Street had expected 115,000 jobs \u2014 actual well below.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

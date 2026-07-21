@@ -152,6 +152,16 @@
       "evidenceTier": 1,
       "metricType": "corporate",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-04-15",
+      "value": 65,
+      "sourceIds": [
+        "factset-earnings-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "earnings-mentions"
     }
   ],
   "overlays": [
@@ -359,6 +369,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-05-06",
       "excerpt": "AI-as-augmentation out-mentions AI-as-substitution on earnings calls by ~8:1. Software Development jobs (both by count, and a percent of the overall job market) have been increasing since the beginning of 2025. The aggregate effects of AI on employment are \"basically null\" per recent academic research, with some evidence of reallocation between jobs and tasks."
+    },
+    {
+      "id": "factset-earnings-q1-2026",
+      "title": "S&P 500 Earnings Season Update \u2014 Q1 2026 (AI mentions)",
+      "url": "https://insight.factset.com/sp-500-earnings-season-update-may-8-2026",
+      "publisher": "FactSet",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-08",
+      "excerpt": "FactSet S&P 500 Q1 2026 earnings-season update (published May 8, 2026 with 89% of S&P 500 having reported actual Q1 results). AI citations: 'about 65% of S&P 500 earnings calls have cited the term AI so far,' slightly below the prior quarter's 68% (which was the highest percentage going back at least five years). AI remains substantially elevated vs historical levels. Overall Q1 2026 earnings performance: 84% of reporting companies beat EPS estimates; aggregate earnings 18.2% above estimates. Co-trending terms: 'Middle East' and 'oil' both at 5-year highs alongside AI.",
+      "dateAdded": "2026-07-21"
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "id": "census-btos-ai-may-2026",
+  "abstract": "US Census Bureau Business Trends and Outlook Survey (BTOS) biweekly release of June 18, 2026, reporting AI use rates as of the May 3, 2026 reference date. The national AI use rate reached 19.8% of responding businesses, up from ~17.5% in the Feb 26 wave. Between December 2025 and May 2026, the national AI use rate hovered between 17% and 20%, with 20-23% of firms expecting to use AI in the next six months. Sector spread widened: Information sector at 39.7% and Finance & Insurance at 33.9%, both roughly double the national average.",
+  "keyFindings": [
+    "National AI use rate: 19.8% as of May 3, 2026 (up from 17.5% Feb 26, 2026)",
+    "Dec 2025 - May 2026 range: 17% to 20% national AI use, with 20-23% expected in next 6 months",
+    "Sector high: Information 39.7% (approximately 2x national)",
+    "Sector high: Finance & Insurance 33.9%",
+    "Sector low: Retail Trade ~14% (below national average)",
+    "Methodology: biweekly survey of ~1.2 million businesses",
+    "Question wording (post-Nov 2025 revision): 'In the last two weeks, did this business use Artificial Intelligence in any of its business functions?'",
+    "Broader question wording nearly doubled the measured rate vs the pre-Nov 2025 narrower 'production of goods and services' question"
+  ],
+  "methodology": "Census Business Trends and Outlook Survey — biweekly sample of ~1.2 million US businesses. Question wording changed in Nov 2025 to include AI in 'any business function' vs the prior narrower 'production of goods and services' framing; the broader question roughly doubled the measured rate. Data are experimental — Census flags them as such. Available by sector, state, and the 25 most populous MSAs. Reference date is typically ~6 weeks before the release date.",
+  "qualifiers": "Experimental Census product. Self-reported binary (used AI / did not / do not know) — no frequency, intensity, or use-case granularity. Question-wording change in Nov 2025 makes pre-Nov-2025 series NOT directly comparable to post-Nov-2025 series without adjustment. Reference dates lag release dates by ~6 weeks. Sector shares of the ~1.2M business sample may not perfectly track QCEW/CES sector shares of employment.",
+  "fetchedAt": "2026-07-21"
+}

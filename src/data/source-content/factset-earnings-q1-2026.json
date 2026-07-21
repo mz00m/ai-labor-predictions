@@ -1,0 +1,15 @@
+{
+  "id": "factset-earnings-q1-2026",
+  "abstract": "FactSet S&P 500 Earnings Season Update — Q1 2026 (published May 8, 2026), covering the Q1 2026 reporting period with 89% of S&P 500 having reported actual results. About 65% of S&P 500 earnings calls cited the term 'AI,' slightly below the prior quarter's 68% (which was the highest percentage going back at least 5 years). AI mentions remain substantially elevated vs historical levels. Co-trending terms hitting 5-year highs alongside AI: 'Middle East' and 'oil.' Overall earnings performance strong: 84% of reporting companies beat EPS estimates; aggregate earnings 18.2% above estimates.",
+  "keyFindings": [
+    "65% of S&P 500 earnings calls cited 'AI' in Q1 2026 — slightly below Q4 2025's 68% record but still substantially elevated vs historical",
+    "Q4 2025's 68% was the highest AI-citation percentage going back at least 5 years",
+    "89% of S&P 500 had reported actual Q1 2026 results by the May 8 update",
+    "84% of reporting companies beat EPS estimates; aggregate earnings 18.2% above estimates",
+    "Co-trending terms at 5-year highs alongside AI: 'Middle East' and 'oil'",
+    "The Q4 2025 → Q1 2026 slight dip (68 → 65) is the first sequential quarterly decline in AI mentions since the ChatGPT era began"
+  ],
+  "methodology": "FactSet analyzes S&P 500 earnings call transcripts for keyword frequency. 'Cited AI' means the term appeared at least once in the call. Reported as % of companies that have had their earnings call to date within the quarter. Cadence: quarterly updates through the reporting season, with a definitive figure once all 500 companies have reported.",
+  "qualifiers": "Keyword-frequency measure — cannot distinguish between substantive AI strategy discussion vs a passing mention. The 68 → 65 sequential decline (Q4 2025 → Q1 2026) is small and may partly reflect co-competition with Middle East / oil topics for calls' attention rather than diminished AI focus. Reporting-season update may shift slightly as remaining companies report. Not a workforce-specific measure — some companies mention AI in the context of product strategy or customer offerings, not labor.",
+  "fetchedAt": "2026-07-21"
+}
