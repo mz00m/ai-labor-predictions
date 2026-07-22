@@ -461,11 +461,11 @@
       "whatItMeasures": "Not a data series \u2014 a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
       "whyItMatters": "Every ingested Tier 1 paper on the site traces back to this feed. Tracking NBER weekly is how the site stays ahead of Fed / IMF / OECD syntheses (which lag academic publication by 3-9 months). This is where the 'first inning' research Kolko flags is being written.",
       "lastIngested": {
-        "sourceId": "nber-humlum-vestergaard-still-waters-2025",
-        "date": "2026-03-01",
-        "value": "Continuous \u2014 most recent ingested WP: Humlum/Vestergaard revision (Danish null effects)"
+        "sourceId": "nber-chen-sialm-xu-ai-investing-2026",
+        "date": "2026-06-01",
+        "value": "Latest ingested AI-labor NBER WP: Chen/Sialm/Xu on AI in asset management (Jun 2026). ~9 NBER WPs ingested since March 2026"
       },
-      "nextExpected": "Continuous; check weekly for new AI-labor working papers"
+      "nextExpected": "Continuous \u2014 NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly"
     },
     {
       "id": "ilo-ai-future-of-work",
