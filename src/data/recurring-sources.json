@@ -417,6 +417,126 @@
         "value": "92M roles displaced by 2030; 170M created; net +78M"
       },
       "nextExpected": "~January 2027 (next biennial edition)"
+    },
+    {
+      "id": "oecd-ai-observatory",
+      "name": "OECD.AI Observatory & Employment Outlook AI chapters",
+      "publisher": "OECD",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Rolling; annual Employment Outlook + AI-specific interim reports",
+      "releasePattern": "Rolling updates at oecd.ai; annual OECD Employment Outlook (typically July)",
+      "url": "https://oecd.ai/en/work-innovation-productivity-skills",
+      "targetGraphs": [
+        "ai-adoption-rate",
+        "workforce-ai-exposure",
+        "genai-work-adoption"
+      ],
+      "topicLine": "The only cross-country AI-adoption and AI-labor comparator on the registry.",
+      "whatItMeasures": "AI adoption by firms, workers, and countries across OECD members (currently 38 nations). Combines Eurostat firm-side data, ISCO occupational exposure, PIAAC skills, and country-level policy indicators into the OECD.AI Index. Employment Outlook chapters add the annual synthesis.",
+      "whyItMatters": "US-only findings need a cross-country test. The Bick/Blandin/Deming RPS series and Humlum/Vestergaard's Danish study are only interpretable against this comparator. OECD 2026 shows Denmark at 42% firm adoption vs US at 17% \u2014 the cleanest evidence that adoption isn't only about model availability.",
+      "lastIngested": {
+        "sourceId": "oecd-employment-outlook-2026",
+        "date": "2026-07-01",
+        "value": "OECD 2026 Employment Outlook: AI and trade reshape regional labor markets; Denmark 42% firm AI, US 17%"
+      },
+      "nextExpected": "Rolling; next Employment Outlook ~July 2027"
+    },
+    {
+      "id": "nber-ai-labor-wp",
+      "name": "NBER Working Papers \u2014 AI & Labor",
+      "publisher": "National Bureau of Economic Research",
+      "tier": 1,
+      "cadence": "monthly",
+      "cadenceLabel": "Weekly release cadence; monthly for the AI-labor subset",
+      "releasePattern": "New working papers released weekly at nber.org; AI-labor subset roughly monthly",
+      "url": "https://www.nber.org/papers?facet=topics%3AArtificial+Intelligence",
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "median-wage-impact",
+        "high-skill-wage-premium"
+      ],
+      "topicLine": "The single feed where the field's causal-identification AI-labor papers originate.",
+      "whatItMeasures": "Not a data series \u2014 a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
+      "whyItMatters": "Every ingested Tier 1 paper on the site traces back to this feed. Tracking NBER weekly is how the site stays ahead of Fed / IMF / OECD syntheses (which lag academic publication by 3-9 months). This is where the 'first inning' research Kolko flags is being written.",
+      "lastIngested": {
+        "sourceId": "nber-humlum-vestergaard-still-waters-2025",
+        "date": "2026-03-01",
+        "value": "Continuous \u2014 most recent ingested WP: Humlum/Vestergaard revision (Danish null effects)"
+      },
+      "nextExpected": "Continuous; check weekly for new AI-labor working papers"
+    },
+    {
+      "id": "ilo-ai-future-of-work",
+      "name": "ILO \u2014 AI and the Future of Work / Global Employment Trends",
+      "publisher": "International Labour Organization",
+      "tier": 2,
+      "cadence": "annual",
+      "cadenceLabel": "Annual Global Report + interim policy notes",
+      "releasePattern": "Director-General's annual report at International Labour Conference (June); interim thematic notes throughout the year",
+      "url": "https://www.ilo.org/topics/artificial-intelligence-and-decent-work",
+      "targetGraphs": [
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "freelancer-rate-impact"
+      ],
+      "topicLine": "The only worker-voice and decent-work framing in the AI-labor registry.",
+      "whatItMeasures": "Global employment status, informality, decent-work indicators tied to AI adoption. The 2026 Director-General's report 'A Moment of Choice: Harnessing AI for Decent Work' is the anchor artifact. ILO-World Bank joint paper series adds cross-country generative-AI exposure estimates.",
+      "whyItMatters": "Every other source on the registry frames AI-labor as a productivity/displacement question. ILO frames it as a decent-work + worker-voice question \u2014 the framing Kinder pushes and the framing that maps to policy conversations in most OECD countries. Also: 2.1 billion workers in informal employment are outside the US-focused datasets entirely.",
+      "lastIngested": {
+        "sourceId": "ilo-ai-decent-work-2026",
+        "date": "2026-06-01",
+        "value": "'A Moment of Choice' DG report: AI transforms tasks not occupations; jobs gap 408M in 2026"
+      },
+      "nextExpected": "~June 2027 (next Director-General's annual report)"
+    },
+    {
+      "id": "ifr-world-robotics",
+      "name": "IFR World Robotics Report",
+      "publisher": "International Federation of Robotics",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual (with monthly Top-5 Trends update)",
+      "releasePattern": "Full report September each year; press-release Top-5 Trends in January",
+      "url": "https://ifr.org/worldrobotics/",
+      "targetGraphs": [
+        "robots-physical-automation-displacement"
+      ],
+      "topicLine": "The definitive global source on industrial robot installations by country, sector, and application.",
+      "whatItMeasures": "Industrial robot installations and operational stock by country, industry, and application. Covers cobots, service robots, and mobile robots. Data underlies Acemoglu-Restrepo's JPE 2020 finding that one more robot per thousand workers reduces employment-to-population by 0.2pp.",
+      "whyItMatters": "The physical-automation counterweight to a site dominated by GenAI/knowledge-work signals. Robotics adoption is real, measurable, and directly implicated in manufacturing employment. Feeds robots-physical-automation-displacement \u2014 currently the thinnest displacement graph on the site.",
+      "lastIngested": {
+        "sourceId": "ifr-world-robotics-2025",
+        "date": "2025-09-24",
+        "value": "Global robot installations +6% to 575K units in 2025; US +11% to 38K units"
+      },
+      "nextExpected": "September 24, 2026 (World Robotics 2026 full report)"
+    },
+    {
+      "id": "anthropic-economic-index-dashboard",
+      "name": "Anthropic Economic Index Dashboard (base data)",
+      "publisher": "Anthropic Economic Research",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Continuous dashboard; updated with each themed report",
+      "releasePattern": "Dashboard at anthropic.com/economic-index; refreshed with each quarterly report",
+      "url": "https://www.anthropic.com/economic-index",
+      "targetGraphs": [
+        "genai-work-adoption",
+        "workforce-ai-exposure",
+        "customer-service-automation",
+        "tech-sector-displacement"
+      ],
+      "topicLine": "Task-level automation-vs-augmentation ratios by O*NET occupation \u2014 the input Stanford Canaries analysis relies on.",
+      "whatItMeasures": "Analysis of millions of Claude conversations mapped to O*NET occupations, classifying each usage as automation or augmentation. Different from the individual themed reports (Learning Curves, Cadences, 81K Economics) already on the registry \u2014 this is the underlying dashboard artifact that Brynjolfsson/Chandar/Chen and others use as the 'how is AI actually used?' input.",
+      "whyItMatters": "The single largest AI usage dataset in the field. Stanford DEL Canaries analysis uses the automation ratio here to explain why early-career workers in automation-heavy occupations contract 3.8%/yr while augmentation-heavy occupations grow. Rock and Brynjolfsson both cite this as the key input for measuring how (not just whether) AI is deployed at the task level.",
+      "lastIngested": {
+        "sourceId": "anthropic-economic-index-cadences-2026",
+        "date": "2026-06-26",
+        "value": "Dashboard updated with each themed report; latest: Cadences (June 2026)"
+      },
+      "nextExpected": "~September 2026 (with Q3 themed report)"
     }
   ]
 }
