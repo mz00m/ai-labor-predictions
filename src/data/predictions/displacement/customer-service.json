@@ -408,7 +408,7 @@
         "fri-ai-economics-survey-2026"
       ],
       "evidenceTier": 1,
-      "label": "FRI: Rapid scenario → AI surpasses all human customer service agents by 2030"
+      "label": "FRI: Rapid scenario \u2192 AI surpasses all human customer service agents by 2030"
     },
     {
       "date": "2026-04-01",
@@ -490,6 +490,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT/Schneider: AI answers 75% of 150K CS queries, but agents still review and deliver"
+    },
+    {
+      "date": "2026-07-02",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-supplement-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BTOS 2026 AI Suppl: 7.6% of US firms use AI in customer service (6mo); 40% plan to next 6mo"
     }
   ],
   "sources": [
@@ -518,7 +527,7 @@
       "publisher": "Klarna",
       "evidenceTier": 1,
       "datePublished": "2024-02-27",
-      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch — 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
+      "excerpt": "Klarna's AI assistant handled two-thirds of customer service chats within one month of launch \u2014 2.3 million conversations, doing the equivalent work of 700 full-time agents.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -581,7 +590,7 @@
     },
     {
       "id": "shopify-earnings-2024",
-      "title": "Shopify Q4 2024 Earnings — AI Customer Support Metrics",
+      "title": "Shopify Q4 2024 Earnings \u2014 AI Customer Support Metrics",
       "url": "https://investors.shopify.com/financial-reports",
       "publisher": "Shopify (Earnings Call)",
       "evidenceTier": 1,
@@ -743,7 +752,7 @@
       "id": "lodefalk-age-gradient-hiring-2026",
       "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
       "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
-      "publisher": "RATIO Institute / Örebro University (Lodefalk, Löthman, Koch, Engberg)",
+      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
       "evidenceTier": 1,
       "datePublished": "2026-03-16",
       "excerpt": "Customer service agents (SSYK 4222) display the same age gradient as the economy-wide canaries effect, lying between the augmentation and automation poles. All four spotlight occupations show young workers declining, older workers stable or rising.",
@@ -786,7 +795,7 @@
       "publisher": "Anthropic (Massenkoff, Lyubich, McCrory, Appel, Heller)",
       "evidenceTier": 2,
       "datePublished": "2026-03-24",
-      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives—Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
+      "excerpt": "customer service tasks, including, for example, automated support for payment and billing issues, are prevalent in the API data. These contributed to a higher observed exposure for Customer Service Representatives\u2014Claude was recorded doing a high share of their tasks in automated workflows, so these jobs may be more likely to change as AI diffuses.",
       "dateAdded": "2026-03-24"
     },
     {
@@ -904,6 +913,16 @@
       "evidenceTier": 2,
       "datePublished": "2025-06-10",
       "excerpt": "By 2027, 50% of organizations that expected to significantly reduce their customer service workforce will abandon these plans. A Gartner poll of 163 customer service and support leaders conducted in March 2025 [found] 95% of customer service leaders plan to retain human agents to strategically define AI's role."
+    },
+    {
+      "id": "census-btos-ai-supplement-2026",
+      "title": "BTOS 2026 AI Supplement \u2014 Full Biannual Data Release",
+      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "publisher": "US Census Bureau (BTOS AI Supplement)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-02",
+      "excerpt": "US Census Bureau BTOS 2026 AI Supplement (reference period Nov 17, 2025 - Feb 8, 2026; released 2026). Full biannual supplement replacing the biweekly two-week question with a six-month lookback plus new modules on task substitution, wage/employment effects, and planned adoption. Headline (Q1, 2-week): 17.9% of US businesses used AI in any function in the past two weeks (SE 0.13%). Use case incidence (6-month): sales/marketing 14.3%, strategy 12.4%, IT 11.4%, R&D 11.2%, PR/comms 9.3%. Task substitution: 10.1% used AI to perform a task previously done by an employee; 43.7% to supplement/enhance an employee task; 10.6% to introduce a new task. Of firms that substituted, 70.9% substituted 'a small number' of tasks, 22.0% moderate, 7.1% large. Employment effect: 95.7% report no change in total employment from AI use; 2.3% increased, 2.0% decreased. Generative AI specifically: 20.8% of firms report employees using GenAI at work in past six months; of those, 85.4% used for writing/editing, 49.9% for information search, 44.6% for translation/analysis, 34.7% for paperwork, 30.0% for new-project development. Sector leaders (Q1 two-week): Information 37.6%, Professional/Scientific/Technical 34.2%, Education 30.7%, Finance/Insurance 30.4%, Real Estate 23.5%. Six-month outlook: 21.6% expect to be using AI, with sales/marketing (62.8%) and strategy (57.4%) leading.",
+      "dateAdded": "2026-07-22"
     }
   ]
 }

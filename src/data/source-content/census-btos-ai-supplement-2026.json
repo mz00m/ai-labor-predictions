@@ -1,0 +1,20 @@
+{
+  "id": "census-btos-ai-supplement-2026",
+  "abstract": "US Census Bureau Business Trends and Outlook Survey — 2026 AI Supplement (reference period November 17, 2025 - February 8, 2026, released 2026). The second full biannual AI supplement, replacing the biweekly two-week question with a six-month lookback plus new modules on task substitution, employment effects, and planned adoption over the next six months. Provides the most comprehensive US firm-side view of AI use available, with question-level detail on 14 use cases, task-substitution intensity, employment effects, generative-AI-specific usage, sector breakdowns, employer-size gradients, and planned adoption. Sample: ~117,000 responding businesses (unweighted response count from AI26_URR file); population estimates weighted to represent ~1.2M sampled US businesses.",
+  "keyFindings": [
+    "17.9% of US businesses used AI in any business function in the past two weeks (SE 0.13%; national Q1 estimate)",
+    "Task substitution: 10.1% of businesses used AI to perform a task previously done by an employee; 43.7% used AI to supplement/enhance an employee task; 10.6% to introduce a new task; 51.5% none of the above",
+    "Of firms that substituted employee tasks with AI: 70.9% substituted a small number, 22.0% moderate, 7.1% a large number",
+    "Employment effect from AI use (past 6 months): 95.7% no change, 2.3% increased, 2.0% decreased",
+    "Generative AI at work: 20.8% of firms report employees used GenAI to assist in work-related tasks in past six months; 22.6% for general AI",
+    "Top GenAI use cases: writing/editing 85.4%, information search 49.9%, translation/analysis/summarizing 44.6%, paperwork/filing 34.7%, new-project development 30.0%",
+    "Top sectors (2-week AI use): Information 37.6%, Professional/Scientific/Technical 34.2%, Education 30.7%, Finance/Insurance 30.4%, Real Estate 23.5%",
+    "Six-month AI use by function: Sales/marketing 14.3%, Strategy 12.4%, IT 11.4%, R&D 11.2%, PR/comms 9.3%, Customer service 7.6%",
+    "Six-month planned AI use is much higher: 21.6% expect to be using AI overall; by function: Sales/marketing 62.8%, Strategy 57.4%, R&D 48.3%, IT 47.3%",
+    "Top barriers cited by non-planners: 'AI is not applicable' 61.6%, lack of knowledge 22.0%, privacy/security concerns 20.7%",
+    "Only 15.0% of businesses trained current staff to use AI; 1.3% hired staff trained in AI"
+  ],
+  "methodology": "The BTOS AI Supplement is a full biannual expansion of the biweekly Business Trends and Outlook Survey, run over an 11-week reference period (Nov 17, 2025 - Feb 8, 2026 for the 2026 edition). Reports estimates at the national, state, sector (2-digit NAICS), and employer-size levels. Unlike the biweekly BTOS main-survey AI question (which asks about the past two weeks only), the supplement asks the two-week question PLUS a six-month lookback and a six-month forward-looking question — allowing a fuller picture of realized adoption, task effects, employment effects, and expectations. Response count for the 2026 edition: ~117,000 businesses. Estimates are weighted to represent the full ~1.2M sampled US business population.",
+  "qualifiers": "The BTOS AI Supplement is an EXPERIMENTAL Census product — flagged as such by the Bureau. The 2026 edition is only the second full AI supplement (the first was Nov 2023-Jan 2024, though the biweekly two-week question has run since Sept 2023). The 17.9% two-week Q1 headline differs from the previously published biweekly waves (17-20% range Dec 2025-May 2026) partly because the supplement is a longer-reference-period sample. The '10.1% substituted employee tasks' figure is a firm-level measure — it does NOT directly translate to a workforce displacement rate. The 95.7% 'no change in employment' finding requires care: it captures firms' own attribution of employment changes to AI, not a causal decomposition. The 20.8% GenAI-at-work figure is roughly half the Bick/Blandin/Deming RPS worker-side estimate (45.2%) — the gap reflects the difference between firm-side and worker-side measurement.",
+  "fetchedAt": "2026-07-22"
+}

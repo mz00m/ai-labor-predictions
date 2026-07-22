@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-21",
-  "lastSweep": "2026-07-21",
+  "asOf": "2026-07-22",
+  "lastSweep": "2026-07-22",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -112,11 +112,11 @@
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
       "lastIngested": {
-        "sourceId": "census-btos-ai-may-2026",
-        "date": "2026-05-03",
-        "value": "19.8% national AI use; Info 39.7%; Finance 33.9%"
+        "sourceId": "census-btos-ai-supplement-2026",
+        "date": "2026-07-02",
+        "value": "17.9% national AI use (Q1 2-wk); GenAI at work 20.8%; task substitution 10.1%"
       },
-      "nextExpected": "~July 30 or Aug 2026 BTOS release. Note: the Jul 2, 2026 wave exists but the specific national AI% for that ref date is not yet in press-accessible form \u2014 needs manual pull from Census BTOS data files."
+      "nextExpected": "~Q3 2026 biweekly wave; next full AI Supplement ~Q1 2027"
     },
     {
       "id": "factset-earnings-ai-mentions",
