@@ -206,6 +206,19 @@ There is no `geographic-wage-divergence` graph. Geographic wage findings go to t
 
 **Aggregation method matters.** Check the graph's `aggregationMethod` before adding a data point. On `"latest"` graphs (`ai-adoption-rate`, `genai-work-adoption`, `workforce-ai-exposure`, `earnings-call-ai-mentions`), the most recent data point becomes the chart's headline value sitewide. Adding a data point to a `"latest"` graph is a high-stakes edit: warn the user explicitly that the new point will replace the headline, and double-check unit, scale, and geography before proposing it.
 
+### Step 2.5: Load the Target Graph's Full Context (mandatory)
+
+The registry table above tells you a graph exists — it does not tell you what's *in* it. Before mapping any statistic, **read the full JSON of every candidate target graph** and note:
+
+1. **`description` and `disclaimer`** — what the graph claims about its own evidence base. You will re-check these for staleness in Step 9.7.
+2. **The construct behind existing history points** — not just the unit string, but what each existing data point actually measures. Read 3–5 existing `history[]` entries and their source excerpts. Example: `genai-work-adoption` says "% of adults at work" — its history mixes the Bick RPS "used GenAI for work" construct with Pew's "used ChatGPT for work" and Gallup's "use AI at work at least a few times a year." A new stat matching *any* of those constructs is a data-point candidate, not just exact RPS-wording matches.
+3. **The methodology mix** — survey vs payroll vs postings vs corporate; firm-side vs worker-side. A new firm-side stat on a worker-side graph is a construct mismatch even if both are percentages.
+4. **`metricType` values used by the same publisher/series** — a new entry in an existing series must use the same `metricType` as its siblings (all BTOS points are `survey`; all FactSet points are `corporate`). Valid enum: `employment | postings | survey | projection | corporate` — anything else breaks the production build at prerender.
+5. **Newest history date** — if the graph's newest history point is >90 days old and this source is methodology-compatible with an existing series, prioritize extending that series as a data point (staleness on `"latest"` graphs is a display bug, not just a data gap).
+6. **Recurring-series membership** — if the source belongs to a series registered in `src/data/recurring-sources.json` (BTOS, FactSet, RPS tracker, Challenger, etc.), the ingest must also update that series's `lastIngested` entry — see Step 9.7.
+
+This step is what makes the data-point-vs-overlay call in 3d informed rather than defensive. Skipping it is how quantitative evidence ends up buried in overlays.
+
 ### Step 3: Extract Every Quantitative Statistic
 
 Read the full source content and identify every quantitative claim about AI's impact on labor, jobs, wages, workforce, or the economy. For each statistic, capture:
@@ -222,10 +235,12 @@ Read the full source content and identify every quantitative claim about AI's im
 2. **Topic alignment** — Is the subject matter the same? A healthcare stat goes to a healthcare graph even if the units technically fit a general displacement graph.
 3. **Geographic/temporal scope** — US-specific stats map to US-specific graphs.
 
-**3d. Data type** — Classify as one of three types:
-* **data_point**: The statistic's unit directly and unambiguously matches the graph's unit. It will be plotted on the chart line. Use this only when you are confident in unit compatibility.
-* **proxy data_point**: The statistic is a known proxy metric with a documented conversion factor (see `docs/proxy-metric-methodology.md`). Plot it with `isProxy: true` and a `proxyContext` explaining the conversion. Proxies receive a 0.5× weight discount in aggregation. Only use conversions documented in the methodology doc — never invent a conversion factor.
-* **overlay**: The statistic provides relevant directional evidence but uses different units, covers a different geography, or measures something adjacent. It will appear as a contextual signal alongside the chart. When in doubt, choose overlay — it's the conservative default.
+**3d. Data type** — Work down this ladder **top-first** and stop at the first rung that fits. Overlays do NOT feed the weighted average, so burying quantitative evidence in overlays silently biases `currentValue` toward whatever narrow evidence already made it into history. A plotted data point with honest confidence bounds and appropriate discounting carries *more* integrity than an overlay, not less.
+
+* **Rung 1 — data_point (exact match)**: The statistic's unit and construct directly match the graph's. Plot it.
+* **Rung 2 — data_point (construct match, methodology variant)**: Same underlying construct as existing history points, but a different survey instrument, threshold, or wording (e.g., Gallup's "use AI at work at least a few times a year" vs RPS's "used GenAI for work" — both are "% of workers using AI at work"). Plot it, and let the visible spread between same-period points from different surveys *show* the methodological disagreement — that is honest signal, not noise. Note the instrument difference in the source excerpt.
+* **Rung 3 — proxy data_point (`isProxy: true`)**: The statistic is a recognized proxy with a documented conversion factor in `docs/proxy-metric-methodology.md` (e.g., relative job-posting declines → displacement at ×0.30, range 0.15–0.45). Convert the value, widen the confidence bounds per the conversion range, set `proxyContext`, and plot. Proxies receive a 0.5× weight discount in aggregation — **the discount is the integrity mechanism; use it instead of hiding the number**. Never invent a conversion factor not in the doc; if a new conversion seems justified, propose adding it to the doc as part of the ingest so the user approves both together.
+* **Rung 4 — overlay**: No defensible numeric mapping exists — the statistic is directional, qualitative, an index score, or fails a hard gate below. **Classifying a quantitative statistic as an overlay is a positive claim that Rungs 1–3 all fail, and the extraction report must say why** (one line: "Not a data point because …" naming the failed rung or hard gate). "Unsure" is not a reason; go back to Step 2.5 and check the graph's existing constructs.
 
 **Hard gates — automatic overlay (never data_point) when any of these apply:**
 * **Index scores are not percentages.** Exposure/automation *index* values (e.g., "mean LLM exposure 0.386" on a 0–1 scale, Felten/Webb/Eloundou-style scores) are NOT "% of jobs" and must never be plotted on a percentage chart — neither raw nor multiplied by 100.
@@ -240,7 +255,7 @@ Read the full source content and identify every quantitative claim about AI's im
 The site renders these differently and the hero "measured job loss" stat reads only observed points — misclassifying a projection as observed corrupts a headline number.
 
 **3d-3. Metric metadata** — Also capture when available:
-* `metricType` — e.g., `survey`, `projection`, `administrative`, `corporate`, `model`
+* `metricType` — **must be one of exactly**: `employment` | `postings` | `survey` | `projection` | `corporate` (the `MetricType` union in `src/lib/types.ts`). Any other value passes JSON validation but crashes the production build at prerender ("Unknown metric type"). Match the metricType used by sibling entries of the same series (Step 2.5, item 4).
 * `sampleSize` — number of workers/firms/respondents (boosts aggregation weight, log-scaled)
 
 **3e. Direction (for overlays only)** — Classify the directional signal relative to the graph's metric:
@@ -298,9 +313,11 @@ Before changing any files, present a clear summary for the user to review:
 
   [1] → [Graph Title]
         Slug:  [graph-slug]
-        Type:  DATA POINT | OVERLAY ([direction] if overlay)
+        Type:  DATA POINT (rung 1|2|3) | OVERLAY ([direction])
         Value: [value] — or: [midpoint] (range: [low]–[high])
         Label: "[overlay label]" (overlays only)
+        Not a data point because: [REQUIRED for every overlay carrying a numeric
+          value — name the failed ladder rung or hard gate from 3d]
         Quote: "[exact verbatim quote from source]"
 
   [2] → [Graph Title]
@@ -443,6 +460,18 @@ Investigate every `SUSPECT`/`UNSORTED`/`WARN` line that involves an entry you ju
 
 **Hero stats are computed, not hardcoded.** `getHeroStats()` in `src/lib/data-loader.ts` derives the homepage triad from `overall-us-displacement` at build time — no manual update needed. If you changed that file, state the new computed weighted average and latest observed value in your completion summary so the user knows what the hero will show.
 
+### Step 9.7: Site-Content Improvement Pass (mandatory)
+
+Ingestion is not just appending rows — new evidence should visibly improve what the site *says*. After validation, run this checklist for every graph touched:
+
+1. **Description staleness.** Re-read the graph's `description` against the post-ingest state. Descriptions frequently encode point counts and evidence claims that rot ("only 4 data points," "estimates remain unusually sparse") — if this ingest changed the picture, propose an updated description to the user. Real example: `education-sector-displacement`'s disclaimer still said "Only 4 data points" after the graph had grown to 6.
+2. **Disclaimer accuracy.** Same check for `disclaimer` — especially "insufficient evidence" language that new Tier 1/2 data points may have softened (or new contradictory evidence may have strengthened).
+3. **Recurring-series registry.** If the source belongs to a series in `src/data/recurring-sources.json`, update that series's `lastIngested` ({sourceId, date, value}) and recompute `nextExpected` from the cadence — this feeds both the public `/data-sources` page and the weekly digest's staleness sweep.
+4. **Narrative hooks.** If the finding is one of the week's strongest (new Tier 1 causal result, sharp reversal, first-of-kind measurement), tell the user it's a Featured Reads / reading-list candidate and offer Step F.
+5. **Hero stat check.** If any displacement history point was added, note whether the recomputed weighted average moves the homepage hero stats (the audit script checks drift >1pp — flag proactively rather than waiting for the audit to fail).
+
+Present proposed description/disclaimer edits for approval alongside the data changes — never silently rewrite editorial text.
+
 ### Step F: Featured Reads (mode = `featured` or `both`)
 
 When the user wants the article on the homepage "Important Reads This Week" strip, follow this exactly. The strip is a hardcoded array of **exactly 5** entries in `src/components/FeaturedReads.tsx`. The grid is `lg:grid-cols-5` — adding a 6th breaks the layout.
@@ -496,7 +525,7 @@ These rules are non-negotiable. They protect data integrity and reader trust.
    - **Displacement graphs** use positive values for displacement (higher = worse). A "6% job decline" → value: 6. A "1.2% employment growth" (counter-displacement) → value: -1.2. The chart reads "% of roles displaced" so positive = more roles displaced.
    - **Wage graphs** use negative values for declines. A "10% wage decline" → value: -10.
    - **Adoption/exposure graphs** use positive values (higher = more adoption/exposure).
-5. **Default to overlay when uncertain.** If you're not sure whether a stat's unit matches the graph's unit, classify it as an overlay rather than a data_point. Overlays are low-risk; bad data points distort the chart.
+5. **Resolve uncertainty — don't default through it.** If you're unsure whether a stat fits the graph, the answer is Step 2.5 (read the graph's existing constructs), not a reflexive overlay. Work the 3d ladder top-first; classify as overlay only when you can name the failed rung or hard gate. Hard-gate violations (index scores, geography, population, missing denominator) are always overlays — but "different survey wording for the same construct" and "documented proxy" are data points. Overlays are not "low-risk": they exempt evidence from the weighted average, which is its own distortion.
 6. **Default to higher tier number when uncertain.** A Tier 3 source misclassified as Tier 2 erodes trust. The reverse is merely conservative.
 7. **One source entry per prediction file.** If a source contributes multiple statistics to the same graph, add the source once to `sources` but add each statistic as a separate `history` or `overlay` entry.
 8. **Validate JSON after every edit.** A malformed JSON file will break the site. Read back the file after writing to confirm it parses.

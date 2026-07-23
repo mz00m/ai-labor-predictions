@@ -123,7 +123,7 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 - **Overlay directions on displacement charts**: "up" = more displacement (bad), "down" = less displacement (good)
 - **Ranges → midpoints**: "20-30%" → value: 25, confidenceLow: 20, confidenceHigh: 30
 - **Exact quotes only**: every data point must trace to verbatim source text
-- **data_point vs overlay vs proxy**: if stat's unit matches graph's unit → data_point; if it's a known proxy metric with a conversion factor → data_point with `isProxy: true` (see `docs/proxy-metric-methodology.md`); otherwise → overlay. When unsure, default to overlay
+- **data_point vs overlay vs proxy**: work the ladder top-first — (1) exact unit/construct match → data_point; (2) same construct, different survey instrument/threshold → data_point with instrument noted in excerpt; (3) documented proxy conversion (`docs/proxy-metric-methodology.md`) → data_point with `isProxy: true` (0.5× weight discount is the integrity mechanism); (4) only if all fail or a hard gate applies (index scores, geography, population, missing denominator) → overlay, and state which gate/rung failed. Overlays don't feed the weighted average — burying quantitative evidence in them biases currentValue. Full ladder: `.claude/commands/ingest.md` Step 3d
 - **Arrays sorted by date** ascending
 - **One source entry per file** even if multiple stats from same source
 
