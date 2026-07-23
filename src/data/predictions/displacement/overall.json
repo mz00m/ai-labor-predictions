@@ -394,6 +394,26 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
+    },
+    {
+      "date": "2026-07-22",
+      "value": 0.2,
+      "confidenceLow": 0.1,
+      "confidenceHigh": 0.3,
+      "sourceIds": [
+        "stanford-del-canaries-july-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "YoY % decline in most-AI-exposed occupations (June 2026 ADP data, vintage 2026-07-16)",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly. Monthly refresh of the same Canaries dashboard series last ingested 2026-06-10."
+      }
     }
   ],
   "overlays": [
@@ -3374,6 +3394,15 @@
       "datePublished": "2026-07-02",
       "excerpt": "BLS Employment Situation, June 2026 (released July 2, 2026). Total nonfarm payroll employment changed little in June (+57,000), roughly in line with the average monthly change over the prior 12 months (+36,000). Unemployment rate 4.2% (dipped slightly). Health care +22,000 (below prior 12-month average of +38K); leisure and hospitality declined by 61,000 (weaker seasonal hiring). Prior months revised down: April -31K (to +148K), May -43K (to +129K); combined -74K. Average hourly earnings for private nonfarm payrolls +13 cents (0.3%), to $37.64. Wall Street had expected 115,000 jobs \u2014 actual well below.",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "stanford-del-canaries-july-2026",
+      "title": "Stanford DEL Canaries Dashboard: July 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-22",
+      "excerpt": "Since the introduction of ChatGPT in November 2022, all exposure groups see employment growth, but the rate of expansion is slowest for the two most-exposed occupation groups. However, these differences remain modest. Published dashboard data (vintage 2026-07-16): most-exposed quintile employment -0.2% YoY as of June 2026, vs +0.6% YoY for least-exposed; annualized since Nov 2022, +1.1%/yr most-exposed vs +2.0%/yr least-exposed."
     }
   ]
 }

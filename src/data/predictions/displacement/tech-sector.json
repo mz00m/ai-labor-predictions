@@ -900,6 +900,15 @@
       ],
       "evidenceTier": 3,
       "label": "Bloomberg: tech = 1/3 of all announced layoffs 2026; ~102k AI-attributed"
+    },
+    {
+      "date": "2026-07-22",
+      "direction": "down",
+      "sourceIds": [
+        "stanford-del-canaries-july-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL Canaries: ages 22-25 in most-exposed jobs shrinking 3.5%/yr"
     }
   ],
   "sources": [
@@ -1677,6 +1686,15 @@
       "datePublished": "2026-06-16",
       "excerpt": "Anthropic Economic Research (Hitzig, Massenkoff, Lyubich, Zhang, Heller, McCrory \u2014 Jun 16, 2026). Analysis of ~400,000 Claude Code sessions from ~235,000 users between Oct 2025 and Apr 2026. Verified success rates: 'Novice: 15%; Intermediate/Expert: 28-33%.' Partial success rates: 77% (novice) vs 91-92% (intermediate/expert). Abandonment when troubled: novice 19% vs intermediate+ 5-7%. 'Every one of the ten largest occupations in our dataset lands within seven points of software engineers' (29-34% verified success). 'The estimated value of the average session rose by 27% between October and April.' Division of labor: 'people make about 70% of the planning decisions but only 20% of the execution decisions.' Work mix: code writing/fixing/testing 56%, ops 17%, planning/exploration 14%, analysis/prose 13%. Novice: ~5 actions, 600 words output/prompt; Expert: ~12 actions, 3,200 words/prompt.",
       "dateAdded": "2026-07-06"
+    },
+    {
+      "id": "stanford-del-canaries-july-2026",
+      "title": "Stanford DEL Canaries Dashboard: July 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-22",
+      "excerpt": "Software developers land in the most exposed occupations group. We see large declines for early-career workers (22-25), modest declines for the next-youngest groups, and expansion for the remaining age groups. Published dashboard data (vintage 2026-07-16): employment for ages 22-25 in the most-exposed occupation quintile declining at an annualized 3.5%/yr since ChatGPT, and 4.3% over the past year."
     }
   ],
   "marketIds": {

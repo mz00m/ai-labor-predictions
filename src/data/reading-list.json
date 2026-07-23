@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Canaries Dashboard: July 2026 Update",
+      "author": "Stanford Digital Economy Lab / ADP Research",
+      "publisher": "Stanford Digital Economy Lab",
+      "date": "2026-07-22",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "takeaway": "Monthly refresh of the Canaries Dashboard (anonymized ADP payroll data, 4.6M workers, 730+ occupations; balanced five-year firm sample), with data through June 2026 and a new gender decomposition published July 22. At the aggregate level the story softened: every AI-exposure quintile now shows employment growth since ChatGPT, though the most-exposed grows just +1.1%/yr annualized vs +2.0%/yr for the least-exposed (most-exposed is -0.2% on a year-over-year basis). The early-career divergence persists but eased slightly: workers 22-25 in the most-exposed quintile are contracting at 3.5%/yr annualized (from 3.8%/yr in the April reading), and -4.3% over the past year. The new gender analysis shows early-career women in the most-exposed quintile contracting at 4.5%/yr vs 2.5%/yr for men, driven primarily by occupational composition \u2014 43.8% of early-career women work in the most-exposed occupation category vs 32.4% of men. The lab frames results as correlation, not causation: with the broadest controls, exposure-linked declines only become significant in 2024.",
+      "weekFeatured": "2026-07-23",
+      "tier": 1
+    },
+    {
       "title": "AI isn't destroying entry-level jobs. It's changing them",
       "author": "Financial Times",
       "publisher": "Financial Times",
