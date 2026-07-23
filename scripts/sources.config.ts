@@ -10,6 +10,7 @@ import { fetchWithRetry } from "./utils/retry";
 import { fetchNBER } from "./adapters/nber";
 import { fetchOpenAlex } from "./adapters/open-alex";
 import { fetchTrackedInstitutions } from "./adapters/tracked-institutions";
+import { fetchRecurringSeries } from "./adapters/recurring-series";
 import type { SourceName, RawItem, SourceAdapter } from "./types";
 
 // Re-export shared types
@@ -365,6 +366,7 @@ export const ADAPTERS: SourceAdapter[] = [
   // Signal
   { name: "googleCse", tier: "signal", fetch: fetchGoogleCSE },
   { name: "hnAlgolia", tier: "signal", fetch: fetchHNAlgolia },
+  { name: "recurringSeries", tier: "signal", fetch: fetchRecurringSeries },
 ];
 
 // ─── Graph-Topic Affinity Scoring ─────────────────────────────────────
