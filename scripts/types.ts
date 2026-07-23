@@ -18,6 +18,7 @@ export type SourceName =
   | "googleCse"
   | "reddit"
   | "hnAlgolia"
+  | "recurringSeries"
   | "substack";
 
 export interface RawItem {
