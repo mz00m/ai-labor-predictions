@@ -1,0 +1,55 @@
+name: Prune Neon preview branches
+
+# Two triggers:
+#   1. When a PR closes/merges → delete the specific preview branch
+#   2. Nightly cron → delete any preview branch with no matching open PR
+#      (catches PRs closed before this workflow existed, or missed events)
+
+on:
+  pull_request:
+    types: [closed]
+  schedule:
+    - cron: '0 9 * * *'  # 9am UTC daily
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — log deletions without executing'
+        type: boolean
+        default: false
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    # Skip forks — secrets don't leak here since forks can't access repo secrets,
+    # but this keeps the workflow from doing meaningless work.
+    if: github.event.pull_request.head.repo.fork != true
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm ci
+
+      - name: Prune (on PR close)
+        if: github.event_name == 'pull_request'
+        env:
+          NEON_API_KEY: ${{ secrets.NEON_API_KEY }}
+          NEON_PROJECT_ID: ${{ secrets.NEON_PROJECT_ID }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: |
+          echo "PR #${{ github.event.number }} closed — pruning preview/${{ github.event.pull_request.head.ref }}"
+          # Wait 2 minutes to let Vercel finish its own teardown
+          sleep 120
+          npx tsx scripts/prune-neon-branches.ts --on-pr "${{ github.event.pull_request.head.ref }}"
+
+      - name: Prune orphans (nightly)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          NEON_API_KEY: ${{ secrets.NEON_API_KEY }}
+          NEON_PROJECT_ID: ${{ secrets.NEON_PROJECT_ID }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: npx tsx scripts/prune-neon-branches.ts --orphans
