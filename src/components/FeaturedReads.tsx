@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Stanford DEL / ADP Research",
+    title: "Canaries Dashboard: July 2026 Update",
+    summary:
+      "Monthly refresh of the ADP-payroll Canaries series (4.6M workers, 730+ occupations), data through June 2026. All exposure quintiles now show employment growth since ChatGPT — most-exposed +1.1%/yr vs +2.0%/yr least-exposed — but early-career workers (22-25) in the most-exposed quintile are still contracting at 3.5%/yr, and -4.3% over the past year. New gender decomposition: early-career women in the most-exposed quintile shrinking at 4.5%/yr vs 2.5%/yr for men — driven mostly by occupational mix, with 43.8% of early-career women working in the most-exposed occupation category vs 32.4% of men. The live empirical answer to 'what does the data show right now.'",
+    date: "Jul 22",
+    url: "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+  },
+  {
     author: "Financial Times",
     title: "AI isn't destroying entry-level jobs. It's changing them",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Chandar (coauthor of the 'Canaries' paper) was 1 of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss — with Acemoglu, Henderson, Restrepo, Wolfers. All 16 agreed AI boosts productivity; 8 predicted no change; 2 net growth. The 5 net-loss economists unanimously said AI replaces rather than complements and reduces white-collar demand. Chandar's key clarification: this isn't a 'jobs bloodbath' story — he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering long-run labor force participation. A disambiguation of what economists actually mean by 'net job loss.'",
     date: "Jun 29",
     url: "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
-  },
-  {
-    author: "Chip Cutter (WSJ)",
-    title: "The New Push to Ready Millions for AI Career Upheaval",
-    summary:
-      "RAISE US launches as a bipartisan consortium with a 'people strategy' for the AI era — led by former Commerce Secretary Gina Raimondo and former Indiana Gov. Eric Holcomb, with founding employers Amazon, Microsoft, Bank of America, Eli Lilly, OpenAI and Anthropic, plus MIT's David Autor on the advisory board. The group has raised $500M+ (about half its multiyear goal) and will initially work with Arkansas, Maryland, Utah and Connecticut. Mandate goes beyond conventional retraining: revisiting unemployment insurance so displaced workers can keep benefits while starting AI-enabled businesses, and designing corporate incentives for employers to retain and reskill rather than lay off. The first large bipartisan, multi-state institutional response treating AI labor disruption as a policy problem.",
-    date: "Jun 25",
-    url: "https://www.wsj.com/lifestyle/careers/the-new-push-to-ready-millions-for-ai-career-upheaval-dfb04cc5",
   },
 ];
 
