@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Google's AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
+      "author": "Iscenko, Strand, Imas, Manyika et al. (Google / DeepMind)",
+      "publisher": "Google / Google DeepMind",
+      "date": "2026-07-23",
+      "url": "https://deepmind.google/research/publications/ai-economy-atlas",
+      "takeaway": "Google completes the usage-data triad: 15M Gemini interactions mapped to O*NET and ATUS. Diffusion broad but shallow \u2014 usage spans occupations covering 88% of US employment yet median task saturation is 21%; end-to-end automation is <10% of non-routine cognitive use. Adds household lenses no other dataset covers: 86% of conversational use is non-work, government/civic queries over-index ~20x, household time savings worth $15-149B/yr. Reviewed by Coyle and Autor.",
+      "weekFeatured": "2026-07-24",
+      "tier": 1
+    },
+    {
       "title": "Canaries Dashboard: July 2026 Update",
       "author": "Stanford Digital Economy Lab / ADP Research",
       "publisher": "Stanford Digital Economy Lab",
