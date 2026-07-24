@@ -174,6 +174,15 @@
       "label": "MIT/BCG: 45% expect middle management reductions from agentic AI"
     },
     {
+      "date": "2025-12-19",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-atlas-year-in-review-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe Atlas: 42% of 2025 C corp founders building AI startups (33% in 2024); LLCs 22% vs 5% Jan 2023"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
@@ -199,6 +208,24 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Horton et al.): AI agents collapse transaction costs, expanding feasible market designs"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-atlas-q1-2026-milestone"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe Atlas: Q1 2026 incorporations +130% YoY; 100K all-time milestone"
+    },
+    {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-atlas-q1-2026-milestone"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe: all Delaware incorporations +38% YoY in Q1 2026 \u2014 record startup formation"
     },
     {
       "date": "2026-05-14",
@@ -453,6 +480,26 @@
       "datePublished": "2026-07-20",
       "excerpt": "IBTimes (Pham Binh, Jul 20 2026) synthesis of US Census Business Formation Statistics + Bloomberg analysis. Headline: '~29,700 new employer businesses are expected to form each month nationwide over the next year, a 17% increase compared to 2025 estimates.' Professional services sector (legal, architectural, advertising) forming at '>5,000 companies per month, a 24% year-over-year increase.' Bloomberg reporting: 'Since the launch of ChatGPT in 2022, new business filings in professional services grew four times faster than in construction.' Torsten Slok (Apollo Global chief economist): 'We've never created as many businesses. It does tell you that AI is playing a very big role.'",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "stripe-atlas-year-in-review-2025",
+      "title": "Stripe Atlas startups in 2025: Year in review",
+      "url": "https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review",
+      "publisher": "Stripe Atlas",
+      "evidenceTier": 2,
+      "datePublished": "2025-12-19",
+      "excerpt": "Stripe Atlas 2025 year in review (23,000 companies incorporated in 2025; Atlas is ~1 in 5 Delaware C corps). AI share of formations: '42%' of Atlas C corp founders identified as building AI startups in 2025, up from 33% in 2024; 22% of Atlas LLCs identified as AI companies, up from 5% in January 2023. Among AI-focused startups, 44% are building agents (up from 27% in 2024). Atlas Delaware C corporations grew an average of 41% YoY over the past 6 months. Revenue velocity: 20% land their first paying customer within 30 days of incorporation, more than double the 2020 rate; median first-6-months revenue for the 2025 cohort jumped 39% YoY. Not plotted as a data point: AI-share stats are a share-of-formations construct, not the graph's % increase in formation; platform counts fail the population gate (confounded by Stripe's own market-share growth).",
+      "dateAdded": "2026-07-24"
+    },
+    {
+      "id": "stripe-atlas-q1-2026-milestone",
+      "title": "Stripe Atlas hits 100,000 all-time incorporations; Q1 2026 +130% Y/Y",
+      "url": "https://x.com/atlas/status/2049969155324158267",
+      "publisher": "Stripe Atlas",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-01",
+      "excerpt": "Official Stripe Atlas announcement (May 1, 2026; echoed by Patrick Collison: 'Stripe Atlas just hit 100,000 all-time incorporations. Q1 2026 is +130% Y/Y.'). Atlas post: 'Startup formations are at a record high. More companies incorporated on Atlas in Q1 than any quarter ever: up 130% year-over-year. (Delaware incorporations up 38% year-over-year).' The Delaware +38% figure covers all Delaware incorporations, not just Atlas. Not plotted as a data point: Atlas +130% fails the population gate (platform growth confounded by market-share gains, ~25% of Delaware C corps per Stripe's 2025 annual letter); Delaware +38% is a rung-2 construct variant (single-year YoY growth, all industries) vs the graph's cumulative increase since ChatGPT in AI-compatible industries \u2014 kept as overlay per editorial decision 2026-07-24.",
+      "dateAdded": "2026-07-24"
     },
     {
       "id": "census-bfs-jun-2026",

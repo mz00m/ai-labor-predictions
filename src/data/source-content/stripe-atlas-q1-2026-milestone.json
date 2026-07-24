@@ -1,0 +1,13 @@
+{
+  "id": "stripe-atlas-q1-2026-milestone",
+  "abstract": "Official Stripe Atlas announcement (May 1, 2026, via the @atlas X account, echoed by CEO Patrick Collison): Stripe Atlas passed 100,000 all-time incorporations, with Q1 2026 incorporations up 130% year-over-year — the largest quarter in Atlas history. The post adds a broader-population figure: all Delaware incorporations rose 38% year-over-year in Q1 2026, indicating record US startup formation beyond the Atlas platform itself.",
+  "keyFindings": [
+    "Stripe Atlas passed 100,000 all-time incorporations as of May 1, 2026",
+    "Q1 2026 Atlas incorporations up 130% year-over-year — more companies incorporated on Atlas in Q1 than any quarter ever",
+    "All Delaware incorporations up 38% year-over-year in Q1 2026 (all platforms, all industries)",
+    "Stripe Atlas accounts for ~25% of Delaware C corporation formations per Stripe's 2025 annual letter"
+  ],
+  "methodology": "First-party platform counts (Atlas incorporations) plus Delaware state incorporation totals cited in the same announcement. Announcement channel is the official Stripe Atlas X account; treated as Tier 2 corporate data consistent with prior Stripe Atlas ingestions.",
+  "qualifiers": "The +130% Atlas figure fails the population gate for plotting: platform growth is confounded by Stripe's market-share gains, so it overstates economy-wide formation growth. The Delaware +38% figure is a rung-2 construct variant — single-year YoY growth across all industries, vs the graph's cumulative % increase in AI-compatible-industry formation since the pre-ChatGPT baseline — kept as an overlay by editorial decision (2026-07-24). Delaware incorporations also partially reflect Atlas lowering incorporation friction, not purely underlying entrepreneurial demand. No industry or AI breakdown provided in the announcement.",
+  "fetchedAt": "2026-07-24"
+}
