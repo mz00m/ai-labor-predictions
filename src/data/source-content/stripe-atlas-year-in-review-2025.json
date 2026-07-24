@@ -1,0 +1,18 @@
+{
+  "id": "stripe-atlas-year-in-review-2025",
+  "abstract": "Stripe Atlas's 2025 year-in-review (published ~December 19, 2025), summarizing the 23,000 companies incorporated through Atlas in 2025. Atlas now accounts for roughly one in five Delaware C corporations, making its cohort data a high-frequency window into US startup formation composition. Headline for AI business formation: 42% of Atlas C corp founders identified as building AI startups in 2025, up from 33% in 2024; among LLCs the AI share rose from 5% in January 2023 to 22%.",
+  "keyFindings": [
+    "42% of Atlas C corp founders identified as building AI startups in 2025, up from 33% in 2024",
+    "22% of Atlas LLCs identified as AI companies, up from 5% in January 2023",
+    "Among AI-focused startups, 44% are building agents in 2025 — up from 27% in 2024",
+    "23,000 companies incorporated through Atlas in 2025; incorporations came from 169 countries (all-time high, up from 158 in 2024)",
+    "Atlas Delaware C corporations grew an average of 41% year-over-year over the past 6 months",
+    "20% of startups land their first paying customer within 30 days of incorporation — more than double the 2020 rate",
+    "Median first-6-months revenue for the 2025 cohort jumped 39% year-over-year; 56% more startups exceeded $100K in their first six months vs 2024, reaching it ~11% faster (108 vs 121 days)",
+    "Only 2.2% of Atlas startups fundraised within three months of incorporation in 2025, down from 3.1% in 2024 — consistent with cheaper, revenue-first AI-native launches",
+    "56% of Atlas startups are US-based; European founder incorporations grew 48% YoY"
+  ],
+  "methodology": "First-party platform data from Stripe Atlas incorporations and connected Stripe revenue accounts. Cohort comparisons are year-over-year within the Atlas platform. AI classification is founder self-identification at incorporation.",
+  "qualifiers": "Platform-population data: volume growth is confounded by Stripe Atlas's own market-share gains (~1 in 5 Delaware C corps, ~25% per Stripe's 2025 annual letter), so incorporation growth rates overstate economy-wide formation growth. Composition shares (AI share, agent share, solo-founder share) are more robust to this confound but still reflect the self-selected Atlas user base — global, tech-forward, Delaware-C-corp-heavy. AI share is self-reported. Ingested as overlays only: AI-share stats are a share-of-formations construct, not the graph's % increase in firm formation.",
+  "fetchedAt": "2026-07-24"
+}

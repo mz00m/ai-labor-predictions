@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-24",
-  "lastSweep": "2026-07-24",
+  "asOf": "2026-07-23",
+  "lastSweep": "2026-07-22",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -16,7 +16,7 @@
         "overall-us-displacement",
         "white-collar-professional-displacement"
       ],
-      "topicLine": "The headline US jobs report \u2014 nonfarm payrolls and unemployment rate.",
+      "topicLine": "The headline US jobs report — nonfarm payrolls and unemployment rate.",
       "whatItMeasures": "Net change in nonfarm payroll employment and the unemployment rate, from two Census-run surveys (~119K businesses and ~60K households). Broken out by industry, age, race, and education.",
       "whyItMatters": "The single most-cited labor market signal. AI's aggregate effect (or lack thereof) shows up here first if it's happening at scale. Prior-month revisions often reveal that early estimates over- or under-stated the trend.",
       "lastIngested": {
@@ -42,7 +42,7 @@
       ],
       "topicLine": "Employer-announced layoffs with a specific 'AI-attributed' category.",
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
-      "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy \u2014 attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
+      "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
         "sourceId": "challenger-june-2026",
         "date": "2026-07-01",
@@ -65,7 +65,7 @@
       ],
       "topicLine": "Firm-level AI spend and hiring signals from Ramp's business-card data.",
       "whatItMeasures": "Aggregated spend and hiring patterns across ~30K businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
-      "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS \u2014 private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
+      "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS — private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
       "lastIngested": {
         "sourceId": "ramp-revelio-ai-jobs-impact-2026",
         "date": "2026-06-30",
@@ -75,7 +75,7 @@
     },
     {
       "id": "fed-ai-adoption-monitoring",
-      "name": "Fed Reserve \u2014 Monitoring AI Adoption in the US Economy",
+      "name": "Fed Reserve — Monitoring AI Adoption in the US Economy",
       "publisher": "Federal Reserve Board (FEDS Notes)",
       "tier": 1,
       "cadence": "quarterly",
@@ -98,7 +98,7 @@
     },
     {
       "id": "census-btos-ai",
-      "name": "Census Business Trends & Outlook Survey \u2014 AI Supplement",
+      "name": "Census Business Trends & Outlook Survey — AI Supplement",
       "publisher": "US Census Bureau",
       "tier": 1,
       "cadence": "biweekly",
@@ -164,7 +164,7 @@
     },
     {
       "id": "yale-budgetlab-cps-tracker",
-      "name": "Yale Budget Lab \u2014 Tracking AI's Impact on the Labor Market",
+      "name": "Yale Budget Lab — Tracking AI's Impact on the Labor Market",
       "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
       "tier": 1,
       "cadence": "quarterly",
@@ -175,9 +175,9 @@
         "overall-us-displacement",
         "workforce-ai-exposure"
       ],
-      "topicLine": "The main counter-evidence to the ADP 'Canaries' finding \u2014 no aggregate AI-labor effect visible in CPS.",
+      "topicLine": "The main counter-evidence to the ADP 'Canaries' finding — no aggregate AI-labor effect visible in CPS.",
       "whatItMeasures": "Uses the Current Population Survey to test whether AI-exposed occupations are seeing employment declines. Complements the ADP-based Canaries with a different dataset and a different unit of analysis.",
-      "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field \u2014 anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
+      "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field — anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
       "lastIngested": {
         "sourceId": "yale-budgetlab-not-yet-2026",
         "date": "2026-06-15",
@@ -187,7 +187,7 @@
     },
     {
       "id": "stanford-del-aiei",
-      "name": "Stanford DEL \u2014 AI Economic Indicators (Canaries + Takeoff + Adoption)",
+      "name": "Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption)",
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson)",
       "tier": 1,
       "cadence": "quarterly",
@@ -200,9 +200,9 @@
         "tech-sector-displacement",
         "entry-level-wage-impact"
       ],
-      "topicLine": "Three linked dashboards: employment by age \u00d7 AI exposure, macro takeoff signals, and worker adoption.",
+      "topicLine": "Three linked dashboards: employment by age × AI exposure, macro takeoff signals, and worker adoption.",
       "whatItMeasures": "Canaries Dashboard tracks employment across 5-year balanced ADP payroll sample (25K firms, 4.6M workers). Takeoff Tracker follows 12 macro indicators for AI-driven growth. Adoption Monitor synthesizes surveys.",
-      "whyItMatters": "The Canaries finding \u2014 early-career workers 22-25 in most-exposed occupations contracting -3.5%/yr as of June 2026 data \u2014 is the most-cited AI-displacement evidence in the field. Takeoff Tracker's 7-no / 3-mild / 2-strong reading is the field's best macro summary.",
+      "whyItMatters": "The Canaries finding — early-career workers 22-25 in most-exposed occupations contracting -3.5%/yr as of June 2026 data — is the most-cited AI-displacement evidence in the field. Takeoff Tracker's 7-no / 3-mild / 2-strong reading is the field's best macro summary.",
       "lastIngested": {
         "sourceId": "stanford-del-canaries-july-2026",
         "date": "2026-07-23",
@@ -224,7 +224,7 @@
         "workforce-ai-exposure",
         "customer-service-automation"
       ],
-      "topicLine": "How Claude.ai users actually work with AI \u2014 the largest usage dataset in the field.",
+      "topicLine": "How Claude.ai users actually work with AI — the largest usage dataset in the field.",
       "whatItMeasures": "Analyzes millions of Claude conversations to classify task types (automation vs augmentation), occupation coverage, and skill-formation effects. Each report covers a themed angle: economic primitives, learning curves, cadences, etc.",
       "whyItMatters": "The only source that grounds AI-labor claims in actual usage data at scale. Automation-ratio findings (used by Stanford DEL's Canaries analysis) have become a field standard for measuring 'how AI is being used' at the occupation level.",
       "lastIngested": {
@@ -248,9 +248,9 @@
         "entry-level-wage-impact",
         "white-collar-professional-displacement"
       ],
-      "topicLine": "The largest job-postings-based analysis of AI's labor market impact \u2014 1B+ ads across 27 countries.",
+      "topicLine": "The largest job-postings-based analysis of AI's labor market impact — 1B+ ads across 27 countries.",
       "whatItMeasures": "Analyzes 1B+ job advertisements across 27 countries plus company financial and O*NET task data. Reports AI-skill wage premium, 'seniorised' entry-level shifts, and productivity growth by AI exposure.",
-      "whyItMatters": "The largest cross-country postings analysis. The 2026 edition's 'seniorisation' finding \u2014 entry-level roles 7x more likely to need senior skills \u2014 has reframed how the field talks about early-career displacement.",
+      "whyItMatters": "The largest cross-country postings analysis. The 2026 edition's 'seniorisation' finding — entry-level roles 7x more likely to need senior skills — has reframed how the field talks about early-career displacement.",
       "lastIngested": {
         "sourceId": "pwc-ai-jobs-barometer-2026",
         "date": "2026-06-15",
@@ -260,7 +260,7 @@
     },
     {
       "id": "ny-fed-sce",
-      "name": "NY Fed Survey of Consumer Expectations \u2014 AI Module",
+      "name": "NY Fed Survey of Consumer Expectations — AI Module",
       "publisher": "Federal Reserve Bank of New York",
       "tier": 1,
       "cadence": "quarterly",
@@ -273,7 +273,7 @@
       ],
       "topicLine": "Worker-side self-reported AI use and training access, from the NY Fed's household panel.",
       "whatItMeasures": "Household survey covering ~1,300 US workers on AI-tool use at work, employer-provided training, and perceived job-security effects. Published as themed Liberty Street Economics posts.",
-      "whyItMatters": "One of the few sources measuring not just adoption but access to employer training on AI \u2014 where the divides (income, education, race) are widening fastest. April 2026 report: only 15.9% of employers offer AI training; 38% of workers want it.",
+      "whyItMatters": "One of the few sources measuring not just adoption but access to employer training on AI — where the divides (income, education, race) are widening fastest. April 2026 report: only 15.9% of employers offer AI training; 38% of workers want it.",
       "lastIngested": {
         "sourceId": "nyfed-sce-ai-workplace-training-2026",
         "date": "2026-04-14",
@@ -300,7 +300,7 @@
       "lastIngested": {
         "sourceId": "gallup-arts-ai-creative-2026",
         "date": "2026-05-01",
-        "value": "AI in creative work \u2014 arts sector deep-dive"
+        "value": "AI in creative work — arts sector deep-dive"
       },
       "nextExpected": "~August-September 2026 (next Gallup workplace AI report)"
     },
@@ -318,7 +318,7 @@
       ],
       "topicLine": "The main annual measure of higher-ed AI adoption and workforce impact.",
       "whatItMeasures": "Surveys ~779 higher-ed faculty and administrators from 300+ US institutions on institutional AI adoption, use cases, and workforce effects.",
-      "whyItMatters": "Highest-cadence-consistent read of higher-ed AI. 3rd edition (Mar 2026) found 66% of institutions using AI (up from 49% YoY) \u2014 one of the steepest year-on-year jumps in any sector.",
+      "whyItMatters": "Highest-cadence-consistent read of higher-ed AI. 3rd edition (Mar 2026) found 66% of institutions using AI (up from 49% YoY) — one of the steepest year-on-year jumps in any sector.",
       "lastIngested": {
         "sourceId": "ellucian-higher-ed-ai-survey-2026",
         "date": "2026-03-04",
@@ -340,7 +340,7 @@
       ],
       "topicLine": "How higher-ed IT teams are adapting to AI, budget pressure, and strategic change.",
       "whatItMeasures": "Surveys higher-ed IT professionals on workforce composition, AI-driven role changes, budget dynamics, and burnout. The 2026 edition explicitly named AI adaptation as a top-3 workforce pressure.",
-      "whyItMatters": "Complements Ellucian by focusing specifically on the IT-professional workforce inside higher-ed \u2014 the fastest-changing job family in the sector.",
+      "whyItMatters": "Complements Ellucian by focusing specifically on the IT-professional workforce inside higher-ed — the fastest-changing job family in the sector.",
       "lastIngested": {
         "sourceId": "educause-workforce-report-2026",
         "date": "2026-06-08",
@@ -434,7 +434,7 @@
       ],
       "topicLine": "The only cross-country AI-adoption and AI-labor comparator on the registry.",
       "whatItMeasures": "AI adoption by firms, workers, and countries across OECD members (currently 38 nations). Combines Eurostat firm-side data, ISCO occupational exposure, PIAAC skills, and country-level policy indicators into the OECD.AI Index. Employment Outlook chapters add the annual synthesis.",
-      "whyItMatters": "US-only findings need a cross-country test. The Bick/Blandin/Deming RPS series and Humlum/Vestergaard's Danish study are only interpretable against this comparator. OECD 2026 shows Denmark at 42% firm adoption vs US at 17% \u2014 the cleanest evidence that adoption isn't only about model availability.",
+      "whyItMatters": "US-only findings need a cross-country test. The Bick/Blandin/Deming RPS series and Humlum/Vestergaard's Danish study are only interpretable against this comparator. OECD 2026 shows Denmark at 42% firm adoption vs US at 17% — the cleanest evidence that adoption isn't only about model availability.",
       "lastIngested": {
         "sourceId": "oecd-employment-outlook-2026",
         "date": "2026-07-01",
@@ -444,7 +444,7 @@
     },
     {
       "id": "nber-ai-labor-wp",
-      "name": "NBER Working Papers \u2014 AI & Labor",
+      "name": "NBER Working Papers — AI & Labor",
       "publisher": "National Bureau of Economic Research",
       "tier": 1,
       "cadence": "monthly",
@@ -458,18 +458,18 @@
         "high-skill-wage-premium"
       ],
       "topicLine": "The single feed where the field's causal-identification AI-labor papers originate.",
-      "whatItMeasures": "Not a data series \u2014 a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
+      "whatItMeasures": "Not a data series — a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
       "whyItMatters": "Every ingested Tier 1 paper on the site traces back to this feed. Tracking NBER weekly is how the site stays ahead of Fed / IMF / OECD syntheses (which lag academic publication by 3-9 months). This is where the 'first inning' research Kolko flags is being written.",
       "lastIngested": {
         "sourceId": "nber-chen-sialm-xu-ai-investing-2026",
         "date": "2026-06-01",
         "value": "Latest ingested AI-labor NBER WP: Chen/Sialm/Xu on AI in asset management (Jun 2026). ~9 NBER WPs ingested since March 2026"
       },
-      "nextExpected": "Continuous \u2014 NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly"
+      "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly"
     },
     {
       "id": "ilo-ai-future-of-work",
-      "name": "ILO \u2014 AI and the Future of Work / Global Employment Trends",
+      "name": "ILO — AI and the Future of Work / Global Employment Trends",
       "publisher": "International Labour Organization",
       "tier": 2,
       "cadence": "annual",
@@ -483,7 +483,7 @@
       ],
       "topicLine": "The only worker-voice and decent-work framing in the AI-labor registry.",
       "whatItMeasures": "Global employment status, informality, decent-work indicators tied to AI adoption. The 2026 Director-General's report 'A Moment of Choice: Harnessing AI for Decent Work' is the anchor artifact. ILO-World Bank joint paper series adds cross-country generative-AI exposure estimates.",
-      "whyItMatters": "Every other source on the registry frames AI-labor as a productivity/displacement question. ILO frames it as a decent-work + worker-voice question \u2014 the framing Kinder pushes and the framing that maps to policy conversations in most OECD countries. Also: 2.1 billion workers in informal employment are outside the US-focused datasets entirely.",
+      "whyItMatters": "Every other source on the registry frames AI-labor as a productivity/displacement question. ILO frames it as a decent-work + worker-voice question — the framing Kinder pushes and the framing that maps to policy conversations in most OECD countries. Also: 2.1 billion workers in informal employment are outside the US-focused datasets entirely.",
       "lastIngested": {
         "sourceId": "ilo-ai-decent-work-2026",
         "date": "2026-06-01",
@@ -505,7 +505,7 @@
       ],
       "topicLine": "The definitive global source on industrial robot installations by country, sector, and application.",
       "whatItMeasures": "Industrial robot installations and operational stock by country, industry, and application. Covers cobots, service robots, and mobile robots. Data underlies Acemoglu-Restrepo's JPE 2020 finding that one more robot per thousand workers reduces employment-to-population by 0.2pp.",
-      "whyItMatters": "The physical-automation counterweight to a site dominated by GenAI/knowledge-work signals. Robotics adoption is real, measurable, and directly implicated in manufacturing employment. Feeds robots-physical-automation-displacement \u2014 currently the thinnest displacement graph on the site.",
+      "whyItMatters": "The physical-automation counterweight to a site dominated by GenAI/knowledge-work signals. Robotics adoption is real, measurable, and directly implicated in manufacturing employment. Feeds robots-physical-automation-displacement — currently the thinnest displacement graph on the site.",
       "lastIngested": {
         "sourceId": "ifr-world-robotics-2025",
         "date": "2025-09-24",
@@ -528,8 +528,8 @@
         "customer-service-automation",
         "tech-sector-displacement"
       ],
-      "topicLine": "Task-level automation-vs-augmentation ratios by O*NET occupation \u2014 the input Stanford Canaries analysis relies on.",
-      "whatItMeasures": "Analysis of millions of Claude conversations mapped to O*NET occupations, classifying each usage as automation or augmentation. Different from the individual themed reports (Learning Curves, Cadences, 81K Economics) already on the registry \u2014 this is the underlying dashboard artifact that Brynjolfsson/Chandar/Chen and others use as the 'how is AI actually used?' input.",
+      "topicLine": "Task-level automation-vs-augmentation ratios by O*NET occupation — the input Stanford Canaries analysis relies on.",
+      "whatItMeasures": "Analysis of millions of Claude conversations mapped to O*NET occupations, classifying each usage as automation or augmentation. Different from the individual themed reports (Learning Curves, Cadences, 81K Economics) already on the registry — this is the underlying dashboard artifact that Brynjolfsson/Chandar/Chen and others use as the 'how is AI actually used?' input.",
       "whyItMatters": "The single largest AI usage dataset in the field. Stanford DEL Canaries analysis uses the automation ratio here to explain why early-career workers in automation-heavy occupations contract 3.8%/yr while augmentation-heavy occupations grow. Rock and Brynjolfsson both cite this as the key input for measuring how (not just whether) AI is deployed at the task level.",
       "lastIngested": {
         "sourceId": "anthropic-economic-index-cadences-2026",
@@ -537,6 +537,28 @@
         "value": "Dashboard updated with each themed report; latest: Cadences (June 2026)"
       },
       "nextExpected": "~September 2026 (with Q3 themed report)"
+    },
+    {
+      "id": "stripe-atlas",
+      "name": "Stripe Atlas / Stripe Economics formation data",
+      "publisher": "Stripe",
+      "tier": 2,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly data drops + annual year-in-review (December)",
+      "releasePattern": "Atlas blog posts and stripeeconomics.com (Tedeschi) notes; milestone stats often break first on the official @atlas / @patrickc X accounts",
+      "url": "https://www.stripeeconomics.com",
+      "targetGraphs": [
+        "ai-business-formation"
+      ],
+      "topicLine": "Startup incorporation volumes, AI share of new formations, solo-founder share — the fastest-moving firm-formation signal outside Census BFS.",
+      "whatItMeasures": "Incorporation counts and cohort revenue analytics from the Stripe Atlas platform (~25% of Delaware C corp formations), plus Stripe Economics analyses of solopreneurship and AI-native startups. Platform-population data — informative on composition (AI share, solo founders) but confounded by Stripe market-share growth on volume.",
+      "whyItMatters": "Census BFS reports applications with a lag and no AI tagging; Stripe reports what share of new startups are AI-native (42% of 2025 C corps) and how fast they reach revenue. The composition stats are unavailable anywhere else at this frequency.",
+      "lastIngested": {
+        "sourceId": "stripe-atlas-q1-2026-milestone",
+        "date": "2026-05-01",
+        "value": "Q1 2026 Atlas incorporations +130% YoY; 100K all-time; all Delaware incorporations +38% YoY"
+      },
+      "nextExpected": "~August 2026 (Q2 2026 data / Atlas blog cadence)"
     },
     {
       "id": "google-atlas",
@@ -553,7 +575,7 @@
         "high-skill-wage-premium",
         "overall-us-displacement"
       ],
-      "topicLine": "Google's usage-data answer to the Anthropic Economic Index \u2014 15M Gemini interactions mapped to O*NET and ATUS.",
+      "topicLine": "Google's usage-data answer to the Anthropic Economic Index — 15M Gemini interactions mapped to O*NET and ATUS.",
       "whatItMeasures": "De-identified Gemini App / AI Mode / API interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 ATUS household activities, 150 countries, and 140 languages. Adds household time-use and multilingual lenses no other usage dataset covers.",
       "whyItMatters": "Completes the usage-data triad (Anthropic Economic Index, OpenAI Jobs Transition Framework, Google ATLAS). Largest surface diversity of the three. Key v1.0 findings: 88% employment coverage but 21% median task saturation; <10% end-to-end automation in non-routine cognitive work.",
       "lastIngested": {
