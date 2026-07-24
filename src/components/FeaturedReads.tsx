@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Google / Google DeepMind",
+    title: "AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
+    summary:
+      "Google's entry into the usage-data triad (alongside Anthropic's Economic Index and OpenAI's Jobs Transition Framework) — 15M de-identified Gemini interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 household activities, 150 countries, and 140 languages. Headline: diffusion is broad but shallow. Usage spans occupations covering 88% of US employment, yet the median occupation applies AI to only 21% of its tasks, and end-to-end automation is under 10% of non-routine cognitive use. Uniquely adds household lenses: 86% of conversational AI happens outside work, government/civic queries over-index ~20x, and household time savings may be worth $15-149B/yr — invisible to GDP. Reviewed by Coyle and Autor; Imas co-authored.",
+    date: "Jul 23",
+    url: "https://deepmind.google/research/publications/ai-economy-atlas",
+  },
+  {
     author: "Stanford DEL / ADP Research",
     title: "Canaries Dashboard: July 2026 Update",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Casselman's synthesis of the measurement problem: different data sources give contradictory answers on basic questions — is AI causing job losses or gains, which workers are most exposed, is the productivity boom real? Highlights new Yale Budget Lab 'occupational churn' monthly measure; Ramp/Revelio data finding companies using AI most intensely are adding jobs FASTER than laggards (opposite direction from displacement narrative); Nathan Goldschlag/EIG report on the measurement challenge itself; and a bipartisan Senate bill (Kelly D-AZ) to expand federal AI labor data collection. Frames the confusion as J-curve territory — most firms still on the downward experimentation phase before productivity gains materialize. Companion to Casselman's June 10 'Hidden Workers' piece.",
     date: "Jul 2",
     url: "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
-  },
-  {
-    author: "Bharat Chandar",
-    title: "AI and the Supply and Demand for Labor",
-    summary:
-      "Chandar (coauthor of the 'Canaries' paper) was 1 of 5 of 16 economists on a WSJ panel to predict AI would cause net job loss — with Acemoglu, Henderson, Restrepo, Wolfers. All 16 agreed AI boosts productivity; 8 predicted no change; 2 net growth. The 5 net-loss economists unanimously said AI replaces rather than complements and reduces white-collar demand. Chandar's key clarification: this isn't a 'jobs bloodbath' story — he expects AI to make people rich enough (via capital income or transfers) that the income effect dominates the substitution effect, lowering long-run labor force participation. A disambiguation of what economists actually mean by 'net job loss.'",
-    date: "Jun 29",
-    url: "https://bharatchandar.substack.com/p/ai-and-the-supply-and-demand-for",
   },
 ];
 

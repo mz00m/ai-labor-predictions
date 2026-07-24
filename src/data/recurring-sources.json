@@ -559,6 +559,31 @@
         "value": "Q1 2026 Atlas incorporations +130% YoY; 100K all-time; all Delaware incorporations +38% YoY"
       },
       "nextExpected": "~August 2026 (Q2 2026 data / Atlas blog cadence)"
+    },
+    {
+      "id": "google-atlas",
+      "name": "Google AI & Economy ATLAS",
+      "publisher": "Google / Google DeepMind",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Ongoing initiative; iterations expected ~quarterly",
+      "releasePattern": "v1.0 July 2026; future iterations promised with expanded scope (enterprise API, Workspace)",
+      "url": "https://deepmind.google/research/publications/ai-economy-atlas",
+      "targetGraphs": [
+        "workforce-ai-exposure",
+        "genai-work-adoption",
+        "high-skill-wage-premium",
+        "overall-us-displacement"
+      ],
+      "topicLine": "Google's usage-data answer to the Anthropic Economic Index — 15M Gemini interactions mapped to O*NET and ATUS.",
+      "whatItMeasures": "De-identified Gemini App / AI Mode / API interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 ATUS household activities, 150 countries, and 140 languages. Adds household time-use and multilingual lenses no other usage dataset covers.",
+      "whyItMatters": "Completes the usage-data triad (Anthropic Economic Index, OpenAI Jobs Transition Framework, Google ATLAS). Largest surface diversity of the three. Key v1.0 findings: 88% employment coverage but 21% median task saturation; <10% end-to-end automation in non-routine cognitive work.",
+      "lastIngested": {
+        "sourceId": "google-atlas-v1-2026",
+        "date": "2026-07-23",
+        "value": "v1.0: 88% employment coverage, 21% median task saturation, <10% NR-cognitive automation"
+      },
+      "nextExpected": "~Q4 2026 (v1.1 with enterprise/API scope per report roadmap)"
     }
   ]
 }
