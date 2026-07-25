@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-24",
-  "totalSources": 661,
-  "verifiedCount": 651,
+  "lastUpdated": "2026-07-25",
+  "totalSources": 662,
+  "verifiedCount": 652,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9403,6 +9403,21 @@
         "workforce-ai-exposure",
         "overall-us-displacement",
         "high-skill-wage-premium",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fred-rps-genai-2026": {
+      "id": "fred-rps-genai-2026",
+      "title": "FRED Adds Data About the Adoption of Generative Artificial Intelligence (Real-Time Population Survey, Category 8)",
+      "url": "https://fred.stlouisfed.org/categories/8",
+      "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-24",
+      "excerpt": "FRED has incorporated '137 data series about the adoption of generative artificial intelligence (AI) technology in the United States, reported by Alexander Bick, Adam Blandin, and David Deming' (FRED Announcements, Jul 24, 2026). The RPS GenAI module, fielded quarterly since August 2024, now publishes as official FRED series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest FRED readings: work adoption 43.4% and overall adoption 57.9% of working-age adults in Q1 2026 (RPSGENAIUSAGESHAREWORK, RPSGENAIUSAGESHAREALL); GenAI-assisted work hours 6.3% in Q2 2026, up from 4.1% in Q4 2024 (RPSGENAIASSISTWRKHRSALL); reported time savings 2.2% of work hours in Q1 2026 (RPSGENAITSALL).",
+      "dateAdded": "2026-07-25",
+      "usedIn": [
         "genai-work-adoption"
       ],
       "verified": true,
