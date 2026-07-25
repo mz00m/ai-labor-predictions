@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "FRED (St. Louis Fed)",
+    title: "FRED Adds Data About the Adoption of Generative Artificial Intelligence",
+    summary:
+      "The Bick-Blandin-Deming Real-Time Population Survey — the field's cleanest quarterly measure of US worker GenAI adoption — is now official FRED data: 137 series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest readings: 43.4% of employed adults used GenAI for work and 57.9% of working-age adults used it anywhere in Q1 2026; GenAI-assisted work hours reached 6.3% in Q2 2026, up from 4.1% in late 2024. FRED hosting makes the series every major adoption synthesis relies on citable and API-accessible alongside official government statistics.",
+    date: "Jul 24",
+    url: "https://news.research.stlouisfed.org/2026/07/fred-adds-data-about-the-adoption-of-generative-artificial-intelligence/",
+  },
+  {
     author: "Google / Google DeepMind",
     title: "AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Statement organized by Brynjolfsson, Agrawal, Korinek, and Cunningham; signed by 16 Nobel Laureates (Spence and Acemoglu named) and 200+ economists and AI researchers. Warns AI could drive an economic transformation 'larger than the Industrial Revolution' but on 'a vastly shorter time frame,' with large-scale job displacement as a primary risk. Calls for deeper research, policy frameworks, and institutions ensuring AI complements human capabilities. Four asks: deepen research, build enabling policy, redirect AI to benefit workers, re-architect political and economic systems before transformation arrives. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.'",
     date: "Jul 13",
     url: "https://www.wemustactnow.ai/",
-  },
-  {
-    author: "Ben Casselman (NYT)",
-    title: "A.I. Is Reshaping the Economy. Good Luck Measuring How.",
-    summary:
-      "Casselman's synthesis of the measurement problem: different data sources give contradictory answers on basic questions — is AI causing job losses or gains, which workers are most exposed, is the productivity boom real? Highlights new Yale Budget Lab 'occupational churn' monthly measure; Ramp/Revelio data finding companies using AI most intensely are adding jobs FASTER than laggards (opposite direction from displacement narrative); Nathan Goldschlag/EIG report on the measurement challenge itself; and a bipartisan Senate bill (Kelly D-AZ) to expand federal AI labor data collection. Frames the confusion as J-curve territory — most firms still on the downward experimentation phase before productivity gains materialize. Companion to Casselman's June 10 'Hidden Workers' piece.",
-    date: "Jul 2",
-    url: "https://www.nytimes.com/2026/07/02/business/economy/ai-economy-data.html",
   },
 ];
 

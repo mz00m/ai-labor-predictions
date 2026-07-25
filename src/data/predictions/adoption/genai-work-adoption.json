@@ -2,7 +2,7 @@
   "id": "genai-work-adoption",
   "slug": "genai-work-adoption",
   "title": "Generative AI Adoption",
-  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey). Work adoption (40.7%) lags overall use (55.9%), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey, published as 137 official FRED series since July 2026). Work adoption (45.2%, May 2026) lags overall use (57.9%, Q1 2026), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of adults at work",
   "currentValue": 45.2,
@@ -542,6 +542,15 @@
       ],
       "evidenceTier": 1,
       "label": "Google ATLAS: only 14% of conversational AI use is work-related; 86% outside work"
+    },
+    {
+      "date": "2026-07-24",
+      "direction": "up",
+      "sourceIds": [
+        "fred-rps-genai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "FRED: 137 RPS GenAI series added; assisted work hours 6.3% in Q2 2026"
     }
   ],
   "sources": [
@@ -981,6 +990,16 @@
       "datePublished": "2026-07-23",
       "excerpt": "Google's AI & Economy ATLAS v1.0 (Iscenko, Strand, Chen, Imas, Manyika et al., Google/Google DeepMind, Jul 23 2026; reviewed by Diane Coyle and David Autor). 15M de-identified interactions across Gemini App, AI Mode, and Gemini API (Apr 6-19, 2026), mapped to 800+ occupations, 4,000 O*NET tasks, 300 ATUS activities, 150 countries, 140 languages. Work: 'AI adoption spans occupations covering just above 88% of US employment' (68% of detailed occupations) but 'penetration remains shallow' \u2014 'AI is used for only 21% of total tasks in the median occupation with any AI use'; only 3% of occupations show usage for >75% of tasks. 'Attempts to automate tasks end-to-end represent less than 10% of AI conversations in non-routine cognitive work'; >25% for routine cognitive work. Non-routine cognitive tasks = 35% of O*NET universe but 65% of work interactions. Wages: 'a 1% increase in an occupation's median earnings is associated with a more than 2.5% increase in AI usage intensity'; Gemini-weighted median salary $82,919 vs $62,252 employment-weighted national median. Home: 86% of conversational use is non-work; government/civic queries over-represented ~20x vs time spent; household time-savings valued at $14.9B-$149B/yr (0.5-5% scenarios). Global: 1% GDP/capita \u2191 \u2192 0.9% usage \u2191; English only ~1/3 of conversations across 143 languages.",
       "dateAdded": "2026-07-24"
+    },
+    {
+      "id": "fred-rps-genai-2026",
+      "title": "FRED Adds Data About the Adoption of Generative Artificial Intelligence (Real-Time Population Survey, Category 8)",
+      "url": "https://fred.stlouisfed.org/categories/8",
+      "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-24",
+      "excerpt": "FRED has incorporated '137 data series about the adoption of generative artificial intelligence (AI) technology in the United States, reported by Alexander Bick, Adam Blandin, and David Deming' (FRED Announcements, Jul 24, 2026). The RPS GenAI module, fielded quarterly since August 2024, now publishes as official FRED series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest FRED readings: work adoption 43.4% and overall adoption 57.9% of working-age adults in Q1 2026 (RPSGENAIUSAGESHAREWORK, RPSGENAIUSAGESHAREALL); GenAI-assisted work hours 6.3% in Q2 2026, up from 4.1% in Q4 2024 (RPSGENAIASSISTWRKHRSALL); reported time savings 2.2% of work hours in Q1 2026 (RPSGENAITSALL).",
+      "dateAdded": "2026-07-25"
     }
   ]
 }

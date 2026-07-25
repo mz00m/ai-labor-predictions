@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "FRED Adds Data About the Adoption of Generative Artificial Intelligence",
+      "author": "FRED / St. Louis Fed (Bick, Blandin, Deming RPS)",
+      "publisher": "Federal Reserve Bank of St. Louis (FRED)",
+      "date": "2026-07-24",
+      "url": "https://news.research.stlouisfed.org/2026/07/fred-adds-data-about-the-adoption-of-generative-artificial-intelligence/",
+      "takeaway": "FRED incorporated 137 data series on US generative AI adoption from the Bick-Blandin-Deming Real-Time Population Survey (category 8) — the quarterly module fielded since August 2024 that underpins the GenAI Adoption Tracker and nearly every major adoption synthesis (Fed Board, Stanford DEL, IMF, OECD). The series cover usage rates (overall, work, nonwork), reported time savings, GenAI-assisted work hours, and adoption compared with the PC and internet, broken out by industry and occupation. Latest FRED readings: 43.4% of employed adults used GenAI for work and 57.9% of working-age adults used it anywhere in Q1 2026; GenAI-assisted work hours reached 6.3% in Q2 2026, up from 4.1% in Q4 2024; reported time savings hit 2.2% of work hours. FRED hosting matters beyond convenience — it makes the field's cleanest worker-side adoption series citable, vintage-controlled, and API-accessible alongside official government statistics.",
+      "weekFeatured": "2026-07-25",
+      "tier": 1
+    },
+    {
       "title": "Google's AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
       "author": "Iscenko, Strand, Imas, Manyika et al. (Google / DeepMind)",
       "publisher": "Google / Google DeepMind",

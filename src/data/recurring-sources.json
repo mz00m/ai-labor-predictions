@@ -1,6 +1,6 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-23",
+  "asOf": "2026-07-25",
   "lastSweep": "2026-07-22",
   "series": [
     {
@@ -142,25 +142,25 @@
     },
     {
       "id": "bick-blandin-deming-rps",
-      "name": "GenAI Adoption Tracker (Bick, Blandin, Deming RPS)",
+      "name": "GenAI Adoption Tracker / FRED RPS GenAI series (Bick, Blandin, Deming)",
       "publisher": "St. Louis Fed / Harvard (Real-Time Population Survey)",
       "tier": 1,
       "cadence": "quarterly",
       "cadenceLabel": "Quarterly",
-      "releasePattern": "Roughly every 3 months at genaiadoptiontracker.com",
-      "url": "https://www.genaiadoptiontracker.com/",
+      "releasePattern": "Roughly every 3 months at genaiadoptiontracker.com; since Jul 24, 2026 also published as 137 official FRED series (category 8), updated quarterly",
+      "url": "https://fred.stlouisfed.org/categories/8",
       "targetGraphs": [
         "genai-work-adoption"
       ],
-      "topicLine": "The definitive quarterly measure of US worker generative AI adoption.",
-      "whatItMeasures": "Share of US adults 18-64 using generative AI (a) overall and (b) at work. Fielded quarterly via the Real-Time Population Survey (RPS), which has published its GenAI module every 3 months since August 2024.",
-      "whyItMatters": "The single cleanest time series on worker-side GenAI adoption in the US, cited by every major synthesis (Stanford DEL, IMF, Fed, OECD). Nationally representative and cadence-consistent.",
+      "topicLine": "The definitive quarterly measure of US worker generative AI adoption — now official FRED data.",
+      "whatItMeasures": "Share of US adults 18-64 using generative AI (a) overall and (b) at work, fielded quarterly via the Real-Time Population Survey (RPS) since August 2024. The FRED release (137 series, added Jul 2026) adds machine-readable vintages for usage rates (overall/work/nonwork), time savings, GenAI-assisted work hours, and PC/internet adoption comparisons, with industry and occupation breakdowns. Key series: RPSGENAIUSAGESHAREWORK, RPSGENAIUSAGESHAREALL, RPSGENAITSALL, RPSGENAIASSISTWRKHRSALL.",
+      "whyItMatters": "The single cleanest time series on worker-side GenAI adoption in the US, cited by every major synthesis (Stanford DEL, IMF, Fed, OECD). Nationally representative and cadence-consistent. FRED hosting makes it citable and API-accessible alongside official government statistics.",
       "lastIngested": {
-        "sourceId": "genai-adoption-tracker-may-2026",
-        "date": "2026-05-01",
-        "value": "45.2% of US workers use GenAI for work (up from 43% Feb 2026)"
+        "sourceId": "fred-rps-genai-2026",
+        "date": "2026-07-25",
+        "value": "FRED hosting added (137 series); assisted work hours 6.3% Q2 2026; work adoption 43.4% Q1 2026 (tracker: 45.2% May 2026)"
       },
-      "nextExpected": "~August 2026 (Q2 2026 wave)"
+      "nextExpected": "~August 2026 (Q2 2026 usage wave on FRED; next survey wave in the fall)"
     },
     {
       "id": "yale-budgetlab-cps-tracker",
