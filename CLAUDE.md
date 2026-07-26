@@ -146,6 +146,36 @@ Defined in `src/lib/prediction-stats.ts`:
 - Proxy discount: `isProxy: true` data points receive 0.5× weight (indirect measurement penalty)
 - For `aggregationMethod: "latest"`: uses most recent data point value directly
 
+## Research Corpus — How to Query Everything
+
+The full body of research behind the site is queryable. **Start here before grepping around
+or re-fetching sources from the web — it is almost certainly already ingested.**
+
+| Path | What it holds |
+|------|---------------|
+| `src/data/source-content/*.json` | **The corpus.** One file per source: `abstract`, `keyFindings[]`, `methodology`, `qualifiers`. 661 of 662 registered sources have one. This is far richer than the short `excerpt` fields in the prediction JSONs. |
+| `src/data/confirmed-sources.json` | Source metadata registry: title, publisher, tier, URL, `usedIn[]` graph slugs |
+| `src/data/search-index.json` | Generated BM25 haystacks (gitignored; rebuilt by `npm run build:search`, which runs inside `npm run build`) |
+| `wiki/` | ~1,200 generated markdown pages (predictions, sources, tier/publisher indexes, task-visualizer). Gitignored, rebuilt by `npm run compile-wiki` on every build. Good for reading whole-graph context. |
+
+### `npm run ask`
+
+```bash
+npm run ask "what do we know about entry-level wages?"          # retrieve + Claude synthesis
+npm run ask -- --raw "ages 22-25 relative employment decline"   # ranked retrieval only, no API call
+npm run ask -- --json --limit 30 --tier 1 "AI adoption rate"    # machine-readable
+```
+
+BM25 ranking over the corpus plus prediction-graph matching (returns each matched graph's
+`currentValue`, unit, and latest plotted point). Sub-second in `--raw` mode.
+
+**If you are an agent working in this repo, use `--raw` or `--json`** — you can reason over the
+hits yourself, so the Claude synthesis pass is redundant cost and latency. Reach for the default
+synthesized mode only when a human wants a written answer.
+
+Retrieval quality depends on `search-index.json` being current. It regenerates on every build,
+but if you have ingested sources without building, run `npm run build:search`.
+
 ## Scripts
 
 ### Ingestion Pipeline
@@ -176,6 +206,7 @@ Defined in `src/lib/prediction-stats.ts`:
 | `npm run agent:research` | CLI research agent (takes a question, runs KB search) |
 | `npm run agent:review` | Review/fact-checking agent |
 | `npm run compile-kb` | Compile research knowledge base |
+| `npm run ask` | Query the full research corpus (BM25 + optional Claude synthesis) — see Research Corpus above |
 | `npm run build:search` | Build full-text search index |
 | `npm run fetch:article` | Fetch single article content |
 | `npm run fetch:pdf` | Fetch article as PDF |

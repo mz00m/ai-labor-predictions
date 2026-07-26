@@ -6,7 +6,7 @@
     "dev": "next dev",
     "capability:refresh": "tsx scripts/fetch-capability.ts",
     "prebuild:public-data": "tsx scripts/copy-public-data.ts",
-    "build": "npm run prebuild:public-data && npm run compile-wiki && npm run compile-kb && next build",
+    "build": "npm run prebuild:public-data && npm run compile-wiki && npm run compile-kb && npm run build:search && next build",
     "start": "next start",
     "lint": "next lint",
     "digest": "tsx scripts/generate-digest.ts",
@@ -43,7 +43,8 @@
     "agent:review": "tsx scripts/agent-review.ts",
     "compile-kb": "tsx scripts/compile-knowledge-base.ts",
     "compile-wiki": "tsx scripts/compile-wiki.ts",
-    "test-assessments": "set -a && . ./.env.local && set +a && tsx scripts/test-assessments.ts"
+    "test-assessments": "set -a && . ./.env.local && set +a && tsx scripts/test-assessments.ts",
+    "ask": "tsx scripts/ask.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "^0.2.79",
