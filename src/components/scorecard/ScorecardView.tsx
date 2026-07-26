@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { ScorecardResult, GoalPreference } from "@/lib/assessment/scorecard";
+import { trackEvent } from "@/lib/analytics";
 import QuickPlan from "./QuickPlan";
 
 interface ScorecardViewProps {
@@ -48,6 +49,10 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
 
   const colors = BAND_COLORS[scorecard.band] ?? BAND_COLORS["building-momentum"];
 
+  useEffect(() => {
+    trackEvent("scorecard_view", { slug: scorecard.slug, score: scorecard.score });
+  }, [scorecard.slug, scorecard.score]);
+
   // Recompute actions client-side based on goal selection
   // (we get all actions from the server, client just reorders display)
   const sortedActions = [...scorecard.actions].sort((a, b) => {
@@ -70,6 +75,7 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
       document.body.removeChild(ta);
     }
     setCopied(true);
+    trackEvent("scorecard_cta", { slug: scorecard.slug, target: "share" });
     setTimeout(() => setCopied(false), 2000);
   }
 
