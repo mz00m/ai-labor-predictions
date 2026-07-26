@@ -5,6 +5,8 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import type { Assessment, AssessmentReport, AssessmentStep, ImplementationRoadmap } from "@/lib/assessment/types";
 import { INDUSTRY_LABELS, COMPANY_SIZE_LABELS, AI_MATURITY_LABELS } from "@/lib/assessment/types";
+import { trackEvent } from "@/lib/analytics";
+import { computeHeadline } from "@/lib/assessment/headline";
 
 // Sections that start expanded by default
 const DEFAULT_EXPANDED = new Set(["summary", "readiness"]);
@@ -36,6 +38,8 @@ export default function ReportPage() {
   const [feedbackSubmitting, setFeedbackSubmitting] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(DEFAULT_EXPANDED));
   const [copied, setCopied] = useState(false);
+  const [sharing, setSharing] = useState(false);
+  const [shareError, setShareError] = useState<string | null>(null);
   // Optional-section generation state. Each opt-in step (roadmap, roi, risks)
   // tracks its own loading + error state so users can kick off multiple
   // sections in parallel without one blocking the others.
@@ -44,6 +48,7 @@ export default function ReportPage() {
 
   const generateOptionalSection = useCallback(async (step: AssessmentStep) => {
     if (!id) return;
+    trackEvent("assessment_addon", { section: step });
     setGeneratingStep((prev) => ({ ...prev, [step]: true }));
     setStepError((prev) => ({ ...prev, [step]: null }));
 
@@ -198,10 +203,11 @@ export default function ReportPage() {
       .then((data) => {
         if (data.error) throw new Error(data.error);
         setAssessment(data.assessment);
+        trackEvent("assessment_report_view", { shared: isShared });
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
-  }, [id]);
+  }, [id, isShared]);
 
   const handleDownloadPdf = useCallback(async () => {
     if (!assessment?.report || !assessment?.intake) return;
@@ -217,6 +223,7 @@ export default function ReportPage() {
       a.download = `AI-Action-Plan-${assessment.intake.organizationName.replace(/[^a-zA-Z0-9]/g, "-")}.pdf`;
       a.click();
       URL.revokeObjectURL(url);
+      trackEvent("assessment_export", { format: "pdf" });
     } catch (err) {
       console.error("PDF generation failed:", err);
     } finally {
@@ -235,6 +242,7 @@ export default function ReportPage() {
     a.download = `AI-Action-Plan-${assessment.intake.organizationName.replace(/[^a-zA-Z0-9]/g, "-")}.txt`;
     a.click();
     URL.revokeObjectURL(url);
+    trackEvent("assessment_export", { format: "text" });
   }, [assessment]);
 
   const handleFeedbackSubmit = async () => {
@@ -260,21 +268,41 @@ export default function ReportPage() {
   };
 
   const handleShare = async () => {
-    const shareUrl = `${window.location.origin}/assessment/report?id=${id}&shared=true`;
+    if (!id) return;
+    setSharing(true);
+    setShareError(null);
+
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      // Mint a public token server-side. The old implementation just copied
+      // the owner's own report URL, which the report API rejects with 403 for
+      // anyone but the owner — so every share link ever sent was dead.
+      const res = await fetch("/api/assessment/share", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      });
+      if (!res.ok) throw new Error("Could not create share link");
+      const { path } = await res.json();
+      const shareUrl = `${window.location.origin}${path}`;
+
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+      } catch {
+        const input = document.createElement("input");
+        input.value = shareUrl;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+      }
+
+      trackEvent("assessment_share", { method: "copy_link" });
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback for older browsers
-      const input = document.createElement("input");
-      input.value = shareUrl;
-      document.body.appendChild(input);
-      input.select();
-      document.execCommand("copy");
-      document.body.removeChild(input);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setShareError("Could not create a share link. Please try again.");
+    } finally {
+      setSharing(false);
     }
   };
 
@@ -372,6 +400,8 @@ export default function ReportPage() {
     furtherEvaluation: r.furtherEvaluation || [],
   };
 
+  const headline = computeHeadline(report);
+
   const TOC_SECTIONS = [
     { id: "summary", label: "Executive Summary" },
     { id: "readiness", label: "AI Readiness Assessment" },
@@ -430,15 +460,38 @@ export default function ReportPage() {
           </button>
           <button
             onClick={handleShare}
-            className="flex items-center gap-2 border border-gray-200 hover:border-gray-300 text-gray-600 text-base font-medium px-4 py-2 rounded-lg transition-colors"
+            disabled={sharing}
+            className="flex items-center gap-2 border border-gray-200 hover:border-gray-300 text-gray-600 text-base font-medium px-4 py-2 rounded-lg transition-colors disabled:opacity-50"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.86-2.06a4.5 4.5 0 00-1.242-7.244l-4.5-4.5a4.5 4.5 0 00-6.364 6.364L4.34 8.374" />
             </svg>
-            {copied ? "Link copied!" : "Share Report"}
+            {sharing ? "Creating link..." : copied ? "Link copied!" : "Share Report"}
           </button>
         </div>
+        {copied && (
+          <p className="text-sm text-gray-500 mt-2">
+            Anyone with this link can read a summary of the plan. It leaves out your
+            email and contact details.
+          </p>
+        )}
+        {shareError && <p className="text-sm text-red-600 mt-2">{shareError}</p>}
       </header>
+
+      {headline && (
+        <section className="mb-8 rounded-lg border border-gray-200 bg-gray-50/60 px-7 py-7">
+          <p className="text-sm text-gray-500">
+            Routine work AI could take on, across this team
+          </p>
+          <p className="mt-2 text-5xl font-bold tracking-tight text-gray-900 tabular-nums">
+            {headline.low}&ndash;{headline.high}
+            <span className="ml-3 text-xl font-normal text-gray-400">hours a week</span>
+          </p>
+          <p className="mt-3 text-sm text-gray-500 leading-relaxed max-w-xl">
+            {headline.qualifier}
+          </p>
+        </section>
+      )}
 
       {/* Maturity calibration banner — shows what AI-experience level this
           report was tailored to, and lets the user fix it if the guess was

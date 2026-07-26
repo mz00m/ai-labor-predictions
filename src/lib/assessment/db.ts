@@ -1,6 +1,7 @@
 // Assessment database operations using Neon PostgreSQL
 // Only stores sanitized report output and user metadata — never raw uploaded content
 
+import { randomBytes } from "crypto";
 import { getDb } from "@/lib/db";
 import { Assessment, AssessmentIntake, AssessmentReport, AssessmentStep, StepContext, StepFeedback } from "./types";
 
@@ -77,8 +78,14 @@ export async function initAssessmentTables(): Promise<void> {
       ALTER TABLE assessments ADD COLUMN IF NOT EXISTS current_step TEXT;
       ALTER TABLE assessments ADD COLUMN IF NOT EXISTS step_context JSONB;
       ALTER TABLE assessments ADD COLUMN IF NOT EXISTS step_feedback JSONB DEFAULT '[]'::jsonb;
+      ALTER TABLE assessments ADD COLUMN IF NOT EXISTS share_token TEXT;
     EXCEPTION WHEN others THEN NULL;
     END $$;
+  `;
+
+  await sql`
+    CREATE UNIQUE INDEX IF NOT EXISTS assessments_share_token_idx
+    ON assessments (share_token) WHERE share_token IS NOT NULL
   `;
 
   // Unified activity view — joins users, assessments, and feedback into one queryable table
@@ -293,6 +300,57 @@ export async function getAssessment(assessmentId: string): Promise<Assessment | 
     paid: row.paid as boolean,
     previewGenerated: row.preview_generated as boolean,
   };
+}
+
+/**
+ * Return the assessment's existing share token, creating one if absent.
+ *
+ * Tokens are 32 hex chars from crypto.randomBytes — the shared report is
+ * readable by anyone holding the token, so it has to be unguessable rather
+ * than derived from the assessment id.
+ */
+export async function getOrCreateShareToken(assessmentId: string): Promise<string | null> {
+  const sql = getDb();
+  if (!sql) return null;
+
+  await initAssessmentTables();
+
+  const existing = (await sql`
+    SELECT share_token FROM assessments WHERE id = ${assessmentId}
+  `) as Row[];
+  if (existing.length === 0) return null;
+  if (existing[0].share_token) return existing[0].share_token as string;
+
+  const token = randomBytes(16).toString("hex");
+  await sql`
+    UPDATE assessments SET share_token = ${token} WHERE id = ${assessmentId}
+  `;
+  return token;
+}
+
+/** Revoke a share link. The report stays; only the public token is cleared. */
+export async function revokeShareToken(assessmentId: string): Promise<void> {
+  const sql = getDb();
+  if (!sql) return;
+  await sql`UPDATE assessments SET share_token = NULL WHERE id = ${assessmentId}`;
+}
+
+/** Look up an assessment by public share token. Returns null for unknown tokens. */
+export async function getAssessmentByShareToken(token: string): Promise<Assessment | null> {
+  const sql = getDb();
+  if (!sql) return null;
+
+  // share_token is added by a migration, and this public read path can be the
+  // first thing to touch it on a fresh deploy — without this the route 500s
+  // with "column does not exist" instead of returning a clean 404.
+  await initAssessmentTables();
+
+  const rows = (await sql`
+    SELECT id FROM assessments WHERE share_token = ${token}
+  `) as Row[];
+  if (rows.length === 0) return null;
+
+  return getAssessment(rows[0].id as string);
 }
 
 /**
