@@ -1,0 +1,118 @@
+{
+  "week": "2026-W30",
+  "generatedAt": "2026-07-26T02:37:51.507Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Stanford SIEPR: Separating AI Hype from Reality on Jobs",
+      "summary": "A Stanford Institute for Economic Policy Research policy brief examines what is actually happening to employment in the context of AI, arguing that aggregate labor market data do not yet show the dramatic displacement many forecasters predicted. The analysis calls for clearer separation between AI capability gains and realized workforce substitution effects. The piece drew significant Hacker News discussion with 57 points and 64 comments as of late July 2026.",
+      "source": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+      "publishedAt": "2026-07-25",
+      "score": 0.42,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Federal Reserve FEDS Note: Tracking the AI Buildout and Its Economic Impact",
+      "summary": "Fed economists Paul Soto, Mason Thieu, and Jeffrey Allen present a framework of publicly available indicators—covering capital expenditure, labor market signals, and firm-level adoption proxies—to track the generative AI buildout in near real time. The note organizes indicators into categories that can help researchers assess AI's economic footprint before official statistics catch up. This represents one of the first structured Fed attempts to operationalize AI adoption measurement.",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "authors": [
+        "Paul E. Soto",
+        "Mason Thieu",
+        "Jeffrey S. Allen"
+      ],
+      "publishedAt": "2026-07-17",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Helping People Choose Careers in the Age of AI: Comparing Six Occupational Exposure Models",
+      "summary": "Steele and Cruz compare six recent models projecting occupational exposure to AI-driven task automation, finding substantial methodological divergence in assumptions about which tasks are automatable and on what timeline. The authors propose a new empirical model of occupational AI exposure intended to give career advisers more actionable guidance. The work highlights that uncertainty in exposure estimates is itself a key policy-relevant finding.",
+      "source": "https://arxiv.org/abs/2607.15506",
+      "authors": [
+        "Jennifer Steele",
+        "Isabella Cruz"
+      ],
+      "publishedAt": "2026-07-16",
+      "score": 0.41,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "AI and Income Distribution: fsQCA Evidence from 20 OECD Countries",
+      "summary": "Qian et al. use fuzzy-set qualitative comparative analysis across 20 OECD countries from 2015–2019 to identify configurations of AI adoption, industrial efficiency, and labor market institutions that are associated with widening or narrowing income inequality. The study finds no single universal pathway: institutional context mediates whether AI-driven productivity gains translate into broad wage growth or concentrated returns. Results suggest high-skill wage premiums are regime-dependent rather than universal.",
+      "source": "https://doi.org/10.1057/s41599-026-08263-z",
+      "authors": [
+        "Yu Qian",
+        "Zeshui Xu",
+        "Marinko Skare",
+        "Kee-hung Lai",
+        "Yong Qin",
+        "Xunjie Gou"
+      ],
+      "publishedAt": "2026-07-14",
+      "doi": "10.1057/s41599-026-08263-z",
+      "score": 0.101,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    },
+    {
+      "title": "Structural Reallocation in Finance: AI's Tri-Faceted Impact on Securities, Wealth Management, and Algorithmic Governance",
+      "summary": "Goyal examines how AI is reshaping three sub-sectors of finance—securities trading, wealth management, and regulatory/compliance functions—finding that automation is already displacing mid-level analytical roles while creating demand for AI-oversight specialists. The paper argues that financial services faces a near-term structural reallocation rather than net job loss, but with significant transitional displacement concentrated in routine analytical work. Compliance and algorithmic governance roles are identified as emerging growth areas.",
+      "source": "https://doi.org/10.21203/rs.3.rs-10329560/v1",
+      "authors": [
+        "Aarav Goyal"
+      ],
+      "publishedAt": "2026-07-14",
+      "doi": "10.21203/rs.3.rs-10329560/v1",
+      "score": 0.14,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "financial-services-displacement"
+    }
+  ],
+  "themes": [
+    "Aggregate U.S. labor market data (nonfarm payrolls +432k MoM, unemployment 4.2%) remain resilient, sustaining the 'no apocalypse yet' narrative but masking sector-level heterogeneity",
+    "Measurement uncertainty is a first-order problem: competing occupational AI-exposure models yield divergent policy implications, as shown by Steele & Cruz and the Ogut & Yin partial-identification paper",
+    "The Federal Reserve is now actively building real-time AI adoption tracking frameworks, signaling that policymakers view the economic impact as imminent enough to require new monitoring infrastructure",
+    "Financial services and healthcare show the clearest early evidence of role-level displacement and worker backlash (Kaiser nurses, algorithmic governance in finance), pointing to sector-specific dynamics ahead of aggregate trends",
+    "Institutional context—union coverage, national labor market structure, AI capital costs—determines whether cheaper AI expands formal employment or pushes workers into informality, per the dual labor market and OECD income-distribution evidence"
+  ],
+  "watching": [
+    {
+      "title": "Economists say 'we must act now' on AI's economic impact and job displacement",
+      "source": "https://apnews.com/article/ai-must-act-now-job-displacement-783469467e0df1463df44518f33295ee",
+      "reason": "AP-covered economist coalition calling for immediate policy action; could signal shift in mainstream policy consensus on AI displacement risk timeline."
+    },
+    {
+      "title": "Kaiser nurses say AI and surveillance are making their jobs and patient care worse",
+      "source": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/",
+      "reason": "High-engagement HN story (562 pts) on frontline healthcare worker AI backlash; early indicator of healthcare-sector adoption friction and potential labor action."
+    },
+    {
+      "title": "Cheaper AI, More Informality? A Dual Labor Market Model for Developing Economies",
+      "source": "https://arxiv.org/abs/2607.15381",
+      "reason": "Models how AI cost curves interact with formal/informal labor splits; relevant to understanding whether U.S. gig/freelance markets absorb displaced formal workers."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar",
+      "arxiv"
+    ],
+    "totalCandidates": 53,
+    "afterDedup": 52
+  }
+}
