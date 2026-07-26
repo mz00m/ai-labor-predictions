@@ -1,0 +1,231 @@
+{
+  "id": "displacement-early-career",
+  "slug": "early-career-employment-decline",
+  "title": "Early-Career Employment Decline in AI-Exposed Occupations",
+  "description": "Employment decline for workers aged 22-25 in the most AI-exposed occupations, measured relative to less-exposed occupations. Only relative or regression-adjusted estimates are plotted; raw unadjusted declines measure a different quantity and appear as overlays.",
+  "category": "displacement",
+  "unit": "% employment decline, ages 22-25, vs least-exposed",
+  "currentValue": 13,
+  "timeHorizon": "Current measure",
+  "aggregationMethod": "weighted",
+  "disclaimer": "Every plotted point is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) are shown as overlays because geography is a hard gate on comparability.",
+  "history": [
+    {
+      "date": "2025-11-13",
+      "value": 16,
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-01-06",
+      "value": 13,
+      "sourceIds": [
+        "dallasfed-young-workers-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-03-20",
+      "value": 12,
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-04-17",
+      "value": 12,
+      "sourceIds": [
+        "tucker-qwi-early-career-hires-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2025-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "adp-stanford-young-workers-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford/ADP: raw employment for ages 22-25 in exposed jobs fell 6%"
+    },
+    {
+      "date": "2026-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "eig-entry-level-ai-displacement-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: entry-level hiring rate -23% vs pre-pandemic, vs -18% overall"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch youth in GenAI-exposed jobs fell 13% (Netherlands)"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "up",
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Lodefalk: Sweden ages 22-25 in high-AI occupations -5.5%; gradient monotonic"
+    },
+    {
+      "date": "2026-05-07",
+      "direction": "neutral",
+      "sourceIds": [
+        "budgetlab-ai-no-effects-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: 16-34 unemployment +0.5pp but not statistically significant"
+    },
+    {
+      "date": "2026-05-22",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-solomon-goldman-ai-jobs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Solomon (Goldman): cites Stanford 16% entry-level decline in exposed roles"
+    },
+    {
+      "date": "2026-07-22",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-canaries-july-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: early-career women -4.5%/yr vs men -2.5%/yr in exposed jobs"
+    }
+  ],
+  "sources": [
+    {
+      "id": "brynjolfsson-chandar-chen-2025",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+      "url": "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2025-11-13",
+      "excerpt": "Early-career workers (ages 22-25) in the most AI-exposed occupations have experienced a 16 percent relative decline in employment even after controlling for firm-level shocks. By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "dallasfed-young-workers-ai-2026",
+      "title": "Young workers' employment drops in occupations with high AI exposure",
+      "url": "https://www.dallasfed.org/research/economics/2026/0106",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-06",
+      "excerpt": "Workers age 22-25 in most AI-exposed occupations experienced 13% employment decline since 2022, driven by fewer workforce entrants rather than higher separations. Employment share for AI-exposed occupations fell from 16.4% (Nov 2022) to 15.5% (Sep 2025).",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "fed-crane-soto-coder-employment-2026",
+      "title": "AI and Coder Employment: Compiling the Evidence",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2026018pap.pdf",
+      "publisher": "Federal Reserve Board (FEDS Working Paper)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-20",
+      "excerpt": "They find that among 22-25 year olds employment in the top two quartiles of AI exposure fell about 12 percent relative to employment in the bottom quartile.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "tucker-qwi-early-career-hires-2026",
+      "title": "You're (not) hired: Artificial intelligence and early career hiring in the Quarterly Workforce Indicators",
+      "url": "http://leetucker.net/docs/Youre_not_hired_Tucker_20260417.pdf",
+      "publisher": "US Census Bureau (Lee C. Tucker)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-17",
+      "excerpt": "Regression-adjusted employment of early career workers in the most AI-exposed quintile of industry-state cells declined by 12% over the 10 quarters following the introduction of ChatGPT, even as employment in less-exposed industries rose.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "adp-stanford-young-workers-2025",
+      "title": "Yes, AI Is Affecting Employment. Here's the Data",
+      "url": "https://www.adpresearch.com/yes-ai-is-affecting-employment-heres-the-data/",
+      "publisher": "Stanford / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2025-09-01",
+      "excerpt": "In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6% between late 2022 and July 2025. Software developers saw a 20% early-career decline. Employment among workers 30 and older grew 6-13%.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "eig-entry-level-ai-displacement-2026",
+      "title": "Looking for the Ladder: Is AI Impacting Entry-Level Jobs?",
+      "url": "https://eig.org/wp-content/uploads/2026/01/TAWP-Iscenko-Millet.pdf",
+      "publisher": "Economic Innovation Group (Iscenko & Curto Millet)",
+      "evidenceTier": 2,
+      "datePublished": "2026-01-14",
+      "excerpt": "Entry-level hiring rates have declined 23 percent compared to pre-pandemic levels, a steeper drop than the 18 percent decline for overall hiring.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "esb-dutch-youth-genai-employment-2026",
+      "title": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "publisher": "ESB / Rabobank (Groenewegen, van Limbergen, Vrieselaar)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-22",
+      "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "lodefalk-age-gradient-hiring-2026",
+      "title": "Same Storm, Different Boats: Generative AI and the Age Gradient in Hiring",
+      "url": "https://cms.ratio.se/app/uploads/2026/03/lodefalk_march16_paper_v2-kombinerades.pdf",
+      "publisher": "RATIO Institute / \u00d6rebro University (Lodefalk, L\u00f6thman, Koch, Engberg)",
+      "evidenceTier": 1,
+      "datePublished": "2026-03-16",
+      "excerpt": "An event study documents an accelerating decline in employment of 22-25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "budgetlab-ai-no-effects-2026",
+      "title": "What We Do and Don't Know About How AI is Affecting the Labor Market",
+      "url": "https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "We therefore investigated effects for workers 34 and younger, finding mixed evidence of AI effects for this group... roughly half a percentage point increase in the entire sample, and more for the 16-34 year old subsample - but both statistically insignificant.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "nyt-solomon-goldman-ai-jobs-2026",
+      "title": "I'm the C.E.O. of Goldman Sachs. The A.I. Job Apocalypse Is Overblown.",
+      "url": "https://www.nytimes.com/2026/05/22/opinion/ai-job-crisis-goldman-sachs.html",
+      "publisher": "The New York Times (David M. Solomon, CEO Goldman Sachs)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-22",
+      "excerpt": "According to one Stanford study, in the occupations most susceptible to greater automation, such as software engineering or customer service, entry-level employment has already declined by 16 percent relative to the least-exposed occupations.",
+      "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "stanford-del-canaries-july-2026",
+      "title": "Stanford DEL Canaries Dashboard: July 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-22",
+      "excerpt": "In the most-exposed quintile, employment among early-career women has been contracting at 4.5% per year since the introduction of ChatGPT in November 2022, while employment for men of the same age is contracting at 2.5% per year.",
+      "dateAdded": "2026-07-26"
+    }
+  ]
+}

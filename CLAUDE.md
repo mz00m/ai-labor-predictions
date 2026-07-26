@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 17 interactive prediction graphs across 5 categories, plus one signal-only chart (earnings-call AI mentions, excluded from prediction counts). Practitioner-first tone — no hype, no doom, just evidence.
+A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 18 interactive prediction graphs across 5 categories, plus one signal-only chart (earnings-call AI mentions, excluded from prediction counts). Practitioner-first tone — no hype, no doom, just evidence.
 
 ## Quick Start
 
@@ -41,19 +41,20 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 | Route | Description |
 |-------|-------------|
 | `/` | Hero stats + prediction grid (displacement, wages, adoption) |
-| `/predictions/[slug]` | Individual prediction detail pages (18 total) |
+| `/predictions/[slug]` | Individual prediction detail pages (19 total) |
 | `/signals` | Leading indicators: firm response, productivity paths |
 | `/history` | Historical technology comparison (GPT compression, diffusion) |
 | `/j-curve` | J-Curve explainer with interactive visuals |
 | `/about` | Methodology, FAQ |
 
-## Prediction Graph Taxonomy (17 predictions + 1 signal-only chart)
+## Prediction Graph Taxonomy (18 predictions + 1 signal-only chart)
 
-### Displacement (9)
+### Displacement (10)
 | Slug | Title | Unit |
 |------|-------|------|
 | `overall-us-displacement` | Projected US Job Displacement from AI by 2030 | % of US jobs |
 | `white-collar-professional-displacement` | White-Collar Professional Displacement by 2030 | % of roles displaced |
+| `early-career-employment-decline` | Early-Career Employment Decline in AI-Exposed Occupations | % employment decline, ages 22-25, vs least-exposed |
 | `tech-sector-displacement` | Tech Sector Job Displacement by 2030 | % of jobs displaced |
 | `creative-industry-displacement` | Creative Industry Displacement by 2030 | % of roles displaced |
 | `education-sector-displacement` | Education Sector Displacement by 2030 | % of roles displaced |
@@ -196,7 +197,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 
 | Path | Purpose |
 |------|---------|
-| `src/data/predictions/` | All 18 prediction JSON files (17 predictions + 1 signal-only) |
+| `src/data/predictions/` | All 19 prediction JSON files (18 predictions + 1 signal-only) |
 | `src/data/confirmed-sources.json` | Master source registry (524 sources) |
 | `src/data/recurring-sources.json` | Recurring release registry (tracked series, cadences, last ingested editions — swept by `/autoresearch`) |
 | `src/data/reading-list.json` | Rolling reading list for Featured Reads |
