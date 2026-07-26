@@ -239,7 +239,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 | `src/lib/data-loader.ts` | Loads all prediction JSONs; computes hero stats via `getHeroStats()` |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `scripts/lib/ingest/` | Extraction, fetching, writing logic |
-| `.claude/commands/` | Claude skills (9 total) |
+| `.claude/commands/` | Claude skills (11 total) |
 | `changelog/` | Weekly changelogs and LinkedIn posts |
 | `docs/proxy-metric-methodology.md` | Proxy metric conversion & outlier detection methodology |
 | `docs/tool-prioritization-guide.md` | Which data tools/platforms to monitor |
@@ -263,6 +263,7 @@ Hardcoded array of 5 articles displayed left-to-right on the homepage. On ingest
 | `/ai-consultant` | General Q&A on AI labor impact |
 | `/labor-economist-review` | Review through lens of 8 labor economists |
 | `/viz-review` | Chart and data visualization critique |
+| `/assessment-review` | Assessment funnel, usability & shareability review |
 | `/autoresearch` | Autonomous research discovery loops |
 | `/data-quality-audit` | Data integrity checks |
 | `/autoaudit` | Automated audit agent |
