@@ -33,9 +33,13 @@ function employmentColor(val: number | null): string {
   return "var(--muted)";
 }
 
-/** Animates a number from 0 to target over ~600ms on mount (once in view) */
+/**
+ * Animates a number from 0 to target over ~600ms once in view.
+ * Initializes at target so SSR, screenshots, and IO misses show real
+ * values — the count-up is a progressive enhancement only.
+ */
 function useAnimatedNumber(target: number, inView: boolean): number {
-  const [val, setVal] = useState(0);
+  const [val, setVal] = useState(target);
   const reducedMotion = useRef(false);
   useEffect(() => {
     reducedMotion.current =

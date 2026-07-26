@@ -122,9 +122,19 @@ export default function SourceList({
                   <SourceWeightDot tier={source.evidenceTier as 1 | 2 | 3 | 4} />
                 </div>
                 {source.excerpt && (
-                  <p className="text-base text-[var(--muted)] mt-1.5 leading-relaxed">
-                    {source.excerpt}
-                  </p>
+                  <details className="mt-1.5 group/excerpt" open={isHighlighted}>
+                    <summary className="text-sm text-[var(--muted)] opacity-70 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:opacity-100 transition-opacity">
+                      <span className="underline decoration-dotted underline-offset-2 group-open/excerpt:hidden">
+                        Show excerpt
+                      </span>
+                      <span className="hidden underline decoration-dotted underline-offset-2 group-open/excerpt:inline">
+                        Hide excerpt
+                      </span>
+                    </summary>
+                    <p className="text-base text-[var(--muted)] mt-1.5 leading-relaxed">
+                      {source.excerpt}
+                    </p>
+                  </details>
                 )}
               </div>
             </div>

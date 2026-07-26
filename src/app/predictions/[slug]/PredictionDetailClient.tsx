@@ -394,8 +394,6 @@ export default function PredictionDetailPage() {
                 unit={prediction.unit.includes("%") ? "%" : ""}
                 overlays={prediction.overlays}
                 onDotClick={handleDotClick}
-                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? 10 : prediction.slug === "tech-sector-displacement" ? 20 : undefined}
-                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" ? -5 : prediction.slug === "tech-sector-displacement" ? -15 : undefined}
                 category={prediction.category}
                 showTrendLine={true}
                 height={280}
@@ -427,8 +425,6 @@ export default function PredictionDetailPage() {
                 unit={prediction.unit.includes("%") ? "%" : ""}
                 overlays={prediction.overlays}
                 onDotClick={handleDotClick}
-                yAxisMax={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" || prediction.slug === "tech-sector-displacement" ? 25 : undefined}
-                yAxisMin={prediction.slug === "overall-us-displacement" || prediction.slug === "white-collar-professional-displacement" || prediction.slug === "tech-sector-displacement" ? -25 : undefined}
                 category={prediction.category}
                 showTrendLine={false}
                 targetDate={targetDateStr ?? undefined}
@@ -447,8 +443,6 @@ export default function PredictionDetailPage() {
               unit={prediction.unit.includes("%") ? "%" : ""}
               overlays={prediction.overlays}
               onDotClick={handleDotClick}
-              yAxisMax={prediction.slug === "workforce-ai-exposure" ? 100 : prediction.slug === "earnings-call-ai-mentions" ? 100 : prediction.slug === "customer-service-automation" ? 75 : prediction.slug === "ai-adoption-rate" ? 75 : prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? 5 : prediction.slug === "tech-sector-displacement" ? 35 : prediction.slug === "median-wage-impact" ? 10 : prediction.slug === "white-collar-professional-displacement" || prediction.slug === "overall-us-displacement" ? 25 : undefined}
-              yAxisMin={prediction.slug === "entry-level-wage-impact" || prediction.slug === "freelancer-rate-impact" ? -50 : prediction.slug === "tech-sector-displacement" ? -20 : prediction.slug === "median-wage-impact" ? -10 : prediction.slug === "white-collar-professional-displacement" || prediction.slug === "overall-us-displacement" ? -25 : undefined}
               category={prediction.category}
               showTrendLine={prediction.aggregationMethod === "latest"}
             />

@@ -341,8 +341,9 @@ export default function PredictionChart({
   const dataMin = dataValues.length > 0 ? Math.min(...dataValues) : yAxisMin;
   const dataMax = dataValues.length > 0 ? Math.max(...dataValues) : yAxisMax;
   const padding = Math.max((dataMax - dataMin) * 0.1, 2);
-  const yMin = Math.min(yAxisMin, Math.floor(dataMin - padding));
-  const yMax = Math.max(yAxisMax, Math.ceil(dataMax + padding));
+  // Domain follows the data; yAxisMin/yAxisMax only apply when there is no data.
+  const yMin = dataValues.length > 0 ? Math.floor(dataMin - padding) : yAxisMin;
+  const yMax = dataValues.length > 0 ? Math.ceil(dataMax + padding) : yAxisMax;
 
   // Overlays filtered by selected tiers — passed to SignalStrip below the chart
   const allFilteredOverlays = (overlays ?? []).filter((o) =>
@@ -368,6 +369,21 @@ export default function PredictionChart({
     while (cursor.getTime() <= dataMaxTs + 45 * 24 * 60 * 60 * 1000) {
       quarterTickTimestamps.push(cursor.getTime());
       cursor.setMonth(cursor.getMonth() + 3);
+    }
+  }
+
+  // Label only the extreme and latest projected points — the rest stay on
+  // hover. Labeling every dot causes overprint when projections cluster.
+  const labeledProjectionDates = new Set<number>();
+  {
+    const proj = realPoints.filter(
+      (p) => p.dataType === "projected" && p.projectedValue != null
+    );
+    if (proj.length > 0) {
+      const byValue = [...proj].sort((a, b) => a.projectedValue! - b.projectedValue!);
+      labeledProjectionDates.add(byValue[0].date);
+      labeledProjectionDates.add(byValue[byValue.length - 1].date);
+      labeledProjectionDates.add(Math.max(...proj.map((p) => p.date)));
     }
   }
 
@@ -611,24 +627,26 @@ export default function PredictionChart({
                   onClick: () => onDotClick?.(payload.sourceIds),
                   keyPrefix: "dot-proj", date: payload.date,
                 });
-                // Value label above each projected dot
-                const labelValue = payload.projectedValue != null
-                  ? `${payload.projectedValue > 0 ? "" : ""}${payload.projectedValue}%`
-                  : "";
+                // Value label on extreme/latest projected dots only (rest on hover)
+                const showLabel =
+                  payload.projectedValue != null &&
+                  labeledProjectionDates.has(payload.date);
                 return (
                   <g key={`proj-group-${payload.date}`}>
                     {dotEl}
-                    <text
-                      x={cx}
-                      y={cy - 10}
-                      textAnchor="middle"
-                      fill="#5C61F6"
-                      fontSize={10}
-                      fontWeight={600}
-                      opacity={0.85}
-                    >
-                      {labelValue}
-                    </text>
+                    {showLabel && (
+                      <text
+                        x={cx}
+                        y={cy - 10}
+                        textAnchor="middle"
+                        fill="#5C61F6"
+                        fontSize={10}
+                        fontWeight={600}
+                        opacity={0.85}
+                      >
+                        {`${payload.projectedValue}%`}
+                      </text>
+                    )}
                   </g>
                 );
               }}
