@@ -26,6 +26,7 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: "Action Plan",
     items: [
+      { href: "/scorecard", label: "Occupation Scorecard" },
       { href: "/assessment", label: "Get an Action Plan" },
       { href: "/assessment/dashboard", label: "My Plans" },
     ],
