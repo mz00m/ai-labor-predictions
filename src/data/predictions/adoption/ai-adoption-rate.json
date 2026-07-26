@@ -736,6 +736,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: AI hedge funds peaked at ~2.7% of all hedge funds; AI labor intensity 1.17% of adviser postings"
+    },
+    {
+      "date": "2026-07-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "fed-ai-buildout-indicators-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: AI adoption broad across firms but usage intensity shallow"
     }
   ],
   "sources": [
@@ -1424,6 +1433,15 @@
       "datePublished": "2026-07-02",
       "excerpt": "US Census Bureau BTOS 2026 AI Supplement (reference period Nov 17, 2025 - Feb 8, 2026; released 2026). Full biannual supplement replacing the biweekly two-week question with a six-month lookback plus new modules on task substitution, wage/employment effects, and planned adoption. Headline (Q1, 2-week): 17.9% of US businesses used AI in any function in the past two weeks (SE 0.13%). Use case incidence (6-month): sales/marketing 14.3%, strategy 12.4%, IT 11.4%, R&D 11.2%, PR/comms 9.3%. Task substitution: 10.1% used AI to perform a task previously done by an employee; 43.7% to supplement/enhance an employee task; 10.6% to introduce a new task. Of firms that substituted, 70.9% substituted 'a small number' of tasks, 22.0% moderate, 7.1% large. Employment effect: 95.7% report no change in total employment from AI use; 2.3% increased, 2.0% decreased. Generative AI specifically: 20.8% of firms report employees using GenAI at work in past six months; of those, 85.4% used for writing/editing, 49.9% for information search, 44.6% for translation/analysis, 34.7% for paperwork, 30.0% for new-project development. Sector leaders (Q1 two-week): Information 37.6%, Professional/Scientific/Technical 34.2%, Education 30.7%, Finance/Insurance 30.4%, Real Estate 23.5%. Six-month outlook: 21.6% expect to be using AI, with sales/marketing (62.8%) and strategy (57.4%) leading.",
       "dateAdded": "2026-07-22"
+    },
+    {
+      "id": "fed-ai-buildout-indicators-2026",
+      "title": "The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "publisher": "Federal Reserve Board (FEDS Notes)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-17",
+      "excerpt": "Such headline figures do not reflect usage intensity, which surveys suggest remains shallow even where reported adoption is broad (Yotzov et al., 2026; Baslandze et al., 2026)."
     }
   ]
 }

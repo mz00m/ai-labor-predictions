@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-25",
-  "lastSweep": "2026-07-22",
+  "asOf": "2026-07-26",
+  "lastSweep": "2026-07-26",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -90,11 +90,11 @@
       "whatItMeasures": "Reconciles BTOS, ADP, NY Fed SCE, and academic-tracker series to produce the Fed's own reading of firm and worker AI adoption trends.",
       "whyItMatters": "One of the very few sources that formally reconciles disagreements between adoption surveys. Fed's involvement lends institutional weight to whatever the current best estimate is.",
       "lastIngested": {
-        "sourceId": "fed-ai-adoption-monitoring-2026",
-        "date": "2026-04-03",
-        "value": "Broader synthesis of BTOS + ADP + SCE"
+        "sourceId": "fed-ai-buildout-indicators-2026",
+        "date": "2026-07-17",
+        "value": "Indicator framework: capabilities/costs, firm investment & adoption, productivity & labor"
       },
-      "nextExpected": "~July-August 2026"
+      "nextExpected": "~October-November 2026"
     },
     {
       "id": "census-btos-ai",

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-25",
-  "totalSources": 662,
-  "verifiedCount": 652,
+  "lastUpdated": "2026-07-26",
+  "totalSources": 665,
+  "verifiedCount": 655,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9419,6 +9419,48 @@
       "dateAdded": "2026-07-25",
       "usedIn": [
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "steele-cruz-career-exposure-2026": {
+      "id": "steele-cruz-career-exposure-2026",
+      "title": "Helping People Choose Careers in the Age of AI",
+      "url": "https://arxiv.org/abs/2607.15506",
+      "publisher": "arXiv (American University)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-16",
+      "excerpt": "The combined measure has a mean occupational exposure of 23.6%, a range from 15.8 to 29.8, and a standard deviation of 6.18 percentage points, as shown at the top of Table 2. [Instrument: mean share of an occupation's tasks exposed, averaged across occupations, derived from 2025 Anthropic Claude and OpenAI ChatGPT query data; authors benchmark it against the job-level automation score of 31.5 in Eloundou et al. (2024).]",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-ai-buildout-indicators-2026": {
+      "id": "fed-ai-buildout-indicators-2026",
+      "title": "The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "publisher": "Federal Reserve Board (FEDS Notes)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-17",
+      "excerpt": "Such headline figures do not reflect usage intensity, which surveys suggest remains shallow even where reported adoption is broad (Yotzov et al., 2026; Baslandze et al., 2026).",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "siepr-mahoney-mcentarfer-jobs-2026": {
+      "id": "siepr-mahoney-mcentarfer-jobs-2026",
+      "title": "What is really happening to jobs? Separating AI hype from reality",
+      "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+      "publisher": "Stanford Institute for Economic Policy Research (SIEPR)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-25",
+      "excerpt": "the unemployment rate for the top quintile of AI-exposed workers has risen by 0.77 percentage points since 2022, while the unemployment rate for the least-exposed workers rose slightly more, by 0.85 percentage points over the same period.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
