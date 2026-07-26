@@ -6,7 +6,7 @@ Inspired by [karpathy/autoresearch](https://github.com/karpathy/autoresearch). T
 
 ## Objective
 
-Continuously discover, evaluate, and ingest new research sources into the 17 prediction graphs on jobsdata.ai. Maximize data coverage and quality while maintaining strict evidence standards.
+Continuously discover, evaluate, and ingest new research sources into the 18 prediction graphs on jobsdata.ai. Maximize data coverage and quality while maintaining strict evidence standards.
 
 ## Evaluation Metric: Source Quality Score
 

@@ -1,6 +1,6 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-25",
+  "lastUpdated": "2026-07-26",
   "totalSources": 662,
   "verifiedCount": 652,
   "sources": {
@@ -237,7 +237,8 @@
         "overall-us-displacement",
         "tech-sector-displacement",
         "customer-service-automation",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -396,7 +397,8 @@
       "datePublished": "2025-09-01",
       "excerpt": "In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6% between late 2022 and July 2025. Software developers saw a 20% early-career decline. Employment among workers 30 and older grew 6-13%.",
       "usedIn": [
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "early-career-employment-decline"
       ],
       "verified": true
     },
@@ -872,7 +874,8 @@
       "datePublished": "2025-11-13",
       "excerpt": "Early-career workers (ages 22-25) in AI-exposed occupations experienced 16% relative employment declines, controlling for firm-level shocks. By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022.",
       "usedIn": [
-        "tech-sector-displacement"
+        "tech-sector-displacement",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -1405,7 +1408,8 @@
       "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster.",
       "usedIn": [
         "white-collar-professional-displacement",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -5275,7 +5279,8 @@
       "usedIn": [
         "overall-us-displacement",
         "white-collar-professional-displacement",
-        "tech-sector-displacement"
+        "tech-sector-displacement",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -6274,7 +6279,8 @@
       "excerpt": "Employment share for AI-exposed occupations fell from 16.4% (Nov 2022) to 15.5% (Sep 2025). Workers age 22-25 in most AI-exposed occupations experienced 13% employment decline since 2022, driven by fewer workforce entrants rather than layoffs.",
       "usedIn": [
         "overall-us-displacement",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -7299,7 +7305,8 @@
       "usedIn": [
         "tech-sector-displacement",
         "overall-us-displacement",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -7534,7 +7541,8 @@
         "overall-us-displacement",
         "entry-level-wage-impact",
         "ai-adoption-rate",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -7729,7 +7737,8 @@
       "usedIn": [
         "overall-us-displacement",
         "median-wage-impact",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -7956,7 +7965,8 @@
       "excerpt": "Goldman Sachs's economists estimate that, over the next decade, A.I. may automate 25 percent of current work hours. If our estimate proves correct, A.I. won't eliminate 25 percent of jobs. What's more likely is that people will find more productive ways to spend their time. American companies destroy and create between 25 million and 35 million jobs annually.",
       "usedIn": [
         "overall-us-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
@@ -9357,7 +9367,8 @@
         "overall-us-displacement",
         "tech-sector-displacement",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false

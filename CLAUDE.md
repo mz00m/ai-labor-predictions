@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 17 interactive prediction graphs across 5 categories, plus one signal-only chart (earnings-call AI mentions, excluded from prediction counts). Practitioner-first tone — no hype, no doom, just evidence.
+A public-facing Next.js dashboard tracking AI's impact on the labor market. URL: jobsdata.ai. It synthesizes research, government data, and expert analysis into 18 interactive prediction graphs across 5 categories, plus one signal-only chart (earnings-call AI mentions, excluded from prediction counts). Practitioner-first tone — no hype, no doom, just evidence.
 
 ## Quick Start
 
@@ -41,19 +41,20 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 | Route | Description |
 |-------|-------------|
 | `/` | Hero stats + prediction grid (displacement, wages, adoption) |
-| `/predictions/[slug]` | Individual prediction detail pages (18 total) |
+| `/predictions/[slug]` | Individual prediction detail pages (19 total) |
 | `/signals` | Leading indicators: firm response, productivity paths |
 | `/history` | Historical technology comparison (GPT compression, diffusion) |
 | `/j-curve` | J-Curve explainer with interactive visuals |
 | `/about` | Methodology, FAQ |
 
-## Prediction Graph Taxonomy (17 predictions + 1 signal-only chart)
+## Prediction Graph Taxonomy (18 predictions + 1 signal-only chart)
 
-### Displacement (9)
+### Displacement (10)
 | Slug | Title | Unit |
 |------|-------|------|
 | `overall-us-displacement` | Projected US Job Displacement from AI by 2030 | % of US jobs |
 | `white-collar-professional-displacement` | White-Collar Professional Displacement by 2030 | % of roles displaced |
+| `early-career-employment-decline` | Early-Career Employment Decline in AI-Exposed Occupations | % employment decline, ages 22-25, vs least-exposed |
 | `tech-sector-displacement` | Tech Sector Job Displacement by 2030 | % of jobs displaced |
 | `creative-industry-displacement` | Creative Industry Displacement by 2030 | % of roles displaced |
 | `education-sector-displacement` | Education Sector Displacement by 2030 | % of roles displaced |
@@ -145,6 +146,36 @@ Defined in `src/lib/prediction-stats.ts`:
 - Proxy discount: `isProxy: true` data points receive 0.5× weight (indirect measurement penalty)
 - For `aggregationMethod: "latest"`: uses most recent data point value directly
 
+## Research Corpus — How to Query Everything
+
+The full body of research behind the site is queryable. **Start here before grepping around
+or re-fetching sources from the web — it is almost certainly already ingested.**
+
+| Path | What it holds |
+|------|---------------|
+| `src/data/source-content/*.json` | **The corpus.** One file per source: `abstract`, `keyFindings[]`, `methodology`, `qualifiers`. 661 of 662 registered sources have one. This is far richer than the short `excerpt` fields in the prediction JSONs. |
+| `src/data/confirmed-sources.json` | Source metadata registry: title, publisher, tier, URL, `usedIn[]` graph slugs |
+| `src/data/search-index.json` | Generated BM25 haystacks (gitignored; rebuilt by `npm run build:search`, which runs inside `npm run build`) |
+| `wiki/` | ~1,200 generated markdown pages (predictions, sources, tier/publisher indexes, task-visualizer). Gitignored, rebuilt by `npm run compile-wiki` on every build. Good for reading whole-graph context. |
+
+### `npm run ask`
+
+```bash
+npm run ask "what do we know about entry-level wages?"          # retrieve + Claude synthesis
+npm run ask -- --raw "ages 22-25 relative employment decline"   # ranked retrieval only, no API call
+npm run ask -- --json --limit 30 --tier 1 "AI adoption rate"    # machine-readable
+```
+
+BM25 ranking over the corpus plus prediction-graph matching (returns each matched graph's
+`currentValue`, unit, and latest plotted point). Sub-second in `--raw` mode.
+
+**If you are an agent working in this repo, use `--raw` or `--json`** — you can reason over the
+hits yourself, so the Claude synthesis pass is redundant cost and latency. Reach for the default
+synthesized mode only when a human wants a written answer.
+
+Retrieval quality depends on `search-index.json` being current. It regenerates on every build,
+but if you have ingested sources without building, run `npm run build:search`.
+
 ## Scripts
 
 ### Ingestion Pipeline
@@ -175,6 +206,7 @@ Defined in `src/lib/prediction-stats.ts`:
 | `npm run agent:research` | CLI research agent (takes a question, runs KB search) |
 | `npm run agent:review` | Review/fact-checking agent |
 | `npm run compile-kb` | Compile research knowledge base |
+| `npm run ask` | Query the full research corpus (BM25 + optional Claude synthesis) — see Research Corpus above |
 | `npm run build:search` | Build full-text search index |
 | `npm run fetch:article` | Fetch single article content |
 | `npm run fetch:pdf` | Fetch article as PDF |
@@ -196,7 +228,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 
 | Path | Purpose |
 |------|---------|
-| `src/data/predictions/` | All 18 prediction JSON files (17 predictions + 1 signal-only) |
+| `src/data/predictions/` | All 19 prediction JSON files (18 predictions + 1 signal-only) |
 | `src/data/confirmed-sources.json` | Master source registry (524 sources) |
 | `src/data/recurring-sources.json` | Recurring release registry (tracked series, cadences, last ingested editions — swept by `/autoresearch`) |
 | `src/data/reading-list.json` | Rolling reading list for Featured Reads |
@@ -207,7 +239,7 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 | `src/lib/data-loader.ts` | Loads all prediction JSONs; computes hero stats via `getHeroStats()` |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `scripts/lib/ingest/` | Extraction, fetching, writing logic |
-| `.claude/commands/` | Claude skills (9 total) |
+| `.claude/commands/` | Claude skills (11 total) |
 | `changelog/` | Weekly changelogs and LinkedIn posts |
 | `docs/proxy-metric-methodology.md` | Proxy metric conversion & outlier detection methodology |
 | `docs/tool-prioritization-guide.md` | Which data tools/platforms to monitor |
@@ -231,6 +263,7 @@ Hardcoded array of 5 articles displayed left-to-right on the homepage. On ingest
 | `/ai-consultant` | General Q&A on AI labor impact |
 | `/labor-economist-review` | Review through lens of 8 labor economists |
 | `/viz-review` | Chart and data visualization critique |
+| `/assessment-review` | Assessment funnel, usability & shareability review |
 | `/autoresearch` | Autonomous research discovery loops |
 | `/data-quality-audit` | Data integrity checks |
 | `/autoaudit` | Automated audit agent |

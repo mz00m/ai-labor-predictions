@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
 import { getSourceCount } from "@/lib/search-sources";
+import { getAllOccupationSlugs } from "@/lib/assessment/scorecard";
 import NewsTicker from "@/components/NewsTicker";
 import FeaturedReads from "@/components/FeaturedReads";
 import FunnelStrip from "@/components/FunnelStrip";
@@ -16,11 +17,13 @@ import {
   SignalsWatermark,
   ProductivityWatermark,
   DemandElasticityWatermark,
+  ScorecardWatermark,
 } from "@/components/section-watermarks";
 
 const predictions = getAllPredictions();
 const lastUpdated = getLastUpdated();
 const heroStats = getHeroStats();
+const occupationCount = getAllOccupationSlugs().length;
 
 function formatUpdatedDate(iso: string): string {
   const [y, m, d] = iso.split("-");
@@ -118,6 +121,17 @@ export default function Home() {
           accentColor="#3ECFAE"
           watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
           stat={{ value: "110+", label: "occupations" }}
+          featured
+        />
+
+        <SectionBar
+          title="Look Up Your Occupation's AI Scorecard"
+          description="An instant read on one job: what AI is already doing in it, what stays human, and three things worth doing about it. No signup, no email."
+          href="/scorecard"
+          tag="Scorecard"
+          accentColor="#F59E0B"
+          watermark={<ScorecardWatermark color="#F59E0B" />}
+          stat={{ value: `${occupationCount}`, label: "occupations" }}
           featured
         />
 

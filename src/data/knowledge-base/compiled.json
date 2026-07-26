@@ -1,8 +1,8 @@
 {
-  "compiledAt": "2026-07-02T15:20:01.791Z",
+  "compiledAt": "2026-07-26T19:20:22.330Z",
   "totalTools": 64,
   "totalCapabilities": 62,
-  "staleCount": 0,
+  "staleCount": 126,
   "tools": {
     "administrative": [
       {
@@ -23,7 +23,7 @@
         "pitch": "General-purpose AI assistant for text processing, summarization, data extraction, and Q&A.",
         "bestFor": "Ad-hoc information lookup, document summarization, data extraction from unstructured text. Works across virtually all knowledge work tasks.",
         "limitations": "No persistent memory across sessions (without custom GPTs). Can hallucinate facts. Not suitable for tasks requiring real-time data without plugins.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Claude",
@@ -42,7 +42,7 @@
         "pitch": "AI assistant with strong document analysis, long-context processing, and careful reasoning.",
         "bestFor": "Analyzing long documents (up to 200K tokens), careful data extraction, tasks requiring nuanced judgment. Particularly strong at following complex instructions.",
         "limitations": "No web browsing in free tier. No image generation. Slower than some alternatives for simple tasks.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Microsoft Copilot (M365)",
@@ -59,7 +59,7 @@
         "pitch": "AI assistant embedded in Word, Excel, PowerPoint, Outlook, and Teams.",
         "bestFor": "Workers already in the Microsoft ecosystem. Automates document drafting, email triage, meeting summaries, Excel formula generation, and PowerPoint creation from within the tools people already use.",
         "limitations": "Requires M365 E3/E5 subscription plus Copilot add-on. Quality varies by application (strong in Word/Outlook, weaker in Excel for complex analysis). Enterprise rollout requires admin configuration.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Google Gemini (Workspace)",
@@ -76,7 +76,7 @@
         "pitch": "AI assistant embedded in Gmail, Docs, Sheets, Slides, and Meet.",
         "bestFor": "Google Workspace users. Email drafting, document summarization, spreadsheet formulas, presentation creation, meeting notes.",
         "limitations": "Tightly coupled to Google ecosystem. Less capable than standalone models for complex reasoning. Enterprise features require higher-tier plans.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Notion AI",
@@ -93,7 +93,7 @@
         "pitch": "AI features built into Notion's workspace: summarize pages, extract action items, generate content, answer questions across your workspace.",
         "bestFor": "Teams already using Notion for documentation. AI can search across your entire workspace to answer questions, summarize meeting notes, draft project briefs, and extract insights from existing docs.",
         "limitations": "Only useful if your team's knowledge is in Notion. Quality depends heavily on how well-organized your workspace is. Add-on cost on top of existing Notion subscription.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Zapier (with AI)",
@@ -110,7 +110,7 @@
         "pitch": "No-code automation platform connecting 6,000+ apps with AI-powered workflow building.",
         "bestFor": "Automating repetitive cross-app workflows without coding. \"When X happens in app A, do Y in app B.\" AI assistant helps build automations from natural language descriptions.",
         "limitations": "Complex automations can be fragile. Per-task pricing adds up at scale. Debugging failed automations requires understanding the workflow logic.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Reclaim.ai",
@@ -126,7 +126,7 @@
         "pitch": "AI scheduling assistant that auto-schedules tasks, habits, meetings, and breaks around your calendar.",
         "bestFor": "Professionals with overloaded calendars. Automatically finds time for focus work, 1:1s, and habits. Defends time blocks and reschedules when conflicts arise.",
         "limitations": "Requires Google Calendar or Outlook. Works best when you commit to letting it manage your schedule. Team features require everyone to be on the platform.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Clockwise",
@@ -142,7 +142,7 @@
         "pitch": "AI calendar optimization that creates focus time blocks and streamlines meeting scheduling across teams.",
         "bestFor": "Teams drowning in meetings. Analyzes calendar patterns, consolidates meetings to create focus time blocks, and finds optimal meeting times across time zones.",
         "limitations": "Most valuable features require team-wide adoption. Free tier is limited. Works best with Google Calendar.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Motion",
@@ -157,7 +157,7 @@
         "pitch": "AI project manager that auto-schedules tasks, prioritizes work, and reschedules dynamically as priorities shift.",
         "bestFor": "Small teams and solo operators who need project management without the overhead. Add tasks with deadlines, Motion figures out when to do them. Auto-reschedules when you fall behind.",
         "limitations": "Monthly cost adds up for teams. Learning to trust the AI scheduler takes adjustment. Limited integrations compared to Asana/Monday.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Perplexity AI",
@@ -176,7 +176,7 @@
         "pitch": "AI-powered research assistant that searches the web and synthesizes answers with citations.",
         "bestFor": "Research-heavy roles that need current, cited information. Replaces the \"open 15 tabs and read them all\" workflow. Pro tier includes academic paper search and file analysis.",
         "limitations": "Citations are not always perfectly matched to claims. Can miss niche or specialized sources. Not a replacement for deep domain expertise.",
-        "stale": false
+        "stale": true
       }
     ],
     "marketing": [
@@ -194,7 +194,7 @@
         "pitch": "AI content platform for marketing copy, blog posts, social media, and brand-consistent writing.",
         "bestFor": "Marketing teams and content creators who need high-volume, brand-consistent copy. Template library covers ads, emails, product descriptions, blog posts. Brand voice training keeps output on-brand.",
         "limitations": "Expensive for solo users. Output quality varies, needs human editing. Not great for technical or highly specialized writing.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Canva (Magic Studio)",
@@ -211,7 +211,7 @@
         "pitch": "Design platform with AI-powered image generation, background removal, text-to-design, and brand kit management.",
         "bestFor": "Non-designers who need professional-looking visuals. Social media posts, presentations, flyers, marketing materials. AI features handle resizing, background removal, and style suggestions.",
         "limitations": "Templates can look generic. Advanced design needs still require Figma/Adobe. AI image generation quality below Midjourney/DALL-E.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Gamma",
@@ -228,7 +228,7 @@
         "pitch": "AI-powered presentation and document builder that generates polished decks from text prompts.",
         "bestFor": "Creating presentations quickly without design skills. Takes text input or outlines and generates visually polished slides. Good for internal presentations, pitch decks, and reports.",
         "limitations": "Limited customization compared to PowerPoint/Keynote. Templates can feel samey. Not ideal for highly branded or pixel-perfect presentations.",
-        "stale": false
+        "stale": true
       }
     ],
     "sales": [
@@ -246,7 +246,7 @@
         "pitch": "Revenue intelligence platform that records, transcribes, and analyzes customer calls and meetings.",
         "bestFor": "Sales teams and account managers. AI analyzes conversation patterns, identifies winning behaviors, flags risk signals in deals, and provides coaching recommendations based on actual call data.",
         "limitations": "Expensive. Requires buy-in from the entire sales org. Privacy concerns in some jurisdictions require disclosure. Most valuable with 10+ reps.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Crystal",
@@ -262,7 +262,7 @@
         "pitch": "AI personality assessment tool that predicts communication styles and provides tailored messaging suggestions.",
         "bestFor": "Sales, recruiting, and relationship management. Analyzes LinkedIn profiles and other public data to predict DISC personality type. Suggests how to write emails, conduct meetings, and negotiate with each person.",
         "limitations": "Personality predictions from public data have inherent accuracy limits. Can feel intrusive. Best as a preparation aid, not a substitute for genuine relationship skills.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Lavender",
@@ -278,7 +278,7 @@
         "pitch": "AI email coaching for sales outreach. Scores emails in real-time and suggests improvements for response rates.",
         "bestFor": "Sales development reps and anyone doing cold outreach. Analyzes email tone, length, readability, and personalization. Provides a score and specific suggestions before you send.",
         "limitations": "Optimizes for response rate, which isn't always the right metric. Can encourage formulaic writing. Most useful for high-volume outreach, less for relationship-based selling.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Fireflies.ai",
@@ -295,7 +295,7 @@
         "pitch": "Meeting assistant that records, transcribes, and generates summaries with action items and sentiment analysis.",
         "bestFor": "Client-facing professionals who need to be fully present in conversations instead of taking notes. Auto-captures everything, generates searchable transcripts, and tracks action items across meetings.",
         "limitations": "Requires participant consent for recording. Accuracy varies with audio quality. Sentiment analysis should be treated as directional, not definitive.",
-        "stale": false
+        "stale": true
       }
     ],
     "finance": [
@@ -313,7 +313,7 @@
         "pitch": "Business intelligence platform with AI-powered natural language queries and automated insights.",
         "bestFor": "Analysts and managers who need to explore data visually. Ask Tableau questions in plain English, get charts. AI suggests relevant visualizations and highlights anomalies.",
         "limitations": "Steep learning curve for advanced features. Expensive per-seat. Requires clean, well-structured data sources.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Julius AI",
@@ -330,7 +330,7 @@
         "pitch": "AI data analyst that processes spreadsheets, creates visualizations, and runs statistical analyses from natural language.",
         "bestFor": "Non-technical professionals who need data analysis without coding. Upload a CSV, ask questions, get charts and statistical summaries. Handles regression, correlation, trend analysis.",
         "limitations": "Limited to tabular data. Complex multi-step analyses can produce incorrect results. Not suitable for production data pipelines.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Power BI (with Copilot)",
@@ -346,7 +346,7 @@
         "pitch": "Microsoft's BI platform with AI-powered natural language queries, automated report generation, and anomaly detection.",
         "bestFor": "Organizations in the Microsoft ecosystem. Ask data questions in plain English, auto-generate reports, detect outliers. Integrates natively with Excel, Azure, and Dynamics.",
         "limitations": "Copilot features require Premium capacity (expensive). DAX formula language has a steep learning curve. Best with Microsoft data sources.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Docsumo",
@@ -363,7 +363,7 @@
         "pitch": "Intelligent document processing for invoices, receipts, bank statements, and financial documents.",
         "bestFor": "High-volume document processing in accounting, finance, and operations. Extracts structured data from invoices, purchase orders, and financial statements with high accuracy.",
         "limitations": "Expensive for small teams. Requires training period for custom document types. Best ROI at 500+ documents/month.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Fathom (Financial)",
@@ -379,7 +379,7 @@
         "pitch": "AI-powered financial reporting and analysis tool that generates narrative reports from accounting data.",
         "bestFor": "Accountants and financial advisors. Connects to Xero, QuickBooks, or MYOB and generates visual reports, KPI dashboards, and narrative commentary. Turns numbers into client-ready reports.",
         "limitations": "Only works with supported accounting platforms. Narrative generation is template-based, not fully AI-generated. Most valuable for firms with 10+ clients.",
-        "stale": false
+        "stale": true
       }
     ],
     "operations": [
@@ -398,7 +398,7 @@
         "pitch": "Project management platform with AI features for status updates, task recommendations, and workflow optimization.",
         "bestFor": "Teams managing complex projects with multiple workstreams. AI generates status reports from task updates, recommends task assignments, and identifies bottlenecks.",
         "limitations": "Can become bloated for simple projects. AI features are relatively new and still maturing. Requires consistent team adoption to be useful.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Automation Anywhere",
@@ -414,7 +414,7 @@
         "pitch": "Enterprise RPA platform for automating repetitive digital tasks across applications.",
         "bestFor": "Large organizations with high-volume, rule-based processes across multiple systems (ERP, CRM, legacy apps). Automates data entry, form filling, cross-system data migration.",
         "limitations": "Significant implementation cost and time. Requires dedicated RPA developers. Brittle when underlying applications change their UI. Overkill for small teams.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Fieldwire",
@@ -429,7 +429,7 @@
         "pitch": "Construction management platform for task tracking, plan markup, and field reporting.",
         "bestFor": "Construction managers and field supervisors. Digital plan markup, punch lists, daily reports, and photo documentation from job sites. Reduces paperwork and improves communication between field and office.",
         "limitations": "Adoption requires training field crews on mobile devices. Most valuable for commercial construction, less for small residential jobs. Requires reliable connectivity.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Procore",
@@ -444,7 +444,7 @@
         "pitch": "Construction management platform with AI-powered risk prediction, quality tracking, and safety compliance.",
         "bestFor": "Large construction firms managing multiple projects. AI analyzes project data to predict delays, identify safety risks, and flag quality issues before they become problems.",
         "limitations": "Enterprise pricing is significant. Implementation takes months. Overkill for small contractors.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Augmentir",
@@ -459,7 +459,7 @@
         "pitch": "AI-powered connected worker platform for manufacturing, with digital work instructions and skills management.",
         "bestFor": "Manufacturing and maintenance operations. AI personalizes work instructions based on worker skill level, identifies training gaps, and provides real-time guidance on complex procedures.",
         "limitations": "Requires significant upfront investment in deployment and content creation. Most valuable at scale (50+ workers). Needs reliable shop-floor connectivity.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "SafetyCulture (iAuditor)",
@@ -475,7 +475,7 @@
         "pitch": "Inspection and audit platform with AI-powered issue detection, reporting, and compliance tracking.",
         "bestFor": "Any role requiring regular inspections (safety, quality, compliance). Digital checklists, photo evidence, automatic report generation. AI suggests corrective actions based on inspection findings.",
         "limitations": "Template setup requires initial effort. Best ROI for teams doing 10+ inspections/week. Free tier limited to 3 users.",
-        "stale": false
+        "stale": true
       }
     ],
     "communications": [
@@ -494,7 +494,7 @@
         "pitch": "AI writing assistant for grammar, clarity, tone, and style across all writing surfaces.",
         "bestFor": "Professionals who write frequently (emails, reports, proposals). Works as a browser extension, desktop app, and integrates with most writing tools. Tone detection helps match communication style to audience.",
         "limitations": "Premium features require subscription. Can be overly prescriptive about style. The AI rewrite suggestions sometimes strip voice/personality from writing.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Otter.ai",
@@ -511,7 +511,7 @@
         "pitch": "Real-time meeting transcription, summarization, and action item extraction.",
         "bestFor": "Professionals in meeting-heavy roles. Auto-joins Zoom/Teams/Meet calls, generates transcripts with speaker identification, extracts action items, and creates shareable summaries.",
         "limitations": "Accuracy drops with heavy accents, overlapping speakers, or poor audio. Free tier limited to 300 minutes/month. Requires calendar integration for auto-join.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Loom",
@@ -528,7 +528,7 @@
         "pitch": "Async video messaging with AI-powered summaries, chapters, and transcripts.",
         "bestFor": "Replacing status update meetings with async video. Record screen + camera, AI generates summary and chapters. Viewers can watch at 2x or just read the summary.",
         "limitations": "Not a replacement for interactive discussions. Video fatigue is real. Free tier limited to 25 videos and 5 min each.",
-        "stale": false
+        "stale": true
       }
     ],
     "people-management": [
@@ -546,7 +546,7 @@
         "pitch": "Performance management platform with AI-assisted reviews, OKR tracking, engagement surveys, and compensation benchmarking.",
         "bestFor": "Mid-size and large teams that need a unified system for performance cycles, goal alignment, and employee engagement. The AI features help managers draft review summaries and surface engagement trends across teams. Strong integration with HRIS and Slack.",
         "limitations": "Pricing adds up fast at scale since it's per-person. Smaller teams may find the feature set overkill. AI-generated review language still needs manager editing to avoid generic phrasing.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Leapsome",
@@ -562,7 +562,7 @@
         "pitch": "People enablement platform combining performance reviews, goal management, engagement surveys, learning paths, and 360-degree feedback.",
         "bestFor": "Organizations that want reviews, goals, engagement, and learning in a single platform rather than stitching together point solutions. European-headquartered with strong GDPR compliance, which matters for international teams. The learning module ties development plans directly to review outcomes.",
         "limitations": "Less name recognition than Lattice or Culture Amp in the US market, which can slow internal buy-in. Reporting and analytics are functional but not as deep as dedicated analytics platforms. Smaller integration ecosystem than competitors.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Textio",
@@ -578,7 +578,7 @@
         "pitch": "AI writing platform that analyzes and improves job postings, performance feedback, and workplace communications for clarity, inclusivity, and bias reduction.",
         "bestFor": "HR teams and hiring managers who want to reduce bias in job descriptions and performance reviews. Textio scores language in real time and suggests alternatives that broaden candidate pools and improve feedback quality. Particularly useful for organizations with DEI commitments that want measurable language improvements.",
         "limitations": "Enterprise pricing puts it out of reach for small companies. Effectiveness depends on consistent adoption across managers — one team using it doesn't move org-wide metrics. The bias detection is pattern-based and won't catch all forms of exclusionary language.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "BambooHR",
@@ -594,7 +594,7 @@
         "pitch": "HR management platform covering employee records, hiring, onboarding, time-off tracking, and reporting with AI-powered workforce analytics.",
         "bestFor": "Small to mid-size businesses that need a core HRIS with built-in hiring and onboarding workflows. Clean interface that non-technical HR staff can manage without training. AI analytics surface turnover risk and headcount trends without requiring a dedicated people analytics team.",
         "limitations": "Grows less capable at enterprise scale — companies over 500 employees often outgrow it. Payroll is an add-on and not as robust as dedicated payroll providers. Advanced reporting requires higher-tier plans.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Paradox (Olivia)",
@@ -610,7 +610,7 @@
         "pitch": "Conversational AI assistant for recruiting that handles candidate screening, interview scheduling, FAQ responses, and application workflows via text and chat.",
         "bestFor": "High-volume hiring environments — retail, hospitality, healthcare, logistics — where scheduling and screening hundreds of candidates manually is a bottleneck. Olivia handles the back-and-forth of interview coordination and basic qualification checks via SMS or web chat, freeing recruiters for higher-value conversations.",
         "limitations": "Enterprise-only pricing makes it inaccessible for smaller employers. Works best for structured, high-volume roles; less effective for specialized or executive searches where nuance matters. Candidates occasionally find chatbot interactions impersonal, which can affect employer brand for roles where candidate experience is a differentiator.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Culture Amp",
@@ -626,7 +626,7 @@
         "pitch": "Employee experience platform with AI-driven engagement surveys, performance management, and development analytics backed by organizational psychology research.",
         "bestFor": "Organizations that take engagement measurement seriously and want science-backed survey design with strong benchmarking data. The analytics layer surfaces drivers of engagement and attrition risk with enough statistical rigor to present to leadership. Performance module ties engagement insights to individual development.",
         "limitations": "The platform's strength in analytics means it's heavier to administer than simpler survey tools. Getting value requires someone who can interpret the data and act on it — the tool surfaces insights but doesn't implement change. Survey fatigue is a real risk if the organization doesn't close the loop on results.",
-        "stale": false
+        "stale": true
       }
     ],
     "customer-service": [
@@ -644,7 +644,7 @@
         "pitch": "AI customer service agent that resolves support queries autonomously using your help center content, past conversations, and knowledge base.",
         "bestFor": "Teams already on Intercom who want to deflect repetitive support tickets. Fin reads your help center and resolves straightforward queries without human involvement. Pay-per-resolution pricing means you only pay when it actually handles a conversation end-to-end.",
         "limitations": "Requires a well-maintained knowledge base to perform well — garbage in, garbage out. The $0.99/resolution cost adds up quickly at high volume and may exceed flat-rate alternatives. Complex or emotionally sensitive issues still need human handoff, and Fin can sometimes confidently give incomplete answers.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Zendesk AI",
@@ -660,7 +660,7 @@
         "pitch": "AI-powered ticket routing, response suggestions, and customer intent detection built natively into the Zendesk support platform.",
         "bestFor": "Mid-size to enterprise support teams already using Zendesk. AI features include automatic ticket classification, agent response suggestions, and intent detection that routes issues to the right team. Strongest when you have years of ticket history for the models to learn from.",
         "limitations": "Expensive — the AI features require higher-tier plans, and per-agent pricing scales steeply. Smaller teams may not generate enough ticket volume to justify the cost. AI suggestions require agent review and can be off-base for niche or technical products. Migration away from Zendesk is painful once you're locked in.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Freshdesk (Freddy AI)",
@@ -676,7 +676,7 @@
         "pitch": "Helpdesk platform with AI chatbot (Freddy), auto-triage, suggested responses, and canned reply recommendations.",
         "bestFor": "Small to mid-size teams that need a capable helpdesk without enterprise pricing. The free tier supports up to 2 agents with basic ticketing and email support — a real option for early-stage companies. Freddy AI handles auto-triage and suggests responses based on past resolutions.",
         "limitations": "AI features are limited on lower tiers — Freddy's full capabilities require Growth or Pro plans. Chatbot quality is a step below Intercom Fin for autonomous resolution. Reporting and customization feel constrained compared to Zendesk at the enterprise level.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Tidio",
@@ -692,7 +692,7 @@
         "pitch": "Live chat and AI chatbot platform designed for small business websites, with visual chatbot builder and visitor tracking.",
         "bestFor": "Small businesses and e-commerce sites that want a chat widget with basic AI without a complex setup. Free tier includes live chat and a limited number of chatbot conversations. Visual drag-and-drop bot builder makes it accessible for non-technical users. Good for lead capture and simple FAQ automation.",
         "limitations": "AI chatbot (Lyro) has a conversation cap on lower tiers and charges for additional interactions. Less sophisticated than purpose-built support platforms for complex ticket workflows. Primarily useful for website chat — not a full omnichannel support solution. Can feel widget-heavy on smaller sites.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Ada",
@@ -707,7 +707,7 @@
         "pitch": "No-code AI customer service automation platform that builds conversational agents trained on your company's knowledge and systems.",
         "bestFor": "Enterprise teams handling high-volume, repetitive support across multiple channels. Ada's no-code builder lets non-engineers create and maintain AI agents that connect to CRMs, order systems, and knowledge bases. Strong in e-commerce and fintech where customers need account-specific answers (order status, billing, returns).",
         "limitations": "Enterprise-only pricing puts it out of reach for small teams — no self-serve plan or public pricing. Implementation requires meaningful setup time to integrate with backend systems. Performance depends heavily on the quality of your training data and knowledge base. Less community and third-party ecosystem compared to Zendesk or Intercom.",
-        "stale": false
+        "stale": true
       }
     ],
     "technology": [
@@ -724,7 +724,7 @@
         "pitch": "AI pair programmer that suggests code completions, generates functions, and explains code inline in your IDE.",
         "bestFor": "Software developers at all levels. Auto-completes code, generates boilerplate, writes tests, and explains unfamiliar code. Works in VS Code, JetBrains, Neovim, and more.",
         "limitations": "Can suggest insecure or incorrect code. Doesn't understand full project architecture. Works best for common patterns, less reliable for novel or domain-specific logic.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Cursor",
@@ -737,7 +737,7 @@
         "pitch": "AI-native code editor (VS Code fork) with inline code generation, multi-file editing, and codebase-aware chat.",
         "bestFor": "Software developers of all levels. Write code from natural language descriptions, refactor across files, debug with AI assistance. Understands your full codebase context.",
         "limitations": "Subscription cost on top of existing tools. Can suggest incorrect code that compiles but has logic errors. Heavy reliance can slow down learning for junior developers.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Dbt (with AI)",
@@ -753,7 +753,7 @@
         "pitch": "Data transformation tool with AI-powered SQL generation, documentation, and lineage tracking.",
         "bestFor": "Data engineers and analytics engineers. AI generates SQL transformations from natural language, auto-documents models, and explains complex queries. Version-controlled data pipelines.",
         "limitations": "Steep learning curve for non-SQL users. Cloud pricing can escalate with usage. Requires existing data warehouse infrastructure.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Elicit",
@@ -770,7 +770,7 @@
         "pitch": "AI research assistant for finding, reading, and synthesizing academic papers.",
         "bestFor": "Researchers, analysts, and anyone who needs to synthesize academic literature. Searches across 200M+ papers, extracts key findings, identifies methodology, and creates structured summaries.",
         "limitations": "Academic papers only (not industry reports, news, etc.). Extraction accuracy varies with paper complexity. Best for English-language research.",
-        "stale": false
+        "stale": true
       }
     ],
     "healthcare": [
@@ -787,7 +787,7 @@
         "pitch": "Ambient clinical documentation that listens to patient-clinician conversations in real time and generates structured clinical notes automatically.",
         "bestFor": "Health systems and large practices looking to reduce clinician documentation burden. DAX Copilot captures the natural patient-provider conversation and drafts encounter notes directly into the EHR, letting physicians review and sign off rather than type from scratch. Particularly strong in primary care and specialty visits with high note volume.",
         "limitations": "Requires Microsoft/Nuance enterprise agreement — no self-serve signup for individual providers. Integration depends on EHR compatibility (strongest with Epic and HIPAA-compliant Microsoft cloud infrastructure). Clinicians still must review every generated note for accuracy before signing, which means time savings vary by specialty and documentation complexity.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Nabla",
@@ -803,7 +803,7 @@
         "pitch": "AI copilot for clinicians that auto-generates visit notes, patient summaries, and follow-up communications from recorded conversations.",
         "bestFor": "Small to mid-size practices and telehealth providers who need ambient documentation without committing to an enterprise platform. Nabla handles visit note generation, after-visit summaries for patients, and drafts of patient messages — reducing administrative time per encounter. Works well for providers doing a mix of in-person and virtual visits.",
         "limitations": "Smaller vendor with less EHR integration depth than Nuance or Elation. Note quality can vary for highly specialized medical terminology outside common primary care and behavioral health contexts. HIPAA-compliant, but providers should verify BAA coverage and data handling policies match their compliance requirements.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Freed",
@@ -818,7 +818,7 @@
         "pitch": "AI medical scribe designed for independent practitioners and small practices, generating SOAP notes from patient conversations.",
         "bestFor": "Solo practitioners and small practices that cannot afford a human scribe or an enterprise ambient documentation system. Freed listens to encounters and produces structured SOAP notes that clinicians can edit and finalize. The lower price point and straightforward onboarding make it accessible for practices without dedicated IT staff.",
         "limitations": "Less customizable than enterprise solutions — note templates and specialty-specific formatting may not match every workflow. Integration with EHR systems is more limited than Nuance or Elation; many users copy-paste notes rather than having them flow directly into the chart. As with all clinical AI scribes, every note requires physician review to catch errors, and accuracy drops in noisy environments or with heavy medical jargon.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Elation Health",
@@ -834,7 +834,7 @@
         "pitch": "EHR platform with built-in AI clinical assistant for documentation, coding suggestions, and patient messaging.",
         "bestFor": "Primary care and direct primary care practices that want AI capabilities embedded natively in their electronic health record rather than bolted on. Elation's AI assists with clinical note drafting, suggests appropriate billing codes based on documentation, and helps generate patient-facing messages — all within the same system clinicians use for charting and ordering.",
         "limitations": "Primarily serves primary care; specialists with complex workflow requirements may find it limiting compared to specialty-specific EHRs. The all-in-one approach means switching to Elation requires an EHR migration, which is a significant lift for established practices. AI coding suggestions are assistive only — providers must verify code accuracy to avoid compliance and billing risks.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Regard",
@@ -849,7 +849,7 @@
         "pitch": "AI diagnostic assistant that automatically reviews patient charts and surfaces potential diagnoses clinicians may have overlooked.",
         "bestFor": "Hospital medicine and inpatient settings where diagnostic completeness directly affects patient outcomes and accurate clinical documentation. Regard runs in the background, analyzing labs, vitals, medications, and notes to flag conditions that may be present but undocumented — helping hospitalists catch diagnoses that might otherwise be missed during high-volume shifts.",
         "limitations": "Focused on inpatient and hospital medicine use cases; not designed for outpatient primary care or specialty workflows. Acts as a clinical decision support tool, not a replacement for clinical judgment — all suggestions require physician evaluation. Enterprise-only sales process means it is not accessible to small practices or individual providers. Effectiveness depends on the quality and completeness of existing chart data.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Phreesia",
@@ -865,7 +865,7 @@
         "pitch": "Patient intake automation platform with AI-powered scheduling, digital check-in, insurance verification, and pre-visit workflows.",
         "bestFor": "Medical practices and health systems looking to reduce front-desk administrative burden and improve the patient arrival experience. Phreesia handles digital check-in, consent forms, copay collection, real-time insurance eligibility verification, and appointment scheduling — replacing manual intake processes that typically consume significant staff time per patient visit.",
         "limitations": "Primarily addresses the administrative and operational side of healthcare, not clinical workflows. Per-visit pricing can add up for high-volume practices, and the ROI depends on how much manual intake work it actually displaces. Customization of intake forms and workflows requires upfront configuration effort, and patient adoption varies — some demographics still prefer paper-based check-in.",
-        "stale": false
+        "stale": true
       }
     ],
     "legal": [
@@ -882,7 +882,7 @@
         "pitch": "AI legal research assistant that reviews documents, identifies relevant case law, and drafts legal memos.",
         "bestFor": "Lawyers and legal professionals. Analyze contracts, research case law, draft discovery responses, summarize depositions. Dramatically reduces time on legal research.",
         "limitations": "Requires legal expertise to verify outputs. Cannot replace attorney judgment on strategy. Enterprise pricing limits accessibility for solo practitioners.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Harvey AI",
@@ -897,7 +897,7 @@
         "pitch": "AI platform purpose-built for legal work: contract analysis, due diligence, regulatory research, and litigation support.",
         "bestFor": "Law firms and corporate legal departments. Handles complex legal reasoning, multi-jurisdictional research, and large-scale document review. Used by elite firms (Allen & Overy, PwC).",
         "limitations": "Enterprise-only pricing. Requires firm-wide deployment and training. Best for large firms with high-volume, complex work.",
-        "stale": false
+        "stale": true
       }
     ],
     "education": [
@@ -914,7 +914,7 @@
         "pitch": "GPT-4-powered AI tutor and teaching assistant that guides students through problems with Socratic questioning rather than giving answers directly.",
         "bestFor": "K-12 and early college students who need on-demand tutoring in math, science, and humanities. Teachers can use it to generate lesson plans, differentiate instruction, and get real-time insight into where students are struggling. The Socratic approach means students build understanding rather than copying answers.",
         "limitations": "Effectiveness depends on students engaging honestly rather than trying to extract answers. Coverage is strongest in math and science — humanities tutoring is less developed. District-wide free access requires institutional partnerships, so individual teachers may need to pay or advocate for adoption.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "MagicSchool AI",
@@ -930,7 +930,7 @@
         "pitch": "AI platform built specifically for teachers with 60+ tools: lesson plan generator, rubric creator, IEP assistant, email drafter, accommodation suggester, and more.",
         "bestFor": "K-12 teachers drowning in planning and paperwork. Generates standards-aligned lesson plans in minutes, drafts IEP goals and accommodations, creates differentiated materials for multiple reading levels, and writes parent communication emails. The tool library is organized around actual teacher workflows rather than generic AI prompting.",
         "limitations": "Generated lesson plans still need teacher review and customization — they're solid starting points, not finished products. IEP suggestions must be reviewed by qualified special education staff; relying on AI-generated goals without professional judgment creates compliance and ethical risks. Quality varies across subject areas and grade levels.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Gradescope",
@@ -945,7 +945,7 @@
         "pitch": "AI-assisted grading platform (owned by Turnitin) that handles assignments, exams, and homework — including handwritten work and code submissions.",
         "bestFor": "Higher education instructors and TAs grading at scale. Upload scanned exams or homework, and AI groups similar answers together so you grade one rubric item across all students at once rather than grading each paper start-to-finish. Handles handwritten math, code autograding (Python, Java, C++, R), and bubble sheets. Cuts grading time by 50-70% in large lecture courses.",
         "limitations": "Requires institutional subscription — not available to individual teachers. Handwriting recognition struggles with very messy writing. Initial rubric setup takes effort; the time savings come on subsequent assignments once rubrics are dialed in. Code autograding requires instructor-written test cases.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Brisk Teaching",
@@ -961,7 +961,7 @@
         "pitch": "Chrome extension AI assistant that works inside the tools teachers already use — Google Docs, Slides, YouTube, and LMS platforms — to provide feedback, create materials, and adjust reading levels.",
         "bestFor": "Teachers who want AI assistance without switching to a separate platform. Highlight student text in Google Docs and get instant feedback suggestions. Generate quiz questions from a YouTube video. Adjust the reading level of a passage while keeping the content intact. The Chrome extension approach means it meets teachers where they already work.",
         "limitations": "Chrome-only, so educators on other browsers or school-issued devices with extension restrictions are out of luck. The free tier is limited in daily uses. As a newer entrant, the tool set is narrower than MagicSchool's and the company's long-term trajectory is less established.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Quillbot",
@@ -977,7 +977,7 @@
         "pitch": "AI writing assistant specializing in paraphrasing, grammar checking, summarizing, and citation generation — widely used by both students and educators.",
         "bestFor": "Students improving academic writing and non-native English speakers refining their work. The paraphraser helps rephrase sentences while preserving meaning. The citation generator supports APA, MLA, and Chicago formats. Summarizer can condense long readings for study prep. Faculty use it to clean up grant applications, course descriptions, and committee reports.",
         "limitations": "The paraphrasing tool is frequently used by students to evade plagiarism detection, which creates academic integrity concerns. The free tier limits paraphrasing to 125 words at a time. Citation generation sometimes produces formatting errors in edge cases — always verify against the style guide. Does not help with the substance of writing, only the surface.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Synthesia",
@@ -993,7 +993,7 @@
         "pitch": "AI video generation platform that creates professional training and educational videos using AI avatars — no camera, studio, or video editing skills required.",
         "bestFor": "Higher ed instructional designers and corporate training teams who need to produce video content at scale. Create lecture snippets, orientation videos, compliance training, or multilingual course materials by typing a script and selecting an avatar. Supports 120+ languages, making it useful for institutions serving diverse student populations. Updates are instant — change the script and regenerate rather than re-filming.",
         "limitations": "AI avatars are visibly synthetic, which can feel impersonal for relationship-dependent teaching contexts. Not a replacement for an engaging instructor on camera — works better for informational content than pedagogical interaction. The Starter plan limits video length and avatar choices. Students may disengage from avatar-presented content faster than from real instructor video.",
-        "stale": false
+        "stale": true
       }
     ],
     "creative-design": [
@@ -1011,7 +1011,7 @@
         "pitch": "AI image generation with exceptional aesthetic quality, accessed via Discord or web interface.",
         "bestFor": "Concept art, marketing visuals, mood boards, social media imagery. Produces consistently beautiful results with relatively simple prompts. Strong at photorealistic and artistic styles.",
         "limitations": "Discord-based workflow is awkward for some users (web editor now available). Limited control over precise details. Not great for text-in-image, technical diagrams, or exact brand specifications.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Adobe Firefly",
@@ -1026,7 +1026,7 @@
         "pitch": "AI image generation and editing integrated into Photoshop, Illustrator, and Express. Trained on licensed content.",
         "bestFor": "Creative professionals already in the Adobe ecosystem. Generative Fill in Photoshop, text-to-image, style transfer. Commercially safe (trained on Adobe Stock and licensed content).",
         "limitations": "Image quality below Midjourney for artistic work. Requires Creative Cloud for best experience. Standalone app is limited.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Suno",
@@ -1042,7 +1042,7 @@
         "pitch": "AI music generation from text prompts. Creates full songs with vocals, instruments, and production.",
         "bestFor": "Content creators needing background music, jingles, or podcast intros. Marketing teams creating audio content. Rapid prototyping of musical ideas.",
         "limitations": "Output quality is impressive but not professional studio quality. Limited control over arrangement details. Licensing terms vary by plan.",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Descript",
@@ -1059,7 +1059,7 @@
         "pitch": "AI-powered video and audio editing through text-based editing. Edit video by editing the transcript.",
         "bestFor": "Content creators, podcasters, and marketing teams. Edit video/audio by editing text, remove filler words automatically, generate clips, add captions. Dramatically lowers the skill bar for video production.",
         "limitations": "Complex edits still need traditional editors. AI voice cloning requires careful ethical use. Export quality can vary.",
-        "stale": false
+        "stale": true
       }
     ]
   },
@@ -1085,7 +1085,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Stakeholder Navigation",
@@ -1108,7 +1108,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Anticipatory Problem-Solving",
@@ -1130,7 +1130,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Confidentiality & Discretion",
@@ -1154,7 +1154,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Process Design & Optimization",
@@ -1176,7 +1176,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "marketing": [
@@ -1200,7 +1200,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Audience Empathy & Cultural Context",
@@ -1223,7 +1223,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Strategic Narrative Construction",
@@ -1247,7 +1247,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Channel Judgment & Resource Allocation",
@@ -1269,7 +1269,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Cross-Functional Translation",
@@ -1294,7 +1294,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "sales": [
@@ -1317,7 +1317,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Deal Instinct & Negotiation Reading",
@@ -1340,7 +1340,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Complex Problem Framing",
@@ -1363,7 +1363,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Strategic Account Orchestration",
@@ -1386,7 +1386,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Resilience & Rejection Processing",
@@ -1407,7 +1407,7 @@
         "appreciationScore": 7,
         "verified": "2026-04-03",
         "confidence": "medium",
-        "stale": false
+        "stale": true
       }
     ],
     "finance": [
@@ -1431,7 +1431,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Business Context Translation",
@@ -1455,7 +1455,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Risk Sensing & Scenario Thinking",
@@ -1476,7 +1476,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Ethical Stewardship",
@@ -1498,7 +1498,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Cross-Functional Financial Partnership",
@@ -1522,7 +1522,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "operations": [
@@ -1546,7 +1546,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Crisis Management & Adaptive Response",
@@ -1569,7 +1569,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Vendor & Partner Relationship Management",
@@ -1591,7 +1591,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Practical Innovation & Continuous Improvement",
@@ -1613,7 +1613,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Resource Allocation Under Constraints",
@@ -1636,7 +1636,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "communications": [
@@ -1662,7 +1662,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Authentic Voice & Tone Calibration",
@@ -1684,7 +1684,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Stakeholder Sensing & Narrative Timing",
@@ -1707,7 +1707,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Relationship Journalism & Media Fluency",
@@ -1729,7 +1729,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Internal Communication Architecture",
@@ -1751,7 +1751,7 @@
         "appreciationScore": 7,
         "verified": "2026-04-03",
         "confidence": "medium",
-        "stale": false
+        "stale": true
       }
     ],
     "people-management": [
@@ -1775,7 +1775,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Conflict Resolution & Difficult Conversations",
@@ -1798,7 +1798,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Team Design & Culture Shaping",
@@ -1821,7 +1821,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Change Leadership & AI Transition Management",
@@ -1845,7 +1845,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Performance Calibration & Fairness",
@@ -1868,7 +1868,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "customer-service": [
@@ -1893,7 +1893,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Complex Problem Diagnosis",
@@ -1915,7 +1915,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Customer Advocacy & Feedback Translation",
@@ -1939,7 +1939,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Retention & Relationship Recovery",
@@ -1961,7 +1961,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "technology": [
@@ -1985,7 +1985,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Debugging Intuition & Root Cause Analysis",
@@ -2008,7 +2008,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Codebase Stewardship & Technical Judgment",
@@ -2031,7 +2031,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Cross-Team Technical Communication",
@@ -2053,7 +2053,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Security Mindset & Adversarial Thinking",
@@ -2075,7 +2075,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "healthcare": [
@@ -2100,7 +2100,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Therapeutic Presence & Patient Communication",
@@ -2123,7 +2123,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Ethical Decision-Making in Care",
@@ -2146,7 +2146,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Interdisciplinary Care Coordination",
@@ -2170,7 +2170,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Physical Assessment & Procedural Skill",
@@ -2191,7 +2191,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "legal": [
@@ -2215,7 +2215,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Client Counseling & Trust",
@@ -2238,7 +2238,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Regulatory Anticipation & Strategic Compliance",
@@ -2261,7 +2261,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Negotiation & Deal Structuring",
@@ -2284,7 +2284,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "education": [
@@ -2309,7 +2309,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Mentorship & Individual Potential Recognition",
@@ -2329,7 +2329,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Learning Experience Design",
@@ -2351,7 +2351,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Assessment Integrity & Meaningful Evaluation",
@@ -2374,7 +2374,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ],
     "creative-design": [
@@ -2398,7 +2398,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Conceptual Thinking & Meaning-Making",
@@ -2420,7 +2420,7 @@
         "appreciationScore": 10,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Cultural Fluency & Context Sensitivity",
@@ -2442,7 +2442,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Craft Excellence & Detail Obsession",
@@ -2464,7 +2464,7 @@
         "appreciationScore": 9,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       },
       {
         "name": "Client & Stakeholder Translation",
@@ -2489,7 +2489,7 @@
         "appreciationScore": 8,
         "verified": "2026-04-03",
         "confidence": "high",
-        "stale": false
+        "stale": true
       }
     ]
   }

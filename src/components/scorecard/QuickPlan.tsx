@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -299,6 +300,7 @@ export default function QuickPlan({
           </p>
           <a
             href={`/assessment/start?occupation=${encodeURIComponent(slug)}&industry=${encodeURIComponent(industry)}&teamSize=${encodeURIComponent(teamSize)}`}
+            onClick={() => trackEvent("scorecard_cta", { slug, target: "assessment" })}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors no-underline"
           >
             Full deep dive
