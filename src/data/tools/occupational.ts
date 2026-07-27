@@ -546,6 +546,35 @@ export const OCCUPATION_TOOLS: OccupationTool[] = [
     lastVerified: "2026-07-27",
   },
   {
+    id: "openai-codex",
+    name: "OpenAI Codex",
+    url: "https://developers.openai.com/codex/",
+    description:
+      "Runs coding tasks from the terminal, an IDE extension, or the cloud — picking up a GitHub issue, writing the change, and opening a pull request for review.",
+    automates: [
+      "Feature and bug-fix implementation from a written task",
+      "Pull request creation from a GitHub issue",
+      "Local code execution and iteration inside the IDE",
+      "Parallel cloud tasks running against a repository",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Included with ChatGPT plans and sharing their usage limits: Free $0; Go $8/mo; Plus $20/mo; Pro from $100/mo (5x limits) or $200/mo (20x); Business $20/user/mo billed annually; Enterprise contact sales",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: [
+      "software-developers",
+      "computer-programmers",
+      "web-developers",
+      "computer-systems-analysts",
+    ],
+    limitations: [
+      "Shares one usage budget with the rest of ChatGPT on the same plan",
+      "Lightweight tasks only on the Go tier",
+      "Opens pull requests — a human still reviews and merges",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
     id: "cursor",
     name: "Cursor",
     url: "https://cursor.com",
@@ -604,6 +633,112 @@ export const OCCUPATION_TOOLS: OccupationTool[] = [
       "Organizational policy often restricts which repositories it can see",
     ],
     lastVerified: "2026-07-26",
+  },
+  {
+    id: "google-jules",
+    name: "Google Jules",
+    url: "https://jules.google/",
+    description:
+      "Takes a repository and a written task, plans the change with Gemini, and returns a diff and a pull request — asynchronously, so several tasks run at once without occupying the developer.",
+    automates: [
+      "Bug fixes and dependency version upgrades",
+      "Test writing and code refactoring",
+      "Feature implementation against a named branch",
+      "Parallel task execution across a repository",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Free tier: 15 tasks/day, 3 concurrent (Gemini 2.5 Pro); Pro: 100 tasks/day, 15 concurrent (Gemini 3 Pro); Ultra: 300 tasks/day, 60 concurrent",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: ["software-developers", "computer-programmers"],
+    limitations: [
+      "Requires GitHub — it works against repositories, not local-only code",
+      "Task-metered per day rather than priced per seat",
+      "Every diff lands as a pull request awaiting human approval",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "replit",
+    name: "Replit",
+    url: "https://replit.com/pricing",
+    description:
+      "Builds and deploys a working application from a plain-English description in the browser, with no local environment to set up.",
+    automates: [
+      "Application scaffolding from a written prompt",
+      "Environment setup, dependency installation, and hosting",
+      "Iterative feature changes through conversation",
+      "Deployment without separate infrastructure work",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Starter free with daily Agent credits; Core $20/mo billed annually ($25 monthly, 2 parallel agents); Pro $95/mo annually ($100 monthly, 10 parallel agents); Enterprise custom",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: [
+      "software-developers",
+      "computer-programmers",
+      "web-developers",
+    ],
+    limitations: [
+      "Vendor notes agent behavior is probabilistic and can make mistakes",
+      "Best suited to greenfield apps, not large existing codebases",
+      "Runs in Replit's environment, which is a constraint for regulated work",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "amazon-q-developer",
+    name: "Amazon Q Developer",
+    url: "https://aws.amazon.com/q/developer/",
+    description:
+      "Answers questions and makes agentic code changes in the IDE and CLI, and does bulk language upgrades — the Java version migrations that otherwise consume quarters.",
+    automates: [
+      "Agentic code changes from the IDE or command line",
+      "Java version upgrade transformations at scale",
+      "Codebase question answering in the editor",
+      "AWS-aware troubleshooting and configuration",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Free tier $0 (50 agentic requests/mo, 1,000 lines/mo of code transformation); Pro $19/user/mo (4,000 lines/mo, IP indemnity, admin dashboard)",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: [
+      "software-developers",
+      "computer-programmers",
+      "computer-systems-analysts",
+      "network-and-computer-systems-administrators",
+    ],
+    limitations: [
+      "Most valuable inside an AWS environment",
+      "Code transformation is metered by lines per month, not unlimited",
+      "Free tier caps agentic requests at 50/month",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "mabl",
+    name: "mabl",
+    url: "https://www.mabl.com/",
+    description:
+      "Generates web, mobile, and API tests, then repairs them itself when the interface changes — removing most of the maintenance that makes automated suites rot.",
+    automates: [
+      "Test creation across web, mobile, and API from generative prompts",
+      "Auto-healing of tests when selectors or layouts change",
+      "Failure triage with root cause summaries",
+      "Regression suite execution and reporting",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Pricing not public — quoted per organization; base includes 500 cloud test-run credits/mo with unlimited local runs",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: ["software-developers", "computer-programmers"],
+    employerDeployed: true,
+    limitations: [
+      "Bought by the QA or engineering org, not by an individual tester",
+      "Cloud runs are credit-metered, so broad suites raise cost",
+      "Test maintenance is a large share of the QA analyst job",
+    ],
+    lastVerified: "2026-07-27",
   },
   {
     id: "elicit",
