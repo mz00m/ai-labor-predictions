@@ -18,7 +18,7 @@
         "oecd-youth-employment-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "wage",
+      "metricType": "employment",
       "dataType": "observed"
     },
     {
@@ -28,7 +28,7 @@
         "bls-entry-wages-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "wage",
+      "metricType": "employment",
       "dataType": "observed"
     },
     {
