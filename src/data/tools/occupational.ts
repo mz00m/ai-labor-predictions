@@ -1642,4 +1642,545 @@ export const OCCUPATION_TOOLS: OccupationTool[] = [
     ],
     lastVerified: "2026-07-27",
   },
+
+  // -------------------------------------------------------------------------
+  // Administrative, clerical, and back-office
+  // -------------------------------------------------------------------------
+  {
+    id: "microsoft-365-copilot",
+    name: "Microsoft 365 Copilot",
+    url: "https://www.microsoft.com/en-us/microsoft-365/copilot",
+    description:
+      "Sits inside Outlook, Word, Excel, and Teams — summarizing long email threads, drafting documents from a prompt, analyzing spreadsheets in plain language, and writing up meetings with action items.",
+    automates: [
+      "Email thread summarization and reply drafting in Outlook",
+      "Document drafting, editing, and summarization in Word",
+      "Spreadsheet analysis and chart generation in Excel",
+      "Meeting notes and action-item capture in Teams",
+    ],
+    aiNative: "ai-enhanced",
+    pricingDetails:
+      "Copilot add-on $18/user/mo billed annually ($25.20 monthly); Business Standard with Copilot $23.50/user/mo annually ($28.20 monthly); Business Premium with Copilot $32/user/mo annually ($38.40 monthly)",
+    occupationCategories: ["office-and-administrative-support"],
+    occupationSlugs: [
+      "secretaries-and-administrative-assistants",
+      "general-office-clerks",
+      "receptionists",
+      "information-clerks",
+      "administrative-services-managers",
+    ],
+    limitations: [
+      "Requires an eligible Microsoft 365 subscription underneath the add-on",
+      "Quality depends on what it can see — poorly organized files produce poor summaries",
+      "The drafting and summarizing it does is the core of many admin roles",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "ramp",
+    name: "Ramp",
+    url: "https://ramp.com/pricing",
+    description:
+      "Reads invoices as they arrive, codes each line to the right account, and recommends approvals — replacing the manual keying and matching that fills an accounts-payable day.",
+    automates: [
+      "Invoice capture and data extraction from PDFs and email",
+      "Line-item GL coding learned from past transactions",
+      "Approval routing recommendations",
+      "Receipt matching and expense report review",
+    ],
+    aiNative: "ai-enhanced",
+    pricingDetails:
+      "Free $0; Plus $15/user/mo plus platform fee (20% off with annual billing); Enterprise custom",
+    occupationCategories: [
+      "business-and-financial",
+      "office-and-administrative-support",
+    ],
+    occupationSlugs: [
+      "financial-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "bill-and-account-collectors",
+    ],
+    employerDeployed: true,
+    limitations: [
+      "Adopted by the finance org, not by an individual clerk",
+      "Coding accuracy depends on a clean transaction history to learn from",
+      "Month-end close judgment and exception handling stay human",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "asana-ai",
+    name: "Asana AI",
+    url: "https://asana.com/pricing",
+    description:
+      "Builds no-code agents that triage incoming requests, chase status updates, and flag at-risk work — the coordination overhead that consumes a project manager's week.",
+    automates: [
+      "Intake triage and routing of new requests",
+      "Status update drafting and portfolio roll-up reporting",
+      "Risk identification across projects",
+      "Recurring workflow steps handled by AI teammates",
+    ],
+    aiNative: "ai-enhanced",
+    pricingDetails:
+      "Personal $0 (no AI Studio); Starter $10.99/user/mo annually ($13.49 monthly, 50K AI credits); Advanced $24.99 annually ($30.49 monthly, 75K credits); Enterprise contact sales (200K credits)",
+    occupationCategories: ["business-and-financial", "management"],
+    occupationSlugs: ["project-management-specialists", "logisticians"],
+    limitations: [
+      "AI Studio requires Starter or above — the free tier has none of it",
+      "Credit-metered, so heavy agent use raises the effective price",
+      "Stakeholder negotiation and scope decisions remain human work",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "evolutioniq",
+    name: "EvolutionIQ",
+    url: "https://www.evolutioniq.com/",
+    description:
+      "Reads a claim file — including the medical records — and tells an adjuster which claims need attention now, which are drifting, and what the next action should be.",
+    automates: [
+      "Claim triage and prioritization across a caseload",
+      "Medical record summarization into clinical insights",
+      "Ongoing monitoring for claims at risk of escalating",
+      "Return-to-work opportunity identification",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["business-and-financial"],
+    occupationSlugs: ["claims-adjusters-appraisers-examiners-and-investigators"],
+    employerDeployed: true,
+    limitations: [
+      "Built for workers' comp, disability, and income protection lines — not auto or property",
+      "Procured by the carrier, not adopted by an individual adjuster",
+      "Vendor reports 20%+ handling capacity gains — capacity the carrier can redeploy",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "slang-ai",
+    name: "Slang.ai",
+    url: "https://www.slang.ai/pricing",
+    description:
+      "Answers the business phone around the clock — taking reservations, answering hours and directions questions, routing VIP callers, and texting confirmations.",
+    automates: [
+      "Inbound call answering and common question handling",
+      "Reservation booking through OpenTable and SevenRooms",
+      "Call routing by caller and request type",
+      "Confirmation and follow-up texting",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Core $399/location/mo; Premium $599/location/mo; Enterprise custom; add-ons: bilingual Spanish $99/mo, private events $199/mo",
+    occupationCategories: ["office-and-administrative-support", "management"],
+    occupationSlugs: ["receptionists", "food-service-managers"],
+    employerDeployed: true,
+    limitations: [
+      "Priced per location, so it is a business purchase rather than a personal tool",
+      "Handles routine calls — complex or upset callers still need a person",
+      "Answering the phone is the whole job for many front-desk roles",
+    ],
+    lastVerified: "2026-07-27",
+  },
+
+  // -------------------------------------------------------------------------
+  // Management, procurement, and operations
+  // -------------------------------------------------------------------------
+  {
+    id: "glean",
+    name: "Glean",
+    url: "https://www.glean.com/",
+    description:
+      "Answers questions against everything the company knows — Slack, Drive, Jira, Confluence, SharePoint, Salesforce — so a leader can get a grounded answer without routing the question through three people.",
+    automates: [
+      "Cross-system enterprise search and question answering",
+      "Briefing and summarization from internal documents",
+      "Natural-language agent building without code",
+      "Routine information requests that would otherwise go to staff",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["management"],
+    occupationSlugs: [
+      "top-executives",
+      "administrative-services-managers",
+    ],
+    employerDeployed: true,
+    limitations: [
+      "Only as good as what it is connected to and permitted to read",
+      "Bought at the org level after a security review, not adopted individually",
+      "Answers still need judgment — it retrieves, it does not decide",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "zip-procurement",
+    name: "Zip",
+    url: "https://zip.com/",
+    description:
+      "Runs purchase requests end to end — guiding intake, checking each request against policy, managing RFx, and matching POs to invoices.",
+    automates: [
+      "Purchase request intake and approval routing",
+      "Policy and risk validation on every request",
+      "RFx and sourcing event management",
+      "PO and invoice matching",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["business-and-financial"],
+    occupationSlugs: ["purchasing-managers-buyers-and-purchasing-agents"],
+    employerDeployed: true,
+    limitations: [
+      "Procured by the finance or procurement org, not by an individual buyer",
+      "Vendor claims 55% faster cycles — that is throughput per buyer, not headcount",
+      "Supplier negotiation and category strategy stay human",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "gather-ai",
+    name: "Gather AI",
+    url: "https://www.gather.ai/",
+    description:
+      "Flies drones and mounts forklift cameras to count warehouse inventory continuously, replacing the periodic manual cycle count with live shelf-to-record data.",
+    automates: [
+      "Pallet-level cycle counting across aisles",
+      "Location and case-level inventory verification",
+      "Exception flagging where the shelf disagrees with the record",
+      "Standardized inventory reporting across facilities",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["office-and-administrative-support"],
+    occupationSlugs: ["material-recording-clerks"],
+    employerDeployed: true,
+    limitations: [
+      "Requires drone or forklift camera deployment in the facility",
+      "Bought by the warehouse operator, not the clerk doing the counting",
+      "Manual cycle counting is a large share of the material-recording clerk job",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "buildots",
+    name: "Buildots",
+    url: "https://www.buildots.com/",
+    description:
+      "Compares what cameras see on site against the construction plan, producing an objective progress report and flagging the deviations that will push the delivery date.",
+    automates: [
+      "Progress measurement against schedule, trade by trade",
+      "Deviation and delay risk detection",
+      "As-built documentation of what was completed when",
+      "Portfolio-level standardized reporting",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["management", "construction-and-extraction"],
+    occupationSlugs: ["construction-managers"],
+    employerDeployed: true,
+    limitations: [
+      "Requires site hardware and a structured project plan to compare against",
+      "Bought by the contractor or owner, not by an individual superintendent",
+      "Measures progress — it does not resolve the trade conflicts it surfaces",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "qventus",
+    name: "Qventus",
+    url: "https://qventus.com/",
+    description:
+      "Runs hospital capacity and surgical scheduling — setting achievable discharge dates, coordinating ancillary resources, and handling the pre-admission administrative follow-up.",
+    automates: [
+      "Discharge date setting and ancillary resource coordination",
+      "Surgical case scheduling and OR block optimization",
+      "Pre-admission testing outreach and preparation",
+      "Capacity forecasting across inpatient units",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["management", "healthcare"],
+    occupationSlugs: ["medical-and-health-services-managers"],
+    employerDeployed: true,
+    limitations: [
+      "Sold to health systems, not to an individual manager",
+      "Vendor reports 15-30% reduction in excess patient days — throughput, not staffing",
+      "Requires EHR integration and clinical buy-in to change behavior",
+    ],
+    lastVerified: "2026-07-27",
+  },
+
+  // -------------------------------------------------------------------------
+  // Specialist professional and technical
+  // -------------------------------------------------------------------------
+  {
+    id: "ocrolus",
+    name: "Ocrolus",
+    url: "https://www.ocrolus.com/",
+    description:
+      "Reads bank statements, pay stubs, and tax documents to calculate income and cash flow — the manual document review that sits between an application and a credit decision.",
+    automates: [
+      "Bank statement, pay stub, and tax document extraction",
+      "Income calculation across borrower types",
+      "Cash flow and debt capacity analysis",
+      "Fraud and document tampering detection",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["business-and-financial"],
+    occupationSlugs: ["loan-officers"],
+    employerDeployed: true,
+    limitations: [
+      "Bought by the lender, not adopted by an individual loan officer",
+      "Extraction and calculation only — the credit decision stays with the institution",
+      "Document review is much of the entry-level loan processing job",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "muck-rack",
+    name: "Muck Rack",
+    url: "https://muckrack.com/",
+    description:
+      "Recommends which journalists to pitch, drafts the outreach, and tags coverage by theme and spokesperson — the list-building and clip-reading that fills a PR week.",
+    automates: [
+      "Journalist matching and pitch list building",
+      "Pitch email drafting",
+      "Coverage tagging by theme, spokesperson, and sentiment",
+      "Reporting and PR hit scoring",
+    ],
+    aiNative: "ai-enhanced",
+    pricingDetails: "Pricing not public — quoted by team size and tier",
+    occupationCategories: ["media-and-communication", "management"],
+    occupationSlugs: ["public-relations-specialists", "public-relations-managers"],
+    limitations: [
+      "Advanced AI tagging and scoring are Premier-tier only",
+      "Relationship building with reporters is the part it cannot do",
+      "Add-ons for print monitoring, social listening, and API access cost extra",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "togal-ai",
+    name: "Togal.AI",
+    url: "https://www.togal.ai/",
+    description:
+      "Reads a construction drawing set and performs the takeoff automatically — measuring and classifying areas by trade instead of clicking through plans by hand.",
+    automates: [
+      "Automated quantity takeoff from drawing sets",
+      "Trade classification of measured areas",
+      "Symbol and image search across plan sets",
+      "Drawing comparison across revisions",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Growth $299/user/mo billed yearly; Business custom pricing for teams of 4+",
+    occupationCategories: ["business-and-financial", "architecture-and-engineering"],
+    occupationSlugs: ["cost-estimators"],
+    limitations: [
+      "Takeoff only — pricing the work still requires estimator judgment",
+      "Accuracy depends on drawing quality and consistent plan conventions",
+      "Manual takeoff is a large share of the preconstruction estimating day",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "synopsys-ai",
+    name: "Synopsys.ai",
+    url: "https://www.synopsys.com/ai.html",
+    description:
+      "Searches the chip design space automatically — optimizing floorplans, finding the tests that close verification coverage, and migrating analog designs across process corners.",
+    automates: [
+      "Digital design optimization: floorplanning, timing, power",
+      "Verification coverage closure through targeted test generation",
+      "Analog design migration and multi-objective optimization",
+      "Design-flow question answering through a generative copilot",
+    ],
+    aiNative: "ai-enhanced",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["architecture-and-engineering"],
+    occupationSlugs: [
+      "electrical-and-electronics-engineers",
+      "computer-hardware-engineers",
+    ],
+    employerDeployed: true,
+    limitations: [
+      "Requires the underlying Synopsys EDA toolchain — a large enterprise commitment",
+      "Optimizes within a flow an engineer defines; it does not set architecture",
+      "Licensed at the design-team level, not by an individual engineer",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "paige-ai",
+    name: "Paige",
+    url: "https://www.paige.ai/",
+    description:
+      "Reviews digitized pathology slides for signs of cancer across prostate, breast, and GI tissue, flagging suspicious regions before a pathologist reads the case.",
+    automates: [
+      "Cancer detection and classification on whole-slide images",
+      "Case prioritization by suspicion level",
+      "Molecular biomarker signals read directly from tissue",
+      "Quality-control second reads",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["healthcare"],
+    occupationSlugs: [
+      "physicians-and-surgeons",
+      "clinical-laboratory-technologists-and-technicians",
+    ],
+    employerDeployed: true,
+    limitations: [
+      "Requires a digital pathology scanning workflow the lab must already have",
+      "Assistive — the pathologist signs the diagnosis",
+      "Bought by the lab or health system, not by an individual technologist",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "ambient-ai",
+    name: "Ambient.ai",
+    url: "https://ambient.ai/",
+    description:
+      "Watches camera feeds continuously and flags only the activity that matters, correlating video with access control so operators are not scanning monitors for hours.",
+    automates: [
+      "Continuous camera monitoring and activity flagging",
+      "Threat signature detection across 150+ patterns",
+      "Video and access-control alarm correlation",
+      "Forensic search across footage by sequence and context",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["protective-service"],
+    occupationSlugs: ["security-guards"],
+    employerDeployed: true,
+    limitations: [
+      "Bought by the corporate security org, not by an individual guard",
+      "Vendor claims 95%+ false alert elimination — that reduces monitoring headcount need",
+      "Physical response, patrol, and de-escalation remain human work",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "civils-ai",
+    name: "Civils.ai",
+    url: "https://www.civils.ai/",
+    description:
+      "Reads construction drawings, geotechnical reports, and specifications — pulling quantities, extracting borehole data, and running compliance checks written in plain English.",
+    automates: [
+      "Quantity takeoff from PDF drawings for groundworks, utilities, and concrete",
+      "Borehole and subsurface data extraction from geotechnical reports",
+      "Specification and code compliance checking against a knowledge base",
+      "Reading scanned, handwritten, and historic drawing sets",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["architecture-and-engineering"],
+    occupationSlugs: ["civil-engineers", "civil-engineering-technicians"],
+    limitations: [
+      "Vendor states 97% accuracy with human-in-the-loop QA — output needs review",
+      "Extraction and checking only; design decisions stay with the engineer",
+      "Used by large firms (AECOM, Arup, WSP) — procurement is firm-level",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "instrumental",
+    name: "Instrumental",
+    url: "https://instrumental.com/",
+    description:
+      "Watches assembly-line images for defects nobody has defined yet, surfacing new failure modes and turning them into inspection tests across factories.",
+    automates: [
+      "Visual defect detection on the line, including unknown failure modes",
+      "Root cause analysis across inspection, test, and process data",
+      "Deployment of discovered failures as standardized inspection tests",
+      "Cross-factory drift monitoring",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["production", "architecture-and-engineering"],
+    occupationSlugs: ["quality-control-inspectors", "industrial-engineers"],
+    employerDeployed: true,
+    limitations: [
+      "Requires camera stations installed on the production line",
+      "Bought by manufacturing operations, not by an individual inspector",
+      "Vendor reports ~90% reduction in failure analysis time",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "augury",
+    name: "Augury",
+    url: "https://www.augury.com/",
+    description:
+      "Listens to rotating equipment continuously and names what is failing, how urgent it is, and what to do — replacing route-based manual vibration checks.",
+    automates: [
+      "Continuous condition monitoring of motors, pumps, bearings, and gearboxes",
+      "Failure prediction with urgency ranking",
+      "Root cause diagnosis and recommended corrective action",
+      "Manual route-based inspection rounds",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["installation-maintenance-and-repair", "management"],
+    occupationSlugs: [
+      "industrial-machinery-mechanics-and-maintenance-workers-and-millwrights",
+      "industrial-production-managers",
+    ],
+    employerDeployed: true,
+    limitations: [
+      "Requires sensors installed on each monitored asset",
+      "Bought by the plant, not by an individual technician",
+      "Diagnoses the fault — the repair is still hands-on work",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "uveye",
+    name: "UVeye",
+    url: "https://www.uveye.com/",
+    description:
+      "Scans a vehicle in seconds as it drives through, imaging the undercarriage, body, and tires to flag leaks, rust, damage, and wear before a technician looks at it.",
+    automates: [
+      "Undercarriage inspection for leaks, rust, and structural damage",
+      "Exterior damage detection for dents and scratches",
+      "Tire wear and alignment assessment",
+      "Trade-in appraisal and service-lane write-up documentation",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["installation-maintenance-and-repair"],
+    occupationSlugs: ["automotive-service-technicians-and-mechanics"],
+    employerDeployed: true,
+    limitations: [
+      "Installed by the dealership or fleet operator, not by a technician",
+      "Surfaces findings — diagnosis and repair remain the technician's job",
+      "Fixed-lane hardware, so it does not travel to mobile or roadside work",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "arine",
+    name: "Arine",
+    url: "https://www.arine.io/",
+    description:
+      "Reviews a patient's full medication picture against clinical, behavioral, and social data to flag drug problems before they become an admission, and drafts the intervention.",
+    automates: [
+      "Population-wide medication risk identification",
+      "Comprehensive medication review preparation",
+      "Intervention recommendation drafting for care teams",
+      "Prioritization of which patients a pharmacist should call",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["healthcare"],
+    occupationSlugs: ["pharmacists"],
+    employerDeployed: true,
+    limitations: [
+      "Sold to health plans and PBMs, not to retail or hospital pharmacists directly",
+      "Recommendation only — the pharmacist makes and documents the call",
+      "Built for managed-care medication management, not dispensing workflow",
+    ],
+    lastVerified: "2026-07-27",
+  },
 ];

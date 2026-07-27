@@ -205,11 +205,18 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
         </div>
 
         {/* Tools built for this occupation */}
-        {scorecard.tools.length > 0 && (
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
-              Tools built for this work
-            </h2>
+        <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
+            Tools built for this work
+          </h2>
+          {scorecard.tools.length === 0 ? (
+            <p className="text-sm text-gray-600">
+              None that we know of at this time. We list tools built for the
+              specific work of this occupation, not general-purpose office
+              software — and for this role we have not found one worth
+              recommending yet. We keep looking.
+            </p>
+          ) : (
             <div className="space-y-4">
               {scorecard.tools.map((tool, i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -248,8 +255,8 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
                 </div>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Level-up actions */}
         <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
