@@ -422,6 +422,31 @@ Update `src/data/confirmed-sources.json`:
 
 3. **Sync the display constant**: Update `SOURCE_COUNT` in `src/lib/constants.ts` to match the new `totalSources`. This constant feeds the root metadata, the chatbot system prompt, and several page descriptions — if it drifts, the site contradicts its own registry.
 
+### Step 8.5: Write the Source-Content KB File (mandatory)
+
+Create `src/data/source-content/[source-id].json`. **The filename must exactly match the source ID** — the loader in `src/lib/chat/source-content.ts` resolves it by path, so a mismatched name is a silent miss.
+
+This step is not optional and is not covered by Step 8. The registry entry holds a single `excerpt`; this file holds the substance. `buildChatContext` collects source IDs from the graphs relevant to a user's question and loads these files to ground its answer. **A source without this file is invisible to the site chat**, no matter how well it is registered or plotted.
+
+```json
+{
+  "abstract": "[500-2000 chars: what the source studied and what it concluded, including the headline numbers in context]",
+  "keyFindings": [
+    "[3-7 findings, each leading with the number and its unit/population]"
+  ],
+  "methodology": "[study design, sample size, data period, geography, instrument]",
+  "qualifiers": "[tier justification, then caveats: sampling limits, self-report bias, causal-identification limits, what the source explicitly declines to claim]",
+  "id": "[source-id]",
+  "fetchedAt": "[YYYY-MM-DD]"
+}
+```
+
+Rules:
+* Every number here must trace to verbatim source text you actually read — same bar as Step 3. Do not restate a figure from a search snippet or an abstract summary.
+* `qualifiers` must carry the limitations honestly. This is the field that stops the chat from overclaiming.
+* If the source supersedes or retracts an earlier one, say so in the first sentence of `abstract` (see `metr-2026.json` for the pattern).
+* Do not create a KB file for a source you are not registering — orphan files are dead weight the chat can never reach.
+
 ### Step 9: Update Timestamps
 
 After all file changes are applied:
@@ -455,6 +480,35 @@ for(const cat of fs.readdirSync(dir)){
 console.log(ok?"VALIDATION PASSED":"VALIDATION FAILED");
 '
 ```
+
+Then verify every plotted source is reachable by the chat:
+
+```bash
+node -e '
+const fs=require("fs"),path=require("path");
+const reg=JSON.parse(fs.readFileSync("src/data/confirmed-sources.json")).sources;
+const kb=new Set(fs.readdirSync("src/data/source-content").filter(f=>f.endsWith(".json")).map(f=>f.slice(0,-5)));
+const used=new Set();
+const dir="src/data/predictions";
+for(const cat of fs.readdirSync(dir)){
+  const p=path.join(dir,cat); if(!fs.statSync(p).isDirectory()||cat==="_archived")continue;
+  for(const f of fs.readdirSync(p)){
+    if(!f.endsWith(".json"))continue;
+    const j=JSON.parse(fs.readFileSync(path.join(p,f)));
+    for(const e of [...(j.history||[]),...(j.overlays||[])]) (e.sourceIds||[]).forEach(id=>used.add(id));
+  }
+}
+const noKb=[...used].filter(id=>!kb.has(id));
+const noReg=[...used].filter(id=>!reg[id]);
+const orphan=[...kb].filter(id=>!reg[id]);
+if(noKb.length)console.log("MISSING KB FILE (invisible to chat):",noKb.join(", "));
+if(noReg.length)console.log("PLOTTED BUT UNREGISTERED:",noReg.join(", "));
+if(orphan.length)console.log("ORPHAN KB (no registry entry):",orphan.join(", "));
+console.log(noKb.length||noReg.length?"SOURCE CHECK FAILED":"SOURCE CHECK PASSED");
+'
+```
+
+`MISSING KB FILE` and `PLOTTED BUT UNREGISTERED` are hard failures — fix before committing. `ORPHAN KB` is a warning; it usually means a source was researched and extracted but never ingested.
 
 Investigate every `SUSPECT`/`UNSORTED`/`WARN` line that involves an entry you just added. Then confirm the headline didn't move unexpectedly: report the graph's `currentValue` (or latest point on `"latest"` graphs) before vs. after.
 
