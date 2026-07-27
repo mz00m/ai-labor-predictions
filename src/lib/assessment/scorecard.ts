@@ -163,7 +163,7 @@ function estimateTimeSavings(exposure: number): number {
 // Tool recommendations (top 3 from existing KB)
 // ---------------------------------------------------------------------------
 
-const MAX_TOOLS = 4;
+const MAX_TOOLS = 6;
 
 /**
  * Tools someone in this job would recognize, drawn from the occupation-keyed

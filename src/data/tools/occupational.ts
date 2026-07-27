@@ -513,6 +513,39 @@ export const OCCUPATION_TOOLS: OccupationTool[] = [
   // Software, IT, data, and research
   // -------------------------------------------------------------------------
   {
+    id: "claude-code",
+    name: "Claude Code",
+    url: "https://claude.com/product/claude-code",
+    description:
+      "Terminal-based coding agent that reads a repository, edits files across it, runs tests, and opens pull requests from a written instruction.",
+    automates: [
+      "Multi-file changes reasoned across an entire codebase",
+      "Test writing and iterating until the suite passes",
+      "Debugging from a stack trace or failing test",
+      "Commit, branch, and pull request creation",
+      "Codebase questions without reading the files yourself",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Not on Free; Pro $17/mo billed annually ($20 monthly); Max from $100/mo; Team $20/seat/mo annually ($25 monthly), Premium seat $100/mo annually",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: [
+      "software-developers",
+      "computer-programmers",
+      "web-developers",
+      "computer-systems-analysts",
+      "database-administrators",
+      "computer-and-information-research-scientists",
+      "network-and-computer-systems-administrators",
+    ],
+    limitations: [
+      "Shares your plan's usage limits — heavy sessions hit them",
+      "Acts on a real repository, so it needs review before merge",
+      "Weaker on large legacy codebases with thin test coverage",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
     id: "cursor",
     name: "Cursor",
     url: "https://cursor.com",
@@ -1502,5 +1535,111 @@ export const OCCUPATION_TOOLS: OccupationTool[] = [
       "Bias detection reflects its training data, not your applicant pool",
     ],
     lastVerified: "2026-07-26",
+  },
+
+  // -------------------------------------------------------------------------
+  // Software agents, QA, and operations
+  // -------------------------------------------------------------------------
+  {
+    id: "devin",
+    name: "Devin",
+    url: "https://devin.ai",
+    description:
+      "Cognition's autonomous engineering agent that picks up a ticket, works it in its own cloud environment, and returns a pull request.",
+    automates: [
+      "Working assigned tickets end to end from Linear or Jira",
+      "Running many concurrent sessions against separate tasks",
+      "Migrations and repetitive refactors across a repository",
+      "Bug reproduction and fix drafting",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "Pro $20/mo; Max $200/mo; Teams $80/mo base plus $40/mo per developer seat; Enterprise custom",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: ["software-developers", "computer-programmers"],
+    limitations: [
+      "Cognition acquired Windsurf — that product now sits under the same roof",
+      "Usage runs on quotas that refresh daily and weekly; overages bill at API rates",
+      "Autonomy is best on well-scoped, well-tested work, not ambiguous design",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "qodo",
+    name: "Qodo",
+    url: "https://www.qodo.ai",
+    description:
+      "Reviews pull requests against your codebase and your written rules, catching regressions before a human reviewer or QA engineer sees them.",
+    automates: [
+      "Agentic pull request review in the PR, IDE, and CLI",
+      "Enforcement of team coding standards through a rules system",
+      "Codebase quality monitoring over time",
+      "Cross-repository analysis (Enterprise)",
+    ],
+    aiNative: "ai-native",
+    pricingDetails:
+      "14-day free trial; Pro Team $30/mo for up to 30 users with credit packs ($0.012/credit, ~18-144 reviews); Enterprise custom above 30 users",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: ["software-developers", "computer-programmers", "web-developers"],
+    limitations: [
+      "Metered by credits — review volume, not seats, drives cost",
+      "Catches code-level defects, not requirements or UX problems",
+      "Still an assist to review, not a replacement for a human approver",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "datadog-bits",
+    name: "Datadog Bits AI",
+    url: "https://www.datadoghq.com/product/bits-ai/",
+    description:
+      "Investigates alerts automatically — correlating telemetry, naming a root cause, and summarizing blast radius before an on-call engineer opens a dashboard.",
+    automates: [
+      "Alert investigation and telemetry correlation",
+      "Root cause identification and impact summaries",
+      "Natural-language querying across logs, metrics, and traces",
+      "Custom incident response agents",
+    ],
+    aiNative: "ai-enhanced",
+    pricingDetails:
+      "AI features billed as AI Credits on top of platform pricing; Infrastructure Pro from $15/host/mo, APM from $31/host/mo (annual billing)",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: [
+      "network-and-computer-systems-administrators",
+      "computer-network-architects",
+      "computer-support-specialists",
+      "computer-and-information-systems-managers",
+    ],
+    employerDeployed: true,
+    limitations: [
+      "Bought at the org level — an individual admin does not procure it",
+      "AI Credits are a separate line item from host and APM pricing",
+      "Root cause suggestions still need confirmation before remediation",
+    ],
+    lastVerified: "2026-07-27",
+  },
+  {
+    id: "charlotte-ai",
+    name: "CrowdStrike Charlotte AI",
+    url: "https://www.crowdstrike.com/en-us/platform/charlotte-ai/",
+    description:
+      "Triages security detections the way an experienced analyst would, filtering false positives so the queue that reaches a human is the one that matters.",
+    automates: [
+      "Detection triage and false-positive filtering",
+      "Investigation summarization and enrichment",
+      "Agentic SOAR workflows across security tools",
+      "No-code custom agent building",
+    ],
+    aiNative: "ai-native",
+    pricingDetails: "Pricing not public",
+    occupationCategories: ["computer-and-information-technology"],
+    occupationSlugs: ["information-security-analysts"],
+    employerDeployed: true,
+    limitations: [
+      "Requires the CrowdStrike Falcon platform — not standalone",
+      "Bought by the security org, not the individual analyst",
+      "Automating triage directly targets the tier-1 analyst workload",
+    ],
+    lastVerified: "2026-07-27",
   },
 ];
