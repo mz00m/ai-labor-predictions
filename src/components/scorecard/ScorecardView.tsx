@@ -204,33 +204,38 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
           </div>
         </div>
 
-        {/* Top 3 tools */}
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
-          <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
-            Top tools for your role
-          </h2>
-          <div className="space-y-4">
-            {scorecard.tools.map((tool, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <span
-                  className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5"
-                  style={{ backgroundColor: colors.ring }}
-                >
-                  {i + 1}
-                </span>
-                <div className="min-w-0">
-                  <div className="flex items-baseline gap-2 flex-wrap">
-                    <span className="font-semibold text-gray-900">
-                      {tool.name}
-                    </span>
-                    <span className="text-xs text-gray-400">
-                      {tool.pricingDetails}
-                    </span>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-0.5">
-                    {tool.description}
-                  </p>
-                  {tool.url && (
+        {/* Tools built for this occupation */}
+        {scorecard.tools.length > 0 && (
+          <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
+            <h2 className="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
+              Tools built for this work
+            </h2>
+            <div className="space-y-4">
+              {scorecard.tools.map((tool, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span
+                    className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5"
+                    style={{ backgroundColor: colors.ring }}
+                  >
+                    {i + 1}
+                  </span>
+                  <div className="min-w-0">
+                    <div className="flex items-baseline gap-2 flex-wrap">
+                      <span className="font-semibold text-gray-900">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-gray-400">
+                        {tool.pricingDetails}
+                      </span>
+                      {tool.employerDeployed && (
+                        <span className="text-[11px] text-gray-500 border border-gray-200 rounded px-1.5 py-0.5">
+                          Employer-deployed
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-600 mt-0.5">
+                      {tool.description}
+                    </p>
                     <a
                       href={tool.url}
                       target="_blank"
@@ -239,12 +244,12 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
                     >
                       Learn more
                     </a>
-                  )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Level-up actions */}
         <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 mb-6">
