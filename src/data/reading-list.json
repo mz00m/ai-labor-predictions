@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Work at the Frontier: How AI is Expanding What People Do at Work",
+      "author": "Caroline Chin, Alex Martin Richmond",
+      "publisher": "OpenAI Economic Research",
+      "date": "2026-07-27",
+      "url": "https://openai.com/index/work-at-the-frontier/",
+      "takeaway": "The second entry in OpenAI's Work at the Frontier series asks not whether AI can do a task, but who ends up doing it. Using 800,000+ work-related messages from US ChatGPT users whose occupations were linked via ChatGPT Business role data, each message is classified to a single O*NET detailed work activity and compared with the sender's stated occupation. The result they call task crossover: 16.8% of all work-related messages, and 43.5% of occupation-specific messages, concern tasks historically associated with another occupation. Cross-occupation work is the majority of occupation-specific messages in five of eight groups (customer experience 77%, design 75%, HR 69%, legal 56%, marketing 53%). The structurally useful finding is that borrowing and lending are independent: designers draw 35.2% of their messages from other fields while design tasks are only 1.7% of everyone else's; engineering is the inverse (18.5% borrowed in, 7.4% traveling out). Marketing leads both directions. Two tasks travel universally — calculating financial data and troubleshooting computer applications rank top-three in all seven non-native occupation groups. The authors are explicit that this is descriptive evidence about the division of labor, not an employment or productivity estimate, but the measurement implication is sharp: if AI changes which workers perform which tasks, statistics built on existing job descriptions will progressively diverge from how work is actually organized.",
+      "weekFeatured": "2026-07-27",
+      "tier": 2
+    },
+    {
       "title": "FRED Adds Data About the Adoption of Generative Artificial Intelligence",
       "author": "FRED / St. Louis Fed (Bick, Blandin, Deming RPS)",
       "publisher": "Federal Reserve Bank of St. Louis (FRED)",

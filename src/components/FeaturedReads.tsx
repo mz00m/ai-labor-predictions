@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "OpenAI Economic Research",
+    title: "Work at the Frontier: How AI is Expanding What People Do at Work",
+    summary:
+      "Chin and Richmond classify 800,000+ work-related ChatGPT messages from US users to a single O*NET detailed work activity, then compare it with the sender's stated occupation. The result they call task crossover: 16.8% of all work messages — and 43.5% of occupation-specific ones — concern tasks historically associated with another job. Cross-occupation work is the majority of occupation-specific messages in five of eight groups (customer experience 77%, design 75%, HR 69%). Borrowing and lending are independent: designers draw 35.2% of their messages from other fields while design tasks are only 1.7% of everyone else's; engineering is the inverse. Descriptive, not an employment estimate — but it argues the task bundles themselves are moving, which is a problem for any exposure measure built on fixed job descriptions.",
+    date: "Jul 27",
+    url: "https://openai.com/index/work-at-the-frontier/",
+  },
+  {
     author: "FRED (St. Louis Fed)",
     title: "FRED Adds Data About the Adoption of Generative Artificial Intelligence",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "FT synthesis of the PwC 2026 Global AI Jobs Barometer (n=1B+ postings, 27 countries). The 'apprenticeship rung' argument: newcomers used to learn by doing simple repetitive work — the exact tasks AI has automated first. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal skill — historically senior. Job openings for 'seniorised' entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%; entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills. Reframes the entry-level story as compositional shift, not mass displacement — but the collapsed learning-by-doing path has real implications for how firms design early careers and how universities prepare graduates.",
     date: "Jul 16",
     url: "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
-  },
-  {
-    author: "Brynjolfsson, Agrawal, Korinek, Cunningham et al.",
-    title: "We Must Act Now: A Statement on AI's Economic Transformation",
-    summary:
-      "Statement organized by Brynjolfsson, Agrawal, Korinek, and Cunningham; signed by 16 Nobel Laureates (Spence and Acemoglu named) and 200+ economists and AI researchers. Warns AI could drive an economic transformation 'larger than the Industrial Revolution' but on 'a vastly shorter time frame,' with large-scale job displacement as a primary risk. Calls for deeper research, policy frameworks, and institutions ensuring AI complements human capabilities. Four asks: deepen research, build enabling policy, redirect AI to benefit workers, re-architect political and economic systems before transformation arrives. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.'",
-    date: "Jul 13",
-    url: "https://www.wemustactnow.ai/",
   },
 ];
 
