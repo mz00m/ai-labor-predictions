@@ -914,6 +914,24 @@
       ],
       "evidenceTier": 2,
       "label": "OpenAI: marketing/engineering tasks travel widest; designers borrow most (35.2%)"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: share of postings with high AI exposure down ~5pp since Oct 2022"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "neutral",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: activity-mix dissimilarity +8.4pp yoy; most change within occupations"
     }
   ],
   "sources": [
@@ -1642,6 +1660,16 @@
       "datePublished": "2026-07-27",
       "excerpt": "OpenAI Economic Research, 'Work at the Frontier: How AI is expanding what people do at work' (Chin & Richmond, Jul 27 2026). Random sample of 800,000+ work-related messages from individual ChatGPT accounts of US users whose occupations were linked via ChatGPT Business role data, across eight occupation groups (customer experience, design, engineering, finance, HR, legal, marketing, sales). Each message is classified to a single O*NET detailed work activity and compared with the sender's stated occupation. Headline: '16.8 percent of all work-related messages\u2014and 43.5 percent of occupation-specific messages\u2014concern tasks historically associated with another occupation'; 21.8% are within-occupation and 61.5% generic. Cross-occupation is a majority of occupation-specific messages in five of eight groups: customer experience 77%, design 75%, HR 69%, legal 56%, marketing 53%. Direction of travel differs from volume of borrowing: 'About 35.2 percent of messages sent by designers involve work usually associated with another occupation. But design tasks make up only 1.7 percent of the messages sent by workers in other fields.' Engineering is the inverse (18.5% borrowed in, 7.4% traveling out); marketing leads both directions (24.3% in, 8.9% out \u2014 'the highest share in the sample'). Recurring borrowed tasks: calculating financial data and troubleshooting computer applications each rank top-three in all seven non-native occupation groups. Smaller workspaces show more crossover among typical-volume users: 18.9% at 2-5 seats vs 16.3% at 101+ seats. The report explicitly disclaims employment inference: 'This study maps AI-aided work; it does not estimate AI's effect on employment or productivity,' and the unit of analysis is 'a message, not an hour of work, a completed project, or a job.'",
       "dateAdded": "2026-07-27"
+    },
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-07",
+      "title": "AI Labor Market Tracker: July 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-28",
+      "excerpt": "The share of job postings with high AI exposure has fallen by approximately 5 percentage points since October 2022. In June 2026 the year-over-year change in the activity mix dissimilarity index increased to 8.4 percentage points, meaning that 8.4% of the economy's headcount-weighted activity mix would need to be reallocated across activities to return to its June 2025 composition. Most activity change is occurring within occupations.",
+      "dateAdded": "2026-07-29"
     }
   ]
 }

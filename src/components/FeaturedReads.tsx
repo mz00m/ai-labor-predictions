@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Revelio Labs",
+    title: "Introducing the Revelio AI Labor Market Tracker",
+    summary:
+      "Simon, Zweig and Wilkie-Rogers launch a monthly five-lens tracker — talent supply, labor demand, equilibrium, work content, matching — built on online professional profiles rather than payroll. The headline finding independently replicates Canaries on non-ADP data: early-career workers (22-25) in the most AI-exposed occupations are down 13% relative to the least exposed since pre-ChatGPT, versus about 4% for all ages. Demand for the most-exposed roles is down 42%. The firm-side picture cuts the other way: AI-adopting firms grow headcount 27% more than non-adopters (though they were already growing faster pre-adoption), gains concentrate in senior roles (+31% vs +6% junior), and more AI-exposed firms see fewer layoffs, not more. Two series no one else publishes monthly: a within-occupation activity-mix dissimilarity index (+8.4pp yoy, most change inside occupations rather than between them) and matching efficiency at 5.05 postings per hire, +264% yoy.",
+    date: "Jul 28",
+    url: "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+  },
+  {
     author: "OpenAI Economic Research",
     title: "Work at the Frontier: How AI is Expanding What People Do at Work",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Monthly refresh of the ADP-payroll Canaries series (4.6M workers, 730+ occupations), data through June 2026. All exposure quintiles now show employment growth since ChatGPT — most-exposed +1.1%/yr vs +2.0%/yr least-exposed — but early-career workers (22-25) in the most-exposed quintile are still contracting at 3.5%/yr, and -4.3% over the past year. New gender decomposition: early-career women in the most-exposed quintile shrinking at 4.5%/yr vs 2.5%/yr for men — driven mostly by occupational mix, with 43.8% of early-career women working in the most-exposed occupation category vs 32.4% of men. The live empirical answer to 'what does the data show right now.'",
     date: "Jul 22",
     url: "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
-  },
-  {
-    author: "Financial Times",
-    title: "AI isn't destroying entry-level jobs. It's changing them",
-    summary:
-      "FT synthesis of the PwC 2026 Global AI Jobs Barometer (n=1B+ postings, 27 countries). The 'apprenticeship rung' argument: newcomers used to learn by doing simple repetitive work — the exact tasks AI has automated first. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal skill — historically senior. Job openings for 'seniorised' entry-level roles have grown 35% since 2019 while other entry-level roles shrank 10%; entry-level roles most exposed to AI are 7x more likely to require traditionally senior-level skills. Reframes the entry-level story as compositional shift, not mass displacement — but the collapsed learning-by-doing path has real implications for how firms design early careers and how universities prepare graduates.",
-    date: "Jul 16",
-    url: "https://www.ft.com/content/6cb9570b-dccd-46f5-b42a-4d0b7b5de35a",
   },
 ];
 

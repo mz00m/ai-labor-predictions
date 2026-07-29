@@ -49,6 +49,16 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
+    },
+    {
+      "date": "2026-07-28",
+      "value": 13,
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -226,6 +236,16 @@
       "datePublished": "2026-07-22",
       "excerpt": "In the most-exposed quintile, employment among early-career women has been contracting at 4.5% per year since the introduction of ChatGPT in November 2022, while employment for men of the same age is contracting at 2.5% per year.",
       "dateAdded": "2026-07-26"
+    },
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-07",
+      "title": "AI Labor Market Tracker: July 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-28",
+      "excerpt": "Employment for younger workers in the most AI-exposed occupations is down by 13% relative to the least exposed occupations, since pre-ChatGPT \u2014 a much larger decline than for older workers. Event-study with two-way occupation and month fixed effects, standard errors clustered by occupation, ages 22-25, built on online professional profiles rather than payroll records.",
+      "dateAdded": "2026-07-29"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-27",
-  "totalSources": 663,
-  "verifiedCount": 653,
+  "lastUpdated": "2026-07-29",
+  "totalSources": 664,
+  "verifiedCount": 654,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9444,6 +9444,24 @@
       "excerpt": "OpenAI Economic Research, 'Work at the Frontier: How AI is expanding what people do at work' (Chin & Richmond, Jul 27 2026). Random sample of 800,000+ work-related messages from individual ChatGPT accounts of US users whose occupations were linked via ChatGPT Business role data, across eight occupation groups (customer experience, design, engineering, finance, HR, legal, marketing, sales). Each message is classified to a single O*NET detailed work activity and compared with the sender's stated occupation. Headline: '16.8 percent of all work-related messages—and 43.5 percent of occupation-specific messages—concern tasks historically associated with another occupation'; 21.8% are within-occupation and 61.5% generic. Cross-occupation is a majority of occupation-specific messages in five of eight groups: customer experience 77%, design 75%, HR 69%, legal 56%, marketing 53%. Direction of travel differs from volume of borrowing: 'About 35.2 percent of messages sent by designers involve work usually associated with another occupation. But design tasks make up only 1.7 percent of the messages sent by workers in other fields.' Engineering is the inverse (18.5% borrowed in, 7.4% traveling out); marketing leads both directions (24.3% in, 8.9% out — 'the highest share in the sample'). Recurring borrowed tasks: calculating financial data and troubleshooting computer applications each rank top-three in all seven non-native occupation groups. Smaller workspaces show more crossover among typical-volume users: 18.9% at 2-5 seats vs 16.3% at 101+ seats. The report explicitly disclaims employment inference: 'This study maps AI-aided work; it does not estimate AI's effect on employment or productivity,' and the unit of analysis is 'a message, not an hour of work, a completed project, or a job.'",
       "dateAdded": "2026-07-27",
       "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "revelio-ai-labor-market-tracker-2026-07": {
+      "id": "revelio-ai-labor-market-tracker-2026-07",
+      "title": "AI Labor Market Tracker: July 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-28",
+      "excerpt": "Inaugural edition of Revelio Labs' monthly AI Labor Market Tracker, built on online professional profiles, job postings, salaries, employee reviews and WARN notices. Five headline gauges: CS/IT enrollment supply -28% since 2022; demand for the most AI-exposed roles -42% vs least-exposed since Oct 2022; adopting-firm headcount +27% vs non-adopters; activity-mix dissimilarity +8.4pp yoy; 5.05 postings per hire. Early-career (22-25) employment in most-exposed occupations is down 13% relative to least-exposed since pre-ChatGPT — an independent replication of Brynjolfsson, Chandar & Chen (2025) on non-payroll data. Firm AI adoption reaches ~5.9% of eligible hiring firms; the AI-exposure wage premium has eroded from ~2% to roughly zero.",
+      "usedIn": [
+        "early-career-employment-decline",
+        "overall-us-displacement",
+        "ai-adoption-rate",
+        "high-skill-wage-premium",
         "workforce-ai-exposure"
       ],
       "verified": true,
