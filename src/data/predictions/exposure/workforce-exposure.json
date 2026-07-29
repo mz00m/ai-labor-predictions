@@ -8,7 +8,7 @@
   "currentValue": 43.3,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
-  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
+  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. A further limit: these estimates map AI capability onto occupations as currently defined. Evidence that workers increasingly use AI for tasks outside their own occupation suggests the task bundles themselves are shifting, so exposure measured against today's job descriptions will drift from how work is actually organized. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
   "history": [
     {
       "date": "2023-03-26",
