@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Introducing the Revelio AI Labor Market Tracker",
+      "author": "Lisa K. Simon, Ben Zweig, Caelan Wilkie-Rogers",
+      "publisher": "Revelio Labs",
+      "date": "2026-07-28",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "takeaway": "A monthly tracker across five lenses \u2014 talent supply, demand, equilibrium, work content, matching \u2014 built on online professional profiles rather than payroll. Its headline finding independently replicates Canaries on non-ADP data: early-career workers (22-25) in the most AI-exposed occupations are down 13% relative to the least exposed since pre-ChatGPT, versus about 4% for all ages. Demand for the most-exposed roles is down 42% relative to the least exposed. The firm-side picture cuts the other way: AI-adopting firms grow headcount 27% more than non-adopters (though they were already growing faster before adopting), gains concentrate in senior roles (+31% vs +6% junior), and more AI-exposed firms see fewer layoffs, not more. Two series no one else publishes monthly: a within-occupation activity-mix dissimilarity index (+8.4pp yoy, with most change happening inside occupations rather than between them) and a matching-efficiency series (5.05 postings per hire, +264% yoy).",
+      "weekFeatured": "2026-07-28",
+      "tier": 2
+    },
+    {
       "title": "Work at the Frontier: How AI is Expanding What People Do at Work",
       "author": "Caroline Chin, Alex Martin Richmond",
       "publisher": "OpenAI Economic Research",

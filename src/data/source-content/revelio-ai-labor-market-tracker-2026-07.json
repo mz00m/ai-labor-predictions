@@ -1,0 +1,22 @@
+{
+  "abstract": "Revelio Labs launched its AI Labor Market Tracker on July 28, 2026 (authors Lisa K. Simon, Ben Zweig, Caelan Wilkie-Rogers), a monthly public dashboard measuring AI's labor market effects across five lenses: talent supply, labor demand, market equilibrium, work content, and matching efficiency. It is built on Revelio's own data assets — online professional profiles, job postings, salary records, employee reviews, and WARN notices — rather than payroll or survey data, making it an independent read on findings previously established with ADP payroll records. The July 2026 edition covers the United States, with a next release scheduled for mid-August 2026.",
+  "keyFindings": [
+    "Early-career (22-25) employment in the most AI-exposed occupations is down 13% relative to the least exposed occupations since pre-ChatGPT — a much larger decline than for older workers",
+    "All-ages employment in the most AI-exposed occupations is down ~4% relative to the least exposed since pre-ChatGPT",
+    "Demand for the most AI-exposed roles has fallen 42% relative to the least exposed since Oct 2022 (-8.6pp yoy); the press release and secondary coverage cite 36% for this figure",
+    "AI-adopting firms grow headcount 27% more than non-adopters since Nov 2022 (+9pp yoy), but were already growing faster before adoption; gains concentrate in senior roles (+31%) vs junior (+6%)",
+    "Cumulative firm AI adoption approaching 5.9% of eligible hiring firms, accelerating sharply since 2024",
+    "Employment in AI-related roles has grown 18% since Oct 2022 vs 3% for non-AI roles",
+    "The AI-exposure wage premium has eroded from ~2% pre-ChatGPT to roughly zero",
+    "Activity-mix dissimilarity index +8.4pp yoy in June 2026 (+4.7pp yoy) — 8.4% of the economy's headcount-weighted activity mix would need reallocating to return to June 2025 composition; most change occurs within occupations",
+    "Share of job postings with high AI exposure down ~5pp since Oct 2022",
+    "More AI-exposed firms see fewer layoffs, not more (WARN difference-in-differences)",
+    "CS/IT enrollment supply down 28% since 2022 (+9pp yoy)",
+    "Matching efficiency deteriorating: 5.05 postings per hire, +264% yoy; recruiter-ghosting mentions in no-offer interview reviews up ~9% since Oct 2022",
+    "31% of newly reported certifications on professional profiles in June 2026 were AI certifications; 47% of those were Generative AI & LLM related"
+  ],
+  "methodology": "Event-study specifications with two-way fixed effects (occupation and month) and standard errors clustered by occupation, explicitly following the design of Brynjolfsson, Chandar & Chen (2025), 'Canaries in the Coal Mine.' Firm AI adoption is identified from job postings — a firm is coded as adopting when it posts AI integrator roles — following Hosseini Maasoum & Lichtinger (2025); the authors note this differs from the spend-based approach of Kharazian, Simon & Stevens (2026). Layoff analysis uses WARN notices in a difference-in-differences design. Underlying data are online professional profiles, job postings, salary records, and employee reviews.",
+  "qualifiers": "Tier 2 — high-quality institutional analysis from a commercial labor data vendor, not peer-reviewed. Profile-based employment data skew toward white-collar and online-visible workers and are subject to reporting lags and self-report error, unlike payroll or survey universes. Most headline figures are relative contrasts between the most- and least-AI-exposed quintiles (or adopters vs non-adopters), not economy-wide magnitudes, so they cannot be read as displacement shares. The adoption rate (~5.9%) measures posting-identified adoption and is not comparable to Census BTOS self-reported AI use. Revelio notes adopting firms were already growing faster before adoption, so the +27% headcount gap is not identified as causal. The demand-decline figure is inconsistent across Revelio's own materials: -42% on the tracker page vs 36% in the press release.",
+  "id": "revelio-ai-labor-market-tracker-2026-07",
+  "fetchedAt": "2026-07-29"
+}

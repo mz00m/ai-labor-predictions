@@ -1,6 +1,6 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-25",
+  "asOf": "2026-07-29",
   "lastSweep": "2026-07-22",
   "series": [
     {
@@ -584,6 +584,32 @@
         "value": "v1.0: 88% employment coverage, 21% median task saturation, <10% NR-cognitive automation"
       },
       "nextExpected": "~Q4 2026 (v1.1 with enterprise/API scope per report roadmap)"
+    },
+    {
+      "id": "revelio-ai-labor-tracker",
+      "name": "Revelio Labs AI Labor Market Tracker",
+      "publisher": "Revelio Labs (Simon, Zweig, Wilkie-Rogers)",
+      "tier": 2,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly",
+      "releasePattern": "Monthly editions at reveliolabs.com/ai-labor-market-tracker/us/<month>-<year>; launched July 28, 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker",
+      "targetGraphs": [
+        "early-career-employment-decline",
+        "overall-us-displacement",
+        "ai-adoption-rate",
+        "high-skill-wage-premium",
+        "workforce-ai-exposure"
+      ],
+      "topicLine": "Monthly five-lens read on AI and labor built on professional profiles rather than payroll.",
+      "whatItMeasures": "Talent supply, labor demand, market equilibrium, work content, and matching efficiency, from online professional profiles, job postings, salary records, employee reviews, and WARN notices. Uses the Brynjolfsson/Chandar/Chen event-study design with occupation and month fixed effects.",
+      "whyItMatters": "The only monthly-cadence replication of the Canaries early-career finding on data that is fully independent of ADP payroll records — profile-based rather than payroll-based. Its 13% early-career relative decline landing close to the ADP-derived estimate is the strongest cross-dataset corroboration on the site. Also the only source publishing a within-occupation activity-mix dissimilarity index, which speaks directly to the shifting-task-bundles question.",
+      "lastIngested": {
+        "sourceId": "revelio-ai-labor-market-tracker-2026-07",
+        "date": "2026-07-28",
+        "value": "Early-career 22-25 most-exposed -13% vs least-exposed; demand -42%; adopters +27% headcount; firm adoption 5.9%"
+      },
+      "nextExpected": "Mid-August 2026"
     }
   ]
 }
