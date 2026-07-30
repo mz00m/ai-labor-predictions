@@ -5,10 +5,10 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "exposure",
   "unit": "% of jobs exposed",
-  "currentValue": 43.3,
+  "currentValue": 44.1,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
-  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. A further limit: these estimates map AI capability onto occupations as currently defined. Evidence that workers increasingly use AI for tasks outside their own occupation suggests the task bundles themselves are shifting, so exposure measured against today's job descriptions will drift from how work is actually organized. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
+  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. A further limit: these estimates map AI capability onto occupations as currently defined. Evidence that workers increasingly use AI for tasks outside their own occupation suggests the task bundles themselves are shifting, so exposure measured against today's job descriptions will drift from how work is actually organized. Explore task-level detail in the [Task Visualizer](/task-visualizer). For what AI is measurably doing today rather than what it could do, see [Observed AI Use at Work](/predictions/workforce-ai-use).",
   "history": [
     {
       "date": "2023-03-26",
@@ -92,18 +92,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2025-01-15",
-      "value": 36,
-      "confidenceLow": 28,
-      "confidenceHigh": 44,
-      "sourceIds": [
-        "anthropic-econ-primitives-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
       "date": "2025-06-01",
       "value": 23,
       "confidenceLow": 18,
@@ -126,30 +114,6 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
-    },
-    {
-      "date": "2026-01-01",
-      "value": 38,
-      "confidenceLow": 30,
-      "confidenceHigh": 38,
-      "sourceIds": [
-        "hartley-genai-labor-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-15",
-      "value": 49,
-      "confidenceLow": 40,
-      "confidenceHigh": 60,
-      "sourceIds": [
-        "anthropic-econ-primitives-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
     },
     {
       "date": "2026-01-15",

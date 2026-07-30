@@ -21,6 +21,7 @@ import genaiWorkAdoption from "@/data/predictions/adoption/genai-work-adoption.j
 import aiBusinessFormation from "@/data/predictions/adoption/ai-business-formation.json";
 import earningsCallMentions from "@/data/predictions/signals/earnings-call-mentions.json";
 import workforceExposure from "@/data/predictions/exposure/workforce-exposure.json";
+import workforceAiUse from "@/data/predictions/exposure/workforce-ai-use.json";
 
 const allPredictions: Prediction[] = [
   // Displacement: broadest population → sector → niche roles
@@ -44,6 +45,7 @@ const allPredictions: Prediction[] = [
   genaiWorkAdoption as Prediction,
   aiBusinessFormation as Prediction,
   workforceExposure as Prediction,
+  workforceAiUse as Prediction,
   earningsCallMentions as Prediction,
 ];
 
