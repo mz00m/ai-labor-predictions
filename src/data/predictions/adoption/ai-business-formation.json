@@ -89,6 +89,16 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
+    },
+    {
+      "date": "2026-07-20",
+      "value": 24,
+      "sourceIds": [
+        "ibtimes-census-ai-business-surge-2026"
+      ],
+      "evidenceTier": 3,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -271,15 +281,6 @@
       ],
       "evidenceTier": 1,
       "label": "Census BFS Jun 2026: 531K business applications (+1.1% MoM); 29.7K projected formations (+0.7%)"
-    },
-    {
-      "date": "2026-07-20",
-      "direction": "up",
-      "sourceIds": [
-        "ibtimes-census-ai-business-surge-2026"
-      ],
-      "evidenceTier": 3,
-      "label": "Census/Bloomberg: prof services forming ~5K firms/mo, +24% YoY, 4x construction pace since ChatGPT"
     }
   ],
   "sources": [
