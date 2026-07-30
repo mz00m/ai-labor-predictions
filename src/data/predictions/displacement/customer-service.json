@@ -92,6 +92,16 @@
       "evidenceTier": 3,
       "metricType": "survey",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-04-01",
+      "value": 82,
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "corporate",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -418,15 +428,6 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL: 90-95% of food delivery CS interactions fully automated by AI agent"
-    },
-    {
-      "date": "2026-04-01",
-      "direction": "up",
-      "sourceIds": [
-        "stanford-del-enterprise-ai-playbook-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Stanford DEL: 82% ticket deflection at tech co via AI-first customer support"
     },
     {
       "date": "2026-04-02",
