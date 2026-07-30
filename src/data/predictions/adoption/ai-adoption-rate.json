@@ -8,6 +8,7 @@
   "currentValue": 17.9,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
+  "disclaimer": "Adoption estimates diverge by an order of magnitude depending on how adoption is identified, and the differences are definitional rather than a matter of one measure being wrong. BTOS asks firms directly whether they used AI to produce goods or services in the past two weeks (17.9%). Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is plotted; the others appear as overlays. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2023-08-15",

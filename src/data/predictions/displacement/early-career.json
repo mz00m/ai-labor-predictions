@@ -8,7 +8,7 @@
   "currentValue": 13,
   "timeHorizon": "Current measure",
   "aggregationMethod": "weighted",
-  "disclaimer": "Every plotted point is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) are shown as overlays because geography is a hard gate on comparability.",
+  "disclaimer": "Every plotted point is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) are shown as overlays because geography is a hard gate on comparability. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2025-11-13",
@@ -124,6 +124,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford DEL: early-career women -4.5%/yr vs men -2.5%/yr in exposed jobs"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: at AI adopters, senior headcount +31% vs +6% junior since Nov 2022"
     }
   ],
   "sources": [

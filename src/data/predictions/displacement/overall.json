@@ -1936,7 +1936,16 @@
         "revelio-ai-labor-market-tracker-2026-07"
       ],
       "evidenceTier": 2,
-      "label": "Revelio: AI adopters +27% headcount vs non-adopters; senior +31% vs junior +6%"
+      "label": "Revelio: AI-adopting firms grow headcount 27% more than non-adopters"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: more AI-exposed firms see fewer layoffs, not more"
     }
   ],
   "sources": [
