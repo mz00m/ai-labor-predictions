@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, type ReactNode } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { EvidenceTier } from "@/lib/types";
@@ -20,6 +20,42 @@ import DragTimeline from "@/components/delights/DragTimeline";
 
 
 const tierCounts = getSourceCountsByTier();
+
+const MD_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+/** Renders `[label](url)` spans in prose fields. Everything else stays literal text. */
+function withLinks(text: string) {
+  const parts: ReactNode[] = [];
+  let cursor = 0;
+  MD_LINK.lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = MD_LINK.exec(text)) !== null) {
+    const [full, label, href] = match;
+    const start = match.index;
+    if (start > cursor) parts.push(text.slice(cursor, start));
+    const external = /^https?:\/\//.test(href);
+    parts.push(
+      external ? (
+        <a
+          key={start}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] hover:underline"
+        >
+          {label}
+        </a>
+      ) : (
+        <Link key={start} href={href} className="text-[var(--accent)] hover:underline">
+          {label}
+        </Link>
+      )
+    );
+    cursor = start + full.length;
+  }
+  if (cursor < text.length) parts.push(text.slice(cursor));
+  return parts;
+}
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
@@ -358,7 +394,7 @@ export default function PredictionDetailPage() {
         <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg p-4 sm:p-6 max-w-2xl -mt-4">
           <p className="text-base text-[var(--muted)] leading-relaxed">
             <span className="font-semibold text-[var(--signal-warning-muted)]">Note:</span>{" "}
-            {prediction.disclaimer}
+            {withLinks(prediction.disclaimer)}
           </p>
         </div>
       )}
