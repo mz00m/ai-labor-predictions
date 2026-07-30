@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
 import { getSourceCount } from "@/lib/search-sources";
 import { getAllOccupationSlugs } from "@/lib/assessment/scorecard";
+import { JOB_PROFILES } from "@/data/job-tasks";
 import NewsTicker from "@/components/NewsTicker";
 import FeaturedReads from "@/components/FeaturedReads";
 import FunnelStrip from "@/components/FunnelStrip";
@@ -24,6 +25,7 @@ const predictions = getAllPredictions();
 const lastUpdated = getLastUpdated();
 const heroStats = getHeroStats();
 const occupationCount = getAllOccupationSlugs().length;
+const taskProfileCount = JOB_PROFILES.length;
 
 function formatUpdatedDate(iso: string): string {
   const [y, m, d] = iso.split("-");
@@ -115,12 +117,12 @@ export default function Home() {
       <div className="mt-10">
         <SectionBar
           title="How Will AI Affect Your Job?"
-          description="AI doesn't replace whole jobs. It automates specific tasks. Explore which parts of 110+ occupations covering ~67% of US employment are exposed and which remain human-dependent."
+          description={`AI doesn't replace whole jobs. It automates specific tasks. Explore which parts of ${taskProfileCount} occupations covering ~64% of US employment are exposed and which remain human-dependent.`}
           href="/task-visualizer"
           tag="Task visualizer"
           accentColor="#3ECFAE"
           watermark={<TaskVisualizerWatermark color="#3ECFAE" />}
-          stat={{ value: "110+", label: "occupations" }}
+          stat={{ value: `${taskProfileCount}`, label: "occupations" }}
           featured
         />
 

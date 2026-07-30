@@ -4,6 +4,7 @@ import { useState } from "react";
 import { EvidenceTier } from "@/lib/types";
 import { getAllPredictions } from "@/lib/data-loader";
 import { getSourceCount, getSourceCountsByTier } from "@/lib/search-sources";
+import { computeAggregate } from "@/lib/prediction-stats";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import PredictionSummaryCard from "@/components/PredictionSummaryCard";
 import ResearchFeed from "@/components/ResearchFeed";
@@ -20,6 +21,11 @@ export default function PredictionsPage() {
   const adoption = predictions.filter((p) => p.category === "adoption");
 
   const totalSources = getSourceCount();
+
+  const overall = predictions.find((p) => p.slug === "overall-us-displacement");
+  const economyWideAverage = overall
+    ? computeAggregate(overall, selectedTiers).mean
+    : null;
 
   return (
     <div className="space-y-0">
@@ -59,9 +65,10 @@ export default function PredictionsPage() {
                 </h2>
                 <p className="text-lg text-[var(--muted)] mt-2 max-w-2xl">
                   Projected share of jobs eliminated, restructured, or significantly transformed by
-                  AI. Sector-specific estimates are higher than the ~3% economy-wide average because
-                  they measure the most-exposed segments, not the full workforce. Most evidence points
-                  to task-level transition rather than wholesale replacement
+                  AI. Sector-specific estimates are higher than the{" "}
+                  {economyWideAverage !== null ? `${economyWideAverage}%` : ""} economy-wide average
+                  because they measure the most-exposed segments, not the full workforce. Most
+                  evidence points to task-level transition rather than wholesale replacement
                 </p>
               </div>
             </div>
