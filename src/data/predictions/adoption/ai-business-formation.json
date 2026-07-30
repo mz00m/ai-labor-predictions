@@ -5,7 +5,7 @@
   "description": "Percentage increase in new firm creation in AI-compatible industries following the release of generative AI tools, relative to pre-ChatGPT baseline. Measures how AI lowers the cost of experimentation and enables entrepreneurship.",
   "category": "adoption",
   "unit": "% increase in firm formation",
-  "currentValue": 12.3,
+  "currentValue": 12.8,
   "aggregationMethod": "weighted",
   "timeHorizon": "by 2030",
   "history": [

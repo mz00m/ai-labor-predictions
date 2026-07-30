@@ -1,6 +1,6 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-29",
+  "lastUpdated": "2026-07-30",
   "totalSources": 664,
   "verifiedCount": 654,
   "sources": {
