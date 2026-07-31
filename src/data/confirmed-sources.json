@@ -453,7 +453,8 @@
       "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
       "usedIn": [
         "tech-sector-displacement",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "workforce-ai-use"
       ],
       "verified": true
     },
@@ -499,6 +500,7 @@
         "tech-sector-displacement",
         "white-collar-professional-displacement",
         "workforce-ai-exposure",
+        "workforce-ai-use",
         "total-us-jobs-lost"
       ],
       "verified": true,
@@ -1999,7 +2001,8 @@
         "high-skill-wage-premium",
         "median-wage-impact",
         "overall-us-displacement",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "workforce-ai-use"
       ],
       "verified": true
     },
@@ -7366,7 +7369,8 @@
       "usedIn": [
         "ai-adoption-rate",
         "genai-work-adoption",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false
@@ -7442,6 +7446,7 @@
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure",
+        "workforce-ai-use",
         "genai-work-adoption"
       ],
       "verified": true,
@@ -9412,6 +9417,7 @@
       "dateAdded": "2026-07-24",
       "usedIn": [
         "workforce-ai-exposure",
+        "workforce-ai-use",
         "overall-us-displacement",
         "high-skill-wage-premium",
         "genai-work-adoption"
