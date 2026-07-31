@@ -756,16 +756,20 @@ function checkRecurringSourcesFreshness(allPredictions, report, today) {
         badSlugs++;
       }
     }
-    if (!s.nextExpected) {
-      due.push(`${s.id} (nextExpected unset)`);
+    // Measure from lastIngested, not nextExpected. nextExpected is free text
+    // and "~August 2026" parses as 2026-01-01, which invented ~211 days of
+    // staleness for every series whose estimate carried a leading tilde.
+    const lastIngested = s.lastIngested && s.lastIngested.date;
+    if (!lastIngested) {
+      due.push(`${s.id} (never ingested)`);
       continue;
     }
-    const overdueDays = (todayMs - new Date(s.nextExpected).getTime()) / 86400000;
+    const ageDays = (todayMs - new Date(lastIngested).getTime()) / 86400000;
     const interval = CADENCE_DAYS[s.cadence] || 92;
-    if (overdueDays > interval) {
-      stale.push(`${s.id} (${Math.round(overdueDays)}d overdue, ${s.cadence})`);
-    } else if (overdueDays > 0) {
-      due.push(`${s.id} (${Math.round(overdueDays)}d past nextExpected)`);
+    if (ageDays > interval * 2) {
+      stale.push(`${s.id} (last ingested ${Math.round(ageDays)}d ago, ${s.cadence})`);
+    } else if (ageDays > interval) {
+      due.push(`${s.id} (last ingested ${Math.round(ageDays)}d ago)`);
     }
   }
 
