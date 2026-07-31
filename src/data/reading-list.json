@@ -2,6 +2,26 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "What is really happening to jobs? Separating AI hype from reality",
+      "author": "Stanford Institute for Economic Policy Research",
+      "publisher": "SIEPR",
+      "date": "2026-07-25",
+      "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+      "takeaway": "Stanford's economic policy institute weighs the apocalypse framing against the data and finds it wanting. The headline number: since 2022 unemployment among the most AI-exposed quintile of workers rose 0.77 points \u2014 while the least-exposed quintile rose 0.85. Exposure has not translated into job loss. Software developer postings are growing faster than the average occupation, and firms that adopted enterprise AI added 10% headcount over the following two years. The one genuine soft spot is new graduates, where unemployment hit 5.6%, though the brief notes entry-level declines only become visible in 2024, which complicates blaming a late-2022 model release.",
+      "weekFeatured": "2026-07-31",
+      "tier": 1
+    },
+    {
+      "title": "The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact",
+      "author": "Paul E. Soto, Mason Thieu, Jeffrey S. Allen",
+      "publisher": "Federal Reserve Board (FEDS Notes)",
+      "date": "2026-07-17",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "takeaway": "Not findings but plumbing, and useful for it. Three Fed economists catalogue the public indicators worth watching as AI diffuses, ordered the way general-purpose technologies actually arrive: capabilities and costs first, then firm investment and adoption, then productivity and labor. The note is candid that reported adoption overstates real usage \u2014 intensity \u201cremains shallow even where reported adoption is broad\u201d \u2014 and that the absence of an aggregate signal in 2026 says little about 2030. A good map of which series to trust.",
+      "weekFeatured": "2026-07-31",
+      "tier": 1
+    },
+    {
       "title": "Introducing the Revelio AI Labor Market Tracker",
       "author": "Lisa K. Simon, Ben Zweig, Caelan Wilkie-Rogers",
       "publisher": "Revelio Labs",

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-30",
-  "totalSources": 664,
-  "verifiedCount": 654,
+  "lastUpdated": "2026-07-31",
+  "totalSources": 666,
+  "verifiedCount": 656,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -454,7 +454,7 @@
       "usedIn": [
         "tech-sector-displacement",
         "workforce-ai-exposure",
-          "workforce-ai-use"
+        "workforce-ai-use"
       ],
       "verified": true
     },
@@ -500,7 +500,7 @@
         "tech-sector-displacement",
         "white-collar-professional-displacement",
         "workforce-ai-exposure",
-          "workforce-ai-use",
+        "workforce-ai-use",
         "total-us-jobs-lost"
       ],
       "verified": true,
@@ -2002,7 +2002,7 @@
         "median-wage-impact",
         "overall-us-displacement",
         "workforce-ai-exposure",
-          "workforce-ai-use"
+        "workforce-ai-use"
       ],
       "verified": true
     },
@@ -7370,7 +7370,7 @@
         "ai-adoption-rate",
         "genai-work-adoption",
         "workforce-ai-exposure",
-          "workforce-ai-use"
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false
@@ -7446,7 +7446,7 @@
       "usedIn": [
         "overall-us-displacement",
         "workforce-ai-exposure",
-          "workforce-ai-use",
+        "workforce-ai-use",
         "genai-work-adoption"
       ],
       "verified": true,
@@ -9417,7 +9417,7 @@
       "dateAdded": "2026-07-24",
       "usedIn": [
         "workforce-ai-exposure",
-          "workforce-ai-use",
+        "workforce-ai-use",
         "overall-us-displacement",
         "high-skill-wage-premium",
         "genai-work-adoption"
@@ -9469,6 +9469,34 @@
         "ai-adoption-rate",
         "high-skill-wage-premium",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "siepr-ai-hype-reality-2026": {
+      "id": "siepr-ai-hype-reality-2026",
+      "title": "What is really happening to jobs? Separating AI hype from reality",
+      "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+      "publisher": "Stanford Institute for Economic Policy Research (SIEPR)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-25",
+      "excerpt": "Stanford SIEPR policy brief reviewing observed AI labor market effects. Using IPUMS-CPS data, the unemployment rate for the top quintile of AI-exposed workers has risen by 0.77 percentage points since 2022, while the unemployment rate for the least-exposed workers rose slightly more, by 0.85 percentage points over the same period — a differential implying no measurable net AI displacement in aggregate US employment. Employment growth in coding-heavy occupations has slowed somewhat but remains positive, and online job postings for software developers have grown faster than for other occupations over the last year. Among firms that adopted enterprise AI, employment grew by 10 percent in the two years following adoption. In Census BTOS data only 5 percent of firms report any employment impact, with equal numbers reporting gains and losses. New-graduate unemployment reached 5.6 percent in early 2026, up 1.6 percentage points from three years earlier.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-ai-buildout-indicators-2026": {
+      "id": "fed-ai-buildout-indicators-2026",
+      "title": "The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "publisher": "Board of Governors of the Federal Reserve System (Soto, Thieu, Allen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-17",
+      "excerpt": "Federal Reserve Board FEDS Note cataloguing publicly available indicators for tracking the generative AI buildout across three stages: capabilities and costs; firm investment and adoption; and productivity and labor. Notes that headline adoption figures do not reflect usage intensity, which surveys suggest remains shallow even where reported adoption is broad, and that the absence of a large aggregate signal as of 2026 would not necessarily invalidate future productivity impacts given that shallow adoption. Tracks sectoral productivity by AI exposure level, unemployment and labor force participation for workers aged 20-24 against prime-age workers, and layoffs, discharges and job openings in information-processing sectors as a white-collar displacement signal. Methodological reference rather than a source of new estimates.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

@@ -22,6 +22,8 @@ loadEnv();
 import {
   ADAPTERS,
   scoreItem,
+  computeJobsdataAffinity,
+  queryRelevance,
   type RawItem,
   type SourceName,
 } from "./sources.config";
@@ -177,8 +179,19 @@ async function main() {
   const deduped = deduplicate(allItems);
   console.log(`After dedup: ${deduped.length}`);
 
-  // Score and sort
-  const scored = deduped
+  // Score and sort. Aggregator adapters (arXiv, OpenAlex, NBER) return their
+  // whole feed regardless of topic, so drop items that match no graph signal
+  // and barely match the query before ranking.
+  // Keep anything matching a graph signal, or at least 2 of the 9 query terms.
+  const minQueryWords = 2 / query.split(/\s+/).length;
+  const onTopic = deduped.filter(
+    (item) =>
+      computeJobsdataAffinity(item) > 0 ||
+      queryRelevance(item, query) >= minQueryWords
+  );
+  console.log(`On-topic after relevance gate: ${onTopic.length}`);
+
+  const scored = onTopic
     .map((item) => ({
       ...item,
       publishedAt: item.publishedAt.toISOString(),
@@ -188,7 +201,7 @@ async function main() {
 
   // Take top N
   const topItems = scored.slice(0, topN);
-  console.log(`Top ${topN} items selected for synthesis\n`);
+  console.log(`Top ${topItems.length} items selected for synthesis\n`);
 
   // Ensure output directory exists
   const outputDir = path.dirname(outputPath);

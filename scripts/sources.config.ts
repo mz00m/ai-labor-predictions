@@ -443,17 +443,17 @@ export function computeJobsdataAffinity(item: RawItem): number {
     if (matched.length > 0) bonus += 0.15;
   }
 
-  const highValueDomains = [
-    "nber.org",
-    "bls.gov",
-    "stlouisfed.org",
-    "arxiv.org",
-    "semanticscholar.org",
-    "openalex.org",
-  ];
-  if (highValueDomains.some((d) => item.url.includes(d))) bonus += 0.1;
-
   return Math.min(bonus, 0.5);
+}
+
+// Whole-word overlap. Substring matching let short tokens like "ai" hit
+// unrelated words ("constraints"), which flooded the ranking with off-topic
+// preprints from the aggregator adapters.
+export function queryRelevance(item: RawItem, query: string): number {
+  const text = `${item.title} ${item.abstract ?? ""}`.toLowerCase();
+  const textWords = new Set(text.split(/[^a-z0-9]+/));
+  const queryWords = query.toLowerCase().split(/\s+/);
+  return queryWords.filter((w) => textWords.has(w)).length / queryWords.length;
 }
 
 export function scoreItem(
@@ -471,11 +471,8 @@ export function scoreItem(
     ? Math.min(Math.log1p(item.citationCount) / Math.log1p(100), 1)
     : 0;
 
-  // 3. Query relevance: keyword overlap
-  const queryWords = query.toLowerCase().split(/\s+/);
-  const text = `${item.title} ${item.abstract ?? ""}`.toLowerCase();
-  const relevance =
-    queryWords.filter((w) => text.includes(w)).length / queryWords.length;
+  // 3. Query relevance: whole-word overlap
+  const relevance = queryRelevance(item, query);
 
   // 4. jobsdata.ai graph affinity bonus
   const affinity = computeJobsdataAffinity(item);
