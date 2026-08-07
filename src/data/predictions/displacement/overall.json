@@ -1983,6 +1983,24 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: more AI-exposed firms see fewer layoffs, not more"
+    },
+    {
+      "date": "2026-08-06",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-july-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: AI cited in 33% of July 2026 US job cuts (10,970 of 33,429)"
+    },
+    {
+      "date": "2026-08-06",
+      "direction": "neutral",
+      "sourceIds": [
+        "challenger-july-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: total US cuts down 41% YTD, yet AI share of cuts rose to 24%"
     }
   ],
   "sources": [
@@ -3516,6 +3534,16 @@
       "datePublished": "2026-07-17",
       "excerpt": "Federal Reserve Board FEDS Note cataloguing publicly available indicators for tracking the generative AI buildout across three stages: capabilities and costs; firm investment and adoption; and productivity and labor. Notes that headline adoption figures \u201cdo not reflect usage intensity, which surveys suggest remains shallow even where reported adoption is broad,\u201d and that \u201cthe absence of a large aggregate signal as of 2026 would not necessarily invalidate future productivity impacts, given the shallow adoption outlined in the previous section.\u201d Tracks sectoral productivity by AI exposure level, unemployment and labor force participation for workers aged 20-24 against prime-age workers, and layoffs, discharges and job openings in information-processing sectors as a white-collar displacement signal.",
       "dateAdded": "2026-07-31"
+    },
+    {
+      "id": "challenger-july-2026",
+      "title": "Challenger Report: Layoffs Fall, Hiring Picks Up; AI Leads For Fifth Straight Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-layoffs-fall-hiring-picks-up-ai-leads-for-fifth-straight-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-06",
+      "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" \u2014 the fifth straight month AI has led all stated reasons. \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\" Announced hiring plans reached 107,500 YTD, up 25%.",
+      "dateAdded": "2026-08-07"
     }
   ]
 }

@@ -1447,6 +1447,32 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
 
           <div>
             <P>
+              <Strong>Professional profile histories get edited after the fact.</Strong>{" "}
+              The early-career decline and twelve of our firm-side signals come from
+              Revelio Labs, which reconstructs employment histories from public
+              professional profiles. Bloom, Moore, Simon and Wilkie-Rogers (
+              <a
+                href="https://www.nber.org/papers/w35546"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                NBER, 2026
+              </a>
+              ) show those records are not fixed snapshots. Using monthly vintages of
+              Revelio data from 2020&ndash;2026, they find that 19.7% of established
+              US LinkedIn users retroactively edit the title or description of a job
+              they have already left, and that these edits cluster around the time
+              workers change employers. AI-related language in them rises sharply
+              after 2022. So a historical series can move without any underlying
+              employment changing, and exposure measures built on profile text partly
+              capture workers relabeling old work in current vocabulary rather than
+              the work itself changing.
+            </P>
+          </div>
+
+          <div>
+            <P>
               <Strong>Point estimates from wide ranges.</Strong>{" "}
               The headline number can mask significant disagreement. When the
               source range is wide (e.g., 0&ndash;12%), the range itself is often

@@ -1,0 +1,16 @@
+{
+  "id": "challenger-july-2026",
+  "abstract": "The July 2026 edition of the monthly Challenger, Gray & Christmas job cuts report, which tallies publicly announced US layoff plans and the reasons employers give for them. The July release is notable for a divergence rather than a level: total announced cuts fell to their lowest monthly figure in two years, while artificial intelligence led all stated reasons for the fifth consecutive month and reached its highest monthly share on record. Announced hiring plans also rose. The report is the closest thing to a real-time, employer-stated attribution of layoffs to AI, though it measures announcements rather than realised separations.",
+  "keyFindings": [
+    "\"U.S.-based employers announced 33,429 job cuts in July\", described as the lowest monthly total in two years.",
+    "\"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" — the fifth straight month AI has led all stated reasons.",
+    "\"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\"",
+    "\"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\"",
+    "\"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\"",
+    "Hiring is recovering alongside the fall in cuts: employers announced plans to hire 16,095 workers in July, and \"So far this year, companies have announced plans to hire 107,500 workers, up 25%\".",
+    "The five leading stated reasons for cuts, in order, were artificial intelligence, market and economic conditions, closings, restructuring, and loss of contract."
+  ],
+  "methodology": "Monthly census of publicly announced US job cut plans compiled by Challenger, Gray & Christmas from company announcements, WARN notices and press reports, with each announcement coded to a single employer-stated reason and an industry sector. Figures are announcement counts for the month and cumulative year-to-date totals, compared against the same period of the prior year. Announced hiring plans are compiled on the same basis.",
+  "qualifiers": "These are announced cut counts, not realised separations, and not a rate: there is no population denominator, so the figures cannot be converted to percent of US jobs without an undocumented assumption. This is why every Challenger release in this corpus is carried as an overlay rather than a plotted data point, consistent with seven prior instances. Attribution is employer-stated, which introduces a reporting bias that likely runs upward: naming AI as the reason for a layoff is reputationally cheaper than naming weak demand or over-hiring, and the incentive to do so has grown as AI narratives have strengthened. The 33% July share should be read against a falling denominator — total cuts dropped 41% year to date — so a rising AI share is partly a compositional artefact of fewer non-AI layoffs rather than an absolute acceleration of AI-driven cuts. Announced hiring rising 25% year to date cuts against a simple displacement reading of the same data.",
+  "fetchedAt": "2026-08-07"
+}

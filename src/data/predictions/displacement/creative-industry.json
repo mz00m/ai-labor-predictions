@@ -407,6 +407,24 @@
       ],
       "evidenceTier": 3,
       "label": "Creative Boom: 47% of self-employed creatives earn <£30K; 69% burnout; 86% use AI but only 10% think it helps industry"
+    },
+    {
+      "date": "2026-07-22",
+      "direction": "up",
+      "sourceIds": [
+        "chakrabarty-ai-book-market-dilution-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chakrabarty et al.: Amazon fiction titles grew 19.2x, revenue only 8.9x (n=14,419)"
+    },
+    {
+      "date": "2026-07-22",
+      "direction": "up",
+      "sourceIds": [
+        "chakrabarty-ai-book-market-dilution-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chakrabarty et al.: books with no AI text lose most ground in high-AI genres"
     }
   ],
   "sources": [
@@ -787,6 +805,16 @@
       "datePublished": "2026-06-29",
       "excerpt": "Creative Boom's flagship 2026 survey of 882 creative professionals (UK/US-weighted; 43% with 10+ years experience): Nearly 47% of self-employed creatives earn less than £30,000 a year (vs UK median full-time salary of £39,039). 69% experienced burnout in past 12 months — mid-career 77%, early-career 74%, studio founders 59%. 50% feel less financially secure than a year ago; 38% considering a job change; 7.5% planning to leave the industry. 86% use AI tools in their work but only 10% believe AI's impact on the industry is positive; 58% describe it as mixed, 28% straightforwardly negative. 'Creatives aren't refusing to use AI; they're adopting it because they feel they have to.'",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "chakrabarty-ai-book-market-dilution-2026",
+      "title": "Generative AI floods and dilutes the market for books",
+      "url": "https://arxiv.org/abs/2607.20349",
+      "publisher": "Chakrabarty, Liu, Ginsburg & Dhillon (arXiv preprint)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-22",
+      "excerpt": "Full-text AI detection across 14,419 self-published genre-fiction books sold on Amazon 2023-2026, matched to daily sales records through June 2026: \"Over this period, the number of books with observed sales in a quarter grew 19.2-fold, while quarterly revenue grew only 8.9-fold. The market therefore added selling books faster than it added revenue, and revenue per selling book fell across most genres.\" Books with detected AI text above 25% \"make up a large share of the catalog but a smaller share of sales,\" yet win \"a growing share of sales over time\" and take \"more of the scarce top-rank positions once held by books with no detected AI text.\" \"Books with no AI text lose the most ground in genres with high AI diffusion, and most of all where Kindle Unlimited availability is high.\" Authors conclude generative AI \"can thus reshape a creative market through scale rather than quality.\"",
+      "dateAdded": "2026-08-07"
     }
   ]
 }
