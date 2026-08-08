@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-07",
-  "totalSources": 669,
-  "verifiedCount": 659,
+  "lastUpdated": "2026-08-08",
+  "totalSources": 674,
+  "verifiedCount": 664,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9546,6 +9546,76 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    "revelio-ai-certifications-2026": {
+      "id": "revelio-ai-certifications-2026",
+      "title": "Are AI Certifications Worth It? What the Salary Data Shows",
+      "url": "https://www.reveliolabs.com/news/social/are-ai-certifications-worth-it",
+      "publisher": "Revelio Labs (Loujaina Abdelwahed)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-23",
+      "verified": true,
+      "synthetic": false,
+      "excerpt": "Revelio Labs analysis of AI certifications recorded on workers' online professional profiles, built from a two-level taxonomy of over 500,000 unique AI-related certification names. \"After controlling for occupation and seniority level, AI certification holders earn, on average, an $8,000 salary premium compared to non-certification holders.\" Revelio frames this as positive selection rather than a return to certification: \"within any given occupation and seniority level, the workers choosing to get certifications are those who are already earning more than their peers.\" Certification share rose from 1-2% of all professional certifications pre-ChatGPT to nearly 30% by 2026, a 20x increase. A propensity-score-matched comparison finds certification takers see salary grow 18.1% in their next position versus 15.3% for non-takers.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ]
+    },
+    "revelio-wage-concentration-2026": {
+      "id": "revelio-wage-concentration-2026",
+      "title": "Wage Growth Is Increasingly Concentrated at the Top",
+      "url": "https://www.reveliolabs.com/news/macro/is-wage-inequality-increasing/",
+      "publisher": "Revelio Labs (Jesse Wheeler)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-21",
+      "verified": true,
+      "synthetic": false,
+      "excerpt": "Revelio Labs analysis of advertised salaries on new job postings from its COSMOS dataset. \"Between Q2 2025 and Q2 2026, advertised salaries for bottom-decile jobs actually fell 2.2% in real terms (after adjusting for 3.8% CPI inflation), while ninth-decile jobs rose 7.5% and the top decile rose 6.4%.\" The measure tracks \"what employers are offering today, rather than what current workers already earn.\" The piece argues against an AI-driven white-collar shock: \"Recent Revelio Labs research shows that AI adoption is more strongly associated with weaker wage growth at the bottom of the pay distribution than at the top. In addition, we find that firms investing most heavily in AI continue to expand headcounts.\" Attributed growth is sectoral, concentrated in Professional & Business Services, Information, and Education & Health.",
+      "usedIn": [
+        "entry-level-wage-impact"
+      ]
+    },
+    "openai-eu-jobs-transition-framework-2026": {
+      "id": "openai-eu-jobs-transition-framework-2026",
+      "title": "The AI Jobs Transition Framework for the EU (Mapping Europe's AI Workforce Opportunity)",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework-for-the-eu.pdf",
+      "publisher": "OpenAI Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-29",
+      "verified": true,
+      "synthetic": false,
+      "excerpt": "EU companion to OpenAI's April 2026 US AI Jobs Transition Framework, applied \"across more than 2,600 ESCO occupations.\" \"our EU analysis suggests that 12% of employment is in jobs that may grow with AI, 14% of employment is in jobs with higher automation potential, 27% is in jobs likely to reorganize, and 47% is in jobs with less immediate change.\" Explicitly benchmarked against the US: \"The comparable U.S. report found 18%, 24%, 12%, and 46%, respectively. Europe therefore has a smaller higher-automation-potential share.\" Median price elasticity of a European occupation is about 0.7, so a 10% price decrease raises output roughly 7%. Cross-member-state variation is wide: higher automation potential ranges from 8.7% to 16.9%.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ]
+    },
+    "stripe-economics-solopreneur-2026": {
+      "id": "stripe-economics-solopreneur-2026",
+      "title": "The Age of the Solopreneur",
+      "url": "https://www.stripeeconomics.com/p/the-age-of-the-solopreneur",
+      "publisher": "Stripe Economics (Tedeschi, Rama & Cruickshank)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-22",
+      "verified": true,
+      "synthetic": false,
+      "excerpt": "Stripe Economics analysis of business formation and solo-founder scale. \"In 2023, roughly four million Americans earned their primary income as solopreneurs, generating over $100,000 in annual revenue.\" \"More than twice as many solopreneurs earned over $1 million in 2025 than in 2023\" and \"close to three times as many crossed $5 million and $10 million.\" On AI: \"AI-influenced user journeys now constitute nearly 4x the share of Stripe sign-ups as last January.\" On formation: \"Delaware incorporations have grown approximately 40% year over year since early 2025\" and \"New business registrations have risen roughly 40% in Australia, 70% in Finland, and 80% in France since 2017.\" The share of businesses reaching $1M cumulative revenue within a year was roughly 30% higher for the 2025 cohort.",
+      "usedIn": [
+        "ai-business-formation"
+      ]
+    },
+    "census-btos-ai-question-change-2026": {
+      "id": "census-btos-ai-question-change-2026",
+      "title": "Large Firms With at Least 20 Employees Biggest AI Users",
+      "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-26",
+      "excerpt": "US Census Bureau analysis of BTOS data collected December 14, 2025 to May 3, 2026. Documents a break in the AI-use question: “Originally framed around AI use ‘in producing goods or services,’ rather than to carry out simple tasks like drafting emails, the Census Bureau revised the wording last November to ask businesses whether they were using AI ‘in any business function.’” On November 17, 2025 BTOS began its second AI supplement and revised the core AI use questions. Over the period “overall AI usage hovered between 17% and 20% — and that between 20% and 23% of businesses expected to be using it in the next six months.” The national rate was 19.8% as of May 3, 2026, against 39.7% in Information and 33.9% in Finance and Insurance. Adoption rises with firm size: 37% of firms with at least 250 employees, 32% of firms with 100 to 249 employees, and under 20% of firms with four or fewer employees.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "ai-adoption-rate"
+      ]
     }
   }
 }

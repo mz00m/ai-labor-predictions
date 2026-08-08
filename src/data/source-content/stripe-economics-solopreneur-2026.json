@@ -1,0 +1,15 @@
+{
+  "id": "stripe-economics-solopreneur-2026",
+  "abstract": "A Stripe Economics analysis by Ernie Tedeschi, Marisa Rama and Chris Cruickshank on the rise of very small, very high-revenue businesses. Using Stripe's own payments and sign-up data alongside public registration statistics, it documents a sharp increase in the number of solo operators crossing revenue thresholds that historically required a team, and links the shift in part to AI-assisted onboarding. It is the clearest firm-side evidence in this corpus that AI may be raising the ceiling on what a single person can operate, as distinct from displacing employees.",
+  "keyFindings": [
+    "\"In 2023, roughly four million Americans earned their primary income as solopreneurs, generating over $100,000 in annual revenue.\"",
+    "\"More than twice as many solopreneurs earned over $1 million in 2025 than in 2023\" and \"close to three times as many crossed $5 million and $10 million.\"",
+    "The AI-specific signal: \"AI-influenced user journeys now constitute nearly 4x the share of Stripe sign-ups as last January.\"",
+    "\"Delaware incorporations have grown approximately 40% year over year since early 2025.\"",
+    "\"New business registrations have risen roughly 40% in Australia, 70% in Finland, and 80% in France since 2017.\"",
+    "\"The share of businesses reaching $1 million in cumulative revenue within a year... was roughly 30% higher for the 2025 cohort.\""
+  ],
+  "methodology": "Combines Stripe's internal data on business sign-ups, user journeys and cumulative revenue by founding cohort with public business registration statistics for the US (Delaware incorporations) and several other countries. Solopreneurs are identified as single-operator businesses; revenue milestones are measured as cumulative revenue reached within a fixed window after founding, compared across founding cohorts.",
+  "qualifiers": "Published on the Stripe Economics Substack rather than stripe.com, and it is proprietary platform data that cannot be independently replicated. Stripe's customer base is not a random sample of US businesses: it skews online, digitally native and payments-enabled, which is precisely the population where AI-assisted formation would be most visible, so these rates should not be read as economy-wide. None of the figures matches the target graph's construct, which is percent increase in new firm creation in AI-compatible industries relative to a pre-ChatGPT baseline. The Delaware figure is year-over-year since early 2025 rather than against a pre-ChatGPT baseline, is not restricted to AI-compatible industries, and is not AI-attributed in the source; the Australia, Finland and France figures fail on geography and use a 2017 baseline; the 4x AI-influenced sign-up figure is a multiple of a share of Stripe sign-ups with no published base, so it cannot be expressed in the graph's unit. All are therefore overlays. Note also that AI-influenced sign-up journeys measure how the business was started, not whether the business uses AI.",
+  "fetchedAt": "2026-08-08"
+}

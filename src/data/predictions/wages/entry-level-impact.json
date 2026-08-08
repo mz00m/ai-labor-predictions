@@ -520,6 +520,24 @@
       ],
       "evidenceTier": 2,
       "label": "PwC: 'seniorised' entry-level roles +35% since 2019 vs -10% for others (n=2.4M US)"
+    },
+    {
+      "date": "2026-07-21",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-wage-concentration-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: bottom-decile advertised salaries fell 2.2% real, Q2 2025 to Q2 2026"
+    },
+    {
+      "date": "2026-07-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "revelio-wage-concentration-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: AI ties to weaker pay growth at the bottom, not the top; AI firms hiring"
     }
   ],
   "sources": [
@@ -1026,6 +1044,15 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    {
+      "id": "revelio-wage-concentration-2026",
+      "title": "Wage Growth Is Increasingly Concentrated at the Top",
+      "url": "https://www.reveliolabs.com/news/macro/is-wage-inequality-increasing/",
+      "publisher": "Revelio Labs (Jesse Wheeler)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-21",
+      "excerpt": "Revelio Labs analysis of advertised salaries on new job postings from its COSMOS dataset. \"Between Q2 2025 and Q2 2026, advertised salaries for bottom-decile jobs actually fell 2.2% in real terms (after adjusting for 3.8% CPI inflation), while ninth-decile jobs rose 7.5% and the top decile rose 6.4%.\" The measure tracks \"what employers are offering today, rather than what current workers already earn.\" The piece argues against an AI-driven white-collar shock: \"Recent Revelio Labs research shows that AI adoption is more strongly associated with weaker wage growth at the bottom of the pay distribution than at the top. In addition, we find that firms investing most heavily in AI continue to expand headcounts.\" Attributed growth is sectoral, concentrated in Professional & Business Services, Information, and Education & Health."
     }
   ]
 }

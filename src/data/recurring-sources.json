@@ -116,7 +116,7 @@
         "date": "2026-07-02",
         "value": "17.9% national AI use (Q1 2-wk); GenAI at work 20.8%; task substitution 10.1%"
       },
-      "nextExpected": "~Q3 2026 biweekly wave; next full AI Supplement ~Q1 2027"
+      "nextExpected": "Biweekly waves continue, but the AI questions are not carried in every release: the July 30, 2026 wave contains no AI content. Core AI-use question was revised Nov 17, 2025 from “producing goods or services” to “any business function” — a structural break in the plotted series, documented in census-btos-ai-question-change-2026. Next AI supplement date not announced; check the data tables rather than the press releases, which omit AI."
     },
     {
       "id": "factset-earnings-ai-mentions",

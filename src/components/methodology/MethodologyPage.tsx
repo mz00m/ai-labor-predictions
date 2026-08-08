@@ -1483,6 +1483,35 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
 
           <div>
             <P>
+              <Strong>
+                The Census AI adoption question changed mid-series.
+              </Strong>{" "}
+              Our AI adoption rate plots the Census Bureau&rsquo;s Business
+              Trends and Outlook Survey, and that survey rewrote its own
+              question partway through the period we chart. Through October
+              2025 it asked firms whether they used AI &ldquo;in producing
+              goods or services&rdquo;; from November 2025 it asks whether they
+              used AI &ldquo;in any business function&rdquo; (
+              <a
+                href="https://www.census.gov/library/stories/2026/05/ai-use-businesses.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                Census, 2026
+              </a>
+              ). The second question is broader by construction, so the jump
+              from roughly 10% in mid-2025 to the high teens is partly a
+              definitional artefact rather than diffusion. We plot both eras on
+              one line because it remains the best firm-level measure available
+              and Census publishes it as one series, but the break is real and
+              the pre- and post-November 2025 points should not be read as a
+              clean trend.
+            </P>
+          </div>
+
+          <div>
+            <P>
               <Strong>Trend arrows reflect source mix, not reality.</Strong>{" "}
               A downward arrow may mean &ldquo;newer sources estimate
               lower,&rdquo; not that the real-world metric is declining. Adding
