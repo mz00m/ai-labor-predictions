@@ -186,6 +186,7 @@ async function main() {
   const minQueryWords = 2 / query.split(/\s+/).length;
   const onTopic = deduped.filter(
     (item) =>
+      item.source === "recurringSeries" ||
       computeJobsdataAffinity(item) > 0 ||
       queryRelevance(item, query) >= minQueryWords
   );
