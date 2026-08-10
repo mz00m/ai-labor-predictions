@@ -1,0 +1,152 @@
+{
+  "week": "2026-W33",
+  "generatedAt": "2026-08-10T09:19:33.709Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "AI's Real Threat to Workers: Wage Suppression Over Job Loss",
+        "summary": "New research covered by Business Insider argues that the primary labor market risk from AI is not mass unemployment but downward pressure on worker compensation, as AI tools allow employers to hire fewer or lower-skilled workers for the same output. The piece synthesizes recent academic findings suggesting wage erosion could be more widespread and harder to reverse than outright displacement. (Source: Business Insider / HN Algolia, 2026-08-01)",
+        "source": "https://www.businessinsider.com/ai-could-lower-workers-pay-job-market-impact-2026-7",
+        "publishedAt": "2026-08-01",
+        "score": 0.182,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "businessinsider-ais-real-threat-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "NY Fed: AI's Measurable Impact on Labor and Hiring",
+        "summary": "The New York Fed's Liberty Street Economics blog launched a new thematic series highlighting research on AI's evolving effects on labor demand and hiring practices across sectors. The post synthesizes Fed economists' work showing early but tangible shifts in job postings and employer skill requirements attributable to generative AI adoption. (Source: NY Fed Liberty Street Economics, 2026-08-05)",
+        "source": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+        "publishedAt": "2026-08-05",
+        "score": 0.329,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "libertystreeteconomics-ny-fed-ais-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Federal Reserve FEDS Note: Public Indicators to Track the AI Buildout's Economic Impact",
+        "summary": "Fed economists Soto, Thieu, and Allen present a framework of publicly available indicators—spanning capital expenditure, job postings, and productivity data—to monitor the generative AI buildout's macroeconomic footprint in near-real time. The note organizes metrics into categories enabling policymakers to assess AI adoption velocity and labor market spillovers on an ongoing basis. (Source: Federal Reserve Board FEDS Notes, 2026-07-17)",
+        "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+        "publishedAt": "2026-07-17",
+        "score": 0.467,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "federalreserve-federal-reserve-feds-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Revelio Labs AI Labor Market Tracker: Real-Time Jobs and Adoption Signals",
+        "summary": "Revelio Labs' continuously updated AI Labor Market Tracker draws on workforce and job-posting data to quantify how AI exposure and adoption are reshaping employment levels, job task composition, and hiring demand across occupations. The tracker provides one of the most granular firm-side views of AI-driven workforce transformation currently available. (Source: Revelio Labs, 2026-07-28)",
+        "source": "https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker",
+        "publishedAt": "2026-07-28",
+        "score": 0.4,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "reveliolabs-revelio-labs-ai-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Most AI-exposed occupations grew ~4% less than least-exposed since ChatGPT launch",
+          "quote": "employment in the most AI-exposed occupations has grown about 4% less than employment in the least-exposed occupations since the launch of ChatGPT"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-adopting firms grew headcount 27% more than non-adopters since Oct 2022",
+          "quote": "Adopting firms grow headcount by 27% relative to non-adopters since October 2022"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Senior roles at AI-adopting firms up 31% vs 6% for junior roles since Oct 2022",
+          "quote": "Senior roles grow by 31%, compared with just 6% for junior roles"
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Activity mix dissimilarity index rose to 8.4 ppts YoY in June 2026",
+          "quote": "In June 2026 the year-over-year change in the activity mix dissimilarity index increased to 8.4 percentage points, meaning that 8.4% of the economy's headcount-weighted activity mix would need to be reallocated across activities to return to its June 2025 composition"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Share of job postings with high AI exposure declined ~5 ppts since Nov 2022",
+          "quote": "Since November 2022, the share of job postings with high AI exposure has declined by approximately 5 percentage points"
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Recruiter silence mentions in interview reviews up ~9% since Oct 2022",
+          "quote": "Mentions of recruiter silence in interview reviews are up about 9% since October 2022"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Occupational Convergence or Divergence? Mapping AI-Driven Structural Labor Market Shifts",
+        "summary": "Hilman and Koltai examine whether AI diffusion is producing a common skill baseline across occupations or deepening occupational divides, finding evidence of bifurcation: high-AI-penetration roles are diverging in skill demand from lower-exposure occupations. The study maps these structural shifts using labor market data, offering insight into which job categories face the steepest transition pressures. (Source: OpenAlex / arXiv, 2026-07-30)",
+        "source": "https://arxiv.org/abs/2607.28798",
+        "authors": [
+          "Rafiazka Hilman",
+          "Julia Koltai"
+        ],
+        "publishedAt": "2026-07-30",
+        "score": 0.185,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-occupational-convergence-or-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "75-80% of AI vacancies concentrated in STEM occupations across 10 countries",
+          "quote": "approximately three quarters to four fifths of AI related vacancies located in STEM occupations across all countries"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "AI competencies confined to technical core; divergence from rest of labor market",
+          "quote": "AI competencies remain largely confined to technical domains and are most strongly demanded at labor market entry"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-intensive jobs converge on Python, SQL, ML, data analysis skills globally",
+          "quote": "AI intensive jobs consistently emphasize Python, SQL, machine learning, and data analysis, generating convergence among highly exposed occupations"
+        },
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI raises barriers to entry; concentrates benefits among prior tech-advantaged workers",
+          "quote": "Rather than democratizing opportunities, AI appears to reinforce occupational stratification, raising barriers to entry and concentrating the benefits of AI adoption among workers and occupations with prior technological advantages"
+        }
+      ]
+    }
+  ]
+}
