@@ -55,6 +55,16 @@
       "evidenceTier": 2,
       "metricType": "survey",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-07-30",
+      "value": 3.7,
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -153,6 +163,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-04-03",
       "excerpt": "The SBU estimates an employment-weighted firm AI adoption rate of around 78 percent and an LLM adoption rate of about 54 percent. In this context, employment weighting approximates the share of the labor force working at firms that have adopted AI."
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "5.8 million workers in the U.S. are currently working in high exposure occupations, which represents about 3.7% of the U.S. labor force. High exposure is defined as an Anthropic Economic Index observed-usage score of 0.5 or above, a stricter threshold than Anthropic's own 25%-of-tasks cut (49%) or any-observed-coverage cut (70%)."
     }
   ]
 }

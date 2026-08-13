@@ -1985,6 +1985,15 @@
       "label": "Revelio: more AI-exposed firms see fewer layoffs, not more"
     },
     {
+      "date": "2026-07-30",
+      "direction": "down",
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Apollo: no significant employment effect in high AI-exposure occupations"
+    },
+    {
       "date": "2026-08-06",
       "direction": "up",
       "sourceIds": [
@@ -3544,6 +3553,15 @@
       "datePublished": "2026-08-06",
       "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" \u2014 the fifth straight month AI has led all stated reasons. \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\" Announced hiring plans reached 107,500 YTD, up 25%.",
       "dateAdded": "2026-08-07"
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "As shown in the regression results in Table 3, no significant employment effect was found from an occupation having a high AI exposure score. Coefficient on AI Exposure x Post for log(Employment) was -0.0639 (SE 0.0870), not statistically significant, versus -0.0667 (SE 0.0181, p<0.01) for log(Real Wage). Suggests firms are capturing AI productivity gains through wage compression rather than workforce reduction."
     }
   ]
 }

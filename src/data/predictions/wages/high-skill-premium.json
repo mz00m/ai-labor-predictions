@@ -523,6 +523,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: AI-exposure wage premium eroded from ~2% pre-ChatGPT to roughly zero"
+    },
+    {
+      "date": "2026-07-30",
+      "direction": "down",
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Apollo: management/professional wages -4.1% vs non-exposed peers"
     }
   ],
   "sources": [
@@ -986,6 +995,15 @@
       "datePublished": "2026-07-28",
       "excerpt": "The wage premium for AI-exposed work has eroded to roughly zero, falling from around 2% before ChatGPT's launch. Measured as the salary premium associated with a one-standard-deviation increase in posting-level AI exposure, not as a premium over the median wage.",
       "dateAdded": "2026-07-29"
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "Management and professional occupations also had significant impacts on their real wage growth, as it fell 4.1% relative to non-exposure peers. Blue-collar workers showed no statistically significant effects. Measures a growth differential versus non-exposed occupations, not a premium over the median wage."
     }
   ]
 }

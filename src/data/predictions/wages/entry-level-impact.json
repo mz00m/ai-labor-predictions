@@ -520,6 +520,15 @@
       ],
       "evidenceTier": 2,
       "label": "PwC: 'seniorised' entry-level roles +35% since 2019 vs -10% for others (n=2.4M US)"
+    },
+    {
+      "date": "2026-07-30",
+      "direction": "down",
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Apollo: bottom wage quartile real wage growth -10.7% vs low-exposure"
     }
   ],
   "sources": [
@@ -1026,6 +1035,15 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "Workers in the bottom quartile of the wage distribution had their real wage growth decline by around 10.7% relative to low-exposure occupations, compared to 5.4% in the second quartile and 4.0% in the third quartile. The top quartile showed no statistically significant wage effect. Wage-quartile cut, not a tenure cut, so not directly comparable to entry-level (0-2 years experience) estimates."
     }
   ]
 }

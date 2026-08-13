@@ -174,6 +174,16 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
+    },
+    {
+      "date": "2026-07-30",
+      "value": -6.7,
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -644,6 +654,15 @@
       ],
       "evidenceTier": 1,
       "label": "Yale Budget Lab: no statistically significant AI wage effect through 2026Q1 (SDID)"
+    },
+    {
+      "date": "2026-07-30",
+      "direction": "down",
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Apollo: service occupations -24.3% wage growth (n=239, author cautions)"
     }
   ],
   "sources": [
@@ -1231,6 +1250,15 @@
       "datePublished": "2026-05-05",
       "excerpt": "positive outcomes are rare and driven chiefly by higher wages, as opposed to lower RTI scores due to shifted occupations. Moreover, wage gains may be the consequence of a structural 'catch-up' dynamic, whereby the most vulnerable program participants see a reversion to the mean.",
       "dateAdded": "2026-06-01"
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "Workers who are in high-exposure occupations saw their wages grow about 6.7 percentage points slower than workers not in high-exposure occupations after 2023. Difference-in-differences across 321 matched occupations, BLS OEWS 2015-2025, high exposure defined as an Anthropic Economic Index usage score of 0.5 or above. Service occupations had their real wage growth fall by about 24.3% relative to low-exposure occupations after 2023, though the author notes this rests on a small subsample (n=239) and should be interpreted with caution."
     }
   ]
 }
