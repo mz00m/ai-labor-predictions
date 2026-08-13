@@ -424,6 +424,16 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
+    },
+    {
+      "date": "2026-08-12",
+      "value": 0,
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -3544,6 +3554,16 @@
       "datePublished": "2026-08-06",
       "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" \u2014 the fifth straight month AI has led all stated reasons. \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\" Announced hiring plans reached 107,500 YTD, up 25%.",
       "dateAdded": "2026-08-07"
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2026-08",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (August 2026)",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "We find no evidence of widespread, economy-wide job displacement. Average employment in the ADP sample rose by about 6% between November 2022 and June 2026, while employment for the most exposed quintile grew by about 4%. This aggregate stability is itself informative: claims of economy-wide AI-driven job losses are not visible in payroll data through June 2026.",
+      "dateAdded": "2026-08-13"
     }
   ]
 }

@@ -5,10 +5,10 @@
   "description": "Employment decline for workers aged 22-25 in the most AI-exposed occupations, measured relative to less-exposed occupations. Only relative or regression-adjusted estimates are plotted; raw unadjusted declines measure a different quantity and appear as overlays.",
   "category": "displacement",
   "unit": "% employment decline, ages 22-25, vs least-exposed",
-  "currentValue": 13,
+  "currentValue": 14.4,
   "timeHorizon": "Current measure",
   "aggregationMethod": "weighted",
-  "disclaimer": "Every plotted point is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) are shown as overlays because geography is a hard gate on comparability. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Every plotted point is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) are shown as overlays because geography is a hard gate on comparability. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. The 2025 and 2026 points are the same Stanford/ADP study a year apart \u2014 not two studies independently reaching the same answer. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2025-11-13",
@@ -57,6 +57,16 @@
         "revelio-ai-labor-market-tracker-2026-07"
       ],
       "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-08-12",
+      "value": 19,
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
     }
@@ -133,6 +143,33 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: at AI adopters, senior headcount +31% vs +6% junior since Nov 2022"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries: gap attenuates from -18pp to -9pp controlling for college share"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries: ACS benchmark gap -2.2pp [-5.5, +1.1] vs -13.2pp in ADP, 2022-24"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "up",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries: decline sharpest in leading AI-adoption states (-19% most-exposed)"
     }
   ],
   "sources": [
@@ -255,6 +292,16 @@
       "datePublished": "2026-07-28",
       "excerpt": "Employment for younger workers in the most AI-exposed occupations is down by 13% relative to the least exposed occupations, since pre-ChatGPT \u2014 a much larger decline than for older workers. Event-study with two-way occupation and month fixed effects, standard errors clustered by occupation, ages 22-25, built on online professional profiles rather than payroll records.",
       "dateAdded": "2026-07-29"
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2026-08",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (August 2026)",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "Employment of young workers (ages 22-25) in AI-exposed occupations now stands 19% below where it would be had it kept pace with that of their less-exposed peers; experienced workers show no comparable gap. Descriptive kept-pace measure on an ADP balanced payroll panel of 3.5-5 million workers per month, January 2021 through June 2026. Earlier vintages of this study headlined regression-adjusted estimates (13% at July 2025 data, 16% at September 2025 data); by the kept-pace measure the shortfall was 15% at the July 2025 vintage and has widened to 19% as of June 2026.",
+      "dateAdded": "2026-08-13"
     }
   ]
 }

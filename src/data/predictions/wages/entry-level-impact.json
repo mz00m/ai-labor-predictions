@@ -520,6 +520,15 @@
       ],
       "evidenceTier": 2,
       "label": "PwC: 'seniorised' entry-level roles +35% since 2019 vs -10% for others (n=2.4M US)"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries: little difference in compensation trends by age or exposure quintile"
     }
   ],
   "sources": [
@@ -1026,6 +1035,16 @@
       ],
       "verified": true,
       "synthetic": false
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2026-08",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (August 2026)",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "We find little difference in compensation trends by age or exposure quintile. Among job-stayers, average real base pay has grown more slowly in more exposed jobs, though this is not specific to young workers; these differences are small relative to the roughly 20-percentage-point divergence in employment. Among new hires, real starting pay shows no obvious relationship with AI exposure for young workers. Adjustment operates through employment rather than base compensation.",
+      "dateAdded": "2026-08-13"
     }
   ]
 }

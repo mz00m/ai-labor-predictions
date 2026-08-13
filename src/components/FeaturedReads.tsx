@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Brynjolfsson, Chandar & Chen",
+    title: "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+    summary:
+      "The third vintage of the most-cited paper in the field, now with ADP payroll data through June 2026 — and it changes its own headline measure. Earlier versions led with a regression estimate adjusting for firm shocks (13%, then 16%). This one leads with the simpler descriptive number that needs no modeling choices: employment of 22-25 year olds in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers, up from 15% on the same measure a year ago. Experienced workers show no comparable gap, and Fact 1 remains that there is no economy-wide displacement — the ADP sample grew about 6%. The most useful thing here is the authors arguing against themselves. Education is the one control that bites (the gap attenuates from -18pp to -9pp), and they present the two estimates as bracketing a range rather than picking the flattering one, because generative AI substitutes best for exactly the codified knowledge schooling produces. They also concede the magnitude is ADP-specific: the ACS gap is -2.2pp with a confidence interval spanning zero against -13.2pp in ADP, though the two agree closely within white-collar work. Adjustment runs through hiring, not separations or pay.",
+    date: "Aug 12",
+    url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+  },
+  {
     author: "Revelio Labs",
     title: "Introducing the Revelio AI Labor Market Tracker",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Google's entry into the usage-data triad (alongside Anthropic's Economic Index and OpenAI's Jobs Transition Framework) — 15M de-identified Gemini interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 household activities, 150 countries, and 140 languages. Headline: diffusion is broad but shallow. Usage spans occupations covering 88% of US employment, yet the median occupation applies AI to only 21% of its tasks, and end-to-end automation is under 10% of non-routine cognitive use. Uniquely adds household lenses: 86% of conversational AI happens outside work, government/civic queries over-index ~20x, and household time savings may be worth $15-149B/yr — invisible to GDP. Reviewed by Coyle and Autor; Imas co-authored.",
     date: "Jul 23",
     url: "https://deepmind.google/research/publications/ai-economy-atlas",
-  },
-  {
-    author: "Stanford DEL / ADP Research",
-    title: "Canaries Dashboard: July 2026 Update",
-    summary:
-      "Monthly refresh of the ADP-payroll Canaries series (4.6M workers, 730+ occupations), data through June 2026. All exposure quintiles now show employment growth since ChatGPT — most-exposed +1.1%/yr vs +2.0%/yr least-exposed — but early-career workers (22-25) in the most-exposed quintile are still contracting at 3.5%/yr, and -4.3% over the past year. New gender decomposition: early-career women in the most-exposed quintile shrinking at 4.5%/yr vs 2.5%/yr for men — driven mostly by occupational mix, with 43.8% of early-career women working in the most-exposed occupation category vs 32.4% of men. The live empirical answer to 'what does the data show right now.'",
-    date: "Jul 22",
-    url: "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
   },
 ];
 

@@ -1,6 +1,6 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-29",
+  "asOf": "2026-08-13",
   "lastSweep": "2026-07-22",
   "series": [
     {
@@ -204,11 +204,11 @@
       "whatItMeasures": "Canaries Dashboard tracks employment across 5-year balanced ADP payroll sample (25K firms, 4.6M workers). Takeoff Tracker follows 12 macro indicators for AI-driven growth. Adoption Monitor synthesizes surveys.",
       "whyItMatters": "The Canaries finding — early-career workers 22-25 in most-exposed occupations contracting -3.5%/yr as of June 2026 data — is the most-cited AI-displacement evidence in the field. Takeoff Tracker's 7-no / 3-mild / 2-strong reading is the field's best macro summary.",
       "lastIngested": {
-        "sourceId": "stanford-del-canaries-july-2026",
-        "date": "2026-07-23",
-        "value": "Canaries Jul 2026: early-career most-exposed -3.5%/yr; women -4.5%/yr vs men -2.5%/yr"
+        "sourceId": "brynjolfsson-chandar-chen-2026-08",
+        "date": "2026-08-13",
+        "value": "Canaries paper (Aug 2026 revision, data through June 2026): ages 22-25 kept-pace shortfall 19%, up from 15% at the July 2025 vintage"
       },
-      "nextExpected": "Dashboard refreshes monthly (next ~August 2026); next research note ~September 2026"
+      "nextExpected": "Dashboard refreshes monthly (next ~September 2026); next research note ~November 2026"
     },
     {
       "id": "anthropic-economic-index",
