@@ -1,0 +1,114 @@
+{
+  "week": "2026-W34",
+  "generatedAt": "2026-08-17T08:41:03.549Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Digital Decoupling: AI Simultaneously Displaces and Augments U.S. Workers by Education Level",
+      "summary": "A new peer-reviewed study introduces an AI Dual-Track model analyzing 846 U.S. occupations, finding that generative AI creates sharply divergent outcomes based on educational attainment—displacing lower-credentialed workers while augmenting higher-skilled ones. The research quantifies this 'digital decoupling' effect across the full occupational spectrum, suggesting structural bifurcation in the labor market. López (2026) frames this as a reinforcement of existing educational stratification rather than a neutral technological shift. (Source: AI & Society, DOI: 10.1007/s00146-026-03288-z)",
+      "source": "https://doi.org/10.1007/s00146-026-03288-z",
+      "authors": [
+        "Omar S. López"
+      ],
+      "publishedAt": "2026-08-12",
+      "doi": "10.1007/s00146-026-03288-z",
+      "score": 0.279,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "AI Is Hollowing Out the Middle Class of Software Engineering",
+      "summary": "A widely-discussed blog post and Hacker News thread (997 points, 933 comments) argues that AI coding tools are compressing the mid-tier of software engineering, eliminating the 'journeyman' layer of developers who previously bridged junior and senior roles. The post contends that AI handles routine implementation tasks previously assigned to mid-level engineers, accelerating a barbell distribution of employment in tech. This aligns with broader polarization research and generated significant practitioner debate about career pathways in software. (Source: florianherrengt.com via HN Algolia)",
+      "source": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "publishedAt": "2026-08-12",
+      "score": 0.365,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "tech-sector-displacement"
+    },
+    {
+      "title": "Federal Reserve Board Publishes Framework for Tracking AI Buildout's Economic Impact",
+      "summary": "Fed economists Soto, Thieu, and Allen present a structured set of publicly available indicators—organized into capital expenditure, labor market, and productivity categories—to help policymakers monitor the generative AI buildout in near real-time. The note highlights the challenge of measuring AI's economic footprint given data lags, and proposes a composite dashboard approach drawing on earnings disclosures, job postings, and investment data. This represents the Fed's most explicit methodological statement to date on tracking AI-driven economic transformation. (Source: Federal Reserve Board FEDS Notes, 2026-07-17)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "publishedAt": "2026-08-17",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "NY Fed Launches 'Street Level' Series on AI's Impact on Labor and Hiring",
+      "summary": "The New York Fed's new Liberty Street Economics series debuts with a thematic overview of internal research on how AI is reshaping hiring practices and labor demand, authored by the research director. The post synthesizes ongoing NY Fed work suggesting measurable shifts in job posting language, skill requirements, and employer screening behavior attributable to AI adoption. It signals sustained institutional attention to AI-labor dynamics from one of the most influential U.S. economic research bodies. (Source: NY Fed Liberty Street Economics, 2026-08-05)",
+      "source": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publishedAt": "2026-08-05",
+      "score": 0.219,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Task-Based Model Reframes AI Job Destruction Debate Around Institutional Context",
+      "summary": "A working paper by Kolb and Caron argues that framing AI's labor impact as binary job 'destruction' is analytically insufficient, instead proposing a task-based and institutionally grounded framework that accounts for the uneven substitutability of machine cognition across professional roles. The paper distinguishes between 'cheap, fallible cognition' and expert judgment, arguing that institutional structures—licensing, liability, professional norms—mediate how AI displaces or complements expertise. This framework has direct implications for understanding wage premiums for high-skill professionals in the AI era. (Source: arXiv, DOI: 10.48550/arxiv.2608.11512)",
+      "source": "https://arxiv.org/abs/2608.11512",
+      "authors": [
+        "Christophe Kolb",
+        "Jim Caron"
+      ],
+      "publishedAt": "2026-08-11",
+      "doi": "10.48550/arxiv.2608.11512",
+      "score": 0.258,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    }
+  ],
+  "themes": [
+    "Educational stratification is amplifying AI's dual displacement-augmentation effect, with lower-credentialed workers bearing disproportionate displacement risk across hundreds of U.S. occupations.",
+    "The software engineering labor market is exhibiting mid-tier hollowing, as AI automates journeyman-level coding tasks and compresses the career ladder between junior and senior roles.",
+    "Major institutional actors—Federal Reserve Board and NY Fed—are formalizing frameworks to track AI's economic and labor market footprint, signaling policy infrastructure is catching up to the technology.",
+    "Task-based and institutionally grounded models are supplanting coarse 'jobs destroyed' metrics, with professional licensing and liability emerging as key mediators of AI displacement in high-skill occupations.",
+    "Several critical recurring data series (Fed AI Adoption Monitor, Census BTOS AI Supplement, FactSet Earnings Call AI Mentions, NY Fed SCE AI Module) are overdue for updates, creating a near-term data gap in AI adoption measurement."
+  ],
+  "watching": [
+    {
+      "title": "FactSet S&P 500 Earnings Call AI Mentions — Q2 2026 Update Overdue",
+      "source": "https://insight.factset.com/",
+      "reason": "Q2 2026 wave expected August 2026; 124 days since last ingest. Will reveal whether corporate AI investment rhetoric is translating into operational commitments."
+    },
+    {
+      "title": "Census Business Trends & Outlook Survey — AI Supplement Overdue",
+      "source": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "reason": "46 days since last ingest vs. biweekly cadence. Freshest firm-side U.S. AI adoption measure; delay obscures real-time adoption tracking."
+    },
+    {
+      "title": "AI Generated 3D Models Flood Market, but Almost No One Is Buying Them",
+      "source": "https://www.404media.co/ai-generated-3d-models-flood-market-but-almost-no-one-is-buying-them/",
+      "reason": "Early signal that AI supply gluts in creative asset markets may not translate to revenue displacement, complicating creative-industry displacement projections."
+    },
+    {
+      "title": "Revelio Labs RPLS: U.S. Economy Adds Only 79k Jobs in July 2026",
+      "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-79k-jobs-in-july",
+      "reason": "Soft July payroll print with Leisure/Hospitality declines warrants monitoring for AI-automation contribution vs. cyclical slowdown in coming RPLS releases."
+    },
+    {
+      "title": "NY Fed SCE AI Module — Quarterly Update Overdue",
+      "source": "https://libertystreeteconomics.newyorkfed.org/",
+      "reason": "125 days since last ingest; expected Aug–Sep 2026. Worker-reported AI use and training access data critical for genai-work-adoption and median-wage-impact graphs."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [],
+    "totalCandidates": 99,
+    "afterDedup": 99
+  }
+}
