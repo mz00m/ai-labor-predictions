@@ -2,6 +2,36 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI's Impact on Labor and Hiring",
+      "author": "Kartik B. Athreya",
+      "publisher": "Federal Reserve Bank of New York \u2014 Liberty Street Economics",
+      "date": "2026-08-05",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "takeaway": "The NY Fed's director of research uses the inaugural post of a new commentary series to state how his own shop reads its AI evidence: the labor-market effect so far \"has more to do with changing skill requirements than eliminating jobs.\" The one numeric table, from the August 2025 Regional Business Surveys, shows Second District adoption climbing quickly \u2014 service firms from 25% using AI in 2024 to 40% in 2025, manufacturers from 16% to 26%, with 44% and 33% expected within six months \u2014 alongside the finding that firms report very few AI-driven layoffs and \"overwhelmingly intend to retrain workers rather than fire them.\" The counterweight Athreya does not soften: firms anticipate more reductions in hiring plans ahead, especially for college-educated workers. Worth reading as institutional interpretation rather than new measurement. Everything quantitative is restated from earlier work, the survey is regional rather than national and so is not comparable to the Census BTOS series jobsdata plots, and the retraining chart carries no labeled values. His closing speculation is the more interesting half: that specialization leaves each of us exposed to a sudden collapse in the value of the one skill we sell, and that AI's demand-side effects may ultimately matter more than its absorption into production.",
+      "weekFeatured": "2026-08-10",
+      "tier": 2
+    },
+    {
+      "title": "Time Travel on Professional Profiles",
+      "author": "Nicholas Bloom, Gideon Moore, Lisa K. Simon, Caelan Wilkie-Rogers",
+      "publisher": "NBER",
+      "date": "2026-08-03",
+      "url": "https://www.nber.org/papers/w35546",
+      "takeaway": "A quietly destabilising paper for anyone tracking AI's labor effects through professional profile data \u2014 which is most of us. Using monthly vintages of Revelio Labs data from 2020 to 2026, the authors find 19.7% of established US LinkedIn users go back and rewrite the title or description of a job they have already left. The records are \"not fixed historical snapshots, but mutable accounts that workers revise over time.\" Edits cluster around job changes, and AI-related language in them jumps sharply after 2022. Two of the four authors are at Revelio, which makes this a vendor documenting its own limitation rather than an outside attack. The implication worth sitting with: an exposure measure built on profile text partly captures workers relabelling old work in new vocabulary, not the work itself changing.",
+      "weekFeatured": "2026-08-07",
+      "tier": 1
+    },
+    {
+      "title": "Generative AI floods and dilutes the market for books",
+      "author": "Tuhin Chakrabarty, Xinyue Liu, Jane C. Ginsburg, Paramveer Dhillon",
+      "publisher": "arXiv",
+      "date": "2026-07-22",
+      "url": "https://arxiv.org/abs/2607.20349",
+      "takeaway": "The assumption that AI-written books are slop buyers will ignore turns out to be wrong, and the mechanism of harm is not the one people expected. Across 14,419 self-published Amazon genre-fiction titles matched to daily sales, quarterly selling titles grew 19.2-fold while revenue grew only 8.9-fold \u2014 the market added books far faster than it added money, and revenue per title fell across most genres. Books with detected AI text win a growing share of the scarce top-rank positions. Human-authored books lose the most ground precisely in genres where AI has diffused furthest. None of the books disclose AI use. The conclusion is that generative AI \"can reshape a creative market through scale rather than quality\" \u2014 dilution, not replacement.",
+      "weekFeatured": "2026-08-07",
+      "tier": 1
+    },
+    {
       "title": "What is really happening to jobs? Separating AI hype from reality",
       "author": "Stanford Institute for Economic Policy Research",
       "publisher": "SIEPR",

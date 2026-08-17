@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-07-31",
-  "totalSources": 666,
-  "verifiedCount": 656,
+  "lastUpdated": "2026-08-10",
+  "totalSources": 670,
+  "verifiedCount": 660,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9497,6 +9497,68 @@
       "excerpt": "Federal Reserve Board FEDS Note cataloguing publicly available indicators for tracking the generative AI buildout across three stages: capabilities and costs; firm investment and adoption; and productivity and labor. Notes that headline adoption figures do not reflect usage intensity, which surveys suggest remains shallow even where reported adoption is broad, and that the absence of a large aggregate signal as of 2026 would not necessarily invalidate future productivity impacts given that shallow adoption. Tracks sectoral productivity by AI exposure level, unemployment and labor force participation for workers aged 20-24 against prime-age workers, and layoffs, discharges and job openings in information-processing sectors as a white-collar displacement signal. Methodological reference rather than a source of new estimates.",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chakrabarty-ai-book-market-dilution-2026": {
+      "id": "chakrabarty-ai-book-market-dilution-2026",
+      "title": "Generative AI floods and dilutes the market for books",
+      "url": "https://arxiv.org/abs/2607.20349",
+      "publisher": "Chakrabarty, Liu, Ginsburg & Dhillon (arXiv preprint)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-22",
+      "excerpt": "Full-text AI detection across 14,419 self-published genre-fiction books sold on Amazon 2023-2026, matched to daily sales through June 2026: \"the number of books with observed sales in a quarter grew 19.2-fold, while quarterly revenue grew only 8.9-fold. The market therefore added selling books faster than it added revenue, and revenue per selling book fell across most genres.\" \"Books with no AI text lose the most ground in genres with high AI diffusion, and most of all where Kindle Unlimited availability is high.\"",
+      "dateAdded": "2026-08-07",
+      "usedIn": [
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-bloom-profile-mutability-2026": {
+      "id": "nber-bloom-profile-mutability-2026",
+      "title": "Time Travel on Professional Profiles",
+      "url": "https://www.nber.org/papers/w35546",
+      "publisher": "NBER (Bloom, Moore, Simon, Wilkie-Rogers)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-03",
+      "excerpt": "Using monthly vintages of Revelio Labs data from 2020-2026, the authors show public professional profiles \"are not fixed historical snapshots, but mutable accounts that workers revise over time.\" They find \"19.7 percent of established U.S. LinkedIn users retroactively edit the title or description of a job they have already left,\" that such users \"are much more likely to change employers as compared to later-editing users,\" and that \"this mutability can bias historical measures of skills.\" Retroactive edits show sharp post-2022 increases in AI-related language.",
+      "dateAdded": "2026-08-07",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "challenger-july-2026": {
+      "id": "challenger-july-2026",
+      "title": "Challenger Report: Layoffs Fall, Hiring Picks Up; AI Leads For Fifth Straight Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-layoffs-fall-hiring-picks-up-ai-leads-for-fifth-straight-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-06",
+      "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\". \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\"",
+      "dateAdded": "2026-08-07",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-athreya-labor-hiring-2026": {
+      "id": "nyfed-athreya-labor-hiring-2026",
+      "title": "AI's Impact on Labor and Hiring",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publisher": "Federal Reserve Bank of New York — Liberty Street Economics (Athreya)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-05",
+      "excerpt": "while AI adoption is rising quickly across industries, firms report very few AI-driven layoffs",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false

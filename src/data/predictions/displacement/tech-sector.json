@@ -909,6 +909,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford DEL Canaries: ages 22-25 in most-exposed jobs shrinking 3.5%/yr"
+    },
+    {
+      "date": "2026-08-06",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-july-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: tech announced 149,023 US job cuts YTD 2026, leading all sectors"
     }
   ],
   "sources": [
@@ -1695,6 +1704,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-07-22",
       "excerpt": "Software developers land in the most exposed occupations group. We see large declines for early-career workers (22-25), modest declines for the next-youngest groups, and expansion for the remaining age groups. Published dashboard data (vintage 2026-07-16): employment for ages 22-25 in the most-exposed occupation quintile declining at an annualized 3.5%/yr since ChatGPT, and 4.3% over the past year."
+    },
+    {
+      "id": "challenger-july-2026",
+      "title": "Challenger Report: Layoffs Fall, Hiring Picks Up; AI Leads For Fifth Straight Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-layoffs-fall-hiring-picks-up-ai-leads-for-fifth-straight-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-06",
+      "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" \u2014 the fifth straight month AI has led all stated reasons. \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\" Announced hiring plans reached 107,500 YTD, up 25%.",
+      "dateAdded": "2026-08-07"
     }
   ],
   "marketIds": {

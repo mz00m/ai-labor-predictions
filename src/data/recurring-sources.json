@@ -44,11 +44,11 @@
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
       "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
-        "sourceId": "challenger-june-2026",
-        "date": "2026-07-01",
-        "value": "~102K AI-attributed job cuts YTD; tech = 1/3 of announcements"
+        "sourceId": "challenger-july-2026",
+        "date": "2026-08-06",
+        "value": "112,713 AI-attributed job cuts YTD (24% of all cuts); AI led all reasons 5th straight month"
       },
-      "nextExpected": "August 6, 2026 (July data)"
+      "nextExpected": "September 3, 2026 (August data)"
     },
     {
       "id": "ramp-ai-velocity",
@@ -461,9 +461,9 @@
       "whatItMeasures": "Not a data series — a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
       "whyItMatters": "Every ingested Tier 1 paper on the site traces back to this feed. Tracking NBER weekly is how the site stays ahead of Fed / IMF / OECD syntheses (which lag academic publication by 3-9 months). This is where the 'first inning' research Kolko flags is being written.",
       "lastIngested": {
-        "sourceId": "nber-chen-sialm-xu-ai-investing-2026",
-        "date": "2026-06-01",
-        "value": "Latest ingested AI-labor NBER WP: Chen/Sialm/Xu on AI in asset management (Jun 2026). ~9 NBER WPs ingested since March 2026"
+        "sourceId": "nber-bloom-profile-mutability-2026",
+        "date": "2026-08-03",
+        "value": "Bloom/Moore/Simon/Wilkie-Rogers on retroactive editing of professional profiles (measurement caveat for Revelio-derived series)"
       },
       "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly"
     },
