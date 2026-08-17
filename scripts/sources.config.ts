@@ -485,6 +485,10 @@ export function scoreItem(
   query: string,
   now: Date
 ): number {
+  // Work-queue items carry their own urgency. Their publishedAt is the last
+  // ingest date, so recency decay would rank the most-overdue series lowest.
+  if (item.priorityScore !== undefined) return item.priorityScore;
+
   // 1. Recency: exponential decay, half-life 7 days
   const daysSince =
     (now.getTime() - item.publishedAt.getTime()) / 86400000;

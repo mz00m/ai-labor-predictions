@@ -2,13 +2,13 @@
   "id": "adoption-rate",
   "slug": "ai-adoption-rate",
   "title": "AI Adoption Rate Across US Companies",
-  "description": "Percentage of US firms using AI in production, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
+  "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
   "currentValue": 17.9,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
-  "disclaimer": "Adoption estimates diverge by an order of magnitude depending on how adoption is identified, and the differences are definitional rather than a matter of one measure being wrong. BTOS asks firms directly whether they used AI to produce goods or services in the past two weeks (17.9%). Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is plotted; the others appear as overlays. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Adoption estimates diverge by an order of magnitude depending on how adoption is identified, and the differences are definitional rather than a matter of one measure being wrong. BTOS asks firms directly whether they used AI in the past two weeks (17.9%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is plotted; the others appear as overlays. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2023-08-15",
@@ -1462,6 +1462,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-05",
       "excerpt": "Rapid Adoption of AI Across Industries. Share Using AI: Service Firms / Manufacturers. In 2024: 25 / 16. In 2025: 40 / 26. In next six months: 44 / 33. Source: Federal Reserve Bank of New York, Regional Business Surveys, August 2025."
+    },
+    {
+      "id": "census-btos-ai-question-change-2026",
+      "title": "Large Firms With at Least 20 Employees Biggest AI Users",
+      "url": "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-26",
+      "excerpt": "US Census Bureau analysis of BTOS data collected December 14, 2025 to May 3, 2026. Documents a break in the AI-use question: “Originally framed around AI use ‘in producing goods or services,’ rather than to carry out simple tasks like drafting emails, the Census Bureau revised the wording last November to ask businesses whether they were using AI ‘in any business function.’” On November 17, 2025 BTOS began its second AI supplement and revised the core AI use questions. Over the period “overall AI usage hovered between 17% and 20% — and that between 20% and 23% of businesses expected to be using it in the next six months.” The national rate was 19.8% as of May 3, 2026, against 39.7% in Information and 33.9% in Finance and Insurance. Adoption rises with firm size: 37% of firms with at least 250 employees, 32% of firms with 100 to 249 employees, and under 20% of firms with four or fewer employees."
     }
   ]
 }

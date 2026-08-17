@@ -835,6 +835,24 @@
       "evidenceTier": 1
     },
     {
+      "date": "2026-06-29",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-eu-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI EU: 14% of EU employment at higher automation potential vs 18% in the US"
+    },
+    {
+      "date": "2026-06-29",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-eu-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI EU: 27% of EU employment likely to reorganize, 47% less immediate change"
+    },
+    {
       "date": "2026-07-22",
       "direction": "neutral",
       "sourceIds": [
@@ -1634,6 +1652,15 @@
       "datePublished": "2026-07-28",
       "excerpt": "The share of job postings with high AI exposure has fallen by approximately 5 percentage points since October 2022. In June 2026 the year-over-year change in the activity mix dissimilarity index increased to 8.4 percentage points, meaning that 8.4% of the economy's headcount-weighted activity mix would need to be reallocated across activities to return to its June 2025 composition. Most activity change is occurring within occupations.",
       "dateAdded": "2026-07-29"
+    },
+    {
+      "id": "openai-eu-jobs-transition-framework-2026",
+      "title": "The AI Jobs Transition Framework for the EU (Mapping Europe's AI Workforce Opportunity)",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework-for-the-eu.pdf",
+      "publisher": "OpenAI Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-29",
+      "excerpt": "EU companion to OpenAI's April 2026 US AI Jobs Transition Framework, applied \"across more than 2,600 ESCO occupations.\" \"our EU analysis suggests that 12% of employment is in jobs that may grow with AI, 14% of employment is in jobs with higher automation potential, 27% is in jobs likely to reorganize, and 47% is in jobs with less immediate change.\" Explicitly benchmarked against the US: \"The comparable U.S. report found 18%, 24%, 12%, and 46%, respectively. Europe therefore has a smaller higher-automation-potential share.\" Median price elasticity of a European occupation is about 0.7, so a 10% price decrease raises output roughly 7%. Cross-member-state variation is wide: higher automation potential ranges from 8.7% to 16.9%."
     }
   ]
 }
