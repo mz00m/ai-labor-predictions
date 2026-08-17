@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Kartik B. Athreya (NY Fed)",
+    title: "AI's Impact on Labor and Hiring",
+    summary:
+      "The NY Fed's research director opens a new commentary series by reading his own bank's AI work as one argument: the labor-market story so far is changing skill requirements, not disappearing jobs. Second District adoption is climbing fast — service firms from 25% using AI in 2024 to 40% in 2025, manufacturers 16% to 26%, with 44% and 33% expected within six months — while firms report very few AI-driven layoffs and overwhelmingly intend to retrain rather than fire. The caveat he does flag: firms anticipate deeper cuts to hiring plans ahead, especially for college-educated workers. Regional and self-reported, so not comparable to the national BTOS series, but it is the clearest statement yet of how a Fed research shop reads its own evidence.",
+    date: "Aug 5",
+    url: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+  },
+  {
     author: "Revelio Labs",
     title: "Introducing the Revelio AI Labor Market Tracker",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Google's entry into the usage-data triad (alongside Anthropic's Economic Index and OpenAI's Jobs Transition Framework) — 15M de-identified Gemini interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 household activities, 150 countries, and 140 languages. Headline: diffusion is broad but shallow. Usage spans occupations covering 88% of US employment, yet the median occupation applies AI to only 21% of its tasks, and end-to-end automation is under 10% of non-routine cognitive use. Uniquely adds household lenses: 86% of conversational AI happens outside work, government/civic queries over-index ~20x, and household time savings may be worth $15-149B/yr — invisible to GDP. Reviewed by Coyle and Autor; Imas co-authored.",
     date: "Jul 23",
     url: "https://deepmind.google/research/publications/ai-economy-atlas",
-  },
-  {
-    author: "Stanford DEL / ADP Research",
-    title: "Canaries Dashboard: July 2026 Update",
-    summary:
-      "Monthly refresh of the ADP-payroll Canaries series (4.6M workers, 730+ occupations), data through June 2026. All exposure quintiles now show employment growth since ChatGPT — most-exposed +1.1%/yr vs +2.0%/yr least-exposed — but early-career workers (22-25) in the most-exposed quintile are still contracting at 3.5%/yr, and -4.3% over the past year. New gender decomposition: early-career women in the most-exposed quintile shrinking at 4.5%/yr vs 2.5%/yr for men — driven mostly by occupational mix, with 43.8% of early-career women working in the most-exposed occupation category vs 32.4% of men. The live empirical answer to 'what does the data show right now.'",
-    date: "Jul 22",
-    url: "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
   },
 ];
 
