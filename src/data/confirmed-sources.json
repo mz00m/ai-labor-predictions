@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-08",
-  "totalSources": 674,
-  "verifiedCount": 664,
+  "lastUpdated": "2026-08-17",
+  "totalSources": 675,
+  "verifiedCount": 665,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9543,6 +9543,22 @@
       "usedIn": [
         "overall-us-displacement",
         "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-athreya-labor-hiring-2026": {
+      "id": "nyfed-athreya-labor-hiring-2026",
+      "title": "AI's Impact on Labor and Hiring",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publisher": "Federal Reserve Bank of New York — Liberty Street Economics (Athreya)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-05",
+      "excerpt": "while AI adoption is rising quickly across industries, firms report very few AI-driven layoffs",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false

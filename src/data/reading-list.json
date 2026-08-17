@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI's Impact on Labor and Hiring",
+      "author": "Kartik B. Athreya",
+      "publisher": "Federal Reserve Bank of New York \u2014 Liberty Street Economics",
+      "date": "2026-08-05",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "takeaway": "The NY Fed's director of research uses the inaugural post of a new commentary series to state how his own shop reads its AI evidence: the labor-market effect so far \"has more to do with changing skill requirements than eliminating jobs.\" The one numeric table, from the August 2025 Regional Business Surveys, shows Second District adoption climbing quickly \u2014 service firms from 25% using AI in 2024 to 40% in 2025, manufacturers from 16% to 26%, with 44% and 33% expected within six months \u2014 alongside the finding that firms report very few AI-driven layoffs and \"overwhelmingly intend to retrain workers rather than fire them.\" The counterweight Athreya does not soften: firms anticipate more reductions in hiring plans ahead, especially for college-educated workers. Worth reading as institutional interpretation rather than new measurement. Everything quantitative is restated from earlier work, the survey is regional rather than national and so is not comparable to the Census BTOS series jobsdata plots, and the retraining chart carries no labeled values. His closing speculation is the more interesting half: that specialization leaves each of us exposed to a sudden collapse in the value of the one skill we sell, and that AI's demand-side effects may ultimately matter more than its absorption into production.",
+      "weekFeatured": "2026-08-10",
+      "tier": 2
+    },
+    {
       "title": "Time Travel on Professional Profiles",
       "author": "Nicholas Bloom, Gideon Moore, Lisa K. Simon, Caelan Wilkie-Rogers",
       "publisher": "NBER",

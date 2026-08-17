@@ -746,6 +746,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: cumulative firm AI adoption ~5.9% of eligible hiring firms (postings)"
+    },
+    {
+      "date": "2026-08-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "nyfed-athreya-labor-hiring-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "NY Fed: Second District AI use 25%→40% services, 16%→26% manufacturing"
     }
   ],
   "sources": [
@@ -1444,6 +1453,15 @@
       "datePublished": "2026-07-28",
       "excerpt": "Firm AI adoption has accelerated sharply since 2024, with measured cumulative adoption now approaching 5.9% of eligible hiring firms. Adoption is identified from job postings — a firm is coded as adopting when it posts AI integrator roles — following Hosseini Maasoum and Lichtinger (2025), a different construct from spend-based measures.",
       "dateAdded": "2026-07-29"
+    },
+    {
+      "id": "nyfed-athreya-labor-hiring-2026",
+      "title": "AI's Impact on Labor and Hiring",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publisher": "Federal Reserve Bank of New York — Liberty Street Economics (Athreya)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-05",
+      "excerpt": "Rapid Adoption of AI Across Industries. Share Using AI: Service Firms / Manufacturers. In 2024: 25 / 16. In 2025: 40 / 26. In next six months: 44 / 33. Source: Federal Reserve Bank of New York, Regional Business Surveys, August 2025."
     },
     {
       "id": "census-btos-ai-question-change-2026",

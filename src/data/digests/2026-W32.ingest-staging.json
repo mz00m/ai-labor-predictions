@@ -1,0 +1,124 @@
+{
+  "week": "2026-W32",
+  "generatedAt": "2026-08-03T11:21:59.591Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "AI's Real Threat to Jobs Is Lower Paychecks, Not Job Loss",
+        "summary": "New research highlighted by Business Insider argues that AI's primary labor market impact is wage compression rather than outright displacement, suggesting workers keep their jobs but see reduced pay as AI substitutes for portions of their tasks. The finding aligns with theoretical work showing firms can retain workers while eroding the productivity rents that supported higher wages. This reframes the policy debate away from unemployment toward income inequality. (Business Insider / HN, 2026-08-01)",
+        "source": "https://www.businessinsider.com/ai-could-lower-workers-pay-job-market-impact-2026-7",
+        "publishedAt": "2026-08-01",
+        "score": 0.356,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "businessinsider-ais-real-threat-2026",
+      "evidenceTier": 4,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI poses greater threat to worker pay than to job levels",
+          "quote": "AI's Real Threat to Jobs Is Lower Paychecks, Not Job Loss"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "NBER: Automation Can Harm Workers Without Replacing Them — 'Replaceable but Employed'",
+        "summary": "Joshua Gans (NBER w35559) models how a credible machine alternative undermines the meaning-derived component of worker utility even when the firm retains the employee, creating welfare losses invisible to standard employment statistics. The mechanism operates through the destruction of workers' sense of indispensability, not through headcount reductions. This provides a formal microfoundation for the wage-compression narrative gaining traction in empirical work.",
+        "source": "https://www.nber.org/papers/w35559",
+        "authors": [
+          "Joshua S. Gans"
+        ],
+        "publishedAt": "2026-08-03",
+        "score": 0.467,
+        "sourceAdapter": "nber",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "nber-nber-automation-can-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Federal Reserve Publishes Real-Time Dashboard for Tracking AI Buildout and Economic Impact",
+        "summary": "A new FEDS Note from Soto, Thieu, and Allen (Federal Reserve Board, 2026-07-17) organizes publicly available indicators into three categories to help researchers and policymakers monitor generative AI's macroeconomic footprint on a timely basis. The note explicitly connects capital expenditure on AI infrastructure to labor market outcomes, providing a synthesis framework for disparate data streams. Its release partially addresses the overdue Fed AI-adoption monitoring series flagged in the recurring-series tracker.",
+        "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+        "authors": [
+          "Paul E. Soto",
+          "Mason Thieu",
+          "Jeffrey S. Allen"
+        ],
+        "publishedAt": "2026-07-17",
+        "score": 0.467,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "federalreserve-federal-reserve-publishes-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Cognitive Commons Framework: AI Threatens Collective Regeneration of Professional Expertise",
+        "summary": "Nolan Lovett (arXiv 2607.29380) introduces the 'Cognitive Commons' concept, arguing that AI-assisted professional work may deplete the shared pool of tacit knowledge that occupations rely on to reproduce expertise across generations of workers. Unlike displacement, this mechanism operates through deskilling of the pipeline rather than direct job loss, with particularly acute risks for knowledge-intensive white-collar professions. The paper calls for HRD scholarship to treat expertise regeneration as a collective-action problem.",
+        "source": "https://arxiv.org/abs/2607.29380v1",
+        "authors": [
+          "Nolan Lovett"
+        ],
+        "publishedAt": "2026-07-31",
+        "score": 0.536,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-cognitive-commons-framework-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Generative AI Floods and Dilutes the Book Market, Threatening Creative-Sector Earnings",
+        "summary": "An arXiv preprint (discussed on Hacker News with 104 comments, 2026-08-02) documents how generative AI is flooding book marketplaces with synthetic titles, compressing discoverability and per-unit earnings for human authors. The dilution dynamic differs from direct automation displacement: human creators remain active but face structurally lower returns as AI-generated supply expands. The findings carry direct implications for freelancer and creative-industry compensation trajectories.",
+        "source": "https://arxiv.org/abs/2607.20349",
+        "publishedAt": "2026-08-02",
+        "score": 0.381,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "creative-industry-displacement"
+      },
+      "sourceId": "arxiv-generative-ai-floods-2026",
+      "evidenceTier": 4,
+      "extractedStats": [
+        {
+          "graphSlug": "creative-industry-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Books with no AI text lose most ground in high-AI-diffusion genres",
+          "quote": "Books with no AI text lose the most ground in genres with high AI diffusion, and most of all where Kindle Unlimited availability is high."
+        },
+        {
+          "graphSlug": "creative-industry-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Revenue per selling book fell across most genres 2023-2026",
+          "quote": "The market therefore added selling books faster than it added revenue, and revenue per selling book fell across most genres."
+        },
+        {
+          "graphSlug": "creative-industry-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI books winning growing share of top-rank sales positions over time",
+          "quote": "they reach commercial scale, winning a growing share of sales over time and taking more of the scarce top-rank positions once held by books with no detected AI text."
+        },
+        {
+          "graphSlug": "freelancer-rate-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Quarterly book revenue grew only 8.9x vs 19.2x catalog growth 2023-2026",
+          "quote": "Over this period, the number of books with observed sales in a quarter grew 19.2-fold, while quarterly revenue grew only 8.9-fold."
+        }
+      ]
+    }
+  ]
+}
