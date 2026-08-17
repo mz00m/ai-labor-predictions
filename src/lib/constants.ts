@@ -7,7 +7,7 @@
  * JSON import because client components also import this module and
  * the registry file is ~400KB.)
  */
-export const SOURCE_COUNT = 670;
+export const SOURCE_COUNT = 677;
 
 /** Human-readable source count string for use in descriptions (e.g. "574+") */
 export const SOURCE_COUNT_DISPLAY = `${SOURCE_COUNT}+`;

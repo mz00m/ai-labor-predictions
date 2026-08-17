@@ -1,0 +1,85 @@
+{
+  "week": "2026-W34",
+  "generatedAt": "2026-08-17T08:41:58.946Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Digital Decoupling: AI Simultaneously Displaces and Augments U.S. Workers by Education Level",
+        "summary": "A new peer-reviewed study introduces an AI Dual-Track model analyzing 846 U.S. occupations, finding that generative AI creates sharply divergent outcomes based on educational attainment—displacing lower-credentialed workers while augmenting higher-skilled ones. The research quantifies this 'digital decoupling' effect across the full occupational spectrum, suggesting structural bifurcation in the labor market. López (2026) frames this as a reinforcement of existing educational stratification rather than a neutral technological shift. (Source: AI & Society, DOI: 10.1007/s00146-026-03288-z)",
+        "source": "https://doi.org/10.1007/s00146-026-03288-z",
+        "authors": [
+          "Omar S. López"
+        ],
+        "publishedAt": "2026-08-12",
+        "doi": "10.1007/s00146-026-03288-z",
+        "score": 0.279,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "doi-digital-decoupling-ai-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Is Hollowing Out the Middle Class of Software Engineering",
+        "summary": "A widely-discussed blog post and Hacker News thread (997 points, 933 comments) argues that AI coding tools are compressing the mid-tier of software engineering, eliminating the 'journeyman' layer of developers who previously bridged junior and senior roles. The post contends that AI handles routine implementation tasks previously assigned to mid-level engineers, accelerating a barbell distribution of employment in tech. This aligns with broader polarization research and generated significant practitioner debate about career pathways in software. (Source: florianherrengt.com via HN Algolia)",
+        "source": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+        "publishedAt": "2026-08-12",
+        "score": 0.365,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "blog-ai-is-hollowing-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Federal Reserve Board Publishes Framework for Tracking AI Buildout's Economic Impact",
+        "summary": "Fed economists Soto, Thieu, and Allen present a structured set of publicly available indicators—organized into capital expenditure, labor market, and productivity categories—to help policymakers monitor the generative AI buildout in near real-time. The note highlights the challenge of measuring AI's economic footprint given data lags, and proposes a composite dashboard approach drawing on earnings disclosures, job postings, and investment data. This represents the Fed's most explicit methodological statement to date on tracking AI-driven economic transformation. (Source: Federal Reserve Board FEDS Notes, 2026-07-17)",
+        "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+        "publishedAt": "2026-08-17",
+        "score": 0.467,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "federalreserve-federal-reserve-board-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "NY Fed Launches 'Street Level' Series on AI's Impact on Labor and Hiring",
+        "summary": "The New York Fed's new Liberty Street Economics series debuts with a thematic overview of internal research on how AI is reshaping hiring practices and labor demand, authored by the research director. The post synthesizes ongoing NY Fed work suggesting measurable shifts in job posting language, skill requirements, and employer screening behavior attributable to AI adoption. It signals sustained institutional attention to AI-labor dynamics from one of the most influential U.S. economic research bodies. (Source: NY Fed Liberty Street Economics, 2026-08-05)",
+        "source": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+        "publishedAt": "2026-08-05",
+        "score": 0.219,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "libertystreeteconomics-ny-fed-launches-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Task-Based Model Reframes AI Job Destruction Debate Around Institutional Context",
+        "summary": "A working paper by Kolb and Caron argues that framing AI's labor impact as binary job 'destruction' is analytically insufficient, instead proposing a task-based and institutionally grounded framework that accounts for the uneven substitutability of machine cognition across professional roles. The paper distinguishes between 'cheap, fallible cognition' and expert judgment, arguing that institutional structures—licensing, liability, professional norms—mediate how AI displaces or complements expertise. This framework has direct implications for understanding wage premiums for high-skill professionals in the AI era. (Source: arXiv, DOI: 10.48550/arxiv.2608.11512)",
+        "source": "https://arxiv.org/abs/2608.11512",
+        "authors": [
+          "Christophe Kolb",
+          "Jim Caron"
+        ],
+        "publishedAt": "2026-08-11",
+        "doi": "10.48550/arxiv.2608.11512",
+        "score": 0.258,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "arxiv-taskbased-model-reframes-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}

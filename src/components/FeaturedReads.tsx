@@ -17,6 +17,14 @@ const articles: Article[] = [
     url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
   },
   {
+    author: "Kartik B. Athreya (NY Fed)",
+    title: "AI's Impact on Labor and Hiring",
+    summary:
+      "The NY Fed's research director opens a new commentary series by reading his own bank's AI work as one argument: the labor-market story so far is changing skill requirements, not disappearing jobs. Second District adoption is climbing fast — service firms from 25% using AI in 2024 to 40% in 2025, manufacturers 16% to 26%, with 44% and 33% expected within six months — while firms report very few AI-driven layoffs and overwhelmingly intend to retrain rather than fire. The caveat he does flag: firms anticipate deeper cuts to hiring plans ahead, especially for college-educated workers. Regional and self-reported, so not comparable to the national BTOS series, but it is the clearest statement yet of how a Fed research shop reads its own evidence.",
+    date: "Aug 5",
+    url: "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+  },
+  {
     author: "Revelio Labs",
     title: "Introducing the Revelio AI Labor Market Tracker",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The Bick-Blandin-Deming Real-Time Population Survey — the field's cleanest quarterly measure of US worker GenAI adoption — is now official FRED data: 137 series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest readings: 43.4% of employed adults used GenAI for work and 57.9% of working-age adults used it anywhere in Q1 2026; GenAI-assisted work hours reached 6.3% in Q2 2026, up from 4.1% in late 2024. FRED hosting makes the series every major adoption synthesis relies on citable and API-accessible alongside official government statistics.",
     date: "Jul 24",
     url: "https://news.research.stlouisfed.org/2026/07/fred-adds-data-about-the-adoption-of-generative-artificial-intelligence/",
-  },
-  {
-    author: "Google / Google DeepMind",
-    title: "AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
-    summary:
-      "Google's entry into the usage-data triad (alongside Anthropic's Economic Index and OpenAI's Jobs Transition Framework) — 15M de-identified Gemini interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 household activities, 150 countries, and 140 languages. Headline: diffusion is broad but shallow. Usage spans occupations covering 88% of US employment, yet the median occupation applies AI to only 21% of its tasks, and end-to-end automation is under 10% of non-routine cognitive use. Uniquely adds household lenses: 86% of conversational AI happens outside work, government/civic queries over-index ~20x, and household time savings may be worth $15-149B/yr — invisible to GDP. Reviewed by Coyle and Autor; Imas co-authored.",
-    date: "Jul 23",
-    url: "https://deepmind.google/research/publications/ai-economy-atlas",
   },
 ];
 
