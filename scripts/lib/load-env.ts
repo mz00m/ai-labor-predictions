@@ -2,11 +2,19 @@ import fs from "fs";
 import path from "path";
 
 /**
- * Load environment variables from .env file.
+ * Load environment variables from .env, then .env.local (which overrides).
  * Parses key=value pairs, strips surrounding quotes, skips comments.
  */
 export function loadEnv(envFilePath?: string): void {
-  const p = envFilePath ?? path.join(process.cwd(), ".env");
+  if (envFilePath) {
+    loadEnvFile(envFilePath);
+    return;
+  }
+  loadEnvFile(path.join(process.cwd(), ".env"));
+  loadEnvFile(path.join(process.cwd(), ".env.local"));
+}
+
+function loadEnvFile(p: string): void {
   if (!fs.existsSync(p)) return;
 
   const content = fs.readFileSync(p, "utf-8");

@@ -274,6 +274,24 @@
       "label": "Stripe Atlas: 63% of Q2 2026 C corps have solo founders \u2014 all-time high"
     },
     {
+      "date": "2026-06-22",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-economics-solopreneur-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe Economics: AI-influenced journeys ~4x share of sign-ups vs last January"
+    },
+    {
+      "date": "2026-06-22",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-economics-solopreneur-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe: Delaware incorporations up ~40% year over year since early 2025"
+    },
+    {
       "date": "2026-07-09",
       "direction": "up",
       "sourceIds": [
@@ -511,6 +529,15 @@
       "datePublished": "2026-07-09",
       "excerpt": "US Census Bureau Business Formation Statistics for June 2026 (released July 9, 2026). Total Business Applications (seasonally adjusted): 531,423 in June 2026, an increase of 1.1% compared to May 2026. Projected Business Formations (within 4 quarters), seasonally adjusted: 29,741 in June 2026, an increase of 0.7% compared to May 2026. BFS provides monthly, high-frequency information on new business applications and formations. The high-propensity applications series (HBA) tracks applications most likely to become employer businesses; definition was updated in Nov 2021 and applied retroactively.",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "stripe-economics-solopreneur-2026",
+      "title": "The Age of the Solopreneur",
+      "url": "https://www.stripeeconomics.com/p/the-age-of-the-solopreneur",
+      "publisher": "Stripe Economics (Tedeschi, Rama & Cruickshank)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-22",
+      "excerpt": "Stripe Economics analysis of business formation and solo-founder scale. \"In 2023, roughly four million Americans earned their primary income as solopreneurs, generating over $100,000 in annual revenue.\" \"More than twice as many solopreneurs earned over $1 million in 2025 than in 2023\" and \"close to three times as many crossed $5 million and $10 million.\" On AI: \"AI-influenced user journeys now constitute nearly 4x the share of Stripe sign-ups as last January.\" On formation: \"Delaware incorporations have grown approximately 40% year over year since early 2025\" and \"New business registrations have risen roughly 40% in Australia, 70% in Finland, and 80% in France since 2017.\" The share of businesses reaching $1M cumulative revenue within a year was roughly 30% higher for the 2025 cohort."
     }
   ]
 }

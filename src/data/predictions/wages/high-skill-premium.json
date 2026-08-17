@@ -507,6 +507,24 @@
       "label": "Anthropic: expert Claude Code success 28-33% vs 15% novice (n=235K users)"
     },
     {
+      "date": "2026-06-23",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-ai-certifications-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: AI certification holders earn $8,000 more within occupation and seniority"
+    },
+    {
+      "date": "2026-06-23",
+      "direction": "neutral",
+      "sourceIds": [
+        "revelio-ai-certifications-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: certification pay gap is selection into certifying, not a causal return"
+    },
+    {
       "date": "2026-07-23",
       "direction": "up",
       "sourceIds": [
@@ -995,6 +1013,15 @@
       "datePublished": "2026-07-28",
       "excerpt": "The wage premium for AI-exposed work has eroded to roughly zero, falling from around 2% before ChatGPT's launch. Measured as the salary premium associated with a one-standard-deviation increase in posting-level AI exposure, not as a premium over the median wage.",
       "dateAdded": "2026-07-29"
+    },
+    {
+      "id": "revelio-ai-certifications-2026",
+      "title": "Are AI Certifications Worth It? What the Salary Data Shows",
+      "url": "https://www.reveliolabs.com/news/social/are-ai-certifications-worth-it",
+      "publisher": "Revelio Labs (Loujaina Abdelwahed)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-23",
+      "excerpt": "Revelio Labs analysis of AI certifications recorded on workers' online professional profiles, built from a two-level taxonomy of over 500,000 unique AI-related certification names. \"After controlling for occupation and seniority level, AI certification holders earn, on average, an $8,000 salary premium compared to non-certification holders.\" Revelio frames this as positive selection rather than a return to certification: \"within any given occupation and seniority level, the workers choosing to get certifications are those who are already earning more than their peers.\" Certification share rose from 1-2% of all professional certifications pre-ChatGPT to nearly 30% by 2026, a 20x increase. A propensity-score-matched comparison finds certification takers see salary grow 18.1% in their next position versus 15.3% for non-takers."
     },
     {
       "id": "apollo-ai-labor-market-2026",

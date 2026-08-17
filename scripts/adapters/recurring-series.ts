@@ -71,6 +71,14 @@ export async function fetchRecurringSeries(
     if (ageDays < threshold) continue;
 
     const graphs = (s.targetGraphs ?? []).join(", ");
+    // Rank by how far past cadence the series is, so the most neglected series
+    // sort highest. Floored above the research-candidate band (~0.45 observed)
+    // so a stale series is never crowded out by a fresh but unrelated paper.
+    const overdueRatio = ageDays / threshold;
+    const priorityScore = Math.min(
+      1,
+      0.9 + 0.1 * Math.min(1, Math.log2(overdueRatio))
+    );
     items.push({
       title: `SERIES DUE: ${s.name} — last ingested ${lastDate} (${ageDays}d ago, ${s.cadence} cadence)`,
       url: s.url,
@@ -83,6 +91,7 @@ export async function fetchRecurringSeries(
       publishedAt: new Date(lastDate),
       citationCount: 0,
       source: "recurringSeries",
+      priorityScore,
     });
   }
 

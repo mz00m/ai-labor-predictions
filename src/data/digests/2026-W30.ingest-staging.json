@@ -1,0 +1,96 @@
+{
+  "week": "2026-W30",
+  "generatedAt": "2026-07-20T10:51:42.378Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Economists Urge Immediate Action on AI Job Displacement",
+        "summary": "A widely-discussed AP News report highlights growing consensus among economists that AI-driven job displacement requires urgent policy intervention. The piece emphasizes that the pace of AI adoption is outstripping workforce adaptation mechanisms, with particular concern for white-collar and professional roles. The Hacker News discussion (20 points, 12 comments) signals significant public and professional attention to the issue.",
+        "source": "https://apnews.com/article/ai-must-act-now-job-displacement-783469467e0df1463df44518f33295ee",
+        "publishedAt": "2026-07-13",
+        "score": 0.402,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "apnews-economists-urge-immediate-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Frontier AI Matches or Exceeds Human Performance Across Core Business Knowledge Work",
+        "summary": "A benchmark study from researchers including those at Wharton and Carnegie Mellon evaluates leading LLMs on realistic business-discipline tasks—strategy, finance, marketing, and operations—finding that frontier models perform at or above expert human levels on knowledge-intensive analytical reasoning. The authors argue current AI benchmarks understate displacement risk for high-skill professional roles. This has direct implications for white-collar wage premiums and professional displacement trajectories (Patel et al., arXiv:2607.16057, 2026).",
+        "source": "https://arxiv.org/abs/2607.16057v1",
+        "authors": [
+          "Ajay Patel",
+          "Kartik Hosanagar",
+          "Ramayya Krishnan",
+          "Chris Callison-Burch",
+          "Karim Lakhani",
+          "Mitch Weiss"
+        ],
+        "publishedAt": "2026-07-17",
+        "score": 0.373,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "arxiv-frontier-ai-matches-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Protocol Proposed to Identify When Automation Should Be Avoided to Preserve Human Capital",
+        "summary": "Rodriguez et al. (arXiv:2607.15944) present PHP-AIO, a formal organizational protocol arguing that standard automation ROI calculations systematically ignore tacit knowledge erosion, resilience loss, regulatory exposure, and socio-institutional degradation. The paper provides a decision framework for when not to automate, directly challenging prevailing AI adoption narratives and quantifying long-run costs of over-automation. This work is highly relevant to understanding the real boundary conditions of enterprise AI adoption rates.",
+        "source": "https://arxiv.org/abs/2607.15944v1",
+        "authors": [
+          "Jose Manuel de la Chica Rodriguez",
+          "Jairo Rodriguez Arias",
+          "Spyridon Chouliaras"
+        ],
+        "publishedAt": "2026-07-17",
+        "score": 0.409,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "arxiv-protocol-proposed-to-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "GenAI Increasingly Integrated Into Scientific and Knowledge Workflows via Multimodal Workbenches",
+        "summary": "The SciForge team presents an AI-native multimodal workbench designed to unify research artifacts—papers, code, datasets, figures, and decisions—into auditable research states, representing a new paradigm of GenAI integration into high-skill knowledge work (arXiv:2607.16038). The system's design reflects accelerating GenAI adoption in professional and research settings, with implications for how knowledge workers interact with AI tools daily. This exemplifies the expanding frontier of generative AI in work contexts beyond simple task automation.",
+        "source": "https://arxiv.org/abs/2607.16038v1",
+        "authors": [
+          "SciForge Team",
+          "Zhangyang Gao",
+          "Minghao Fang",
+          "Yifei Liu",
+          "Hanhui Yang"
+        ],
+        "publishedAt": "2026-07-17",
+        "score": 0.451,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "arxiv-genai-increasingly-integrated-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Revelio Labs Workforce Research Tracks AI Impact on Hiring and Compensation in Real Time",
+        "summary": "Revelio Labs' continuously updated newsroom, powered by PhD economists, released new labor market data during this period covering hiring trends, AI's measurable impact on labor markets, and compensation shifts. Their data-driven analyses provide near-real-time evidence on how AI adoption is reshaping workforce composition and wages across sectors. The platform represents a key empirical resource for tracking displacement and wage effects as they materialize in job postings and workforce flows.",
+        "source": "https://www.reveliolabs.com/news/",
+        "publishedAt": "2026-07-15",
+        "score": 0.371,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "reveliolabs-revelio-labs-workforce-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    }
+  ]
+}

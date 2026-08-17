@@ -30,6 +30,12 @@ export interface RawItem {
   publishedAt: Date;
   citationCount?: number;
   source: SourceName;
+  /**
+   * Pre-computed score that bypasses relevance ranking. Set by adapters whose
+   * items are work-queue entries rather than discovery candidates, where
+   * recency decay is meaningless or inverted.
+   */
+  priorityScore?: number;
 }
 
 export interface SourceAdapter {

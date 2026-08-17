@@ -1,0 +1,94 @@
+{
+  "week": "2026-W31",
+  "generatedAt": "2026-07-27T11:20:08.756Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "What Is Happening to Jobs? Separating AI Hype from Reality",
+        "summary": "A Stanford SIEPR policy brief examines the gap between AI displacement fears and measurable labor market outcomes, drawing significant public attention with 264 upvotes and 344 comments on Hacker News. The brief attempts to ground occupational exposure claims in observable employment data rather than theoretical projections. It is among the most widely discussed public-facing analyses of AI's near-term employment impact published this fortnight.",
+        "source": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+        "publishedAt": "2026-07-25",
+        "score": 0.36,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "siepr-what-is-happening-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Helping People Choose Careers in the Age of AI",
+        "summary": "Steele and Cruz compare six recent occupational AI-exposure projection models, surfacing major methodological divergences in how task automation risk is estimated across professions. They then propose a new empirical framework for evaluating AI exposure that is intended to guide career decision-making under uncertainty. The paper is directly relevant to understanding which white-collar roles face the highest projected displacement risk.",
+        "source": "https://arxiv.org/abs/2607.15506",
+        "authors": [
+          "Jennifer Steele",
+          "Isabella Cruz"
+        ],
+        "publishedAt": "2026-07-16",
+        "score": 0.4,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-helping-people-choose-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Federal Reserve FEDS Note: The AI Buildout and the Economy — Publicly Available Data to Assess AI's Impact",
+        "summary": "Fed economists Soto, Thieu, and Allen catalog publicly available indicators for tracking the generative AI buildout and its macroeconomic effects, organizing them into capacity, adoption, and impact categories. The note provides policymakers and researchers with a timely dashboard of AI diffusion signals, including earnings-call mentions and enterprise deployment proxies. Its framing of 'AI buildout' indicators maps closely to tracking corporate AI adoption rates and earnings-call AI mentions.",
+        "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+        "authors": [
+          "Paul E. Soto",
+          "Mason Thieu",
+          "Jeffrey S. Allen"
+        ],
+        "publishedAt": "2026-07-17",
+        "score": 0.47,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "earnings-call-ai-mentions"
+      },
+      "sourceId": "federalreserve-federal-reserve-feds-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Vibe Coding: An Experiment with Test-Driven Development Using LLMs",
+        "summary": "Mock and Russo conduct an exploratory study of human-LLM pair programming under a test-driven development paradigm, assessing collaboration quality and output correctness. The findings shed light on how generative AI is reshaping software development workflows and the degree to which human programmers remain necessary as co-pilots. This has direct implications for measuring how deeply GenAI is being integrated into day-to-day knowledge work.",
+        "source": "https://arxiv.org/abs/2607.22406v1",
+        "authors": [
+          "Moritz Mock",
+          "Barbara Russo"
+        ],
+        "publishedAt": "2026-07-24",
+        "score": 0.41,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "arxiv-vibe-coding-an-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Explainable Reinforcement Learning for Assisting Air Traffic Controllers",
+        "summary": "Mehmeti, Gigante, and Venticinque examine how explainable AI can be embedded in high-stakes operational roles such as aviation, healthcare, and autonomous driving to build sufficient human trust for higher automation levels. The study highlights the trajectory toward augmentation rather than full replacement in safety-critical professions, with trust and explainability as the binding constraints on adoption speed. This is directly relevant to gauging workforce AI exposure in regulated, high-consequence sectors.",
+        "source": "https://arxiv.org/abs/2607.22525v1",
+        "authors": [
+          "Anduel Mehmeti",
+          "Gabriella Gigante",
+          "Salvatore Venticinque"
+        ],
+        "publishedAt": "2026-07-24",
+        "score": 0.45,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "arxiv-explainable-reinforcement-learning-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}

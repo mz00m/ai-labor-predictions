@@ -16,6 +16,26 @@ import type { SourceName, RawItem, SourceAdapter } from "./types";
 // Re-export shared types
 export type { SourceName, RawItem, SourceAdapter };
 
+/**
+ * Throw on non-2xx so fetchWithRetry backs off instead of parsing an error
+ * body into zero results and reporting the source as healthy.
+ */
+async function okOrThrow(res: Response, label: string): Promise<Response> {
+  if (!res.ok) {
+    const body = (await res.text().catch(() => "")).slice(0, 200);
+    throw new Error(`${label} HTTP ${res.status}: ${body}`);
+  }
+  return res;
+}
+
+async function fetchJson(url: string, label: string, init?: RequestInit): Promise<any> {
+  return okOrThrow(await fetch(url, init), label).then((r) => r.json());
+}
+
+async function fetchText(url: string, label: string, init?: RequestInit): Promise<string> {
+  return okOrThrow(await fetch(url, init), label).then((r) => r.text());
+}
+
 // ─── Academic Adapters ────────────────────────────────────────────────
 
 async function fetchSemanticScholar(
@@ -33,10 +53,11 @@ async function fetchSemanticScholar(
   const yearFilter = sinceYear === currentYear ? `${currentYear}` : `${sinceYear}-${currentYear}`;
   const res = await fetchWithRetry(
     () =>
-      fetch(
+      fetchJson(
         `${BASE}/paper/search?query=${encodeURIComponent(query)}&fields=title,url,externalIds,authors,year,publicationDate,citationCount,abstract&limit=50&year=${yearFilter}`,
+        "semanticScholar",
         { headers }
-      ).then((r) => r.json()),
+      ),
     { label: "semanticScholar", retries: 3, baseDelayMs: 1000 }
   );
 
@@ -67,7 +88,7 @@ async function fetchArxiv(query: string, since: Date): Promise<RawItem[]> {
     `sortBy=submittedDate&sortOrder=descending&max_results=50`;
 
   const xml = await fetchWithRetry(
-    () => fetch(url).then((r) => r.text()),
+    () => fetchText(url, "arxiv"),
     { label: "arxiv", retries: 3, baseDelayMs: 1500 }
   );
 
@@ -113,7 +134,7 @@ async function fetchSSRN(query: string, since: Date): Promise<RawItem[]> {
     `key=${apiKey}&cx=${cx}&q=${encodeURIComponent(`site:ssrn.com ${query}`)}&dateRestrict=${dateRestrict}&num=10`;
 
   const res = await fetchWithRetry(
-    () => fetch(url).then((r) => r.json()),
+    () => fetchJson(url, "ssrn"),
     { label: "ssrn", retries: 3, baseDelayMs: 1000 }
   );
 
@@ -134,9 +155,10 @@ async function fetchPubMed(query: string, since: Date): Promise<RawItem[]> {
 
   const searchRes = await fetchWithRetry(
     () =>
-      fetch(
-        `${BASE}/esearch.fcgi?db=pubmed&term=${encodeURIComponent(query)}&mindate=${minDate}&datetype=pdat&retmax=20&retmode=json`
-      ).then((r) => r.json()),
+      fetchJson(
+        `${BASE}/esearch.fcgi?db=pubmed&term=${encodeURIComponent(query)}&mindate=${minDate}&datetype=pdat&retmax=20&retmode=json`,
+        "pubmed-search"
+      ),
     { label: "pubmed-search" }
   );
 
@@ -145,9 +167,10 @@ async function fetchPubMed(query: string, since: Date): Promise<RawItem[]> {
 
   const summaryRes = await fetchWithRetry(
     () =>
-      fetch(
-        `${BASE}/esummary.fcgi?db=pubmed&id=${ids.join(",")}&retmode=json`
-      ).then((r) => r.json()),
+      fetchJson(
+        `${BASE}/esummary.fcgi?db=pubmed&id=${ids.join(",")}&retmode=json`,
+        "pubmed-summary"
+      ),
     { label: "pubmed-summary" }
   );
 
@@ -187,7 +210,7 @@ async function fetchBLS(query: string, since: Date): Promise<RawItem[]> {
 
   const res = await fetchWithRetry(
     () =>
-      fetch("https://api.bls.gov/publicAPI/v2/timeseries/data/", {
+      fetchJson("https://api.bls.gov/publicAPI/v2/timeseries/data/", "bls", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -198,7 +221,7 @@ async function fetchBLS(query: string, since: Date): Promise<RawItem[]> {
           calculations: true,
           annualaverage: false,
         }),
-      }).then((r) => r.json()),
+      }),
     { label: "bls", retries: 3, baseDelayMs: 2000 }
   );
 
@@ -244,11 +267,12 @@ async function fetchFRED(query: string, since: Date): Promise<RawItem[]> {
     FRED_SERIES.map(async (series) => {
       const res = await fetchWithRetry(
         () =>
-          fetch(
+          fetchJson(
             `https://api.stlouisfed.org/fred/series/observations?` +
               `series_id=${series.id}&` +
-              `sort_order=desc&limit=1&api_key=${apiKey}&file_type=json`
-          ).then((r) => r.json()),
+              `sort_order=desc&limit=1&api_key=${apiKey}&file_type=json`,
+            `fred-${series.id}`
+          ),
         { label: `fred-${series.id}`, retries: 2, baseDelayMs: 500 }
       );
 
@@ -295,7 +319,7 @@ async function fetchHNAlgolia(
     `hitsPerPage=20`;
 
   const res = await fetchWithRetry(
-    () => fetch(url).then((r) => r.json()),
+    () => fetchJson(url, "hn-algolia"),
     { label: "hn-algolia", retries: 3, baseDelayMs: 500 }
   );
 
@@ -326,7 +350,7 @@ async function fetchGoogleCSE(
     `key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}&dateRestrict=${dateRestrict}&num=10`;
 
   const res = await fetchWithRetry(
-    () => fetch(url).then((r) => r.json()),
+    () => fetchJson(url, "googleCse"),
     { label: "googleCse", retries: 3, baseDelayMs: 1000 }
   );
 
@@ -461,6 +485,10 @@ export function scoreItem(
   query: string,
   now: Date
 ): number {
+  // Work-queue items carry their own urgency. Their publishedAt is the last
+  // ingest date, so recency decay would rank the most-overdue series lowest.
+  if (item.priorityScore !== undefined) return item.priorityScore;
+
   // 1. Recency: exponential decay, half-life 7 days
   const daysSince =
     (now.getTime() - item.publishedAt.getTime()) / 86400000;

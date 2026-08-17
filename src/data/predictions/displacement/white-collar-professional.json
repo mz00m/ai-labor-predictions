@@ -1047,6 +1047,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford DEL: early-career women -4.5%/yr in AI-exposed jobs vs -2.5% men"
+    },
+    {
+      "date": "2026-08-05",
+      "direction": "up",
+      "sourceIds": [
+        "nyfed-athreya-labor-hiring-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "NY Fed: firms expect deeper hiring-plan cuts ahead, esp. college-educated"
     }
   ],
   "sources": [
@@ -1940,6 +1949,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-07-22",
       "excerpt": "In the most-exposed quintile, employment among early-career women has been contracting at 4.5% per year since the introduction of ChatGPT in November 2022, while employment for men of the same age is contracting at 2.5% per year. In the least-exposed quintile, employment among early-career women is growing at 1.3% per year, and employment for men of the same age is growing at 2.7% per year."
+    },
+    {
+      "id": "nyfed-athreya-labor-hiring-2026",
+      "title": "AI's Impact on Labor and Hiring",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publisher": "Federal Reserve Bank of New York \u2014 Liberty Street Economics (Athreya)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-05",
+      "excerpt": "firms do anticipate more reductions in hiring plans going forward\u2014especially for college-educated workers"
     }
   ]
 }
