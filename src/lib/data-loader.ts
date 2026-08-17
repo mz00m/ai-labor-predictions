@@ -6,6 +6,7 @@ import techSector from "@/data/predictions/displacement/tech-sector.json";
 import customerService from "@/data/predictions/displacement/customer-service.json";
 import overall from "@/data/predictions/displacement/overall.json";
 import whiteCollar from "@/data/predictions/displacement/white-collar-professional.json";
+import earlyCareer from "@/data/predictions/displacement/early-career.json";
 import creative from "@/data/predictions/displacement/creative-industry.json";
 import healthcareAdmin from "@/data/predictions/displacement/healthcare-admin.json";
 import education from "@/data/predictions/displacement/education-sector.json";
@@ -20,11 +21,13 @@ import genaiWorkAdoption from "@/data/predictions/adoption/genai-work-adoption.j
 import aiBusinessFormation from "@/data/predictions/adoption/ai-business-formation.json";
 import earningsCallMentions from "@/data/predictions/signals/earnings-call-mentions.json";
 import workforceExposure from "@/data/predictions/exposure/workforce-exposure.json";
+import workforceAiUse from "@/data/predictions/exposure/workforce-ai-use.json";
 
 const allPredictions: Prediction[] = [
   // Displacement: broadest population → sector → niche roles
   overall as Prediction,
   whiteCollar as Prediction,
+  earlyCareer as Prediction,
   techSector as Prediction,
   creative as Prediction,
   education as Prediction,
@@ -42,6 +45,7 @@ const allPredictions: Prediction[] = [
   genaiWorkAdoption as Prediction,
   aiBusinessFormation as Prediction,
   workforceExposure as Prediction,
+  workforceAiUse as Prediction,
   earningsCallMentions as Prediction,
 ];
 

@@ -5,10 +5,10 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "exposure",
   "unit": "% of jobs exposed",
-  "currentValue": 42.2,
+  "currentValue": 44.1,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
-  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. Explore task-level detail in the [Task Visualizer](/task-visualizer).",
+  "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 23\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. A further limit: these estimates map AI capability onto occupations as currently defined. Evidence that workers increasingly use AI for tasks outside their own occupation suggests the task bundles themselves are shifting, so exposure measured against today's job descriptions will drift from how work is actually organized. Explore task-level detail in the [Task Visualizer](/task-visualizer). For what AI is measurably doing today rather than what it could do, see [Observed AI Use at Work](/predictions/workforce-ai-use).",
   "history": [
     {
       "date": "2023-03-26",
@@ -92,18 +92,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2025-01-15",
-      "value": 36,
-      "confidenceLow": 28,
-      "confidenceHigh": 44,
-      "sourceIds": [
-        "anthropic-econ-primitives-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
       "date": "2025-06-01",
       "value": 23,
       "confidenceLow": 18,
@@ -128,30 +116,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2026-01-01",
-      "value": 38,
-      "confidenceLow": 30,
-      "confidenceHigh": 38,
-      "sourceIds": [
-        "hartley-genai-labor-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-15",
-      "value": 49,
-      "confidenceLow": 40,
-      "confidenceHigh": 60,
-      "sourceIds": [
-        "anthropic-econ-primitives-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-01-15",
       "value": 93,
       "confidenceLow": 85,
@@ -174,18 +138,6 @@
       "evidenceTier": 1,
       "metricType": "projection",
       "dataType": "projected"
-    },
-    {
-      "date": "2026-07-16",
-      "value": 23.6,
-      "confidenceLow": 15.8,
-      "confidenceHigh": 29.8,
-      "sourceIds": [
-        "steele-cruz-career-exposure-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -908,6 +860,42 @@
       ],
       "evidenceTier": 1,
       "label": "Google ATLAS: median occupation uses AI for only 21% of tasks \u2014 broad but shallow"
+    },
+    {
+      "date": "2026-07-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-task-crossover-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 43.5% of occupation-specific ChatGPT work messages cross job boundaries"
+    },
+    {
+      "date": "2026-07-27",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-task-crossover-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: marketing/engineering tasks travel widest; designers borrow most (35.2%)"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: share of postings with high AI exposure down ~5pp since Oct 2022"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "neutral",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: activity-mix dissimilarity +8.4pp yoy; most change within occupations"
     }
   ],
   "sources": [
@@ -1628,13 +1616,24 @@
       "dateAdded": "2026-07-24"
     },
     {
-      "id": "steele-cruz-career-exposure-2026",
-      "title": "Helping People Choose Careers in the Age of AI",
-      "url": "https://arxiv.org/abs/2607.15506",
-      "publisher": "arXiv (American University)",
+      "id": "openai-task-crossover-2026",
+      "title": "Work at the Frontier: How AI is expanding what people do at work",
+      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/",
+      "publisher": "OpenAI Economic Research (Chin, Richmond)",
       "evidenceTier": 2,
-      "datePublished": "2026-07-16",
-      "excerpt": "The combined measure has a mean occupational exposure of 23.6%, a range from 15.8 to 29.8, and a standard deviation of 6.18 percentage points, as shown at the top of Table 2. [Instrument: mean share of an occupation's tasks exposed, averaged across occupations, derived from 2025 Anthropic Claude and OpenAI ChatGPT query data; authors benchmark it against the job-level automation score of 31.5 in Eloundou et al. (2024).]"
+      "datePublished": "2026-07-27",
+      "excerpt": "OpenAI Economic Research, 'Work at the Frontier: How AI is expanding what people do at work' (Chin & Richmond, Jul 27 2026). Random sample of 800,000+ work-related messages from individual ChatGPT accounts of US users whose occupations were linked via ChatGPT Business role data, across eight occupation groups (customer experience, design, engineering, finance, HR, legal, marketing, sales). Each message is classified to a single O*NET detailed work activity and compared with the sender's stated occupation. Headline: '16.8 percent of all work-related messages\u2014and 43.5 percent of occupation-specific messages\u2014concern tasks historically associated with another occupation'; 21.8% are within-occupation and 61.5% generic. Cross-occupation is a majority of occupation-specific messages in five of eight groups: customer experience 77%, design 75%, HR 69%, legal 56%, marketing 53%. Direction of travel differs from volume of borrowing: 'About 35.2 percent of messages sent by designers involve work usually associated with another occupation. But design tasks make up only 1.7 percent of the messages sent by workers in other fields.' Engineering is the inverse (18.5% borrowed in, 7.4% traveling out); marketing leads both directions (24.3% in, 8.9% out \u2014 'the highest share in the sample'). Recurring borrowed tasks: calculating financial data and troubleshooting computer applications each rank top-three in all seven non-native occupation groups. Smaller workspaces show more crossover among typical-volume users: 18.9% at 2-5 seats vs 16.3% at 101+ seats. The report explicitly disclaims employment inference: 'This study maps AI-aided work; it does not estimate AI's effect on employment or productivity,' and the unit of analysis is 'a message, not an hour of work, a completed project, or a job.'",
+      "dateAdded": "2026-07-27"
+    },
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-07",
+      "title": "AI Labor Market Tracker: July 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-28",
+      "excerpt": "The share of job postings with high AI exposure has fallen by approximately 5 percentage points since October 2022. In June 2026 the year-over-year change in the activity mix dissimilarity index increased to 8.4 percentage points, meaning that 8.4% of the economy's headcount-weighted activity mix would need to be reallocated across activities to return to its June 2025 composition. Most activity change is occurring within occupations.",
+      "dateAdded": "2026-07-29"
     }
   ]
 }

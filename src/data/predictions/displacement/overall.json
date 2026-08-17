@@ -5,7 +5,7 @@
   "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, synthesizing displacement estimates, observed employment data, and net-of-job-creation projections. Note that 'net job loss' can carry multiple mechanisms \u2014 direct displacement, capital-labor substitution that erodes labor share, or long-run labor force participation declines driven by income effects as AI-generated wealth (via capital income or transfers) makes work less necessary for consumption. The headline number does not distinguish these; the source mix and the methodology page do.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 3.1,
+  "currentValue": 2.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -414,6 +414,16 @@
         "conversionHigh": 1.5,
         "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly. Monthly refresh of the same Canaries dashboard series last ingested 2026-06-10."
       }
+    },
+    {
+      "date": "2026-07-25",
+      "value": 0,
+      "sourceIds": [
+        "siepr-ai-hype-reality-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -1912,6 +1922,15 @@
       "label": "BLS Jun 2026: nonfarm +57K (below 115K expected); U-rate 4.2%; Apr/May revised -74K"
     },
     {
+      "date": "2026-07-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "fed-ai-buildout-indicators-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed: no large aggregate AI signal in productivity or labor data as of 2026"
+    },
+    {
       "date": "2026-07-23",
       "direction": "down",
       "sourceIds": [
@@ -1924,10 +1943,73 @@
       "date": "2026-07-25",
       "direction": "down",
       "sourceIds": [
-        "siepr-mahoney-mcentarfer-jobs-2026"
+        "siepr-ai-hype-reality-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "SIEPR: firms adopting enterprise AI grew employment 10% over the next two years"
+    },
+    {
+      "date": "2026-07-25",
+      "direction": "neutral",
+      "sourceIds": [
+        "siepr-ai-hype-reality-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "SIEPR (Census BTOS): only 5% of firms report any AI employment impact, gains = losses"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
       ],
       "evidenceTier": 2,
-      "label": "SIEPR: most AI-exposed workers' unemployment rose less than least-exposed"
+      "label": "Revelio: demand for most AI-exposed roles down 42% vs least-exposed since 2022"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: AI-adopting firms grow headcount 27% more than non-adopters"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: more AI-exposed firms see fewer layoffs, not more"
+    },
+    {
+      "date": "2026-08-05",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-athreya-labor-hiring-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "NY Fed: very few AI-driven layoffs; firms retrain rather than replace"
+    },
+    {
+      "date": "2026-08-06",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-july-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: AI cited in 33% of July 2026 US job cuts (10,970 of 33,429)"
+    },
+    {
+      "date": "2026-08-06",
+      "direction": "neutral",
+      "sourceIds": [
+        "challenger-july-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: total US cuts down 41% YTD, yet AI share of cuts rose to 24%"
     }
   ],
   "sources": [
@@ -3433,13 +3515,53 @@
       "dateAdded": "2026-07-24"
     },
     {
-      "id": "siepr-mahoney-mcentarfer-jobs-2026",
+      "id": "revelio-ai-labor-market-tracker-2026-07",
+      "title": "AI Labor Market Tracker: July 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-28",
+      "excerpt": "Demand for the most AI-exposed roles has declined 42% relative to the least exposed roles since October 2022 (down 8.6 percentage points year over year). AI-adopting firms grow headcount 27% more than non-adopters since November 2022; they were also growing faster before adoption. Employment grows at adopting firms across seniority levels, but the gains are concentrated in senior roles: 31% compared with 6% for junior roles.",
+      "dateAdded": "2026-07-29"
+    },
+    {
+      "id": "siepr-ai-hype-reality-2026",
       "title": "What is really happening to jobs? Separating AI hype from reality",
       "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
       "publisher": "Stanford Institute for Economic Policy Research (SIEPR)",
-      "evidenceTier": 2,
+      "evidenceTier": 1,
       "datePublished": "2026-07-25",
-      "excerpt": "the unemployment rate for the top quintile of AI-exposed workers has risen by 0.77 percentage points since 2022, while the unemployment rate for the least-exposed workers rose slightly more, by 0.85 percentage points over the same period."
+      "excerpt": "Stanford SIEPR policy brief reviewing observed AI labor market effects. Using IPUMS-CPS data, the unemployment rate for the top quintile of AI-exposed workers has risen by 0.77 percentage points since 2022, while the unemployment rate for the least-exposed workers rose slightly more, by 0.85 percentage points over the same period \u2014 a differential implying no measurable net AI displacement in aggregate US employment. Employment growth in coding-heavy occupations has slowed somewhat but remains positive, and online job postings for software developers have grown faster than for other occupations over the last year. Among firms that adopted enterprise AI, employment grew by 10 percent in the two years following adoption. In Census BTOS data only 5 percent of firms report any employment impact, with equal numbers reporting gains and losses. Key takeaway: \u201cAI\u2019s effects on overall employment is likely small, though a tough job market for new graduates may be partly due to AI.\u201d",
+      "dateAdded": "2026-07-31"
+    },
+    {
+      "id": "fed-ai-buildout-indicators-2026",
+      "title": "The AI Buildout and the Economy: Publicly Available Data to Assess AI's Impact",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "publisher": "Board of Governors of the Federal Reserve System (Soto, Thieu, Allen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-17",
+      "excerpt": "Federal Reserve Board FEDS Note cataloguing publicly available indicators for tracking the generative AI buildout across three stages: capabilities and costs; firm investment and adoption; and productivity and labor. Notes that headline adoption figures \u201cdo not reflect usage intensity, which surveys suggest remains shallow even where reported adoption is broad,\u201d and that \u201cthe absence of a large aggregate signal as of 2026 would not necessarily invalidate future productivity impacts, given the shallow adoption outlined in the previous section.\u201d Tracks sectoral productivity by AI exposure level, unemployment and labor force participation for workers aged 20-24 against prime-age workers, and layoffs, discharges and job openings in information-processing sectors as a white-collar displacement signal.",
+      "dateAdded": "2026-07-31"
+    },
+    {
+      "id": "challenger-july-2026",
+      "title": "Challenger Report: Layoffs Fall, Hiring Picks Up; AI Leads For Fifth Straight Month",
+      "url": "https://www.challengergray.com/blog/challenger-report-layoffs-fall-hiring-picks-up-ai-leads-for-fifth-straight-month/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-06",
+      "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" \u2014 the fifth straight month AI has led all stated reasons. \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\" Announced hiring plans reached 107,500 YTD, up 25%.",
+      "dateAdded": "2026-08-07"
+    },
+    {
+      "id": "nyfed-athreya-labor-hiring-2026",
+      "title": "AI's Impact on Labor and Hiring",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publisher": "Federal Reserve Bank of New York \u2014 Liberty Street Economics (Athreya)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-05",
+      "excerpt": "while AI adoption is rising quickly across industries, firms report very few AI-driven layoffs"
     }
   ]
 }

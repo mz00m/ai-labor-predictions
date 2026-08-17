@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-07-26",
-  "lastSweep": "2026-07-26",
+  "asOf": "2026-07-29",
+  "lastSweep": "2026-07-22",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -44,11 +44,11 @@
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
       "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
-        "sourceId": "challenger-june-2026",
-        "date": "2026-07-01",
-        "value": "~102K AI-attributed job cuts YTD; tech = 1/3 of announcements"
+        "sourceId": "challenger-july-2026",
+        "date": "2026-08-06",
+        "value": "112,713 AI-attributed job cuts YTD (24% of all cuts); AI led all reasons 5th straight month"
       },
-      "nextExpected": "August 6, 2026 (July data)"
+      "nextExpected": "September 3, 2026 (August data)"
     },
     {
       "id": "ramp-ai-velocity",
@@ -90,11 +90,11 @@
       "whatItMeasures": "Reconciles BTOS, ADP, NY Fed SCE, and academic-tracker series to produce the Fed's own reading of firm and worker AI adoption trends.",
       "whyItMatters": "One of the very few sources that formally reconciles disagreements between adoption surveys. Fed's involvement lends institutional weight to whatever the current best estimate is.",
       "lastIngested": {
-        "sourceId": "fed-ai-buildout-indicators-2026",
-        "date": "2026-07-17",
-        "value": "Indicator framework: capabilities/costs, firm investment & adoption, productivity & labor"
+        "sourceId": "fed-ai-adoption-monitoring-2026",
+        "date": "2026-04-03",
+        "value": "Broader synthesis of BTOS + ADP + SCE"
       },
-      "nextExpected": "~October-November 2026"
+      "nextExpected": "~July-August 2026"
     },
     {
       "id": "census-btos-ai",
@@ -461,9 +461,9 @@
       "whatItMeasures": "Not a data series — a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
       "whyItMatters": "Every ingested Tier 1 paper on the site traces back to this feed. Tracking NBER weekly is how the site stays ahead of Fed / IMF / OECD syntheses (which lag academic publication by 3-9 months). This is where the 'first inning' research Kolko flags is being written.",
       "lastIngested": {
-        "sourceId": "nber-chen-sialm-xu-ai-investing-2026",
-        "date": "2026-06-01",
-        "value": "Latest ingested AI-labor NBER WP: Chen/Sialm/Xu on AI in asset management (Jun 2026). ~9 NBER WPs ingested since March 2026"
+        "sourceId": "nber-bloom-profile-mutability-2026",
+        "date": "2026-08-03",
+        "value": "Bloom/Moore/Simon/Wilkie-Rogers on retroactive editing of professional profiles (measurement caveat for Revelio-derived series)"
       },
       "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly"
     },
@@ -584,6 +584,32 @@
         "value": "v1.0: 88% employment coverage, 21% median task saturation, <10% NR-cognitive automation"
       },
       "nextExpected": "~Q4 2026 (v1.1 with enterprise/API scope per report roadmap)"
+    },
+    {
+      "id": "revelio-ai-labor-tracker",
+      "name": "Revelio Labs AI Labor Market Tracker",
+      "publisher": "Revelio Labs (Simon, Zweig, Wilkie-Rogers)",
+      "tier": 2,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly",
+      "releasePattern": "Monthly editions at reveliolabs.com/ai-labor-market-tracker/us/<month>-<year>; launched July 28, 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker",
+      "targetGraphs": [
+        "early-career-employment-decline",
+        "overall-us-displacement",
+        "ai-adoption-rate",
+        "high-skill-wage-premium",
+        "workforce-ai-exposure"
+      ],
+      "topicLine": "Monthly five-lens read on AI and labor built on professional profiles rather than payroll.",
+      "whatItMeasures": "Talent supply, labor demand, market equilibrium, work content, and matching efficiency, from online professional profiles, job postings, salary records, employee reviews, and WARN notices. Uses the Brynjolfsson/Chandar/Chen event-study design with occupation and month fixed effects.",
+      "whyItMatters": "The only monthly-cadence replication of the Canaries early-career finding on data that is fully independent of ADP payroll records — profile-based rather than payroll-based. Its 13% early-career relative decline landing close to the ADP-derived estimate is the strongest cross-dataset corroboration on the site. Also the only source publishing a within-occupation activity-mix dissimilarity index, which speaks directly to the shifting-task-bundles question.",
+      "lastIngested": {
+        "sourceId": "revelio-ai-labor-market-tracker-2026-07",
+        "date": "2026-07-28",
+        "value": "Early-career 22-25 most-exposed -13% vs least-exposed; demand -42%; adopters +27% headcount; firm adoption 5.9%"
+      },
+      "nextExpected": "Mid-August 2026"
     }
   ]
 }

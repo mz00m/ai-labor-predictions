@@ -46,6 +46,9 @@ next-env.d.ts
 .gstack/
 wiki/
 
+# generated search index (rebuilt by `npm run build:search`, part of `npm run build`)
+src/data/search-index.json
+
 
 # Python bytecode
 __pycache__/

@@ -16,6 +16,7 @@ import {
 import { INDUSTRY_TEMPLATES } from "@/lib/assessment/taxonomy";
 import { HttpError, isNonRetryable } from "@/lib/assessment/http-error";
 import AiScorePreview from "@/components/assessment/AiScorePreview";
+import { trackEvent } from "@/lib/analytics";
 import {
   useSpringPress,
   usePillPop,
@@ -114,6 +115,16 @@ export default function AssessmentStartPage() {
 
   const currentStepIndex = STEPS.findIndex((s) => s.key === step);
 
+  // Keyed on `step` rather than on each setStep call site, so no future
+  // navigation path can silently skip instrumentation. This is what makes
+  // stage-by-stage drop-off measurable.
+  useEffect(() => {
+    trackEvent("assessment_step", {
+      step,
+      index: STEPS.findIndex((s) => s.key === step),
+    });
+  }, [step]);
+
   const updateField = useCallback(<K extends keyof FormData>(key: K, value: FormData[K]) => {
     setForm((prev) => ({ ...prev, [key]: value }));
   }, []);
@@ -197,6 +208,11 @@ export default function AssessmentStartPage() {
   const handleSubmit = async () => {
     setSubmitting(true);
     setError(null);
+    trackEvent("assessment_submit", {
+      scope: form.assessmentScope,
+      industry: form.industry,
+      hasFiles: files.length > 0,
+    });
 
     // Mirror the server-side caps in src/lib/assessment/schemas.ts so a user
     // pasting a long bio doesn't sail through the form only to be rejected

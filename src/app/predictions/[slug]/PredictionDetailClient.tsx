@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, type ReactNode } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { EvidenceTier } from "@/lib/types";
@@ -20,6 +20,42 @@ import DragTimeline from "@/components/delights/DragTimeline";
 
 
 const tierCounts = getSourceCountsByTier();
+
+const MD_LINK = /\[([^\]]+)\]\(([^)\s]+)\)/g;
+
+/** Renders `[label](url)` spans in prose fields. Everything else stays literal text. */
+function withLinks(text: string) {
+  const parts: ReactNode[] = [];
+  let cursor = 0;
+  MD_LINK.lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = MD_LINK.exec(text)) !== null) {
+    const [full, label, href] = match;
+    const start = match.index;
+    if (start > cursor) parts.push(text.slice(cursor, start));
+    const external = /^https?:\/\//.test(href);
+    parts.push(
+      external ? (
+        <a
+          key={start}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--accent)] hover:underline"
+        >
+          {label}
+        </a>
+      ) : (
+        <Link key={start} href={href} className="text-[var(--accent)] hover:underline">
+          {label}
+        </Link>
+      )
+    );
+    cursor = start + full.length;
+  }
+  if (cursor < text.length) parts.push(text.slice(cursor));
+  return parts;
+}
 
 const CONTEXT_MAP: Record<string, (v: number) => string> = {
   "overall-us-displacement": (v) =>
@@ -46,6 +82,8 @@ const CONTEXT_MAP: Record<string, (v: number) => string> = {
     `Real wages for entry-level positions (0-2 years experience) across knowledge-work industries are projected to ${v < 0 ? "decline" : "increase"} ${Math.abs(v)}% by 2030. Entry-level workers are hit hardest because 35% of junior-role tasks are within current AI capability vs. 18% for senior roles. The traditional career ladder, where you learn by doing routine work, is being compressed as AI handles those learning-stage tasks.`,
   "workforce-ai-exposure": (v) =>
     `An estimated ${v}% of US jobs have significant task overlap with current AI capabilities. This is an exposure measure, not a displacement count. It describes what AI could theoretically do, not what has actually happened. The gap between exposure and actual displacement has been wide: while exposure estimates have risen from 25% to nearly 50%, observed macro job losses attributable to AI remain near zero. Exposure is a precondition for displacement, not a guarantee of it.`,
+  "workforce-ai-use": (v) =>
+    `An estimated ${v}% of US workers have AI observed doing some part of their actual work. This is the measured counterpart to exposure: platform telemetry and nationally representative worker surveys, rather than capability mapping. The number is sensitive to where the threshold sits. Requiring AI to touch at least a quarter of a job's tasks yields 49%; counting any observed coverage at all yields about 70%. Reach has run well ahead of depth: AI shows up somewhere in occupations covering 88% of US employment, but the median occupation with any use runs it on only 21% of its tasks.`,
   "ai-adoption-rate": (v) =>
     `${v}% of US firms use AI in production according to the Census Bureau's Business Trends and Outlook Survey (BTOS), up from 3.8% in mid-2023. This is the most rigorous adoption measure available. Consultancy surveys report 5-10x higher rates (55-78%) because they sample self-selected, tech-forward companies. The Census data covers all US firms and provides the ground truth. Adoption varies dramatically by sector: information and finance lead at 20-30%, while construction and agriculture remain under 5%.`,
   "genai-work-adoption": (v) =>
@@ -358,7 +396,7 @@ export default function PredictionDetailPage() {
         <div className="border border-[#d97706]/20 bg-[#d97706]/[0.04] rounded-lg p-4 sm:p-6 max-w-2xl -mt-4">
           <p className="text-base text-[var(--muted)] leading-relaxed">
             <span className="font-semibold text-[var(--signal-warning-muted)]">Note:</span>{" "}
-            {prediction.disclaimer}
+            {withLinks(prediction.disclaimer)}
           </p>
         </div>
       )}

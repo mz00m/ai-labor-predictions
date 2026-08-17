@@ -13,6 +13,7 @@ import type {
 import { AUTO_STEPS, STEP_LABELS, STEP_DESCRIPTIONS, AI_MATURITY_LABELS } from "@/lib/assessment/types";
 import { STEP_TIMEOUT_MS, tryRecoverStepFromDb } from "./recovery";
 import { HttpError, isNonRetryable } from "@/lib/assessment/http-error";
+import { trackEvent } from "@/lib/analytics";
 
 // The progress page only drives the AUTO pipeline (profile → tasks → tools).
 // Roadmap, ROI, and risks are opt-in — generated from the report page.
@@ -49,6 +50,7 @@ export default function ProgressPage() {
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [loadingMsgIndex, setLoadingMsgIndex] = useState(0);
+  const pipelineStartedAt = useRef<number>(Date.now());
 
   // Track which steps are complete
   const [completedSteps, setCompletedSteps] = useState<Set<AssessmentStep>>(new Set());
@@ -146,6 +148,9 @@ export default function ProgressPage() {
         } else {
           // Auto pipeline finished — let the user opt in to roadmap, ROI,
           // and risks from the report page.
+          trackEvent("assessment_generated", {
+            seconds: Math.round((Date.now() - pipelineStartedAt.current) / 1000),
+          });
           router.push(`/assessment/report?id=${id}`);
         }
       };
@@ -208,7 +213,9 @@ export default function ProgressPage() {
       }
       throw lastErr || new Error(`Failed to generate ${step}. Please try again.`);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
+      const message = err instanceof Error ? err.message : "An error occurred";
+      setError(message);
+      trackEvent("assessment_failed", { reason: `${step}: ${message}`.slice(0, 120) });
     } finally {
       setGenerating(false);
     }

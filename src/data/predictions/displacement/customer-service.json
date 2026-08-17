@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 39.3,
+  "currentValue": 43.5,
   "timeHorizon": "By 2028",
   "aggregationMethod": "weighted",
   "disclaimer": "Measures interaction automation, not job elimination. Actual headcount effects depend on demand response and service quality. A high automation rate may reduce headcount but does not imply equivalent job loss.",
@@ -92,6 +92,16 @@
       "evidenceTier": 3,
       "metricType": "survey",
       "dataType": "projected"
+    },
+    {
+      "date": "2026-04-01",
+      "value": 82,
+      "sourceIds": [
+        "stanford-del-enterprise-ai-playbook-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "corporate",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -418,15 +428,6 @@
       ],
       "evidenceTier": 2,
       "label": "Stanford DEL: 90-95% of food delivery CS interactions fully automated by AI agent"
-    },
-    {
-      "date": "2026-04-01",
-      "direction": "up",
-      "sourceIds": [
-        "stanford-del-enterprise-ai-playbook-2026"
-      ],
-      "evidenceTier": 2,
-      "label": "Stanford DEL: 82% ticket deflection at tech co via AI-first customer support"
     },
     {
       "date": "2026-04-02",

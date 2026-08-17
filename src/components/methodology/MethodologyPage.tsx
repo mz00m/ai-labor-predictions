@@ -1409,6 +1409,70 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
 
           <div>
             <P>
+              <Strong>Exposure-based effects may measure anticipation, not deployment.</Strong>{" "}
+              Most of the observed employment effects on this site &mdash; including the
+              early-career decline, our single most load-bearing measured number &mdash;
+              come from sorting occupations by AI <em>exposure</em> and comparing
+              employment across that gradient. Exposure describes what AI could
+              plausibly do, not what any employer has actually deployed. Revelio Labs (
+              <a
+                href="https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                July 2026
+              </a>
+              ) measures adoption separately, inferring it from whether a firm advertises
+              roles that integrate AI into its operations (an approach from Hosseini
+              Maasoum and Lichtinger,{" "}
+              <a
+                href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5050752"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                2025
+              </a>
+              ), and finds only about 5.9% of eligible hiring firms have adopted &mdash;
+              while those that have grow headcount 27% more than those that
+              haven&rsquo;t. Realized deployment is therefore too rare, and too
+              positively correlated with hiring, to explain most of the exposure
+              gradient. The likelier mechanism is employer expectation: firms slow
+              hiring in occupations where they anticipate AI becoming capable. This
+              matters for interpretation, because anticipation can reverse faster than
+              installed capital can, and it is not visible in adoption statistics at all.
+            </P>
+          </div>
+
+          <div>
+            <P>
+              <Strong>Professional profile histories get edited after the fact.</Strong>{" "}
+              The early-career decline and twelve of our firm-side signals come from
+              Revelio Labs, which reconstructs employment histories from public
+              professional profiles. Bloom, Moore, Simon and Wilkie-Rogers (
+              <a
+                href="https://www.nber.org/papers/w35546"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                NBER, 2026
+              </a>
+              ) show those records are not fixed snapshots. Using monthly vintages of
+              Revelio data from 2020&ndash;2026, they find that 19.7% of established
+              US LinkedIn users retroactively edit the title or description of a job
+              they have already left, and that these edits cluster around the time
+              workers change employers. AI-related language in them rises sharply
+              after 2022. So a historical series can move without any underlying
+              employment changing, and exposure measures built on profile text partly
+              capture workers relabeling old work in current vocabulary rather than
+              the work itself changing.
+            </P>
+          </div>
+
+          <div>
+            <P>
               <Strong>Point estimates from wide ranges.</Strong>{" "}
               The headline number can mask significant disagreement. When the
               source range is wide (e.g., 0&ndash;12%), the range itself is often

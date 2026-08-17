@@ -1,0 +1,158 @@
+{
+  "id": "exposure-ai-use",
+  "slug": "workforce-ai-use",
+  "title": "Observed AI Use at Work",
+  "description": "Share of US workers with AI observed doing part of their actual work, from platform telemetry and nationally representative worker surveys. This is the measured counterpart to AI exposure: what AI is doing, not what it could do.",
+  "category": "exposure",
+  "unit": "% of workers with observed AI use",
+  "currentValue": 46.3,
+  "timeHorizon": "Current estimate",
+  "aggregationMethod": "weighted",
+  "disclaimer": "Sources set different thresholds for what counts as \u201cusing AI,\u201d so the spread here is definitional as much as empirical. Anthropic's 49% counts jobs where at least a quarter of tasks show up in Claude traffic; its 70% counts any observed coverage at all; Hartley et al. ask workers directly. Breadth is not depth: Google's ATLAS finds Gemini use somewhere in occupations covering 88% of US employment, but the median occupation with any use runs AI on only 21% of its tasks. That 88% figure measures how far AI has reached, not how many workers use it, which is why it sits below the chart rather than on it. For what AI could do rather than what it is doing, see [US Workforce AI Exposure](/predictions/workforce-ai-exposure).",
+  "history": [
+    {
+      "date": "2025-01-15",
+      "value": 36,
+      "confidenceLow": 28,
+      "confidenceHigh": 44,
+      "sourceIds": [
+        "anthropic-econ-primitives-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
+      "date": "2026-01-01",
+      "value": 38.3,
+      "confidenceLow": 30.1,
+      "confidenceHigh": 38.3,
+      "sourceIds": [
+        "hartley-genai-labor-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
+      "date": "2026-01-15",
+      "value": 49,
+      "confidenceLow": 40,
+      "confidenceHigh": 60,
+      "sourceIds": [
+        "anthropic-econ-primitives-2026"
+      ],
+      "evidenceTier": 1,
+      "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
+      "date": "2026-03-05",
+      "value": 70,
+      "sourceIds": [
+        "anthropic-labor-market-impacts-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "dataType": "observed"
+    }
+  ],
+  "overlays": [
+    {
+      "date": "2026-04-03",
+      "direction": "up",
+      "sourceIds": [
+        "fed-ai-adoption-monitoring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed SBU: 78% of US labor force works at an AI-adopting firm (employment-weighted)"
+    },
+    {
+      "date": "2026-04-17",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 66pp capability overhang \u2014 90% theoretical vs 23.8% realized exposure in high-risk jobs"
+    },
+    {
+      "date": "2026-07-23",
+      "direction": "up",
+      "sourceIds": [
+        "google-atlas-v1-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Google ATLAS: Gemini use observed in 68% of occupations covering 88.4% of US employment"
+    },
+    {
+      "date": "2026-07-23",
+      "direction": "neutral",
+      "sourceIds": [
+        "google-atlas-v1-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Google ATLAS: median occupation uses AI for only 21% of tasks \u2014 broad but shallow"
+    }
+  ],
+  "sources": [
+    {
+      "id": "anthropic-econ-primitives-2026",
+      "title": "The Anthropic Economic Index: Economic Primitives",
+      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
+      "publisher": "Anthropic",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-15",
+      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
+      "dateAdded": "2026-03-01"
+    },
+    {
+      "id": "hartley-genai-labor-2026",
+      "title": "The Labor Market Effects of Generative Artificial Intelligence",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
+      "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
+      "evidenceTier": 1,
+      "datePublished": "2026-01-01",
+      "excerpt": "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "anthropic-labor-market-impacts-2026",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "publisher": "Anthropic (Massenkoff, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "At the bottom end, 30% of workers have zero coverage, as their tasks appeared too infrequently in our data to meet the minimum threshold.",
+      "dateAdded": "2026-03-07"
+    },
+    {
+      "id": "google-atlas-v1-2026",
+      "title": "Google's AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
+      "url": "https://deepmind.google/research/publications/ai-economy-atlas",
+      "publisher": "Google / Google DeepMind (Iscenko, Strand, Imas, Manyika et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-23",
+      "excerpt": "Google's AI & Economy ATLAS v1.0 (Iscenko, Strand, Chen, Imas, Manyika et al., Google/Google DeepMind, Jul 23 2026; reviewed by Diane Coyle and David Autor). 15M de-identified interactions across Gemini App, AI Mode, and Gemini API (Apr 6-19, 2026), mapped to 800+ occupations, 4,000 O*NET tasks, 300 ATUS activities, 150 countries, 140 languages. Work: 'AI adoption spans occupations covering just above 88% of US employment' (68% of detailed occupations) but 'penetration remains shallow' \u2014 'AI is used for only 21% of total tasks in the median occupation with any AI use'; only 3% of occupations show usage for >75% of tasks. 'Attempts to automate tasks end-to-end represent less than 10% of AI conversations in non-routine cognitive work'; >25% for routine cognitive work. Non-routine cognitive tasks = 35% of O*NET universe but 65% of work interactions. Wages: 'a 1% increase in an occupation's median earnings is associated with a more than 2.5% increase in AI usage intensity'; Gemini-weighted median salary $82,919 vs $62,252 employment-weighted national median. Home: 86% of conversational use is non-work; government/civic queries over-represented ~20x vs time spent; household time-savings valued at $14.9B-$149B/yr (0.5-5% scenarios). Global: 1% GDP/capita \u2191 \u2192 0.9% usage \u2191; English only ~1/3 of conversations across 143 languages.",
+      "dateAdded": "2026-07-24"
+    },
+    {
+      "id": "openai-jobs-transition-framework-2026",
+      "title": "The AI Jobs Transition Framework: Mapping AI's Near-Term Impact on Jobs",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework_report.pdf",
+      "publisher": "OpenAI Economic Research (Alex Martin Richmond)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-17",
+      "excerpt": "Jobs at high automation risk: gap 66.2 pp, 23.8% realized, 90.0% theoretical. Jobs that grow with AI: gap 49.7 pp, 22.7% realized, 72.4% theoretical. Jobs that will reorganize: gap 52.3 pp, 14.9% realized, 67.1% theoretical. Jobs with less immediate change: gap 21.0 pp, 6.4% realized, 27.4% theoretical. Across every job category, current usage lags behind the possible. Exposure alone is a weak predictor of immediate labor market pressure."
+    },
+    {
+      "id": "fed-ai-adoption-monitoring-2026",
+      "title": "Monitoring AI Adoption in the U.S. Economy",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html",
+      "publisher": "Federal Reserve Board of Governors (Jeffrey S. Allen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-03",
+      "excerpt": "The SBU estimates an employment-weighted firm AI adoption rate of around 78 percent and an LLM adoption rate of about 54 percent. In this context, employment weighting approximates the share of the labor force working at firms that have adopted AI."
+    }
+  ]
+}

@@ -17,7 +17,7 @@
  */
 
 import enrichedData from "@/data/enriched-occupations.json";
-import { getToolsForAssessment } from "@/data/tools";
+import { OCCUPATION_TOOLS } from "@/data/tools/occupational";
 import actionTemplates from "@/data/assessment/action-templates.json";
 
 // ---------------------------------------------------------------------------
@@ -43,10 +43,11 @@ export interface TaskBreakdown {
 
 export interface ScorecardTool {
   name: string;
-  category: string;
   description: string;
-  url?: string;
+  url: string;
   pricingDetails: string;
+  /** Procured by an employer rather than adopted by the worker. */
+  employerDeployed: boolean;
 }
 
 export interface LevelUpAction {
@@ -162,45 +163,37 @@ function estimateTimeSavings(exposure: number): number {
 // Tool recommendations (top 3 from existing KB)
 // ---------------------------------------------------------------------------
 
-/**
- * Maps occupation categories to the closest IndustryCategory for tool lookup.
- * Not all 15 occupation categories have a 1:1 match, so we approximate.
- */
-const CATEGORY_TO_INDUSTRY: Record<string, string> = {
-  "business-and-financial": "accounting-finance",
-  "computer-and-mathematical": "technology",
-  "architecture-and-engineering": "technology",
-  "life-physical-and-social-science": "education",
-  "community-and-social-service": "nonprofit",
-  "legal": "legal",
-  "education-training-and-library": "education",
-  "arts-design-entertainment-sports-and-media": "media-marketing",
-  "healthcare-practitioners-and-technical": "healthcare",
-  "healthcare-support": "healthcare",
-  "food-preparation-and-serving-related": "restaurant-hospitality",
-  "building-and-grounds-cleaning-and-maintenance": "construction",
-  "personal-care-and-service": "professional-services",
-  "sales-and-related": "retail",
-  "office-and-administrative-support": "professional-services",
-  "farming-fishing-and-forestry": "agriculture",
-  "construction-and-extraction": "construction",
-  "installation-maintenance-and-repair": "manufacturing",
-  "production": "manufacturing",
-  "transportation-and-material-moving": "logistics-transportation",
-  "management": "professional-services",
-  "protective-service": "government",
-  "military-specific": "government",
-};
+const MAX_TOOLS = 8;
 
-function getTopTools(category: string): ScorecardTool[] {
-  const industry = CATEGORY_TO_INDUSTRY[category] ?? "other";
-  const tools = getToolsForAssessment(industry, "11-50");
-  return tools.slice(0, 3).map((t) => ({
+/**
+ * Tools someone in this job would recognize, drawn from the occupation-keyed
+ * registry rather than the horizontal office-software catalog.
+ *
+ * Slug matches rank above category matches so that occupations which diverge
+ * from their category get the right answer — court reporters need
+ * transcription, not the contract tooling the rest of `legal` uses.
+ *
+ * Returns fewer than MAX_TOOLS, including none, when the registry has nothing
+ * genuine. Many occupations have little worker-facing AI tooling, and the
+ * previous behavior of backfilling from a generic industry bucket is exactly
+ * what made these recommendations untrustworthy.
+ */
+function getTopTools(category: string, slug: string): ScorecardTool[] {
+  // `occupationSlugs` is a restriction, not a boost: a tool that names its
+  // occupations is offered to those and no others. Without that, contract
+  // drafting tools scoped to lawyers spilled onto the court reporter page
+  // just because both sit in the `legal` category.
+  const forSlug = OCCUPATION_TOOLS.filter((t) => t.occupationSlugs?.includes(slug));
+  const forCategory = OCCUPATION_TOOLS.filter(
+    (t) => !t.occupationSlugs && t.occupationCategories.includes(category)
+  );
+
+  return [...forSlug, ...forCategory].slice(0, MAX_TOOLS).map((t) => ({
     name: t.name,
-    category: t.category,
     description: t.description,
     url: t.url,
     pricingDetails: t.pricingDetails,
+    employerDeployed: t.employerDeployed ?? false,
   }));
 }
 
@@ -259,7 +252,7 @@ export function getScorecard(
     bandLabel: BAND_LABELS[band],
     taskBreakdown: computeTaskBreakdown(occ.taskComposition),
     taskCount: occ.tasks.length,
-    tools: getTopTools(occ.category),
+    tools: getTopTools(occ.category, slug),
     actions: getActionsForBand(band, goal),
     timeSavingsHoursPerWeek: estimateTimeSavings(score),
     exposure_rationale: occ.exposure_rationale,

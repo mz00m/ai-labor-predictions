@@ -214,6 +214,52 @@ export function SignalsWatermark({ color }: WatermarkProps) {
   );
 }
 
+/** Scorecard - a 10-segment score meter that fills to 7 on hover */
+export function ScorecardWatermark({ color }: WatermarkProps) {
+  const SEGMENTS = 10;
+  const FILLED = 7;
+  return (
+    <svg width="220" height="70" viewBox="0 0 220 70" fill="none" className="overflow-visible">
+      {Array.from({ length: SEGMENTS }, (_, i) => (
+        <rect
+          key={i}
+          x={10 + i * 20}
+          y={26}
+          width="14"
+          height="18"
+          rx="2"
+          fill={color}
+          opacity={0.12}
+        />
+      ))}
+      {Array.from({ length: FILLED }, (_, i) => (
+        <rect
+          key={`fill-${i}`}
+          x={10 + i * 20}
+          y={26}
+          width="14"
+          height="18"
+          rx="2"
+          fill={color}
+          opacity="0"
+          className="group-hover:animate-[wm-pop_0.3s_ease-out_forwards]"
+          style={{ animationDelay: `${i * 0.05}s` }}
+        />
+      ))}
+      <line
+        x1={10 + FILLED * 20 - 3}
+        y1="18"
+        x2={10 + FILLED * 20 - 3}
+        y2="52"
+        stroke={color}
+        strokeWidth="1.5"
+        opacity="0"
+        className="group-hover:animate-[wm-text-in_0.3s_ease-out_0.4s_forwards]"
+      />
+    </svg>
+  );
+}
+
 /** Demand elasticity - upward lines branching out, representing job creation outpacing displacement */
 export function DemandElasticityWatermark({ color }: WatermarkProps) {
   return (

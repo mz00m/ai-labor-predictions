@@ -514,6 +514,15 @@
       ],
       "evidenceTier": 1,
       "label": "Google ATLAS: 1% higher occupation earnings \u2192 2.5% more AI use; usage-wtd median $83K vs $62K"
+    },
+    {
+      "date": "2026-07-28",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-07"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: AI-exposure wage premium eroded from ~2% pre-ChatGPT to roughly zero"
     }
   ],
   "sources": [
@@ -967,6 +976,16 @@
       "datePublished": "2026-07-23",
       "excerpt": "Google's AI & Economy ATLAS v1.0 (Iscenko, Strand, Chen, Imas, Manyika et al., Google/Google DeepMind, Jul 23 2026; reviewed by Diane Coyle and David Autor). 15M de-identified interactions across Gemini App, AI Mode, and Gemini API (Apr 6-19, 2026), mapped to 800+ occupations, 4,000 O*NET tasks, 300 ATUS activities, 150 countries, 140 languages. Work: 'AI adoption spans occupations covering just above 88% of US employment' (68% of detailed occupations) but 'penetration remains shallow' \u2014 'AI is used for only 21% of total tasks in the median occupation with any AI use'; only 3% of occupations show usage for >75% of tasks. 'Attempts to automate tasks end-to-end represent less than 10% of AI conversations in non-routine cognitive work'; >25% for routine cognitive work. Non-routine cognitive tasks = 35% of O*NET universe but 65% of work interactions. Wages: 'a 1% increase in an occupation's median earnings is associated with a more than 2.5% increase in AI usage intensity'; Gemini-weighted median salary $82,919 vs $62,252 employment-weighted national median. Home: 86% of conversational use is non-work; government/civic queries over-represented ~20x vs time spent; household time-savings valued at $14.9B-$149B/yr (0.5-5% scenarios). Global: 1% GDP/capita \u2191 \u2192 0.9% usage \u2191; English only ~1/3 of conversations across 143 languages.",
       "dateAdded": "2026-07-24"
+    },
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-07",
+      "title": "AI Labor Market Tracker: July 2026",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/july-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-28",
+      "excerpt": "The wage premium for AI-exposed work has eroded to roughly zero, falling from around 2% before ChatGPT's launch. Measured as the salary premium associated with a one-standard-deviation increase in posting-level AI exposure, not as a premium over the median wage.",
+      "dateAdded": "2026-07-29"
     }
   ]
 }

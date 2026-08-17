@@ -1,0 +1,99 @@
+{
+  "week": "2026-W33",
+  "generatedAt": "2026-08-10T09:18:39.046Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "AI's Real Threat to Workers: Wage Suppression Over Job Loss",
+      "summary": "New research covered by Business Insider argues that the primary labor market risk from AI is not mass unemployment but downward pressure on worker compensation, as AI tools allow employers to hire fewer or lower-skilled workers for the same output. The piece synthesizes recent academic findings suggesting wage erosion could be more widespread and harder to reverse than outright displacement. (Source: Business Insider / HN Algolia, 2026-08-01)",
+      "source": "https://www.businessinsider.com/ai-could-lower-workers-pay-job-market-impact-2026-7",
+      "publishedAt": "2026-08-01",
+      "score": 0.182,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "NY Fed: AI's Measurable Impact on Labor and Hiring",
+      "summary": "The New York Fed's Liberty Street Economics blog launched a new thematic series highlighting research on AI's evolving effects on labor demand and hiring practices across sectors. The post synthesizes Fed economists' work showing early but tangible shifts in job postings and employer skill requirements attributable to generative AI adoption. (Source: NY Fed Liberty Street Economics, 2026-08-05)",
+      "source": "https://libertystreeteconomics.newyorkfed.org/2026/08/ais-impact-on-labor-and-hiring/",
+      "publishedAt": "2026-08-05",
+      "score": 0.329,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Federal Reserve FEDS Note: Public Indicators to Track the AI Buildout's Economic Impact",
+      "summary": "Fed economists Soto, Thieu, and Allen present a framework of publicly available indicators—spanning capital expenditure, job postings, and productivity data—to monitor the generative AI buildout's macroeconomic footprint in near-real time. The note organizes metrics into categories enabling policymakers to assess AI adoption velocity and labor market spillovers on an ongoing basis. (Source: Federal Reserve Board FEDS Notes, 2026-07-17)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "publishedAt": "2026-07-17",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Revelio Labs AI Labor Market Tracker: Real-Time Jobs and Adoption Signals",
+      "summary": "Revelio Labs' continuously updated AI Labor Market Tracker draws on workforce and job-posting data to quantify how AI exposure and adoption are reshaping employment levels, job task composition, and hiring demand across occupations. The tracker provides one of the most granular firm-side views of AI-driven workforce transformation currently available. (Source: Revelio Labs, 2026-07-28)",
+      "source": "https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker",
+      "publishedAt": "2026-07-28",
+      "score": 0.4,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "Occupational Convergence or Divergence? Mapping AI-Driven Structural Labor Market Shifts",
+      "summary": "Hilman and Koltai examine whether AI diffusion is producing a common skill baseline across occupations or deepening occupational divides, finding evidence of bifurcation: high-AI-penetration roles are diverging in skill demand from lower-exposure occupations. The study maps these structural shifts using labor market data, offering insight into which job categories face the steepest transition pressures. (Source: OpenAlex / arXiv, 2026-07-30)",
+      "source": "https://arxiv.org/abs/2607.28798",
+      "authors": [
+        "Rafiazka Hilman",
+        "Julia Koltai"
+      ],
+      "publishedAt": "2026-07-30",
+      "score": 0.185,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "white-collar-professional-displacement"
+    }
+  ],
+  "themes": [
+    "Wage suppression is emerging as a more immediate AI labor market risk than outright job displacement, with new research pointing to compensation erosion across multiple occupational tiers.",
+    "Federal Reserve economists are actively building real-time indicator frameworks to track the AI buildout's economic and labor market spillovers, signaling heightened policy attention.",
+    "Occupational bifurcation is accelerating: AI-exposed roles are diverging sharply in skill requirements from lower-exposure jobs, deepening structural inequality in the labor market.",
+    "Firm-side AI adoption data (Revelio, Census BTOS) remains the most timely signal of workforce transformation, with tracker updates showing continued reshaping of hiring demand.",
+    "Generative AI is flooding creative and informational markets (books, financial advice), compressing rates and quality signals for human producers and advisors alike."
+  ],
+  "watching": [
+    {
+      "title": "Census Business Trends & Outlook Survey — AI Supplement (overdue)",
+      "source": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "reason": "Biweekly firm-side AI adoption measure is 39 days overdue; next release will refresh the freshest US adoption baseline feeding ai-adoption-rate graph."
+    },
+    {
+      "title": "Fed Reserve — Monitoring AI Adoption in the US Economy (overdue quarterly)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Official Fed synthesis of US AI-adoption surveys is 129 days overdue on quarterly cadence; critical Tier-1 input for ai-adoption-rate and workforce-ai-exposure graphs."
+    },
+    {
+      "title": "Generative AI floods and dilutes the market for books",
+      "source": "https://arxiv.org/abs/2607.20349",
+      "reason": "Early evidence of GenAI-driven market saturation in creative publishing; directly relevant to creative-industry-displacement and freelancer-rate-impact trajectories."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [],
+    "totalCandidates": 91,
+    "afterDedup": 91
+  }
+}
