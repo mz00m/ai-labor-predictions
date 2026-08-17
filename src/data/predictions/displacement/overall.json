@@ -424,6 +424,16 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
+    },
+    {
+      "date": "2026-08-12",
+      "value": 0,
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -3580,6 +3590,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-07-30",
       "excerpt": "As shown in the regression results in Table 3, no significant employment effect was found from an occupation having a high AI exposure score. Coefficient on AI Exposure x Post for log(Employment) was -0.0639 (SE 0.0870), not statistically significant, versus -0.0667 (SE 0.0181, p<0.01) for log(Real Wage). Suggests firms are capturing AI productivity gains through wage compression rather than workforce reduction."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2026-08",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (August 2026)",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "We find no evidence of widespread, economy-wide job displacement. Average employment in the ADP sample rose by about 6% between November 2022 and June 2026, while employment for the most exposed quintile grew by about 4%. This aggregate stability is itself informative: claims of economy-wide AI-driven job losses are not visible in payroll data through June 2026.",
+      "dateAdded": "2026-08-13"
     }
   ]
 }

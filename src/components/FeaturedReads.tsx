@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Brynjolfsson, Chandar & Chen",
+    title: "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
+    summary:
+      "The third vintage of the most-cited paper in the field, now with ADP payroll data through June 2026 — and it changes its own headline measure. Earlier versions led with a regression estimate adjusting for firm shocks (13%, then 16%). This one leads with the simpler descriptive number that needs no modeling choices: employment of 22-25 year olds in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers, up from 15% on the same measure a year ago. Experienced workers show no comparable gap, and Fact 1 remains that there is no economy-wide displacement — the ADP sample grew about 6%. The most useful thing here is the authors arguing against themselves. Education is the one control that bites (the gap attenuates from -18pp to -9pp), and they present the two estimates as bracketing a range rather than picking the flattering one, because generative AI substitutes best for exactly the codified knowledge schooling produces. They also concede the magnitude is ADP-specific: the ACS gap is -2.2pp with a confidence interval spanning zero against -13.2pp in ADP, though the two agree closely within white-collar work. Adjustment runs through hiring, not separations or pay.",
+    date: "Aug 12",
+    url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+  },
+  {
     author: "Kartik B. Athreya (NY Fed)",
     title: "AI's Impact on Labor and Hiring",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The Bick-Blandin-Deming Real-Time Population Survey — the field's cleanest quarterly measure of US worker GenAI adoption — is now official FRED data: 137 series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest readings: 43.4% of employed adults used GenAI for work and 57.9% of working-age adults used it anywhere in Q1 2026; GenAI-assisted work hours reached 6.3% in Q2 2026, up from 4.1% in late 2024. FRED hosting makes the series every major adoption synthesis relies on citable and API-accessible alongside official government statistics.",
     date: "Jul 24",
     url: "https://news.research.stlouisfed.org/2026/07/fred-adds-data-about-the-adoption-of-generative-artificial-intelligence/",
-  },
-  {
-    author: "Google / Google DeepMind",
-    title: "AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
-    summary:
-      "Google's entry into the usage-data triad (alongside Anthropic's Economic Index and OpenAI's Jobs Transition Framework) — 15M de-identified Gemini interactions mapped to 800+ occupations, 4,000 O*NET tasks, 300 household activities, 150 countries, and 140 languages. Headline: diffusion is broad but shallow. Usage spans occupations covering 88% of US employment, yet the median occupation applies AI to only 21% of its tasks, and end-to-end automation is under 10% of non-routine cognitive use. Uniquely adds household lenses: 86% of conversational AI happens outside work, government/civic queries over-index ~20x, and household time savings may be worth $15-149B/yr — invisible to GDP. Reviewed by Coyle and Autor; Imas co-authored.",
-    date: "Jul 23",
-    url: "https://deepmind.google/research/publications/ai-economy-atlas",
   },
 ];
 

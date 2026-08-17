@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-17",
-  "totalSources": 676,
-  "verifiedCount": 666,
+  "totalSources": 677,
+  "verifiedCount": 667,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9649,6 +9649,22 @@
         "overall-us-displacement",
         "entry-level-wage-impact",
         "high-skill-wage-premium"
+      ]
+    },
+    "brynjolfsson-chandar-chen-2026-08": {
+      "id": "brynjolfsson-chandar-chen-2026-08",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (August 2026)",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "August 12, 2026 revision of the Canaries study, ADP balanced payroll panel of 3.5-5 million workers per month, January 2021 through June 2026. Employment of workers aged 22-25 in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers, up from 15% on the same kept-pace measure at the July 2025 data vintage; experienced workers show no comparable gap. No evidence of widespread economy-wide displacement: the ADP sample grew about 6% while the most exposed quintile grew about 4%. Adjustment operates through reduced hiring rather than separations or base compensation.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "early-career-employment-decline",
+        "overall-us-displacement",
+        "entry-level-wage-impact"
       ]
     }
   }

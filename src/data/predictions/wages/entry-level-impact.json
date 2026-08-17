@@ -547,6 +547,15 @@
       ],
       "evidenceTier": 2,
       "label": "Apollo: bottom wage quartile real wage growth -10.7% vs low-exposure"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2026-08"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries: little difference in compensation trends by age or exposure quintile"
     }
   ],
   "sources": [
@@ -1071,6 +1080,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-07-30",
       "excerpt": "Workers in the bottom quartile of the wage distribution had their real wage growth decline by around 10.7% relative to low-exposure occupations, compared to 5.4% in the second quartile and 4.0% in the third quartile. The top quartile showed no statistically significant wage effect. Wage-quartile cut, not a tenure cut, so not directly comparable to entry-level (0-2 years experience) estimates."
+    },
+    {
+      "id": "brynjolfsson-chandar-chen-2026-08",
+      "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (August 2026)",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Chandar, Chen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "We find little difference in compensation trends by age or exposure quintile. Among job-stayers, average real base pay has grown more slowly in more exposed jobs, though this is not specific to young workers; these differences are small relative to the roughly 20-percentage-point divergence in employment. Among new hires, real starting pay shows no obvious relationship with AI exposure for young workers. Adjustment operates through employment rather than base compensation.",
+      "dateAdded": "2026-08-13"
     }
   ]
 }
