@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-17",
-  "totalSources": 675,
-  "verifiedCount": 665,
+  "totalSources": 676,
+  "verifiedCount": 666,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9631,6 +9631,24 @@
       "synthetic": false,
       "usedIn": [
         "ai-adoption-rate"
+      ]
+    },
+    "apollo-ai-labor-market-2026": {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "Difference-in-differences across 321 matched occupations (BLS OEWS 2015-2025, n=3,296 occupation-years) using observed Anthropic Economic Index usage rather than theoretical exposure. High-exposure occupations saw real wage growth 6.7 percentage points slower after 2023 with no detectable employment effect. 5.8 million workers (3.7% of the labor force) are in high-exposure occupations.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "median-wage-impact",
+        "workforce-ai-use",
+        "overall-us-displacement",
+        "entry-level-wage-impact",
+        "high-skill-wage-premium"
       ]
     }
   }

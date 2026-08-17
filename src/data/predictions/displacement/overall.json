@@ -1985,6 +1985,15 @@
       "label": "Revelio: more AI-exposed firms see fewer layoffs, not more"
     },
     {
+      "date": "2026-07-30",
+      "direction": "down",
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Apollo: no significant employment effect in high AI-exposure occupations"
+    },
+    {
       "date": "2026-08-05",
       "direction": "down",
       "sourceIds": [
@@ -3562,6 +3571,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-05",
       "excerpt": "while AI adoption is rising quickly across industries, firms report very few AI-driven layoffs"
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "As shown in the regression results in Table 3, no significant employment effect was found from an occupation having a high AI exposure score. Coefficient on AI Exposure x Post for log(Employment) was -0.0639 (SE 0.0870), not statistically significant, versus -0.0667 (SE 0.0181, p<0.01) for log(Real Wage). Suggests firms are capturing AI productivity gains through wage compression rather than workforce reduction."
     }
   ]
 }

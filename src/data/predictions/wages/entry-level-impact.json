@@ -538,6 +538,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: AI ties to weaker pay growth at the bottom, not the top; AI firms hiring"
+    },
+    {
+      "date": "2026-07-30",
+      "direction": "down",
+      "sourceIds": [
+        "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Apollo: bottom wage quartile real wage growth -10.7% vs low-exposure"
     }
   ],
   "sources": [
@@ -1053,6 +1062,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-07-21",
       "excerpt": "Revelio Labs analysis of advertised salaries on new job postings from its COSMOS dataset. \"Between Q2 2025 and Q2 2026, advertised salaries for bottom-decile jobs actually fell 2.2% in real terms (after adjusting for 3.8% CPI inflation), while ninth-decile jobs rose 7.5% and the top decile rose 6.4%.\" The measure tracks \"what employers are offering today, rather than what current workers already earn.\" The piece argues against an AI-driven white-collar shock: \"Recent Revelio Labs research shows that AI adoption is more strongly associated with weaker wage growth at the bottom of the pay distribution than at the top. In addition, we find that firms investing most heavily in AI continue to expand headcounts.\" Attributed growth is sectoral, concentrated in Professional & Business Services, Information, and Education & Health."
+    },
+    {
+      "id": "apollo-ai-labor-market-2026",
+      "title": "The Impact of AI on the U.S. Labor Market: Early Evidence from Observed Adoption",
+      "url": "https://apollo.com/content/dam/apolloaem/pdf/daily-spark/2026/jul/30/Whitepaper-Impact%20of%20AI%20on%20U.S.%20Labor%20Market-2026-R2%201.pdf",
+      "publisher": "Apollo Global Management",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-30",
+      "excerpt": "Workers in the bottom quartile of the wage distribution had their real wage growth decline by around 10.7% relative to low-exposure occupations, compared to 5.4% in the second quartile and 4.0% in the third quartile. The top quartile showed no statistically significant wage effect. Wage-quartile cut, not a tenure cut, so not directly comparable to entry-level (0-2 years experience) estimates."
     }
   ]
 }
