@@ -1,0 +1,16 @@
+{
+  "id": "factset-earnings-q1-final-2026",
+  "abstract": "FactSet Earnings Insight report by John Butters, published June 12, 2026, giving the final full-season count of S&P 500 earnings calls citing the term \"AI\" for the Q1 2026 reporting period (calls conducted March 15 through June 11, 2026). The term was cited on 337 calls, representing 68% of the 498 calls conducted — the highest number in over 10 years. This supersedes FactSet's May 8, 2026 in-season update, which reported approximately 65% when only 89% of the index had reported.",
+  "keyFindings": [
+    "\"AI\" was cited on 337 S&P 500 earnings calls during the Q1 2026 reporting period — the highest count in over 10 years",
+    "That is 68% (337 out of 498) of all S&P 500 earnings calls conducted in the period",
+    "Well above the 5-year average of 164 calls and the 10-year average of 103 calls",
+    "The prior record was Q4 2025 at 334 calls (331 of 485 companies, 68%)",
+    "On finals, Q4 2025 to Q1 2026 is essentially flat — the apparent 68→65 sequential decline seen in the May interim was an artifact of comparing an interim against a final"
+  ],
+  "methodology": "FactSet searches S&P 500 earnings call transcripts for the term \"AI\" and counts the number of calls on which it appears at least once, then expresses that as a share of all S&P 500 calls conducted within the reporting period. The Q1 2026 period runs March 15 through June 11, 2026. FactSet publishes interim counts during the reporting season and a definitive count once effectively all companies have reported; only the latter is a final.",
+  "qualifiers": "Keyword-frequency measure — a single passing mention counts the same as a substantive discussion of AI strategy, and the measure cannot distinguish AI as a product line from AI as an internal workforce or efficiency initiative. The denominator varies by quarter (498 calls in Q1 2026 vs 485 in Q4 2025) because not every S&P 500 constituent holds a call within the window. Interim in-season readings are not comparable to finals and should not be plotted alongside them.",
+  "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-2",
+  "publisher": "FactSet",
+  "datePublished": "2026-06-12"
+}

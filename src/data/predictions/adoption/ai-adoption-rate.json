@@ -5,10 +5,10 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 17.9,
+  "currentValue": 21.8,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
-  "disclaimer": "Adoption estimates diverge by an order of magnitude depending on how adoption is identified, and the differences are definitional rather than a matter of one measure being wrong. BTOS asks firms directly whether they used AI in the past two weeks (17.9%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is plotted; the others appear as overlays. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Adoption estimates diverge by an order of magnitude depending on how adoption is identified, and the differences are definitional rather than a matter of one measure being wrong. BTOS asks firms directly whether they used AI in the past two weeks (21.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is plotted; the others appear as overlays. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2023-08-15",
@@ -59,7 +59,7 @@
       "dataType": "observed"
     },
     {
-      "date": "2025-12-04",
+      "date": "2025-11-16",
       "value": 17.3,
       "confidenceLow": 16,
       "confidenceHigh": 22,
@@ -91,7 +91,7 @@
       "dataType": "observed"
     },
     {
-      "date": "2026-02-26",
+      "date": "2026-02-08",
       "value": 17.5,
       "confidenceLow": 16,
       "confidenceHigh": 22,
@@ -103,7 +103,18 @@
       "dataType": "observed"
     },
     {
-      "date": "2026-05-03",
+      "date": "2026-02-08",
+      "value": 17.9,
+      "sourceIds": [
+        "census-btos-ai-supplement-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey",
+      "sampleSize": 117000
+    },
+    {
+      "date": "2026-04-19",
       "value": 19.8,
       "sourceIds": [
         "census-btos-ai-may-2026"
@@ -114,15 +125,34 @@
       "sampleSize": 1200000
     },
     {
-      "date": "2026-07-02",
-      "value": 17.9,
+      "date": "2026-06-28",
+      "value": 21.7,
       "sourceIds": [
-        "census-btos-ai-supplement-2026"
+        "census-btos-ai-biweekly-aug-2026"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
-      "metricType": "survey",
-      "sampleSize": 117000
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-07-12",
+      "value": 21.5,
+      "sourceIds": [
+        "census-btos-ai-biweekly-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-07-26",
+      "value": 21.8,
+      "sourceIds": [
+        "census-btos-ai-biweekly-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -1471,6 +1501,15 @@
       "evidenceTier": 1,
       "datePublished": "2026-05-26",
       "excerpt": "US Census Bureau analysis of BTOS data collected December 14, 2025 to May 3, 2026. Documents a break in the AI-use question: “Originally framed around AI use ‘in producing goods or services,’ rather than to carry out simple tasks like drafting emails, the Census Bureau revised the wording last November to ask businesses whether they were using AI ‘in any business function.’” On November 17, 2025 BTOS began its second AI supplement and revised the core AI use questions. Over the period “overall AI usage hovered between 17% and 20% — and that between 20% and 23% of businesses expected to be using it in the next six months.” The national rate was 19.8% as of May 3, 2026, against 39.7% in Information and 33.9% in Finance and Insurance. Adoption rises with firm size: 37% of firms with at least 250 employees, 32% of firms with 100 to 249 employees, and under 20% of firms with four or fewer employees."
+    },
+    {
+      "id": "census-btos-ai-biweekly-aug-2026",
+      "title": "Business Trends and Outlook Survey — Biweekly AI Use (cycles 202614–202616)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-13",
+      "excerpt": "BTOS biweekly question 7: \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" Share answering Yes: 21.7% for reference period June 15–28, 2026 (SE 0.31%); 21.5% for June 29–July 12, 2026 (SE 0.42%); 21.8% for July 13–26, 2026 (SE 0.33%). Values dated to reference-period end, not release date."
     }
   ]
 }
