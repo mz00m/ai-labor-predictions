@@ -5,7 +5,7 @@
   "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
   "category": "adoption",
   "unit": "% of S&P 500",
-  "currentValue": 65,
+  "currentValue": 68,
   "aggregationMethod": "latest",
   "timeHorizon": "Latest quarter",
   "history": [
@@ -155,11 +155,11 @@
     },
     {
       "date": "2026-04-15",
-      "value": 65,
+      "value": 68,
       "sourceIds": [
-        "factset-earnings-q1-2026"
+        "factset-earnings-q1-final-2026"
       ],
-      "evidenceTier": 2,
+      "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "corporate"
     }
@@ -379,6 +379,15 @@
       "datePublished": "2026-05-08",
       "excerpt": "FactSet S&P 500 Q1 2026 earnings-season update (published May 8, 2026 with 89% of S&P 500 having reported actual Q1 results). AI citations: 'about 65% of S&P 500 earnings calls have cited the term AI so far,' slightly below the prior quarter's 68% (which was the highest percentage going back at least five years). AI remains substantially elevated vs historical levels. Overall Q1 2026 earnings performance: 84% of reporting companies beat EPS estimates; aggregate earnings 18.2% above estimates. Co-trending terms: 'Middle East' and 'oil' both at 5-year highs alongside AI.",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "factset-earnings-q1-final-2026",
+      "title": "Highest Number of S&P 500 Earnings Calls Citing \u201cAI\u201d Over the Past 10 Years",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-2",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-12",
+      "excerpt": "Final full-season count for the Q1 2026 reporting period (calls conducted March 15 through June 11, 2026), by John Butters. \"Overall, the term 'AI' was cited on 337 earnings calls conducted by S&P 500 companies during this period.\" \"This number also reflects 68% (337 out of 498) of the earnings calls conducted by S&P 500 companies during this period.\" \"This number is well above the 5-year average of 164 and the 10-year average of 103.\" Supersedes the May 8 in-season update (65%, taken at 89% reported), which was an interim rather than a final."
     }
   ]
 }

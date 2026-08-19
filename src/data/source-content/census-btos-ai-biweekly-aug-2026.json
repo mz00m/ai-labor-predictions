@@ -1,0 +1,17 @@
+{
+  "id": "census-btos-ai-biweekly-aug-2026",
+  "abstract": "US Census Bureau Business Trends and Outlook Survey (BTOS) biweekly AI-use estimates for survey cycles 202614, 202615 and 202616, published July 16, July 30 and August 13, 2026. These are the routine biweekly readings of the core AI question, distinct from the biannual AI Supplement. National share of businesses answering Yes: 21.7% (reference period June 15–28, 2026), 21.5% (June 29–July 12, 2026) and 21.8% (July 13–26, 2026). The biweekly series has risen from 19.1% in March 2026 to 21.8% in the latest cycle.",
+  "keyFindings": [
+    "21.7% of US businesses used AI in the two weeks ending June 28, 2026 (SE 0.31%)",
+    "21.5% for the two weeks ending July 12, 2026 (SE 0.42%)",
+    "21.8% for the two weeks ending July 26, 2026 (SE 0.33%) — the highest reading in the biweekly series",
+    "Expected AI use in the next six months reached 25.9% in cycle 202616, up from 23.7% in cycle 202613",
+    "Information (NAICS 51) 45.0% and Finance & Insurance (NAICS 52) 36.8% in cycle 202616 — the two highest sectors",
+    "The AI questions run in every biweekly cycle; press releases for these waves do not mention AI, which previously caused waves to be missed"
+  ],
+  "methodology": "BTOS is a biweekly panel survey of approximately 1.2 million US businesses. Question 7 asks: \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" Question 24 asks the equivalent forward-looking six-month question. Estimates are weighted to the sampled business population and published at national, state, sector and employer-size levels. Each cycle has a two-week reference period that ends roughly six to seven weeks before the publication date; values here are dated to reference-period end so the series reflects when the behavior occurred rather than when it was released.",
+  "qualifiers": "Self-reported firm-level use with no intensity threshold — any use of AI in any business function counts, so this measures breadth rather than depth of adoption. Not comparable to the biannual AI Supplement instrument, which asks a six-month lookback in addition to the two-week question over an 11-week reference window. Census revised the question wording in November 2025 from AI use \"in producing goods or services\" to AI use \"in any business function\"; that break is upstream of all cycles reported here. Standard errors are 0.3–0.4 percentage points, so the June-to-July movement is within noise.",
+  "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+  "publisher": "US Census Bureau",
+  "datePublished": "2026-08-13"
+}

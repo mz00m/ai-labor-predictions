@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-17",
-  "totalSources": 677,
-  "verifiedCount": 667,
+  "lastUpdated": "2026-08-19",
+  "totalSources": 679,
+  "verifiedCount": 669,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9666,6 +9666,36 @@
         "overall-us-displacement",
         "entry-level-wage-impact"
       ]
+    },
+    "census-btos-ai-biweekly-aug-2026": {
+      "id": "census-btos-ai-biweekly-aug-2026",
+      "title": "Business Trends and Outlook Survey — Biweekly AI Use (cycles 202614–202616)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-13",
+      "excerpt": "BTOS biweekly question 7: \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" Share answering Yes: 21.7% for reference period June 15–28, 2026 (SE 0.31%); 21.5% for June 29–July 12, 2026 (SE 0.42%); 21.8% for July 13–26, 2026 (SE 0.33%). Expected use in the next six months reached 25.9% in the latest cycle. Values dated to reference-period end, not release date.",
+      "dateAdded": "2026-08-19",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "factset-earnings-q1-final-2026": {
+      "id": "factset-earnings-q1-final-2026",
+      "title": "Highest Number of S&P 500 Earnings Calls Citing “AI” Over the Past 10 Years",
+      "url": "https://insight.factset.com/highest-number-of-sp-500-earnings-calls-citing-ai-over-the-past-10-years-2",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-12",
+      "excerpt": "Final full-season count for the Q1 2026 reporting period (calls conducted March 15 through June 11, 2026), by John Butters. \"Overall, the term 'AI' was cited on 337 earnings calls conducted by S&P 500 companies during this period.\" \"This number also reflects 68% (337 out of 498) of the earnings calls conducted by S&P 500 companies during this period.\" \"This number is well above the 5-year average of 164 and the 10-year average of 103.\" Supersedes the May 8 in-season update (65%, taken at 89% reported), which was an interim rather than a final.",
+      "dateAdded": "2026-08-19",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true,
+      "synthetic": false
     }
   }
 }

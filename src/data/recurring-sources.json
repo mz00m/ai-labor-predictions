@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-08-13",
-  "lastSweep": "2026-07-22",
+  "asOf": "2026-08-19",
+  "lastSweep": "2026-08-19",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -94,7 +94,9 @@
         "date": "2026-04-03",
         "value": "Broader synthesis of BTOS + ADP + SCE"
       },
-      "nextExpected": "~July-August 2026"
+      "nextExpected": "~July-August 2026",
+      "lastSweep": "2026-08-19",
+      "sweepNote": "Swept 2026-08-19: no new edition. The Apr 3, 2026 note remains latest; the Jul 17 buildout note (already ingested) is its de facto successor."
     },
     {
       "id": "census-btos-ai",
@@ -112,11 +114,12 @@
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
       "lastIngested": {
-        "sourceId": "census-btos-ai-supplement-2026",
-        "date": "2026-07-02",
-        "value": "17.9% national AI use (Q1 2-wk); GenAI at work 20.8%; task substitution 10.1%"
+        "sourceId": "census-btos-ai-biweekly-aug-2026",
+        "date": "2026-08-13",
+        "value": "21.8% national AI use, two weeks ending Jul 26 2026 (biweekly cycle 202616)"
       },
-      "nextExpected": "Biweekly waves continue, but the AI questions are not carried in every release: the July 30, 2026 wave contains no AI content. Core AI-use question was revised Nov 17, 2025 from “producing goods or services” to “any business function” — a structural break in the plotted series, documented in census-btos-ai-question-change-2026. Next AI supplement date not announced; check the data tables rather than the press releases, which omit AI."
+      "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
+      "lastSweep": "2026-08-19"
     },
     {
       "id": "factset-earnings-ai-mentions",
@@ -134,11 +137,12 @@
       "whatItMeasures": "The percentage of S&P 500 companies whose earnings call transcripts include the term 'AI.' Reported quarterly with an interim update after ~50% of companies have reported.",
       "whyItMatters": "The clearest cadence-consistent read of corporate AI focus. Q4 2025 hit an all-time high (68%); Q1 2026's slight dip to 65% was the first sequential decline in the ChatGPT era.",
       "lastIngested": {
-        "sourceId": "factset-earnings-q1-2026",
-        "date": "2026-04-15",
-        "value": "65% of S&P 500 calls cited AI (down from 68% Q4 2025)"
+        "sourceId": "factset-earnings-q1-final-2026",
+        "date": "2026-06-12",
+        "value": "68% (337 of 498) of S&P 500 calls cited AI, Q1 2026 final — supersedes the 65% interim"
       },
-      "nextExpected": "~August 2026 (Q2 2026 update)"
+      "nextExpected": "~mid-September 2026 for the Q2 2026 final. FactSet publishes interim counts during the reporting season and a definitive full-season count once effectively all companies have reported — only ingest the final, and never plot an interim next to finals.",
+      "lastSweep": "2026-08-19"
     },
     {
       "id": "bick-blandin-deming-rps",
@@ -183,7 +187,9 @@
         "date": "2026-06-15",
         "value": "AI 'probably not (yet)' the reason for labor market weakening"
       },
-      "nextExpected": "~August 2026 (with July CPS)"
+      "nextExpected": "~August 2026 (with July CPS)",
+      "lastSweep": "2026-08-19",
+      "sweepNote": "Swept 2026-08-19: no new data. The Jul 16, 2026 tracker update replaced the prose with an embedded interactive; the underlying SDID analysis (May 7, already ingested as budgetlab-ai-no-effects-2026) still runs only through Q1 2026."
     },
     {
       "id": "stanford-del-aiei",
@@ -279,7 +285,9 @@
         "date": "2026-04-14",
         "value": "Only 15.9% of employers offer AI training; 37% of workplaces don't offer AI tools"
       },
-      "nextExpected": "~August-September 2026"
+      "nextExpected": "~August-September 2026",
+      "lastSweep": "2026-08-19",
+      "sweepNote": "Swept 2026-08-19: no new edition. The Apr 14, 2026 module (fielded in the Nov 2025 SCE) is still the only AI supplement run to date."
     },
     {
       "id": "gallup-workplace-ai",
@@ -371,7 +379,9 @@
         "date": "2026-04-20",
         "value": "Software developers -15.1%; CS/sales -11%; K-12 teachers +1.3% by 2030"
       },
-      "nextExpected": "Continuous; check quarterly for shifts in community medians"
+      "nextExpected": "Continuous; check quarterly for shifts in community medians",
+      "lastSweep": "2026-08-19",
+      "sweepNote": "Swept 2026-08-19: BLOCKED, not verified. metaculus.com returns HTTP 403 to all non-browser clients including with a browser user agent; labor-hub-tools.metaculus.com likewise. Needs a headless browser to check."
     },
     {
       "id": "census-bfs",
