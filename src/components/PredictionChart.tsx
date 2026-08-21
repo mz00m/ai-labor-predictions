@@ -742,7 +742,7 @@ export default function PredictionChart({
             Directional research signals
           </p>
           <p className="text-xs text-[var(--muted)] opacity-70 mb-2 leading-relaxed">
-            Studies with a clear directional finding but no single plottable value — e.g. &ldquo;entry-level hiring fell&rdquo; or &ldquo;no measurable displacement detected.&rdquo; Stacked blocks show net evidence per month; positive and negative signals cancel. Hover any column to see the studies.
+            Studies that point in a clear direction but give no single number to chart — e.g. &ldquo;entry-level hiring fell&rdquo; or &ldquo;no measurable displacement detected.&rdquo; They are not counted in the average above. Stacked blocks show net evidence per month; positive and negative signals cancel. Hover any column to see the studies.
           </p>
           <SignalStrip
             overlays={allFilteredOverlays}

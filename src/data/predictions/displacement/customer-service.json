@@ -2,7 +2,7 @@
   "id": "displacement-cs",
   "slug": "customer-service-automation",
   "title": "Customer Service Automation by 2028",
-  "description": "Percentage of customer service interactions fully handled by AI without human intervention. Only data points where sources directly state an automation rate are plotted.",
+  "description": "Percentage of customer service interactions fully handled by AI without human intervention. The chart shows only estimates where a source states an automation rate directly.",
   "category": "displacement",
   "unit": "% of interactions automated",
   "currentValue": 43.5,

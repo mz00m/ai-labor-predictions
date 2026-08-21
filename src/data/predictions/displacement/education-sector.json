@@ -8,7 +8,7 @@
   "currentValue": 9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
-  "disclaimer": "Insufficient evidence for confident projection. Only 4 data points, two of which are corporate proxies (Chegg, Pearson) rather than sector-wide measurements. BLS projects just 3% displacement in education support roles, and SHRM found education has the lowest automation rate of any sector at 7.3%. Treat this estimate with more caution than others on this site.",
+  "disclaimer": "Insufficient evidence for confident projection. Only 4 estimates, two of which come from single companies (Chegg, Pearson) rather than sector-wide measurements. BLS projects just 3% displacement in education support roles, and SHRM found education has the lowest automation rate of any sector at 7.3%. Treat this estimate with more caution than others on this site.",
   "history": [
     {
       "date": "2024-07-01",
