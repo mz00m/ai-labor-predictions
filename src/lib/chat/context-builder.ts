@@ -7,7 +7,7 @@
  */
 
 import { getAllPredictions, getLastUpdated } from "../data-loader";
-import { Prediction, EVIDENCE_TIER_LABELS } from "../types";
+import { Prediction, Source, EVIDENCE_TIER_LABELS } from "../types";
 import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "../constants";
 import { getSourceContents } from "./source-content";
 import type { SourceContentEntry } from "./source-content";
@@ -371,18 +371,52 @@ function selectRelevantPageContent(query: string): string[] {
   return sections;
 }
 
-/** Collect all source IDs referenced by a set of predictions */
+// Context budget. The source content store holds ~1.4M characters of abstracts
+// and key findings. Enriching every source of every selected prediction put a
+// single question over the model's 200K-token limit — overall-us-displacement
+// alone carries 162 sources (~245K characters). These caps keep the prompt
+// bounded regardless of how many sources a graph accumulates.
+const MAX_SOURCES_PER_PREDICTION = 12;
+const MAX_ENRICHED_SOURCES = 6;
+const MAX_ABSTRACT_CHARS = 400;
+const MAX_FINDING_CHARS = 200;
+const MAX_KEY_FINDINGS = 3;
+const MAX_SYSTEM_PROMPT_CHARS = 120_000;
+
+function truncate(text: string, max: number): string {
+  return text.length <= max ? text : `${text.slice(0, max).trimEnd()}…`;
+}
+
+/**
+ * Sources cited by the data points and overlays actually shown, then the most
+ * recent, capped. Keeps the citable set aligned with the numbers in context
+ * rather than handing the model a graph's entire accumulated bibliography.
+ */
+function selectSourcesForPrediction(p: Prediction): Source[] {
+  const cited = new Set<string>();
+  for (const dp of p.history.slice(-8)) {
+    for (const sid of dp.sourceIds) cited.add(sid);
+  }
+  for (const o of (p.overlays ?? []).slice(-5)) {
+    for (const sid of o.sourceIds) cited.add(sid);
+  }
+
+  const byRecency = [...p.sources].sort((a, b) =>
+    (b.datePublished ?? "").localeCompare(a.datePublished ?? "")
+  );
+
+  return [
+    ...byRecency.filter((s) => cited.has(s.id)),
+    ...byRecency.filter((s) => !cited.has(s.id)),
+  ].slice(0, MAX_SOURCES_PER_PREDICTION);
+}
+
+/** Collect the source IDs we will actually render, so we only read those files */
 function collectSourceIds(predictions: Prediction[]): string[] {
   const ids = new Set<string>();
   for (const p of predictions) {
-    for (const s of p.sources) ids.add(s.id);
-    for (const h of p.history) {
-      for (const sid of h.sourceIds) ids.add(sid);
-    }
-    if (p.overlays) {
-      for (const o of p.overlays) {
-        for (const sid of o.sourceIds) ids.add(sid);
-      }
+    for (const s of selectSourcesForPrediction(p).slice(0, MAX_ENRICHED_SOURCES)) {
+      ids.add(s.id);
     }
   }
   return Array.from(ids);
@@ -432,34 +466,41 @@ function formatPrediction(
     }
   }
 
-  // Sources (all, for citation) - enriched with content store data
-  if (p.sources.length > 0) {
-    lines.push("\nSources:");
-    for (const s of p.sources) {
-      const content = contentMap.get(s.id);
-      const excerpt = s.excerpt ? `: "${s.excerpt}"` : "";
+  // Sources for citation. The first few carry rich content from the store;
+  // the rest are one-liners so the model can still name and link them.
+  const selectedSources = selectSourcesForPrediction(p);
+  if (selectedSources.length > 0) {
+    const omitted = p.sources.length - selectedSources.length;
+    lines.push(
+      omitted > 0
+        ? `\nSources (${selectedSources.length} most relevant of ${p.sources.length}):`
+        : "\nSources:"
+    );
+    selectedSources.forEach((s, i) => {
+      const excerpt = s.excerpt ? `: "${truncate(s.excerpt, MAX_FINDING_CHARS)}"` : "";
       lines.push(
         `  - [${s.id}] ${s.title} (${s.publisher}, ${s.datePublished}, Tier ${s.evidenceTier})${excerpt}`
       );
-      // Append rich content if available from content store
-      if (content) {
-        if (content.abstract) {
-          lines.push(`    Abstract: ${content.abstract}`);
-        }
-        if (content.keyFindings.length > 0) {
-          lines.push(`    Key findings:`);
-          for (const f of content.keyFindings) {
-            lines.push(`      * ${f}`);
-          }
-        }
-        if (content.methodology && content.methodology !== "Not specified") {
-          lines.push(`    Methodology: ${content.methodology}`);
-        }
-        if (content.qualifiers && content.qualifiers !== "None stated") {
-          lines.push(`    Qualifiers: ${content.qualifiers}`);
+
+      const content = i < MAX_ENRICHED_SOURCES ? contentMap.get(s.id) : undefined;
+      if (!content) return;
+
+      if (content.abstract) {
+        lines.push(`    Abstract: ${truncate(content.abstract, MAX_ABSTRACT_CHARS)}`);
+      }
+      if (content.keyFindings.length > 0) {
+        lines.push(`    Key findings:`);
+        for (const f of content.keyFindings.slice(0, MAX_KEY_FINDINGS)) {
+          lines.push(`      * ${truncate(f, MAX_FINDING_CHARS)}`);
         }
       }
-    }
+      if (content.methodology && content.methodology !== "Not specified") {
+        lines.push(`    Methodology: ${truncate(content.methodology, MAX_FINDING_CHARS)}`);
+      }
+      if (content.qualifiers && content.qualifiers !== "None stated") {
+        lines.push(`    Qualifiers: ${truncate(content.qualifiers, MAX_FINDING_CHARS)}`);
+      }
+    });
   }
 
   return lines.join("\n");
@@ -600,17 +641,25 @@ Data caveats (apply lightly, don't lecture):
   const allSourceIds = collectSourceIds(relevant);
   const contentMap = getSourceContents(allSourceIds);
 
-  // Include detailed data for relevant predictions
+  // Include detailed data for relevant predictions, most relevant first, and
+  // stop once the budget is spent so a graph with many sources can never push
+  // the prompt past the model's context limit.
+  const included: string[] = [];
   if (relevant.length > 0) {
     sections.push("# Detailed Data for Relevant Predictions\n");
+    let used = sections.reduce((n, s) => n + s.length, 0);
     for (const p of relevant) {
-      sections.push(formatPrediction(p, contentMap));
+      const block = formatPrediction(p, contentMap);
+      if (included.length > 0 && used + block.length > MAX_SYSTEM_PROMPT_CHARS) break;
+      sections.push(block);
       sections.push("");
+      used += block.length;
+      included.push(p.slug);
     }
   }
 
   return {
     systemPrompt: sections.join("\n\n"),
-    relevantPredictionSlugs: relevant.map((p) => p.slug),
+    relevantPredictionSlugs: included,
   };
 }
