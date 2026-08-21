@@ -2,7 +2,7 @@
   "id": "displacement-white-collar",
   "slug": "white-collar-professional-displacement",
   "title": "White-Collar Professional Displacement by 2030",
-  "description": "Estimated share of white-collar professional roles facing displacement from AI (higher = more displacement). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show 5-13% displacement across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark report null results. Data points span both age-specific and all-worker measurements.",
+  "description": "Estimated share of white-collar professional roles facing displacement from AI (higher = more displacement). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show 5-13% displacement across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark find no effect. Estimates span both age-specific and all-worker measurements.",
   "category": "displacement",
   "unit": "% of roles displaced",
   "currentValue": 6.4,
@@ -1056,6 +1056,15 @@
       ],
       "evidenceTier": 2,
       "label": "NY Fed: firms expect deeper hiring-plan cuts ahead, esp. college-educated"
+    },
+    {
+      "date": "2026-08-07",
+      "direction": "down",
+      "sourceIds": [
+        "bls-employment-situation-jul-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Jul 2026: professional/business services +18K, information +11K MoM"
     }
   ],
   "sources": [
@@ -1958,6 +1967,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-05",
       "excerpt": "firms do anticipate more reductions in hiring plans going forward\u2014especially for college-educated workers"
+    },
+    {
+      "id": "bls-employment-situation-jul-2026",
+      "title": "BLS Employment Situation: July 2026 (series CES6000000001, CES5000000001)",
+      "url": "https://data.bls.gov/timeseries/CES6000000001",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-07",
+      "excerpt": "BLS Employment Situation, July 2026, seasonally adjusted, retrieved from the BLS Public API v2 on August 20, 2026. Professional and business services employment was 22,518,000 in July, up 18,000 from June (22,500,000). Information employment was 2,780,000, up 11,000 from June (2,769,000). Total nonfarm payroll employment fell 23,000 over the same month, so the two white-collar sectors gained while the aggregate declined.",
+      "dateAdded": "2026-08-20"
     }
   ]
 }

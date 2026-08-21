@@ -162,16 +162,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2026-02-11",
-      "value": 50,
-      "sourceIds": [
-        "gallup-workplace-ai-feb-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
       "date": "2026-05-01",
       "value": 45.2,
       "sourceIds": [
@@ -427,6 +417,15 @@
       "label": "Gallup: Only 30% of workers say manager supports AI use; 27% in AI-adopting orgs report disruptive changes"
     },
     {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "gallup-workplace-ai-feb-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup Q1 2026: 50% of workers use AI at least a few times a year"
+    },
+    {
       "date": "2026-04-14",
       "direction": "up",
       "sourceIds": [
@@ -533,6 +532,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic Cadences: ~50% of users say AI already handles 50%+ of their tasks"
+    },
+    {
+      "date": "2026-07-20",
+      "direction": "up",
+      "sourceIds": [
+        "gallup-org-ai-adoption-jul-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup Q2 2026: 52% of workers use AI in their role; 30% weekly+, 15% daily"
     },
     {
       "date": "2026-07-23",
@@ -1000,6 +1008,16 @@
       "datePublished": "2026-07-24",
       "excerpt": "FRED has incorporated '137 data series about the adoption of generative artificial intelligence (AI) technology in the United States, reported by Alexander Bick, Adam Blandin, and David Deming' (FRED Announcements, Jul 24, 2026). The RPS GenAI module, fielded quarterly since August 2024, now publishes as official FRED series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest FRED readings: work adoption 43.4% and overall adoption 57.9% of working-age adults in Q1 2026 (RPSGENAIUSAGESHAREWORK, RPSGENAIUSAGESHAREALL); GenAI-assisted work hours 6.3% in Q2 2026, up from 4.1% in Q4 2024 (RPSGENAIASSISTWRKHRSALL); reported time savings 2.2% of work hours in Q1 2026 (RPSGENAITSALL).",
       "dateAdded": "2026-07-25"
+    },
+    {
+      "id": "gallup-org-ai-adoption-jul-2026",
+      "title": "Organizational AI Adoption Jumps Six Points",
+      "url": "https://www.gallup.com/workplace/712736/organizational-adoption-jumps-six-points.aspx",
+      "publisher": "Gallup (Andy Kemp)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-20",
+      "excerpt": "\"More than half of U.S. workers (52%) now use AI in their role, with 30% using it frequently (a few times a week or more). Fifteen percent use it daily.\" 47% of employees say their organization has integrated AI tools, up from 41%. Fielded May 6-20, 2026 among 22,573 employed U.S. adults, margin of error +/-0.9 percentage points. The 52% figure counts anyone using AI at least a few times a year, a looser threshold than the quarterly survey charted here, so it appears below the chart as a directional signal rather than as a plotted point.",
+      "dateAdded": "2026-08-20"
     }
   ]
 }

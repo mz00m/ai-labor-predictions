@@ -1,0 +1,15 @@
+{
+  "id": "metaculus-labor-hub-aug-2026",
+  "abstract": "The August 2026 vintage of the Metaculus Labor Automation Forecasting Hub, a continuously updated set of community forecasts on AI's effect on the US workforce, with commentary last updated August 10, 2026. The hub's headline forecast is that AI-driven displacement will leave overall US employment below its 2025 level across the forecast horizon, in contrast to government baselines that project growth. This vintage revises the April 2026 readings in both directions: the 2030 decline is now shallower and the 2035 decline deeper, implying the community has pushed its expected displacement later rather than revising its total magnitude down.",
+  "keyFindings": [
+    "\"Overall employment is projected to fall 1.3% by 2030 and fall 3.7% by 2035 relative to 2025 due to AI-driven displacement.\"",
+    "\"This sharply contrasts with government baselines projecting +3.1% growth over the decade when accounting for aging-adjusted population trends.\"",
+    "Community forecast timeline readings: 2027 +0.365%, 2030 -1.28%, 2035 -3.73%.",
+    "The April 2026 vintage of the same forecast gave -1.9% by 2030 and -3.4% by 2035; the 2030 figure has moved 0.6 points shallower while 2035 moved 0.3 points deeper.",
+    "The forecast remains positive through 2027 (+0.365%), placing the crossover into net employment decline between 2027 and 2030.",
+    "Against the government baseline of +3.1%, the community's 2035 forecast implies a gap of roughly 6.8 percentage points attributable to AI."
+  ],
+  "methodology": "Aggregated community median forecasts from the Metaculus forecasting platform, displayed on the Labor Automation Forecasting Hub. Forecasts are continuously updated as participants revise, so readings are vintage-dated rather than tied to a discrete publication event; this record is dated to the hub's stated commentary update of August 10, 2026 and was read directly from the live hub. Values are percent change in US employment relative to a 2025 baseline. The government comparison baseline is described by Metaculus as aging-adjusted population trend projections.",
+  "qualifiers": "These are aggregated forecaster opinions, not measurements, and carry no empirical identification of an AI effect. They are tier 2 and represent expectations rather than observation, which is the appropriate reading when comparing them against the observed data points on the same graph. The forecasts are continuously revised, so any single reading is a snapshot; the April-to-August movement documented here is itself evidence of how much the community view drifts over four months. The per-occupation forecasts also shown on the hub (software developers, K-12 teachers, designers and others) were captured in this session but are deliberately not recorded, because the horizon selector state could not be confirmed before the site blocked further access, and the occupation values are only interpretable against a specific horizon.",
+  "fetchedAt": "2026-08-20"
+}

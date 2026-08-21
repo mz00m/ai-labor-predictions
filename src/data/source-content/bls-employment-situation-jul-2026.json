@@ -1,0 +1,16 @@
+{
+  "id": "bls-employment-situation-jul-2026",
+  "abstract": "The July 2026 edition of the BLS Employment Situation, the monthly benchmark for US payroll employment and unemployment. July marks the first outright monthly decline in total nonfarm payrolls in this series' recent run: employment fell 23,000 on the month, and June's initially reported +57,000 gain was revised down to +20,000. The unemployment rate nonetheless ticked down to 4.1%. Beneath the aggregate, the sector composition runs against a simple AI-displacement reading: the two most AI-exposed sectors tracked here, professional and business services and information, both added jobs, while the entire decline and more came from leisure and hospitality.",
+  "keyFindings": [
+    "Total nonfarm payroll employment was 158,858,000 in July 2026, seasonally adjusted, down 23,000 from June (158,881,000).",
+    "June's month-over-month gain was revised to +20,000, from the +57,000 initially reported in the July 2 release.",
+    "The unemployment rate was 4.1% in July, down from 4.2% in June and 4.3% in May.",
+    "Professional and business services employment rose 18,000 to 22,518,000.",
+    "Information employment rose 11,000 to 2,780,000.",
+    "Health care and social assistance employment rose 22,600 to 23,912,200.",
+    "Leisure and hospitality employment fell 40,000 to 16,931,000, exceeding the entire net decline in total nonfarm payrolls."
+  ],
+  "methodology": "Current Employment Statistics (CES) establishment survey for payroll counts and Current Population Survey (CPS) household survey for the unemployment rate, both seasonally adjusted. Figures retrieved from the BLS Public API v2 on August 20, 2026 for series CES0000000001 (total nonfarm), LNS14000000 (unemployment rate), CES6000000001 (professional and business services), CES5000000001 (information), CES6562000001 (health care and social assistance) and CES7000000001 (leisure and hospitality). Month-over-month changes are computed as level differences between consecutive seasonally adjusted monthly levels, which is how BLS reports the headline job change.",
+  "qualifiers": "This is an economy-wide employment count with no AI attribution of any kind, which is why every BLS Employment Situation release in this corpus is carried as an overlay rather than a plotted data point. Nothing in the release identifies a cause for the July decline. Monthly payroll changes of this magnitude are within normal revision range: June alone moved 37,000 between its first and second estimates, so the July figure should be expected to move as well. The sector detail is the more informative part for this site's purposes, and it cuts against displacement: the AI-exposed sectors grew while leisure and hospitality, among the least AI-exposed, drove the aggregate down. Reading a 23,000 decline in a 158.9 million payroll as an AI signal would be unsupportable.",
+  "fetchedAt": "2026-08-20"
+}

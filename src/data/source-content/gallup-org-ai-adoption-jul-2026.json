@@ -1,0 +1,15 @@
+{
+  "id": "gallup-org-ai-adoption-jul-2026",
+  "abstract": "Gallup's quarterly workplace AI update, published July 20, 2026 by Andy Kemp under the title \"Organizational AI Adoption Jumps Six Points.\" Fielded May 6-20, 2026 among 22,573 employed US adults, it reports that a majority of US workers now use AI in their role for the first time in the series, and that employee-reported organizational integration of AI tools jumped six percentage points in a single quarter. The organizational figure is the headline: it is the largest quarter-over-quarter move Gallup has recorded on that item, and it outpaced the increase in individual worker use.",
+  "keyFindings": [
+    "\"More than half of U.S. workers (52%) now use AI in their role, with 30% using it frequently (a few times a week or more). Fifteen percent use it daily.\"",
+    "47% of employees say their organization has integrated AI tools, up from 41% in the prior quarter, a six-point jump.",
+    "The 52% figure continues the trend from 50% in Q1 2026 on the same 'at least a few times a year' threshold.",
+    "Frequent use (a few times a week or more) rose to 30%, from 28% reported in the April 2026 edition.",
+    "Daily use rose to 15%, from 13% in the April 2026 edition and 10% in 2024.",
+    "Organizational integration (47%) rose faster than individual frequent use (30%), narrowing the gap between employer deployment and worker uptake that earlier editions of this series highlighted."
+  ],
+  "methodology": "Gallup panel survey of 22,573 employed US adults, fielded May 6-20, 2026, with a reported margin of sampling error of +/-0.9 percentage points. Worker AI use is self-reported at graded frequency thresholds: at least a few times a year (52%), a few times a week or more (30%), and daily (15%). Organizational integration is measured by asking employees whether their organization has integrated AI tools, making it an employee report about the employer rather than a direct firm-level survey.",
+  "qualifiers": "The 52% headline uses an 'at least a few times a year' threshold, which is materially looser than the quarterly Real-Time Population Survey instrument plotted on the generative AI adoption graph. Plotting the two together would create an apparent jump that is an artefact of the threshold rather than a change in behaviour, so both this reading and the earlier Gallup 50% reading are carried as directional signals below that chart rather than as plotted points. The 30% 'few times a week or more' figure is the closest comparable to a working-adoption measure and is the one to use for cross-survey comparison. On the AI adoption rate graph, the 47% organizational figure is likewise a directional signal rather than a plotted point, because it is employees reporting on their employer, not firms reporting directly as in Census BTOS. That distinction matters: employee reports of organizational AI integration run roughly twice the BTOS firm-reported rate.",
+  "fetchedAt": "2026-08-20"
+}

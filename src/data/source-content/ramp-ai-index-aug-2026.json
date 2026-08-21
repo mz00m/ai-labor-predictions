@@ -1,0 +1,15 @@
+{
+  "id": "ramp-ai-index-aug-2026",
+  "abstract": "The August 2026 Ramp AI Index, published August 12, 2026 by Ara Kharazian under the title \"Cracks in the AI Thesis.\" Built from corporate card and bill-pay transactions across more than 70,000 US businesses, it tracks the share of firms paying for each major AI vendor and how much they spend per employee. The August edition is notable for its framing: growth in paid AI adoption continued but decelerated, with Anthropic extending its lead over OpenAI in business-customer penetration while median per-employee spend remained modest at under twelve dollars.",
+  "keyFindings": [
+    "43.5% of US businesses paid for Anthropic in August 2026, up 1.1 percentage points month over month.",
+    "39.7% of US businesses paid for OpenAI, up 0.23 percentage points month over month.",
+    "4.0% of US businesses paid for xAI, up 0.94 percentage points month over month, the fastest relative growth of the three.",
+    "The median firm spent $11.95 per employee on AI.",
+    "Anthropic's month-over-month gain (1.1 points) was roughly five times OpenAI's (0.23 points), extending a lead in business-customer penetration.",
+    "The gap between near-universal vendor penetration and low per-employee spend indicates most paying firms are running small pilot deployments rather than organization-wide rollouts."
+  ],
+  "methodology": "Transaction-level analysis of corporate card and bill-pay data from the Ramp customer base, covering more than 70,000 US businesses. Adoption is defined as a business having an active paid subscription to a given AI vendor in the reference month, measured directly from payment records rather than self-report. Per-employee spend is the median across paying firms. Published as a monthly series on the Ramp Economics Lab AI Index at ramp.com/data/ai-index.",
+  "qualifiers": "This measures paid vendor subscriptions, not AI use, which makes it a different construct from the Census BTOS firm self-report plotted on the AI adoption rate graph; it is therefore carried as a directional signal rather than a plotted point. The two diverge sharply in level (43.5% vendor payment versus 21.8% BTOS self-reported use) and the direction of the gap is not obvious a priori: a firm can pay for a subscription almost nobody uses, and a firm can use free tiers or embedded AI features without any line-item payment. The sample is also not representative of US business generally. Ramp's customer base skews toward venture-backed technology and professional services firms that adopt software earlier than the economy as a whole, so levels should be read as an upper bound and month-over-month changes as the more reliable signal. Note that this corpus previously recorded the Ramp sample as roughly 30,000 businesses and the series URL as ramp.com/velocity; both were stale and are corrected here.",
+  "fetchedAt": "2026-08-20"
+}

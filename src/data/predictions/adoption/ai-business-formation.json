@@ -299,6 +299,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census BFS Jun 2026: 531K business applications (+1.1% MoM); 29.7K projected formations (+0.7%)"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "up",
+      "sourceIds": [
+        "census-bfs-jul-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BFS Jul 2026: 579K business applications (+8.1% MoM); 30.0K projected formations (+0.7%)"
     }
   ],
   "sources": [
@@ -507,7 +516,7 @@
       "publisher": "Stripe Atlas",
       "evidenceTier": 2,
       "datePublished": "2025-12-19",
-      "excerpt": "Stripe Atlas 2025 year in review (23,000 companies incorporated in 2025; Atlas is ~1 in 5 Delaware C corps). AI share of formations: '42%' of Atlas C corp founders identified as building AI startups in 2025, up from 33% in 2024; 22% of Atlas LLCs identified as AI companies, up from 5% in January 2023. Among AI-focused startups, 44% are building agents (up from 27% in 2024). Atlas Delaware C corporations grew an average of 41% YoY over the past 6 months. Revenue velocity: 20% land their first paying customer within 30 days of incorporation, more than double the 2020 rate; median first-6-months revenue for the 2025 cohort jumped 39% YoY. Not plotted as a data point: AI-share stats are a share-of-formations construct, not the graph's % increase in formation; platform counts fail the population gate (confounded by Stripe's own market-share growth).",
+      "excerpt": "Stripe Atlas 2025 year in review (23,000 companies incorporated in 2025; Atlas is ~1 in 5 Delaware C corps). AI share of formations: '42%' of Atlas C corp founders identified as building AI startups in 2025, up from 33% in 2024; 22% of Atlas LLCs identified as AI companies, up from 5% in January 2023. Among AI-focused startups, 44% are building agents (up from 27% in 2024). Atlas Delaware C corporations grew an average of 41% YoY over the past 6 months. Revenue velocity: 20% land their first paying customer within 30 days of incorporation, more than double the 2020 rate; median first-6-months revenue for the 2025 cohort jumped 39% YoY. Not charted: these figures measure AI's share of new companies, while this graph tracks the increase in how many companies are formed. Atlas counts also can't stand in for the whole economy, since Stripe's own growing market share would inflate them.",
       "dateAdded": "2026-07-24"
     },
     {
@@ -517,7 +526,7 @@
       "publisher": "Stripe Atlas",
       "evidenceTier": 2,
       "datePublished": "2026-05-01",
-      "excerpt": "Official Stripe Atlas announcement (May 1, 2026; echoed by Patrick Collison: 'Stripe Atlas just hit 100,000 all-time incorporations. Q1 2026 is +130% Y/Y.'). Atlas post: 'Startup formations are at a record high. More companies incorporated on Atlas in Q1 than any quarter ever: up 130% year-over-year. (Delaware incorporations up 38% year-over-year).' The Delaware +38% figure covers all Delaware incorporations, not just Atlas. Not plotted as a data point: Atlas +130% fails the population gate (platform growth confounded by market-share gains, ~25% of Delaware C corps per Stripe's 2025 annual letter); Delaware +38% is a rung-2 construct variant (single-year YoY growth, all industries) vs the graph's cumulative increase since ChatGPT in AI-compatible industries \u2014 kept as overlay per editorial decision 2026-07-24.",
+      "excerpt": "Official Stripe Atlas announcement (May 1, 2026; echoed by Patrick Collison: 'Stripe Atlas just hit 100,000 all-time incorporations. Q1 2026 is +130% Y/Y.'). Atlas post: 'Startup formations are at a record high. More companies incorporated on Atlas in Q1 than any quarter ever: up 130% year-over-year. (Delaware incorporations up 38% year-over-year).' The Delaware +38% figure covers all Delaware incorporations, not just Atlas. Not charted: the Atlas +130% reflects Stripe's own growing share of the market (~25% of Delaware C corps per its 2025 annual letter) as much as any real surge in company formation. The Delaware +38% covers one year across all industries, while this graph tracks the cumulative increase since ChatGPT in industries where AI is useful. Both appear below the chart as directional signals instead.",
       "dateAdded": "2026-07-24"
     },
     {
@@ -538,6 +547,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-06-22",
       "excerpt": "Stripe Economics analysis of business formation and solo-founder scale. \"In 2023, roughly four million Americans earned their primary income as solopreneurs, generating over $100,000 in annual revenue.\" \"More than twice as many solopreneurs earned over $1 million in 2025 than in 2023\" and \"close to three times as many crossed $5 million and $10 million.\" On AI: \"AI-influenced user journeys now constitute nearly 4x the share of Stripe sign-ups as last January.\" On formation: \"Delaware incorporations have grown approximately 40% year over year since early 2025\" and \"New business registrations have risen roughly 40% in Australia, 70% in Finland, and 80% in France since 2017.\" The share of businesses reaching $1M cumulative revenue within a year was roughly 30% higher for the 2025 cohort."
+    },
+    {
+      "id": "census-bfs-jul-2026",
+      "title": "Business Formation Statistics, July 2026 (CB26-130)",
+      "url": "https://www.census.gov/econ/bfs/pdf/bfs_current.pdf",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "\"Business Applications for July 2026, adjusted for seasonal variation, were 578,926, an increase of 8.1 percent compared to June 2026.\" \"Projected Business Formations (within 4 quarters) for July 2026, adjusted for seasonal variation, were 29,959, an increase of 0.7 percent compared to June 2026.\" Seasonally adjusted July components: High-Propensity Business Applications 151,857 (+1.4% MoM); Business Applications with Planned Wages 35,024 (-1.6%); Business Applications from Corporations 44,738 (+3.2%); Projected Business Formations within 8 quarters 40,777 (-0.7%). Next scheduled release September 11, 2026.",
+      "dateAdded": "2026-08-20"
     }
   ]
 }

@@ -426,6 +426,16 @@
       "metricType": "employment"
     },
     {
+      "date": "2026-08-10",
+      "value": 1.3,
+      "sourceIds": [
+        "metaculus-labor-hub-aug-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    },
+    {
       "date": "2026-08-12",
       "value": 0,
       "sourceIds": [
@@ -2029,6 +2039,15 @@
       ],
       "evidenceTier": 2,
       "label": "Challenger: total US cuts down 41% YTD, yet AI share of cuts rose to 24%"
+    },
+    {
+      "date": "2026-08-07",
+      "direction": "up",
+      "sourceIds": [
+        "bls-employment-situation-jul-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Jul 2026: nonfarm -23K; U-rate 4.1%; June revised +57K to +20K"
     }
   ],
   "sources": [
@@ -3600,6 +3619,26 @@
       "datePublished": "2026-08-12",
       "excerpt": "We find no evidence of widespread, economy-wide job displacement. Average employment in the ADP sample rose by about 6% between November 2022 and June 2026, while employment for the most exposed quintile grew by about 4%. This aggregate stability is itself informative: claims of economy-wide AI-driven job losses are not visible in payroll data through June 2026.",
       "dateAdded": "2026-08-13"
+    },
+    {
+      "id": "bls-employment-situation-jul-2026",
+      "title": "BLS Employment Situation: July 2026 (series CES0000000001, LNS14000000)",
+      "url": "https://data.bls.gov/timeseries/CES0000000001",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-07",
+      "excerpt": "BLS Employment Situation, July 2026, seasonally adjusted, retrieved from the BLS Public API v2 on August 20, 2026. Total nonfarm payroll employment was 158,858,000 in July, down 23,000 from June (158,881,000). June's gain was revised to +20,000 from the +57,000 initially reported. The unemployment rate was 4.1% in July, down from 4.2% in June and 4.3% in May. Month-over-month by sector: professional and business services +18,000 (22,518,000); information +11,000 (2,780,000); health care and social assistance +22,600 (23,912,200); leisure and hospitality -40,000 (16,931,000).",
+      "dateAdded": "2026-08-20"
+    },
+    {
+      "id": "metaculus-labor-hub-aug-2026",
+      "title": "Labor Automation Forecasting Hub (commentary updated August 10, 2026)",
+      "url": "https://www.metaculus.com/labor-hub/",
+      "publisher": "Metaculus",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-10",
+      "excerpt": "\"Overall employment is projected to fall 1.3% by 2030 and fall 3.7% by 2035 relative to 2025 due to AI-driven displacement. This sharply contrasts with government baselines projecting +3.1% growth over the decade when accounting for aging-adjusted population trends.\" Community forecast timeline readings: 2027 +0.365%, 2030 -1.28%, 2035 -3.73%. This revises the April 2026 vintage of the same forecast (-1.9% by 2030, -3.4% by 2035): the 2030 decline is now shallower and the 2035 decline deeper.",
+      "dateAdded": "2026-08-20"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "currentValue": 21.8,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
-  "disclaimer": "Adoption estimates diverge by an order of magnitude depending on how adoption is identified, and the differences are definitional rather than a matter of one measure being wrong. BTOS asks firms directly whether they used AI in the past two weeks (21.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is plotted; the others appear as overlays. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (21.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2023-08-15",
@@ -769,6 +769,15 @@
       "label": "NBER: AI hedge funds peaked at ~2.7% of all hedge funds; AI labor intensity 1.17% of adviser postings"
     },
     {
+      "date": "2026-07-20",
+      "direction": "up",
+      "sourceIds": [
+        "gallup-org-ai-adoption-jul-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Gallup: 47% of employees say their org has integrated AI tools, up from 41%"
+    },
+    {
       "date": "2026-07-28",
       "direction": "neutral",
       "sourceIds": [
@@ -785,6 +794,15 @@
       ],
       "evidenceTier": 2,
       "label": "NY Fed: Second District AI use 25%→40% services, 16%→26% manufacturing"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "up",
+      "sourceIds": [
+        "ramp-ai-index-aug-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ramp: 43.5% of US businesses pay for Anthropic, 39.7% OpenAI; $11.95/employee median"
     }
   ],
   "sources": [
@@ -1510,6 +1528,26 @@
       "evidenceTier": 1,
       "datePublished": "2026-08-13",
       "excerpt": "BTOS biweekly question 7: \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" Share answering Yes: 21.7% for reference period June 15–28, 2026 (SE 0.31%); 21.5% for June 29–July 12, 2026 (SE 0.42%); 21.8% for July 13–26, 2026 (SE 0.33%). Values dated to reference-period end, not release date."
+    },
+    {
+      "id": "gallup-org-ai-adoption-jul-2026",
+      "title": "Organizational AI Adoption Jumps Six Points",
+      "url": "https://www.gallup.com/workplace/712736/organizational-adoption-jumps-six-points.aspx",
+      "publisher": "Gallup (Andy Kemp)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-20",
+      "excerpt": "47% of employees say their organization has integrated AI tools, up from 41% in the prior quarter. \"More than half of U.S. workers (52%) now use AI in their role, with 30% using it frequently (a few times a week or more). Fifteen percent use it daily.\" Fielded May 6–20, 2026 among 22,573 employed U.S. adults, margin of error +/-0.9 percentage points. This is employees reporting on their employer rather than firms reporting directly, so it appears below the chart as a directional signal alongside the earlier 41% and 46% Gallup readings.",
+      "dateAdded": "2026-08-20"
+    },
+    {
+      "id": "ramp-ai-index-aug-2026",
+      "title": "Cracks in the AI Thesis (Ramp AI Index, August 2026)",
+      "url": "https://ramp.com/data/ai-index-august-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-12",
+      "excerpt": "Ramp AI Index, August 2026, based on corporate card and bill-pay transactions from more than 70,000 US businesses. Share of US businesses paying for each vendor: Anthropic 43.5% (up 1.1 percentage points month over month), OpenAI 39.7% (up 0.23 points), xAI 4.0% (up 0.94 points). The median firm spent $11.95 per employee on AI. Measures paid vendor subscriptions rather than self-reported use, so it appears below the chart as a directional signal.",
+      "dateAdded": "2026-08-20"
     }
   ]
 }

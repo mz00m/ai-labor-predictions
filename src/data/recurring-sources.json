@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
   "asOf": "2026-08-19",
-  "lastSweep": "2026-08-19",
+  "lastSweep": "2026-08-20",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -20,11 +20,11 @@
       "whatItMeasures": "Net change in nonfarm payroll employment and the unemployment rate, from two Census-run surveys (~119K businesses and ~60K households). Broken out by industry, age, race, and education.",
       "whyItMatters": "The single most-cited labor market signal. AI's aggregate effect (or lack thereof) shows up here first if it's happening at scale. Prior-month revisions often reveal that early estimates over- or under-stated the trend.",
       "lastIngested": {
-        "sourceId": "bls-employment-situation-jun-2026",
-        "date": "2026-07-02",
-        "value": "+57K nonfarm; U-rate 4.2%; Apr/May revised -74K"
+        "sourceId": "bls-employment-situation-jul-2026",
+        "date": "2026-08-07",
+        "value": "-23K nonfarm; U-rate 4.1%; June revised +57K to +20K"
       },
-      "nextExpected": "August 1, 2026 (July data)"
+      "nextExpected": "September 4, 2026 (August data)"
     },
     {
       "id": "challenger-job-cuts",
@@ -57,21 +57,21 @@
       "tier": 2,
       "cadence": "monthly",
       "cadenceLabel": "Monthly (rolling)",
-      "releasePattern": "Ad hoc; typically monthly on ramp.com/velocity",
-      "url": "https://ramp.com/velocity",
+      "releasePattern": "Monthly AI Index posts on ramp.com/data/ai-index",
+      "url": "https://ramp.com/data/ai-index",
       "targetGraphs": [
         "overall-us-displacement",
         "freelancer-rate-impact"
       ],
       "topicLine": "Firm-level AI spend and hiring signals from Ramp's business-card data.",
-      "whatItMeasures": "Aggregated spend and hiring patterns across ~30K businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
+      "whatItMeasures": "Aggregated spend and hiring patterns across 70,000+ businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
       "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS — private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
       "lastIngested": {
-        "sourceId": "ramp-revelio-ai-jobs-impact-2026",
-        "date": "2026-06-30",
-        "value": "AI-intensive firms adding jobs faster than laggards"
+        "sourceId": "ramp-ai-index-aug-2026",
+        "date": "2026-08-12",
+        "value": "Anthropic 43.5% of US businesses, OpenAI 39.7%; $11.95/employee median AI spend"
       },
-      "nextExpected": "~August 2026"
+      "nextExpected": "~September 2026"
     },
     {
       "id": "fed-ai-adoption-monitoring",
@@ -306,11 +306,11 @@
       "whatItMeasures": "Surveys of 20K+ US employees on AI use frequency, workplace attitudes, productivity perceptions, and industry-specific reports (arts/creative most recently).",
       "whyItMatters": "The largest single-survey read of US worker AI adoption (Feb 2026 sample: 23,717). Frequency breakdown (13% daily / 28% weekly+ / 50% at-least-annually) is more granular than most trackers.",
       "lastIngested": {
-        "sourceId": "gallup-arts-ai-creative-2026",
-        "date": "2026-05-01",
-        "value": "AI in creative work — arts sector deep-dive"
+        "sourceId": "gallup-org-ai-adoption-jul-2026",
+        "date": "2026-07-20",
+        "value": "52% of workers use AI in their role; 47% say org has integrated AI (n=22,573)"
       },
-      "nextExpected": "~August-September 2026 (next Gallup workplace AI report)"
+      "nextExpected": "~October 2026 (next Gallup workplace AI report)"
     },
     {
       "id": "ellucian-highered-ai",
@@ -375,13 +375,13 @@
       "whatItMeasures": "Structured forecast questions (probability distributions) on occupation-level employment changes through 2030 across ~50 major US occupations. Median community estimates update continuously.",
       "whyItMatters": "The only source giving quantitative 5-year forecasts by occupation. Latest reads: software developers -15.1%, CS/sales reps -11%, financial specialists -8.1%, lawyers -5.4%.",
       "lastIngested": {
-        "sourceId": "metaculus-labor-hub-2026",
-        "date": "2026-04-20",
-        "value": "Software developers -15.1%; CS/sales -11%; K-12 teachers +1.3% by 2030"
+        "sourceId": "metaculus-labor-hub-aug-2026",
+        "date": "2026-08-10",
+        "value": "Overall US employment -1.3% by 2030, -3.7% by 2035 (revised from -1.9%/-3.4%)"
       },
       "nextExpected": "Continuous; check quarterly for shifts in community medians",
-      "lastSweep": "2026-08-19",
-      "sweepNote": "Swept 2026-08-19: BLOCKED, not verified. metaculus.com returns HTTP 403 to all non-browser clients including with a browser user agent; labor-hub-tools.metaculus.com likewise. Needs a headless browser to check."
+      "lastSweep": "2026-08-20",
+      "sweepNote": "Swept 2026-08-20 via headless browser: overall employment forecast ingested (-1.3% by 2030, -3.7% by 2035, revising -1.9%/-3.4%). Per-occupation forecasts were captured but NOT ingested: Cloudflare blocked further access before the horizon selector state could be confirmed, and the occupation values are only interpretable against a specific horizon. Re-check the horizon tab on the next sweep."
     },
     {
       "id": "census-bfs",
@@ -399,11 +399,11 @@
       "whatItMeasures": "New business applications (any) and high-propensity applications (likely to become employer businesses), by state, industry, and month.",
       "whyItMatters": "The universe-scale ground truth on US business formation. AI's role is inferred from sectoral patterns (professional services growing 4x faster than construction since ChatGPT) rather than directly tagged.",
       "lastIngested": {
-        "sourceId": "census-bfs-jun-2026",
-        "date": "2026-07-09",
-        "value": "531,423 business applications (+1.1% MoM); 29,741 projected formations"
+        "sourceId": "census-bfs-jul-2026",
+        "date": "2026-08-12",
+        "value": "578,926 business applications (+8.1% MoM); 29,959 projected formations"
       },
-      "nextExpected": "August 12, 2026 (July data)"
+      "nextExpected": "September 11, 2026 (August data)"
     },
     {
       "id": "wef-future-of-jobs",
@@ -568,7 +568,9 @@
         "date": "2026-05-01",
         "value": "Q1 2026 Atlas incorporations +130% YoY; 100K all-time; all Delaware incorporations +38% YoY"
       },
-      "nextExpected": "~August 2026 (Q2 2026 data / Atlas blog cadence)"
+      "nextExpected": "~September 2026 (Q3 2026 data / Atlas blog cadence)",
+      "lastSweep": "2026-08-20",
+      "sweepNote": "Swept 2026-08-20: no Q2 2026 Atlas incorporation post exists. The nearest item, 'The age of the solopreneur' (Jun 22, 2026), is already ingested as stripe-economics-solopreneur-2026, including its economy-wide '~40% year over year' Delaware incorporation figure. The @atlas and @patrickc X accounts could not be read (no timeline without JS)."
     },
     {
       "id": "google-atlas",

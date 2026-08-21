@@ -1,0 +1,16 @@
+{
+  "id": "census-bfs-jul-2026",
+  "abstract": "The July 2026 Business Formation Statistics release from the US Census Bureau (CB26-130, issued August 12, 2026), the monthly official count of US business applications and projected business formations. July recorded a sharp 8.1% month-over-month jump in seasonally adjusted business applications to 578,926, the largest single-month move in the recent run of this series. The forward-looking components moved far less: projected business formations within four quarters rose only 0.7%, and high-propensity applications rose 1.4%, indicating that the surge was concentrated in application types least likely to become employer businesses.",
+  "keyFindings": [
+    "\"Business Applications for July 2026, adjusted for seasonal variation, were 578,926, an increase of 8.1 percent compared to June 2026.\"",
+    "\"Projected Business Formations (within 4 quarters) for July 2026, adjusted for seasonal variation, were 29,959, an increase of 0.7 percent compared to June 2026.\"",
+    "High-Propensity Business Applications were 151,857 in July, up 1.4% from June.",
+    "Business Applications with Planned Wages were 35,024, down 1.6% from June.",
+    "Business Applications from Corporations were 44,738, up 3.2% from June.",
+    "Projected Business Formations within 8 quarters were 40,777, down 0.7% from June.",
+    "The divergence between total applications (+8.1%) and the wage-planning and eight-quarter formation components (both negative) indicates the July surge was concentrated in non-employer-track applications."
+  ],
+  "methodology": "Census Bureau Business Formation Statistics, derived from Employer Identification Number (EIN) applications on IRS Form SS-4. Business applications are counts of EIN applications; high-propensity applications are those with characteristics historically associated with becoming employer businesses; projected business formations are model-based forecasts of how many applications will become employer businesses within four and eight quarters. All figures cited are seasonally adjusted national totals. Retrieved from the official release PDF at census.gov/econ/bfs/pdf/bfs_current.pdf. Next scheduled release September 11, 2026.",
+  "qualifiers": "The BFS carries no AI attribution whatsoever: it counts EIN applications and cannot distinguish an AI-enabled startup from any other new business. This is why every BFS release in this corpus is carried as an overlay rather than a plotted data point on the AI business formation graph, matching the treatment of the June 2026 edition. The series is also not a rate, so it cannot be expressed in the graph's unit (% of new businesses) without a denominator the release does not provide. The 8.1% headline jump should be treated cautiously as an AI signal for a second reason: applications with planned wages actually fell 1.6% and eight-quarter projected formations fell 0.7% in the same month, so the surge did not show up in the components that track employer-track business creation.",
+  "fetchedAt": "2026-08-20"
+}
