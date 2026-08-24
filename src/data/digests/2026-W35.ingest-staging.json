@@ -1,0 +1,85 @@
+{
+  "week": "2026-W35",
+  "generatedAt": "2026-08-24T08:46:58.317Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Fed FEDS Note: Publicly Available Data to Assess AI's Economic Impact",
+        "summary": "A new Federal Reserve FEDS Note authored by Soto, Thieu, and Allen presents a curated dashboard of publicly available indicators to track the generative AI buildout and its economic effects, organized into capital investment, labor market, and productivity categories. The note provides policymakers and researchers with a timely, systematic framework for monitoring AI adoption dynamics across the US economy. This is a Tier 1 institutional release directly feeding the ai-adoption-rate and workforce-ai-exposure prediction graphs. (Federal Reserve Board FEDS Notes, July 2026)",
+        "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+        "authors": [
+          "Paul E. Soto",
+          "Mason Thieu",
+          "Jeffrey S. Allen"
+        ],
+        "publishedAt": "2026-07-17",
+        "score": 0.467,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "federalreserve-fed-feds-note-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Hollywood Creatives Training AI on Their Own Skills, Accelerating Creative Displacement",
+        "summary": "A Guardian investigation reveals that Hollywood writers, designers, and other creative professionals are being hired—often under financial duress—to generate training data that directly replicates and replaces their own craft, creating a self-reinforcing displacement loop. The piece documents how studios and AI vendors are leveraging the post-strike economic vulnerability of workers to source high-quality creative labor data at scale. The Hacker News discussion (55 pts, 70 comments) highlights widespread industry concern about long-term creative workforce erosion. (The Guardian, August 22, 2026)",
+        "source": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+        "publishedAt": "2026-08-22",
+        "score": 0.349,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "creative-industry-displacement"
+      },
+      "sourceId": "theguardian-hollywood-creatives-training-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Digital Decoupling: AI Simultaneously Displaces and Augments US Occupations Along Educational Lines",
+        "summary": "López (2026) applies an ensemble-based AI Dual-Track classification model across 846 US occupations, finding that generative AI produces sharply divergent outcomes by educational attainment—displacing lower-credential workers while augmenting productivity for higher-credential ones, a pattern the author terms 'digital decoupling.' The study quantifies how this bifurcation is accelerating occupational stratification and widening the skills premium in the US labor market. The findings have direct implications for both the overall-us-displacement and high-skill-wage-premium trajectories. (AI & Society, August 12, 2026)",
+        "source": "https://doi.org/10.1007/s00146-026-03288-z",
+        "authors": [
+          "Omar S. López"
+        ],
+        "publishedAt": "2026-08-12",
+        "doi": "10.1007/s00146-026-03288-z",
+        "score": 0.176,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-digital-decoupling-ai-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Pew Research: Young Americans Increasingly Fear AI-Driven Job Loss",
+        "summary": "A new Pew Research short-read finds that concern among US adults aged 18–29 about AI displacing their jobs has risen markedly compared to prior survey waves, with the share expressing worry now outpacing older cohorts for the first time. The data suggest that job displacement anxiety is shifting from a diffuse public concern to a concrete career planning factor among labor market entrants, with potential downstream effects on educational and occupational choices. This sentiment data is a leading indicator for entry-level hiring and wage dynamics. (Pew Research Center, August 18, 2026)",
+        "source": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "publishedAt": "2026-08-18",
+        "score": 0.303,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "pewresearch-pew-research-young-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Yale Budget Lab Launches Ongoing AI Labor Market Impact Tracker",
+        "summary": "The Yale Budget Lab has published a dedicated tracking page for AI's impact on the US labor market, consolidating displacement exposure estimates, wage effect modeling, and sector-level vulnerability assessments in a regularly updated format. This institutional tracker represents a significant new data infrastructure resource for researchers monitoring real-time labor market adjustment to AI diffusion. Its methodology and outputs will be directly relevant to monitoring overall displacement and wage impact prediction graphs going forward. (Yale Budget Lab, August 19, 2026)",
+        "source": "http://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+        "publishedAt": "2026-08-19",
+        "score": 0.332,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "budgetlab-yale-budget-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    }
+  ]
+}
