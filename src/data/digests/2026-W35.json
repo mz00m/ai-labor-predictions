@@ -1,0 +1,101 @@
+{
+  "week": "2026-W35",
+  "generatedAt": "2026-08-25T18:55:40.170Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Anthropic Publishes New Measure of Labor Market Impacts of AI",
+      "summary": "Anthropic released a research report introducing a novel measure of AI's labor market impacts alongside early empirical evidence of its effects. The study represents a rare attempt by a frontier AI lab to rigorously quantify displacement and augmentation dynamics using real-world data. This is among the most directly policy-relevant primary research published this week on AI-driven workforce change.",
+      "source": "https://www.anthropic.com/research/labor-market-impacts",
+      "publishedAt": "2026-08-25",
+      "score": 0.461,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Stanford Study Finds AI Hitting Entry-Level Jobs Hardest",
+      "summary": "A widely circulated Ars Technica report on a Stanford study found that AI automation is disproportionately affecting entry-level positions, generating significant discussion (122 HN points, 122 comments). The findings suggest that newer workers entering the labor market face the steepest competition from AI tools, compressing traditional career ladders. This has direct implications for entry-level wage trajectories and the erosion of junior-role pipelines.",
+      "source": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+      "publishedAt": "2026-08-25",
+      "score": 0.419,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Hollywood Creatives Describe Training AI to Replace Their Own Skills",
+      "summary": "The Guardian reported on Hollywood creative workers who are being paid to train generative AI systems on their own craft outputs, effectively accelerating their own displacement (57 HN points, 70 comments). The piece highlights the structural bind facing creative labor: short-term gig income from AI training work undermines long-term demand for human creative services. This dynamic is particularly acute in writing, voice acting, and visual effects roles.",
+      "source": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+      "publishedAt": "2026-08-22",
+      "score": 0.299,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "creative-industry-displacement"
+    },
+    {
+      "title": "Federal Reserve FEDS Note Maps Publicly Available AI Buildout Indicators",
+      "summary": "A new FEDS Note authored by Soto, Thieu, and Allen organizes publicly available indicators into categories covering capital investment, labor market signals, and output effects to help researchers and policymakers track the generative AI buildout in near-real-time. The note is significant as it reflects the Federal Reserve's growing institutional focus on synthesizing AI adoption metrics. It directly informs both AI adoption rate tracking and workforce exposure estimates.",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "authors": [
+        "Paul E. Soto",
+        "Mason Thieu",
+        "Jeffrey S. Allen"
+      ],
+      "publishedAt": "2026-08-25",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "HN Debate: AI Is Eliminating the 'Middle Class' of Software Engineering",
+      "summary": "A blog post arguing that AI coding tools are hollowing out mid-level software engineering roles generated over 1,000 Hacker News points and 937 comments, making it one of the most engaged tech-labor discussions in the lookback window. The author contends that senior engineers augmented by AI can now absorb work previously requiring large junior-to-mid teams, compressing hiring at the middle of the engineering pay distribution. The discussion reflects growing practitioner awareness of a bifurcating tech labor market.",
+      "source": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+      "publishedAt": "2026-08-12",
+      "score": 0.242,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "tech-sector-displacement"
+    }
+  ],
+  "themes": [
+    "Entry-level and mid-career roles face disproportionate AI displacement pressure, compressing traditional career ladders in both tech and creative sectors",
+    "Creative workers are caught in a structural paradox: near-term AI training gigs accelerate the long-term erosion of demand for their core skills",
+    "Federal Reserve and Tier-1 institutions are intensifying efforts to build real-time measurement frameworks for AI's macroeconomic and labor market footprint",
+    "The 'hollowing out' pattern is now appearing across multiple white-collar domains—software engineering, creative industries, and entry-level professional roles—not just routine work",
+    "Two overdue Fed data series (FEDS AI Adoption Note and NY Fed SCE AI Module) remain unrefreshed, leaving a measurement gap in household-level and firm-level AI adoption tracking"
+  ],
+  "watching": [
+    {
+      "title": "NY Fed Survey of Consumer Expectations — AI Module (overdue)",
+      "source": "https://libertystreeteconomics.newyorkfed.org/",
+      "reason": "133 days since last ingest; expected Aug-Sep 2026. Worker-side AI use and training access data critical for genai-work-adoption and median-wage-impact graphs."
+    },
+    {
+      "title": "Yale Budget Lab: Tracking the Impact of AI on the Labor Market",
+      "source": "http://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "reason": "Yale Budget Lab's dedicated AI labor tracker updated this week; monitor for new displacement and wage-impact estimates as methodology matures."
+    },
+    {
+      "title": "AI Generated 3D Models Flood Market, but Almost No One Is Buying Them",
+      "source": "https://www.404media.co/ai-generated-3d-models-flood-market-but-almost-no-one-is-buying-them/",
+      "reason": "Early signal of AI creative output market saturation without demand-side uptake—watch for freelancer rate compression in 3D/visual asset markets."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 106,
+    "afterDedup": 106
+  }
+}
