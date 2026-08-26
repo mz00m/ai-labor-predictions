@@ -803,6 +803,24 @@
       ],
       "evidenceTier": 2,
       "label": "Ramp: 43.5% of US businesses pay for Anthropic, 39.7% OpenAI; $11.95/employee median"
+    },
+    {
+      "date": "2026-08-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "equitable-growth-federal-data-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Equitable Growth: BTOS binary yes/no can't capture how or how much firms use AI"
+    },
+    {
+      "date": "2026-08-24",
+      "direction": "up",
+      "sourceIds": [
+        "equitable-growth-federal-data-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Equitable Growth: OECD finds 90% of US firms use an algorithmic management tool"
     }
   ],
   "sources": [
@@ -1548,6 +1566,16 @@
       "datePublished": "2026-08-12",
       "excerpt": "Ramp AI Index, August 2026, based on corporate card and bill-pay transactions from more than 70,000 US businesses. Share of US businesses paying for each vendor: Anthropic 43.5% (up 1.1 percentage points month over month), OpenAI 39.7% (up 0.23 points), xAI 4.0% (up 0.94 points). The median firm spent $11.95 per employee on AI. Measures paid vendor subscriptions rather than self-reported use, so it appears below the chart as a directional signal.",
       "dateAdded": "2026-08-20"
+    },
+    {
+      "id": "equitable-growth-federal-data-ai-labor-2026",
+      "title": "What can federal data collection tell policymakers and researchers about artificial intelligence in the U.S. labor market?",
+      "url": "https://equitablegrowth.org/what-can-federal-data-collection-tell-policymakers-and-researchers-about-artificial-intelligence-in-the-u-s-labor-market",
+      "publisher": "Washington Center for Equitable Growth (Mary Beech)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-24",
+      "excerpt": "On the survey that anchors this chart: \"Every other week, the Census Bureau releases the Business Trends and Outlook Survey, which asks firms a yes or no question about whether they have adopted AI and whether they plan to in the next year. Because this is a binary measure, it does not capture how or to what extent firms use AI.\" On the Annual Business Survey: questions \"are inconsistent across cycles, which limits the longitudinal tracking of adoption for a specific firm,\" and the 2023 cycle \"did not distinguish between different types of AI or automation.\" On a broader definition of adoption: a 2024 OECD survey of more than 6,000 firms across six countries including the US found algorithmic management tools \"are already widespread among U.S. firms, with 90 percent of those responding to the survey having adopted at least one such tool.\" That figure covers a different construct and a self-selected international sample, so it is recorded as an overlay rather than plotted against the BTOS series.",
+      "dateAdded": "2026-08-25"
     }
   ]
 }

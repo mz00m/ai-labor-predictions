@@ -22,6 +22,16 @@
       "tier": 1
     },
     {
+      "title": "What can federal data collection tell policymakers and researchers about artificial intelligence in the U.S. labor market?",
+      "author": "Mary Beech",
+      "publisher": "Washington Center for Equitable Growth",
+      "date": "2026-08-24",
+      "url": "https://equitablegrowth.org/what-can-federal-data-collection-tell-policymakers-and-researchers-about-artificial-intelligence-in-the-u-s-labor-market",
+      "takeaway": "The most useful audit yet of why this question is so hard to answer, written by someone who ran the AI-and-workers portfolio inside the Department of Labor. Beech's finding is not that the data are missing. They mostly exist. They are fragmented, lagged, defined differently by each agency, and above all not linked. The sharpest example lives inside a single agency: Census collects firm-level AI adoption through BTOS and the Annual Business Survey, separately holds worker-level employment and earnings through LEHD, and does not connect them, so no one can trace a firm's AI adoption to what happened to its workers. The specifics are worth knowing if you read any AI-labor statistic: BTOS asks a binary yes-or-no, so it cannot tell you how much a firm uses AI; LEHD has a 4-6 month lag and industry codes but no occupation codes; JOLTS samples 16,000 establishments with no occupational detail; O*NET, the substrate under nearly every AI exposure measure in circulation, averages 71 observations per occupation with some collection dating to 2006; ghost postings ran 18-22% of online listings in 2024. One number cuts the other way and deserves care: a 2024 OECD survey found 90% of responding US firms use at least one algorithmic management tool, which is a much broader construct than BTOS measures and a self-selected sample, not a rebuttal to the 21.8% figure. First of three briefs; the recommendations are still to come.",
+      "weekFeatured": "2026-08-25",
+      "tier": 2
+    },
+    {
       "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
       "author": "Erik Brynjolfsson, Bharat Chandar, Ruyu Chen",
       "publisher": "Stanford Digital Economy Lab",

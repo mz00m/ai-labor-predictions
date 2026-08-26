@@ -2059,6 +2059,15 @@
       "label": "CREi: automating junior tasks can lower long-run output by shrinking senior supply"
     },
     {
+      "date": "2026-08-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "equitable-growth-federal-data-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Equitable Growth: no federal source links firm AI adoption to worker outcomes"
+    },
+    {
       "date": "2026-08-25",
       "direction": "up",
       "sourceIds": [
@@ -3676,6 +3685,16 @@
       "evidenceTier": 4,
       "datePublished": "2026-08-25",
       "excerpt": "\"AI will take on work in law, customer service, medicine, software, and manufacturing. It will hit these industries rapidly, over the course of a decade rather than a few generations. There will be some new jobs, but without the right policies there will be far fewer than exist today.\" Gates argues the agriculture-to-office analogy misleads because that shift \"proceeded over several generations and created new jobs where human cognition was required. In this case, the technology can substitute for human cognition.\" His policy proposals are a Human Reserved domain of jobs set aside for people, a tax on AI tokens and robots to rebalance the payroll-vs-capital tax asymmetry, and new national and international institutions for the transition. Commentary essay; no original data and no quantified displacement estimate.",
+      "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "equitable-growth-federal-data-ai-labor-2026",
+      "title": "What can federal data collection tell policymakers and researchers about artificial intelligence in the U.S. labor market?",
+      "url": "https://equitablegrowth.org/what-can-federal-data-collection-tell-policymakers-and-researchers-about-artificial-intelligence-in-the-u-s-labor-market",
+      "publisher": "Washington Center for Equitable Growth (Mary Beech)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-24",
+      "excerpt": "\"Existing federal data sources cannot be used yet to conclusively show whether and how AI might be driving changes in the U.S. labor market.\" The binding constraint is linkage, not collection: \"The Business Trends and Outlook Survey and Annual Business Survey adoption data are not linked to the Longitudinal Employer-Household Dynamics data, wage records, or other worker-level outcomes, even though both datasets sit within the Census Bureau.\" Specific gaps: CPS response rates have declined and it cannot resolve individual occupations; LEHD carries a 4-6 month lag and has industry but no occupation codes; JOLTS samples roughly 16,000 establishments with no occupational detail; O*NET averages only 71 observations per occupation with some collection dating to 2006; UI claims exclude independent contractors, and BLS estimates that in some years most unemployed people did not apply for benefits. A measurement critique rather than a displacement estimate, so it is recorded as an overlay.",
       "dateAdded": "2026-08-25"
     }
   ]

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-25",
-  "totalSources": 686,
-  "verifiedCount": 676,
+  "totalSources": 687,
+  "verifiedCount": 677,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9805,6 +9805,22 @@
         "overall-us-displacement",
         "early-career-employment-decline",
         "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "equitable-growth-federal-data-ai-labor-2026": {
+      "id": "equitable-growth-federal-data-ai-labor-2026",
+      "title": "What can federal data collection tell policymakers and researchers about artificial intelligence in the U.S. labor market?",
+      "url": "https://equitablegrowth.org/what-can-federal-data-collection-tell-policymakers-and-researchers-about-artificial-intelligence-in-the-u-s-labor-market",
+      "publisher": "Washington Center for Equitable Growth (Mary Beech)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-24",
+      "excerpt": "First of a three-part series mapping US federal labor data against the question of AI's effects. \"Existing federal data sources cannot be used yet to conclusively show whether and how AI might be driving changes in the U.S. labor market.\" The core failure is linkage: BTOS and Annual Business Survey AI-adoption responses \"are not linked to the Longitudinal Employer-Household Dynamics data, wage records, or other worker-level outcomes, even though both datasets sit within the Census Bureau.\" BTOS \"asks firms a yes or no question... Because this is a binary measure, it does not capture how or to what extent firms use AI.\" A 2024 OECD survey of 6,000+ firms across six countries found 90 percent of responding US firms had adopted at least one algorithmic management tool.",
+      "dateAdded": "2026-08-25",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
