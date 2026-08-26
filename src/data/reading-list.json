@@ -2,6 +2,26 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+      "author": "Goldman Sachs Research",
+      "publisher": "CNBC",
+      "date": "2026-08-19",
+      "url": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
+      "takeaway": "The obvious objection to every US finding on AI and entry-level work is that the US labor market has been doing several unusual things at once since 2022. This is the first study to run the same measurement across other rich countries, which is the natural test. It mostly survives. Job-openings growth has slowed in AI-exposed industries across developed markets, sharpest in Germany, Australia and the US, and call centers are below their historical trend everywhere the data allow a look: 39% below in the US, 33% in Canada, 27% in Germany. Software publishing, management consulting and advertising follow the same shape. Across more than 800 occupations, the entry-level gradient is the robust part: a 10% increase in occupational AI exposure costs about 0.1pp of annual headcount growth economy-wide but more than 0.2pp for entry-level workers in the US and over 0.6pp in Australia. One genuine divergence is worth noting, because it cuts against the alarmist read: information and communication employment has slowed nearly everywhere but remains near or above trend outside the US, so the US tech correction is doing work that AI alone does not explain. Goldman also pooled eleven adoption surveys and put developed markets at 15-20% and emerging markets at 10-15%, which is a useful independent bracket around the 21.8% Census BTOS reading. The trend-break dating is the weak point throughout: a baseline anchored to 2022 absorbs post-pandemic normalization and offshoring along with anything AI did, and Goldman's own conclusion is appropriately narrow, that the pressure is real but confined to a small set of industries and workers.",
+      "weekFeatured": "2026-08-26",
+      "tier": 2
+    },
+    {
+      "title": "How Will AI Impact the Labor Market? (Goldman Sachs Exchanges)",
+      "author": "Joseph Briggs, Daron Acemoglu, Neil Thompson",
+      "publisher": "Goldman Sachs Exchanges",
+      "date": "2026-07-02",
+      "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-will-ai-impact-the-labor-market",
+      "takeaway": "Worth listening to for one number. Asked how large AI's labor-market impact will be, Acemoglu says he expects net job losses within five years but at a scale of \"less than two to four percent\" — the most specific ceiling the field's leading skeptic has put on the record, and far below the 8-18% projections that dominate the same chart. What makes it more than a contrarian data point is his reason. He does not argue the models are incapable; he argues the deployment layer is missing. Large employers cannot adopt at scale while adoption means individual managers prompt-engineering, which is \"inconsistent, time consuming, often challenge the knowledge of teams to use AI, unreliable.\" What is needed is \"the Microsoft Office version of AI,\" and it does not exist yet. Coding is the exception precisely because it is both routinized and staffed by people expert enough to check the output — which reframes the software-employment evidence as a story about who can supervise AI rather than about what AI can do. He sizes the vulnerable pool at eight to nine million US workers in customer service and back office, expects worse over 10-15 years if investment keeps favoring substitution over complementarity, and flags AI-robotics integration as the wildcard that would break his own ceiling, since physical tasks are roughly half of US work. Briggs, on the same episode, is the more conservative voice on the present: a 10-15K/month drag on payrolls, concentrated in tech, consulting and graphic design, and still \"a fairly narrow labor market shock.\"",
+      "weekFeatured": "2026-08-26",
+      "tier": 2
+    },
+    {
       "title": "A Turbulent AI Era and Critical Choices to Make",
       "author": "Bill Gates",
       "publisher": "Gates Notes",

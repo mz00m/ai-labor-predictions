@@ -396,6 +396,18 @@
       "metricType": "employment"
     },
     {
+      "date": "2026-07-02",
+      "value": 3,
+      "confidenceLow": 2,
+      "confidenceHigh": 4,
+      "sourceIds": [
+        "goldman-exchanges-briggs-acemoglu-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "employment"
+    },
+    {
       "date": "2026-07-22",
       "value": 0.2,
       "confidenceLow": 0.1,
@@ -1942,6 +1954,15 @@
       "label": "BLS Jun 2026: nonfarm +57K (below 115K expected); U-rate 4.2%; Apr/May revised -74K"
     },
     {
+      "date": "2026-07-02",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-exchanges-briggs-acemoglu-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman (Briggs): AI is a 10-15K/month drag on job growth, still a narrow shock"
+    },
+    {
       "date": "2026-07-17",
       "direction": "neutral",
       "sourceIds": [
@@ -2048,6 +2069,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Jul 2026: nonfarm -23K; U-rate 4.1%; June revised +57K to +20K"
+    },
+    {
+      "date": "2026-08-19",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-global-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman: 10% more AI exposure cuts annual headcount growth 0.1pp in US, France, Canada"
     },
     {
       "date": "2026-08-21",
@@ -3696,6 +3726,26 @@
       "datePublished": "2026-08-24",
       "excerpt": "\"Existing federal data sources cannot be used yet to conclusively show whether and how AI might be driving changes in the U.S. labor market.\" The binding constraint is linkage, not collection: \"The Business Trends and Outlook Survey and Annual Business Survey adoption data are not linked to the Longitudinal Employer-Household Dynamics data, wage records, or other worker-level outcomes, even though both datasets sit within the Census Bureau.\" Specific gaps: CPS response rates have declined and it cannot resolve individual occupations; LEHD carries a 4-6 month lag and has industry but no occupation codes; JOLTS samples roughly 16,000 establishments with no occupational detail; O*NET averages only 71 observations per occupation with some collection dating to 2006; UI claims exclude independent contractors, and BLS estimates that in some years most unemployed people did not apply for benefits. A measurement critique rather than a displacement estimate, so it is recorded as an overlay.",
       "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "goldman-exchanges-briggs-acemoglu-2026",
+      "title": "How Will AI Impact the Labor Market? (Goldman Sachs Exchanges)",
+      "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-will-ai-impact-the-labor-market",
+      "publisher": "Goldman Sachs Exchanges (Briggs, Acemoglu, Thompson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-02",
+      "excerpt": "Daron Acemoglu, asked how large AI's labor market impact will be: \"I would expect some net job losses, limited, but net job losses within the next five years... none of this, in my estimation, will be of a scale anywhere close to the kinds of things that some expect. I would say less than two to four percent.\" The 2-4% is plotted as a midpoint with the range as its confidence band; note it is stated as an upper bound over a five-year horizon rather than a point estimate to 2030. Acemoglu attributes the ceiling to missing deployment infrastructure: \"we don't have easy to use applications based on the foundation models that can be adopted by many large-scale employers,\" with coding an exception. He puts the most vulnerable pool - cognitive routine work such as customer service reps and back-office staff - at \"eight million in the United States, nine million,\" and expects \"bigger net job losses within the next 10 to 15 years if things continue like this.\" Goldman's Joseph Briggs, on the same episode, sizes the current imprint at \"probably a 10 to 15,000 drag on month-over-month job growth from AI impacts,\" concentrated in tech, management consulting and graphic design, and reiterates the 9%/15M ten-year reallocation forecast under a 15% productivity uplift, adding that \"the unemployment rate increase in any given year would be less than one percentage point.\" Recorded June 2026, published July 2, 2026.",
+      "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "goldman-global-ai-labor-2026",
+      "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+      "url": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
+      "publisher": "Goldman Sachs Research (via CNBC)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-19",
+      "excerpt": "Goldman's first cross-country read on AI and employment, covering major developed and emerging markets. \"Industries with greater exposure to AI automation have generally seen slower job openings growth since the second half of 2022, with the relationship particularly pronounced in Germany, Australia and the U.S.\" Analyzing employment growth across more than 800 occupations: \"Across the broader labor market, a 10% occupational exposure to AI was associated with only a 0.1 percentage point drag on annual headcount growth in France, Canada and the U.S.\" Goldman concludes that \"AI-related hiring pressures are clearly visible in employment data globally, but remain limited to a relatively narrow set of industries and workers.\" A per-unit-exposure elasticity rather than a share of US jobs, so it is recorded as an overlay rather than plotted.",
+      "dateAdded": "2026-08-26"
     }
   ]
 }

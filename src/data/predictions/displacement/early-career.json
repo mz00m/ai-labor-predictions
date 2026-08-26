@@ -172,6 +172,15 @@
       "label": "Canaries: decline sharpest in leading AI-adoption states (-19% most-exposed)"
     },
     {
+      "date": "2026-08-19",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-global-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman: entry-level headcount growth falls >0.2pp per 10% AI exposure (US)"
+    },
+    {
       "date": "2026-08-21",
       "direction": "up",
       "sourceIds": [
@@ -340,6 +349,16 @@
       "datePublished": "2026-08-25",
       "excerpt": "\"The jobs at most risk are entry- and mid-level, and the new jobs being created will mostly require skills that take many years to learn.\" Gates adds: \"I'm especially worried about young people, who will enter a workforce with fewer entry-level openings.\" He cites the Stanford Canaries paper as his evidence that \"employment fell significantly among young workers in jobs that are especially vulnerable to replacement, but not among their older colleagues.\" Commentary essay; no original data.",
       "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "goldman-global-ai-labor-2026",
+      "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+      "url": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
+      "publisher": "Goldman Sachs Research (via CNBC)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-19",
+      "excerpt": "\"Goldman analyzed employment growth across more than 800 occupations and found that AI-related headwinds were the strongest among entry-level workers. It also found an additional, though smaller, negative effect among occupations considered to have a high risk of displacement from AI.\" The magnitude: \"Across the broader labor market, a 10% occupational exposure to AI was associated with only a 0.1 percentage point drag on annual headcount growth in France, Canada and the U.S. But for entry-level workers, the impact ranged between more than 0.6 percentage point (Australia) and over 0.2 percentage point (U.S.).\" This is a semi-elasticity of annual headcount growth per unit of occupational exposure, defined by seniority rather than age 22-25, and it carries no exposure gap that would convert it to the level shortfall this chart plots, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-26"
     }
   ]
 }

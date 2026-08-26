@@ -269,6 +269,15 @@
       "label": "CNBC: Amazon Proteus deployed in 25 US fulfillment centers; 30K corporate cuts since Oct amid AI push"
     },
     {
+      "date": "2026-07-02",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-exchanges-briggs-acemoglu-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Acemoglu: AI-robotics integration is the big wildcard; physical work is ~50% of US tasks"
+    },
+    {
       "date": "2026-08-21",
       "direction": "up",
       "sourceIds": [
@@ -467,6 +476,16 @@
       "datePublished": "2026-08-25",
       "excerpt": "\"I think 'smart' robots will begin to compete with people on some physical tasks - in the construction and hospitality industries, for example - by the end of the decade.\" Gates adds that \"Many Americans I talk to don't realize how fast dexterous robots are advancing because much of the advanced work is being done in other countries, primarily China,\" and that once one firm adopts and cuts prices, \"its competitors will feel immense pressure to do the same.\" Commentary essay; no original data.",
       "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "goldman-exchanges-briggs-acemoglu-2026",
+      "title": "How Will AI Impact the Labor Market? (Goldman Sachs Exchanges)",
+      "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-will-ai-impact-the-labor-market",
+      "publisher": "Goldman Sachs Exchanges (Briggs, Acemoglu, Thompson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-02",
+      "excerpt": "Daron Acemoglu on what would break his own ceiling of \"less than two to four percent\" net job losses over five years: \"There are also so many big wildcards. The big, big, big wildcard, is the integration of AI and robotics. There are efforts on this much more outside of the US than the US, but also in the United States. And if there were amazing breakthroughs there, that would open up the number of jobs that AI would impact hugely. Physical tasks is about 50% of the work in the US economy.\" The 50% is the share of US work that is physical, not the share automated, so it sizes the exposed pool rather than supplying a point for this chart. Recorded June 2026, published July 2, 2026.",
+      "dateAdded": "2026-08-26"
     }
   ]
 }

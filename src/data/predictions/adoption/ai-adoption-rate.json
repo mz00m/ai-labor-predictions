@@ -805,6 +805,15 @@
       "label": "Ramp: 43.5% of US businesses pay for Anthropic, 39.7% OpenAI; $11.95/employee median"
     },
     {
+      "date": "2026-08-19",
+      "direction": "neutral",
+      "sourceIds": [
+        "goldman-global-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman (11 surveys): developed-market AI adoption 15-20%; emerging markets 10-15%"
+    },
+    {
       "date": "2026-08-24",
       "direction": "neutral",
       "sourceIds": [
@@ -1576,6 +1585,16 @@
       "datePublished": "2026-08-24",
       "excerpt": "On the survey that anchors this chart: \"Every other week, the Census Bureau releases the Business Trends and Outlook Survey, which asks firms a yes or no question about whether they have adopted AI and whether they plan to in the next year. Because this is a binary measure, it does not capture how or to what extent firms use AI.\" On the Annual Business Survey: questions \"are inconsistent across cycles, which limits the longitudinal tracking of adoption for a specific firm,\" and the 2023 cycle \"did not distinguish between different types of AI or automation.\" On a broader definition of adoption: a 2024 OECD survey of more than 6,000 firms across six countries including the US found algorithmic management tools \"are already widespread among U.S. firms, with 90 percent of those responding to the survey having adopted at least one such tool.\" That figure covers a different construct and a self-selected international sample, so it is recorded as an overlay rather than plotted against the BTOS series.",
       "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "goldman-global-ai-labor-2026",
+      "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+      "url": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
+      "publisher": "Goldman Sachs Research (via CNBC)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-19",
+      "excerpt": "\"Goldman combined 11 surveys measuring AI adoption across countries and found that major developed markets have adoption rates of roughly 15% to 20%... France, the U.S., the Netherlands and the U.K. are leading AI adoption, while Italy, Japan and New Zealand were among the developed economies at the lower end of adoption. Major emerging markets, meanwhile, had estimated adoption rates of between 10% and 15%.\" A blended cross-country average across eleven instruments with no US-specific firm figure broken out, so it fails the geography and instrument gates against the Census BTOS series this chart plots and is recorded as an overlay. It does bracket the 21.8% BTOS reading from above and below, which is a useful sanity check on the US being at the high end of the developed-market range.",
+      "dateAdded": "2026-08-26"
     }
   ]
 }

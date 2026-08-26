@@ -1,9 +1,43 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-25",
-  "totalSources": 687,
-  "verifiedCount": 677,
+  "lastUpdated": "2026-08-26",
+  "totalSources": 689,
+  "verifiedCount": 679,
   "sources": {
+    "goldman-global-ai-labor-2026": {
+      "id": "goldman-global-ai-labor-2026",
+      "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
+      "url": "https://www.cnbc.com/2026/08/19/goldman-ai-impact-employment-jobs.html",
+      "publisher": "Goldman Sachs Research (via CNBC)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-19",
+      "excerpt": "Goldman's first cross-country read on AI and employment. Industries more exposed to AI automation have seen slower job-openings growth since H2 2022, most pronounced in Germany, Australia and the US. Call-center employment is 39% below trend in the US, 33% in Canada and 27% in Germany; software publishing, management consulting and advertising also fell sharply below trend. Across more than 800 occupations, a 10% occupational AI exposure is associated with a 0.1pp drag on annual headcount growth in France, Canada and the US, rising to more than 0.6pp (Australia) and over 0.2pp (US) for entry-level workers. Combining 11 adoption surveys, developed markets sit at roughly 15-20% adoption and emerging markets 10-15%.",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "overall-us-displacement",
+        "early-career-employment-decline",
+        "customer-service-automation",
+        "ai-adoption-rate"
+      ],
+      "dateAdded": "2026-08-26"
+    },
+    "goldman-exchanges-briggs-acemoglu-2026": {
+      "id": "goldman-exchanges-briggs-acemoglu-2026",
+      "title": "How Will AI Impact the Labor Market? (Goldman Sachs Exchanges)",
+      "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-will-ai-impact-the-labor-market",
+      "publisher": "Goldman Sachs Exchanges (Briggs, Acemoglu, Thompson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-02",
+      "excerpt": "Podcast episode recorded June 2026 with Goldman global economics head Joseph Briggs and MIT's Daron Acemoglu and Neil Thompson. Acemoglu expects \"some net job losses, limited, but net job losses within the next five years\" at a scale of \"less than two to four percent,\" attributing the ceiling to the absence of reliable off-the-shelf applications built on foundation models, with coding an exception. He sizes the most vulnerable pool, cognitive routine work such as customer service and back office, at eight to nine million US workers, and warns of bigger losses over 10-15 years, with AI-robotics integration the largest wildcard given that physical tasks are about 50% of US work. Briggs puts the current imprint at a 10-15K/month drag on job growth concentrated in tech, consulting and graphic design, and reiterates the 9%/15M ten-year reallocation forecast under a 15% productivity uplift, with any single year's unemployment increase under 1pp. Thompson frames AI as a \"rising tide\" rather than a \"crashing wave.\"",
+      "verified": true,
+      "synthetic": false,
+      "usedIn": [
+        "overall-us-displacement",
+        "robots-physical-automation-displacement"
+      ],
+      "dateAdded": "2026-08-26"
+    },
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
       "title": "What 81,000 people told us about the economics of AI",
