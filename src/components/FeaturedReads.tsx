@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Bill Gates",
+    title: "A Turbulent AI Era and Critical Choices to Make",
+    summary:
+      "Gates's first long AI essay in three years, and the first where labor displacement is the lead risk rather than a footnote. The substantive move is his refusal of the two analogies that normally do the reassuring work. Agriculture-to-office took several generations and created jobs that still needed human cognition; this technology substitutes for cognition. The PC took twenty years because software had to be written, prices had to fall, and people had to learn it; AI runs on the hardware we already own and speaks natural language, so it adapts to us rather than the reverse. From there he is specific about incidence: the jobs most at risk are entry- and mid-level, the new ones will require skills that take years to acquire, and smart robots start competing for construction and hospitality work by the end of the decade. Two proposals are worth tracking. Human Reserved is a domain of work set aside for people by decision rather than by capability limit, and he is honest that he cannot answer who decides, on what criteria, or how you stop firms from cheating. The token-and-robot tax rests on an asymmetry that is easy to verify and hard to defend: hire a person and you pay payroll tax, buy a robot and you expense it immediately. No original data here, and every number is borrowed. Read it as the clearest signal yet of where the philanthropic and policy conversation is heading.",
+    date: "Aug 25",
+    url: "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+  },
+  {
     author: "Brynjolfsson, Chandar & Chen",
     title: "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Chin and Richmond classify 800,000+ work-related ChatGPT messages from US users to a single O*NET detailed work activity, then compare it with the sender's stated occupation. The result they call task crossover: 16.8% of all work messages — and 43.5% of occupation-specific ones — concern tasks historically associated with another job. Cross-occupation work is the majority of occupation-specific messages in five of eight groups (customer experience 77%, design 75%, HR 69%). Borrowing and lending are independent: designers draw 35.2% of their messages from other fields while design tasks are only 1.7% of everyone else's; engineering is the inverse. Descriptive, not an employment estimate — but it argues the task bundles themselves are moving, which is a problem for any exposure measure built on fixed job descriptions.",
     date: "Jul 27",
     url: "https://openai.com/index/work-at-the-frontier/",
-  },
-  {
-    author: "FRED (St. Louis Fed)",
-    title: "FRED Adds Data About the Adoption of Generative Artificial Intelligence",
-    summary:
-      "The Bick-Blandin-Deming Real-Time Population Survey — the field's cleanest quarterly measure of US worker GenAI adoption — is now official FRED data: 137 series covering usage rates (overall, work, nonwork), time savings, and adoption compared with the PC and internet, with industry and occupation breakdowns. Latest readings: 43.4% of employed adults used GenAI for work and 57.9% of working-age adults used it anywhere in Q1 2026; GenAI-assisted work hours reached 6.3% in Q2 2026, up from 4.1% in late 2024. FRED hosting makes the series every major adoption synthesis relies on citable and API-accessible alongside official government statistics.",
-    date: "Jul 24",
-    url: "https://news.research.stlouisfed.org/2026/07/fred-adds-data-about-the-adoption-of-generative-artificial-intelligence/",
   },
 ];
 

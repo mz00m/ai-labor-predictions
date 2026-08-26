@@ -267,6 +267,24 @@
       ],
       "evidenceTier": 3,
       "label": "CNBC: Amazon Proteus deployed in 25 US fulfillment centers; 30K corporate cuts since Oct amid AI push"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "up",
+      "sourceIds": [
+        "asriyan-reichardt-shelegia-immiserizing-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CREi: at 30% robot cost savings, model predicts a 4.5pp fall in participation"
+    },
+    {
+      "date": "2026-08-25",
+      "direction": "up",
+      "sourceIds": [
+        "gates-turbulent-ai-era-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Gates: robots to compete for construction and hospitality work by 2030"
     }
   ],
   "sources": [
@@ -429,6 +447,26 @@
       "datePublished": "2026-01-29",
       "excerpt": "UPS has automated 127 facilities to date. Package volume through automated facilities was 57% in 2023, projected to reach 68% by end of 2026. 24 additional facilities are slated for automation in 2026. CEO Carol Tomé stated 'the cost per piece in automated buildings is 28% lower than in conventional, non-automated buildings.' UPS uses pick-and-place systems for small package sorting, Pickle Robots to unload trucks, and autonomous guided vehicles.",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "asriyan-reichardt-shelegia-immiserizing-automation-2026",
+      "title": "Immiserizing Automation",
+      "url": "https://hugoreichardt.com/pdf/immiserizing_automation.pdf",
+      "publisher": "CREi / Barcelona School of Economics (Asriyan, Reichardt, Shelegia)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-21",
+      "excerpt": "Calibrating an overlapping-generations model with career ladders to the 1980 US economy: \"Acemoglu and Restrepo (2020) estimate that cost savings from robots were around 30%. At that level, Figure 5 implies a positive output effect of about 2.6%... the same technical change would have raised output by roughly 3.5%... Wage backloading thus dissipates around a quarter of the potential gain.\" On participation: \"with 30% cost savings, the model predicts a 4.5 percentage-point fall in the participation rate,\" against an observed rise in the share of 20-to-59-year-old men out of the labor force from 10.4% in 1980 to 15.0% in 2019. Cost savings and participation, not share of physical tasks automated, so this is recorded as an overlay rather than a plotted point.",
+      "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "gates-turbulent-ai-era-2026",
+      "title": "A Turbulent AI Era and Critical Choices to Make",
+      "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+      "publisher": "Gates Notes (Bill Gates)",
+      "evidenceTier": 4,
+      "datePublished": "2026-08-25",
+      "excerpt": "\"I think 'smart' robots will begin to compete with people on some physical tasks - in the construction and hospitality industries, for example - by the end of the decade.\" Gates adds that \"Many Americans I talk to don't realize how fast dexterous robots are advancing because much of the advanced work is being done in other countries, primarily China,\" and that once one firm adopts and cuts prices, \"its competitors will feel immense pressure to do the same.\" Commentary essay; no original data.",
+      "dateAdded": "2026-08-25"
     }
   ]
 }

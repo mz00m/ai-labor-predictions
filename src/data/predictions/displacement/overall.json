@@ -2048,6 +2048,24 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Jul 2026: nonfarm -23K; U-rate 4.1%; June revised +57K to +20K"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "up",
+      "sourceIds": [
+        "asriyan-reichardt-shelegia-immiserizing-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CREi: automating junior tasks can lower long-run output by shrinking senior supply"
+    },
+    {
+      "date": "2026-08-25",
+      "direction": "up",
+      "sourceIds": [
+        "gates-turbulent-ai-era-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Gates: AI to hit law, medicine, software, manufacturing within a decade"
     }
   ],
   "sources": [
@@ -3639,6 +3657,26 @@
       "datePublished": "2026-08-10",
       "excerpt": "\"Overall employment is projected to fall 1.3% by 2030 and fall 3.7% by 2035 relative to 2025 due to AI-driven displacement. This sharply contrasts with government baselines projecting +3.1% growth over the decade when accounting for aging-adjusted population trends.\" Community forecast timeline readings: 2027 +0.365%, 2030 -1.28%, 2035 -3.73%. This revises the April 2026 vintage of the same forecast (-1.9% by 2030, -3.4% by 2035): the 2030 decline is now shallower and the 2035 decline deeper.",
       "dateAdded": "2026-08-20"
+    },
+    {
+      "id": "asriyan-reichardt-shelegia-immiserizing-automation-2026",
+      "title": "Immiserizing Automation",
+      "url": "https://hugoreichardt.com/pdf/immiserizing_automation.pdf",
+      "publisher": "CREi / Barcelona School of Economics (Asriyan, Reichardt, Shelegia)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-21",
+      "excerpt": "\"Our main result is that automation of junior tasks can be immiserizing: when its cost savings are small, automation lowers long-run output. Immiseration occurs because junior automation shifts earnings to later in life. This shift lowers the present value of experience-intensive careers, so that fewer workers pursue them, and the supply of experienced workers falls.\" Overlapping-generations model with career ladders, calibrated to the 1980 US economy and tested against US Census/ACS industry data 1970-2020. \"As the transition to the new steady state is Pareto efficient, any policy that averts immiseration hurts at least some workers.\" A mechanism and long-run output result, not a share-of-jobs estimate.",
+      "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "gates-turbulent-ai-era-2026",
+      "title": "A Turbulent AI Era and Critical Choices to Make",
+      "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+      "publisher": "Gates Notes (Bill Gates)",
+      "evidenceTier": 4,
+      "datePublished": "2026-08-25",
+      "excerpt": "\"AI will take on work in law, customer service, medicine, software, and manufacturing. It will hit these industries rapidly, over the course of a decade rather than a few generations. There will be some new jobs, but without the right policies there will be far fewer than exist today.\" Gates argues the agriculture-to-office analogy misleads because that shift \"proceeded over several generations and created new jobs where human cognition was required. In this case, the technology can substitute for human cognition.\" His policy proposals are a Human Reserved domain of jobs set aside for people, a tax on AI tokens and robots to rebalance the payroll-vs-capital tax asymmetry, and new national and international institutions for the transition. Commentary essay; no original data and no quantified displacement estimate.",
+      "dateAdded": "2026-08-25"
     }
   ]
 }

@@ -2,6 +2,26 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "A Turbulent AI Era and Critical Choices to Make",
+      "author": "Bill Gates",
+      "publisher": "Gates Notes",
+      "date": "2026-08-25",
+      "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+      "takeaway": "Gates's first long AI essay in three years, and the first where labor displacement is the lead risk rather than a footnote. The substantive move is his refusal of the two analogies that normally do the reassuring work. Agriculture-to-office took several generations and created jobs that still needed human cognition; this technology substitutes for cognition. The PC took twenty years because software had to be written, prices had to fall, and people had to learn it; AI runs on the hardware we already own and speaks natural language, so it adapts to us rather than the reverse. From there he is specific about incidence: the jobs most at risk are entry- and mid-level, the new ones will require skills that take years to acquire, and smart robots start competing for construction and hospitality work by the end of the decade. Two proposals are worth tracking. Human Reserved is a domain of work set aside for people by decision rather than by capability limit, and he is honest that he cannot answer who decides, on what criteria, or how you stop firms from cheating. The token-and-robot tax rests on an asymmetry that is easy to verify and hard to defend: hire a person and you pay payroll tax, buy a robot and you expense it immediately. No original data here, and every number is borrowed. Read it as the clearest signal yet of where the philanthropic and policy conversation is heading.",
+      "weekFeatured": "2026-08-25",
+      "tier": 4
+    },
+    {
+      "title": "Immiserizing Automation",
+      "author": "Vladimir Asriyan, Hugo Reichardt, Sandro Shelegia",
+      "publisher": "CREi / Barcelona School of Economics",
+      "date": "2026-08-21",
+      "url": "https://hugoreichardt.com/pdf/immiserizing_automation.pdf",
+      "takeaway": "Almost everything written about entry-level displacement is a demand-side story: AI does the junior task, so the junior job goes. This paper supplies the supply-side counterpart, and it is the more uncomfortable one. In an overlapping-generations model where senior work requires prior experience in junior work, automating the junior rung shifts earnings later in life. That lowers the present value of an experience-intensive career, fewer workers choose one, and the stock of experienced workers shrinks a generation later. The result is that so-so automation, productive enough to be adopted but not much more, lowers long-run output. Sufficiently productive automation still raises it. Calibrated to 1980 at the Acemoglu-Restrepo estimate of 30% robot cost savings, output rises 2.6% instead of the 3.5% it would under output maximization, so backloading burns roughly a quarter of the gain, and participation falls 4.5 percentage points against an observed 10.4% to 15.0% rise in prime-age men out of the labor force between 1980 and 2019. The empirics use industrial robots, not AI: industries whose junior tasks were more exposed lost about 10% more employment per standard deviation of junior bias, aged faster, and saw wage-experience profiles steepen. The sting is in the welfare result. The transition is Pareto efficient, so any policy that averts immiseration has to take from someone, and the obvious someone is the incumbent senior worker who collects higher wages having never absorbed lower junior ones.",
+      "weekFeatured": "2026-08-25",
+      "tier": 1
+    },
+    {
       "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
       "author": "Erik Brynjolfsson, Bharat Chandar, Ruyu Chen",
       "publisher": "Stanford Digital Economy Lab",

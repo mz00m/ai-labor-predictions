@@ -269,9 +269,9 @@
       "name": "NY Fed Survey of Consumer Expectations — AI Module",
       "publisher": "Federal Reserve Bank of New York",
       "tier": 1,
-      "cadence": "quarterly",
-      "cadenceLabel": "Quarterly (AI module)",
-      "releasePattern": "Rolling ~quarterly special-topic releases at libertystreeteconomics.newyorkfed.org",
+      "cadence": "annual",
+      "cadenceLabel": "Annual (AI module)",
+      "releasePattern": "AI supplement fielded once in the Nov 2025 SCE and published Apr 2026; special-topic posts at libertystreeteconomics.newyorkfed.org",
       "url": "https://libertystreeteconomics.newyorkfed.org/",
       "targetGraphs": [
         "genai-work-adoption",
@@ -285,9 +285,9 @@
         "date": "2026-04-14",
         "value": "Only 15.9% of employers offer AI training; 37% of workplaces don't offer AI tools"
       },
-      "nextExpected": "~August-September 2026",
-      "lastSweep": "2026-08-19",
-      "sweepNote": "Swept 2026-08-19: no new edition. The Apr 14, 2026 module (fielded in the Nov 2025 SCE) is still the only AI supplement run to date."
+      "nextExpected": "~Spring 2027",
+      "lastSweep": "2026-08-25",
+      "sweepNote": "Swept 2026-08-25: still no new edition. The Aug 5, 2026 Liberty Street post (Athreya, 'AI's Impact on Labor and Hiring') reuses the Oct 2024 and Apr 2026 SCE readings plus regional business surveys and cites no new SCE AI module. Cadence corrected from quarterly to annual: the AI supplement has been fielded once (Nov 2025 SCE, published Apr 2026), so a 120-day threshold was firing on a series that has never run quarterly."
     },
     {
       "id": "gallup-workplace-ai",

@@ -556,6 +556,15 @@
       ],
       "evidenceTier": 1,
       "label": "Canaries: little difference in compensation trends by age or exposure quintile"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "asriyan-reichardt-shelegia-immiserizing-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CREi: junior-biased robotization backloads pay into a steeper wage profile"
     }
   ],
   "sources": [
@@ -1090,6 +1099,16 @@
       "datePublished": "2026-08-12",
       "excerpt": "We find little difference in compensation trends by age or exposure quintile. Among job-stayers, average real base pay has grown more slowly in more exposed jobs, though this is not specific to young workers; these differences are small relative to the roughly 20-percentage-point divergence in employment. Among new hires, real starting pay shows no obvious relationship with AI exposure for young workers. Adjustment operates through employment rather than base compensation.",
       "dateAdded": "2026-08-13"
+    },
+    {
+      "id": "asriyan-reichardt-shelegia-immiserizing-automation-2026",
+      "title": "Immiserizing Automation",
+      "url": "https://hugoreichardt.com/pdf/immiserizing_automation.pdf",
+      "publisher": "CREi / Barcelona School of Economics (Asriyan, Reichardt, Shelegia)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-21",
+      "excerpt": "\"We find evidence that exposure to junior-biased robotization led to wage backloading... We find that junior-biased automation predicts an increase in wage growth, implying a steepening of the wage schedule.\" CPS matched panel of individual weekly earnings in consecutive years, regressed on the junior bias in the worker's industry interacted with time, standard errors clustered at the industry level. The theoretical mechanism is that automating junior tasks \"shifts earnings to later in life,\" lowering the present value of experience-intensive careers. The paper reports a direction and a normalized coefficient per standard deviation of junior bias, not a percentage wage change for entry-level workers, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-25"
     }
   ]
 }

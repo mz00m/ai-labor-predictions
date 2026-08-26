@@ -170,6 +170,24 @@
       ],
       "evidenceTier": 1,
       "label": "Canaries: decline sharpest in leading AI-adoption states (-19% most-exposed)"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "up",
+      "sourceIds": [
+        "asriyan-reichardt-shelegia-immiserizing-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CREi: 1 SD more junior-biased robot exposure, ~10% lower industry employment"
+    },
+    {
+      "date": "2026-08-25",
+      "direction": "up",
+      "sourceIds": [
+        "gates-turbulent-ai-era-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "Gates: jobs most at risk are entry- and mid-level; fewer openings for youth"
     }
   ],
   "sources": [
@@ -302,6 +320,26 @@
       "datePublished": "2026-08-12",
       "excerpt": "Employment of young workers (ages 22-25) in AI-exposed occupations now stands 19% below where it would be had it kept pace with that of their less-exposed peers; experienced workers show no comparable gap. Descriptive kept-pace measure on an ADP balanced payroll panel of 3.5-5 million workers per month, January 2021 through June 2026. Earlier vintages of this study headlined regression-adjusted estimates (13% at July 2025 data, 16% at September 2025 data); by the kept-pace measure the shortfall was 15% at the July 2025 vintage and has widened to 19% as of June 2026.",
       "dateAdded": "2026-08-13"
+    },
+    {
+      "id": "asriyan-reichardt-shelegia-immiserizing-automation-2026",
+      "title": "Immiserizing Automation",
+      "url": "https://hugoreichardt.com/pdf/immiserizing_automation.pdf",
+      "publisher": "CREi / Barcelona School of Economics (Asriyan, Reichardt, Shelegia)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-21",
+      "excerpt": "\"Quantitatively, the effects mean that an industry for which the junior bias was one standard deviation stronger saw an additional decline of about 10% in employment.\" US Census and ACS microdata 1970-2020 at the 1990 Census industry classification, using occupation-level robot-exposure measures from Garg et al. (2026); regressions control for year and industry fixed effects and for overall industry robot exposure interacted with year. The same specification finds junior-biased robotization raised industry average age and steepened the wage-experience profile. Robot automation, not AI, and an industry-level rather than age-22-25 cut, so the magnitude is not directly comparable to the ADP and Revelio series plotted here.",
+      "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "gates-turbulent-ai-era-2026",
+      "title": "A Turbulent AI Era \u2014 and Critical Choices to Make",
+      "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+      "publisher": "Gates Notes (Bill Gates)",
+      "evidenceTier": 4,
+      "datePublished": "2026-08-25",
+      "excerpt": "\"The jobs at most risk are entry- and mid-level, and the new jobs being created will mostly require skills that take many years to learn.\" Gates adds: \"I'm especially worried about young people, who will enter a workforce with fewer entry-level openings.\" He cites the Stanford Canaries paper as his evidence that \"employment fell significantly among young workers in jobs that are especially vulnerable to replacement, but not among their older colleagues.\" Commentary essay; no original data.",
+      "dateAdded": "2026-08-25"
     }
   ]
 }

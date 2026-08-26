@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-20",
-  "totalSources": 684,
-  "verifiedCount": 674,
+  "lastUpdated": "2026-08-25",
+  "totalSources": 686,
+  "verifiedCount": 676,
   "sources": {
     "anthropic-81k-economics-survey-2026": {
       "id": "anthropic-81k-economics-survey-2026",
@@ -9770,6 +9770,41 @@
       "dateAdded": "2026-08-20",
       "usedIn": [
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "asriyan-reichardt-shelegia-immiserizing-automation-2026": {
+      "id": "asriyan-reichardt-shelegia-immiserizing-automation-2026",
+      "title": "Immiserizing Automation",
+      "url": "https://hugoreichardt.com/pdf/immiserizing_automation.pdf",
+      "publisher": "CREi / Barcelona School of Economics (Asriyan, Reichardt, Shelegia)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-21",
+      "excerpt": "\"Our main result is that automation of junior tasks can be immiserizing: when its cost savings are small, automation lowers long-run output.\" Empirically: \"an industry for which the junior bias was one standard deviation stronger saw an additional decline of about 10% in employment,\" using US Census/ACS microdata 1970-2020 and occupation-level robot exposure from Garg et al. (2026). Calibrated to 1980, at the Acemoglu-Restrepo 30% robot cost-savings estimate the model yields a 2.6% output gain against 3.5% under output maximization, and a 4.5 percentage-point fall in labor force participation.",
+      "dateAdded": "2026-08-25",
+      "usedIn": [
+        "early-career-employment-decline",
+        "robots-physical-automation-displacement",
+        "entry-level-wage-impact",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gates-turbulent-ai-era-2026": {
+      "id": "gates-turbulent-ai-era-2026",
+      "title": "A Turbulent AI Era and Critical Choices to Make",
+      "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
+      "publisher": "Gates Notes (Bill Gates)",
+      "evidenceTier": 4,
+      "datePublished": "2026-08-25",
+      "excerpt": "\"AI will take on work in law, customer service, medicine, software, and manufacturing. It will hit these industries rapidly, over the course of a decade rather than a few generations.\" \"The jobs at most risk are entry- and mid-level, and the new jobs being created will mostly require skills that take many years to learn.\" Proposes a Human Reserved domain of jobs set aside for people, and a tax on AI tokens and robots: \"if you're an employer and you hire someone, you pay payroll taxes on their earnings. But if you buy a robot, you can usually write it off right away as a business expense. The tax system nudges you toward replacing people with machines.\"",
+      "dateAdded": "2026-08-25",
+      "usedIn": [
+        "overall-us-displacement",
+        "early-career-employment-decline",
+        "robots-physical-automation-displacement"
       ],
       "verified": true,
       "synthetic": false
