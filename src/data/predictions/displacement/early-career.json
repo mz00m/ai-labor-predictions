@@ -127,6 +127,15 @@
       "label": "Solomon (Goldman): cites Stanford 16% entry-level decline in exposed roles"
     },
     {
+      "date": "2026-07-07",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-employment-outlook-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: no break in junior LLM-exposed postings when firms began adopting LLMs"
+    },
+    {
       "date": "2026-07-22",
       "direction": "up",
       "sourceIds": [
@@ -143,6 +152,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: at AI adopters, senior headcount +31% vs +6% junior since Nov 2022"
+    },
+    {
+      "date": "2026-08-11",
+      "direction": "up",
+      "sourceIds": [
+        "ilo-youth-employment-trends-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ILO: 6.1% of global youth jobs most AI-exposed; 5.6M at risk if a tenth vanish"
     },
     {
       "date": "2026-08-12",
@@ -170,6 +188,15 @@
       ],
       "evidenceTier": 1,
       "label": "Canaries: decline sharpest in leading AI-adoption states (-19% most-exposed)"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "down",
+      "sourceIds": [
+        "richmond-fed-ai-exposure-job-finding-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Richmond Fed: new entrants' job-finding drop modest vs job losers and leavers"
     },
     {
       "date": "2026-08-19",
@@ -358,6 +385,36 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-19",
       "excerpt": "\"Goldman analyzed employment growth across more than 800 occupations and found that AI-related headwinds were the strongest among entry-level workers. It also found an additional, though smaller, negative effect among occupations considered to have a high risk of displacement from AI.\" The magnitude: \"Across the broader labor market, a 10% occupational exposure to AI was associated with only a 0.1 percentage point drag on annual headcount growth in France, Canada and the U.S. But for entry-level workers, the impact ranged between more than 0.6 percentage point (Australia) and over 0.2 percentage point (U.S.).\" This is a semi-elasticity of annual headcount growth per unit of occupational exposure, defined by seniority rather than age 22-25, and it carries no exposure gap that would convert it to the level shortfall this chart plots, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "oecd-employment-outlook-2026",
+      "title": "OECD Employment Outlook 2026 - From Resilience to Risk: Employment and Wages Under Pressure (Ch. 1)",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en/full-report/from-resilience-to-risk-employment-and-wages-under-pressure_b599ad83.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-07",
+      "excerpt": "\"Data from Australia, Canada, the European Union and the United States suggest that the role of LLMs in explaining the unemployment gap of young labour market entrants remains limited, both for those with and without a graduate degree.\" LinkedIn AI-hiring data date intensive firm LLM use to mid-2023 through early 2024, yet \"no turning point in the unemployment gap trend for college graduates is visible around those dates... in any of the countries analysed.\" On postings: the ratio of new online postings in top-quintile versus bottom-quintile Language Model Exposure occupations (Felten, Raj and Seamans score, Lightcast data) \"exhibits no break at the end of 2023,\" and Box 1.6 confirms this holds for US postings flagged junior by Lightcast's seniority classifier. OECD attributes observed declines instead to macro sensitivity: LLM-exposed occupations concentrate in information, finance and insurance, and professional and technical services, which cut hiring quickly when capital costs and uncertainty rise. This is an attribution finding, not a magnitude - OECD documents that the youth unemployment gap is real and widening, only that LLMs are unlikely to be its main cause - so it cannot be plotted as a level on this chart and is recorded as an overlay.",
+      "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "ilo-youth-employment-trends-2026",
+      "title": "Global Employment Trends for Youth 2026: Back to the Future",
+      "url": "https://www.ilo.org/sites/default/files/2026-08/9789220437612_PDFA_Web_ENG.pdf",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-11",
+      "excerpt": "\"The report estimates that 6.1 per cent of jobs currently held by young people aged 15 to 29 fall in the categories of those most exposed to AI\" - 55.8 million of 913.8 million youth jobs globally, using gradients 3 and 4 of the ILO occupational exposure scale (mainly clerical and support work). Under an illustrative scenario: \"If only 10 per cent of the jobs that are exposed to AI disappear in full, that would translate into 5.6 million employed youth at the global level either facing unemployment, shifting into another job or exiting the labour force.\" Eastern Asia alone accounts for 1.5 million of those transitions, Latin America and the Caribbean 785,000, South-Eastern Asia and the Pacific 716,000, Northern America 618,000. ILO is explicit that \"the degree to which risk translates to job loss is still debatable.\" A global youth-population exposure share under a hypothetical disappearance scenario, not a measured US employment decline for ages 22-25, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "richmond-fed-ai-exposure-job-finding-2026",
+      "title": "Worker Types, AI Exposure and the Recent Decline in Job-Finding Rates (Economic Brief 26-26)",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-26",
+      "publisher": "Federal Reserve Bank of Richmond (Borovickova, Macaluso)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "A direct check on whether labour-market entrants are the margin where AI is biting, and the answer here is no: \"Job-finding rates for new entrants have declined in recent years, but the drop is modest relative to the declines among job losers and job leavers. Entrants do not appear to be the margin where the action is, and we set them aside in what follows.\" Using CPS reason-for-unemployment categories (job losers, job leavers, entrants and re-entrants), the brief finds the action instead among strongly attached incumbents in AI-exposed occupations. This measures job-finding probability rather than the employment shortfall of workers aged 22-25 against least-exposed peers, so it is recorded as an overlay - but it is a meaningful caution that an entrant-specific reading of the AI evidence may be misattributing an incumbent phenomenon.",
       "dateAdded": "2026-08-26"
     }
   ]

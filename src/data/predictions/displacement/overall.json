@@ -1963,6 +1963,15 @@
       "label": "Goldman (Briggs): AI is a 10-15K/month drag on job growth, still a narrow shock"
     },
     {
+      "date": "2026-07-07",
+      "direction": "down",
+      "sourceIds": [
+        "oecd-employment-outlook-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD (AU/CA/EU/US): LLM diffusion not the main cause of youth unemployment gap"
+    },
+    {
       "date": "2026-07-17",
       "direction": "neutral",
       "sourceIds": [
@@ -2069,6 +2078,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Jul 2026: nonfarm -23K; U-rate 4.1%; June revised +57K to +20K"
+    },
+    {
+      "date": "2026-08-12",
+      "direction": "up",
+      "sourceIds": [
+        "richmond-fed-ai-exposure-job-finding-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Richmond Fed: since 2023, job-finding fell most in highly AI-exposed occupations"
     },
     {
       "date": "2026-08-19",
@@ -3745,6 +3763,26 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-19",
       "excerpt": "Goldman's first cross-country read on AI and employment, covering major developed and emerging markets. \"Industries with greater exposure to AI automation have generally seen slower job openings growth since the second half of 2022, with the relationship particularly pronounced in Germany, Australia and the U.S.\" Analyzing employment growth across more than 800 occupations: \"Across the broader labor market, a 10% occupational exposure to AI was associated with only a 0.1 percentage point drag on annual headcount growth in France, Canada and the U.S.\" Goldman concludes that \"AI-related hiring pressures are clearly visible in employment data globally, but remain limited to a relatively narrow set of industries and workers.\" A per-unit-exposure elasticity rather than a share of US jobs, so it is recorded as an overlay rather than plotted.",
+      "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "oecd-employment-outlook-2026",
+      "title": "OECD Employment Outlook 2026 - From Resilience to Risk: Employment and Wages Under Pressure (Ch. 1)",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en/full-report/from-resilience-to-risk-employment-and-wages-under-pressure_b599ad83.html",
+      "publisher": "OECD",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-07",
+      "excerpt": "The most direct cross-country test yet of whether the entry-level AI story survives outside the US. Across Australia, Canada, the EU and the US, \"the role of LLMs in explaining the unemployment gap of young labour market entrants remains limited,\" with no trend break around the mid-2023-to-early-2024 onset of intensive firm LLM use in either unemployment gaps or LLM-exposed job postings. OECD's alternative explanation is compositional: exposed occupations sit disproportionately in information, finance and professional services, sectors \"particularly sensitive to capital cost and general economic uncertainty,\" so \"what may seem an effect of the diffusion of LLMs is in fact simply the result of worsening macroeconomic environment\" (citing Curto Millet and Iscenko 2026; Frank et al. 2026). OECD hedges appropriately: \"The conclusion that LLMs diffusion has not significantly impacted the employment prospects of young entrants remains preliminary,\" and the finding \"may also mask substantial impacts in specific occupations or sectors.\" A null attribution result with no share-of-jobs estimate, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "richmond-fed-ai-exposure-job-finding-2026",
+      "title": "Worker Types, AI Exposure and the Recent Decline in Job-Finding Rates (Economic Brief 26-26)",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-26",
+      "publisher": "Federal Reserve Bank of Richmond (Borovickova, Macaluso)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-12",
+      "excerpt": "Sorting the unemployed by Webb (2019) occupational AI-exposure quartiles: \"Historically, outflow rates by AI-exposure quartile co-moved tightly with the business cycle, with only small level differences across quartiles... Since 2023, outflow rates have diverged: Workers in highly AI-exposed occupations have seen the largest declines in the job-finding rate.\" The authors read this as \"consistent with a literature on automation that emphasizes displacement effects in exposed occupations alongside reallocation toward less-exposed work.\" Their summary: \"Most of the recent decline in unemployment outflow rates is being borne by strongly attached workers, particularly those whose occupations are exposed to AI. This is not the typical recessionary pattern.\" The brief measures job-finding rates rather than a share of jobs lost, and explicitly defers the decomposition of aggregate versus technological components to a forthcoming third article, so it is recorded as an overlay.",
       "dateAdded": "2026-08-26"
     }
   ]

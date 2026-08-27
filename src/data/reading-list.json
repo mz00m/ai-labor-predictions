@@ -2,6 +2,36 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "OECD Employment Outlook 2026 - From Resilience to Risk",
+      "author": "OECD",
+      "publisher": "OECD",
+      "date": "2026-07-07",
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en/full-report/from-resilience-to-risk-employment-and-wages-under-pressure_b599ad83.html",
+      "takeaway": "This is the most serious attempt so far to test the causal claim behind the early-career story, and it comes back negative. OECD accepts the fact pattern - the unemployment gap between young entrants and prime-age workers is real and has widened since 2022 in Australia, Canada, the EU and the US - and then asks whether LLMs did it. Three tests, three misses. LinkedIn hiring data date intensive firm LLM use to mid-2023 through early 2024, but no turning point in the graduate unemployment gap appears around those dates in any of the four economies. The ratio of new postings in the most-exposed versus least-exposed occupations shows no break at the end of 2023. Box 1.6 reruns that specifically on US postings flagged junior, which is the exact test the seniority-bias hypothesis predicts should show something, and finds nothing there either. OECD's alternative is unglamorous and hard to dismiss: LLM-exposed occupations cluster in information, finance and insurance, and professional and technical services, which are the sectors that cut hiring first when capital costs rise, and entrants absorb that adjustment mechanically. The method's limit is real - absence of a visible break is low-powered against gradual diffusion, and the Felten-Raj-Seamans exposure measure predates modern models - but this now sits directly opposite the Stanford canaries and Harvard seniority-bias findings, and anyone reading those should read this next.",
+      "weekFeatured": "2026-08-26",
+      "tier": 1
+    },
+    {
+      "title": "Worker Types, AI Exposure and the Recent Decline in Job-Finding Rates",
+      "author": "Katarina Borovickova, Claudia Macaluso",
+      "publisher": "Federal Reserve Bank of Richmond",
+      "date": "2026-08-12",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-26",
+      "takeaway": "A short Richmond Fed brief with one uncomfortable implication for how the AI labor evidence is usually read. Borovickova and Macaluso split the post-2023 decline in job-finding rates by CPS reason-for-unemployment category, and find that new entrants are not where the action is: their decline is modest next to job losers and job leavers, and the authors set entrants aside for the rest of the analysis. What remains is concentrated among strongly attached incumbents in highly AI-exposed occupations, whose job-finding rate fell roughly 13 percentage points since 2023 against about 2 points for marginally attached workers. The mechanism this suggests is a hiring freeze in exposed occupations that hits experienced workers first and shows up in entry-level statistics as a side effect - which would mean a body of research is attributing to entrants an effect that originates elsewhere. Caveats matter: this is a descriptive brief rather than an identified design, job-finding rate is a flow measure that says nothing directly about jobs lost, and the same 2022-2023 tightening that OECD invokes would also depress hiring in interest-sensitive professional sectors. But almost no one else in this literature performs the worker-type decomposition at all, and the result is a useful check on aggregation.",
+      "weekFeatured": "2026-08-26",
+      "tier": 1
+    },
+    {
+      "title": "Global Employment Trends for Youth 2026: Back to the Future",
+      "author": "International Labour Organization",
+      "publisher": "ILO",
+      "date": "2026-08-11",
+      "url": "https://www.ilo.org/sites/default/files/2026-08/9789220437612_PDFA_Web_ENG.pdf",
+      "takeaway": "The ILO's biennial youth employment report puts the first global number on youth-specific AI exposure: 6.1% of the 913.8 million jobs held by 15-to-29-year-olds worldwide sit in the most-exposed occupational gradients, about 55.8 million jobs, mostly clerical and support work. The widely quoted 5.6 million figure is an illustrative scenario rather than a forecast - it is simply a tenth of that stock disappearing - and ILO says plainly that the degree to which risk translates to job loss is still debatable. The more informative cut is regional. Youth exposure runs 14.3% in high-income countries and in Northern America against 0.9% in low-income countries, a tenfold spread that tracks national income almost linearly. That is largely composition: rich countries have more clerical and professional employment for the exposure measure to find. ILO makes the point that this cuts both ways, since a young worker in a low-exposure economy faces less replacement risk but also misses the productivity gain. Read it as a map of where exposed occupations exist, not as a displacement projection, and do not line the 5.6 million up against modeled forecasts like Goldman's 15 million - they are built on entirely different logic.",
+      "weekFeatured": "2026-08-26",
+      "tier": 1
+    },
+    {
       "title": "Goldman studied where AI is squeezing labor markets. Here's what it found",
       "author": "Goldman Sachs Research",
       "publisher": "CNBC",
