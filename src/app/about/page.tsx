@@ -7,14 +7,14 @@ import { getRecentSources } from "@/lib/sources";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Why JobsData.ai exists, how it works, and who built it—a plain-language guide to the evidence on AI and work.",
+    "Why this project exists, how the methodology works, and who built it. A synthesis of AI-and-labor data for workforce, education, philanthropy, and policy leaders.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About | Early Signals of AI Impact",
     description:
-      "Why JobsData.ai exists, how it works, and who built it.",
+      "Why this project exists, how the methodology works, and who built it.",
     type: "website",
     siteName: "Early Signals of AI Impact",
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About | Early Signals of AI Impact",
     description:
-      "Why JobsData.ai exists, how it works, and who built it.",
+      "Why this project exists, how the methodology works, and who built it.",
   },
 };
 
@@ -53,31 +53,32 @@ export default function AboutPage() {
           <h1
             className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--foreground)] leading-[1.1] mb-4 font-serif"
           >
-            A clearer view of AI and work
+            Evidence Over Narrative
           </h1>
           <p
             className="text-2xl sm:text-heading-sm text-[var(--muted)] leading-relaxed font-serif"
           >
-            The debate moves fast. This site keeps the evidence in one place.
+            Society is trying to figure out what AI means for work and the answers keep changing.
           </p>
         </section>
 
         {/* Mission */}
         <section className="max-w-3xl space-y-4">
           <p className="text-md text-[var(--muted)] leading-relaxed">
-            I built JobsData.ai because I wanted a straightforward answer to a hard
-            question: what is AI actually doing to jobs and economic opportunity?
-            Most coverage starts with either excitement or alarm. This project starts
-            with the evidence.
+            For years I&rsquo;ve wanted a single place that synthesizes what we actually
+            know about AI&rsquo;s impact on economic opportunity: not the hype, not the doom,
+            but the evidence.
           </p>
           <p className="text-md text-[var(--muted)] leading-relaxed">
-            The site tracks forecasts about jobs, wages, adoption, and employer behavior,
-            then checks those forecasts against new research and real-world data. It is
-            meant for anyone making decisions in the middle of that uncertainty: workforce
-            leaders, educators, policymakers, parents, and workers planning what comes next.
+            This site started as a way to track how predictions about displacement,
+            wages, adoption, and corporate behavior evolve as new research, data, and real-world
+            evidence emerge. It quickly grew into something more: a resource for simplifying
+            complex economic research on how AI will impact jobs so that anyone &mdash; whether
+            you&rsquo;re a workforce leader, a parent with a college-bound kid, or just someone
+            trying to plan &mdash; can engage with this new and unclear future in a clear-headed way.
           </p>
           <p className="text-md text-[var(--muted)] leading-relaxed">
-            You can explore the visualizations
+            Explore the visualizations
             ({" "}
             <a href="/task-visualizer" className="link-draw-underline hover:text-[var(--foreground)]">job tasks</a>,{" "}
             <a href="/task-visualizer/economy" className="link-draw-underline hover:text-[var(--foreground)]">full economy</a>,{" "}
@@ -88,9 +89,8 @@ export default function AboutPage() {
             <a href="/history" className="link-draw-underline hover:text-[var(--foreground)]">historical context</a>,{" "}
             <a href="/demand-elasticity" className="link-draw-underline hover:text-[var(--foreground)]">demand elasticity</a>,{" "}
             <a href="/signals" className="link-draw-underline hover:text-[var(--foreground)]">early indicators</a>{" "}
-            ), or ask Gob a question about the research. The numbers will change as better
-            evidence arrives. That is the point: to show what we know now, what remains
-            uncertain, and how the picture changes over time.
+            ) or chat with Gob, our friendly research-backed robot. The goal is to help the people
+            who need it most have a more thoughtful, evidence-grounded response to what&rsquo;s ahead.
           </p>
         </section>
 
@@ -101,7 +101,6 @@ export default function AboutPage() {
               Who&rsquo;s behind this?
             </p>
             <p className="text-md text-[var(--muted)] leading-relaxed">
-              I&rsquo;m{" "}
               <a
                 href="https://www.linkedin.com/in/mattzieger"
                 target="_blank"
@@ -109,14 +108,8 @@ export default function AboutPage() {
                 className="font-semibold text-[var(--foreground)] underline hover:text-[var(--accent)] transition-colors"
               >
                 Matt Zieger
-              </a>
-              . I started this as a personal project: partly to learn, partly to give my
-              own kids a more useful answer about the future they are entering, and partly
-              to help other people wrestling with the same questions.
-            </p>
-            <p className="text-md text-[var(--muted)] leading-relaxed mt-3">
-              In my day job, I&rsquo;m Chief Program &amp; Partnership Officer at the GitLab
-              Foundation, where I lead the{" "}
+              </a>{" "}
+              built this as a personal project...to learn, know how to better advise his kids on what the future will look like for them, and to just maybe help everyone else wrestling with these questions navigate an uncertain new world. While not formally affiliated with his day job, Matt is Chief Program &amp; Partnership Officer at the GitLab Foundation, where he leads the{" "}
               <a
                 href="https://www.gitlabfoundation.org/futureofwork"
                 target="_blank"
@@ -134,8 +127,7 @@ export default function AboutPage() {
               >
                 OpportunityAI
               </a>
-              . JobsData.ai is an independent personal project and is not affiliated with
-              the GitLab Foundation.
+              .
             </p>
             <AboutStats totalCost={totalCost} />
             <p className="text-md text-[var(--muted)] leading-relaxed mt-3">
@@ -171,7 +163,8 @@ export default function AboutPage() {
             Methodology &amp; Sources
           </h2>
           <p className="text-lg text-[var(--muted)] mt-2 max-w-3xl mb-4">
-            See how the site collects, weighs, combines, and presents its evidence.
+            Full documentation of how we collect, weight, combine, and present
+            evidence across every section of the site.
           </p>
           <a
             href="/methodology"
