@@ -505,8 +505,8 @@ export default function MethodologyPage() {
           Privacy &amp; Data Handling
         </h2>
         <p className="text-md text-gray-500 leading-relaxed mb-4">
-          Your uploaded documents and intake data are processed in-memory only. Nothing is written to disk,
-          stored in a database, or retained after your report is generated. Here&apos;s the specific data flow:
+          Uploaded document contents are processed in memory and discarded after analysis. Your intake answers,
+          account email, and generated report are stored so you can return to your report. Here&apos;s the specific data flow:
         </p>
 
         <div className="space-y-2 mb-4">

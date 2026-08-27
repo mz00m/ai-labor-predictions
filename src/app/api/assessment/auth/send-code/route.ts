@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { generateCode } from "@/lib/assessment/auth";
 import { createVerificationCode } from "@/lib/assessment/db";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
 function getResend() {
   return new Resend(process.env.RESEND_API_KEY);
@@ -9,6 +10,20 @@ function getResend() {
 
 export async function POST(req: NextRequest) {
   try {
+    const rateLimit = await checkRateLimit({
+      namespace: "verification-email",
+      identifier: getClientIp(req),
+      limit: 10,
+      globalLimit: 500,
+      windowSeconds: 3_600,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: rateLimit.unavailable ? "Verification is temporarily unavailable." : "Too many verification requests." },
+        { status: rateLimit.unavailable ? 503 : 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const { email } = await req.json();
 
     if (!email || typeof email !== "string" || !email.includes("@")) {

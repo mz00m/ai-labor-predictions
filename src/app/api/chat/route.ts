@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { buildChatContext } from "@/lib/chat/context-builder";
 import { getDb } from "@/lib/db";
 import { CLAUDE_HAIKU } from "@/lib/claude-models";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -10,52 +11,9 @@ interface ChatMessage {
   content: string;
 }
 
-/**
- * Simple in-memory rate limiter.
- * Tracks request timestamps per IP with a sliding window.
- */
-const rateLimitMap = new Map<string, number[]>();
 const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
 const RATE_LIMIT_MAX_REQUESTS = 10; // max requests per window per IP
 const GLOBAL_RATE_LIMIT_MAX = 60; // max total requests per window
-let globalRequestTimestamps: number[] = [];
-
-function cleanTimestamps(timestamps: number[], now: number): number[] {
-  return timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
-}
-
-function isRateLimited(ip: string): { limited: boolean; retryAfterMs?: number } {
-  const now = Date.now();
-
-  // Global rate limit
-  globalRequestTimestamps = cleanTimestamps(globalRequestTimestamps, now);
-  if (globalRequestTimestamps.length >= GLOBAL_RATE_LIMIT_MAX) {
-    const oldest = globalRequestTimestamps[0];
-    return { limited: true, retryAfterMs: RATE_LIMIT_WINDOW_MS - (now - oldest) };
-  }
-
-  // Per-IP rate limit
-  const timestamps = cleanTimestamps(rateLimitMap.get(ip) || [], now);
-  rateLimitMap.set(ip, timestamps);
-
-  if (timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
-    const oldest = timestamps[0];
-    return { limited: true, retryAfterMs: RATE_LIMIT_WINDOW_MS - (now - oldest) };
-  }
-
-  // Record this request
-  timestamps.push(now);
-  globalRequestTimestamps.push(now);
-  return { limited: false };
-}
-
-function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-  const real = request.headers.get("x-real-ip");
-  if (real) return real;
-  return "unknown";
-}
 
 export async function POST(request: Request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -68,18 +26,25 @@ export async function POST(request: Request) {
 
   // Rate limit check
   const clientIp = getClientIp(request);
-  const { limited, retryAfterMs } = isRateLimited(clientIp);
-  if (limited) {
-    const retryAfterSec = Math.ceil((retryAfterMs || RATE_LIMIT_WINDOW_MS) / 1000);
+  const rateLimit = await checkRateLimit({
+    namespace: "chat",
+    identifier: clientIp,
+    limit: RATE_LIMIT_MAX_REQUESTS,
+    globalLimit: GLOBAL_RATE_LIMIT_MAX,
+    windowSeconds: RATE_LIMIT_WINDOW_MS / 1000,
+  });
+  if (!rateLimit.allowed) {
     return new Response(
       JSON.stringify({
-        error: "You're asking questions faster than we can keep up! Please wait a moment and try again.",
+        error: rateLimit.unavailable
+          ? "Chat is temporarily unavailable. Please try again shortly."
+          : "You're asking questions faster than we can keep up! Please wait a moment and try again.",
       }),
       {
-        status: 429,
+        status: rateLimit.unavailable ? 503 : 429,
         headers: {
           "Content-Type": "application/json",
-          "Retry-After": String(retryAfterSec),
+          "Retry-After": String(rateLimit.retryAfterSeconds),
         },
       }
     );
@@ -100,6 +65,21 @@ export async function POST(request: Request) {
     return new Response(
       JSON.stringify({ error: "Messages array is required" }),
       { status: 400, headers: { "Content-Type": "application/json" } }
+    );
+  }
+  if (
+    messages.length > 20 ||
+    messages.some(
+      (message) =>
+        !message ||
+        !["user", "assistant"].includes(message.role) ||
+        typeof message.content !== "string" ||
+        message.content.length > 4_000,
+    )
+  ) {
+    return new Response(
+      JSON.stringify({ error: "Conversation is too long or contains invalid messages" }),
+      { status: 400, headers: { "Content-Type": "application/json" } },
     );
   }
 

@@ -24,6 +24,8 @@ import {
 import { sendReportReadyEmail } from "@/lib/assessment/send-report-email";
 import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
 import { requireAssessmentOwner } from "@/lib/assessment/authz";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
+import { safeFetchText } from "@/lib/security/safe-fetch";
 // Allow up to 300 seconds for Claude API call + processing
 // Vercel Pro plan supports up to 300s
 export const maxDuration = 300;
@@ -38,6 +40,23 @@ export async function POST(req: NextRequest) {
     const assessmentIdParam = formData.get("assessmentId") as string | null;
     const step = formData.get("step") as AssessmentStep | null;
     const feedbackRaw = formData.get("feedback") as string | null;
+
+    const isExistingAssessment = Boolean(assessmentIdParam);
+    const rateLimit = await checkRateLimit({
+      namespace: isExistingAssessment ? "assessment-step" : "assessment-start",
+      identifier: isExistingAssessment
+        ? `${getClientIp(req)}:${assessmentIdParam}`
+        : getClientIp(req),
+      limit: isExistingAssessment ? 24 : 3,
+      globalLimit: isExistingAssessment ? 300 : 60,
+      windowSeconds: 3_600,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: rateLimit.unavailable ? "Assessment service temporarily unavailable." : "Too many assessment requests. Please try again later." },
+        { status: rateLimit.unavailable ? 503 : 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
 
     // Continuation calls (any step on an existing assessment) only need
     // assessmentId + step. The canonical intake lives on the row already,
@@ -471,18 +490,17 @@ async function extractFileText(file: File): Promise<string> {
  * Fetch basic text content from a website URL
  */
 async function fetchWebsiteText(url: string): Promise<string> {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 10000);
+  const res = await safeFetchText(url, {
+    timeoutMs: 10_000,
+    maxBytes: 1_000_000,
+    maxRedirects: 3,
+    allowedContentTypes: ["text/html", "application/xhtml+xml", "text/plain"],
+    headers: { "User-Agent": "jobsdata.ai-assessment-bot/1.0" },
+  });
 
-  try {
-    const res = await fetch(url, {
-      signal: controller.signal,
-      headers: { "User-Agent": "jobsdata.ai-assessment-bot/1.0" },
-    });
+  if (!res.ok) return "";
 
-    if (!res.ok) return "";
-
-    const html = await res.text();
+  const html = res.body;
 
     // Basic HTML to text conversion
     const text = html
@@ -497,8 +515,5 @@ async function fetchWebsiteText(url: string): Promise<string> {
       .trim();
 
     // Limit to reasonable size
-    return text.slice(0, 10000);
-  } finally {
-    clearTimeout(timeout);
-  }
+  return text.slice(0, 10000);
 }

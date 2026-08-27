@@ -86,7 +86,6 @@ function findRelevantFiles(query: string): string[] {
 export async function POST(req: NextRequest) {
   const token =
     req.cookies.get("kb_session")?.value ||
-    req.nextUrl.searchParams.get("token") ||
     req.headers.get("x-admin-token");
   if (!(await checkAdminToken(token))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

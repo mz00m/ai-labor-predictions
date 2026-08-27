@@ -1,58 +1,27 @@
 import { getDb } from "@/lib/db";
 import { submissionSchema } from "@/lib/submissions";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
 export const dynamic = "force-dynamic";
 
-/**
- * In-memory rate limiter for submissions.
- * Tighter than chat: 3 per hour per IP, 30 per hour globally.
- */
-const rateLimitMap = new Map<string, number[]>();
 const WINDOW_MS = 3_600_000; // 1 hour
 const PER_IP_MAX = 3;
 const GLOBAL_MAX = 30;
-let globalTimestamps: number[] = [];
-
-function clean(ts: number[], now: number) {
-  return ts.filter((t) => now - t < WINDOW_MS);
-}
-
-function isRateLimited(ip: string): { limited: boolean; retryAfterMs?: number } {
-  const now = Date.now();
-
-  globalTimestamps = clean(globalTimestamps, now);
-  if (globalTimestamps.length >= GLOBAL_MAX) {
-    return { limited: true, retryAfterMs: WINDOW_MS - (now - globalTimestamps[0]) };
-  }
-
-  const timestamps = clean(rateLimitMap.get(ip) || [], now);
-  rateLimitMap.set(ip, timestamps);
-  if (timestamps.length >= PER_IP_MAX) {
-    return { limited: true, retryAfterMs: WINDOW_MS - (now - timestamps[0]) };
-  }
-
-  timestamps.push(now);
-  globalTimestamps.push(now);
-  return { limited: false };
-}
-
-function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-  const real = request.headers.get("x-real-ip");
-  if (real) return real;
-  return "unknown";
-}
 
 export async function POST(request: Request) {
   // Rate limit
   const ip = getClientIp(request);
-  const { limited, retryAfterMs } = isRateLimited(ip);
-  if (limited) {
-    const retryAfterSec = Math.ceil((retryAfterMs || WINDOW_MS) / 1000);
+  const rateLimit = await checkRateLimit({
+    namespace: "study-submission",
+    identifier: ip,
+    limit: PER_IP_MAX,
+    globalLimit: GLOBAL_MAX,
+    windowSeconds: WINDOW_MS / 1000,
+  });
+  if (!rateLimit.allowed) {
     return Response.json(
-      { error: "Too many submissions. Please try again later." },
-      { status: 429, headers: { "Retry-After": String(retryAfterSec) } },
+      { error: rateLimit.unavailable ? "Submissions are temporarily unavailable." : "Too many submissions. Please try again later." },
+      { status: rateLimit.unavailable ? 503 : 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
     );
   }
 

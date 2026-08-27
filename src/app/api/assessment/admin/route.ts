@@ -14,7 +14,7 @@ async function hashToken(token: string): Promise<string> {
 }
 
 async function checkAuth(req: NextRequest): Promise<boolean> {
-  const token = req.nextUrl.searchParams.get("token") || req.headers.get("x-admin-token");
+  const token = req.headers.get("x-admin-token");
   if (!token) return false;
 
   // Check DB password first
@@ -156,8 +156,8 @@ export async function PUT(req: NextRequest) {
   const body = await req.json();
   const { newPassword } = body;
 
-  if (!newPassword || typeof newPassword !== "string" || newPassword.length < 6) {
-    return NextResponse.json({ error: "Password must be at least 6 characters" }, { status: 400 });
+  if (!newPassword || typeof newPassword !== "string" || newPassword.length < 12) {
+    return NextResponse.json({ error: "Password must be at least 12 characters" }, { status: 400 });
   }
 
   const hash = await hashToken(newPassword);

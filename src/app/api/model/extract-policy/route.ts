@@ -7,6 +7,8 @@ import {
   sanitizeExtractedPolicy,
   stripFences,
 } from "@/lib/policy-extractor";
+import { safeFetchText, UnsafeUrlError } from "@/lib/security/safe-fetch";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
 export const maxDuration = 300;
 
@@ -17,17 +19,35 @@ interface RequestBody {
 
 export async function POST(req: NextRequest) {
   try {
+    const rateLimit = await checkRateLimit({
+      namespace: "policy-extract",
+      identifier: getClientIp(req),
+      limit: 5,
+      globalLimit: 50,
+      windowSeconds: 3_600,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: rateLimit.unavailable ? "Service temporarily unavailable." : "Too many extraction requests." },
+        { status: rateLimit.unavailable ? 503 : 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const body = (await req.json()) as RequestBody;
     let policyText = body.text?.trim() ?? "";
 
     // Optional URL fetch — keep it simple, no Readability parsing for v0.1
     if (!policyText && body.url) {
       try {
-        const res = await fetch(body.url, {
+        const res = await safeFetchText(body.url, {
+          timeoutMs: 10_000,
+          maxBytes: 500_000,
+          maxRedirects: 3,
+          allowedContentTypes: ["text/html", "application/xhtml+xml", "text/plain"],
           headers: { "User-Agent": "jobsdata.ai-policy-extractor/0.1" },
         });
         if (res.ok) {
-          const raw = await res.text();
+          const raw = res.body;
           // Strip HTML tags very roughly — good enough for ~most plain docs
           policyText = raw
             .replace(/<script[\s\S]*?<\/script>/gi, "")
@@ -36,8 +56,10 @@ export async function POST(req: NextRequest) {
             .replace(/\s+/g, " ")
             .trim();
         }
-      } catch {
-        // fall through; we'll error below if text is still empty
+      } catch (error) {
+        if (error instanceof UnsafeUrlError) {
+          return NextResponse.json({ error: error.message }, { status: 400 });
+        }
       }
     }
 
@@ -45,6 +67,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: "Policy text must be at least 60 characters." },
         { status: 400 }
+      );
+    }
+    if (policyText.length > 40_000) {
+      return NextResponse.json(
+        { error: "Policy text must be 40,000 characters or fewer." },
+        { status: 413 },
       );
     }
 

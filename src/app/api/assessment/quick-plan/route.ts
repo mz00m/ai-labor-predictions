@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { CLAUDE_HAIKU } from "@/lib/claude-models";
+import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 
 export const maxDuration = 300;
 
@@ -146,6 +147,20 @@ RULES:
 
 export async function POST(req: NextRequest) {
   try {
+    const rateLimit = await checkRateLimit({
+      namespace: "quick-plan",
+      identifier: getClientIp(req),
+      limit: 10,
+      globalLimit: 100,
+      windowSeconds: 3_600,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: rateLimit.unavailable ? "Service temporarily unavailable." : "Too many plan requests." },
+        { status: rateLimit.unavailable ? 503 : 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const body = await req.json();
     const parsed = QuickPlanInput.safeParse(body);
 

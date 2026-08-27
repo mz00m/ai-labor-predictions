@@ -1,45 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyToken, makeSessionCookie } from "@/lib/assessment/auth";
-import { getAdminPasswordHash } from "@/lib/assessment/db";
-
-async function hashToken(token: string): Promise<string> {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(token);
-  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-  return Array.from(new Uint8Array(hashBuffer))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-async function checkAdminAuth(token: string | null): Promise<boolean> {
-  if (!token) return false;
-  const dbHash = await getAdminPasswordHash();
-  if (dbHash) {
-    const tokenHash = await hashToken(token);
-    return tokenHash === dbHash;
-  }
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret) return false;
-  return token === secret;
-}
+import { checkAdminToken } from "@/lib/admin-auth";
 
 /**
- * GET /api/assessment/test-auth?jwt=<jwt>&id=<assessmentId>&adminToken=<token>
- *
- * Sets the session cookie for a test-run JWT and redirects to the progress page.
- * Requires a valid admin token to prevent abuse.
+ * Sets the session cookie for a test-run JWT. Credentials are accepted only in
+ * the POST body/header so they cannot leak through URL history or referrers.
  */
-export async function GET(req: NextRequest) {
-  const { searchParams } = req.nextUrl;
-  const jwt = searchParams.get("jwt");
-  const id = searchParams.get("id");
-  const adminToken = searchParams.get("adminToken");
+export async function POST(req: NextRequest) {
+  const body = await req.json().catch(() => ({}));
+  const { jwt, id } = body as { jwt?: string; id?: string };
 
   if (!jwt || !id) {
     return NextResponse.json({ error: "Missing params" }, { status: 400 });
   }
 
-  if (!(await checkAdminAuth(adminToken))) {
+  if (!(await checkAdminToken(req.headers.get("x-admin-token")))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -49,9 +24,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Invalid JWT" }, { status: 401 });
   }
 
-  const response = NextResponse.redirect(
-    new URL(`/assessment/progress?id=${id}`, req.url)
-  );
+  const response = NextResponse.json({ redirectUrl: `/assessment/progress?id=${encodeURIComponent(id)}` });
   const cookie = makeSessionCookie(jwt);
   response.cookies.set(cookie);
 

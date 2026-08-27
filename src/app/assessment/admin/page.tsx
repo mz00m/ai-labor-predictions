@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface AssessmentRow {
   id: string;
@@ -87,14 +87,19 @@ export default function AdminPage() {
     try {
       const res = await fetch("/api/assessment/admin/test-run", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ persona: personaId, token }),
+        headers: { "Content-Type": "application/json", "x-admin-token": token },
+        body: JSON.stringify({ persona: personaId }),
       });
       if (!res.ok) throw new Error(await res.text());
       const { assessmentId, jwt } = await res.json();
-      // Open new tab — the test-auth route sets the session cookie then redirects to progress
-      const url = `/api/assessment/test-auth?jwt=${encodeURIComponent(jwt)}&id=${assessmentId}&adminToken=${encodeURIComponent(token)}`;
-      window.open(url, "_blank");
+      const authRes = await fetch("/api/assessment/test-auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-admin-token": token },
+        body: JSON.stringify({ jwt, id: assessmentId }),
+      });
+      if (!authRes.ok) throw new Error(await authRes.text());
+      const { redirectUrl } = await authRes.json();
+      window.location.assign(redirectUrl);
     } catch (e) {
       setTestError(e instanceof Error ? e.message : "Failed to start test run");
     } finally {
@@ -103,26 +108,22 @@ export default function AdminPage() {
   };
 
   const changePassword = async () => {
-    if (newPassword.length < 6) {
-      setPasswordMsg("Must be at least 6 characters");
+    if (newPassword.length < 12) {
+      setPasswordMsg("Must be at least 12 characters");
       return;
     }
     setChangingPassword(true);
     setPasswordMsg(null);
     try {
-      const res = await fetch(`/api/assessment/admin?token=${encodeURIComponent(token)}`, {
+      const res = await fetch("/api/assessment/admin", {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "x-admin-token": token },
         body: JSON.stringify({ newPassword }),
       });
       if (!res.ok) throw new Error("Failed to change password");
       setToken(newPassword);
       setNewPassword("");
       setPasswordMsg("Password changed. Use the new password next time.");
-      // Update URL so refresh works
-      const url = new URL(window.location.href);
-      url.searchParams.set("token", newPassword);
-      window.history.replaceState({}, "", url.toString());
     } catch {
       setPasswordMsg("Failed to change password");
     } finally {
@@ -134,7 +135,9 @@ export default function AdminPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/assessment/admin?token=${encodeURIComponent(t)}`);
+      const res = await fetch("/api/assessment/admin", {
+        headers: { "x-admin-token": t },
+      });
       if (!res.ok) {
         if (res.status === 401) throw new Error("Invalid token");
         throw new Error("Failed to fetch");
@@ -148,15 +151,6 @@ export default function AdminPage() {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const t = params.get("token");
-    if (t) {
-      setToken(t);
-      fetchData(t);
-    }
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

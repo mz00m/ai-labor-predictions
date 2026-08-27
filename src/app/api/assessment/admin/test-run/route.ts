@@ -1,34 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getOrCreateUser, createAssessment, initAssessmentTables, getAdminPasswordHash } from "@/lib/assessment/db";
+import { getOrCreateUser, createAssessment, initAssessmentTables } from "@/lib/assessment/db";
 import { signToken } from "@/lib/assessment/auth";
 import { getPersona } from "@/lib/assessment/test-personas";
-
-async function hashToken(token: string): Promise<string> {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(token);
-  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-  return Array.from(new Uint8Array(hashBuffer))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-}
-
-async function checkAuth(token: string | null): Promise<boolean> {
-  if (!token) return false;
-  const dbHash = await getAdminPasswordHash();
-  if (dbHash) {
-    const tokenHash = await hashToken(token);
-    return tokenHash === dbHash;
-  }
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret) return false;
-  return token === secret;
-}
+import { checkAdminToken } from "@/lib/admin-auth";
 
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}));
-  const { persona: personaId, token } = body as { persona?: string; token?: string };
+  const { persona: personaId } = body as { persona?: string };
 
-  if (!(await checkAuth(token ?? null))) {
+  if (!(await checkAdminToken(req.headers.get("x-admin-token")))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 

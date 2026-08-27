@@ -535,6 +535,7 @@ export default function RegionalExplorer({
     msaSummaryByCbsa,
     msaPathByCbsa,
     countyRiskByFips,
+    chatgptByAbbr,
     metric,
   ]);
 
@@ -955,6 +956,7 @@ export default function RegionalExplorer({
     countyOccByFips,
     countyOccLoading,
     stateRisk,
+    chatgptByAbbr,
     occupations,
   ]);
 

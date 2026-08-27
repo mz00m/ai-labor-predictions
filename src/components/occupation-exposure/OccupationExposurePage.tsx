@@ -110,11 +110,11 @@ export default function OccupationExposurePage() {
   // Pre-compute scored sets for each combination of toggles
   const scoredWithDim = useMemo(
     () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: true, useRlFeasibility: rlFeasibilityEnabled, rlScores }),
-    [rlFeasibilityEnabled]
+    [rlFeasibilityEnabled, rlScores]
   );
   const scoredWithoutDim = useMemo(
     () => scoreKarpathyOccupations(karpathyData as any, { dimensionalityEnabled: false, useRlFeasibility: rlFeasibilityEnabled, rlScores }),
-    [rlFeasibilityEnabled]
+    [rlFeasibilityEnabled, rlScores]
   );
   const scoredKarpathy = dimensionalityEnabled ? scoredWithDim : scoredWithoutDim;
 

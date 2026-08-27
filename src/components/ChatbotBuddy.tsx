@@ -238,7 +238,7 @@ export default function ChatbotBuddy({ sourceCount }: { sourceCount?: number }) 
       setTimeout(() => { setShowBubble(false); schedule(); }, 3200);
     }, 3500);
     return () => clearTimeout(bubbleRef.current);
-  }, [reducedMotion, entered, entrance]);
+  }, [reducedMotion, entered, entrance, peekPrompts]);
 
   // ── Hover ──
   useEffect(() => {

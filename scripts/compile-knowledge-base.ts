@@ -282,6 +282,18 @@ function compile(): KnowledgeBase {
 
 console.log("Compiling knowledge base...\n");
 const kb = compile();
+if (fs.existsSync(OUTPUT)) {
+  try {
+    const previous = JSON.parse(fs.readFileSync(OUTPUT, "utf8")) as KnowledgeBase;
+    const { compiledAt: _previousTimestamp, ...previousContent } = previous;
+    const { compiledAt: _nextTimestamp, ...nextContent } = kb;
+    if (JSON.stringify(previousContent) === JSON.stringify(nextContent)) {
+      kb.compiledAt = previous.compiledAt;
+    }
+  } catch {
+    // A malformed or incompatible generated file should be replaced below.
+  }
+}
 fs.writeFileSync(OUTPUT, JSON.stringify(kb, null, 2));
 console.log(
   `\nDone: ${kb.totalTools} tools + ${kb.totalCapabilities} capabilities compiled to ${OUTPUT}${kb.staleCount > 0 ? ` (${kb.staleCount} stale)` : ""}`
