@@ -447,8 +447,8 @@
       "whyItMatters": "US-only findings need a cross-country test. The Bick/Blandin/Deming RPS series and Humlum/Vestergaard's Danish study are only interpretable against this comparator. OECD 2026 shows Denmark at 42% firm adoption vs US at 17% — the cleanest evidence that adoption isn't only about model availability.",
       "lastIngested": {
         "sourceId": "oecd-employment-outlook-2026",
-        "date": "2026-07-01",
-        "value": "OECD 2026 Employment Outlook: AI and trade reshape regional labor markets; Denmark 42% firm AI, US 17%"
+        "date": "2026-07-07",
+        "value": "Employment Outlook 2026 Ch. 1 ingested: LLM diffusion is not the main cause of the youth unemployment gap in AU/CA/EU/US; no posting break at end-2023, including for junior-flagged postings (Box 1.6)"
       },
       "nextExpected": "Rolling; next Employment Outlook ~July 2027"
     },
@@ -495,9 +495,9 @@
       "whatItMeasures": "Global employment status, informality, decent-work indicators tied to AI adoption. The 2026 Director-General's report 'A Moment of Choice: Harnessing AI for Decent Work' is the anchor artifact. ILO-World Bank joint paper series adds cross-country generative-AI exposure estimates.",
       "whyItMatters": "Every other source on the registry frames AI-labor as a productivity/displacement question. ILO frames it as a decent-work + worker-voice question — the framing Kinder pushes and the framing that maps to policy conversations in most OECD countries. Also: 2.1 billion workers in informal employment are outside the US-focused datasets entirely.",
       "lastIngested": {
-        "sourceId": "ilo-ai-decent-work-2026",
-        "date": "2026-06-01",
-        "value": "'A Moment of Choice' DG report: AI transforms tasks not occupations; jobs gap 408M in 2026"
+        "sourceId": "ilo-youth-employment-trends-2026",
+        "date": "2026-08-11",
+        "value": "Global Employment Trends for Youth 2026: 6.1% of youth jobs globally (55.8M) in the most AI-exposed gradients; 14.3% in Northern America vs 0.9% in low-income countries"
       },
       "nextExpected": "~June 2027 (next Director-General's annual report)"
     },
