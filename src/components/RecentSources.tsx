@@ -89,12 +89,15 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
           >
             {sources.map((source) => {
               const config = getTierConfig(source.evidenceTier);
+              // Client-distributed notes carry no public URL; an empty href
+              // would reload the homepage instead of opening anything.
+              const Wrapper = source.url ? "a" : "div";
               return (
-                <a
+                <Wrapper
                   key={source.id}
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(source.url
+                    ? { href: source.url, target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
                   className="flex items-start gap-2.5 py-2.5 border-b border-black/[0.03] last:border-b-0 hover:opacity-60 transition-opacity"
                 >
                   <span
@@ -122,7 +125,7 @@ export default function RecentSources({ sources }: RecentSourcesProps) {
                       </span>
                     </div>
                   </div>
-                </a>
+                </Wrapper>
               );
             })}
           </div>

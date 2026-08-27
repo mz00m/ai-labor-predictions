@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import type { ScorecardResult, GoalPreference } from "@/lib/assessment/scorecard";
 import { trackEvent } from "@/lib/analytics";
+import { TOOL_PRICING_VERIFIED_AS_OF } from "@/lib/constants";
 import QuickPlan from "./QuickPlan";
 
 interface ScorecardViewProps {
@@ -254,6 +255,14 @@ export default function ScorecardView({ scorecard }: ScorecardViewProps) {
                   </div>
                 </div>
               ))}
+              <p className="text-xs text-gray-400 pt-2">
+                Pricing verified as of{" "}
+                {new Date(`${TOOL_PRICING_VERIFIED_AS_OF}T00:00:00`).toLocaleDateString("en-US", {
+                  month: "long",
+                  year: "numeric",
+                })}
+                . Vendors change plans often — confirm on the tool&rsquo;s site before buying.
+              </p>
             </div>
           )}
         </div>

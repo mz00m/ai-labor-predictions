@@ -6,10 +6,10 @@ Tools for relationship building, negotiation, counseling, empathy-driven work, a
 
 - **Category**: interpersonal
 - **Also useful for**: analysis-decision, communication
-- **Pricing**: Enterprise (custom pricing, ~$100/user/mo)
+- **Pricing**: Enterprise (quote only; per-user licenses plus a platform fee)
 - **URL**: https://www.gong.io
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 > Revenue intelligence platform that records, transcribes, and analyzes customer calls and meetings.
 
@@ -21,10 +21,10 @@ Tools for relationship building, negotiation, counseling, empathy-driven work, a
 
 - **Category**: interpersonal
 - **Also useful for**: communication
-- **Pricing**: Freemium ($49/mo for Premium)
+- **Pricing**: Freemium ($49/mo Premium; Sales from $59/mo)
 - **URL**: https://www.crystalknows.com
-- **Verified**: 2026-04-03
-- **Confidence**: medium
+- **Verified**: 2026-08-27
+- **Confidence**: high
 
 > AI personality assessment tool that predicts communication styles and provides tailored messaging suggestions.
 
@@ -36,10 +36,10 @@ Tools for relationship building, negotiation, counseling, empathy-driven work, a
 
 - **Category**: interpersonal
 - **Also useful for**: communication
-- **Pricing**: Freemium ($29/mo for Pro)
+- **Pricing**: Freemium ($29/mo Starter, $49/mo Pro, $99/seat/mo Team)
 - **URL**: https://www.lavender.ai
-- **Verified**: 2026-04-03
-- **Confidence**: medium
+- **Verified**: 2026-08-27
+- **Confidence**: high
 
 > AI email coaching for sales outreach. Scores emails in real-time and suggests improvements for response rates.
 
@@ -51,9 +51,9 @@ Tools for relationship building, negotiation, counseling, empathy-driven work, a
 
 - **Category**: interpersonal
 - **Also useful for**: coordination-management, communication
-- **Pricing**: Freemium ($18/seat/mo for Pro)
+- **Pricing**: Freemium ($18/seat/mo Pro, $10 billed annually)
 - **URL**: https://fireflies.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > Meeting assistant that records, transcribes, and generates summaries with action items and sentiment analysis.

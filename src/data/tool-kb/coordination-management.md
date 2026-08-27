@@ -5,9 +5,9 @@ Tools for scheduling, project management, delegation, oversight, and workflow or
 ## Reclaim.ai
 
 - **Category**: coordination-management
-- **Pricing**: Freemium ($10/user/mo for Starter)
+- **Pricing**: Freemium ($10/seat/mo for Starter annual, $12 monthly)
 - **URL**: https://reclaim.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI scheduling assistant that auto-schedules tasks, habits, meetings, and breaks around your calendar.
@@ -20,9 +20,9 @@ Tools for scheduling, project management, delegation, oversight, and workflow or
 
 - **Category**: coordination-management
 - **Also useful for**: information-processing
-- **Pricing**: Paid ($19/user/mo)
+- **Pricing**: Paid ($19/seat/mo for Pro AI annual, $29/seat/mo for Business AI)
 - **URL**: https://www.usemotion.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI project manager that auto-schedules tasks, prioritizes work, and reschedules dynamically as priorities shift.
@@ -34,10 +34,10 @@ Tools for scheduling, project management, delegation, oversight, and workflow or
 ## Clockwise
 
 - **Category**: coordination-management
-- **Pricing**: Freemium ($6.75/user/mo for Teams)
+- **Pricing**: Discontinued (was $6.75/user/mo for Teams)
 - **URL**: https://www.getclockwise.com
-- **Verified**: 2026-04-03
-- **Confidence**: medium
+- **Verified**: 2026-08-27
+- **Confidence**: low
 
 > AI calendar optimization that creates focus time blocks and streamlines meeting scheduling across teams.
 
@@ -48,9 +48,9 @@ Tools for scheduling, project management, delegation, oversight, and workflow or
 ## Asana (with AI)
 
 - **Category**: coordination-management
-- **Pricing**: Freemium ($11/user/mo for Premium)
+- **Pricing**: Freemium ($10.99/user/mo for Starter, billed annually)
 - **URL**: https://asana.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > Project management platform with AI features for status updates, task recommendations, and workflow optimization.
@@ -63,9 +63,9 @@ Tools for scheduling, project management, delegation, oversight, and workflow or
 
 - **Category**: coordination-management
 - **Also useful for**: information-processing
-- **Pricing**: Freemium ($20/mo for Starter)
+- **Pricing**: Freemium ($19.99/mo for Professional, $69/mo for Team)
 - **URL**: https://zapier.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > No-code automation platform connecting 6,000+ apps with AI-powered workflow building.

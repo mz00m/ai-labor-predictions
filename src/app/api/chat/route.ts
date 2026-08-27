@@ -92,7 +92,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { systemPrompt } = buildChatContext(latestUserMessage.content);
+  const { systemPrompt } = await buildChatContext(latestUserMessage.content);
 
   // Keep conversation history manageable (last 20 messages)
   const trimmedMessages = messages.slice(-20).map((m) => ({

@@ -95,8 +95,8 @@
         "value": "Broader synthesis of BTOS + ADP + SCE"
       },
       "nextExpected": "~July-August 2026",
-      "lastSweep": "2026-08-19",
-      "sweepNote": "Swept 2026-08-19: no new edition. The Apr 3, 2026 note remains latest; the Jul 17 buildout note (already ingested) is its de facto successor."
+      "lastSweep": "2026-08-27",
+      "sweepNote": "Swept 2026-08-27: still no new edition. The Apr 3, 2026 note remains latest in this series; the Jul 17 buildout note (already ingested) is its de facto successor. Overdue against cadence, but not behind the publisher."
     },
     {
       "id": "census-btos-ai",
@@ -569,8 +569,8 @@
         "value": "Q1 2026 Atlas incorporations +130% YoY; 100K all-time; all Delaware incorporations +38% YoY"
       },
       "nextExpected": "~September 2026 (Q3 2026 data / Atlas blog cadence)",
-      "lastSweep": "2026-08-20",
-      "sweepNote": "Swept 2026-08-20: no Q2 2026 Atlas incorporation post exists. The nearest item, 'The age of the solopreneur' (Jun 22, 2026), is already ingested as stripe-economics-solopreneur-2026, including its economy-wide '~40% year over year' Delaware incorporation figure. The @atlas and @patrickc X accounts could not be read (no timeline without JS)."
+      "lastSweep": "2026-08-27",
+      "sweepNote": "Swept 2026-08-27 via the Substack RSS feed, which the 2026-08-20 sweep missed by reading the rendered page. Still no Q2/Q3 2026 Atlas incorporation post, so the formation series itself is current at 'The age of the solopreneur' (Jun 22, 2026), already ingested as stripe-economics-solopreneur-2026. Two uningested Tedeschi posts are pending review: 'AI and productivity' (Jul 23, 2026) and 'AI and the city' (Aug 27, 2026). Sweep this feed at /feed, not the homepage."
     },
     {
       "id": "google-atlas",

@@ -6,12 +6,12 @@
 
 - **Function**: creative-design
 - **Also relevant to**: marketing, communications
-- **Why appreciating**: AI generates infinite creative output at near-zero cost. This makes taste the scarcest and most valuable creative skill. A major study of 12 million job postings found that the more AI a company adopts, the more it seeks people with taste, creative judgment, and the ability to tell good from great. The designer who looks at 50 AI-generated options and picks the right one — then adjusts three details that transform it from "competent" to "remarkable" — is operating at the highest level of creative work. Curation and refinement are the new creation. Every brand, publication, and product needs a human with taste standing between AI output and the audience.
-- **How to develop**: Build a personal "why this is good" journal: for every piece of design, writing, or creative work that stops you, articulate specifically why. Not "I like it" — the exact elements that make it work. Practice editing AI output: generate 10 versions of something, pick the best, then edit it. What did you change? Why? Study the work of editors and art directors who shaped culture: how did they make selection decisions?
+- **Why appreciating**: AI generates infinite creative output at near-zero cost. This makes taste the scarcest and most valuable creative skill. PwC's 2026 Global AI Jobs Barometer, drawing on more than a billion job postings across six continents, finds employers weighting judgment, creativity, and leadership more heavily as AI adoption rises, and that the new tasks being added to AI-exposed roles are 2.5 times more likely to draw on judgment, creativity, and empathy than the tasks AI absorbs. A 2025 scoping review of 57 studies of creative practice documents the same shift from the inside: creative work is moving from creation to curation and meta-creation, with expertise reorganizing around evaluation and direction. The designer who looks at 50 AI-generated options, picks the right one, then adjusts three details that take it from "competent" to "remarkable" is operating at the highest level of creative work. One caution: this is appreciation within a contracting field. BLS lists graphic designers among the AI-exposed occupations whose employment is already falling, so taste is what protects you inside creative work, not a reason to assume creative headcount is safe.
+- **How to develop**: Build a personal "why this is good" journal: for every piece of design, writing, or creative work that stops you, articulate specifically why. Not "I like it" — the exact elements that make it work. Practice editing AI output: generate 10 versions of something, pick the best, then edit it. What did you change? Why? Learn to defend a selection out loud — the paid version of this skill is direction, not preference. Study the work of editors and art directors who shaped culture: how did they make selection decisions?
 - **Automation resistance**: creative-taste, cultural-context
 - **Task categories**: creative-generative, analysis-decision
 - **Appreciation score**: 10
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 ## Conceptual Thinking & Meaning-Making
@@ -20,13 +20,13 @@
 
 - **Function**: creative-design
 - **Also relevant to**: marketing, communications
-- **Why appreciating**: AI generates aesthetic output. It does not generate meaning. The designer who creates a visual identity that captures what a brand stands for, the writer who finds the metaphor that makes a complex idea feel simple and true, the filmmaker who captures an emotion that the audience didn't know they were feeling — this is the irreducible core of creative work. As AI commoditizes execution, concept becomes everything.
+- **Why appreciating**: AI generates aesthetic output. It does not generate meaning. A 2025 scoping review of 57 studies of generative AI in creative practice found a consistent reconfiguration of expertise across disciplines: execution commoditizes, and status shifts toward conceptual oversight, evaluation, and direction. The designer who creates a visual identity that captures what a brand stands for, the writer who finds the metaphor that makes a complex idea feel simple and true, the filmmaker who captures an emotion the audience didn't know they were feeling — this remains the irreducible core. Worth naming the limit of the evidence: the review documents how practitioners and researchers describe the shift, not a measured wage or employment premium for conceptual work.
 - **How to develop**: Practice the "what's the one idea?" discipline: before starting any creative project, write one sentence about what it means. Not what it looks like or says — what it means. Study conceptual advertising (Volkswagen's "Think Small," Apple's "Think Different") — these campaigns succeeded because of ideas, not production value. Read widely outside your discipline. The best creative insights come from unexpected connections.
 - **Automation resistance**: creative-taste, cultural-context, judgment-under-ambiguity
 - **Task categories**: creative-generative
 - **Appreciation score**: 10
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 ## Cultural Fluency & Context Sensitivity
 
@@ -34,13 +34,13 @@
 
 - **Function**: creative-design
 - **Also relevant to**: marketing, communications
-- **Why appreciating**: AI is trained on historical data and has no cultural antenna for the present moment. It cannot sense that a visual reference that worked last year now reads differently because of a cultural event. It cannot distinguish between respectful cultural engagement and appropriation. As brands increasingly use AI-generated content, the creative professional who ensures cultural sensitivity and relevance becomes essential — one misstep can undo years of brand equity.
+- **Why appreciating**: The old version of this argument — that AI is frozen in its training data and blind to the present — no longer holds; models retrieve current information routinely. The durable gap is narrower and harder: judging what a reference will connote to a specific audience right now, distinguishing respectful engagement from appropriation, and being accountable for the call. The stakes have risen because audiences are primed to be suspicious. Gartner's 2026 consumer research finds 68% of consumers frequently wonder whether what they see online is real, and roughly half prefer brands that keep AI out of consumer-facing content. In that environment a culturally tone-deaf AI-assisted asset reads as carelessness about the audience, and one misstep can undo years of brand equity.
 - **How to develop**: Build diverse creative feedback circles — people from different backgrounds, generations, and perspectives who will tell you honestly when something doesn't land. Immerse yourself in culture beyond your bubble: attend events, follow voices, read publications outside your demographic. Study both successes (campaigns that crossed cultural boundaries) and failures (brands that got it wrong). Practice the "who might this hurt?" check before publishing.
 - **Automation resistance**: cultural-context, ethical-reasoning
 - **Task categories**: creative-generative, communication
 - **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 ## Craft Excellence & Detail Obsession
 

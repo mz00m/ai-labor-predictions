@@ -82,14 +82,17 @@ function parseList(value: string, validValues: string[]): string[] {
     .filter((s) => s && validValues.includes(s));
 }
 
+const STALE_DAYS = 90;
+const EXPIRED_DAYS = 180;
+
+function daysSince(isoDate: string): number {
+  const then = isoDate ? new Date(isoDate) : new Date(0);
+  return Math.floor((Date.now() - then.getTime()) / (1000 * 60 * 60 * 24));
+}
+
 function computeStale(verified: string): boolean {
   if (!verified) return true;
-  const now = new Date();
-  const verifiedDate = new Date(verified);
-  const days = Math.floor(
-    (now.getTime() - verifiedDate.getTime()) / (1000 * 60 * 60 * 24)
-  );
-  return days > 90;
+  return daysSince(verified) > STALE_DAYS;
 }
 
 // ---------------------------------------------------------------------------
@@ -298,3 +301,19 @@ fs.writeFileSync(OUTPUT, JSON.stringify(kb, null, 2));
 console.log(
   `\nDone: ${kb.totalTools} tools + ${kb.totalCapabilities} capabilities compiled to ${OUTPUT}${kb.staleCount > 0 ? ` (${kb.staleCount} stale)` : ""}`
 );
+
+// These records drive user-facing recommendations, including pricing, so an
+// unverified one is a wrong-answer risk rather than untidy metadata. `stale`
+// warns at 90 days; past EXPIRED_DAYS the build fails instead of shipping
+// claims nobody has rechecked in half a year.
+const expired = [
+  ...Object.values(kb.tools).flat(),
+  ...Object.values(kb.capabilities).flat(),
+].filter((r) => daysSince(r.verified) > EXPIRED_DAYS);
+
+if (expired.length > 0) {
+  console.error(`\n${expired.length} records are past the ${EXPIRED_DAYS}-day verification limit:`);
+  for (const r of expired) console.error(`  ${r.name} (verified ${r.verified || "never"})`);
+  console.error("\nRe-verify in src/data/knowledge-base/, or remove the record.\n");
+  process.exit(1);
+}

@@ -36,6 +36,11 @@ export interface Source {
   datePublished: string;
   dateAdded?: string;
   excerpt?: string;
+  /**
+   * Why `url` is empty. Client-distributed research notes have no public link,
+   * and without this an empty URL is indistinguishable from a missed field.
+   */
+  accessNote?: string;
 }
 
 export interface HistoricalDataPoint {

@@ -6,23 +6,23 @@ Tools for research, evaluation, strategic planning, judgment calls, and data-dri
 
 - **Category**: analysis-decision
 - **Also useful for**: information-processing
-- **Pricing**: Freemium ($20/mo for Pro)
-- **URL**: https://www.perplexity.ai
-- **Verified**: 2026-04-03
+- **Pricing**: Freemium ($20/mo Pro, $200/mo Max; Education Pro $10/mo)
+- **URL**: https://www.perplexity.ai/hub/pricing
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI-powered research assistant that searches the web and synthesizes answers with citations.
 
 **Best for:** Research-heavy roles that need current, cited information. Replaces the "open 15 tabs and read them all" workflow. Pro tier includes academic paper search and file analysis.
 
-**Limitations:** Citations are not always perfectly matched to claims. Can miss niche or specialized sources. Not a replacement for deep domain expertise.
+**Limitations:** Citations are not always perfectly matched to claims. Free tier caps Pro Searches to a handful per day. Can miss niche or specialized sources. Not a replacement for deep domain expertise. Max at $200/mo is a big step up from Pro and only worth it for sustained deep-research volume.
 
 ## Tableau (with AI)
 
 - **Category**: analysis-decision
-- **Pricing**: Paid ($75/user/mo for Creator)
+- **Pricing**: Paid ($75/user/mo for Creator, billed annually; $42 Explorer, $15 Viewer)
 - **URL**: https://www.tableau.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > Business intelligence platform with AI-powered natural language queries and automated insights.
@@ -35,9 +35,9 @@ Tools for research, evaluation, strategic planning, judgment calls, and data-dri
 
 - **Category**: analysis-decision
 - **Also useful for**: information-processing
-- **Pricing**: Freemium ($20/mo for Pro)
+- **Pricing**: Freemium (free tier ~15 messages/mo; $20/mo for Plus, $45/mo for Pro)
 - **URL**: https://julius.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > AI data analyst that processes spreadsheets, creates visualizations, and runs statistical analyses from natural language.
@@ -50,9 +50,9 @@ Tools for research, evaluation, strategic planning, judgment calls, and data-dri
 
 - **Category**: analysis-decision
 - **Also useful for**: information-processing, coordination-management
-- **Pricing**: Add-on ($10/member/mo on top of Notion)
-- **URL**: https://www.notion.so/product/ai
-- **Verified**: 2026-04-03
+- **Pricing**: Bundled into Notion Business ($20/member/mo); trial-only AI on Free and Plus
+- **URL**: https://www.notion.com/product/ai
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI features built into Notion's workspace: summarize pages, extract action items, generate content, answer questions across your workspace.
@@ -65,9 +65,9 @@ Tools for research, evaluation, strategic planning, judgment calls, and data-dri
 
 - **Category**: analysis-decision
 - **Also useful for**: information-processing
-- **Pricing**: Paid ($10/user/mo for Pro, Copilot requires Premium)
+- **Pricing**: Paid ($14/user/mo for Pro, $24.99/user/mo for Premium Per User; Copilot requires PPU or Fabric capacity)
 - **URL**: https://powerbi.microsoft.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > Microsoft's BI platform with AI-powered natural language queries, automated report generation, and anomaly detection.

@@ -72,7 +72,7 @@ export function formatToolContext(tasks: TaskWithCategory[]): string {
     return [
       `- **${t.name}** [${t.category}${crossCats}]`,
       `  ${t.pitch}`,
-      `  Pricing: ${t.pricing}`,
+      `  Pricing: ${t.pricing} (verified ${t.verified}${t.stale ? ", may be out of date" : ""})`,
       `  Best for: ${t.bestFor}`,
       `  Limitations: ${t.limitations}`,
     ].join("\n");
@@ -83,6 +83,7 @@ export function formatToolContext(tasks: TaskWithCategory[]): string {
     "",
     "IMPORTANT: Only recommend tools from this list. Do not invent or hallucinate tools.",
     "If no tool fits a specific task, say \"no established tool yet\" rather than guessing.",
+    "Where a price is marked as possibly out of date, present it as approximate rather than exact.",
     "",
     ...lines,
   ].join("\n");

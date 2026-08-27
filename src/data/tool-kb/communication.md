@@ -6,9 +6,9 @@ Tools for emails, reports, presentations, correspondence, and written/verbal com
 
 - **Category**: communication
 - **Also useful for**: creative-generative
-- **Pricing**: Freemium ($12/mo for Premium)
+- **Pricing**: Freemium ($12/mo for Pro)
 - **URL**: https://www.grammarly.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI writing assistant for grammar, clarity, tone, and style across all writing surfaces.
@@ -21,10 +21,10 @@ Tools for emails, reports, presentations, correspondence, and written/verbal com
 
 - **Category**: communication
 - **Also useful for**: creative-generative
-- **Pricing**: Paid ($49/mo for Creator)
+- **Pricing**: Paid ($69/mo for Pro, $59/mo billed annually)
 - **URL**: https://www.jasper.ai
-- **Verified**: 2026-04-03
-- **Confidence**: medium
+- **Verified**: 2026-08-27
+- **Confidence**: high
 
 > AI content platform for marketing copy, blog posts, social media, and brand-consistent writing.
 
@@ -36,9 +36,9 @@ Tools for emails, reports, presentations, correspondence, and written/verbal com
 
 - **Category**: communication
 - **Also useful for**: coordination-management
-- **Pricing**: Freemium ($16.99/mo for Pro)
+- **Pricing**: Freemium ($16.99/user/mo for Pro, $8.33 billed annually)
 - **URL**: https://otter.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > Real-time meeting transcription, summarization, and action item extraction.
@@ -50,9 +50,9 @@ Tools for emails, reports, presentations, correspondence, and written/verbal com
 ## Loom
 
 - **Category**: communication
-- **Pricing**: Freemium ($12.50/mo for Business)
+- **Pricing**: Freemium ($18/user/mo for Business; AI features require Business + AI at $24/user/mo)
 - **URL**: https://www.loom.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > Async video messaging with AI-powered summaries, chapters, and transcripts.
@@ -65,13 +65,13 @@ Tools for emails, reports, presentations, correspondence, and written/verbal com
 
 - **Category**: communication
 - **Also useful for**: creative-generative
-- **Pricing**: Freemium ($10/mo for Plus)
-- **URL**: https://gamma.app
-- **Verified**: 2026-04-03
+- **Pricing**: Freemium ($10/mo Plus, $8/mo billed annually; Ultra $100/mo)
+- **URL**: https://gamma.app/pricing
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > AI-powered presentation and document builder that generates polished decks from text prompts.
 
 **Best for:** Creating presentations quickly without design skills. Takes text input or outlines and generates visually polished slides. Good for internal presentations, pitch decks, and reports.
 
-**Limitations:** Limited customization compared to PowerPoint/Keynote. Templates can feel samey. Not ideal for highly branded or pixel-perfect presentations.
+**Limitations:** The free plan grants 400 AI credits once at signup and they do not refresh, so sustained use requires a paid plan. Paid tiers meter monthly credits (1,000 on Plus, 4,000 on Pro, 20,000 on Ultra). Limited customization compared to PowerPoint/Keynote. Templates can feel samey. Not ideal for highly branded or pixel-perfect presentations. The intermediate Pro price is reported inconsistently across sources ($18-$25/mo), so confirm at checkout.

@@ -4,28 +4,28 @@
 
 - **Function**: legal
 - **Also useful for**: finance
-- **Pricing**: Enterprise (custom pricing)
-- **URL**: https://casetext.com
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Pricing**: Enterprise (quote-only, sold as a Westlaw add-on)
+- **URL**: https://legal.thomsonreuters.com/en/products/cocounsel
+- **Verified**: 2026-08-27
+- **Confidence**: low
 
-> AI legal research assistant that reviews documents, identifies relevant case law, and drafts legal memos.
+> Absorbed into Thomson Reuters. The standalone Casetext product was retired on 1 April 2025 and the technology now ships as CoCounsel Legal, an AI assistant grounded in Westlaw and Practical Law.
 
-**Best for:** Lawyers and legal professionals. Analyze contracts, research case law, draft discovery responses, summarize depositions. Dramatically reduces time on legal research.
+**Best for:** Lawyers already licensed for Westlaw. Reviews documents, searches case law, drafts discovery responses, and summarizes depositions.
 
-**Limitations:** Requires legal expertise to verify outputs. Cannot replace attorney judgment on strategy. Enterprise pricing limits accessibility for solo practitioners.
+**Limitations:** The Casetext brand no longer exists — casetext.com redirects to Thomson Reuters, and the affordable standalone subscription is gone. Pricing is quote-only and bundled with Westlaw; third-party 2026 estimates put a seat in the $100-$640/user/mo range. Outputs still require attorney verification.
 
 ## Harvey AI
 
 - **Function**: legal
 - **Also useful for**: finance
-- **Pricing**: Enterprise (custom pricing)
+- **Pricing**: Enterprise (quote-only; reported ~$1,200/user/mo, ~20-seat minimum)
 - **URL**: https://www.harvey.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > AI platform purpose-built for legal work: contract analysis, due diligence, regulatory research, and litigation support.
 
-**Best for:** Law firms and corporate legal departments. Handles complex legal reasoning, multi-jurisdictional research, and large-scale document review. Used by elite firms (Allen & Overy, PwC).
+**Best for:** Law firms and corporate legal departments. Handles complex legal reasoning, multi-jurisdictional research, and large-scale document review. Used by 75+ AmLaw 100 firms, including A&O Shearman and Latham & Watkins, plus in-house teams at Bayer and Comcast.
 
-**Limitations:** Enterprise-only pricing. Requires firm-wide deployment and training. Best for large firms with high-volume, complex work.
+**Limitations:** No published pricing; every deal is quoted. Reported seat minimums (~20-25) put an entry contract in the low six figures per year, which rules it out for solo and small firms. Requires firm-wide deployment and training.

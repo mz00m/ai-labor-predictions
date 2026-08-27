@@ -8,6 +8,7 @@ import { getSourceCountsByTier } from "@/lib/search-sources";
 import EvidenceFilter from "@/components/EvidenceFilter";
 import confirmedSources from "@/data/confirmed-sources.json";
 import { getAllPredictions } from "@/lib/data-loader";
+import { SOURCE_COUNT, LINKED_SOURCE_COUNT } from "@/lib/constants";
 
 /* ------------------------------------------------------------------ */
 /*  Types & data loading                                               */
@@ -22,6 +23,8 @@ interface SourceEntry {
   datePublished: string;
   excerpt?: string;
   usedIn: string[];
+  /** Why this source has no public URL (e.g. client-distributed research note). */
+  accessNote?: string;
 }
 
 const rawSources = confirmedSources as {
@@ -39,6 +42,7 @@ const allSources: SourceEntry[] = Object.values(rawSources.sources)
     datePublished: s.datePublished,
     excerpt: s.excerpt ?? "",
     usedIn: s.usedIn ?? [],
+    accessNote: s.accessNote,
   }))
   .sort((a, b) => b.datePublished.localeCompare(a.datePublished));
 
@@ -123,8 +127,9 @@ export default function ResearchPage() {
           All Sources
         </h1>
         <p className="text-lg text-[var(--muted)] leading-relaxed max-w-2xl">
-          {allSources.length} verified sources powering every prediction on this
-          site. Search by keyword, filter by evidence tier, or browse by date.
+          {SOURCE_COUNT} verified sources, {LINKED_SOURCE_COUNT} of them cited by
+          a prediction graph. The rest inform the research without being plotted.
+          Search by keyword, filter by evidence tier, or browse by date.
         </p>
       </header>
 
@@ -287,6 +292,11 @@ function SourceRow({ source }: { source: SourceEntry }) {
               </span>
             )}
           </div>
+          {!source.url && source.accessNote && (
+            <p className="text-sm text-[var(--muted)] mt-1 italic">
+              {source.accessNote}
+            </p>
+          )}
 
           {/* Meta line */}
           <div className="flex items-center gap-2 mt-1 flex-wrap">

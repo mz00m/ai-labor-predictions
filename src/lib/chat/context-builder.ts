@@ -10,6 +10,7 @@ import { getAllPredictions, getLastUpdated } from "../data-loader";
 import { Prediction, Source, EVIDENCE_TIER_LABELS } from "../types";
 import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "../constants";
 import { getSourceContents } from "./source-content";
+import { rankSources, getPredictionTitle } from "../search-sources";
 import type { SourceContentEntry } from "./source-content";
 import readingListData from "@/data/reading-list.json";
 import {
@@ -378,6 +379,7 @@ function selectRelevantPageContent(query: string): string[] {
 // bounded regardless of how many sources a graph accumulates.
 const MAX_SOURCES_PER_PREDICTION = 12;
 const MAX_ENRICHED_SOURCES = 6;
+const MAX_CORPUS_SOURCES = 6;
 const MAX_ABSTRACT_CHARS = 400;
 const MAX_FINDING_CHARS = 200;
 const MAX_KEY_FINDINGS = 3;
@@ -525,13 +527,34 @@ function buildPredictionIndex(predictions: Prediction[]): string {
   return lines.join("\n");
 }
 
+/** Format corpus hits that no selected prediction already covers. */
+function formatCorpusSources(hits: { id: string; title: string; publisher: string; datePublished: string; evidenceTier: number; usedIn: string[] }[]): string {
+  const contentMap = getSourceContents(hits.map((h) => h.id));
+  const lines = ["# Other Relevant Sources in the Research Corpus", ""];
+  lines.push(
+    "These matched the question but are not plotted on the graphs above. Use them for context; do not present them as chart data.",
+    ""
+  );
+
+  for (const hit of hits) {
+    const graphs = hit.usedIn.length > 0
+      ? ` | also informs: ${hit.usedIn.map(getPredictionTitle).join(", ")}`
+      : " | not plotted on any graph";
+    lines.push(`- **${hit.title}** — ${hit.publisher}, ${hit.datePublished} (Tier ${hit.evidenceTier}${graphs})`);
+    const abstract = contentMap.get(hit.id)?.abstract;
+    if (abstract) lines.push(`  ${abstract.slice(0, MAX_ABSTRACT_CHARS)}`);
+  }
+
+  return lines.join("\n");
+}
+
 export interface ChatContext {
   systemPrompt: string;
   relevantPredictionSlugs: string[];
 }
 
 /** Build full context for the chatbot given a user query */
-export function buildChatContext(userQuery: string): ChatContext {
+export async function buildChatContext(userQuery: string): Promise<ChatContext> {
   const allPredictions = getAllPredictions();
   const lastUpdated = getLastUpdated();
   const relevant = selectRelevantPredictions(userQuery, allPredictions);
@@ -656,6 +679,21 @@ Data caveats (apply lightly, don't lecture):
       used += block.length;
       included.push(p.slug);
     }
+  }
+
+  // Prediction selection only reaches sources a graph cites, which leaves the
+  // 40-odd registry sources attached to no graph invisible to chat even though
+  // they are searchable on the site. Rank the whole corpus and append the top
+  // hits we have not already shown.
+  const alreadyShown = new Set(allSourceIds);
+  const corpusHits = (await rankSources(userQuery, MAX_CORPUS_SOURCES * 3)).filter(
+    (s) => !alreadyShown.has(s.id)
+  );
+
+  if (corpusHits.length > 0) {
+    const used = sections.reduce((n, s) => n + s.length, 0);
+    const block = formatCorpusSources(corpusHits.slice(0, MAX_CORPUS_SOURCES));
+    if (used + block.length <= MAX_SYSTEM_PROMPT_CHARS) sections.push(block);
   }
 
   return {

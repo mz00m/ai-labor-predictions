@@ -6,24 +6,24 @@ Tools for data entry, document handling, lookups, form filling, and routine info
 
 - **Category**: information-processing
 - **Also useful for**: communication, analysis-decision
-- **Pricing**: Freemium ($20/mo for Plus)
-- **URL**: https://chat.openai.com
-- **Verified**: 2026-04-03
+- **Pricing**: Freemium ($8/mo Go, $20/mo Plus, $100 or $200/mo Pro)
+- **URL**: https://chatgpt.com
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > General-purpose AI assistant for text processing, summarization, data extraction, and Q&A.
 
-**Best for:** Ad-hoc information lookup, document summarization, data extraction from unstructured text. Works across virtually all knowledge work tasks.
+**Best for:** Ad-hoc information lookup, document summarization, data extraction from unstructured text. Works across virtually all knowledge work tasks. The $8/mo Go tier sits between Free and Plus for light daily users; Plus adds the thinking models and the Codex coding agent.
 
-**Limitations:** No persistent memory across sessions (without custom GPTs). Can hallucinate facts. Not suitable for tasks requiring real-time data without plugins.
+**Limitations:** Can hallucinate facts. Free and Go tiers run smaller models with lower file-upload, image and deep-research allowances. Pro is now split into two price points ($100 and $200/mo) with different usage allowances, so confirm which one you are buying.
 
 ## Claude
 
 - **Category**: information-processing
 - **Also useful for**: communication, analysis-decision, creative-generative
-- **Pricing**: Freemium ($20/mo for Pro)
+- **Pricing**: Freemium ($20/mo for Pro, $17/mo billed annually)
 - **URL**: https://claude.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI assistant with strong document analysis, long-context processing, and careful reasoning.
@@ -36,9 +36,9 @@ Tools for data entry, document handling, lookups, form filling, and routine info
 
 - **Category**: information-processing
 - **Also useful for**: communication, coordination-management
-- **Pricing**: Paid ($30/user/mo on top of M365)
+- **Pricing**: Paid ($30/user/mo enterprise add-on; $21/user/mo for orgs under 300 seats)
 - **URL**: https://www.microsoft.com/en-us/microsoft-copilot
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI assistant embedded in Word, Excel, PowerPoint, Outlook, and Teams.
@@ -51,9 +51,9 @@ Tools for data entry, document handling, lookups, form filling, and routine info
 
 - **Category**: information-processing
 - **Also useful for**: communication, coordination-management
-- **Pricing**: Included with Workspace Business/Enterprise ($14+/user/mo)
-- **URL**: https://workspace.google.com/products/gemini/
-- **Verified**: 2026-04-03
+- **Pricing**: Included with Workspace ($7/user/mo Starter, limited AI; $14/user/mo Standard for full Gemini)
+- **URL**: https://workspace.google.com/solutions/ai/
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI assistant embedded in Gmail, Docs, Sheets, Slides, and Meet.
@@ -65,9 +65,9 @@ Tools for data entry, document handling, lookups, form filling, and routine info
 ## Docsumo
 
 - **Category**: information-processing
-- **Pricing**: Freemium (paid plans from $500/mo)
+- **Pricing**: Paid ($299/mo Starter for 1,000 pages, $799/mo Growth for 5,000; 14-day free trial)
 - **URL**: https://www.docsumo.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > Intelligent document processing for invoices, receipts, bank statements, and financial documents.
@@ -80,9 +80,9 @@ Tools for data entry, document handling, lookups, form filling, and routine info
 
 - **Category**: information-processing
 - **Also useful for**: coordination-management
-- **Pricing**: Enterprise (custom pricing)
+- **Pricing**: Enterprise (quote-only; free Community Edition)
 - **URL**: https://www.automationanywhere.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > Enterprise RPA platform for automating repetitive digital tasks across applications.

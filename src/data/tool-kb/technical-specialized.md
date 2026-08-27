@@ -6,9 +6,9 @@ Tools for domain-specific skills, professional certifications, and specialized t
 
 - **Category**: technical-specialized
 - **Also useful for**: creative-generative
-- **Pricing**: Freemium ($10/mo for Individual)
+- **Pricing**: Freemium ($10/mo for Pro; $39 Pro+, $100 Max)
 - **URL**: https://github.com/features/copilot
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI pair programmer that suggests code completions, generates functions, and explains code inline in your IDE.
@@ -21,10 +21,10 @@ Tools for domain-specific skills, professional certifications, and specialized t
 
 - **Category**: technical-specialized
 - **Also useful for**: analysis-decision
-- **Pricing**: Enterprise (custom pricing)
-- **URL**: https://casetext.com
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Pricing**: Enterprise (quote-only, sold as a Westlaw add-on)
+- **URL**: https://legal.thomsonreuters.com/en/products/cocounsel
+- **Verified**: 2026-08-27
+- **Confidence**: low
 
 > AI legal research assistant that reviews documents, identifies relevant case law, and drafts legal memos.
 
@@ -36,9 +36,9 @@ Tools for domain-specific skills, professional certifications, and specialized t
 
 - **Category**: technical-specialized
 - **Also useful for**: analysis-decision
-- **Pricing**: Freemium ($10/mo for Plus)
+- **Pricing**: Freemium ($49/user/mo for Pro; $169 Scale)
 - **URL**: https://elicit.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: high
 
 > AI research assistant for finding, reading, and synthesizing academic papers.
@@ -51,9 +51,9 @@ Tools for domain-specific skills, professional certifications, and specialized t
 
 - **Category**: technical-specialized
 - **Also useful for**: communication
-- **Pricing**: Paid ($49/mo for Starter)
+- **Pricing**: Paid (from ~$50/mo for Starter; tiers scale with entities connected)
 - **URL**: https://www.fathomhq.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > AI-powered financial reporting and analysis tool that generates narrative reports from accounting data.
@@ -66,9 +66,9 @@ Tools for domain-specific skills, professional certifications, and specialized t
 
 - **Category**: technical-specialized
 - **Also useful for**: analysis-decision
-- **Pricing**: Enterprise (custom pricing)
+- **Pricing**: Enterprise (quote-only; reported ~$1,200/user/mo, ~20-seat minimum)
 - **URL**: https://www.harvey.ai
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > AI platform purpose-built for legal work: contract analysis, due diligence, regulatory research, and litigation support.
@@ -81,10 +81,10 @@ Tools for domain-specific skills, professional certifications, and specialized t
 
 - **Category**: technical-specialized
 - **Also useful for**: analysis-decision
-- **Pricing**: Freemium (Cloud from $100/mo)
+- **Pricing**: Freemium (Developer free; Starter $100/user/mo plus usage)
 - **URL**: https://www.getdbt.com
-- **Verified**: 2026-04-03
-- **Confidence**: medium
+- **Verified**: 2026-08-27
+- **Confidence**: high
 
 > Data transformation tool with AI-powered SQL generation, documentation, and lineage tracking.
 

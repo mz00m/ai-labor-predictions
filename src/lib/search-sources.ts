@@ -159,6 +159,75 @@ export function searchSources(query: string, limit = 8): SearchResult[] {
     .slice(0, limit);
 }
 
+/* ------------------------------------------------------------------ */
+/*  Ranked retrieval (BM25)                                            */
+/* ------------------------------------------------------------------ */
+
+const K1 = 1.5;
+const B = 0.75;
+
+let tokenCache: { docs: Map<string, string[]>; avgdl: number } | null = null;
+
+function getDocTokens() {
+  if (tokenCache) return tokenCache;
+  const docs = new Map<string, string[]>();
+  let totalLen = 0;
+  haystacks.forEach((hay, id) => {
+    const toks = hay.split(/\W+/).filter(Boolean);
+    docs.set(id, toks);
+    totalLen += toks.length;
+  });
+  tokenCache = { docs, avgdl: totalLen / Math.max(1, docs.size) };
+  return tokenCache;
+}
+
+/**
+ * BM25-ranked retrieval over the whole active corpus.
+ *
+ * `searchSources` requires every token to appear, which suits a search box but
+ * returns nothing for a conversational query. This ranks instead, so a question
+ * phrased in prose still reaches sources — including the ones no prediction
+ * graph cites, which are otherwise unreachable outside the search page.
+ */
+export async function rankSources(query: string, limit = 6): Promise<SearchResult[]> {
+  const wasLoaded = fullIndexLoaded;
+  await loadFullIndex();
+  if (fullIndexLoaded && !wasLoaded) tokenCache = null;
+
+  const terms = query.toLowerCase().split(/\W+/).filter((t) => t.length > 2);
+  if (terms.length === 0) return [];
+
+  const { docs, avgdl } = getDocTokens();
+  const n = docs.size;
+  const scores = new Map<string, number>();
+
+  for (const term of Array.from(new Set(terms))) {
+    const tfByDoc = new Map<string, number>();
+    docs.forEach((toks, id) => {
+      let tf = 0;
+      for (const tok of toks) {
+        if (tok === term || (term.length > 4 && tok.startsWith(term))) tf++;
+      }
+      if (tf > 0) tfByDoc.set(id, tf);
+    });
+    if (tfByDoc.size === 0) continue;
+
+    const idf = Math.log(1 + (n - tfByDoc.size + 0.5) / (tfByDoc.size + 0.5));
+    tfByDoc.forEach((tf, id) => {
+      const dl = docs.get(id)!.length;
+      const norm = (tf * (K1 + 1)) / (tf + K1 * (1 - B + (B * dl) / avgdl));
+      scores.set(id, (scores.get(id) ?? 0) + idf * norm);
+    });
+  }
+
+  const byId = new Map(allSources.map((s) => [s.id, s]));
+  return Array.from(scores.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([id]) => byId.get(id)!)
+    .filter(Boolean);
+}
+
 /**
  * Map a prediction slug to its human-readable title.
  */

@@ -107,7 +107,13 @@ function formatDate(dateStr: string): string {
 console.log("Loading data...");
 
 const sourcesData = readJSON(path.join(DATA, "confirmed-sources.json"));
-const sources: Record<string, any> = sourcesData.sources;
+// Retired sources stay in the registry for provenance but must not get wiki
+// pages, or the wiki reports a larger corpus than the site actually searches.
+const sources: Record<string, any> = Object.fromEntries(
+  Object.entries(sourcesData.sources as Record<string, any>).filter(
+    ([, s]) => s._action !== "REMOVE"
+  )
+);
 const sourceIds = Object.keys(sources);
 
 const predictionFiles = fs
@@ -122,6 +128,18 @@ const predictions: any[] = predictionFiles.map((f) =>
 console.log(
   `Loaded ${sourceIds.length} sources, ${predictions.length} predictions`
 );
+
+// The site quotes site-stats.json everywhere. If the wiki compiles a different
+// number of sources, one of the two is wrong and readers get a count they
+// cannot reconcile — which is exactly the drift this artifact exists to prevent.
+const siteStats = readJSON(path.join(DATA, "site-stats.json"));
+if (sourceIds.length !== siteStats.sourceCount) {
+  console.error(
+    `\nWiki compiled ${sourceIds.length} sources but site-stats.json says ${siteStats.sourceCount}.` +
+      `\nRun 'npm run build:stats' first, or reconcile the two filters.\n`
+  );
+  process.exit(1);
+}
 
 // ── Build reverse index: source → predictions ────────────────
 

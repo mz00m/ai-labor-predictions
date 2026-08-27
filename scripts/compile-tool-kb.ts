@@ -27,6 +27,14 @@ const VALID_CATEGORIES: TaskCategory[] = [
   "technical-specialized",
 ];
 
+const STALE_DAYS = 90;
+const EXPIRED_DAYS = 180;
+
+function daysSince(isoDate: string): number {
+  const then = isoDate ? new Date(isoDate) : new Date(0);
+  return Math.floor((Date.now() - then.getTime()) / (1000 * 60 * 60 * 24));
+}
+
 function parseTool(block: string): Tool | null {
   const nameMatch = block.match(/^## (.+)$/m);
   if (!nameMatch) return null;
@@ -59,11 +67,7 @@ function parseTool(block: string): Tool | null {
     .filter((s) => s && VALID_CATEGORIES.includes(s as TaskCategory)) as TaskCategory[];
 
   const verified = field("Verified");
-  const now = new Date();
-  const verifiedDate = verified ? new Date(verified) : new Date(0);
-  const daysSinceVerified = Math.floor(
-    (now.getTime() - verifiedDate.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  const daysSinceVerified = daysSince(verified);
 
   const confidence = field("Confidence") as Tool["confidence"];
 
@@ -80,7 +84,7 @@ function parseTool(block: string): Tool | null {
     pitch: pitchMatch ? pitchMatch[1].trim() : "",
     bestFor: bestForMatch ? bestForMatch[1].trim() : "",
     limitations: limitationsMatch ? limitationsMatch[1].trim() : "",
-    stale: daysSinceVerified > 90,
+    stale: daysSinceVerified > STALE_DAYS,
   };
 }
 
@@ -136,3 +140,17 @@ fs.writeFileSync(OUTPUT, JSON.stringify(kb, null, 2));
 console.log(
   `\nDone: ${kb.totalTools} tools compiled to ${OUTPUT}${kb.staleCount > 0 ? ` (${kb.staleCount} stale)` : ""}`
 );
+
+// The Action Plan quotes these prices to users, so an unverified record is a
+// wrong-price risk, not just untidy metadata. 90 days warns; past EXPIRED_DAYS
+// the build fails rather than shipping figures nobody has checked in half a year.
+const expired = Object.values(kb.categories)
+  .flat()
+  .filter((t) => daysSince(t.verified) > EXPIRED_DAYS);
+
+if (expired.length > 0) {
+  console.error(`\n${expired.length} tool records are past the ${EXPIRED_DAYS}-day verification limit:`);
+  for (const t of expired) console.error(`  ${t.name} (verified ${t.verified})`);
+  console.error("\nRe-verify pricing and URLs in src/data/tool-kb/, or remove the record.\n");
+  process.exit(1);
+}

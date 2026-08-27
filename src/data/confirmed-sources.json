@@ -1,6 +1,6 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-26",
+  "lastUpdated": "2026-08-27",
   "totalSources": 692,
   "verifiedCount": 682,
   "sources": {
@@ -15,8 +15,8 @@
       "verified": true,
       "synthetic": false,
       "usedIn": [
-        "overall-us-displacement",
-        "early-career-employment-decline"
+        "early-career-employment-decline",
+        "overall-us-displacement"
       ],
       "dateAdded": "2026-08-26"
     },
@@ -47,8 +47,8 @@
       "verified": true,
       "synthetic": false,
       "usedIn": [
-        "overall-us-displacement",
         "early-career-employment-decline",
+        "overall-us-displacement",
         "white-collar-professional-displacement"
       ],
       "dateAdded": "2026-08-26"
@@ -64,10 +64,10 @@
       "verified": true,
       "synthetic": false,
       "usedIn": [
-        "overall-us-displacement",
-        "early-career-employment-decline",
+        "ai-adoption-rate",
         "customer-service-automation",
-        "ai-adoption-rate"
+        "early-career-employment-decline",
+        "overall-us-displacement"
       ],
       "dateAdded": "2026-08-26"
     },
@@ -96,10 +96,10 @@
       "datePublished": "2026-04-22",
       "excerpt": "Survey of 80,508 Claude.ai users (personal accounts). One fifth voiced concern about economic displacement. Perceived job threat correlated with observed exposure: for every 10pp increase in exposure, perceived threat increased by 1.3pp; top-quartile exposure workers mentioned worry 3x as often as bottom-quartile. Early-career respondents much more likely to express concern than senior workers. Mean productivity rating 5.1/7 ('substantially more productive'); 3% reported negative or neutral impacts, 42% no clear indication. 48% of users mentioning productivity cited scope (new tasks), 40% speed. Management occupations (mostly entrepreneurs) and computer/math groups showed largest gains; scientific and legal professions the mildest. 10% of respondents naming a beneficiary said employers/clients capture the surplus; only 60% of early-career workers said they personally benefited vs 80% of senior professionals. U-shaped relationship between reported speedup and perceived job threat: both those slowed and those sped up most are more anxious.",
       "usedIn": [
+        "genai-work-adoption",
         "overall-us-displacement",
-        "workforce-ai-exposure",
         "white-collar-professional-displacement",
-        "genai-work-adoption"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -113,9 +113,9 @@
       "datePublished": "2026-04-01",
       "excerpt": "NBER Working Paper 35046. Survey of 69 economists, 52 AI industry/policy professionals, 38 superforecasters, and 401 general public on AI's economic effects. Unconditional median economist forecasts: GDP growth 2.5% for 2025–2029, LFPR 61.0% for 2030 (vs 62.6% Jan 2025), 58.3% for 2050. Only 14.0% mean probability assigned to a 'rapid' AI progress scenario by 2030. Conditional on rapid scenario: GDP growth 3.5%, LFPR falling to 55.0% by 2050 (~10M lost jobs attributable to AI), wealth inequality reaching 80.0% held by top 10% by 2050, work hours AI-assisted rising from 3.35% (2024) to 10.1% (2030 unconditional) or 24.2% (2030 rapid). Variance decomposition finds expert disagreement driven primarily by different beliefs about economic effects of highly capable AI systems, not by disagreement about AI capability progress. Economists support retraining (71.8%) over job guarantees (13.7%) or UBI (37.4%); general public supports both.",
       "usedIn": [
+        "genai-work-adoption",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "genai-work-adoption"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -145,8 +145,8 @@
       "datePublished": "2026-04-13",
       "excerpt": "28% of employed U.S. adults use AI a few times a week or more; 13% use daily (up from 10% in 2024). 41% of employees report their organization has integrated AI tools. 23% in AI-adopting orgs report workforce reductions vs. 16% in non-adopting. Survey of 23,717 employed U.S. adults, margin of error +/-0.9pp.",
       "usedIn": [
-        "genai-work-adoption",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
@@ -160,8 +160,8 @@
       "datePublished": "2025-11-14",
       "excerpt": "LLMs disrupted labor market signaling on Freelancer.com coding jobs (2.7M applications, 61K posts). Employer WTP for 1 SD signal increase fell from $25.67 to $14.85 (42% decline). Counterfactual no-signaling equilibrium: 5% avg wage decline, 1.5% hiring reduction, 4% worker surplus loss, top-quintile hired 19% less, bottom-quintile hired 14% more. 14% of post-LLM apps used AI writing tool.",
       "usedIn": [
-        "freelancer-rate-impact",
         "entry-level-wage-impact",
+        "freelancer-rate-impact",
         "genai-work-adoption",
         "median-wage-impact"
       ],
@@ -178,8 +178,8 @@
       "excerpt": "AI adoption in core business functions ranges from 1.9% in Japan to 6.1% in the United States in 2024. Among SMEs using generative AI, only 29% report using it in their core activities. Annual labour productivity growth stemming from AI could range from 0.4 to 1.3 percentage points for the US over the next decade. Around a quarter of OECD workers are exposed to generative AI. 50% of SMEs report employees lack the skills to use generative AI.",
       "usedIn": [
         "ai-adoption-rate",
-        "median-wage-impact",
         "genai-work-adoption",
+        "median-wage-impact",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -223,8 +223,8 @@
       "excerpt": "6-7% of workers will be displaced during that transition period. In the US, AI can potentially automate tasks that account for 25% of all work hours. Goldman Sachs Research expects to see a 0.6 percentage point increase in the unemployment rate over a decade.",
       "usedIn": [
         "overall-us-displacement",
-        "workforce-ai-exposure",
-        "tech-sector-displacement"
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -239,10 +239,10 @@
       "excerpt": "average individual wages are roughly unchanged for incumbents of occupations with no AI exposure, rise by around 4% at moderate exposure, and drop by as much as 35% for workers in the most exposed occupations",
       "usedIn": [
         "entry-level-wage-impact",
-        "median-wage-impact",
-        "white-collar-professional-displacement",
         "high-skill-wage-premium",
-        "overall-us-displacement"
+        "median-wage-impact",
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -270,9 +270,9 @@
       "datePublished": "2026-01-07",
       "excerpt": "automation can depress demand and push AI-driven growth toward the lower end of current forecasts. [...] the conditions needed for growth to actually turn negative are likely too unrealistic to hold in practice",
       "usedIn": [
-        "overall-us-displacement",
+        "entry-level-wage-impact",
         "median-wage-impact",
-        "entry-level-wage-impact"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -286,8 +286,8 @@
       "datePublished": "2026-03-23",
       "excerpt": "Two jobs with identical exposure scores can have completely opposite displacement risks depending on whether their tasks are complements, whether demand for their output is elastic or inelastic, and the incentives of the firm to invest in automation. The workers at greatest risk are not necessarily those with the highest average exposure, but those whose jobs are built around a small number of core tasks that AI can automate.",
       "usedIn": [
-        "workforce-ai-exposure",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -301,9 +301,9 @@
       "datePublished": "2026-01-01",
       "excerpt": "Widely-used exposure indices, which aggregate task-level automation risk using linear formulas, will overstate displacement when tasks are complements. Labour income can rise under partial automation because automation scales the value of remaining bottleneck tasks.",
       "usedIn": [
-        "workforce-ai-exposure",
+        "median-wage-impact",
         "overall-us-displacement",
-        "median-wage-impact"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -317,11 +317,11 @@
       "datePublished": "2026-03-16",
       "excerpt": "An event study documents an accelerating decline in employment of 22–25-year-olds in high-AI-exposure occupations, reaching 5.5 per cent by early 2025 relative to less exposed occupations within the same employers, while employment of workers over 50 rose by 1.3 per cent.",
       "usedIn": [
+        "customer-service-automation",
+        "early-career-employment-decline",
         "overall-us-displacement",
         "tech-sector-displacement",
-        "customer-service-automation",
-        "white-collar-professional-displacement",
-        "early-career-employment-decline"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -350,8 +350,8 @@
       "datePublished": "2025-02-01",
       "excerpt": "Tenured workers cumulatively lose about 3,800 Euros in wage and salary earnings over five years on average (about 9% of one year's income). Only 0.7% of all workers leave their employers each year due to automation, far below mass layoff rates.",
       "usedIn": [
-        "overall-us-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -421,9 +421,9 @@
       "datePublished": "2025-12-01",
       "excerpt": "Since January 2023, salaries at the top quartile of the wage distribution have grown by more than 30%. Over the same period, salaries at the bottom quartile have risen by only around 10%.",
       "usedIn": [
-        "median-wage-impact",
         "entry-level-wage-impact",
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -465,9 +465,8 @@
       "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years. Only 4.6% of tasks affected, with modest cost savings (27% avg). Implied displacement well under 1% of employment.",
       "usedIn": [
         "overall-us-displacement",
-        "tech-sector-displacement",
         "robots-physical-automation-displacement",
-        "total-us-jobs-lost"
+        "tech-sector-displacement"
       ],
       "verified": true
     },
@@ -480,8 +479,8 @@
       "datePublished": "2025-09-01",
       "excerpt": "In jobs with high AI exposure, employment for 22- to 25-year-olds fell 6% between late 2022 and July 2025. Software developers saw a 20% early-career decline. Employment among workers 30 and older grew 6-13%.",
       "usedIn": [
-        "overall-us-displacement",
-        "early-career-employment-decline"
+        "early-career-employment-decline",
+        "overall-us-displacement"
       ],
       "verified": true
     },
@@ -583,8 +582,7 @@
         "tech-sector-displacement",
         "white-collar-professional-displacement",
         "workforce-ai-exposure",
-        "workforce-ai-use",
-        "total-us-jobs-lost"
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false
@@ -716,8 +714,8 @@
       "datePublished": "2026-03-01",
       "excerpt": "in 2026 we find that 43% of US workers use AI for their job compared with 32% among European workers in our surveys.",
       "usedIn": [
-        "genai-work-adoption",
         "ai-adoption-rate",
+        "genai-work-adoption",
         "overall-us-displacement"
       ],
       "verified": true,
@@ -834,8 +832,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-08-01",
       "usedIn": [
-        "overall-us-displacement",
-        "total-us-jobs-lost"
+        "overall-us-displacement"
       ],
       "verified": true
     },
@@ -900,11 +897,10 @@
       "datePublished": "2026-01-21",
       "excerpt": "Of the 37.1 million workers in the top quartile of AI exposure, 26.5 million are in occupations that also have above-median adaptive capacity. 6.1 million workers (4.2%) face high exposure + low adaptive capacity; 86% are women.",
       "usedIn": [
-        "overall-us-displacement",
-        "workforce-ai-exposure",
-        "white-collar-professional-displacement",
         "customer-service-automation",
-        "total-us-jobs-lost"
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -959,8 +955,8 @@
       "datePublished": "2025-11-13",
       "excerpt": "Early-career workers (ages 22-25) in AI-exposed occupations experienced 16% relative employment declines, controlling for firm-level shocks. By September 2025, employment for software developers aged 22-25 declined nearly 20% compared to its peak in late 2022.",
       "usedIn": [
-        "tech-sector-displacement",
-        "early-career-employment-decline"
+        "early-career-employment-decline",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -1056,8 +1052,8 @@
       "datePublished": "2026-03-02",
       "excerpt": "Project APE — Autonomous Policy Evaluation... has produced 204 papers — with 60 added in a single week... These are fully automated papers, like a version 1.0, with no human iteration whatsoever.",
       "usedIn": [
-        "white-collar-professional-displacement",
-        "creative-industry-displacement"
+        "creative-industry-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -1122,9 +1118,7 @@
       "evidenceTier": 3,
       "datePublished": "2026-01-10",
       "excerpt": "Employers cited AI as a direct cause for 55,000 job cuts in 2025, concentrated in customer service, data entry, and back-office operations.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "challenger-tech-layoffs-2025": {
@@ -1175,9 +1169,9 @@
       "datePublished": "2026-02-17",
       "excerpt": "AI adoption causally increases labour productivity levels by 4% on average in the EU, with no evidence of reduced employment in the short run. Wage gains may accrue disproportionately to highly skilled workers.",
       "usedIn": [
+        "high-skill-wage-premium",
         "median-wage-impact",
-        "overall-us-displacement",
-        "high-skill-wage-premium"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -1492,9 +1486,9 @@
       "datePublished": "2026-01-14",
       "excerpt": "There is no evidence that job postings for junior roles within occupations most exposed to AI have declined more than postings for senior positions. Postings for both levels of seniority have been falling roughly in parallel since their peak in Spring 2022, with the decline in junior positions stabilizing faster.",
       "usedIn": [
-        "white-collar-professional-displacement",
+        "early-career-employment-decline",
         "entry-level-wage-impact",
-        "early-career-employment-decline"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -1794,9 +1788,7 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-06",
       "excerpt": "Forrester estimates 6% of US jobs will be lost to AI and automation by 2030, partially offset by new job creation.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "fortune-ai-earnings-surge-2026": {
@@ -1975,9 +1967,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-10-01",
       "excerpt": "No economy-wide employment disruption tied to AI since ChatGPT's debut. Measures of AI exposure show no clear relationship with changes in employment or unemployment.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "glassdoor-ai-salaries-2025": {
@@ -2006,8 +1996,7 @@
         "overall-us-displacement",
         "tech-sector-displacement",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure",
-        "total-us-jobs-lost"
+        "workforce-ai-exposure"
       ],
       "verified": true
     },
@@ -2024,8 +2013,7 @@
         "median-wage-impact",
         "overall-us-displacement",
         "tech-sector-displacement",
-        "white-collar-professional-displacement",
-        "total-us-jobs-lost"
+        "white-collar-professional-displacement"
       ],
       "verified": true
     },
@@ -2205,8 +2193,8 @@
       "datePublished": "2025-07-01",
       "excerpt": "High-skill freelancers disproportionately affected by AI — top performers were impacted most, contradicting conventional wisdom that expertise insulates workers.",
       "usedIn": [
-        "white-collar-professional-displacement",
-        "freelancer-rate-impact"
+        "freelancer-rate-impact",
+        "white-collar-professional-displacement"
       ],
       "verified": true
     },
@@ -2257,9 +2245,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-01-06",
       "excerpt": "Half of workers in exposed occupations have used ChatGPT; younger, male, higher-achieving workers lead adoption. Women 16pp less likely to use for work.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "humlum-vestergaard-chatgpt-adoption-2025": {
@@ -2401,9 +2387,7 @@
       "evidenceTier": 2,
       "datePublished": "2024-01-14",
       "excerpt": "Almost 40% of global employment is exposed to AI; in advanced economies, roughly 60% of workers face some degree of AI impact.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "imf-inequality-2024": {
@@ -2612,9 +2596,7 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-28",
       "excerpt": "Data entry (-27%), customer service (-18%), and basic admin (-22%) postings saw steepest declines. AI/ML postings +42% YoY.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "indeed-wage-tracker-2025": {
@@ -3009,9 +2991,7 @@
       "publisher": "Medium",
       "evidenceTier": 4,
       "datePublished": "2025-05-01",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "meta-10k-2024": {
@@ -3210,9 +3190,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-11-01",
       "excerpt": "Survey of 2,500 C-suite executives finds 90% report no significant net employment impact from AI adoption as of Q3 2025, though task reallocation is widespread.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "nber-entry-wage-2023": {
@@ -3343,9 +3321,7 @@
       "evidenceTier": 1,
       "datePublished": "2023-07-11",
       "excerpt": "27% of jobs are in occupations at high risk, but actual displacement depends on adoption speed and policy response.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "oecd-employment-2025": {
@@ -3486,9 +3462,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
       "excerpt": "Workers in AI-exposed occupations face significantly higher unemployment risk, suggesting aggregate job losses may exceed earlier estimates.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "pwbm-ai-adoption-2025": {
@@ -3515,7 +3489,6 @@
       "excerpt": "Roughly 10% of US work affected in the short run; AI will increase productivity and GDP by 1.5% by 2035. Jobs that AI can completely replace saw 0.75% employment fall 2021-2024.",
       "usedIn": [
         "overall-us-displacement",
-        "total-us-jobs-lost",
         "white-collar-professional-displacement"
       ],
       "verified": true
@@ -3558,8 +3531,7 @@
       "usedIn": [
         "creative-industry-displacement",
         "freelancer-rate-impact",
-        "overall-us-displacement",
-        "total-us-jobs-lost"
+        "overall-us-displacement"
       ],
       "verified": true
     },
@@ -3707,9 +3679,7 @@
       "evidenceTier": 2,
       "datePublished": "2025-12-21",
       "excerpt": "Challenger, Gray & Christmas reports AI has been cited as the reason for 54,694 planned layoffs in 2025. Overall job cuts topped 1 million in 2025.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -3988,9 +3958,7 @@
       "evidenceTier": 2,
       "datePublished": "2024-09-15",
       "excerpt": "Employers expect 23% of jobs to change in the next five years, with a net decline of 2-4% of total roles once job creation offsets displacement.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "wef-future-jobs-2025": {
@@ -4015,9 +3983,9 @@
       "datePublished": "2026-03-01",
       "excerpt": "Across all benchmarks, examples collectively cover a limited 56.5% of the domain taxonomy but a substantially broader 85.4% of the skill taxonomy.",
       "usedIn": [
-        "workforce-ai-exposure",
         "tech-sector-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -4048,8 +4016,8 @@
       "excerpt": "Nearly 40% of AI time savings are lost to rework, including correcting errors, rewriting content, and verifying outputs from one-size-fits-all AI tools. Only 14% of employees consistently get clear, positive net outcomes from AI.",
       "usedIn": [
         "genai-work-adoption",
-        "white-collar-professional-displacement",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4063,9 +4031,9 @@
       "datePublished": "2025-11-01",
       "excerpt": "Job postings for high-AI-substitution occupations fell 12% relative to low-substitution roles post-ChatGPT; effect grew from 6% in year one to 18% by year three. Based on 285 million Lightcast job postings.",
       "usedIn": [
+        "entry-level-wage-impact",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "entry-level-wage-impact"
+        "white-collar-professional-displacement"
       ],
       "verified": true
     },
@@ -4156,9 +4124,9 @@
       "datePublished": "2026-01-21",
       "excerpt": "raising average wages by 21 percent",
       "usedIn": [
-        "median-wage-impact",
         "entry-level-wage-impact",
         "high-skill-wage-premium",
+        "median-wage-impact",
         "white-collar-professional-displacement"
       ],
       "verified": true,
@@ -4173,12 +4141,12 @@
       "datePublished": "2026-02-24",
       "excerpt": "Employment in the computer systems design and related services sector has declined 5 percent. AI exposure associated with 0.28pp wage growth reduction for low-experience-premium jobs but 0.2pp increase for high-experience-premium occupations.",
       "usedIn": [
-        "tech-sector-displacement",
-        "overall-us-displacement",
+        "creative-industry-displacement",
         "entry-level-wage-impact",
         "high-skill-wage-premium",
-        "creative-industry-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4192,11 +4160,11 @@
       "datePublished": "2026-01-22",
       "excerpt": "Only about 43% of US workers reported regularly using AI at work last year",
       "usedIn": [
-        "genai-work-adoption",
-        "tech-sector-displacement",
         "ai-adoption-rate",
-        "workforce-ai-exposure",
-        "overall-us-displacement"
+        "genai-work-adoption",
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -4220,7 +4188,7 @@
     "goldman-ai-nxiety-earnings-2026": {
       "id": "goldman-ai-nxiety-earnings-2026",
       "title": "US Economics Analyst: Earnings Season Takeaways: AI-nxiety",
-      "url": "",
+      "url": "https://fortune.com/2026/03/03/goldman-earnings-ai-anxiety-no-meaningful-impact-productivity-economy-30-percent-in-2-areas/",
       "publisher": "Goldman Sachs Research",
       "evidenceTier": 2,
       "datePublished": "2026-03-03",
@@ -4240,12 +4208,12 @@
       "datePublished": "2025-02-10",
       "excerpt": "BLS projects employment of software developers to increase 17.9 percent between 2023 and 2033. Despite its exposure to GenAI applications, this occupation is unlikely to experience a decline in employment. Customer service representatives projected to decline 5.0 percent. Medical transcriptionists projected to decline 4.7 percent. Paralegals projected to grow 1.2 percent.",
       "usedIn": [
-        "tech-sector-displacement",
         "customer-service-automation",
+        "financial-services-displacement",
         "healthcare-admin-displacement",
-        "white-collar-professional-displacement",
         "overall-us-displacement",
-        "financial-services-displacement"
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4273,8 +4241,8 @@
       "datePublished": "2026-03-04",
       "excerpt": "Companies with frequent AI use are about 4% more likely to take on additional staff. Two-thirds of the 3,500 firms that took part in the survey reported that their employees use AI.",
       "usedIn": [
-        "overall-us-displacement",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4302,8 +4270,8 @@
       "datePublished": "2026-03-04",
       "excerpt": "In 2025, Ramp shipped 500+ features, reached $1B revenue, and did it all with 25 PMs.",
       "usedIn": [
-        "tech-sector-displacement",
-        "genai-work-adoption"
+        "genai-work-adoption",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4317,8 +4285,8 @@
       "datePublished": "2026-03-04",
       "excerpt": "According to the American Community Survey, 7.2 percent of early-career college graduates who majored in CS were unemployed in 2024—well above the 4.5 percent rate for all early-career graduates.",
       "usedIn": [
-        "tech-sector-displacement",
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4332,9 +4300,9 @@
       "datePublished": "2026-02-05",
       "excerpt": "Job openings fell to their lowest level since December 2017. Professional & business services openings down 21.8% (-284,000). Financial activities openings down 25.1% (-86,000). Healthcare openings down 10.8% (-152,000) since October.",
       "usedIn": [
+        "healthcare-admin-displacement",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "healthcare-admin-displacement"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4348,8 +4316,8 @@
       "datePublished": "2026-03-04",
       "excerpt": "In spite of the current displacement narrative – job postings for software engineers are rising rapidly, up 11% YoY. There is little evidence of AI disruption in labor market data as of today.",
       "usedIn": [
-        "tech-sector-displacement",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4406,8 +4374,8 @@
       "datePublished": "2026-01-15",
       "excerpt": "By 2040, output is only 4% higher than it would have been without the growth acceleration, and by 2060 the gain is still only 19%. A key reason for the slow acceleration is the prominence of 'weak links' (an elasticity of substitution among tasks less than one).",
       "usedIn": [
-        "overall-us-displacement",
         "median-wage-impact",
+        "overall-us-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -4435,9 +4403,7 @@
       "evidenceTier": 1,
       "datePublished": "2026-02-15",
       "excerpt": "Looking ahead three years, executives predict a 1.4 percent productivity boost and 0.8 percent output increase alongside a 0.7 percent employment reduction—while employees forecast a 0.5 percent employment increase.",
-      "usedIn": [
-        "total-us-jobs-lost"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -4465,8 +4431,8 @@
       "excerpt": "A one-standard-deviation increase in Generative AI exposure is associated with an 8% decline in job postings and a 0.6% decline in the hourly wage rate.",
       "usedIn": [
         "earnings-call-ai-mentions",
-        "overall-us-displacement",
         "median-wage-impact",
+        "overall-us-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -4621,8 +4587,8 @@
       "datePublished": "2025-05-30",
       "excerpt": "We describe our research with 21 developers at the cutting edge of using AI",
       "usedIn": [
-        "genai-work-adoption",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
@@ -4636,10 +4602,10 @@
       "datePublished": "2025-10-30",
       "excerpt": "AI agents perform near the floor on RLI, with the highest-performing agent achieving an automation rate of 2.5%. 240 real freelance projects across game dev, design, architecture, data analysis, and animation.",
       "usedIn": [
-        "overall-us-displacement",
         "creative-industry-displacement",
-        "tech-sector-displacement",
-        "freelancer-rate-impact"
+        "freelancer-rate-impact",
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -4698,9 +4664,9 @@
       "synthetic": false,
       "usedIn": [
         "overall-us-displacement",
-        "workforce-ai-exposure",
         "tech-sector-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ]
     },
     "jff-ai-economic-opportunity-2026": {
@@ -5104,8 +5070,8 @@
       "datePublished": "2026-03-10",
       "excerpt": "The evidence on how AI is affecting the labor market today is inconclusive, and claims about harmful impacts on particular groups of workers are premature. Initial evidence suggests that transitional disruption from AI to date is not outpacing recent technological changes.",
       "usedIn": [
-        "overall-us-displacement",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5161,8 +5127,8 @@
       "datePublished": "2026-01-01",
       "excerpt": "AI adoption led to moderate productivity increases — an 8.5 percent increase in coding activity and 8.7 percent faster task completion — with no measurable quality declines. These productivity gains did not translate into increased output, changes in task composition, or effects on employment.",
       "usedIn": [
-        "tech-sector-displacement",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5204,9 +5170,9 @@
       "datePublished": "2025-11-25",
       "excerpt": "Currently demonstrated technologies could automate activities accounting for about 57 percent of US work hours today. AI agents could perform tasks occupying 44 percent of US work hours, while robots could handle another 13 percent. Roles with the highest potential for automation make up about 40 percent of total jobs.",
       "usedIn": [
+        "customer-service-automation",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "customer-service-automation"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5318,8 +5284,8 @@
       "datePublished": "2026-03-10",
       "excerpt": "I'm skeptical that simply slotting AI into human-shaped jobs will have the results people seem to expect... as long as we are in that regime, I expect disappointing productivity gains and relatively little real displacement.",
       "usedIn": [
-        "overall-us-displacement",
-        "financial-services-displacement"
+        "financial-services-displacement",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5363,10 +5329,10 @@
       "datePublished": "2026-01-22",
       "excerpt": "In het derde kwartaal van 2025 werkten ruim dertien procent minder jongeren in de meest vatbare beroepsgroepen dan in het vierde kwartaal van 2022, terwijl de werkgelegenheid in andere beroepsgroepen juist drie procent steeg.",
       "usedIn": [
+        "early-career-employment-decline",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
         "tech-sector-displacement",
-        "early-career-employment-decline"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5408,8 +5374,8 @@
       "datePublished": "2024-11-30",
       "excerpt": "AI investment reduces accounting hiring but not work quality. 10 additional AI accounting roles associated with 49 fewer accounting-skill postings.",
       "usedIn": [
-        "white-collar-professional-displacement",
-        "financial-services-displacement"
+        "financial-services-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5578,8 +5544,8 @@
       "datePublished": "2025-06-01",
       "excerpt": "AI-assisted coding jumped from around 5% in 2022 to nearly 30% in the last quarter of 2024. Quarterly output has increased by 3.6%. Experienced programmers benefit more; beginners hardly benefit at all.",
       "usedIn": [
-        "tech-sector-displacement",
-        "genai-work-adoption"
+        "genai-work-adoption",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -5665,9 +5631,9 @@
       "excerpt": "GenAI reshapes wage inequality through a productivity-scarcity race: productivity gains widen wage disparities while reduced entry barriers compress them. Net effect is a modest increase in inequality.",
       "usedIn": [
         "entry-level-wage-impact",
-        "workforce-ai-exposure",
+        "high-skill-wage-premium",
         "median-wage-impact",
-        "high-skill-wage-premium"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -5807,8 +5773,8 @@
       "datePublished": "2025-04-01",
       "excerpt": "75% of knowledge workers use AI at work. 78% bring their own AI tools. Survey of 31,000 workers across 31 countries.",
       "usedIn": [
-        "genai-work-adoption",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
@@ -6006,11 +5972,11 @@
       "datePublished": "2026-02-19",
       "excerpt": "GPT-scored AI exposure for 342 BLS occupations on a 0-10 scale, validated against 6 academic metrics (Pearson 0.878 with Yale PCA, 0.885 with OpenAI). Employment-weighted industry exposure scores for 186 4-digit NAICS industries.",
       "usedIn": [
-        "tech-sector-displacement",
-        "financial-services-displacement",
         "creative-industry-displacement",
         "customer-service-automation",
-        "healthcare-admin-displacement"
+        "financial-services-displacement",
+        "healthcare-admin-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6024,12 +5990,12 @@
       "datePublished": "2026-03-13",
       "excerpt": "Survey of ~750 CFOs finds AI adoption widespread (58.5% in 2025, 85.4% expected 2026). Implied revenue-based labor productivity gains of 0.6% in 2025, 1.8% expected 2026, with largest gains in finance (>2%). Aggregate employment decline <0.4% in 2026 (~502K workers). Routine clerical roles declining; skilled-technical rising. Productivity paradox: reported gains 3x larger than implied revenue-based gains.",
       "usedIn": [
-        "overall-us-displacement",
-        "financial-services-displacement",
         "ai-adoption-rate",
         "customer-service-automation",
-        "white-collar-professional-displacement",
+        "financial-services-displacement",
         "healthcare-admin-displacement",
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -6044,9 +6010,9 @@
       "datePublished": "2026-03-17",
       "excerpt": "A lot of these claims are premature. Many of the people making them have an interest in selling a product. Right now I would describe the labor market as more of a wait-and-see environment. You cannot automate everything tomorrow because we simply don't have enough computing power to do it.",
       "usedIn": [
-        "overall-us-displacement",
+        "ai-adoption-rate",
         "median-wage-impact",
-        "ai-adoption-rate"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6060,9 +6026,9 @@
       "datePublished": "2025-09-01",
       "excerpt": "The framework yields several predictions: larger average firm size, greater industry concentration, and reduced local managerial autonomy. Transformative AI sharply expands what counts as codifiable local knowledge. In the absence of active countermeasures, transformative AI may lead to significantly more centralization of decision-making.",
       "usedIn": [
+        "overall-us-displacement",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure",
-        "overall-us-displacement"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6077,8 +6043,8 @@
       "excerpt": "Nearly 3 in 4 (74%) companies plan to deploy agentic AI within two years. 34% are already starting to use AI to deeply transform their businesses. 84% of companies have not redesigned jobs around AI capabilities.",
       "usedIn": [
         "ai-adoption-rate",
-        "overall-us-displacement",
         "genai-work-adoption",
+        "overall-us-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -6289,9 +6255,9 @@
       "datePublished": "2025-02-01",
       "excerpt": "Most adversely impacted occupations (business, financial, engineering) experienced a decline of 2% to 2.5% over a five-year period. Reduced demand in exposed occupations is offset by productivity-driven increases in labor demand at AI-adopting firms.",
       "usedIn": [
+        "financial-services-displacement",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "financial-services-displacement"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6305,8 +6271,8 @@
       "datePublished": "2025-06-01",
       "excerpt": "Workplaces that adopted AI chatbots showed no significant difference in employment, early-career jobs, job churn, or worker mix. Difference-in-differences estimates for earnings and wages are all precisely estimated zeros, ruling out effects larger than 2%.",
       "usedIn": [
-        "overall-us-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6349,8 +6315,8 @@
       "datePublished": "2025-08-01",
       "excerpt": "Occupations with higher AI exposure experienced larger unemployment rate increases between 2022 and 2025 (r=0.47). Computer/math occupations (exposure ~80%) saw steepest rises. GenAI-intensive occupations: r=0.57.",
       "usedIn": [
-        "tech-sector-displacement",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6364,9 +6330,9 @@
       "datePublished": "2026-01-06",
       "excerpt": "Employment share for AI-exposed occupations fell from 16.4% (Nov 2022) to 15.5% (Sep 2025). Workers age 22-25 in most AI-exposed occupations experienced 13% employment decline since 2022, driven by fewer workforce entrants rather than layoffs.",
       "usedIn": [
-        "overall-us-displacement",
+        "early-career-employment-decline",
         "entry-level-wage-impact",
-        "early-career-employment-decline"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6380,8 +6346,8 @@
       "datePublished": "2026-02-24",
       "excerpt": "AI's impact depends on whether it automates or augments. For zero-experience-premium occupations, increased AI exposure is associated with -0.28pp reduction in wage growth. Wages in AI-exposed jobs not uniformly declining.",
       "usedIn": [
-        "median-wage-impact",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "median-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -6395,8 +6361,8 @@
       "datePublished": "2025-11-05",
       "excerpt": "32% of companies expect AI to reduce workforce by 3%+ within next year. Median 17% of respondents report workforce declines within functions from AI use. 88% of organizations now use AI in at least one business function.",
       "usedIn": [
-        "overall-us-displacement",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6424,8 +6390,8 @@
       "datePublished": "2025-03-01",
       "excerpt": "24% decrease in generative AI-exposed skills per firm per quarter in top-quartile automation-exposed jobs. 15% increase in AI-exposed skills for augmentation-prone jobs. Augmentation-prone job postings increased 22% per quarter per firm.",
       "usedIn": [
-        "white-collar-professional-displacement",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6626,9 +6592,9 @@
       "datePublished": "2025-06-13",
       "excerpt": "Job growth remained robust even in AI-exposed occupations (38%). Degree requirements fell 7pp for AI-augmented jobs. AI-exposed professions saw 55% faster skill churn in job postings.",
       "usedIn": [
-        "overall-us-displacement",
+        "education-sector-displacement",
         "entry-level-wage-impact",
-        "education-sector-displacement"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6656,13 +6622,13 @@
       "datePublished": "2026-03-24",
       "excerpt": "About 49% of jobs have seen at least a quarter of their tasks performed using Claude. High-tenure users have a 10% higher success rate. Early adopters with high-skill tasks have more successful interactions, identifying a channel through which skill-biased transformation may already be unfolding.",
       "usedIn": [
-        "workforce-ai-exposure",
         "customer-service-automation",
-        "tech-sector-displacement",
         "financial-services-displacement",
         "genai-work-adoption",
         "high-skill-wage-premium",
-        "median-wage-impact"
+        "median-wage-impact",
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6676,15 +6642,15 @@
       "datePublished": "2026-03-25",
       "excerpt": "Industry-wide vulnerability to job displacement is approximately 6%... 9.3 million jobs are vulnerable to job loss due to AI under our median adoption path, with a plausible range of 2.7 to 19.5 million",
       "usedIn": [
-        "overall-us-displacement",
-        "tech-sector-displacement",
-        "financial-services-displacement",
-        "white-collar-professional-displacement",
-        "education-sector-displacement",
         "creative-industry-displacement",
+        "education-sector-displacement",
+        "entry-level-wage-impact",
+        "financial-services-displacement",
         "healthcare-admin-displacement",
         "median-wage-impact",
-        "entry-level-wage-impact",
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -6699,11 +6665,11 @@
       "datePublished": "2025-06-20",
       "excerpt": "Resolves the long-standing puzzle of why routine task automation lowered employment but often raised wages in routine task-intensive occupations. Builds an 'expertise framework' on three pillars: hierarchical expertise, occupational task bundling, and automation. Key counterintuitive prediction: changes in occupational expertise requirements have OPPOSITE-signed effects on wages and employment — rising expertise raises wages but reduces the set of qualified workers (employment falls), falling expertise lowers wages but expands the eligible labor pool (employment rises). Empirically (303 harmonized Census occupations, 1980-2018): 0.1σ rise in occupational task expertise predicts a 5-7 log point fall in employment per decade, while a 10% expansion in task quantity predicts a 14% employment rise — opposite directions. Concrete case: Accounting clerks 1980-2018 saw employment fall 1.62M→1.11M (-31%) while wages rose $13.07→$18.17 (+39%); Stock/Inventory clerks saw employment rise 0.54M→1.48M (+175%) while wages fell $14.30→$12.43 (-13%). Routine task share fell 50.4%→32.2%; abstract share rose 33.2%→53.6%; 66% of removed tasks were routine, 77% of added tasks were abstract. Cross-occupation expertise wage premium nearly doubled: 1σ expertise = +16 log pts wages in 1980 vs. +31 log pts in 2018 (R² 0.32→0.49). Methodology: content-agnostic expertise measure via Efficient Coding Hypothesis on Standard Frequency Index; OpenAI text-embedding-3-small with 0.95 caliper to identify tasks removed/retained/added between 1977 DOT and 2018 O*NET.",
       "usedIn": [
-        "overall-us-displacement",
-        "workforce-ai-exposure",
-        "high-skill-wage-premium",
         "entry-level-wage-impact",
-        "median-wage-impact"
+        "high-skill-wage-premium",
+        "median-wage-impact",
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6717,8 +6683,8 @@
       "datePublished": "2026-03-26",
       "excerpt": "If AI dramatically boosts the productivity of high-paying knowledge work while leaving lower-paid service occupations largely unaffected, between-occupation inequality could widen even as within-task inequality narrows.",
       "usedIn": [
-        "high-skill-wage-premium",
         "entry-level-wage-impact",
+        "high-skill-wage-premium",
         "median-wage-impact"
       ],
       "verified": true,
@@ -6747,15 +6713,15 @@
       "datePublished": "2026-03-31",
       "excerpt": "In a rapid AI progress scenario, economists forecast a drop in labor force participation from its 2025 baseline of 62.6% to 59.1% in 2030 and 55% in 2050, with roughly half of this decline—equivalent to 10 million jobs—attributable to AI.",
       "usedIn": [
-        "overall-us-displacement",
-        "genai-work-adoption",
-        "median-wage-impact",
-        "high-skill-wage-premium",
-        "white-collar-professional-displacement",
         "customer-service-automation",
-        "tech-sector-displacement",
         "financial-services-displacement",
         "freelancer-rate-impact",
+        "genai-work-adoption",
+        "high-skill-wage-premium",
+        "median-wage-impact",
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -6784,13 +6750,13 @@
       "datePublished": "2026-03-01",
       "excerpt": "45% of leaders are willing to pay 11% to 15% more for strong AI skills",
       "usedIn": [
-        "high-skill-wage-premium",
         "ai-adoption-rate",
-        "genai-work-adoption",
+        "customer-service-automation",
         "entry-level-wage-impact",
+        "genai-work-adoption",
+        "high-skill-wage-premium",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure",
-        "customer-service-automation"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6804,10 +6770,10 @@
       "datePublished": "2026-04-02",
       "excerpt": "Of America's ~70M STARs (workers skilled through alternative routes, no four-year degree): 15.6M work in roles in the top quartile of AI exposure (43% of all top-quartile workers); 11M of those are in Gateway occupations — the stepping-stone roles connecting entry-level to higher-wage work — with 6 Gateway occupations alone accounting for ~8M of them. STARs are 62.3% of all Gateway-occupation workers. Across Destination occupations, 12.9M workers (~1/3) are highly exposed, including sales reps, accountants, financial managers. Only 51% of Gateway-to-Destination career pathways AVOID high AI exposure. 3.5M STARs are both highly exposed AND have low adaptive capacity (67% of all such workers). 23M STARs have low adaptive capacity overall (68% of all such workers). Highest pathway-exposure metros: Palm Bay FL (35.5%), Cape Coral FL (34.7%), Jacksonville (33%), Albany NY (32.8%), Harrisburg (32.6%), Providence (30.1%). 73% of US workers live and work in the same county, so disruption — and remediation — will be place-specific. Uses Anthropic's observed-exposure measure on Opportunity@Work pathway taxonomy.",
       "usedIn": [
-        "workforce-ai-exposure",
+        "customer-service-automation",
         "entry-level-wage-impact",
         "white-collar-professional-displacement",
-        "customer-service-automation"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6821,10 +6787,10 @@
       "datePublished": "2026-04-01",
       "excerpt": "Headcount reduction was the largest outcome in 45% of the deployments, but alternatives (hiring avoided, redeployment, no reduction) accounted for 55%. Agentic implementations showed 71% median productivity gains versus 40% for high-automation. 90-95% of food delivery customer service interactions fully automated by AI agent.",
       "usedIn": [
+        "ai-adoption-rate",
         "customer-service-automation",
-        "tech-sector-displacement",
         "overall-us-displacement",
-        "ai-adoption-rate"
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6838,10 +6804,10 @@
       "datePublished": "2026-04-03",
       "excerpt": "Most still do not see much evidence that A.I. is disrupting the job market. But they are starting to take seriously the possibility that it could someday soon. If it does, they are worried that policymakers are not ready to respond.",
       "usedIn": [
+        "ai-adoption-rate",
+        "entry-level-wage-impact",
         "overall-us-displacement",
         "white-collar-professional-displacement",
-        "entry-level-wage-impact",
-        "ai-adoption-rate",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -6871,12 +6837,12 @@
       "datePublished": "2026-03-01",
       "excerpt": "AI models successfully complete tasks that take humans approximately 3-4 hours with about a 50% success rate, increasing to about 65% by 2025-Q3. Most text-based tasks projected to reach 80-95% AI success by 2029. Based on 17,205 expert evaluations across 3,000+ O*NET tasks and 40+ LLMs.",
       "usedIn": [
-        "workforce-ai-exposure",
-        "tech-sector-displacement",
         "creative-industry-displacement",
         "education-sector-displacement",
         "healthcare-admin-displacement",
-        "white-collar-professional-displacement"
+        "tech-sector-displacement",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6890,9 +6856,9 @@
       "datePublished": "2026-03-30",
       "excerpt": "Despite faster growth, treated firms do not scale inputs proportionally. Their demand for external capital investment falls by 39.5% relative to the control group, while their demand for labor remains unchanged.",
       "usedIn": [
-        "overall-us-displacement",
         "ai-adoption-rate",
-        "freelancer-rate-impact"
+        "freelancer-rate-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -6906,10 +6872,10 @@
       "datePublished": "2026-03-27",
       "excerpt": "92% of AI applications map to only 6.8% of 39,603 classified work activities. AI apps grew 6x from 2022-2024 but activity coverage expanded only 1.2x. 75% of AI market value concentrated in software/information tasks. 58% of AI apps target 'Create information' activities.",
       "usedIn": [
-        "workforce-ai-exposure",
         "genai-work-adoption",
         "overall-us-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -6937,9 +6903,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-09-15",
       "excerpt": "AI usage heavily concentrated by income and geography globally; within US, workforce composition matters more than income for adoption patterns.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "bls-contingent-2025": {
@@ -6965,9 +6929,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
       "excerpt": "Computer and mathematical occupations in San Jose-SF-Oakland MSA: $178K median. National median: $108K. Gap up from 48% to 65% since 2022.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "bls-tech-vs-nontechmetro-2025": {
@@ -6993,9 +6955,7 @@
       "evidenceTier": 2,
       "datePublished": "2024-01-20",
       "excerpt": "AI adoption is concentrating economic gains in a handful of superstar cities, widening the already large metro-level wage divergence.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "brynjolfsson-bls-productivity-2026": {
@@ -7050,9 +7010,7 @@
       "evidenceTier": 2,
       "datePublished": "2024-10-22",
       "excerpt": "Predicts 20% of organizations will use AI to flatten organizational structure by 2026, eliminating more than half of middle management positions. General workforce prediction, not EdTech-specific.",
-      "usedIn": [
-        "education-sector-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -7079,9 +7037,7 @@
       "evidenceTier": 2,
       "datePublished": "2023-08-15",
       "excerpt": "AI skills are becoming a universal priority beyond Silicon Valley. The U.S. leads in AI skills demand, with San Francisco commanding the highest average tech salary at $177,636.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -7093,9 +7049,7 @@
       "evidenceTier": 3,
       "datePublished": "2025-12-10",
       "excerpt": "Mountain region leads US AI adoption at 42%, followed by Pacific at 39%. Southeast lags at 22%. Regional adoption gaps correlate with widening wage divergence.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "muro-kinder-geography-2025": {
@@ -7106,9 +7060,7 @@
       "evidenceTier": 1,
       "datePublished": "2025-02-01",
       "excerpt": "43% of workers in San Jose could see AI shift half or more of tasks, vs only 31% in Las Vegas. High-skill metro areas most exposed — reversing prior automation patterns.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "nber-ai-wages-2023": {
@@ -7134,9 +7086,7 @@
       "evidenceTier": 1,
       "datePublished": "2024-05-15",
       "excerpt": "Each AI job in a hub city creates 3-5 local service jobs. Non-hub cities see net job losses. The spatial multiplier amplifies geographic wage divergence.",
-      "usedIn": [
-        "geographic-wage-divergence"
-      ],
+      "usedIn": [],
       "verified": true
     },
     "pearson-smarthinking-2025": {
@@ -7192,8 +7142,6 @@
       "datePublished": "2026-04-05",
       "excerpt": "Information sector employment at 2,772K, +3K month-over-month.",
       "usedIn": [
-        "overall-us-displacement",
-        "white-collar-professional-displacement",
         "tech-sector-displacement"
       ],
       "verified": true,
@@ -7208,9 +7156,7 @@
       "datePublished": "2026-04-05",
       "excerpt": "Unemployment rate 4.3% in March 2026, down 0.1 percentage points.",
       "usedIn": [
-        "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "tech-sector-displacement"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7224,9 +7170,7 @@
       "datePublished": "2026-02-01",
       "excerpt": "Job openings at 6,882K in February 2026, gradual decline from 2024 peaks.",
       "usedIn": [
-        "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "tech-sector-displacement"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7240,9 +7184,7 @@
       "datePublished": "2026-03-01",
       "excerpt": "Unemployment level 7,239K in March 2026.",
       "usedIn": [
-        "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "tech-sector-displacement"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7256,10 +7198,8 @@
       "datePublished": "2026-03-01",
       "excerpt": "As technology devalues labor, optimal policy shifts from steering innovation toward redistribution.",
       "usedIn": [
-        "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "tech-sector-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7343,9 +7283,9 @@
       "datePublished": "2026-04-06",
       "excerpt": "Our analysis implies that AI substitution has reduced monthly payroll growth by roughly 25k and raised the unemployment rate by 0.16 percentage points over the past year, while augmentation has added about 9k to monthly payroll growth and lowered the unemployment rate by 0.06pp. This implies a net drag of 16k per month on payroll growth and a 0.1pp boost to the unemployment rate. These negative effects fall largely on less experienced workers, widening the entry-level-to-experienced wage gap by 1.3% and the unemployment rate gap by 0.6pp from their pre-pandemic averages.",
       "usedIn": [
-        "overall-us-displacement",
         "entry-level-wage-impact",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7374,8 +7314,8 @@
       "datePublished": "2026-04-01",
       "excerpt": "If progress continues, we can expect systems to be capable of carrying out projects that currently take people months. This shift will reshape how organizations run, how knowledge is created, and how people find meaning and opportunity.",
       "usedIn": [
-        "overall-us-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7389,10 +7329,10 @@
       "datePublished": "2026-03-20",
       "excerpt": "After controlling for industry-level shocks we find that coder employment growth has been 3 percent lower since the introduction of ChatGPT. Cumulating over the roughly 3 years since November 2022 and using 5.735 million coder jobs as the base value, the implication is that roughly 500,000 additional coder jobs would have existed in the absence of large-scale LLM use.",
       "usedIn": [
-        "tech-sector-displacement",
+        "early-career-employment-decline",
         "overall-us-displacement",
-        "workforce-ai-exposure",
-        "early-career-employment-decline"
+        "tech-sector-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -7406,8 +7346,8 @@
       "datePublished": "2026-04-06",
       "excerpt": "New research by Goldman Sachs economists finds that AI is already a measurable drag on the U.S. job market—erasing roughly 16,000 net jobs per month over the past year, with the pain falling hardest on Gen Z and entry-level workers. Goldman's breakdown shows AI substitution wiped out roughly 25,000 jobs per month in the past year, while augmentation added back about 9,000. The wage gap has similarly deteriorated, with Goldman's regression analysis estimating that a one standard-deviation increase in AI substitution exposure widens the entry-level-to-experienced wage gap by roughly 3.3 percentage points.",
       "usedIn": [
-        "overall-us-displacement",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7481,9 +7421,9 @@
       "datePublished": "2026-04-13",
       "excerpt": "Employment among software developers aged 22–25 has plummeted nearly 20% since 2024, even as their older colleagues' headcount grows. The pattern repeats in other jobs with higher levels of AI exposure, like customer service. Meanwhile, firm surveys indicate executives expect this trend to accelerate, with planned headcount reductions outpacing recent cuts. Generative AI reached 53% population adoption within three years, faster than the personal computer or the internet... the U.S. ranks 24th at 28.3%. Across multiple hospital systems, physicians reported up to 83% less time spent writing notes and significant reductions in burnout.",
       "usedIn": [
-        "tech-sector-displacement",
+        "genai-work-adoption",
         "healthcare-admin-displacement",
-        "genai-work-adoption"
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7497,8 +7437,8 @@
       "datePublished": "2026-04-14",
       "excerpt": "Imas argues AI will trigger a post-commodity economy where spending shifts toward the relational sector (care, hospitality, craft, education) whose value is inseparable from human provenance. Evidence: Starbucks rolling back automation after it hurt satisfaction; experimental finding that human-made art gains 44% from exclusivity vs only 21% for AI-generated art.",
       "usedIn": [
-        "customer-service-automation",
-        "creative-industry-displacement"
+        "creative-industry-displacement",
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false
@@ -7527,10 +7467,10 @@
       "datePublished": "2026-04-17",
       "excerpt": "All 921 occupations (147.9M jobs) sort into four categories: 18% are at a higher short-term automation risk, 46% are less likely to experience near-term change, 12% could grow because of AI, and 24% may see declining employment as their task composition shifts but remaining jobs will still need workers. ChatGPT is used about 3x more in the kinds of jobs our framework identifies as most at risk of automation. Capability overhang by archetype: high-automation-risk jobs show 23.8% realized vs 90.0% theoretical exposure (66.2pp gap); jobs that grow with AI 22.7% vs 72.4% (49.7pp); reorganize 14.9% vs 67.1% (52.3pp); less immediate change 6.4% vs 27.4% (21.0pp). Since 2024Q1, unemployment rose most in jobs we predict to have less immediate change (+0.6pp) vs +0.3pp in higher-automation-risk, reorganize, and grow-with-AI groups — underscoring that exposure alone is a weak predictor of immediate labor market pressure.",
       "usedIn": [
+        "genai-work-adoption",
         "overall-us-displacement",
         "workforce-ai-exposure",
-        "workforce-ai-use",
-        "genai-work-adoption"
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false
@@ -7572,8 +7512,8 @@
       "datePublished": "2026-04-20",
       "excerpt": "Workers initially employed in occupations that later decline by at least 25% demonstrate 0.4 lower future years of work, although this employment difference is mostly explained by other individual traits. These workers, conditional on controls, experience a 4.7% reduction in future cumulative earnings relative to starting earnings, akin to losing one year's worth of earnings over 2007–2024.",
       "usedIn": [
-        "white-collar-professional-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7601,16 +7541,16 @@
       "datePublished": "2026-04-20",
       "excerpt": "Metaculus community forecasts for 2030 and 2035: overall US employment -1.9%/-3.4%; most vulnerable AI-exposed occupations -11.4%/-17.2%; software developers -15.1%/-22.3%; financial specialists -8.1%/-15.3%; services sales -11%/-14%; lawyers -5.4%/-9.6%; designers -4%/-8.4%; K-12 teachers -1.3%/+1.3%; overall median wage -0.6%/+1.4%; percent workers using AI daily 52.5%/70.9%; new-grad unemployment ~10%/12%.",
       "usedIn": [
-        "overall-us-displacement",
-        "entry-level-wage-impact",
-        "white-collar-professional-displacement",
-        "tech-sector-displacement",
-        "financial-services-displacement",
         "creative-industry-displacement",
-        "education-sector-displacement",
         "customer-service-automation",
+        "education-sector-displacement",
+        "entry-level-wage-impact",
+        "financial-services-displacement",
+        "genai-work-adoption",
         "median-wage-impact",
-        "genai-work-adoption"
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7624,13 +7564,13 @@
       "datePublished": "2026-04-17",
       "excerpt": "Regression-adjusted employment of early career workers in the most AI-exposed quintile of industry-state cells declined by 12% over the 10 quarters following the introduction of ChatGPT, even as employment in less-exposed industries has remained stable. I find that hires of these early career workers declined immediately by 9% in comparison with those in less exposed industries, and that they have not recovered over time.",
       "usedIn": [
-        "white-collar-professional-displacement",
-        "tech-sector-displacement",
-        "overall-us-displacement",
-        "entry-level-wage-impact",
         "ai-adoption-rate",
-        "workforce-ai-exposure",
-        "early-career-employment-decline"
+        "early-career-employment-decline",
+        "entry-level-wage-impact",
+        "overall-us-displacement",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -7644,10 +7584,10 @@
       "datePublished": "2026-04-21",
       "excerpt": "U.S. labor productivity growth has accelerated, rising from 1.3% per year in the pre-pandemic expansion (2013–2019) to 2.2% in the post-pandemic period (2019–2025). Three technology-exposed groups — white-collar services, retail trade, and advanced manufacturing — are posting 3.2% to 3.9% annualized productivity growth. The rest of the private economy is at 0.1%. The pressure is likely to emerge first in entry-level white-collar work, where the same industries posting the strongest productivity gains are also showing weaker demand for junior labor.",
       "usedIn": [
+        "entry-level-wage-impact",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
         "tech-sector-displacement",
-        "entry-level-wage-impact"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7701,10 +7641,10 @@
       "datePublished": "2026-04-24",
       "excerpt": "A job is a bundle of tasks. The real question is not whether AI can perform one component of the bundle. It is whether that component can be separated from the rest at low cost... In 2013, a study by Carl Frey and Michael Osborne put the probability that accountants and auditors would be automated at 94 percent. A decade later, the US Bureau of Labor Statistics counts 1.6 million accountants and auditors employed, median pay of $81,680, and projects the occupation to grow another 5 percent through 2034... the argument that 'half of entry-level white-collar jobs be gone in five years' confuses task automation with the extinction of jobs.",
       "usedIn": [
-        "white-collar-professional-displacement",
+        "entry-level-wage-impact",
         "financial-services-displacement",
         "overall-us-displacement",
-        "entry-level-wage-impact"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7718,9 +7658,9 @@
       "datePublished": "2026-04-24",
       "excerpt": "Between 2011-2023, 18% of US workers were employed in jobs introduced since 1970. The wage premium is four times larger for new work associated with technological change than for other types of new work. The labor share has declined 10% in the US since the early 2000s.",
       "usedIn": [
-        "overall-us-displacement",
+        "high-skill-wage-premium",
         "median-wage-impact",
-        "high-skill-wage-premium"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7748,8 +7688,8 @@
       "datePublished": "2026-04-27",
       "excerpt": "Replicating the dominant rubric with three frontier models on identical tasks, we find a 3.6-fold divergence in mean exposure with agreement as low as 57%.",
       "usedIn": [
-        "workforce-ai-exposure",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -7763,8 +7703,6 @@
       "datePublished": "2026-04-24",
       "excerpt": "Hundreds of millions of people use artificial intelligence (AI) for writing assistance.",
       "usedIn": [
-        "workforce-ai-exposure",
-        "overall-us-displacement",
         "genai-work-adoption"
       ],
       "verified": true,
@@ -7774,6 +7712,7 @@
       "id": "goldman-productivity-growth-forecast-2026",
       "title": "US Daily: Forecasting Productivity Growth: Slow to Adjust, Quick to Overshoot",
       "url": "",
+      "accessNote": "Goldman Sachs client-distributed research note; no public URL. Findings sourced from excerpted reporting.",
       "publisher": "Goldman Sachs",
       "evidenceTier": 2,
       "datePublished": "2026-05-05",
@@ -7823,10 +7762,10 @@
       "datePublished": "2026-05-07",
       "excerpt": "Synthetic differences-in-differences (SDID) comparing AI-exposed (top tercile) vs. a synthetic comparison group of unexposed (bottom tercile) occupations through 2026Q1. Finds 'no clear evidence of AI effects on the labor market' for employment shares or real hourly wages. Unemployment in latest quarter ~0.5pp higher for AI-exposed (more for 16-34 subsample) but statistically insignificant. Demographic differences make naive comparisons unreliable: AI-exposed occupations are 55.1% women and 57.3% BA+ vs. unexposed 32.7% and 10.3%. Treatment date 2022Q4 (ChatGPT release). Caveats noted: LLMs improve over time, exposure metrics may misclassify, CPS underpowered for 22-27 cohort.",
       "usedIn": [
-        "overall-us-displacement",
-        "median-wage-impact",
+        "early-career-employment-decline",
         "entry-level-wage-impact",
-        "early-career-employment-decline"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -7910,10 +7849,10 @@
       "datePublished": "2026-05-04",
       "excerpt": "Construct a new index based on reinforcement learning (RL) covering every occupation in the U.S. economy. Scoring all 17,951 O*NET tasks across 894 occupations on eight dimensions of RL-training feasibility. A difference-in-differences analysis finds that a one-SD increase in RL exposure is associated with a 2.9% decline in job openings after ChatGPT's release.",
       "usedIn": [
-        "workforce-ai-exposure",
+        "entry-level-wage-impact",
         "overall-us-displacement",
         "white-collar-professional-displacement",
-        "entry-level-wage-impact"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false,
@@ -7928,8 +7867,8 @@
       "datePublished": "2013-09-17",
       "excerpt": "We examine how susceptible jobs are to computerisation… implementing a novel methodology to estimate the probability of computerisation for 702 detailed occupations, using a Gaussian process classifier… According to our estimates, about 47 percent of total US employment is at risk.",
       "usedIn": [
-        "workforce-ai-exposure",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false,
@@ -7989,9 +7928,9 @@
       "datePublished": "2026-05-01",
       "excerpt": "Strada Institute surveyed 1,498 US executives and senior talent leaders (Mar 3-22, 2026). 46% of employers that have at least explored AI say it increased entry-level hiring in 2025 vs 13% decrease (4-to-1); 2.7x more expect AI to raise than cut entry-level hiring in 2026. 92% are engaging with AI in some way; AI literacy is ranked the least important entry-level skill.",
       "usedIn": [
-        "white-collar-professional-displacement",
         "ai-adoption-rate",
-        "customer-service-automation"
+        "customer-service-automation",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8022,8 +7961,8 @@
       "datePublished": "2026-05-14",
       "excerpt": "While job postings show a relative decline in vacancies in occupations with greater exposure to AI, that divergence began before the release of ChatGPT in late 2022. These patterns make it difficult to attribute the recent slowdown in entry-level hiring to AI alone.",
       "usedIn": [
-        "overall-us-displacement",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8037,8 +7976,8 @@
       "datePublished": "2026-05-19",
       "excerpt": "Stripe Economics (Ernie Tedeschi, May 19 2026). New business applications rising worldwide with US divergence between total applications and 'high-propensity' employment-generating filings. Stripe Atlas data: 'startups have accelerated since 2023, and especially in the first quarter of 2026' — 'overwhelming[ly]' driven by solo founders across both AI and non-AI ventures. SaaS market context: 'Over 30 days in early 2026, the software sector shed roughly $1 trillion in market capitalization,' but weekly transactions for the 100 largest non-AI SaaS companies on Stripe showed 'a brief dip followed by a swift recovery' — the SaaSpocalypse was expectations-driven, not economic-activity-driven. Historical framing: post-electrification (1882), inflation-adjusted output per worker grew just 0.5%/yr for three decades before productivity 'more than doubled' in the decade after 1917; PCs showed 'gains everywhere except the productivity statistics' (Solow 1987) with visible productivity acceleration mid-1990s.",
       "usedIn": [
-        "ai-business-formation",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "ai-business-formation"
       ],
       "verified": true,
       "synthetic": false
@@ -8052,9 +7991,9 @@
       "datePublished": "2026-05-22",
       "excerpt": "Goldman Sachs's economists estimate that, over the next decade, A.I. may automate 25 percent of current work hours. If our estimate proves correct, A.I. won't eliminate 25 percent of jobs. What's more likely is that people will find more productive ways to spend their time. American companies destroy and create between 25 million and 35 million jobs annually.",
       "usedIn": [
+        "early-career-employment-decline",
         "overall-us-displacement",
-        "white-collar-professional-displacement",
-        "early-career-employment-decline"
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8096,8 +8035,8 @@
       "datePublished": "2026-05-05",
       "excerpt": "WIOA rarely supports worker resilience to automation, with 45% of all WIOA participants returning to their prior industry of work, and 27% staying in the same occupation. Successful outcomes driven mostly by wage gains, possibly due to catch-up mean reversion, rather than changes in occupation.",
       "usedIn": [
-        "overall-us-displacement",
-        "median-wage-impact"
+        "median-wage-impact",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8139,7 +8078,6 @@
       "datePublished": "2026-06-03",
       "excerpt": "occupations characterized by low exposure to precarity had a significantly higher mean LLM exposure [mean 0.386, 95% confidence interval (CI) 0.356–0.417]",
       "usedIn": [
-        "tech-sector-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -8240,9 +8178,9 @@
       "datePublished": "2026-06-10",
       "excerpt": "many economists are more concerned about a different, larger group of white-collar workers: customer service representatives, bookkeepers, payroll clerks and human resources specialists who fly under the radar but collectively account for tens of millions of jobs.",
       "usedIn": [
-        "white-collar-professional-displacement",
         "healthcare-admin-displacement",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8255,9 +8193,7 @@
       "evidenceTier": 1,
       "datePublished": "2023-10-01",
       "excerpt": "Frames the choice between AI-as-imitation (passing the Turing test by mimicking human work) versus AI-as-augmentation (raising human productivity). Argues the augmentation path raises skill premiums and broadens economic gains; the imitation path concentrates them. Positioned in the Economic Futures Map as 'strong augmentation, diffuse gains.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8269,9 +8205,7 @@
       "evidenceTier": 3,
       "datePublished": "2025-04-14",
       "excerpt": "Argues AI should be understood as a 'normal' general-purpose technology, with diffusion-bottlenecked adoption rather than a discontinuous economic break. Pushes back on transformative-AI framings and predicts gradual, sectorally uneven labor impacts with diffuse rather than concentrated welfare gains. Positioned in the Economic Futures Map as 'strong augmentation, diffuse gains.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8283,9 +8217,7 @@
       "evidenceTier": 4,
       "datePublished": "2023-10-16",
       "excerpt": "Manifesto-style essay arguing technology — and AI specifically — produces broad-based prosperity, that resistance to deployment is itself the principal risk, and that AI should be celebrated rather than constrained. Listed as a position in the Economic Futures Map at 'strong augmentation, diffuse gains' (opinion/advocacy).",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8297,10 +8229,7 @@
       "evidenceTier": 1,
       "datePublished": "2022-05-01",
       "excerpt": "Influential essay warning that AI's drive toward human-level imitation creates a 'Turing trap' — it concentrates economic gains in capital and AI developers and erodes labor share, even when total productivity rises. Argues for augmentation-oriented AI design that complements rather than substitutes human workers. Positioned in the Economic Futures Map at the borderline between concentrated and diffuse gains under strong augmentation.",
-      "usedIn": [
-        "overall-us-displacement",
-        "median-wage-impact"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8312,9 +8241,7 @@
       "evidenceTier": 4,
       "datePublished": "2023-11-27",
       "excerpt": "Introduces 'd/acc' (defensive accelerationism) as an alternative to both e/acc (effective acceleration) and pause-AI camps. Argues for accelerating defensive technologies — including AI safety, decentralized infrastructure, and bio-defense — as the path to diffuse, robust welfare gains. Positioned in the Economic Futures Map at 'strong augmentation, diffuse gains.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8326,9 +8253,7 @@
       "evidenceTier": 3,
       "datePublished": "2025-01-01",
       "excerpt": "Argues advanced AI could trigger an 'intelligence curse' analogous to the resource curse — states and firms that capture AI capability concentrate economic and political power, hollowing out broader economic participation and weakening incentives to invest in human capital. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8340,9 +8265,7 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-28",
       "excerpt": "Argues that even without a discrete misaligned-AGI event, incremental AI capability gains can produce gradual systemic disempowerment of humans through erosion of labor income, political representation, and culture — with each step locally rational but cumulatively undermining human leverage. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8354,9 +8277,7 @@
       "evidenceTier": 4,
       "datePublished": "2024-06-04",
       "excerpt": "Argues AGI by 2027 and superintelligence shortly after are 'strikingly plausible,' with massive concentration of economic and geopolitical power in a handful of frontier labs. Forecasts trillion-dollar compute clusters and national-security primacy. Positioned in the Economic Futures Map at 'concentrated gains, strong replacement.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8368,9 +8289,7 @@
       "evidenceTier": 4,
       "datePublished": "2024-10-11",
       "excerpt": "Anthropic CEO sets out an optimistic vision of 'powerful AI' (deliberately avoiding 'AGI'): 5–10× compression of decades of biological, mental health, economic, and governance progress into a 5–10 year window after powerful AI arrives. Positioned in the Economic Futures Map at 'strong replacement, diffuse gains' — replacement-heavy in the sense that AI does the work, but welfare gains broadly distributed if governance succeeds.",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8382,9 +8301,7 @@
       "evidenceTier": 4,
       "datePublished": "2021-03-16",
       "excerpt": "Pre-ChatGPT essay arguing AI will drive prices of goods and services to near zero and that wealth must be redistributed via taxing capital (companies) and land. Proposes the American Equity Fund. Positioned in the Economic Futures Map at 'strong replacement, diffuse gains' — replacement-heavy but with diffuse welfare contingent on redistributive policy.",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8396,9 +8313,7 @@
       "evidenceTier": 4,
       "datePublished": "2026-06-01",
       "excerpt": "Doctorow's book-length argument that AI is mostly deployed not to automate work but to put workers into 'reverse centaur' configurations — humans serving as helpers to machines at inhuman pace (delivery drivers, warehouse pickers, AI-supervised coders). Argues the $16T+ AI investment thesis only makes sense if AI replaces vast swathes of the wage-earning workforce, and that workers, not 'AI-enjoyers,' are the political constituency for resisting that path. Companion talk delivered at University of Washington Neuroscience-AI-Society lecture series. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong augmentation' (augmentation in the cynical sense — humans augmenting machines, not the reverse).",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8410,10 +8325,7 @@
       "evidenceTier": 3,
       "datePublished": "2026-05-01",
       "excerpt": "Kinder predicts a long, hard 'messy middle' between today's mostly intact labor market and any post-AGI abundance. In that period, most jobs survive but losses concentrate in some of the best-paid, most coveted jobs — cognitive computer work in offices and professional sectors, which are exactly the roles that have grown the most as a share of the US labor force over the last 50 years. Frames these concentrated losses as politically explosive. Her rule of thumb: 'if you can do your job locked in a closet with a computer, you're probably in trouble.' Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
-      "usedIn": [
-        "overall-us-displacement",
-        "white-collar-professional-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8425,9 +8337,7 @@
       "evidenceTier": 3,
       "datePublished": "2026-06-11",
       "excerpt": "An 18,000-word fictional five-year scenario (June 2026) by European AI researchers warning the EU risks becoming AI-dependent on the US or China by 2031. Puts Europe at 5% of global AI compute against ~80% for the US in the scenario. Three identified 2025 misjudgements drive the trajectory: underestimating AI's pace, underestimating its scope of change, and overestimating Europe's catch-up capacity. Scenario beats include a 2027 ransomware wave (open-source frontier model) hollowing out European cybersecurity, US and Chinese firms acquiring distressed European carmakers and machine-tool makers, and conversion of factory floors to robot production. Narrative form (two protagonists in Brussels and Silicon Valley), not policy paper. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8439,9 +8349,7 @@
       "evidenceTier": 2,
       "datePublished": "2023-12-01",
       "excerpt": "Korinek sets out a scenario-planning framework for economists and policymakers facing the possibility of human-level AI. Distinguishes scenarios ranging from business-as-usual (gradual GPT-style diffusion) to transformative AGI, with sharply different implications for output, wages, and labor share. Argues economists and policymakers should prepare contingency policy for labor displacement, education reform, market regulation, macroeconomic stability, and international AI governance across all scenarios rather than betting on one. Foundational paper for the scenario-planning approach later adopted by RAISE US and similar coalitions. Positioned in the Yelizarova Economic Futures Map at 'concentrated gains, strong replacement.'",
-      "usedIn": [
-        "overall-us-displacement"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8468,8 +8376,8 @@
       "datePublished": "2026-02-23",
       "excerpt": "Identifies five categories of labor-affecting technology: labor-augmenting, capital-augmenting, automating, expertise-leveling, and new task-creating. Only new task-creating technologies are unambiguously pro-worker because they expand the range of valuable work humans can do and raise the value of human expertise; the other four can lift productivity while reducing the scarcity value of expertise. Cites Schneider Electric AI tool for field electricians that cuts average maintenance-report completion time roughly in half as augmentation evidence. As reported in MIT Sloan Ideas Made to Matter, June 17, 2026.",
       "usedIn": [
-        "workforce-ai-exposure",
-        "genai-work-adoption"
+        "genai-work-adoption",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -8483,8 +8391,7 @@
       "datePublished": "2026-06-01",
       "excerpt": "Goldman Sachs revised its US labor displacement forecast upward from 6-7% to ~9% (about 15 million workers) over the next decade. The change reflects a new methodology measuring total flow of workers leaving jobs due to AI-driven productivity gains, rather than steady-state unemployed count. Briggs estimates each 1% increase in technology-driven productivity yields a 0.5-0.6% increase in the job-destruction rate over the following two years. Goldman maintains the long-run benefits outweigh the disruption (US churns 25-35M jobs annually, and AI will generate new employment), and that unemployment rises less than 1 percentage point at peak under standard adoption timing. As of mid-2026, Goldman estimates AI is erasing ~16,000 net jobs per month, concentrated in entry-level and administrative roles.",
       "usedIn": [
-        "overall-us-displacement",
-        "entry-level-wage-impact"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8513,8 +8420,7 @@
       "excerpt": "Monthly-updated dashboard built on anonymized ADP payroll data covering 4.6 million workers across 730+ occupations. April 2026 reading: most AI-exposed occupations contracted 0.2% YoY, least-exposed grew 0.1% YoY — a small but consistent gap. For workers ages 22-25 in highly AI-exposed occupations, employment is now shrinking at 3.8% per year, with the early-career decline sharpening from -2.8% to April 2024 to over -4% per year since. Builds on Brynjolfsson, Chandar, Chen (2025) 'Canaries in the Coal Mine.' Live update of the underlying employment story behind the 'overall not yet, early-career already' pattern.",
       "usedIn": [
         "overall-us-displacement",
-        "tech-sector-displacement",
-        "workforce-ai-exposure"
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8528,9 +8434,7 @@
       "datePublished": "2026-06-26",
       "excerpt": "Anthropic's June 2026 Economic Index 'Cadences' report combines anonymized Claude usage patterns with a survey of ~9,700 Claude users. Headline findings: about half of surveyed users report AI can already handle 50% or more of their work tasks; 4% say Claude could perform their entire job today; more than one-third expect AI to do most or nearly all of their work tasks within 12 months. The report also documents a widening 'cadence' gap between experienced and newcomer Claude users — experienced users automate substantially more of their work. Biggest automation increases occur in business sales, automated trading, and routine market-research tasks, flagging those roles as near-term automation candidates.",
       "usedIn": [
-        "genai-work-adoption",
-        "workforce-ai-exposure",
-        "ai-adoption-rate"
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
@@ -8558,8 +8462,7 @@
       "datePublished": "2026-06-30",
       "excerpt": "First study to link observed firm-level AI spending to workforce outcomes at scale. Tracked AI spending across 21,599 US firms via Ramp expense-management data, matched to Revelio Labs employment records. Companies that invest heavily in AI grew headcount 10% over the two years following adoption; entry-level headcount grew 12%. Gains are ENTIRELY driven by high-intensity adopters — low-intensity adopters see no statistically significant change. Direction is opposite to the displacement narrative: heavy AI adopters ADD jobs faster than laggards. Caveats: AI adopters are already larger, more engineering-intensive, more likely to be venture-backed, and faster-growing than non-adopters; effect may partly reflect selection into adoption rather than causal effect of adoption.",
       "usedIn": [
-        "overall-us-displacement",
-        "entry-level-wage-impact"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8573,8 +8476,7 @@
       "datePublished": "2026-07-02",
       "excerpt": "EIG applies five different measures of AI exposure (drawn from four different research papers) to test whether current labor market data shows an AI signature. The startling finding: which exposure measure you pick determines not just the SCALE but the DIRECTION of AI's estimated effect on employment. Under some measures AI appears to be hurting employment; under others it appears to be helping. Companion piece 'A New Threat to Economic Data' documents the deteriorating federal statistical system (falling response rates, funding cuts) that Casselman NYT (July 2) also foregrounds. Goldschlag is EIG's Director of Research and formerly Principal Economist at Census's Center for Economic Studies.",
       "usedIn": [
-        "overall-us-displacement",
-        "workforce-ai-exposure"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8851,8 +8753,8 @@
       "excerpt": "Bloomberg (Boesler & Prakash, Jul 2 2026): 'A decline in payrolls in the financial-activities and information sectors — where AI adoption rates have been fastest — has accelerated in 2026, to 28,000 per month on average based on government data.' 'The weakness stands out against an otherwise robust labor market that created more than 113,000 jobs monthly this year through May.' Challenger data: 'almost 102,000 announced job cuts attributed to AI so far this year.' 'Overall, the tech sector accounted for a third of all layoffs announced in 2026.' Finance workforce: 'Office and administrative support occupations — including customer service representatives, bank tellers and insurance claims processors — account for about a quarter of employment in financial activities.' California Policy Lab: 'Finance and insurance had the highest concentration of unemployment claims in the state coming from workers in highly AI-exposed occupations.'",
       "dateAdded": "2026-07-06",
       "usedIn": [
-        "overall-us-displacement",
         "financial-services-displacement",
+        "overall-us-displacement",
         "tech-sector-displacement"
       ],
       "verified": true,
@@ -8899,9 +8801,7 @@
       "datePublished": "2026-07-13",
       "excerpt": "Statement organized by Erik Brynjolfsson, Ajay Agrawal, Anton Korinek, and Tom Cunningham. Signed by 16 Nobel Laureates (including Michael Spence and Daron Acemoglu) and 200+ economists and AI researchers. Core thesis: AI 'may become radically more powerful over the next 10 years,' potentially producing an economic transformation 'larger than the Industrial Revolution' on 'a vastly shorter time frame,' with 'large-scale job displacement' as a primary risk. Calls for deeper research on AI's economic impacts and for building policies and institutions to ensure AI complements human capabilities. Korinek: 'Steam, electricity, and computers each gave societies decades to adapt; AI may give us only a few years.' Brynjolfsson: 'AI capabilities are advancing far faster than our understanding of economic implications.' Agrawal: 'Whether rapidly advancing AI broadly elevates living standards or concentrates wealth depends on choices we make today.' Cunningham: 'We are driving in the fog, and it is extraordinarily difficult to anticipate what will happen next.'",
       "dateAdded": "2026-07-13",
-      "usedIn": [
-        "reading-list"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8915,8 +8815,8 @@
       "excerpt": "PwC 2026 Global AI Jobs Barometer (Atkinson & Brown, Jun 15, 2026). Analyzed 1+ billion job advertisements across 27 countries and territories, including 2.4M entry-level US jobs. Key findings: entry-level roles most exposed to AI are 'seven times more likely to require traditionally senior-level skills'; job openings for 'seniorised' entry-level roles grew 35% since 2019 while other entry-level roles declined 10%. AI-skills wage premium reached 62% (up from 57% in the 2025 barometer), ranging from 16% (government) to 118% (consumer markets). AI-skill jobs growing 69% vs 9% for the total jobs market — 'almost twice as high as 2024.' Companies most exposed to AI: 52% headcount growth vs 36% (least exposed); wage growth 24% vs 17%; productivity 34% vs 24% (2018-2025), with the top-20% 'super-stars' at 163% productivity gain. 'Professionalised' roles growing twice as fast with 42% faster salary increases. Technology/media/telecom: 11% AI job share; health: <1%.",
       "dateAdded": "2026-07-19",
       "usedIn": [
-        "high-skill-wage-premium",
         "entry-level-wage-impact",
+        "high-skill-wage-premium",
         "white-collar-professional-displacement"
       ],
       "verified": true,
@@ -8931,9 +8831,7 @@
       "datePublished": "2026-07-16",
       "excerpt": "FT opinion piece (mid-July 2026) synthesizing the PwC 2026 Global AI Jobs Barometer findings on entry-level work. Argues AI is not eliminating entry-level jobs but transforming them: newcomers previously learned by doing simple, repetitive tasks — the apprenticeship rung — but AI has automated that rung. What remains for entry-level workers now leans on judgment, idea generation, and interpersonal capability — historically senior skills. The piece frames the 'seniorisation' finding (entry-level roles 7x more likely to need senior skills; seniorised roles +35% since 2019 vs -10% for other entry-level roles) as a collapse of the traditional learning-by-doing path, not a jobs bloodbath.",
       "dateAdded": "2026-07-19",
-      "usedIn": [
-        "reading-list"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -8947,8 +8845,7 @@
       "excerpt": "Lambert & Schindler (2026, SSRN 6787638) find declines in the junior hiring share in AI-exposed jobs, replicating the Canaries pattern — BUT show these patterns can be explained by exposure to remote work, not AI per se. A key counter-evidence paper cited in Stanford DEL Research Note #1 as one of the candidate confounds in the current debate over whether the entry-level employment decline is causally attributable to generative AI adoption.",
       "dateAdded": "2026-07-20",
       "usedIn": [
-        "entry-level-wage-impact",
-        "white-collar-professional-displacement"
+        "entry-level-wage-impact"
       ],
       "verified": true,
       "synthetic": false
@@ -8963,8 +8860,7 @@
       "excerpt": "Johnston & Makridis (2026, SSRN 6460358) use US data through 2024 and find that exposure to AI is associated with SECTOR-LEVEL INCREASES in employment, not declines. Cited in Stanford DEL Research Note #1 as a key counter to the Brynjolfsson-Chandar-Chen Canaries finding of early-career declines — same period, different unit of analysis, opposite sign at the sector level. Illustrates the current dataset-and-methodology dependence of the AI-labor debate.",
       "dateAdded": "2026-07-20",
       "usedIn": [
-        "overall-us-displacement",
-        "workforce-ai-exposure"
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -8978,9 +8874,7 @@
       "datePublished": "2025-10-30",
       "excerpt": "Brynjolfsson (Stanford DEL) & Richardson (ADP chief economist), 'How Representative Is ADP Employment Data?' — Oct 30, 2025. Methodology companion to the Canaries line of work. ADP covers 'more than 26 million U.S. workers at more than 500,000 employers' — '1 in 6 workers in the country and 1 in 5 workers in the private sector.' QCEW private-sector benchmark is 131.3M workers. ADP overrepresents manufacturing (9% vs QCEW 3.5%) and underrepresents construction (4.6% vs 6.1%); ADP is 'more representative of employment for small and medium employers than the BLS survey' (32.4% of active ADP is <50 workers vs QCEW 43.9%). Establishments lean larger and concentrate in manufacturing and the Northeast; growth bias exists because 'employers that outsource payroll services are likely to be more profitable than those that don't.' ADP re-weights by industry, state, and employer size to correct. Jan-Jun 2025 revision comparison: ADP net revision +2K jobs vs BLS -488K, with final convergence to 14K difference — evidence of ADP's greater month-to-month stability. Overall conclusion: 'ADP's National Employment Report ... is overall representative of U.S. employment.'",
       "dateAdded": "2026-07-20",
-      "usedIn": [
-        "reading-list"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -9452,11 +9346,11 @@
       "datePublished": "2026-07-22",
       "excerpt": "July 22, 2026 monthly refresh of the Canaries Dashboard (ADP payroll sample, 4.6M workers, 730+ occupations), data through June 2026. All-ages employment in the most-exposed quintile: -0.2% YoY, +1.1%/yr annualized since ChatGPT vs +2.0%/yr least-exposed. Early-career (22-25) most-exposed: -3.5%/yr annualized, -4.3% past year. New gender analysis: early-career women in the most-exposed quintile contracting 4.5%/yr vs 2.5%/yr for men; 43.8% of early-career women work in the most-exposed occupation category vs 32.4% of men.",
       "usedIn": [
+        "early-career-employment-decline",
         "overall-us-displacement",
         "tech-sector-displacement",
         "white-collar-professional-displacement",
-        "workforce-ai-exposure",
-        "early-career-employment-decline"
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
@@ -9499,11 +9393,11 @@
       "excerpt": "Google's AI & Economy ATLAS v1.0 (Iscenko, Strand, Chen, Imas, Manyika et al., Google/Google DeepMind, Jul 23 2026; reviewed by Diane Coyle and David Autor). 15M de-identified interactions across Gemini App, AI Mode, and Gemini API (Apr 6-19, 2026), mapped to 800+ occupations, 4,000 O*NET tasks, 300 ATUS activities, 150 countries, 140 languages. Work: 'AI adoption spans occupations covering just above 88% of US employment' (68% of detailed occupations) but 'penetration remains shallow' — 'AI is used for only 21% of total tasks in the median occupation with any AI use'; only 3% of occupations show usage for >75% of tasks. 'Attempts to automate tasks end-to-end represent less than 10% of AI conversations in non-routine cognitive work'; >25% for routine cognitive work. Non-routine cognitive tasks = 35% of O*NET universe but 65% of work interactions. Wages: 'a 1% increase in an occupation's median earnings is associated with a more than 2.5% increase in AI usage intensity'; Gemini-weighted median salary $82,919 vs $62,252 employment-weighted national median. Home: 86% of conversational use is non-work; government/civic queries over-represented ~20x vs time spent; household time-savings valued at $14.9B-$149B/yr (0.5-5% scenarios). Global: 1% GDP/capita ↑ → 0.9% usage ↑; English only ~1/3 of conversations across 143 languages.",
       "dateAdded": "2026-07-24",
       "usedIn": [
-        "workforce-ai-exposure",
-        "workforce-ai-use",
-        "overall-us-displacement",
+        "genai-work-adoption",
         "high-skill-wage-premium",
-        "genai-work-adoption"
+        "overall-us-displacement",
+        "workforce-ai-exposure",
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false
@@ -9547,10 +9441,10 @@
       "datePublished": "2026-07-28",
       "excerpt": "Inaugural edition of Revelio Labs' monthly AI Labor Market Tracker, built on online professional profiles, job postings, salaries, employee reviews and WARN notices. Five headline gauges: CS/IT enrollment supply -28% since 2022; demand for the most AI-exposed roles -42% vs least-exposed since Oct 2022; adopting-firm headcount +27% vs non-adopters; activity-mix dissimilarity +8.4pp yoy; 5.05 postings per hire. Early-career (22-25) employment in most-exposed occupations is down 13% relative to least-exposed since pre-ChatGPT — an independent replication of Brynjolfsson, Chandar & Chen (2025) on non-payroll data. Firm AI adoption reaches ~5.9% of eligible hiring firms; the AI-exposure wage premium has eroded from ~2% to roughly zero.",
       "usedIn": [
-        "early-career-employment-decline",
-        "overall-us-displacement",
         "ai-adoption-rate",
+        "early-career-employment-decline",
         "high-skill-wage-premium",
+        "overall-us-displacement",
         "workforce-ai-exposure"
       ],
       "verified": true,
@@ -9608,9 +9502,7 @@
       "datePublished": "2026-08-03",
       "excerpt": "Using monthly vintages of Revelio Labs data from 2020-2026, the authors show public professional profiles \"are not fixed historical snapshots, but mutable accounts that workers revise over time.\" They find \"19.7 percent of established U.S. LinkedIn users retroactively edit the title or description of a job they have already left,\" that such users \"are much more likely to change employers as compared to later-editing users,\" and that \"this mutability can bias historical measures of skills.\" Retroactive edits show sharp post-2022 increases in AI-related language.",
       "dateAdded": "2026-08-07",
-      "usedIn": [
-        "early-career-employment-decline"
-      ],
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
@@ -9727,11 +9619,11 @@
       "verified": true,
       "synthetic": false,
       "usedIn": [
-        "median-wage-impact",
-        "workforce-ai-use",
-        "overall-us-displacement",
         "entry-level-wage-impact",
-        "high-skill-wage-premium"
+        "high-skill-wage-premium",
+        "median-wage-impact",
+        "overall-us-displacement",
+        "workforce-ai-use"
       ]
     },
     "brynjolfsson-chandar-chen-2026-08": {
@@ -9746,8 +9638,8 @@
       "synthetic": false,
       "usedIn": [
         "early-career-employment-decline",
-        "overall-us-displacement",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "overall-us-displacement"
       ]
     },
     "census-btos-ai-biweekly-aug-2026": {
@@ -9821,8 +9713,8 @@
       "excerpt": "\"More than half of U.S. workers (52%) now use AI in their role, with 30% using it frequently (a few times a week or more). Fifteen percent use it daily.\" 47% of employees say their organization has integrated AI tools, up from 41%. Fielded May 6-20, 2026 among 22,573 employed U.S. adults, margin of error +/-0.9 percentage points. The 52% figure counts anyone using AI at least a few times a year, a looser threshold than the quarterly survey charted on the generative AI adoption graph.",
       "dateAdded": "2026-08-20",
       "usedIn": [
-        "genai-work-adoption",
-        "ai-adoption-rate"
+        "ai-adoption-rate",
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false
@@ -9868,9 +9760,9 @@
       "dateAdded": "2026-08-25",
       "usedIn": [
         "early-career-employment-decline",
-        "robots-physical-automation-displacement",
         "entry-level-wage-impact",
-        "overall-us-displacement"
+        "overall-us-displacement",
+        "robots-physical-automation-displacement"
       ],
       "verified": true,
       "synthetic": false
@@ -9885,8 +9777,8 @@
       "excerpt": "\"AI will take on work in law, customer service, medicine, software, and manufacturing. It will hit these industries rapidly, over the course of a decade rather than a few generations.\" \"The jobs at most risk are entry- and mid-level, and the new jobs being created will mostly require skills that take many years to learn.\" Proposes a Human Reserved domain of jobs set aside for people, and a tax on AI tokens and robots: \"if you're an employer and you hire someone, you pay payroll taxes on their earnings. But if you buy a robot, you can usually write it off right away as a business expense. The tax system nudges you toward replacing people with machines.\"",
       "dateAdded": "2026-08-25",
       "usedIn": [
-        "overall-us-displacement",
         "early-career-employment-decline",
+        "overall-us-displacement",
         "robots-physical-automation-displacement"
       ],
       "verified": true,

@@ -6,9 +6,9 @@ Tools for hands-on tasks, equipment operation, physical presence, and field work
 
 - **Category**: physical-manual
 - **Also useful for**: coordination-management
-- **Pricing**: Freemium ($39/user/mo for Pro)
+- **Pricing**: Freemium ($39/user/mo for Pro, billed annually)
 - **URL**: https://www.fieldwire.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > Construction management platform for task tracking, plan markup, and field reporting.
@@ -21,9 +21,9 @@ Tools for hands-on tasks, equipment operation, physical presence, and field work
 
 - **Category**: physical-manual
 - **Also useful for**: coordination-management, analysis-decision
-- **Pricing**: Enterprise (custom pricing)
+- **Pricing**: Enterprise (quote-only; priced on annual construction volume)
 - **URL**: https://www.procore.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > Construction management platform with AI-powered risk prediction, quality tracking, and safety compliance.
@@ -36,9 +36,9 @@ Tools for hands-on tasks, equipment operation, physical presence, and field work
 
 - **Category**: physical-manual
 - **Also useful for**: technical-specialized
-- **Pricing**: Enterprise (custom pricing)
+- **Pricing**: Enterprise (quote-only)
 - **URL**: https://www.augmentir.com
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > AI-powered connected worker platform for manufacturing, with digital work instructions and skills management.
@@ -51,10 +51,10 @@ Tools for hands-on tasks, equipment operation, physical presence, and field work
 
 - **Category**: physical-manual
 - **Also useful for**: coordination-management
-- **Pricing**: Freemium ($24/user/mo for Premium)
-- **URL**: https://safetyculture.com
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Pricing**: Freemium ($24/user/mo for Premium, billed annually; $29 monthly)
+- **URL**: https://mitti.com
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 > Inspection and audit platform with AI-powered issue detection, reporting, and compliance tracking.
 

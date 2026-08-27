@@ -564,6 +564,10 @@ function checkLastUpdatedConsistency(confirmedSources, report) {
 function checkBrokenURLPatterns(prediction, report) {
   let clean = true;
   for (const s of prediction.sources) {
+    // A client-distributed note has no public link. An accessNote says so on
+    // the record, which is the difference between a documented gap and a
+    // forgotten field — only the latter is a defect.
+    if (!s.url && s.accessNote) continue;
     if (!s.url || (!s.url.startsWith("http://") && !s.url.startsWith("https://"))) {
       report.addShouldFix(
         prediction.slug,
@@ -764,6 +768,12 @@ function checkRecurringSourcesFreshness(allPredictions, report, today) {
       due.push(`${s.id} (never ingested)`);
       continue;
     }
+    // A series can be past its cadence because the publisher skipped an
+    // edition, not because we fell behind. A recent sweep proves someone
+    // looked and found nothing, so only flag when the sweep itself is stale.
+    const lastSweep = s.lastSweep && new Date(s.lastSweep).getTime();
+    if (lastSweep && (todayMs - lastSweep) / 86400000 <= 30) continue;
+
     const ageDays = (todayMs - new Date(lastIngested).getTime()) / 86400000;
     const interval = CADENCE_DAYS[s.cadence] || 92;
     if (ageDays > interval * 2) {

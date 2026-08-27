@@ -5,6 +5,9 @@ export const SOURCE_COUNT = siteStats.sourceCount;
 export const SOURCE_LIBRARY_COUNT = siteStats.sourceLibraryCount;
 export const LINKED_SOURCE_COUNT = siteStats.linkedSourceCount;
 
+/** Oldest verification date in the tool KB — the floor for tool pricing accuracy. */
+export const TOOL_PRICING_VERIFIED_AS_OF = siteStats.toolPricingVerifiedAsOf;
+
 /** Human-readable source count string for use in descriptions (e.g. "574+") */
 export const SOURCE_COUNT_DISPLAY = `${SOURCE_COUNT}+`;
 
