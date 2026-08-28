@@ -816,7 +816,40 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
           </p>
           <p className="mb-2">
             <Strong>Sources:</Strong> Eloundou et al. (2023); Felten, Raj &amp;
-            Seamans (2023); Yale Budget Lab (2026); Acemoglu (2024).
+            Seamans (2023); Yale Budget Lab (2026); Acemoglu (2024);{" "}
+            <a
+              href="https://www.bls.gov/emp/publications/ai-exposure-categories.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-[var(--border)] underline-offset-2 hover:decoration-[var(--foreground)]"
+            >
+              BLS AI exposure categories (2026)
+            </a>
+            .
+          </p>
+          <p className="mb-2">
+            <Strong>Federal cross-check:</Strong> In August 2026 the BLS
+            Employment Projections program published its first official
+            occupational AI exposure classification, sorting 831 occupations
+            into four relative categories by combining five external measures
+            &mdash; three theoretical (Felten/Raj/Seamans, Eloundou et al.,
+            Eisfeldt et al.) and two built on observed AI usage (Anthropic&rsquo;s
+            Claude data, Microsoft&rsquo;s Copilot data). We matched it to 334 of
+            our 342 occupations. Our scores rise monotonically across their
+            categories: <Strong>Low 2.51</Strong>, <Strong>Moderate 3.45</Strong>,{" "}
+            <Strong>High 5.84</Strong>, <Strong>Very high 7.42</Strong>.
+          </p>
+          <p className="mb-2">
+            Where we disagree, the pattern is informative rather than random.
+            We score physical therapists, occupational therapists and flight
+            attendants well below BLS &mdash; all in-person occupations, and
+            BLS states plainly that its inputs &ldquo;do not consider
+            bottlenecks, complementarities, or other non-independent features of
+            occupations.&rdquo; That is precisely the gap the remaining four
+            dimensions below exist to close. Two further limits on the federal
+            measure: it is a <em>relative</em> ranking with no economy-wide
+            share, and its theoretical inputs are pinned to AI capabilities
+            available no later than mid-2023.
           </p>
           <p>
             <Strong>Key insight:</Strong> Acemoglu&rsquo;s bounding argument
