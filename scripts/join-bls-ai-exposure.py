@@ -126,8 +126,10 @@ def main():
     if not apply_changes:
         print("\nDry run. Re-run with --apply to write enriched-occupations.json.")
         return
+    # Match the existing file byte-for-byte apart from the added fields:
+    # indent=2, literal UTF-8, no trailing newline.
     OCC_PATH.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     print(f"\nWrote {OCC_PATH}")
 

@@ -378,7 +378,9 @@
           "importance": 1.16,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "actors",
@@ -742,7 +744,9 @@
           "importance": 1.22,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "actuaries",
@@ -1105,7 +1109,9 @@
           "importance": 1.04,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "administrative-services-managers",
@@ -1471,7 +1477,9 @@
           "importance": 2.04,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "adult-literacy-and-ged-teachers",
@@ -1851,7 +1859,9 @@
           "importance": 1.29,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "advertising-sales-agents",
@@ -2221,7 +2231,9 @@
           "importance": 1.06,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "advertising-promotions-and-marketing-managers",
@@ -2594,7 +2606,9 @@
           "importance": 1.21,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "aerospace-engineering-and-operations-technicians",
@@ -2953,7 +2967,9 @@
           "importance": 1.04,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "aerospace-engineers",
@@ -3316,7 +3332,9 @@
           "importance": 1.1,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "agricultural-and-food-science-technicians",
@@ -3681,7 +3699,9 @@
           "importance": 1.58,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "agricultural-and-food-scientists",
@@ -4045,7 +4065,9 @@
           "importance": 1.95,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "agricultural-engineers",
@@ -4408,7 +4430,9 @@
           "importance": 2.2,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "agricultural-workers",
@@ -4435,7 +4459,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "air-traffic-controllers",
@@ -4807,7 +4833,9 @@
           "importance": 1.16,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "aircraft-and-avionics-equipment-mechanics-and-technicians",
@@ -5190,7 +5218,9 @@
           "importance": 1.91,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "airline-and-commercial-pilots",
@@ -5560,7 +5590,9 @@
           "importance": 2.24,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "animal-care-and-service-workers",
@@ -5587,7 +5619,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "announcers",
@@ -5957,7 +5991,9 @@
           "importance": 1.33,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "anthropologists-and-archeologists",
@@ -6328,7 +6364,9 @@
           "importance": 1.26,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "arbitrators-mediators-and-conciliators",
@@ -6694,7 +6732,9 @@
           "importance": 1.33,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "architects",
@@ -7075,7 +7115,9 @@
           "importance": 1.9,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "architectural-and-engineering-managers",
@@ -7440,7 +7482,9 @@
           "importance": 1.76,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "curators-museum-technicians-and-conservators",
@@ -7804,7 +7848,9 @@
           "importance": 1.68,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "art-directors",
@@ -8167,7 +8213,9 @@
           "importance": 1.3,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "assemblers-and-fabricators",
@@ -8554,7 +8602,9 @@
           "importance": 2.19,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "athletic-trainers",
@@ -8925,7 +8975,9 @@
           "importance": 1.6,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "atmospheric-scientists-including-meteorologists",
@@ -9294,7 +9346,9 @@
           "importance": 1.3,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "audiologists",
@@ -9667,7 +9721,9 @@
           "importance": 1.64,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "automotive-body-and-glass-repairers",
@@ -10040,7 +10096,9 @@
           "importance": 1.96,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "automotive-service-technicians-and-mechanics",
@@ -10418,7 +10476,9 @@
           "importance": 1.86,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "bakers",
@@ -10785,7 +10845,9 @@
           "importance": 1.41,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "barbers-hairstylists-and-cosmetologists",
@@ -11150,7 +11212,9 @@
           "importance": 1.25,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "bartenders",
@@ -11517,7 +11581,9 @@
           "importance": 1.54,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "bill-and-account-collectors",
@@ -11881,7 +11947,9 @@
           "importance": 1.05,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "biochemists-and-biophysicists",
@@ -12252,7 +12320,9 @@
           "importance": 1.95,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "biomedical-engineers",
@@ -12626,7 +12696,9 @@
           "importance": 1.74,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "biological-technicians",
@@ -12989,7 +13061,9 @@
           "importance": 1.19,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "boilermakers",
@@ -13356,7 +13430,9 @@
           "importance": 1.81,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "bookkeeping-accounting-and-auditing-clerks",
@@ -13720,7 +13796,9 @@
           "importance": 1.09,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "broadcast-and-sound-engineering-technicians",
@@ -14084,7 +14162,9 @@
           "importance": 2.35,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "budget-analysts",
@@ -14447,7 +14527,9 @@
           "importance": 1.32,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "bus-drivers",
@@ -14813,7 +14895,9 @@
           "importance": 1.33,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "butchers-and-meat-cutters",
@@ -15171,7 +15255,9 @@
           "importance": 2.15,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "calibration-technologists-and-technicians",
@@ -15214,7 +15300,9 @@
         "Visually inspect equipment to detect surface defects.",
         "Write and submit reports about the results of calibration tests."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "cardiovascular-technologists-and-technicians",
@@ -15575,7 +15663,9 @@
           "importance": 1.53,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "career-and-technical-education-teachers",
@@ -15945,7 +16035,9 @@
           "importance": 2.62,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "carpenters",
@@ -16312,7 +16404,9 @@
           "importance": 2.11,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "cartographers-and-photogrammetrists",
@@ -16674,7 +16768,9 @@
           "importance": 1.28,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "cashiers",
@@ -17037,7 +17133,9 @@
           "importance": 1.34,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "chefs-and-head-cooks",
@@ -17409,7 +17507,9 @@
           "importance": 2,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "chemical-engineers",
@@ -17774,7 +17874,9 @@
           "importance": 1.41,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "chemical-technicians",
@@ -18137,7 +18239,9 @@
           "importance": 1.61,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "chemists-and-materials-scientists",
@@ -18500,7 +18604,9 @@
           "importance": 1.52,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "childcare-workers",
@@ -18870,7 +18976,9 @@
           "importance": 1.26,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "chiropractors",
@@ -19232,7 +19340,9 @@
           "importance": 1.59,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "civil-engineering-technicians",
@@ -19590,7 +19700,9 @@
           "importance": 1.6,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "civil-engineers",
@@ -19952,7 +20064,9 @@
           "importance": 1.29,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "claims-adjusters-appraisers-examiners-and-investigators",
@@ -20326,7 +20440,9 @@
           "importance": 1.14,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "clinical-laboratory-technologists-and-technicians",
@@ -21058,7 +21174,9 @@
           "importance": 1.46,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "community-health-workers",
@@ -21416,7 +21534,9 @@
           "importance": 1.81,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "compensation-and-benefits-managers",
@@ -21780,7 +21900,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "compensation-benefits-and-job-analysis-specialists",
@@ -22137,7 +22259,9 @@
           "importance": 1.29,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "compliance-officers",
@@ -22498,7 +22622,9 @@
           "importance": 1.69,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-and-information-research-scientists",
@@ -22860,7 +22986,9 @@
           "importance": 1.66,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-and-information-systems-managers",
@@ -23227,7 +23355,9 @@
           "importance": 1.48,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-hardware-engineers",
@@ -23593,7 +23723,9 @@
           "importance": 1.46,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-network-architects",
@@ -23974,7 +24106,9 @@
           "importance": 1.9,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-programmers",
@@ -24338,7 +24472,9 @@
           "importance": 1.3,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-support-specialists",
@@ -24702,7 +24838,9 @@
           "importance": 1.92,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "computer-systems-analysts",
@@ -25071,7 +25209,9 @@
           "importance": 1.52,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "concierges",
@@ -25438,7 +25578,9 @@
           "importance": 1.36,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "conservation-scientists",
@@ -25818,7 +25960,9 @@
           "importance": 1.78,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "construction-and-building-inspectors",
@@ -26180,7 +26324,9 @@
           "importance": 1.64,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "construction-equipment-operators",
@@ -26549,7 +26695,9 @@
           "importance": 2.04,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "construction-laborers-and-helpers",
@@ -26908,7 +27056,9 @@
           "importance": 2.25,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "construction-managers",
@@ -27281,7 +27431,9 @@
           "importance": 2.45,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "cooks",
@@ -27653,7 +27805,9 @@
           "importance": 2,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "correctional-officers",
@@ -28017,7 +28171,9 @@
           "importance": 1.74,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "cost-estimators",
@@ -28382,7 +28538,9 @@
           "importance": 1.1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "court-reporters",
@@ -28743,7 +28901,9 @@
           "importance": 1.25,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "craft-and-fine-artists",
@@ -29108,7 +29268,9 @@
           "importance": 1.3,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "credit-counselors",
@@ -29480,7 +29642,9 @@
           "importance": 1,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "customer-service-representatives",
@@ -29838,7 +30002,9 @@
           "importance": 1.46,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "dancers-and-choreographers",
@@ -30199,7 +30365,9 @@
           "importance": 1.19,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "data-scientists",
@@ -30243,7 +30411,9 @@
         "Test, validate, and reformulate models to ensure accurate prediction of outcomes of interest.",
         "Write new functions or applications in programming languages to conduct analyses."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "database-administrators",
@@ -30609,7 +30779,9 @@
           "importance": 1.13,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "delivery-truck-drivers-and-driver-sales-workers",
@@ -30966,7 +31138,9 @@
           "importance": 1.29,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "dental-and-ophthalmic-laboratory-technicians-and-medical-appliance-technicians",
@@ -31331,7 +31505,9 @@
           "importance": 1.72,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "dental-assistants",
@@ -31696,7 +31872,9 @@
           "importance": 2.19,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "dental-hygienists",
@@ -32061,7 +32239,9 @@
           "importance": 1.65,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "dentists",
@@ -32432,7 +32612,9 @@
           "importance": 1.66,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "desktop-publishers",
@@ -32796,7 +32978,9 @@
           "importance": 1.31,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "diagnostic-medical-sonographers",
@@ -33165,7 +33349,9 @@
           "importance": 1.79,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "diesel-service-technicians-and-mechanics",
@@ -33543,7 +33729,9 @@
           "importance": 1.86,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "dietitians-and-nutritionists",
@@ -33907,7 +34095,9 @@
           "importance": 1.1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "drafters",
@@ -34283,7 +34473,9 @@
           "importance": 1.16,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "drywall-and-ceiling-tile-installers-and-tapers",
@@ -34650,7 +34842,9 @@
           "importance": 1.07,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "economists",
@@ -35014,7 +35208,9 @@
           "importance": 1,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "editors",
@@ -35378,7 +35574,9 @@
           "importance": 1.28,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "electrical-and-electronics-engineering-technicians",
@@ -35756,7 +35954,9 @@
           "importance": 1.83,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "electrical-and-electronics-engineers",
@@ -36123,7 +36323,9 @@
           "importance": 1.72,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "electrical-and-electronics-installers-and-repairers",
@@ -36484,7 +36686,9 @@
           "importance": 1.83,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "line-installers-and-repairers",
@@ -36857,7 +37061,9 @@
           "importance": 1.74,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "electricians",
@@ -37228,7 +37434,9 @@
           "importance": 2.31,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "electro-mechanical-technicians",
@@ -37593,7 +37801,9 @@
           "importance": 1.75,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "elementary-middle-and-high-school-principals",
@@ -37968,7 +38178,9 @@
           "importance": 1.7,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "elevator-installers-and-repairers",
@@ -38335,7 +38547,9 @@
           "importance": 1.24,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "emergency-management-directors",
@@ -38707,7 +38921,9 @@
           "importance": 2.14,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "emts-and-paramedics",
@@ -38748,7 +38964,9 @@
         "Perform emergency invasive intervention before delivering patient to an acute care facility.",
         "Perform emergency pharmacological interventions."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "entertainment-and-recreation-managers",
@@ -39113,7 +39331,9 @@
           "importance": 1.67,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "environmental-engineering-technicians",
@@ -39476,7 +39696,9 @@
           "importance": 1.58,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "environmental-engineers",
@@ -39855,7 +40077,9 @@
           "importance": 1.86,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "environmental-science-and-protection-technicians",
@@ -40226,7 +40450,9 @@
           "importance": 2.14,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "environmental-scientists-and-specialists",
@@ -40589,7 +40815,9 @@
           "importance": 1.64,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "epidemiologists",
@@ -40954,7 +41182,9 @@
           "importance": 1.11,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "exercise-physiologists",
@@ -41330,7 +41560,9 @@
           "importance": 1.41,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "farmers-ranchers-and-other-agricultural-managers",
@@ -41710,7 +41942,9 @@
           "importance": 2.19,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "fashion-designers",
@@ -42074,7 +42308,9 @@
           "importance": 1.64,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "film-and-video-editors-and-camera-operators",
@@ -42438,7 +42674,9 @@
           "importance": 1.28,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "financial-analysts",
@@ -42492,7 +42730,9 @@
         "Specialize in green financial instruments, such as socially responsible mutual funds or exchange-traded funds (ETF) that are comprised of green companies.",
         "Supervise, train, or mentor junior team members."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "financial-clerks",
@@ -42519,7 +42759,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "financial-examiners",
@@ -42886,7 +43128,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "financial-managers",
@@ -43243,7 +43487,9 @@
           "importance": 1.13,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "fire-inspectors-and-investigators",
@@ -43616,7 +43862,9 @@
           "importance": 1.84,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "firefighters",
@@ -43997,7 +44245,9 @@
           "importance": 2.5,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "fishers-and-related-fishing-workers",
@@ -44360,7 +44610,9 @@
           "importance": 1.84,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "fitness-trainers-and-instructors",
@@ -44725,7 +44977,9 @@
           "importance": 1.48,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "flight-attendants",
@@ -45099,7 +45353,9 @@
           "importance": 1.19,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "tile-and-marble-setters",
@@ -45469,7 +45725,9 @@
           "importance": 1.32,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "floral-designers",
@@ -45834,7 +46092,9 @@
           "importance": 1.21,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "food-and-beverage-serving-and-related-workers",
@@ -45861,7 +46121,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "food-preparation-workers",
@@ -46236,7 +46498,9 @@
           "importance": 1.5,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "food-and-tobacco-processing-workers",
@@ -46263,7 +46527,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "food-service-managers",
@@ -46633,7 +46899,9 @@
           "importance": 1.93,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "forensic-science-technicians",
@@ -46999,7 +47267,9 @@
           "importance": 1.49,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "forest-and-conservation-workers",
@@ -47354,7 +47624,9 @@
           "importance": 1.34,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "fundraisers",
@@ -47729,7 +48001,9 @@
           "importance": 1.1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "funeral-service-occupations",
@@ -48102,7 +48376,9 @@
           "importance": 1.93,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "gaming-services-occupations",
@@ -48477,7 +48753,9 @@
           "importance": 1.36,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "general-maintenance-and-repair-workers",
@@ -48849,7 +49127,9 @@
           "importance": 2.03,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "general-office-clerks",
@@ -49212,7 +49492,9 @@
           "importance": 1.31,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "genetic-counselors",
@@ -49582,7 +49864,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "geographers",
@@ -49945,7 +50229,9 @@
           "importance": 1.4,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "geological-and-petroleum-technicians",
@@ -49989,7 +50275,9 @@
         "Write groundwater contamination reports on known, suspected, or potential hazardous waste sites.",
         "Write materials for research publications, such as maps, tables, and reports, to disseminate findings."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "geoscientists",
@@ -50353,7 +50641,9 @@
           "importance": 1.97,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "glaziers",
@@ -50726,7 +51016,9 @@
           "importance": 1.99,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "graphic-designers",
@@ -51094,7 +51386,9 @@
           "importance": 1.55,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "grounds-maintenance-workers",
@@ -51121,7 +51415,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "hand-laborers-and-material-movers",
@@ -51475,7 +51771,9 @@
           "importance": 1.33,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "hazardous-materials-removal-workers",
@@ -51836,7 +52134,9 @@
           "importance": 2.49,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "health-and-safety-engineers",
@@ -52212,7 +52512,9 @@
           "importance": 2,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "health-educators",
@@ -52578,7 +52880,9 @@
           "importance": 1.61,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "health-information-technologists-and-medical-registrars",
@@ -52622,7 +52926,9 @@
         "Train medical records staff.",
         "Write or maintain archived procedures, procedural codes, or queries for applications."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "heating-air-conditioning-and-refrigeration-mechanics-and-installers",
@@ -53002,7 +53308,9 @@
           "importance": 2.2,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "heavy-and-tractor-trailer-truck-drivers",
@@ -53374,7 +53682,9 @@
           "importance": 1.62,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "heavy-vehicle-and-mobile-equipment-service-technicians",
@@ -53741,7 +54051,9 @@
           "importance": 1.82,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "high-school-teachers",
@@ -54122,7 +54434,9 @@
           "importance": 1.61,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "historians",
@@ -54489,7 +54803,9 @@
           "importance": 1.22,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "home-health-aides-and-personal-care-aides",
@@ -55222,7 +55538,9 @@
           "importance": 1.14,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "human-resources-specialists",
@@ -55592,7 +55910,9 @@
           "importance": 1.03,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "hydrologists",
@@ -55966,7 +56286,9 @@
           "importance": 1.91,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "industrial-designers",
@@ -56329,7 +56651,9 @@
           "importance": 1.51,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "industrial-engineering-technicians",
@@ -56709,7 +57033,9 @@
           "importance": 1.67,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "industrial-engineers",
@@ -57078,7 +57404,9 @@
           "importance": 1.37,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "industrial-machinery-mechanics-and-maintenance-workers-and-millwrights",
@@ -57444,7 +57772,9 @@
           "importance": 1.22,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "industrial-production-managers",
@@ -57815,7 +58145,9 @@
           "importance": 2.25,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "information-clerks",
@@ -58177,7 +58509,9 @@
           "importance": 1.12,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "information-security-analysts",
@@ -58539,7 +58873,9 @@
           "importance": 1.34,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "instructional-coordinators",
@@ -58917,7 +59253,9 @@
           "importance": 1.3,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "insulation-workers",
@@ -59278,7 +59616,9 @@
           "importance": 1.58,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "insurance-sales-agents",
@@ -59643,7 +59983,9 @@
           "importance": 1.22,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "insurance-underwriters",
@@ -60001,7 +60343,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "interior-designers",
@@ -60367,7 +60711,9 @@
           "importance": 1.25,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "interpreters-and-translators",
@@ -60726,7 +61072,9 @@
           "importance": 1.24,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "structural-iron-and-steel-workers",
@@ -61092,7 +61440,9 @@
           "importance": 1.39,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "janitors-and-building-cleaners",
@@ -61455,7 +61805,9 @@
           "importance": 1.69,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "jewelers-and-precious-stone-and-metal-workers",
@@ -61827,7 +62179,9 @@
           "importance": 1.86,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "judges-and-hearing-officers",
@@ -62190,7 +62544,9 @@
           "importance": 1.29,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "kindergarten-and-elementary-school-teachers",
@@ -62942,7 +63298,9 @@
           "importance": 1.1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "landscape-architects",
@@ -63312,7 +63670,9 @@
           "importance": 1.35,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "lawyers",
@@ -63678,7 +64038,9 @@
           "importance": 1.12,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "librarians",
@@ -64058,7 +64420,9 @@
           "importance": 1.29,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "library-technicians-and-assistants",
@@ -64426,7 +64790,9 @@
           "importance": 1.06,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "licensed-practical-and-licensed-vocational-nurses",
@@ -64792,7 +65158,9 @@
           "importance": 1.88,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "loan-officers",
@@ -65170,7 +65538,9 @@
           "importance": 1.2,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "lodging-managers",
@@ -65543,7 +65913,9 @@
           "importance": 1.62,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "logging-workers",
@@ -65570,7 +65942,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "logisticians",
@@ -65943,7 +66317,9 @@
           "importance": 1.71,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "machinists-and-tool-and-die-makers",
@@ -66314,7 +66690,9 @@
           "importance": 1.4,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "management-analysts",
@@ -66675,7 +67053,9 @@
           "importance": 1.24,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "manicurists-and-pedicurists",
@@ -67044,7 +67424,9 @@
           "importance": 1.4,
           "category": "analysis-decision"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "marine-engineers-and-naval-architects",
@@ -67418,7 +67800,9 @@
           "importance": 2.05,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "market-research-analysts",
@@ -67782,7 +68166,9 @@
           "importance": 1.09,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "marriage-and-family-therapists",
@@ -68144,7 +68530,9 @@
           "importance": 1.1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "brickmasons-blockmasons-and-stonemasons",
@@ -68514,7 +68902,9 @@
           "importance": 1.26,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "massage-therapists",
@@ -68878,7 +69268,9 @@
           "importance": 1.15,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "material-moving-machine-operators",
@@ -69238,7 +69630,9 @@
           "importance": 1.34,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "material-recording-clerks",
@@ -69599,7 +69993,9 @@
           "importance": 1.84,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "materials-engineers",
@@ -69970,7 +70366,9 @@
           "importance": 1.81,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "mathematicians-and-statisticians",
@@ -70332,7 +70730,9 @@
           "importance": 1.1,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "mechanical-engineering-technicians",
@@ -70706,7 +71106,9 @@
           "importance": 1.83,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "mechanical-engineers",
@@ -71073,7 +71475,9 @@
           "importance": 1.69,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-and-health-services-managers",
@@ -71441,7 +71845,9 @@
           "importance": 1.64,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-assistants",
@@ -71811,7 +72217,9 @@
           "importance": 2.39,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-dosimetrists",
@@ -72178,7 +72586,9 @@
           "importance": 1.58,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-equipment-repairers",
@@ -72545,7 +72955,9 @@
           "importance": 1.18,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-records-and-health-information-technicians",
@@ -72590,7 +73002,9 @@
         "Schedule medical appointments for patients.",
         "Transcribe medical reports."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-scientists",
@@ -72949,7 +73363,9 @@
           "importance": 1.36,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "medical-transcriptionists",
@@ -73313,7 +73729,9 @@
           "importance": 1.11,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "meeting-convention-and-event-planners",
@@ -73680,7 +74098,9 @@
           "importance": 1.91,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "metal-and-plastic-machine-workers",
@@ -73707,7 +74127,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "microbiologists",
@@ -74071,7 +74493,9 @@
           "importance": 2.05,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "middle-school-teachers",
@@ -74455,7 +74879,9 @@
           "importance": 1.3,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "military-careers",
@@ -74842,7 +75268,9 @@
           "importance": 1.39,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "models",
@@ -75194,7 +75622,9 @@
           "importance": 1.21,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "music-directors-and-composers",
@@ -75574,7 +76004,9 @@
           "importance": 1.41,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "musicians-and-singers",
@@ -75946,7 +76378,9 @@
           "importance": 1.46,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "natural-sciences-managers",
@@ -76311,7 +76745,9 @@
           "importance": 2.06,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "network-and-computer-systems-administrators",
@@ -76679,7 +77115,9 @@
           "importance": 1.29,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "reporters-correspondents-and-broadcast-news-analysts",
@@ -77060,7 +77498,9 @@
           "importance": 1.31,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "nuclear-engineers",
@@ -77431,7 +77871,9 @@
           "importance": 1.7,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "nuclear-medicine-technologists",
@@ -77796,7 +78238,9 @@
           "importance": 1.95,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "nuclear-technicians",
@@ -78156,7 +78600,9 @@
           "importance": 1.45,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "nurse-anesthetists-nurse-midwives-and-nurse-practitioners",
@@ -78534,7 +78980,9 @@
           "importance": 1.27,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "nursing-assistants",
@@ -78911,7 +79359,9 @@
           "importance": 1.94,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "occupational-health-and-safety-specialists-and-technicians",
@@ -79281,7 +79731,9 @@
           "importance": 2.3,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "occupational-therapists",
@@ -79648,7 +80100,9 @@
           "importance": 1.5,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "occupational-therapy-assistants-and-aides",
@@ -80020,7 +80474,9 @@
           "importance": 1.47,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "oil-and-gas-workers",
@@ -80383,7 +80839,9 @@
           "importance": 1.97,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "operations-research-analysts",
@@ -80751,7 +81209,9 @@
           "importance": 1.38,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "opticians-dispensing",
@@ -81123,7 +81583,9 @@
           "importance": 1.71,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "optometrists",
@@ -81484,7 +81946,9 @@
           "importance": 1.43,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "orthotists-and-prosthetists",
@@ -81849,7 +82313,9 @@
           "importance": 2.57,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "painters-construction-and-maintenance",
@@ -82215,7 +82681,9 @@
           "importance": 1.6,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "painting-and-coating-workers",
@@ -82570,7 +83038,9 @@
           "importance": 1.38,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "paralegals-and-legal-assistants",
@@ -82927,7 +83397,9 @@
           "importance": 1.01,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "personal-financial-advisors",
@@ -83295,7 +83767,9 @@
           "importance": 1.04,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "pest-control-workers",
@@ -83655,7 +84129,9 @@
           "importance": 1.72,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "petroleum-engineers",
@@ -84019,7 +84495,9 @@
           "importance": 1.36,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "pharmacists",
@@ -84384,7 +84862,9 @@
           "importance": 1.21,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "pharmacy-technicians",
@@ -84748,7 +85228,9 @@
           "importance": 1.93,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "phlebotomists",
@@ -85116,7 +85598,9 @@
           "importance": 2,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "photographers",
@@ -85486,7 +85970,9 @@
           "importance": 1.64,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "physical-therapist-assistants-and-aides",
@@ -85855,7 +86341,9 @@
           "importance": 1.57,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "physical-therapists",
@@ -86229,7 +86717,9 @@
           "importance": 1.38,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "physician-assistants",
@@ -86592,7 +87082,9 @@
           "importance": 1.19,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "physicians-and-surgeons",
@@ -86638,7 +87130,9 @@
         "Provide consultation and surgical assistance to other physicians and surgeons.",
         "Refer patient to medical specialist or other practitioners when necessary."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "physicists-and-astronomers",
@@ -87005,7 +87499,9 @@
           "importance": 1.43,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "plumbers-pipefitters-and-steamfitters",
@@ -87380,7 +87876,9 @@
           "importance": 2.22,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "podiatrists",
@@ -87741,7 +88239,9 @@
           "importance": 1.41,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "police-and-detectives",
@@ -88109,7 +88609,9 @@
           "importance": 2.52,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "political-scientists",
@@ -88470,7 +88972,9 @@
           "importance": 1.04,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "postal-service-workers",
@@ -88827,7 +89331,9 @@
           "importance": 1.57,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "postsecondary-education-administrators",
@@ -89190,7 +89696,9 @@
           "importance": 1.08,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "postsecondary-teachers",
@@ -89217,7 +89725,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "power-plant-operators-distributors-and-dispatchers",
@@ -89589,7 +90099,9 @@
           "importance": 1.66,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "preschool-and-childcare-center-directors",
@@ -89955,7 +90467,9 @@
           "importance": 1.21,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "preschool-teachers",
@@ -90338,7 +90852,9 @@
           "importance": 1.03,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "private-detectives-and-investigators",
@@ -90699,7 +91215,9 @@
           "importance": 1.72,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "probation-officers-and-correctional-treatment-specialists",
@@ -91067,7 +91585,9 @@
           "importance": 1.66,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "producers-and-directors",
@@ -91438,7 +91958,9 @@
           "importance": 1.63,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "project-management-specialists",
@@ -91486,7 +92008,9 @@
         "Schedule or facilitate project meetings.",
         "Submit project deliverables to clients, ensuring adherence to quality standards."
       ],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "appraisers-and-assessors-of-real-estate",
@@ -92226,7 +92750,9 @@
           "importance": 1.4,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "psychiatric-technicians-and-aides",
@@ -92589,7 +93115,9 @@
           "importance": 1.19,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "psychologists",
@@ -92963,7 +93491,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "public-relations-managers",
@@ -93328,7 +93858,9 @@
           "importance": 1.03,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "public-relations-specialists",
@@ -93694,7 +94226,9 @@
           "importance": 1.05,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "police-fire-and-ambulance-dispatchers",
@@ -94061,7 +94595,9 @@
           "importance": 1.47,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "purchasing-managers-buyers-and-purchasing-agents",
@@ -94430,7 +94966,9 @@
           "importance": 1.28,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "quality-control-inspectors",
@@ -94802,7 +95340,9 @@
           "importance": 1.25,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "radiation-therapists",
@@ -95172,7 +95712,9 @@
           "importance": 1.69,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "radiologic-technologists",
@@ -95553,7 +96095,9 @@
           "importance": 1.55,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "railroad-occupations",
@@ -95923,7 +96467,9 @@
           "importance": 1.26,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "real-estate-brokers-and-sales-agents",
@@ -96287,7 +96833,9 @@
           "importance": 1.19,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "receptionists",
@@ -96649,7 +97197,9 @@
           "importance": 1.12,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "recreation-workers",
@@ -97018,7 +97568,9 @@
           "importance": 1.67,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "recreational-therapists",
@@ -97380,7 +97932,9 @@
           "importance": 1.64,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "registered-nurses",
@@ -97746,7 +98300,9 @@
           "importance": 1.66,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "rehabilitation-counselors",
@@ -98111,7 +98667,9 @@
           "importance": 1.3,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "respiratory-therapists",
@@ -98482,7 +99040,9 @@
           "importance": 1.75,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "retail-sales-workers",
@@ -98849,7 +99409,9 @@
           "importance": 1.17,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "roofers",
@@ -99222,7 +99784,9 @@
           "importance": 2.16,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "sales-engineers",
@@ -99592,7 +100156,9 @@
           "importance": 1.42,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "sales-managers",
@@ -99958,7 +100524,9 @@
           "importance": 1.05,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "school-and-career-counselors",
@@ -100331,7 +100899,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "secretaries-and-administrative-assistants",
@@ -100692,7 +101262,9 @@
           "importance": 1.19,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "securities-commodities-and-financial-services-sales-agents",
@@ -101069,7 +101641,9 @@
           "importance": 1.11,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "security-guards",
@@ -101433,7 +102007,9 @@
           "importance": 2.07,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "semiconductor-processing-technicians",
@@ -101792,7 +102368,9 @@
           "importance": 1.65,
           "category": "communication"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "set-and-exhibit-designers",
@@ -102162,7 +102740,9 @@
           "importance": 1.45,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "sheet-metal-workers",
@@ -102526,7 +103106,9 @@
           "importance": 2.5,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "skincare-specialists",
@@ -102892,7 +103474,9 @@
           "importance": 1.69,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "small-engine-mechanics",
@@ -103257,7 +103841,9 @@
           "importance": 2.32,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "social-and-community-service-managers",
@@ -103620,7 +104206,9 @@
           "importance": 1.19,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "social-and-human-service-assistants",
@@ -103979,7 +104567,9 @@
           "importance": 1.28,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "social-workers",
@@ -104342,7 +104932,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "sociologists",
@@ -104708,7 +105300,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "software-developers",
@@ -105070,7 +105664,9 @@
           "importance": 1.06,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "solar-photovoltaic-installers",
@@ -105446,7 +106042,9 @@
           "importance": 1.69,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "special-education-teachers",
@@ -105831,7 +106429,9 @@
           "importance": 1.37,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "multimedia-artists-and-animators",
@@ -106188,7 +106788,9 @@
           "importance": 1.38,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "speech-language-pathologists",
@@ -106556,7 +107158,9 @@
           "importance": 1.07,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "stationary-engineers-and-boiler-operators",
@@ -106927,7 +107531,9 @@
           "importance": 2.21,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "substance-abuse-behavioral-disorder-and-mental-health-counselors",
@@ -107679,7 +108285,9 @@
           "importance": 1.9,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "survey-researchers",
@@ -108046,7 +108654,9 @@
           "importance": 1.12,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "surveying-and-mapping-technicians",
@@ -108425,7 +109035,9 @@
           "importance": 1.62,
           "category": "coordination-management"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "surveyors",
@@ -108797,7 +109409,9 @@
           "importance": 2.4,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "tax-examiners-and-collectors-and-revenue-agents",
@@ -109154,7 +109768,9 @@
           "importance": 1.16,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "taxi-drivers-and-chauffeurs",
@@ -109528,7 +110144,9 @@
           "importance": 1.83,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "teacher-assistants",
@@ -109893,7 +110511,9 @@
           "importance": 2.19,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "technical-writers",
@@ -110259,7 +110879,9 @@
           "importance": 1.44,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "telecommunications-equipment-installers-and-repairers-except-line-installers",
@@ -110621,7 +111243,9 @@
           "importance": 1.16,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "tellers",
@@ -110991,7 +111615,9 @@
           "importance": 1.75,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "top-executives",
@@ -111362,7 +111988,9 @@
           "importance": 1.21,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "tour-and-travel-guides",
@@ -112083,7 +112711,9 @@
           "importance": 1.07,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "training-and-development-specialists",
@@ -112452,7 +113082,9 @@
           "importance": 1.43,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "transportation-storage-and-distribution-managers",
@@ -112833,7 +113465,9 @@
           "importance": 1.88,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "travel-agents",
@@ -113192,7 +113826,9 @@
           "importance": 1.34,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "tutors",
@@ -113559,7 +114195,9 @@
           "importance": 1.14,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "umpires-referees-and-other-sports-officials",
@@ -113918,7 +114556,9 @@
           "importance": 1.19,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "urban-and-regional-planners",
@@ -114294,7 +114934,9 @@
           "importance": 1.04,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "veterinarians",
@@ -114659,7 +115301,9 @@
           "importance": 1.42,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "veterinary-assistants-and-laboratory-animal-caretakers",
@@ -115036,7 +115680,9 @@
           "importance": 1.82,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "veterinary-technologists-and-technicians",
@@ -115417,7 +116063,9 @@
           "importance": 2.08,
           "category": "physical-manual"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "waiters-and-waitresses",
@@ -115790,7 +116438,9 @@
           "importance": 1.12,
           "category": "information-processing"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "water-and-wastewater-treatment-plant-and-system-operators",
@@ -116149,7 +116799,9 @@
           "importance": 2.08,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "water-transportation-occupations",
@@ -116176,7 +116828,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "web-developers",
@@ -116552,7 +117206,9 @@
           "importance": 1.08,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "welders-cutters-solderers-and-brazers",
@@ -116925,7 +117581,9 @@
           "importance": 1.35,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "wholesale-and-manufacturing-sales-representatives",
@@ -117297,7 +117955,9 @@
           "importance": 1.07,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "wind-turbine-technicians",
@@ -117658,7 +118318,9 @@
           "importance": 1.39,
           "category": "interpersonal"
         }
-      ]
+      ],
+      "blsAiExposure": "Moderate",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "woodworkers",
@@ -117685,7 +118347,9 @@
       },
       "tasks": [],
       "onetTasks": [],
-      "workActivities": []
+      "workActivities": [],
+      "blsAiExposure": "Low",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "writers-and-authors",
@@ -118054,7 +118718,9 @@
           "importance": 1,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "Very high",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     },
     {
       "slug": "zoologists-and-wildlife-biologists",
@@ -118415,7 +119081,9 @@
           "importance": 1.62,
           "category": "technical-specialized"
         }
-      ]
+      ],
+      "blsAiExposure": "High",
+      "blsAiExposureSource": "bls-ai-exposure-categories-2026"
     }
   ]
 }
