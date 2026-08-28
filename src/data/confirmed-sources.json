@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-27",
-  "totalSources": 694,
-  "verifiedCount": 684,
+  "lastUpdated": "2026-08-28",
+  "totalSources": 695,
+  "verifiedCount": 685,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -4987,6 +4987,20 @@
       "excerpt": "Retail trade projected to decline 1.2% as automation and e-commerce reduce sales occupations. Mining/extraction declining 1.6% driven by robotics and drones. Total employment projected to grow 3.1% (2024-34), much slower than prior decade.",
       "usedIn": [
         "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-ai-exposure-categories-2026": {
+      "id": "bls-ai-exposure-categories-2026",
+      "title": "Artificial Intelligence (AI) exposure categories",
+      "url": "https://www.bls.gov/emp/publications/ai-exposure-categories.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-27",
+      "excerpt": "BLS combined five external data sources to create a four-category classification of relative AI exposure for every detailed occupation for which projections are produced. Across 4,155 possible occupation-source combinations for the detailed occupations for which BLS publishes projections data (831 occupations times 5 sources), 3,944 were observed and 211 were imputed, affecting 75 occupations. Exposure does not imply job loss, productivity gains, automation probability, or wage effects.",
+      "usedIn": [
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

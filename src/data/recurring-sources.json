@@ -27,6 +27,32 @@
       "nextExpected": "September 4, 2026 (August data)"
     },
     {
+      "id": "bls-employment-projections",
+      "name": "BLS Employment Projections (incl. AI exposure categories)",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual projections round, typically late summer",
+      "releasePattern": "Ten-year projections published annually; the 2025-35 round landed August 2026. AI-specific products appear under /emp/publications/ and Table 1.12 'Factors affecting occupational utilization' is refreshed each cycle.",
+      "url": "https://www.bls.gov/emp/publications/",
+      "targetGraphs": [
+        "workforce-ai-exposure",
+        "overall-us-displacement",
+        "tech-sector-displacement"
+      ],
+      "topicLine": "The only official US government occupational AI exposure classification, plus the ten-year occupational projections it complements.",
+      "whatItMeasures": "Ten-year industry and occupational employment projections, and since the 2025-35 round a four-category relative AI exposure classification (Low/Moderate/High/Very high) covering 831 detailed occupations, built by combining five external exposure measures on a 2018 SOC basis. Published with a downloadable XLSX pairing categories to projections.",
+      "whyItMatters": "Every other exposure estimate on the site is academic or think-tank modeling. This is the federal statistical agency's own classification, and it explicitly supersedes three inputs already ingested individually (Eloundou, Eisfeldt, Felten) for any aggregate exposure claim. It is also SOC-coded, so it joins directly onto the 342-occupation scorecard.",
+      "lastIngested": {
+        "sourceId": "bls-ai-exposure-categories-2026",
+        "date": "2026-08-27",
+        "value": "Four relative AI exposure categories across 831 occupations; 211 of 4,155 source-occupation cells imputed, affecting 75 occupations"
+      },
+      "nextExpected": "2027 (2026-36 projections round, per BLS)",
+      "lastSweep": "2026-08-28",
+      "sweepNote": "Added 2026-08-28 after the AI exposure categories page (last modified 2026-08-27) was found via user tip rather than by sweep — BLS Employment Projections was not on this registry, so nothing flagged it. BLS hard-blocks all automated retrieval (403 with an explicit anti-bot notice on both WebFetch and curl, including the XLSX), so this series must be swept manually or via a browser; do not expect an adapter to work."
+    },
+    {
       "id": "challenger-job-cuts",
       "name": "Challenger Job Cuts Report (with AI attribution)",
       "publisher": "Challenger, Gray & Christmas",
