@@ -778,6 +778,15 @@
       "label": "Gallup: 47% of employees say their org has integrated AI tools, up from 41%"
     },
     {
+      "date": "2026-07-23",
+      "direction": "neutral",
+      "sourceIds": [
+        "stripe-economics-ai-productivity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe: BTOS adoption to productivity link falls to ~zero after stripping 2016-19 sector trends"
+    },
+    {
       "date": "2026-07-28",
       "direction": "neutral",
       "sourceIds": [
@@ -1595,6 +1604,16 @@
       "datePublished": "2026-08-19",
       "excerpt": "\"Goldman combined 11 surveys measuring AI adoption across countries and found that major developed markets have adoption rates of roughly 15% to 20%... France, the U.S., the Netherlands and the U.K. are leading AI adoption, while Italy, Japan and New Zealand were among the developed economies at the lower end of adoption. Major emerging markets, meanwhile, had estimated adoption rates of between 10% and 15%.\" A blended cross-country average across eleven instruments with no US-specific firm figure broken out, so it fails the geography and instrument gates against the Census BTOS series this chart plots and is recorded as an overlay. It does bracket the 21.8% BTOS reading from above and below, which is a useful sanity check on the US being at the high end of the developed-market range.",
       "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "stripe-economics-ai-productivity-2026",
+      "title": "AI and Productivity",
+      "url": "https://www.stripeeconomics.com/p/ai-and-productivity",
+      "publisher": "Stripe Economics (Tedeschi)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-23",
+      "excerpt": "Stripe Economics argues that accelerating US macro productivity is not yet traceable to AI. \"US labor productivity has grown at roughly 2.5% over the past year—a meaningful outperformance over the 1.6% annual average of the last two decades,\" and a Markov-switching model \"suggests a 93% probability the US has moved into a 'high' productivity period.\" But \"TFP growth has been near zero over the past year\" under the Fernald/San Francisco Fed estimates, with \"a less-than-20% probability the US is in a high-TFP-growth period.\" Combining Census BTOS adoption rates with Chicago Fed industry-level productivity, the sectors adopting AI most heavily also showed stronger productivity growth in 2016-2019 before generative AI existed; stripping out those pre-existing trends, \"the residual correlation between AI adoption and recent productivity growth falls to essentially zero.\" Cites Bank of Korea (Suh et al. 2026) finding generative AI \"reduces work time by 3.8% (about 1.5 hours per week)\" with \"essentially no relationship with realized output growth unless workers have autonomy or strong incentives to reallocate the saved time productively.\" Recorded as an overlay because it measures productivity rather than the adoption share this chart plots; it is included here because it is a direct finding about what this chart's BTOS adoption series does and does not imply.",
+      "dateAdded": "2026-08-27"
     }
   ]
 }

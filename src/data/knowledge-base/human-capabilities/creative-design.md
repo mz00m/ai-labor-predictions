@@ -48,13 +48,13 @@
 
 - **Function**: creative-design
 - **Also relevant to**: technology, marketing
-- **Why appreciating**: AI produces "good enough" at incredible speed. "Good enough" is now table stakes. The creative professional who obsesses over the details that most people don't consciously notice — but that everyone subconsciously feels — creates work that stands apart in a world flooded with AI-generated content. Craft is the new luxury. The 5% that separates competent from exceptional is entirely human territory.
-- **How to develop**: Pick one area of craft and go deep: typography, color theory, motion design, prose rhythm. Study the masters — not for inspiration but for technique. How does Massimo Vignelli's grid work? How does Joan Didion's sentence structure create tension? Build a checklist for your work: the 10 details you always check before calling something done. Seek critique from craftspeople who are better than you — comfort with feedback is itself a skill.
+- **Why appreciating**: This record previously claimed the last 5% of quality was entirely human territory. That has not held up, and the correction matters because it points in the opposite direction from the original advice. Adobe's Agentic Design Review System (AAAI 2026) automates much of the detail layer — agent critics scoring typography, alignment, spacing and color across 15 attributes, reaching 76.8% accuracy on Adobe's internal design set. The market evidence is harder still. Siddiq and Zhang, studying 49,610 Upwork profiles and 2.26 million contracts from 2021 through early 2026, find that in the most AI-exposed categories the demand premium on strong human-capital signals — credentials, reputation, portfolio — compressed 6.2%, and 10.3% in the final year, while demand shifted toward lower-priced workers. Craft did not become the new luxury; in exposed categories buyers paid less for it. What survives is narrower: deciding which details matter for this audience and this brief, and being accountable when that call is wrong. That is arbitration, not execution, and it is paid mainly where a client can name who made the call.
+- **How to develop**: Go deep on one area of craft — typography, color theory, motion design, prose rhythm — but treat fluency as the price of entry rather than the differentiator, because the exposed-market evidence shows buyers no longer pay a premium for it on its own. Study the masters for technique, not inspiration. Then practice the part that still prices: for each project, be able to name the three details that actually matter for this audience and defend why the other twenty do not. Put yourself in rooms where you make the call and are known to have made it — the evidence suggests the pay follows attribution, not execution.
 - **Automation resistance**: creative-taste, embodied-knowledge
 - **Task categories**: creative-generative, technical-specialized
-- **Appreciation score**: 9
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 5
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 ## Client & Stakeholder Translation
 
@@ -62,10 +62,10 @@
 
 - **Function**: creative-design
 - **Also relevant to**: marketing, communications, operations
-- **Why appreciating**: AI can generate to a prompt. The creative professional who can listen to a client say "I want it to feel more modern" and translate that into specific design decisions — understanding that "modern" means "we want to attract younger customers without alienating our base" — is doing the interpretive work that makes creative output useful. As AI makes execution instant, the ability to define the right brief becomes the bottleneck.
-- **How to develop**: After every brief or kickoff meeting, write what you think the client actually wants (not what they said). Validate it with one clarifying question. Build a personal dictionary of "client language to design language" translations. Study how great creative directors present work: they sell the idea by connecting it to the client's objective, not their own aesthetic. Practice presenting three concepts where you can articulate why each solves the brief differently.
+- **Why appreciating**: AI does more of this than the record assumed — agencies now use models to assemble briefs from campaign goals, audience data and performance history, with a human approving positioning and constraints, so the vague-to-specific loop is increasingly a machine loop. The Census Bureau's 2026 BTOS AI supplement finds sales and marketing is the single most common AI business function, used by 52% of adopting firms, with writing and document analysis the leading tasks. The market is also removing the intermediary rather than repricing them: an April 2026 survey of more than 200 agency professionals found 65.3% of agencies lost work to client in-housing in the prior year, nearly 40% ran layoffs, and 87% say the traditional agency model is broken or will be within five years. If translation were the binding bottleneck, clients would buy more of it; instead they are pulling the work inside, where the brief-writer and the budget-holder are the same person. What holds is not the act of interpretation but the relationship in which a client tells you the thing they left out of the brief, and the accountability for what you recommend. Interpretation is a service; being trusted with the decision is the job.
+- **How to develop**: After every brief or kickoff meeting, write what you think the client actually wants (not what they said), and validate it with one clarifying question. Build a personal dictionary of "client language to design language" translations. Study how great creative directors present work: they sell the idea by connecting it to the client's objective, not their own aesthetic. Given that in-housing is taking the interpretive work inside, invest in the part that does not transfer with it — become the person a client calls before the brief exists, and be willing to own a recommendation rather than present options.
 - **Automation resistance**: cultural-context, relationship-trust, judgment-under-ambiguity
 - **Task categories**: communication, interpersonal, analysis-decision
-- **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 6
+- **Verified**: 2026-08-27
+- **Confidence**: medium

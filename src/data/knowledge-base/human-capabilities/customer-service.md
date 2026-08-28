@@ -34,13 +34,13 @@
 
 - **Function**: customer-service
 - **Also relevant to**: operations, marketing
-- **Why appreciating**: AI can categorize and aggregate support tickets. It cannot sense that the five unrelated complaints this week all stem from the same confusing onboarding flow. It cannot walk into the product meeting and advocate for the customer with the credibility of someone who talked to 50 frustrated users this month. The support agent who becomes the organization's customer intelligence engine is doing irreplaceable work.
-- **How to develop**: Keep a weekly "pattern log" of the top three themes from customer conversations. Once a month, write a one-page "Voice of the Customer" memo with specific quotes, frequency data, and one recommended action. Share it with product and engineering. Build relationships with product managers so your feedback has a direct channel. Track which of your recommendations get implemented — and the impact.
+- **Why appreciating**: Spotting the cluster is no longer the hard part. In blind expert evaluation, LLM-generated codes were preferred over experienced human researchers' 61% of the time, and GPT-4 reached 96% agreement with humans on broad themes; ticket theme detection shipped as a default feature across the major support platforms in 2026. What the same studies found models still miss is specific: they fragment data, draw themes with unclear boundaries, and miss latent interpretations. A blinded 2026 comparison found LLMs matched humans at applying an existing codebook but were markedly more variable at open-ended theme generation requiring tone and nuance. So the durable work is knowing which of forty surfaced themes deserves a quarter of engineering time, catching the theme the model split into three, and walking into the product meeting able to say what the fix costs and who it hurts — with the standing of someone who talked to 50 frustrated users this month. Pattern detection is cheap now. Prioritization and internal credibility are not.
+- **How to develop**: Let the tool produce the themes; spend your time on what it cannot rank. Once a month, write a one-page "Voice of the Customer" memo that picks one theme, argues why it outranks the others, and estimates the cost of the fix and the cost of ignoring it. Check the tool's clusters against your own reading of the raw tickets — the themes it splits or blurs are where you add value. Build relationships with product managers so your feedback has a direct channel. Track which recommendations get implemented, and the impact.
 - **Automation resistance**: institutional-knowledge, cultural-context, relationship-trust
 - **Task categories**: communication, analysis-decision, interpersonal
-- **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 6
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 ## Retention & Relationship Recovery
 
@@ -48,10 +48,10 @@
 
 - **Function**: customer-service
 - **Also relevant to**: sales, operations
-- **Why appreciating**: AI can flag churn risk based on usage data. It cannot have the conversation where a frustrated customer admits the real reason they're leaving is that they felt ignored during their last escalation — not the price, not the feature gap. The human who can listen to the unstated reason, acknowledge the failure, and propose a genuine path forward saves revenue that no automated winback campaign can touch.
-- **How to develop**: When a customer cancels or downgrades, don't accept the first reason they give. Ask: "What could we have done differently six months ago to prevent this?" The answer is usually more revealing. Build a "save playbook" for your top three cancellation reasons, but treat it as a conversation guide, not a script. Track your save rate and the long-term retention of saved accounts — are they staying or just delaying?
+- **Why appreciating**: Assume the machine can get a customer to name the real reason. AI interviewers ask dynamic follow-up questions, and in an NBER study of 385 AI-led interviews they produced thematically richer answers than open-ended surveys and predicted respondents' actual behavior six months later. Vendors now sell AI cancel-flow exit interviews on exactly that basis. What does not transfer is what happens next. Four pre-registered studies found consumers prefer a human to resolve a complaint even after a bot resolved it successfully, and thirteen experiments found that disclosing AI involvement reduces trust through a legitimacy discount — a problem when the whole task is repairing trust the company already broke. Recovery is not information gathering. It is someone with standing acknowledging a specific failure, committing to a remedy they are authorized to make, and being accountable for it landing.
+- **How to develop**: Let the exit survey collect the reason; your job starts after it. Build a "save playbook" for your top three cancellation reasons, but treat it as a conversation guide, not a script. Push for the authority to offer a real remedy — a save conversation where you have to check with someone else forfeits the advantage a human has here. Take the handoff early rather than late; consumers penalize a delayed escalation more than an immediate one. Track your save rate and the long-term retention of saved accounts — are they staying or just delaying?
 - **Automation resistance**: relationship-trust, judgment-under-ambiguity
 - **Task categories**: interpersonal, communication
-- **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 7
+- **Verified**: 2026-08-27
+- **Confidence**: medium

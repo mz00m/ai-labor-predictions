@@ -1,8 +1,8 @@
 {
-  "compiledAt": "2026-08-27T16:38:09.460Z",
+  "compiledAt": "2026-08-27T23:53:04.160Z",
   "totalTools": 64,
   "totalCapabilities": 62,
-  "staleCount": 10,
+  "staleCount": 0,
   "tools": {
     "administrative": [
       {
@@ -700,14 +700,14 @@
         "alsoUsefulFor": [
           "operations"
         ],
-        "pricing": "Paid (enterprise pricing, not publicly listed)",
+        "pricing": "Paid (enterprise quote only; reported entry around $30K/yr)",
         "url": "https://www.ada.cx",
-        "verified": "2026-04-03",
+        "verified": "2026-08-27",
         "confidence": "medium",
         "pitch": "No-code AI customer service automation platform that builds conversational agents trained on your company's knowledge and systems.",
         "bestFor": "Enterprise teams handling high-volume, repetitive support across multiple channels. Ada's no-code builder lets non-engineers create and maintain AI agents that connect to CRMs, order systems, and knowledge bases. Strong in e-commerce and fintech where customers need account-specific answers (order status, billing, returns).",
-        "limitations": "Enterprise-only pricing puts it out of reach for small teams — no self-serve plan or public pricing, and third-party procurement data puts entry contracts in the tens of thousands of dollars per year. Billing is per conversation handled, regardless of whether the issue was resolved. Implementation requires meaningful setup time to integrate with backend systems. Performance depends heavily on the quality of your training data and knowledge base. Less community and third-party ecosystem compared to Zendesk or Intercom. Vendor site was unreachable at verification time.",
-        "stale": true
+        "limitations": "Enterprise-only pricing puts it out of reach for small teams — no self-serve plan or public pricing, and third-party procurement data puts entry contracts in the tens of thousands of dollars per year. Billing is per conversation handled by default, regardless of whether the issue was resolved; Ada tried per-resolution pricing and moved back, arguing publicly for the conversation model that enterprise buyers found more predictable. Its own comparison models $0.35 per conversation against $1.50 per resolution, so which model is cheaper depends entirely on your deflection rate. Implementation requires meaningful setup time to integrate with backend systems. Performance depends heavily on the quality of your training data and knowledge base. Less community and third-party ecosystem compared to Zendesk or Intercom.",
+        "stale": false
       }
     ],
     "technology": [
@@ -1232,8 +1232,8 @@
           "communications",
           "sales"
         ],
-        "whyAppreciating": "AI can write blog posts and social copy. It cannot construct the strategic narrative that makes a company matter — the through-line from problem to solution to worldview that turns customers into advocates. This is architectural thinking applied to language.",
-        "howToDevelop": "Study how the best companies frame themselves (not their products — their role in the world). Practice writing the same product benefit three ways: feature-first, benefit-first, worldview-first. Read \"Building a StoryBrand\" by Donald Miller and apply the framework to your company. Write your company's narrative in 100 words, 50 words, and 10 words.",
+        "whyAppreciating": "Generation is no longer the constraint, and this record used to claim it was. Csaszar, Ketkar and Kim (Strategy Science, 2024) had 250 experienced investors blind-evaluate strategies from an accelerator and a startup competition; LLM-generated strategies rated comparable to the entrepreneurs' own. A late-2025 preprint on ad copy found LLM output preferred 59% to 41% against human writers, holding up even when readers were told its origin. Two things still constrain. First, choosing which of five plausible narratives the company actually bets on, and being accountable when it is wrong — unsigned strategy is the failure mode, and most executives concede they could not pass an AI governance audit on short notice. Second, distinctiveness: Doshi and Hauser (Science Advances, 2024) show AI-assisted work converges toward the collective median, which is precisely what positioning exists to escape. The value moved from writing the narrative to owning it and refusing the average one.",
+        "howToDevelop": "Generate five candidate narratives with a model in an afternoon — that is now the cheap part — then do the work it cannot: pick one, write down why the other four lose, and put your name on the call. Study how the best companies frame themselves (not their products — their role in the world). Practice writing the same product benefit three ways: feature-first, benefit-first, worldview-first. Check any AI-assisted draft against what your three closest competitors are already saying; convergence toward the median is the documented failure mode. Write your company's narrative in 100 words, 50 words, and 10 words.",
         "automationResistance": [
           "creative-taste",
           "cultural-context",
@@ -1244,10 +1244,10 @@
           "communication",
           "analysis-decision"
         ],
-        "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 6,
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       },
       {
         "name": "Channel Judgment & Resource Allocation",
@@ -1600,8 +1600,8 @@
           "administrative",
           "technology"
         ],
-        "whyAppreciating": "AI generates novel solutions. The operator who spots that moving one step in the warehouse saves 4 minutes per order, or that changing the customer handoff timing reduces complaints by 30%, is doing something different: applied observation of messy reality. This skill compounds — each improvement creates the conditions for the next one.",
-        "howToDevelop": "Spend one hour per week on the floor / in the process / watching the actual work happen. Keep a running list of friction points you observe. Pick one per month and test a fix. Measure the before and after. Read \"The Toyota Way\" for the mindset (gemba, kaizen), then adapt the principles to your context. Celebrate small improvements loudly — they compound.",
+        "whyAppreciating": "Two things have changed. Computer vision now does the observation — vendors sell systems that generate spaghetti diagrams and operator time studies from shop-floor video, with large claimed speedups, though those are marketing numbers with no independent replication. On the other side, no peer-reviewed study yet shows AI reliably finding the four-minute step or the handoff-timing fix in a live operation; the published work is conceptual frameworks, not measured results. Evidence is thin in both directions, so treat this score as provisional. The defensible part does not rest on who notices the improvement. Practitioner accounts of lean and kaizen programs consistently locate failure in implementation rather than idea supply — suggestions accumulate and go unmade because nobody has the standing to change the process. The Census Bureau's 2026 BTOS AI supplement is consistent with that: 66% of AI-using firms use it only to augment tasks, and 57% confine it to three or fewer business functions. The operator's advantage is the authority to change the process, get the floor to actually work the new way, and own the result.",
+        "howToDevelop": "Spend one hour per week on the floor / in the process / watching the actual work happen. Keep a running list of friction points you observe. Pick one per month and test a fix. Measure the before and after. Read \"The Toyota Way\" for the mindset (gemba, kaizen), then adapt the principles to your context. Because the bottleneck is implementation rather than idea supply, track a second number alongside your suggestions: how many were actually adopted and still held 90 days later. That ratio, not the length of the list, is the skill.",
         "automationResistance": [
           "embodied-knowledge",
           "institutional-knowledge"
@@ -1610,10 +1610,10 @@
           "analysis-decision",
           "physical-manual"
         ],
-        "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 7,
+        "verified": "2026-08-27",
+        "confidence": "low",
+        "stale": false
       },
       {
         "name": "Resource Allocation Under Constraints",
@@ -1622,8 +1622,8 @@
           "finance",
           "people-management"
         ],
-        "whyAppreciating": "AI can optimize a known objective function with known constraints. Real operations involve ambiguous constraints (the budget is \"tight\" but nobody says how tight), shifting priorities (the CEO changed direction mid-quarter), and political dynamics (this team's project can't be cut even though it should be). The operator who navigates all three simultaneously is doing irreplaceable work.",
-        "howToDevelop": "For every resource decision, make your tradeoffs explicit: \"We're choosing X over Y because Z.\" Write it down. Share it. When priorities shift, re-present the tradeoffs rather than just absorbing the change silently. Build scenario-based resource plans: \"At 80% budget, we cut A. At 60%, we also cut B.\" This makes the decisions faster when pressure arrives.",
+        "whyAppreciating": "This is the best-evidenced capability in the operations set, and 2026 agent benchmarks support it directly. In a 132-month simulated CFO environment spanning shifting macro regimes, only 15.4% of agent trials survived the full horizon, and the best agent scored roughly 7% of the human-expert baseline; the failure modes were mis-timed commitments under delayed consequences and fixation on internal state over external signals. On an operations-research benchmark built from ambiguous operational artifacts, the best agent passed 35.5% of tasks and 20.6% of hard instances, with 54.8% of failures occurring at the modeling stage — the agent gets the constraints wrong before the solver ever matters. A third 2026 study found agents degrade specifically on conflicting stakeholder demands and shifted priorities. The caveat worth stating: these are simulation benchmarks, not labor-market evidence, and no study yet shows a wage premium for this capability. The durable core is closer to authority and accountability for a committed decision than to constraint reasoning itself.",
+        "howToDevelop": "For every resource decision, make your tradeoffs explicit: \"We're choosing X over Y because Z.\" Write it down. Share it. When priorities shift, re-present the tradeoffs rather than just absorbing the change silently. Build scenario-based resource plans: \"At 80% budget, we cut A. At 60%, we also cut B.\" This makes the decisions faster when pressure arrives. Practice the specific thing the benchmarks show agents failing at: committing early under delayed feedback, and reading external signals rather than only your own dashboards.",
         "automationResistance": [
           "judgment-under-ambiguity",
           "institutional-knowledge",
@@ -1634,9 +1634,9 @@
           "coordination-management"
         ],
         "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       }
     ],
     "communications": [
@@ -1693,8 +1693,8 @@
           "marketing",
           "people-management"
         ],
-        "whyAppreciating": "AI can schedule content optimally for engagement. It cannot sense that announcing a hiring freeze the same week as record earnings will create a trust crisis, or that the competitor's bad press creates a window for a thought leadership piece. Timing judgment is cultural intelligence applied to communication — and it compounds with experience.",
-        "howToDevelop": "Build a \"news radar\" habit: 15 minutes each morning scanning your industry, your competitors, and the broader cultural moment. Before sending any major communication, ask: \"What else is happening right now that changes how this will be received?\" Keep a log of timing decisions (both good and bad calls) and review quarterly. Develop 2-3 trusted advisors you can gut-check timing with.",
+        "whyAppreciating": "AI is now good at predicting how a message lands with a general audience. A 2026 Nature study had GPT-4 simulate 70 nationally representative survey experiments — 476 treatment effects, 105,165 participants — and its predictions correlated with the real results at r = 0.85, matching human forecaster panels, though it consistently overestimated effect sizes. Reception forecasting is no longer human-only. What the model cannot see is the calendar and the room: that earnings land Thursday, that the works council is already angry, that a journalist is three days into a story. Timing judgment has narrowed from reading the audience to holding the private organizational context and owning the go/hold call.",
+        "howToDevelop": "Use a model to pressure-test how a message reads to a general audience — that part is cheap now, and it is better than intuition at it. Spend your own effort on what it has no access to: what else your organization is announcing that week, which stakeholders are already agitated, what is moving that has not been published. Before sending any major communication, ask: \"What else is happening right now that changes how this will be received?\" Keep a log of timing decisions, good and bad calls, and review quarterly. Treat vendor \"predictive crisis alerts\" as an input, not a decision — none publish hit rates or false-positive rates.",
         "automationResistance": [
           "cultural-context",
           "judgment-under-ambiguity",
@@ -1704,10 +1704,10 @@
           "communication",
           "analysis-decision"
         ],
-        "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 7,
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       },
       {
         "name": "Relationship Journalism & Media Fluency",
@@ -1738,8 +1738,8 @@
           "people-management",
           "operations"
         ],
-        "whyAppreciating": "As organizations become more distributed and AI handles more routine coordination, the design of internal communication becomes a strategic capability. The communicator who understands that the all-hands email isn't landing, that the Slack channel is creating information overload, and that the quarterly business review needs a different format — this person shapes organizational effectiveness.",
-        "howToDevelop": "Audit your organization's internal communication: what do people actually read? What gets ignored? Survey 10 colleagues about their information diet — what's useful, what's noise? Propose one experiment: kill one communication channel or format for a month and measure what happens. Study organizations known for communication excellence (Stripe's writing culture, Amazon's memo format).",
+        "whyAppreciating": "AI has made producing internal communication nearly free, which makes deciding what not to send the scarce act. Be aware that the evidence here is weak: no independent research measures this, and the available numbers all come from firms selling internal-comms software or consulting. Those surveys report that roughly three-quarters of practitioners now use generative AI for drafting, and that a large share of employees feel overwhelmed even when they describe message volume as about right — directionally consistent, methodologically thin. What is defensible without a survey: models optimize output, not restraint, so the person who can kill a channel, defend the cut, and measure whether anything broke is doing work no tool will volunteer to do.",
+        "howToDevelop": "Audit your organization's internal communication: what do people actually read? What gets ignored? Survey 10 colleagues about their information diet — what's useful, what's noise? Propose one experiment: kill one communication channel or format for a month and measure what happens. Since AI has made drafting nearly free, the defensible skill is subtraction — track volume sent against volume actually read, and be the person who can show the difference. Study organizations known for communication excellence (Stripe's writing culture, Amazon's memo format).",
         "automationResistance": [
           "institutional-knowledge",
           "cultural-context"
@@ -1748,10 +1748,10 @@
           "communication",
           "coordination-management"
         ],
-        "appreciationScore": 7,
-        "verified": "2026-04-03",
-        "confidence": "medium",
-        "stale": true
+        "appreciationScore": 6,
+        "verified": "2026-08-27",
+        "confidence": "low",
+        "stale": false
       }
     ],
     "people-management": [
@@ -1924,8 +1924,8 @@
           "operations",
           "marketing"
         ],
-        "whyAppreciating": "AI can categorize and aggregate support tickets. It cannot sense that the five unrelated complaints this week all stem from the same confusing onboarding flow. It cannot walk into the product meeting and advocate for the customer with the credibility of someone who talked to 50 frustrated users this month. The support agent who becomes the organization's customer intelligence engine is doing irreplaceable work.",
-        "howToDevelop": "Keep a weekly \"pattern log\" of the top three themes from customer conversations. Once a month, write a one-page \"Voice of the Customer\" memo with specific quotes, frequency data, and one recommended action. Share it with product and engineering. Build relationships with product managers so your feedback has a direct channel. Track which of your recommendations get implemented — and the impact.",
+        "whyAppreciating": "Spotting the cluster is no longer the hard part. In blind expert evaluation, LLM-generated codes were preferred over experienced human researchers' 61% of the time, and GPT-4 reached 96% agreement with humans on broad themes; ticket theme detection shipped as a default feature across the major support platforms in 2026. What the same studies found models still miss is specific: they fragment data, draw themes with unclear boundaries, and miss latent interpretations. A blinded 2026 comparison found LLMs matched humans at applying an existing codebook but were markedly more variable at open-ended theme generation requiring tone and nuance. So the durable work is knowing which of forty surfaced themes deserves a quarter of engineering time, catching the theme the model split into three, and walking into the product meeting able to say what the fix costs and who it hurts — with the standing of someone who talked to 50 frustrated users this month. Pattern detection is cheap now. Prioritization and internal credibility are not.",
+        "howToDevelop": "Let the tool produce the themes; spend your time on what it cannot rank. Once a month, write a one-page \"Voice of the Customer\" memo that picks one theme, argues why it outranks the others, and estimates the cost of the fix and the cost of ignoring it. Check the tool's clusters against your own reading of the raw tickets — the themes it splits or blurs are where you add value. Build relationships with product managers so your feedback has a direct channel. Track which recommendations get implemented, and the impact.",
         "automationResistance": [
           "institutional-knowledge",
           "cultural-context",
@@ -1936,10 +1936,10 @@
           "analysis-decision",
           "interpersonal"
         ],
-        "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 6,
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       },
       {
         "name": "Retention & Relationship Recovery",
@@ -1948,8 +1948,8 @@
           "sales",
           "operations"
         ],
-        "whyAppreciating": "AI can flag churn risk based on usage data. It cannot have the conversation where a frustrated customer admits the real reason they're leaving is that they felt ignored during their last escalation — not the price, not the feature gap. The human who can listen to the unstated reason, acknowledge the failure, and propose a genuine path forward saves revenue that no automated winback campaign can touch.",
-        "howToDevelop": "When a customer cancels or downgrades, don't accept the first reason they give. Ask: \"What could we have done differently six months ago to prevent this?\" The answer is usually more revealing. Build a \"save playbook\" for your top three cancellation reasons, but treat it as a conversation guide, not a script. Track your save rate and the long-term retention of saved accounts — are they staying or just delaying?",
+        "whyAppreciating": "Assume the machine can get a customer to name the real reason. AI interviewers ask dynamic follow-up questions, and in an NBER study of 385 AI-led interviews they produced thematically richer answers than open-ended surveys and predicted respondents' actual behavior six months later. Vendors now sell AI cancel-flow exit interviews on exactly that basis. What does not transfer is what happens next. Four pre-registered studies found consumers prefer a human to resolve a complaint even after a bot resolved it successfully, and thirteen experiments found that disclosing AI involvement reduces trust through a legitimacy discount — a problem when the whole task is repairing trust the company already broke. Recovery is not information gathering. It is someone with standing acknowledging a specific failure, committing to a remedy they are authorized to make, and being accountable for it landing.",
+        "howToDevelop": "Let the exit survey collect the reason; your job starts after it. Build a \"save playbook\" for your top three cancellation reasons, but treat it as a conversation guide, not a script. Push for the authority to offer a real remedy — a save conversation where you have to check with someone else forfeits the advantage a human has here. Take the handoff early rather than late; consumers penalize a delayed escalation more than an immediate one. Track your save rate and the long-term retention of saved accounts — are they staying or just delaying?",
         "automationResistance": [
           "relationship-trust",
           "judgment-under-ambiguity"
@@ -1958,10 +1958,10 @@
           "interpersonal",
           "communication"
         ],
-        "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 7,
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       }
     ],
     "technology": [
@@ -2451,8 +2451,8 @@
           "technology",
           "marketing"
         ],
-        "whyAppreciating": "AI produces \"good enough\" at incredible speed. \"Good enough\" is now table stakes. The creative professional who obsesses over the details that most people don't consciously notice — but that everyone subconsciously feels — creates work that stands apart in a world flooded with AI-generated content. Craft is the new luxury. The 5% that separates competent from exceptional is entirely human territory.",
-        "howToDevelop": "Pick one area of craft and go deep: typography, color theory, motion design, prose rhythm. Study the masters — not for inspiration but for technique. How does Massimo Vignelli's grid work? How does Joan Didion's sentence structure create tension? Build a checklist for your work: the 10 details you always check before calling something done. Seek critique from craftspeople who are better than you — comfort with feedback is itself a skill.",
+        "whyAppreciating": "This record previously claimed the last 5% of quality was entirely human territory. That has not held up, and the correction matters because it points in the opposite direction from the original advice. Adobe's Agentic Design Review System (AAAI 2026) automates much of the detail layer — agent critics scoring typography, alignment, spacing and color across 15 attributes, reaching 76.8% accuracy on Adobe's internal design set. The market evidence is harder still. Siddiq and Zhang, studying 49,610 Upwork profiles and 2.26 million contracts from 2021 through early 2026, find that in the most AI-exposed categories the demand premium on strong human-capital signals — credentials, reputation, portfolio — compressed 6.2%, and 10.3% in the final year, while demand shifted toward lower-priced workers. Craft did not become the new luxury; in exposed categories buyers paid less for it. What survives is narrower: deciding which details matter for this audience and this brief, and being accountable when that call is wrong. That is arbitration, not execution, and it is paid mainly where a client can name who made the call.",
+        "howToDevelop": "Go deep on one area of craft — typography, color theory, motion design, prose rhythm — but treat fluency as the price of entry rather than the differentiator, because the exposed-market evidence shows buyers no longer pay a premium for it on its own. Study the masters for technique, not inspiration. Then practice the part that still prices: for each project, be able to name the three details that actually matter for this audience and defend why the other twenty do not. Put yourself in rooms where you make the call and are known to have made it — the evidence suggests the pay follows attribution, not execution.",
         "automationResistance": [
           "creative-taste",
           "embodied-knowledge"
@@ -2461,10 +2461,10 @@
           "creative-generative",
           "technical-specialized"
         ],
-        "appreciationScore": 9,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 5,
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       },
       {
         "name": "Client & Stakeholder Translation",
@@ -2474,8 +2474,8 @@
           "communications",
           "operations"
         ],
-        "whyAppreciating": "AI can generate to a prompt. The creative professional who can listen to a client say \"I want it to feel more modern\" and translate that into specific design decisions — understanding that \"modern\" means \"we want to attract younger customers without alienating our base\" — is doing the interpretive work that makes creative output useful. As AI makes execution instant, the ability to define the right brief becomes the bottleneck.",
-        "howToDevelop": "After every brief or kickoff meeting, write what you think the client actually wants (not what they said). Validate it with one clarifying question. Build a personal dictionary of \"client language to design language\" translations. Study how great creative directors present work: they sell the idea by connecting it to the client's objective, not their own aesthetic. Practice presenting three concepts where you can articulate why each solves the brief differently.",
+        "whyAppreciating": "AI does more of this than the record assumed — agencies now use models to assemble briefs from campaign goals, audience data and performance history, with a human approving positioning and constraints, so the vague-to-specific loop is increasingly a machine loop. The Census Bureau's 2026 BTOS AI supplement finds sales and marketing is the single most common AI business function, used by 52% of adopting firms, with writing and document analysis the leading tasks. The market is also removing the intermediary rather than repricing them: an April 2026 survey of more than 200 agency professionals found 65.3% of agencies lost work to client in-housing in the prior year, nearly 40% ran layoffs, and 87% say the traditional agency model is broken or will be within five years. If translation were the binding bottleneck, clients would buy more of it; instead they are pulling the work inside, where the brief-writer and the budget-holder are the same person. What holds is not the act of interpretation but the relationship in which a client tells you the thing they left out of the brief, and the accountability for what you recommend. Interpretation is a service; being trusted with the decision is the job.",
+        "howToDevelop": "After every brief or kickoff meeting, write what you think the client actually wants (not what they said), and validate it with one clarifying question. Build a personal dictionary of \"client language to design language\" translations. Study how great creative directors present work: they sell the idea by connecting it to the client's objective, not their own aesthetic. Given that in-housing is taking the interpretive work inside, invest in the part that does not transfer with it — become the person a client calls before the brief exists, and be willing to own a recommendation rather than present options.",
         "automationResistance": [
           "cultural-context",
           "relationship-trust",
@@ -2486,10 +2486,10 @@
           "interpersonal",
           "analysis-decision"
         ],
-        "appreciationScore": 8,
-        "verified": "2026-04-03",
-        "confidence": "high",
-        "stale": true
+        "appreciationScore": 6,
+        "verified": "2026-08-27",
+        "confidence": "medium",
+        "stale": false
       }
     ]
   }

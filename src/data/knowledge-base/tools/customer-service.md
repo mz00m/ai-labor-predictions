@@ -64,13 +64,13 @@
 
 - **Function**: customer-service
 - **Also useful for**: operations
-- **Pricing**: Paid (enterprise pricing, not publicly listed)
+- **Pricing**: Paid (enterprise quote only; reported entry around $30K/yr)
 - **URL**: https://www.ada.cx
-- **Verified**: 2026-04-03
+- **Verified**: 2026-08-27
 - **Confidence**: medium
 
 > No-code AI customer service automation platform that builds conversational agents trained on your company's knowledge and systems.
 
 **Best for:** Enterprise teams handling high-volume, repetitive support across multiple channels. Ada's no-code builder lets non-engineers create and maintain AI agents that connect to CRMs, order systems, and knowledge bases. Strong in e-commerce and fintech where customers need account-specific answers (order status, billing, returns).
 
-**Limitations:** Enterprise-only pricing puts it out of reach for small teams — no self-serve plan or public pricing, and third-party procurement data puts entry contracts in the tens of thousands of dollars per year. Billing is per conversation handled, regardless of whether the issue was resolved. Implementation requires meaningful setup time to integrate with backend systems. Performance depends heavily on the quality of your training data and knowledge base. Less community and third-party ecosystem compared to Zendesk or Intercom. Vendor site was unreachable at verification time.
+**Limitations:** Enterprise-only pricing puts it out of reach for small teams — no self-serve plan or public pricing, and third-party procurement data puts entry contracts in the tens of thousands of dollars per year. Billing is per conversation handled by default, regardless of whether the issue was resolved; Ada tried per-resolution pricing and moved back, arguing publicly for the conversation model that enterprise buyers found more predictable. Its own comparison models $0.35 per conversation against $1.50 per resolution, so which model is cheaper depends entirely on your deflection rate. Implementation requires meaningful setup time to integrate with backend systems. Performance depends heavily on the quality of your training data and knowledge base. Less community and third-party ecosystem compared to Zendesk or Intercom.

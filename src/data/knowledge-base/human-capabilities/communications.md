@@ -34,13 +34,13 @@
 
 - **Function**: communications
 - **Also relevant to**: marketing, people-management
-- **Why appreciating**: AI can schedule content optimally for engagement. It cannot sense that announcing a hiring freeze the same week as record earnings will create a trust crisis, or that the competitor's bad press creates a window for a thought leadership piece. Timing judgment is cultural intelligence applied to communication — and it compounds with experience.
-- **How to develop**: Build a "news radar" habit: 15 minutes each morning scanning your industry, your competitors, and the broader cultural moment. Before sending any major communication, ask: "What else is happening right now that changes how this will be received?" Keep a log of timing decisions (both good and bad calls) and review quarterly. Develop 2-3 trusted advisors you can gut-check timing with.
+- **Why appreciating**: AI is now good at predicting how a message lands with a general audience. A 2026 Nature study had GPT-4 simulate 70 nationally representative survey experiments — 476 treatment effects, 105,165 participants — and its predictions correlated with the real results at r = 0.85, matching human forecaster panels, though it consistently overestimated effect sizes. Reception forecasting is no longer human-only. What the model cannot see is the calendar and the room: that earnings land Thursday, that the works council is already angry, that a journalist is three days into a story. Timing judgment has narrowed from reading the audience to holding the private organizational context and owning the go/hold call.
+- **How to develop**: Use a model to pressure-test how a message reads to a general audience — that part is cheap now, and it is better than intuition at it. Spend your own effort on what it has no access to: what else your organization is announcing that week, which stakeholders are already agitated, what is moving that has not been published. Before sending any major communication, ask: "What else is happening right now that changes how this will be received?" Keep a log of timing decisions, good and bad calls, and review quarterly. Treat vendor "predictive crisis alerts" as an input, not a decision — none publish hit rates or false-positive rates.
 - **Automation resistance**: cultural-context, judgment-under-ambiguity, institutional-knowledge
 - **Task categories**: communication, analysis-decision
-- **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 7
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 ## Relationship Journalism & Media Fluency
 
@@ -62,10 +62,10 @@
 
 - **Function**: communications
 - **Also relevant to**: people-management, operations
-- **Why appreciating**: As organizations become more distributed and AI handles more routine coordination, the design of internal communication becomes a strategic capability. The communicator who understands that the all-hands email isn't landing, that the Slack channel is creating information overload, and that the quarterly business review needs a different format — this person shapes organizational effectiveness.
-- **How to develop**: Audit your organization's internal communication: what do people actually read? What gets ignored? Survey 10 colleagues about their information diet — what's useful, what's noise? Propose one experiment: kill one communication channel or format for a month and measure what happens. Study organizations known for communication excellence (Stripe's writing culture, Amazon's memo format).
+- **Why appreciating**: AI has made producing internal communication nearly free, which makes deciding what not to send the scarce act. Be aware that the evidence here is weak: no independent research measures this, and the available numbers all come from firms selling internal-comms software or consulting. Those surveys report that roughly three-quarters of practitioners now use generative AI for drafting, and that a large share of employees feel overwhelmed even when they describe message volume as about right — directionally consistent, methodologically thin. What is defensible without a survey: models optimize output, not restraint, so the person who can kill a channel, defend the cut, and measure whether anything broke is doing work no tool will volunteer to do.
+- **How to develop**: Audit your organization's internal communication: what do people actually read? What gets ignored? Survey 10 colleagues about their information diet — what's useful, what's noise? Propose one experiment: kill one communication channel or format for a month and measure what happens. Since AI has made drafting nearly free, the defensible skill is subtraction — track volume sent against volume actually read, and be the person who can show the difference. Study organizations known for communication excellence (Stripe's writing culture, Amazon's memo format).
 - **Automation resistance**: institutional-knowledge, cultural-context
 - **Task categories**: communication, coordination-management
-- **Appreciation score**: 7
-- **Verified**: 2026-04-03
-- **Confidence**: medium
+- **Appreciation score**: 6
+- **Verified**: 2026-08-27
+- **Confidence**: low

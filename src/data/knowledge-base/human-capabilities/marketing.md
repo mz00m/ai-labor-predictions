@@ -34,13 +34,13 @@
 
 - **Function**: marketing
 - **Also relevant to**: communications, sales
-- **Why appreciating**: AI can write blog posts and social copy. It cannot construct the strategic narrative that makes a company matter — the through-line from problem to solution to worldview that turns customers into advocates. This is architectural thinking applied to language.
-- **How to develop**: Study how the best companies frame themselves (not their products — their role in the world). Practice writing the same product benefit three ways: feature-first, benefit-first, worldview-first. Read "Building a StoryBrand" by Donald Miller and apply the framework to your company. Write your company's narrative in 100 words, 50 words, and 10 words.
+- **Why appreciating**: Generation is no longer the constraint, and this record used to claim it was. Csaszar, Ketkar and Kim (Strategy Science, 2024) had 250 experienced investors blind-evaluate strategies from an accelerator and a startup competition; LLM-generated strategies rated comparable to the entrepreneurs' own. A late-2025 preprint on ad copy found LLM output preferred 59% to 41% against human writers, holding up even when readers were told its origin. Two things still constrain. First, choosing which of five plausible narratives the company actually bets on, and being accountable when it is wrong — unsigned strategy is the failure mode, and most executives concede they could not pass an AI governance audit on short notice. Second, distinctiveness: Doshi and Hauser (Science Advances, 2024) show AI-assisted work converges toward the collective median, which is precisely what positioning exists to escape. The value moved from writing the narrative to owning it and refusing the average one.
+- **How to develop**: Generate five candidate narratives with a model in an afternoon — that is now the cheap part — then do the work it cannot: pick one, write down why the other four lose, and put your name on the call. Study how the best companies frame themselves (not their products — their role in the world). Practice writing the same product benefit three ways: feature-first, benefit-first, worldview-first. Check any AI-assisted draft against what your three closest competitors are already saying; convergence toward the median is the documented failure mode. Write your company's narrative in 100 words, 50 words, and 10 words.
 - **Automation resistance**: creative-taste, cultural-context, judgment-under-ambiguity
 - **Task categories**: creative-generative, communication, analysis-decision
-- **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 6
+- **Verified**: 2026-08-27
+- **Confidence**: medium
 
 ## Channel Judgment & Resource Allocation
 

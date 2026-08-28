@@ -564,13 +564,13 @@
       "whatItMeasures": "Incorporation counts and cohort revenue analytics from the Stripe Atlas platform (~25% of Delaware C corp formations), plus Stripe Economics analyses of solopreneurship and AI-native startups. Platform-population data — informative on composition (AI share, solo founders) but confounded by Stripe market-share growth on volume.",
       "whyItMatters": "Census BFS reports applications with a lag and no AI tagging; Stripe reports what share of new startups are AI-native (42% of 2025 C corps) and how fast they reach revenue. The composition stats are unavailable anywhere else at this frequency.",
       "lastIngested": {
-        "sourceId": "stripe-atlas-q1-2026-milestone",
-        "date": "2026-05-01",
-        "value": "Q1 2026 Atlas incorporations +130% YoY; 100K all-time; all Delaware incorporations +38% YoY"
+        "sourceId": "stripe-economics-ai-city-2026",
+        "date": "2026-08-27",
+        "value": "~40% of new businesses in metros under 1M people, up 10% relative to four years ago; ~80% of frontier AI labs still in San Francisco"
       },
       "nextExpected": "~September 2026 (Q3 2026 data / Atlas blog cadence)",
       "lastSweep": "2026-08-27",
-      "sweepNote": "Swept 2026-08-27 via the Substack RSS feed, which the 2026-08-20 sweep missed by reading the rendered page. Still no Q2/Q3 2026 Atlas incorporation post, so the formation series itself is current at 'The age of the solopreneur' (Jun 22, 2026), already ingested as stripe-economics-solopreneur-2026. Two uningested Tedeschi posts are pending review: 'AI and productivity' (Jul 23, 2026) and 'AI and the city' (Aug 27, 2026). Sweep this feed at /feed, not the homepage."
+      "sweepNote": "Swept 2026-08-27 via the Substack RSS feed, which the 2026-08-20 sweep missed by reading the rendered page. Still no Q2/Q3 2026 Atlas incorporation post, so the incorporation-volume series itself is current at 'The age of the solopreneur' (Jun 22, 2026), ingested as stripe-economics-solopreneur-2026. Both previously pending Tedeschi posts are now ingested: 'AI and productivity' (Jul 23, 2026) as an overlay on ai-adoption-rate, and 'AI and the city' (Aug 27, 2026) as an overlay on ai-business-formation. Sweep this feed at /feed, not the homepage."
     },
     {
       "id": "google-atlas",

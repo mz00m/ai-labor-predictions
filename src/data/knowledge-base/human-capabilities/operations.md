@@ -48,13 +48,13 @@
 
 - **Function**: operations
 - **Also relevant to**: administrative, technology
-- **Why appreciating**: AI generates novel solutions. The operator who spots that moving one step in the warehouse saves 4 minutes per order, or that changing the customer handoff timing reduces complaints by 30%, is doing something different: applied observation of messy reality. This skill compounds — each improvement creates the conditions for the next one.
-- **How to develop**: Spend one hour per week on the floor / in the process / watching the actual work happen. Keep a running list of friction points you observe. Pick one per month and test a fix. Measure the before and after. Read "The Toyota Way" for the mindset (gemba, kaizen), then adapt the principles to your context. Celebrate small improvements loudly — they compound.
+- **Why appreciating**: Two things have changed. Computer vision now does the observation — vendors sell systems that generate spaghetti diagrams and operator time studies from shop-floor video, with large claimed speedups, though those are marketing numbers with no independent replication. On the other side, no peer-reviewed study yet shows AI reliably finding the four-minute step or the handoff-timing fix in a live operation; the published work is conceptual frameworks, not measured results. Evidence is thin in both directions, so treat this score as provisional. The defensible part does not rest on who notices the improvement. Practitioner accounts of lean and kaizen programs consistently locate failure in implementation rather than idea supply — suggestions accumulate and go unmade because nobody has the standing to change the process. The Census Bureau's 2026 BTOS AI supplement is consistent with that: 66% of AI-using firms use it only to augment tasks, and 57% confine it to three or fewer business functions. The operator's advantage is the authority to change the process, get the floor to actually work the new way, and own the result.
+- **How to develop**: Spend one hour per week on the floor / in the process / watching the actual work happen. Keep a running list of friction points you observe. Pick one per month and test a fix. Measure the before and after. Read "The Toyota Way" for the mindset (gemba, kaizen), then adapt the principles to your context. Because the bottleneck is implementation rather than idea supply, track a second number alongside your suggestions: how many were actually adopted and still held 90 days later. That ratio, not the length of the list, is the skill.
 - **Automation resistance**: embodied-knowledge, institutional-knowledge
 - **Task categories**: analysis-decision, physical-manual
-- **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Appreciation score**: 7
+- **Verified**: 2026-08-27
+- **Confidence**: low
 
 ## Resource Allocation Under Constraints
 
@@ -62,10 +62,10 @@
 
 - **Function**: operations
 - **Also relevant to**: finance, people-management
-- **Why appreciating**: AI can optimize a known objective function with known constraints. Real operations involve ambiguous constraints (the budget is "tight" but nobody says how tight), shifting priorities (the CEO changed direction mid-quarter), and political dynamics (this team's project can't be cut even though it should be). The operator who navigates all three simultaneously is doing irreplaceable work.
-- **How to develop**: For every resource decision, make your tradeoffs explicit: "We're choosing X over Y because Z." Write it down. Share it. When priorities shift, re-present the tradeoffs rather than just absorbing the change silently. Build scenario-based resource plans: "At 80% budget, we cut A. At 60%, we also cut B." This makes the decisions faster when pressure arrives.
+- **Why appreciating**: This is the best-evidenced capability in the operations set, and 2026 agent benchmarks support it directly. In a 132-month simulated CFO environment spanning shifting macro regimes, only 15.4% of agent trials survived the full horizon, and the best agent scored roughly 7% of the human-expert baseline; the failure modes were mis-timed commitments under delayed consequences and fixation on internal state over external signals. On an operations-research benchmark built from ambiguous operational artifacts, the best agent passed 35.5% of tasks and 20.6% of hard instances, with 54.8% of failures occurring at the modeling stage — the agent gets the constraints wrong before the solver ever matters. A third 2026 study found agents degrade specifically on conflicting stakeholder demands and shifted priorities. The caveat worth stating: these are simulation benchmarks, not labor-market evidence, and no study yet shows a wage premium for this capability. The durable core is closer to authority and accountability for a committed decision than to constraint reasoning itself.
+- **How to develop**: For every resource decision, make your tradeoffs explicit: "We're choosing X over Y because Z." Write it down. Share it. When priorities shift, re-present the tradeoffs rather than just absorbing the change silently. Build scenario-based resource plans: "At 80% budget, we cut A. At 60%, we also cut B." This makes the decisions faster when pressure arrives. Practice the specific thing the benchmarks show agents failing at: committing early under delayed feedback, and reading external signals rather than only your own dashboards.
 - **Automation resistance**: judgment-under-ambiguity, institutional-knowledge, ethical-reasoning
 - **Task categories**: analysis-decision, coordination-management
 - **Appreciation score**: 8
-- **Verified**: 2026-04-03
-- **Confidence**: high
+- **Verified**: 2026-08-27
+- **Confidence**: medium

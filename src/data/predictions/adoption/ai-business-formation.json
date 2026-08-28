@@ -308,6 +308,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census BFS Jul 2026: 579K business applications (+8.1% MoM); 30.0K projected formations (+0.7%)"
+    },
+    {
+      "date": "2026-08-27",
+      "direction": "up",
+      "sourceIds": [
+        "stripe-economics-ai-city-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stripe: ~40% of new businesses now in metros under 1M people; frontier AI labs still 80% in SF"
     }
   ],
   "sources": [
@@ -557,6 +566,16 @@
       "datePublished": "2026-08-12",
       "excerpt": "\"Business Applications for July 2026, adjusted for seasonal variation, were 578,926, an increase of 8.1 percent compared to June 2026.\" \"Projected Business Formations (within 4 quarters) for July 2026, adjusted for seasonal variation, were 29,959, an increase of 0.7 percent compared to June 2026.\" Seasonally adjusted July components: High-Propensity Business Applications 151,857 (+1.4% MoM); Business Applications with Planned Wages 35,024 (-1.6%); Business Applications from Corporations 44,738 (+3.2%); Projected Business Formations within 8 quarters 40,777 (-0.7%). Next scheduled release September 11, 2026.",
       "dateAdded": "2026-08-20"
+    },
+    {
+      "id": "stripe-economics-ai-city-2026",
+      "title": "AI and the City",
+      "url": "https://www.stripeeconomics.com/p/ai-and-the-city",
+      "publisher": "Stripe Economics (Tedeschi)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-27",
+      "excerpt": "Stripe Economics analysis of where AI-era businesses are forming, using Stripe sign-up data by metro. \"Close to 40% of new businesses on Stripe this year are in metros with fewer than one million people, up 10% relative to four years ago.\" \"This year, twice as many new businesses were formed per person in Cheyenne, Wyoming than in New York City; in 2022, the rates of business formation in both cities were equal.\" Within major metros, \"close to 80% of sign-ups in major metropolitan areas are outside of the city center and high-density inner ring\"; Houston \"saw 37% of new businesses forming in the outer suburbs this year, up four percentage points relative to 2023.\" The shift \"is also reflected in Census data and is roughly one third as large as the COVID-era move away from major cities.\" Frontier AI work is the exception: \"Almost 80% of AI businesses closest to the technological frontier (the labs) are in San Francisco alone,\" and 50% of AI product companies are in San Francisco or top-10 metros. Authors caution that AI cannot be cleanly disentangled from remote work, though formation \"appears uncorrelated with work from home intensity.\"",
+      "dateAdded": "2026-08-27"
     }
   ]
 }
