@@ -839,6 +839,15 @@
       ],
       "evidenceTier": 2,
       "label": "Equitable Growth: OECD finds 90% of US firms use an algorithmic management tool"
+    },
+    {
+      "date": "2026-08-28",
+      "direction": "neutral",
+      "sourceIds": [
+        "syverson-eig-ai-productivity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Syverson (EIG): sector BTOS adoption vs productivity gain positive but not distinguishable from chance"
     }
   ],
   "sources": [

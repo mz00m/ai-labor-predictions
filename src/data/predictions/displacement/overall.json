@@ -2123,6 +2123,15 @@
       ],
       "evidenceTier": 4,
       "label": "Gates: AI to hit law, medicine, software, manufacturing within a decade"
+    },
+    {
+      "date": "2026-08-28",
+      "direction": "neutral",
+      "sourceIds": [
+        "syverson-eig-ai-productivity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Syverson (EIG): over AI's first couple years, remarkably little employment effect either way"
     }
   ],
   "sources": [

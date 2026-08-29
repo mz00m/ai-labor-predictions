@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Understanding AI and Productivity",
+      "author": "Chad Syverson",
+      "publisher": "Economic Innovation Group / Agglomerations",
+      "date": "2026-08-28",
+      "url": "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
+      "takeaway": "A co-author of the productivity J-curve paper returns to the question seven years on and refuses to close it. The value here is the discipline. Syverson reports that labor productivity ran about 1.5 percent a year through the 2010s and has run about 2.2 percent since mid-2022, and then argues against himself: the acceleration started when AI investment was still small relative to the economy, and its timing matches the pandemic-era jump in labor market churn and business formation. His test is duration rather than magnitude, which is the right test - the longer the acceleration holds, the harder it gets to explain without AI. The original contribution is a cross-sector scatter of each sector's change in contribution to economy-wide productivity growth against its employment-weighted BTOS adoption rate. The correlation is positive and he tells you plainly that it cannot be separated from chance; drop retail, a large accelerator with low adoption, and it more than doubles, a move he calls treading on thin statistical ice and declines to lean on. Anyone quoting the ex-retail number as evidence AI is raising productivity is quoting past the author. Two things worth carrying: the employment section explains why productivity growth does not mechanically destroy jobs (output is not fixed, lower costs cut prices, demand rises, and slower-growth sectors absorb workers), and the calibration that past general-purpose technologies added 1 to 1.5 points to annual growth for a decade or two, so the 5 to 10 percent some boosters claim has no historical precedent at economy-wide scale. On his own J-curve, he says only that it is too early to know where we are.",
+      "weekFeatured": "2026-08-29",
+      "tier": 2
+    },
+    {
       "title": "OECD Employment Outlook 2026 - From Resilience to Risk",
       "author": "OECD",
       "publisher": "OECD",

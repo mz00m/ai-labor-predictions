@@ -57,7 +57,15 @@
       "feedUrl": "https://eig.org/sitemap.xml",
       "feedType": "sitemap",
       "tier": 1,
-      "notes": "Nathan Goldschlag's shop; publishes rigorous measurement-focused research on AI labor impacts (see 'AI and Jobs: The Final Word' July 2026). Small sitemap \u2014 no pathInclude needed."
+      "notes": "Nathan Goldschlag's shop; publishes rigorous measurement-focused research on AI labor impacts (see 'AI and Jobs: The Final Word' July 2026). Small sitemap \u2014 no pathInclude needed. Does NOT cover the Agglomerations Substack \u2014 that is a separate subdomain with its own entry."
+    },
+    {
+      "publisher": "EIG Agglomerations",
+      "domain": "agglomerations.eig.org",
+      "feedUrl": "https://agglomerations.eig.org/feed",
+      "feedType": "rss",
+      "tier": 2,
+      "notes": "EIG's Substack, on a subdomain the eig.org sitemap does not reach. Carries the American Worker Project guest essays by outside economists \u2014 Chad Syverson's Aug 2026 productivity piece surfaced here and nowhere else, and was missed by the eig.org feed. Tier 2 by default (newsletter), but guest authors are often Tier 1 researchers writing outside peer review, so read the byline before assigning tier."
     },
     {
       "publisher": "Ramp Economics Lab",

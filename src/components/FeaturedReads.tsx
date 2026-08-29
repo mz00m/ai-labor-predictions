@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Chad Syverson (EIG)",
+    title: "Understanding AI and Productivity",
+    summary:
+      "A co-author of the productivity J-curve paper returns to the question seven years on and refuses to close it. The value here is the discipline. Syverson reports that labor productivity ran about 1.5% a year through the 2010s and has run about 2.2% since mid-2022, then argues against himself: the acceleration started when AI investment was still small relative to the economy, and its timing matches the pandemic-era jump in labor market churn and business formation. His test is duration rather than magnitude, which is the right test — the longer the acceleration holds, the harder it gets to explain without AI. The original contribution is a cross-sector scatter of each sector's change in contribution to economy-wide productivity growth against its employment-weighted BTOS adoption rate. The correlation is positive and he tells you plainly it cannot be separated from chance; drop retail, a large accelerator with low adoption, and it more than doubles — a move he calls treading on thin statistical ice and declines to lean on. Anyone quoting the ex-retail number as evidence AI is raising productivity is quoting past the author. Two things worth carrying: why productivity growth does not mechanically destroy jobs (output is not fixed, lower costs cut prices, demand rises, slower-growth sectors absorb workers), and the calibration that past general-purpose technologies added 1 to 1.5 points to annual growth for a decade or two, so the 5-10% some boosters claim has no economy-wide precedent. On his own J-curve, he says only that it is too early to know where we are.",
+    date: "Aug 28",
+    url: "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
+  },
+  {
     author: "Bill Gates",
     title: "A Turbulent AI Era and Critical Choices to Make",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Simon, Zweig and Wilkie-Rogers launch a live monthly dashboard across five lenses — talent supply, labor demand, equilibrium, work content, matching — built on online professional profiles rather than payroll. The headline finding independently replicates Canaries on non-ADP data: early-career workers (22-25) in the most AI-exposed occupations are down 13% relative to the least exposed since pre-ChatGPT, versus about 4% for all ages. Demand for the most-exposed roles is down 42%. The firm-side picture cuts the other way: AI-adopting firms grow headcount 27% more than non-adopters (though they were already growing faster pre-adoption), gains concentrate in senior roles (+31% vs +6% junior), and more AI-exposed firms see fewer layoffs, not more. Deliberately descriptive rather than predictive: the authors state the evidence does not establish that AI caused the decline in hires per posting. Two series no one else publishes monthly — a within-occupation activity-mix dissimilarity index (+8.4pp yoy, most change inside occupations rather than between them) and matching efficiency at 5.05 postings per hire, +264% yoy.",
     date: "Jul 28",
     url: "https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker",
-  },
-  {
-    author: "OpenAI Economic Research",
-    title: "Work at the Frontier: How AI is Expanding What People Do at Work",
-    summary:
-      "Chin and Richmond classify 800,000+ work-related ChatGPT messages from US users to a single O*NET detailed work activity, then compare it with the sender's stated occupation. The result they call task crossover: 16.8% of all work messages — and 43.5% of occupation-specific ones — concern tasks historically associated with another job. Cross-occupation work is the majority of occupation-specific messages in five of eight groups (customer experience 77%, design 75%, HR 69%). Borrowing and lending are independent: designers draw 35.2% of their messages from other fields while design tasks are only 1.7% of everyone else's; engineering is the inverse. Descriptive, not an employment estimate — but it argues the task bundles themselves are moving, which is a problem for any exposure measure built on fixed job descriptions.",
-    date: "Jul 27",
-    url: "https://openai.com/index/work-at-the-frontier/",
   },
 ];
 

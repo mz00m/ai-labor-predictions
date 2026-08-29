@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-28",
-  "totalSources": 695,
-  "verifiedCount": 685,
+  "lastUpdated": "2026-08-29",
+  "totalSources": 696,
+  "verifiedCount": 686,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -9835,6 +9835,22 @@
       "datePublished": "2026-08-24",
       "excerpt": "First of a three-part series mapping US federal labor data against the question of AI's effects. \"Existing federal data sources cannot be used yet to conclusively show whether and how AI might be driving changes in the U.S. labor market.\" The core failure is linkage: BTOS and Annual Business Survey AI-adoption responses \"are not linked to the Longitudinal Employer-Household Dynamics data, wage records, or other worker-level outcomes, even though both datasets sit within the Census Bureau.\" BTOS \"asks firms a yes or no question... Because this is a binary measure, it does not capture how or to what extent firms use AI.\" A 2024 OECD survey of 6,000+ firms across six countries found 90 percent of responding US firms had adopted at least one algorithmic management tool.",
       "dateAdded": "2026-08-25",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "syverson-eig-ai-productivity-2026": {
+      "id": "syverson-eig-ai-productivity-2026",
+      "title": "Understanding AI and Productivity",
+      "url": "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
+      "publisher": "Economic Innovation Group / Agglomerations (Chad Syverson, Chicago Booth)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-28",
+      "excerpt": "Guest essay for EIG's American Worker Project by Chad Syverson, co-author of the original productivity J-curve paper. On the macro series: labor productivity \"grew throughout the 2010s by about 1.5 percent per year, roughly half of its growth rate during the productivity boom of 1995-2004,\" and \"productivity from mid-2022 on has maintained a faster-than-2010s trajectory involving annual growth of about 2.2 percent.\" He declines to attribute this to AI: \"The timing leans against AI being the sole initial cause,\" since the acceleration began when AI investment was small and coincided with pandemic-era churn and business formation; his stated test is duration. A sustained 1.5-to-2.2 move would leave GDP per capita \"7 percent higher than otherwise\" after a decade, against nearly 3.0 percent annual growth in the 1995-2004 boom and \"in excess of 2.5 percent for a decade or longer\" in past GPT booms. Original cross-sector analysis (Figure 2) plots each sector's change in contribution to economy-wide productivity growth (2019-25 minus 2007-19) against its employment-weighted Census BTOS 2025 AI adoption rate: the correlation is positive but \"weak enough, relative to the number of sectors, that one cannot rule out chance as its source\"; excluding retail it is \"more than twice as large,\" a specification he calls \"treading on thin statistical ice.\" On employment: \"At least over the first couple years of its use, AI has had remarkably little employment effect, positive or negative.\" J-curve restatement: understatement periods \"could extend well beyond a decade, and cumulative productivity mismeasurement of double-digits percent,\" and \"Where are we on the AI J-curve now? It is too early to know that with much precision.\"",
+      "dateAdded": "2026-08-29",
       "usedIn": [
         "ai-adoption-rate",
         "overall-us-displacement"
