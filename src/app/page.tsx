@@ -184,12 +184,12 @@ export default function Home() {
         <ScrollReveal delay={80}>
           <SectionBar
             title="What Happens When 1 Worker Equals 2"
-            description="Workers using AI are 20-40% faster at individual tasks. But the economy isn't growing faster. Understanding that gap is the key to predicting what comes next."
+            description="Workers using AI are 20-40% faster at individual tasks. Economy-wide productivity growth has accelerated too, from about 1.5% a year to 2.2% — but no one can yet show AI caused it. That attribution gap is the key to what comes next."
             href="/productivity"
             tag="Productivity"
             accentColor="#3B4494"
             watermark={<ProductivityWatermark color="#3B4494" />}
-            stat={{ value: "~0%", label: "GDP effect" }}
+            stat={{ value: "+0.7pp", label: "Productivity growth" }}
           />
         </ScrollReveal>
 

@@ -29,9 +29,10 @@ export default function ProductivityPage() {
           </h1>
           <p className="text-prose sm:text-prose text-[var(--muted)] leading-relaxed mb-6">
             AI tools are making individual workers dramatically more productive.
-            But that productivity isn&rsquo;t showing up in the macro data yet, and
-            it hasn&rsquo;t translated into job losses. Understanding this gap is
-            central to every prediction on this site.
+            Economy-wide productivity growth has picked up too &mdash; but no one
+            has yet shown AI caused it, and it hasn&rsquo;t translated into job
+            losses. Understanding that gap is central to every prediction on
+            this site.
           </p>
 
           {/* Thesis card */}
@@ -40,9 +41,9 @@ export default function ProductivityPage() {
               className="text-lg sm:text-xl text-[var(--foreground)] leading-relaxed font-medium font-serif"
             >
               The story so far: 14&ndash;56% individual productivity gains in
-              controlled studies, early signs of macro impact in BLS data,
-              near-zero measured job loss, and economists split on what comes next.
-              This page connects the dots.
+              controlled studies, a real but so-far unattributed pickup in
+              macro productivity growth, near-zero measured job loss, and
+              economists split on what comes next. This page connects the dots.
             </p>
           </div>
         </div>
@@ -71,7 +72,9 @@ export default function ProductivityPage() {
               Three facts coexist uncomfortably. First: at the task level, AI
               tools are producing some of the largest productivity gains ever
               measured in economics experiments. Second: at the economy level,
-              aggregate productivity is only slightly above trend. Third: despite
+              productivity growth has genuinely accelerated &mdash; from about
+              1.5% a year through the 2010s to about 2.2% since mid-2022 &mdash;
+              but nobody has yet shown that AI caused it. Third: despite
               widespread predictions of AI-driven job loss, macro employment
               data shows essentially none.
             </p>
@@ -92,9 +95,9 @@ export default function ProductivityPage() {
             color="#22c55e"
           />
           <StatHighlight
-            value="+2.2%"
-            label="Macro productivity vs. trend"
-            detail="BLS data, Q4 2025 vs. CBO forecast"
+            value="2.2%"
+            label="Annual productivity growth"
+            detail="Since mid-2022, vs ~1.5% through the 2010s"
             color="#5C61F6"
           />
           <StatHighlight
@@ -103,6 +106,56 @@ export default function ProductivityPage() {
             detail="Yale, Goldman, Dallas Fed"
             color="#f59e0b"
           />
+        </div>
+
+        {/* Attribution problem */}
+        <div className="mt-8 max-w-3xl border border-card rounded-xl bg-white p-5 sm:p-6">
+          <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
+            Is AI causing the acceleration?
+          </h3>
+          <div className="space-y-3 text-base text-[var(--muted)] leading-relaxed">
+            <p>
+              Not established, and the economist best placed to claim it
+              declines to. Chad Syverson &mdash; a Chicago Booth productivity
+              economist and a co-author of the J-Curve paper below &mdash;
+              points out that the acceleration began when AI investment was
+              still small relative to the economy, and that its timing matches
+              the well-documented pandemic-era surge in labor market churn and
+              business formation. His proposed test is duration rather than
+              magnitude: the longer the acceleration runs, the harder it
+              becomes to explain without AI.
+            </p>
+            <p>
+              The natural cross-check is to ask whether sectors that adopted AI
+              faster also saw productivity accelerate more. Syverson runs it,
+              comparing each sector&rsquo;s change in contribution to
+              economy-wide productivity growth against its BTOS adoption rate.
+              The correlation is positive but too weak, given how few sectors
+              there are, to separate from chance. Excluding retail &mdash; a
+              large accelerator with low AI adoption &mdash; more than doubles
+              it, but Syverson calls that specification &ldquo;treading on thin
+              statistical ice&rdquo; and does not rest any conclusion on it.
+              Neither should anyone citing him.
+            </p>
+            <p>
+              For scale: past general-purpose technologies added roughly 1 to
+              1.5 percentage points to annual productivity growth for a decade
+              or two. The 5&ndash;10% a year some AI boosters project has never
+              been observed economy-wide.
+            </p>
+          </div>
+          <p className="text-xs text-[var(--muted)] mt-4">
+            Syverson, C. (2026).{" "}
+            <a
+              href="https://agglomerations.eig.org/p/understanding-ai-and-productivity"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--accent)] hover:underline"
+            >
+              Understanding AI and Productivity
+            </a>
+            . Economic Innovation Group.
+          </p>
         </div>
       </section>
 
@@ -131,7 +184,7 @@ export default function ProductivityPage() {
               <ReasonRow
                 number="1"
                 title="Adoption is still early"
-                text="Census BTOS data shows only ~7% of US firms actively use AI in production. Even if individual gains are large, the aggregate effect is diluted by the 93% not yet using it."
+                text="Census BTOS puts AI use at about 22% of US firms, and adoption is heavily skewed to large employers and to information, finance, and professional services. Even where individual gains are large, the aggregate effect is diluted by the roughly four in five firms still outside."
               />
               <ReasonRow
                 number="2"

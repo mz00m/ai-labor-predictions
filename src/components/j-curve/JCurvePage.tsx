@@ -319,6 +319,58 @@ export default function JCurvePage() {
               color="#ef4444"
             />
           </div>
+
+          {/* Co-author's 2026 update */}
+          <div className="mt-6 border border-card rounded-xl bg-white p-5 sm:p-6">
+            <p className="text-xs font-bold uppercase tracking-widest text-[var(--accent)] mb-2">
+              The co-author&rsquo;s own update, 2026
+            </p>
+            <h3 className="text-2xl font-bold text-[var(--foreground)] mb-3">
+              Where are we on the AI J-curve?
+            </h3>
+            <div className="space-y-3 text-base text-[var(--muted)] leading-relaxed">
+              <p>
+                Chad Syverson revisited the question in August 2026 and gave
+                the least satisfying honest answer:{" "}
+                <em>
+                  &ldquo;It is too early to know that with much
+                  precision.&rdquo;
+                </em>{" "}
+                He restates the magnitudes from the original work &mdash; for
+                other technologies, the understatement period{" "}
+                <strong>extended well beyond a decade</strong>, with cumulative
+                productivity mismeasurement in the{" "}
+                <strong>double-digit percents</strong> &mdash; and draws the
+                inference that matters most for reading current data: slow
+                measured productivity growth alongside broad AI adoption is not
+                evidence that AI is having no productivity effect.
+              </p>
+              <p>
+                That cuts both ways, and it is worth being explicit about the
+                cost. A framework that predicts its own absence of evidence
+                cannot be falsified by any single year of flat productivity
+                data. Syverson&rsquo;s discipline against this is to make the
+                test about <strong>duration</strong> rather than magnitude: US
+                productivity growth has run about 2.2% a year since mid-2022
+                against roughly 1.5% through the 2010s, and the longer that
+                acceleration holds, the harder it becomes to explain without
+                AI. The J-curve tells you not to expect the evidence yet. It
+                does not tell you to stop looking for it.
+              </p>
+            </div>
+            <p className="text-xs text-[var(--muted)] mt-4">
+              Syverson, C. (2026).{" "}
+              <a
+                href="https://agglomerations.eig.org/p/understanding-ai-and-productivity"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--accent)] hover:underline"
+              >
+                Understanding AI and Productivity
+              </a>
+              . Economic Innovation Group.
+            </p>
+          </div>
         </div>
       </section>
 
