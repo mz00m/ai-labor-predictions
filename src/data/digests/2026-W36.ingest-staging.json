@@ -1,0 +1,114 @@
+{
+  "week": "2026-W36",
+  "generatedAt": "2026-08-31T15:52:51.831Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "What Work Does Generative AI Do? First Task-Level GenAI Adoption Indexes",
+        "summary": "Bick, Blandin, Deming, and Schumacher (NBER w35677) use a nationally representative survey to link genAI adoption to detailed occupations and tasks, constructing the first task-level genAI adoption indexes. Their exposure scores explain meaningful variation in labor market outcomes, providing a rigorous empirical foundation for assessing genAI's displacement and augmentation effects across the workforce. This is among the most methodologically significant labor-market AI papers of the year.",
+        "source": "https://www.nber.org/papers/w35677",
+        "authors": [
+          "Alexander Bick",
+          "Adam Blandin",
+          "David J. Deming",
+          "Tyler R. Schumacher"
+        ],
+        "publishedAt": "2026-08-31",
+        "score": 0.694,
+        "sourceAdapter": "nber",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "nber-what-work-does-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "GenAI adoption widespread but shallow: <50% of workers in most tasks",
+          "quote": "current adoption is widespread but shallow: genAI is used across many occupations and tasks, yet within most of them, fewer than half of workers adopt"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Exposure scores explain some but not all variation in adoption across occupations",
+          "quote": "Exposure scores explain some, but far from all, of the variation in adoption across occupations and tasks"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "AI Is Hitting Entry-Level Jobs Hardest, Stanford Study Finds",
+        "summary": "A Stanford study highlighted by Ars Technica and widely discussed on Hacker News finds that AI automation is disproportionately concentrated at the entry level of the labor market, threatening the traditional on-ramp through which new workers build skills and experience. The findings suggest that the pipeline of junior talent into professional careers may be structurally disrupted, with compounding long-run wage consequences for younger cohorts. The HN thread generated 175 comments, reflecting significant public concern.",
+        "source": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+        "publishedAt": "2026-08-25",
+        "score": 0.225,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "arstechnica-ai-is-hitting-2026",
+      "evidenceTier": 4,
+      "extractedStats": [
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Young employment in AI-impacted fields down 19% vs AI-resistant jobs",
+          "quote": "Young employment in AI-impacted fields down 19% compared to more AI-resistant occupations."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Hollywood Creatives Training AI to Replace Themselves: The Guardian Investigation",
+        "summary": "The Guardian reports that Hollywood writers, illustrators, and other creative workers are being hired — often under financial duress — to label, annotate, and train AI systems that are designed to automate their own roles. The piece documents a structural irony in which creative industry displacement is being accelerated by the very workers most exposed to it, undermining guild protections won after the 2023 strikes. The story garnered 57 Hacker News points and 70 comments.",
+        "source": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+        "publishedAt": "2026-08-22",
+        "score": 0.174,
+        "sourceAdapter": "hnAlgolia",
+        "graphSlug": "creative-industry-displacement"
+      },
+      "sourceId": "theguardian-hollywood-creatives-training-2026",
+      "evidenceTier": 4,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI in Digital Banking: Labor Transformation Implications for Financial Services",
+        "summary": "Nguyen Thi Hang and Huynh Thi Huong Thao combine bibliometric analysis and qualitative synthesis to map AI applications across digital banking and assess their impact on labor market dynamics in the sector. The study finds accelerating displacement of routine financial and administrative roles while identifying emerging demand for AI-oversight and hybrid human-AI workflow positions. Published in HUIT OJS (DOI: 10.62985/j.huit_ojs.vol26.no3e.472), it contributes sector-specific evidence to the financial services automation debate.",
+        "source": "https://doi.org/10.62985/j.huit_ojs.vol26.no3e.472",
+        "authors": [
+          "Nguyen Thi Hang",
+          "Huynh Thi Huong Thao"
+        ],
+        "publishedAt": "2026-08-27",
+        "doi": "10.62985/j.huit_ojs.vol26.no3e.472",
+        "score": 0.374,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "financial-services-displacement"
+      },
+      "sourceId": "doi-ai-in-digital-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Technological Polarization and Unequal Growth in the Era of Generative and Agentic AI",
+        "summary": "Kyra Mahindru's mixed-method study (DOI: 10.70917/ijcisim-2026-5228) analyzes how GenAI and Agentic AI together drive wage polarization, concentrate productivity gains among high-skill workers, and displace mid-tier employment — a pattern the paper terms 'technological polarization.' The analysis argues that without redistributive policy, agentic AI will widen inequality beyond the levels observed during earlier waves of automation. The findings directly inform projections of the high-skill wage premium diverging from median wages.",
+        "source": "https://doi.org/10.70917/ijcisim-2026-5228",
+        "authors": [
+          "Kyra Mahindru"
+        ],
+        "publishedAt": "2026-08-28",
+        "doi": "10.70917/ijcisim-2026-5228",
+        "score": 0.363,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-technological-polarization-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
