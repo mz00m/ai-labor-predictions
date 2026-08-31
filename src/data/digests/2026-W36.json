@@ -1,0 +1,121 @@
+{
+  "week": "2026-W36",
+  "generatedAt": "2026-08-31T15:51:47.972Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "What Work Does Generative AI Do? First Task-Level GenAI Adoption Indexes",
+      "summary": "Bick, Blandin, Deming, and Schumacher (NBER w35677) use a nationally representative survey to link genAI adoption to detailed occupations and tasks, constructing the first task-level genAI adoption indexes. Their exposure scores explain meaningful variation in labor market outcomes, providing a rigorous empirical foundation for assessing genAI's displacement and augmentation effects across the workforce. This is among the most methodologically significant labor-market AI papers of the year.",
+      "source": "https://www.nber.org/papers/w35677",
+      "authors": [
+        "Alexander Bick",
+        "Adam Blandin",
+        "David J. Deming",
+        "Tyler R. Schumacher"
+      ],
+      "publishedAt": "2026-08-31",
+      "score": 0.694,
+      "sourceAdapter": "nber",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "AI Is Hitting Entry-Level Jobs Hardest, Stanford Study Finds",
+      "summary": "A Stanford study highlighted by Ars Technica and widely discussed on Hacker News finds that AI automation is disproportionately concentrated at the entry level of the labor market, threatening the traditional on-ramp through which new workers build skills and experience. The findings suggest that the pipeline of junior talent into professional careers may be structurally disrupted, with compounding long-run wage consequences for younger cohorts. The HN thread generated 175 comments, reflecting significant public concern.",
+      "source": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+      "publishedAt": "2026-08-25",
+      "score": 0.225,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Hollywood Creatives Training AI to Replace Themselves: The Guardian Investigation",
+      "summary": "The Guardian reports that Hollywood writers, illustrators, and other creative workers are being hired — often under financial duress — to label, annotate, and train AI systems that are designed to automate their own roles. The piece documents a structural irony in which creative industry displacement is being accelerated by the very workers most exposed to it, undermining guild protections won after the 2023 strikes. The story garnered 57 Hacker News points and 70 comments.",
+      "source": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+      "publishedAt": "2026-08-22",
+      "score": 0.174,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "creative-industry-displacement"
+    },
+    {
+      "title": "AI in Digital Banking: Labor Transformation Implications for Financial Services",
+      "summary": "Nguyen Thi Hang and Huynh Thi Huong Thao combine bibliometric analysis and qualitative synthesis to map AI applications across digital banking and assess their impact on labor market dynamics in the sector. The study finds accelerating displacement of routine financial and administrative roles while identifying emerging demand for AI-oversight and hybrid human-AI workflow positions. Published in HUIT OJS (DOI: 10.62985/j.huit_ojs.vol26.no3e.472), it contributes sector-specific evidence to the financial services automation debate.",
+      "source": "https://doi.org/10.62985/j.huit_ojs.vol26.no3e.472",
+      "authors": [
+        "Nguyen Thi Hang",
+        "Huynh Thi Huong Thao"
+      ],
+      "publishedAt": "2026-08-27",
+      "doi": "10.62985/j.huit_ojs.vol26.no3e.472",
+      "score": 0.374,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "financial-services-displacement"
+    },
+    {
+      "title": "Technological Polarization and Unequal Growth in the Era of Generative and Agentic AI",
+      "summary": "Kyra Mahindru's mixed-method study (DOI: 10.70917/ijcisim-2026-5228) analyzes how GenAI and Agentic AI together drive wage polarization, concentrate productivity gains among high-skill workers, and displace mid-tier employment — a pattern the paper terms 'technological polarization.' The analysis argues that without redistributive policy, agentic AI will widen inequality beyond the levels observed during earlier waves of automation. The findings directly inform projections of the high-skill wage premium diverging from median wages.",
+      "source": "https://doi.org/10.70917/ijcisim-2026-5228",
+      "authors": [
+        "Kyra Mahindru"
+      ],
+      "publishedAt": "2026-08-28",
+      "doi": "10.70917/ijcisim-2026-5228",
+      "score": 0.363,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    }
+  ],
+  "themes": [
+    "Task-level genAI adoption measurement is maturing: the NBER Bick et al. paper marks a methodological step-change, moving from occupation-level exposure scores to granular task-level indexes that can better predict displacement and augmentation outcomes.",
+    "Entry-level and junior roles are emerging as the acute near-term displacement pressure point, with the Stanford findings suggesting AI is hollowing out the traditional career ladder before workers can accumulate the human capital needed to benefit from AI augmentation.",
+    "Creative industry workers face a compounding paradox: financial pressure is forcing them to participate in training the very AI systems threatening their livelihoods, accelerating displacement timelines in film, TV, and adjacent sectors.",
+    "Financial services and banking are consolidating as a leading sector for AI-driven labor transformation, with new peer-reviewed evidence quantifying both the roles being automated and the emerging hybrid positions that partially offset losses.",
+    "Wage polarization is intensifying as agentic AI enters the workforce: multiple papers this week converge on the finding that productivity gains from GenAI are accruing disproportionately to high-skill workers, widening the gap with median and entry-level earners."
+  ],
+  "watching": [
+    {
+      "title": "Fed Reserve FEDS Notes: Monitoring AI Adoption in the US Economy (overdue Q3 release)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Quarterly Fed synthesis last ingested 150d ago; Q3 2026 release expected imminently and will update ai-adoption-rate and workforce-ai-exposure baselines."
+    },
+    {
+      "title": "Yale Budget Lab: Tracking the Impact of AI on the Labor Market",
+      "source": "http://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "reason": "Yale Budget Lab tracker updated mid-August; next update may capture first empirical signals from summer 2026 labor data on AI-related job postings and wage shifts."
+    },
+    {
+      "title": "The Reverse Big Push: Generative AI and Self-Fulfilling Automation (Banerjee & Wang)",
+      "source": "https://arxiv.org/abs/2608.25602",
+      "reason": "Novel theoretical model on fixed-cost asymmetry in AI automation could reshape how displacement tipping points are modeled; watch for peer review and citation uptake."
+    },
+    {
+      "title": "Analysis: The Automation of Human Jobs in the 2030s (Elliott et al.)",
+      "source": "https://doi.org/10.21203/rs.3.rs-10384172/v1",
+      "reason": "Preprint from multi-author team projecting 2030s automation trajectory; if peer-reviewed, findings will be central to long-run displacement forecasting."
+    },
+    {
+      "title": "Fed FEDS Note: The AI Buildout and the Economy — Publicly Available Data to Assess AI's Impact",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "reason": "Fed framework for tracking AI buildout indicators could become a reference methodology for earnings-call and adoption-rate monitoring dashboards."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 97,
+    "afterDedup": 97
+  }
+}
