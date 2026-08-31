@@ -10,9 +10,10 @@ const TOC = [
   { id: "overview", label: "Overview" },
   { id: "expert-consensus", label: "What Experts Agree & Disagree About" },
   { id: "predictions", label: "Prediction Graphs" },
+  { id: "measured-vs-projected", label: "Measured vs. Projected" },
   { id: "evidence-tiers", label: "Evidence Tiers" },
-  { id: "weighted-average", label: "Weighted Average" },
-  { id: "proxy-metrics", label: "Proxy Metrics" },
+  { id: "weighted-average", label: "How the Headline Number Works" },
+  { id: "proxy-metrics", label: "Indirect Measurements" },
   { id: "displacement-risk", label: "5-D Displacement Risk" },
   { id: "signals", label: "Automation Signals" },
   { id: "j-curve", label: "J-Curve Framework" },
@@ -249,10 +250,11 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
       <Section id="overview" title="Overview">
         <TLDR>
           <p>
-            This site synthesizes published research into a structured dashboard.
-            It is not a model, not a forecast, and not a single team&rsquo;s
-            opinion. When sources disagree, the disagreement is shown, not
-            hidden.
+            Every number here comes from published research. We collect
+            estimates; we don&rsquo;t produce them. Nothing on this site is our
+            own forecast. When studies disagree, you see the disagreement
+            instead of a single tidy answer &mdash; because on most of these
+            questions, the disagreement <em>is</em> the honest finding.
           </p>
         </TLDR>
         <P>
@@ -465,7 +467,7 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
               displacement). Converted via an empirically grounded factor and
               plotted with a 0.5&times; weight discount. See{" "}
               <a href="#proxy-metrics" className="text-[var(--accent-text)] hover:underline">
-                Proxy Metrics
+                Indirect Measurements
               </a>.
             </li>
             <li>
@@ -494,7 +496,10 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
           <p>
             A downward arrow means &ldquo;newer sources estimate lower,&rdquo;
             not necessarily &ldquo;the real-world metric is declining.&rdquo;
-            Adding or removing a source can shift the trend.
+            Adding or removing a source can shift the trend. Treat the arrow
+            with particular caution where the first and last observed points
+            come from different research teams measuring in different ways: the
+            arrow is then partly a comparison of methods, not only of years.
           </p>
         </DeepDive>
 
@@ -519,6 +524,125 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
               measurement supersedes prior ones.
             </li>
           </ul>
+        </DeepDive>
+      </Section>
+
+      {/* ════════════════════════════════════════════════════════════════
+          02a. MEASURED VS. PROJECTED
+      ════════════════════════════════════════════════════════════════ */}
+      <Section id="measured-vs-projected" title="Measured vs. Projected">
+        <TLDR>
+          <p>
+            Two very different kinds of number sit on the same chart. A{" "}
+            <Strong>measured</Strong> value is a count of something that already
+            happened. A <Strong>projected</Strong> value is somebody&rsquo;s
+            forecast of 2030. On several graphs the two disagree sharply, and
+            the headline number blends them &mdash; so the sentence under the
+            headline reports the measured figure on its own. Read that one
+            first.
+          </p>
+        </TLDR>
+
+        <P>
+          This is the single most important distinction on the site, and the
+          easiest one to miss. Almost everything alarming you have read about AI
+          and jobs is a projection. Almost everything reassuring is a
+          measurement. Both are on these charts, and they are not the same kind
+          of claim.
+        </P>
+
+        <P>
+          A measured point comes from counting: payroll records, a government
+          survey, a company&rsquo;s own filings. It can be wrong, but it is
+          wrong about the past, which is a checkable kind of wrong. A projected
+          point comes from a model or an expert judgment about a year that
+          hasn&rsquo;t happened. It cannot be checked yet, and the forecasting
+          record of this field &mdash; in both directions &mdash; is poor.
+        </P>
+
+        <P>
+          Where the two diverge, the gap is not noise. It is usually the most
+          informative thing on the chart:
+        </P>
+
+        <div className="overflow-x-auto -mx-4 px-4 mb-4">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="text-left border-b border-strong">
+                <th className="pb-2 font-semibold text-[var(--foreground)] pr-3">Graph</th>
+                <th className="pb-2 font-semibold text-[var(--foreground)] pr-3">Measured so far</th>
+                <th className="pb-2 font-semibold text-[var(--foreground)]">Projected</th>
+              </tr>
+            </thead>
+            <tbody className="text-[var(--muted)]">
+              <tr className="border-b border-divider">
+                <td className="py-2 pr-3">US workforce AI exposure</td>
+                <td className="py-2 pr-3 font-mono">19%</td>
+                <td className="py-2 font-mono">45%</td>
+              </tr>
+              <tr className="border-b border-divider">
+                <td className="py-2 pr-3">Overall US displacement</td>
+                <td className="py-2 pr-3 font-mono">0.4%</td>
+                <td className="py-2 font-mono">3.8%</td>
+              </tr>
+              <tr className="border-b border-divider">
+                <td className="py-2 pr-3">Healthcare admin displacement</td>
+                <td className="py-2 pr-3 font-mono">6.7%</td>
+                <td className="py-2 font-mono">20.4%</td>
+              </tr>
+              <tr>
+                <td className="py-2 pr-3">Entry-level wage impact</td>
+                <td className="py-2 pr-3 font-mono">&minus;5.0%</td>
+                <td className="py-2 font-mono">+2.0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <P>
+          The last row is the sharpest case: the measured evidence and the
+          forecast evidence point in <em>opposite directions</em>, and the
+          headline number lands between them. That is not a flaw in the data. It
+          is a real, unresolved disagreement about whether the early wage
+          declines showing up in junior roles are the start of a trend or a
+          transitional dip that productivity gains will reverse.
+        </P>
+
+        <DeepDive title="Why we blend them at all">
+          <p className="mb-3">
+            Most graphs on this site answer a forward-looking question
+            (&ldquo;displacement by 2030&rdquo;), so excluding forecasts
+            entirely would leave several charts nearly empty. Excluding
+            measurements would discard the only checkable evidence that exists.
+            The weighted average therefore includes both, and every point
+            carries a <Code>dataType</Code> of <Code>observed</Code> or{" "}
+            <Code>projected</Code> so the two can always be separated.
+          </p>
+          <p>
+            The cost of that choice is that the headline number on a graph with
+            a wide measured/projected gap is a compromise between two
+            populations that genuinely disagree. We report the measured average
+            separately beneath every such headline rather than asking readers to
+            reconstruct it.
+          </p>
+        </DeepDive>
+
+        <DeepDive title="For researchers: what the two averages are">
+          <p className="mb-3">
+            The headline figure is the full tier-, recency-, sample-size- and
+            proxy-weighted mean across all points passing the active tier
+            filter. The &ldquo;observed so far&rdquo; figure beneath it is an{" "}
+            <em>unweighted</em> arithmetic mean of the observed subset, so the
+            two use different estimators and should not be differenced to
+            recover the projected mean.
+          </p>
+          <p>
+            Both subsets are exposed in the per-prediction JSON and through the
+            public API, so you can recompute either under your own weighting.
+            The tier toggles on each chart recompute the headline live, which is
+            the fastest way to see how much of a given number rests on Tier 1
+            evidence.
+          </p>
         </DeepDive>
       </Section>
 
@@ -607,17 +731,36 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
       <Section id="weighted-average" title="How We Calculate the Headline Number">
         <TLDR>
           <p>
-            The large number on every prediction tile is a weighted average.
-            Four factors determine each data point&rsquo;s influence: evidence
-            tier, recency, sample size, and whether it&rsquo;s a direct or proxy
-            measurement.
+            The big number on every graph is an average of every published
+            estimate we could find &mdash; but not a plain average. Stronger
+            studies count for more. Four things decide how much each estimate
+            counts: how good the source is, how recent it is, how many people it
+            looked at, and whether it measured the thing directly or something
+            adjacent to it.
           </p>
         </TLDR>
 
         <P>
-          The headline number is not a median, not a simple average, and not
-          cherry-picked. It&rsquo;s a weighted mean where better evidence counts
-          more:
+          Imagine twelve researchers each hand you a different answer to the
+          same question. You could take the plain average, but that would let a
+          blog post count as much as a decade of government payroll records.
+          Instead we give each estimate a weight, multiply, and divide. Nothing
+          is dropped and nothing is hand-picked &mdash; every estimate we found
+          is on the chart, and you can see each one.
+        </P>
+
+        <P>
+          Two things this number is <em>not</em>. It is not a prediction we are
+          making; it is a summary of predictions other people made. And it is
+          not more precise than the underlying research &mdash; when the
+          estimates behind it run from 3% to 40%, the average is a place to
+          start an argument, not to end one. That is why the range sits next to
+          the headline, and why we&rsquo;d rather you clicked into the sources.
+        </P>
+
+        <P>
+          For readers who want the arithmetic, each estimate&rsquo;s weight and
+          the resulting mean are:
         </P>
 
         <div className="bg-black/[0.02] border border-card rounded-lg px-4 py-3 mb-4 font-mono text-base text-[var(--foreground)]">
@@ -664,7 +807,7 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
             factor) receive 0.5&times; weight. This means a Tier 1 proxy point
             has the effective influence of a direct Tier 2 measurement. See{" "}
             <a href="#proxy-metrics" className="text-[var(--accent-text)] hover:underline">
-              Proxy Metrics
+              Indirect Measurements
             </a>{" "}
             for how conversions work.
           </p>
@@ -682,22 +825,36 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
       {/* ════════════════════════════════════════════════════════════════
           05. PROXY METRICS
       ════════════════════════════════════════════════════════════════ */}
-      <Section id="proxy-metrics" title="Proxy Metrics">
+      <Section id="proxy-metrics" title="Indirect Measurements (Proxies)">
         <TLDR>
           <p>
-            Many studies measure something related to but not identical to a
-            graph&rsquo;s unit. Job posting declines are not the same as job
-            losses. We convert proxies using empirically grounded factors, widen
-            confidence bands, and apply a 0.5&times; weight discount so direct
-            measurements always dominate.
+            Sometimes a study measures something <em>near</em> what a graph
+            tracks rather than the thing itself. A drop in job postings is not
+            the same as people losing jobs &mdash; employers stop advertising
+            long before, and more often than, they cut staff. We translate these
+            indirect measures onto the chart&rsquo;s scale using a published
+            conversion, widen the uncertainty band, and cut their influence in
+            half so direct measurements always outweigh them.
           </p>
         </TLDR>
 
         <P>
-          Plotting a 12% job posting decline on a displacement graph where
-          direct measurements cluster around 3&ndash;6% creates a false outlier.
-          The proxy methodology prevents this by converting indirect measurements
-          to the target unit before plotting.
+          Here is the problem this solves. Suppose a graph tracks the share of
+          jobs displaced, and the direct measurements cluster around 3&ndash;6%.
+          Now a well-regarded study reports that job postings in the same
+          occupations fell 12%. Dropping that 12% straight onto the chart would
+          make it the most extreme point on the graph &mdash; not because the
+          finding is extreme, but because it is answering a different question.
+          Postings fall faster than employment does.
+        </P>
+
+        <P>
+          So we convert first. The 12% becomes an estimate of displacement using
+          a factor drawn from research on how postings and employment actually
+          move together, and it is plotted with a visible marker and a wider
+          band. Researchers can find every factor, its empirical basis, and its
+          plausible range below; each one is a judgment call, and we would
+          rather show the call than hide it inside a number.
         </P>
 
         <DeepDive title="Conversion table" defaultOpen>

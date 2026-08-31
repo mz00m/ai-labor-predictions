@@ -5,23 +5,11 @@
   "description": "Share of US workers with AI observed doing part of their actual work, from platform telemetry and nationally representative worker surveys. This is the measured counterpart to AI exposure: what AI is doing, not what it could do.",
   "category": "exposure",
   "unit": "% of workers with observed AI use",
-  "currentValue": 39.8,
+  "currentValue": 35,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
-  "disclaimer": "Sources set different thresholds for what counts as \u201cusing AI,\u201d so the spread here is definitional as much as empirical. Anthropic's 49% counts jobs where at least a quarter of tasks show up in Claude traffic; its 70% counts any observed coverage at all; Hartley et al. ask workers directly. Breadth is not depth: Google's ATLAS finds Gemini use somewhere in occupations covering 88% of US employment, but the median occupation with any use runs AI on only 21% of its tasks. That 88% figure measures how far AI has reached, not how many workers use it, which is why it sits below the chart rather than on it. For what AI could do rather than what it is doing, see [US Workforce AI Exposure](/predictions/workforce-ai-exposure).",
+  "disclaimer": "Read the spread here as a disagreement about definitions, not about facts. Each source draws the line for \u201cusing AI\u201d in a different place, and where you draw that line does most of the work. Anthropic's 70% counts a worker if any of their tasks show up at all in professional AI traffic. Apollo's 3.7% counts a worker only if AI covers at least half their tasks. Hartley et al.'s 38% skips telemetry entirely and asks workers whether they use AI. All three can be correct at once. Because of that, the average across them is not a meaningful estimate of how many people use AI at work \u2014 treat the individual points as answers to three different questions. Breadth is also not depth: Google's ATLAS observes Gemini somewhere inside occupations covering 88% of US employment, but the typical occupation with any use runs AI on only 21% of its tasks. That 88% measures how far AI has reached across the economy, not how many workers use it, which is why it sits below the chart rather than on it. For what AI could do rather than what it is doing, see [US Workforce AI Exposure](/predictions/workforce-ai-exposure).",
   "history": [
-    {
-      "date": "2025-01-15",
-      "value": 36,
-      "confidenceLow": 28,
-      "confidenceHigh": 44,
-      "sourceIds": [
-        "anthropic-econ-primitives-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
     {
       "date": "2026-01-01",
       "value": 38.3,
@@ -29,18 +17,6 @@
       "confidenceHigh": 38.3,
       "sourceIds": [
         "hartley-genai-labor-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-15",
-      "value": 49,
-      "confidenceLow": 40,
-      "confidenceHigh": 60,
-      "sourceIds": [
-        "anthropic-econ-primitives-2026"
       ],
       "evidenceTier": 1,
       "metricType": "survey",
@@ -106,16 +82,6 @@
     }
   ],
   "sources": [
-    {
-      "id": "anthropic-econ-primitives-2026",
-      "title": "The Anthropic Economic Index: Economic Primitives",
-      "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report",
-      "publisher": "Anthropic",
-      "evidenceTier": 1,
-      "datePublished": "2026-01-15",
-      "excerpt": "Computer/mathematical tasks account for ~33% of all Claude.ai conversations and ~50% of API traffic, indicating concentrated AI impact on tech-adjacent roles.",
-      "dateAdded": "2026-03-01"
-    },
     {
       "id": "hartley-genai-labor-2026",
       "title": "The Labor Market Effects of Generative Artificial Intelligence",

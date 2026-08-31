@@ -166,6 +166,32 @@ export default function PredictionDetailPage() {
   const projectedValues = projectedHistory
     .filter((d) => selectedTiers.includes(d.evidenceTier))
     .map((d) => d.value);
+
+  // Publishers behind the observed points on this chart. Derived, not hardcoded —
+  // naming the wrong institutions under the headline number misattributes the evidence.
+  const observedPublishers = (() => {
+    const seen = new Map<string, string>();
+    for (const d of observedHistory) {
+      if (!selectedTiers.includes(d.evidenceTier)) continue;
+      for (const id of d.sourceIds) {
+        const raw = prediction.sources.find((s) => s.id === id)?.publisher;
+        if (!raw) continue;
+        const name = raw.replace(/\s*\(.*$/, "").trim();
+        const key = name.toLowerCase().replace(/^u\.?s\.?\s+/, "");
+        if (!seen.has(key)) seen.set(key, name);
+      }
+    }
+    return Array.from(seen.values());
+  })();
+
+  const observedAttribution = (() => {
+    const n = observedValues.length;
+    const noun = `${n} measurement${n === 1 ? "" : "s"}`;
+    if (observedPublishers.length === 0) return noun;
+    const shown = observedPublishers.slice(0, 3).join(", ");
+    const rest = observedPublishers.length - 3;
+    return `${noun} from ${shown}${rest > 0 ? `, and ${rest} other source${rest === 1 ? "" : "s"}` : ""}`;
+  })();
   const observedMean = observedValues.length > 0
     ? Math.round((observedValues.reduce((s, v) => s + v, 0) / observedValues.length) * 10) / 10
     : 0;
@@ -274,7 +300,7 @@ export default function PredictionDetailPage() {
                   <span className="font-semibold text-[var(--signal-positive-strong)]">
                     Observed so far: ~{observedMean}{unitSuffix}
                   </span>
-                  {" "}({observedValues.length} measurements from Yale Budget Lab, Brookings, Dallas Fed, BLS).{" "}
+                  {" "}({observedAttribution}).{" "}
                   Projections range {projectedMin}–{projectedMax}{unitSuffix} (median ~{projectedMedian}{unitSuffix}).
                 </p>
               </div>
