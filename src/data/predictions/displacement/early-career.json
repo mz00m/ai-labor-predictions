@@ -73,6 +73,24 @@
   ],
   "overlays": [
     {
+      "date": "2025-07-09",
+      "direction": "up",
+      "sourceIds": [
+        "sigelman-fuller-expertise-upheaval-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass/HBS: 17.8M workers (12%) in roles where AI narrows entry rungs"
+    },
+    {
+      "date": "2025-07-09",
+      "direction": "down",
+      "sourceIds": [
+        "sigelman-fuller-expertise-upheaval-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Burning Glass/HBS: AI lowers entry barriers in 28.6M mastery roles (19%)"
+    },
+    {
       "date": "2025-09-01",
       "direction": "up",
       "sourceIds": [
@@ -143,6 +161,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford DEL: early-career women -4.5%/yr vs men -2.5%/yr in exposed jobs"
+    },
+    {
+      "date": "2026-07-22",
+      "direction": "down",
+      "sourceIds": [
+        "mccrory-why-no-unemployment-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "McCrory: largest non-recessionary slowdown on record may explain youth weakness"
     },
     {
       "date": "2026-07-28",
@@ -227,6 +254,26 @@
     }
   ],
   "sources": [
+    {
+      "id": "sigelman-fuller-expertise-upheaval-2025",
+      "title": "The Expertise Upheaval: How Generative AI's Impact on Learning Curves Will Reshape the Workplace",
+      "url": "https://pw.hks.harvard.edu/post/the-expertise-upheaval-how-generative-ai-s-impact-on-learning-curves-will-reshape-the-workplace",
+      "publisher": "Burning Glass Institute / Harvard Project on Managing the Future of Work (Sigelman, Fuller, Fenlon, Leiden, Guilford)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-09",
+      "excerpt": "\"In Growth Roles, GenAI automates foundational work that historically served as the training ground for future expertise. The result: a narrowing of career entry points.\" \"Our analysis reveals that approximately 1 in 8 US workers (17.8 million people) are currently in occupations where there could be considerably less entry-level opportunity as a result of GenAI.\" The countervailing finding: \"About 1 in 5 workers (28.6 million people) are in fields where GenAI could take on technically sophisticated tasks, reducing hard-skills requirements and expanding access to well-paying jobs and opportunities.\" The report stresses that the narrowing side is concentrated in better-paying work: Growth Roles pay \"28% more on average than Mastery Roles, a difference of $20,000 annually\" and are \"51% more likely to require a college degree,\" so \"AI will disproportionately restrict entry points to high-value careers.\" Neither figure is a measured employment decline - both are counts of workers in affected occupations, projected forward - so they are carried as overlays rather than plotted against this graph's ages 22-25 decline metric.",
+      "dateAdded": "2026-08-31"
+    },
+    {
+      "id": "mccrory-why-no-unemployment-2026",
+      "title": "Why hasn't AI increased unemployment?",
+      "url": "https://x.com/PeterMcCrory/status/2079979321607745905",
+      "publisher": "X (Peter McCrory, Head of Economics, Anthropic)",
+      "evidenceTier": 4,
+      "datePublished": "2026-07-22",
+      "excerpt": "We do find some suggestive evidence that hiring rates for young workers in highly AI-exposed roles have weakened over the past year or so. [...] But this evidence for young worker displacement should be interpreted with caution. [...] from 2022 to now, the US experienced the largest non-recessionary labor market slowdown on record (the 'immaculate disinflation'). This coincided with a 'low hire, low fire' labor market. This kind of labor market hits early-career entrants hardest. Right now, young workers may be struggling to find jobs for macroeconomic reasons other than AI.",
+      "dateAdded": "2026-08-31"
+    },
     {
       "id": "brynjolfsson-chandar-chen-2025",
       "title": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",

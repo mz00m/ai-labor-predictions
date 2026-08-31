@@ -5,7 +5,7 @@
   "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 29.9,
+  "currentValue": 28.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -134,6 +134,18 @@
       "metricType": "postings",
       "dataType": "observed",
       "sampleSize": 1000000000
+    },
+    {
+      "date": "2026-08-21",
+      "value": 8.5,
+      "confidenceLow": 8,
+      "confidenceHigh": 9,
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "employment",
+      "dataType": "observed"
     }
   ],
   "overlays": [
@@ -550,6 +562,15 @@
       ],
       "evidenceTier": 2,
       "label": "Apollo: management/professional wages -4.1% vs non-exposed peers"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Azar et al.: GenAI skill premium coexists with lower cell-level wages"
     }
   ],
   "sources": [
@@ -1031,6 +1052,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-07-30",
       "excerpt": "Management and professional occupations also had significant impacts on their real wage growth, as it fell 4.1% relative to non-exposure peers. Blue-collar workers showed no statistically significant effects. Measures a growth differential versus non-exposed occupations, not a premium over the median wage."
+    },
+    {
+      "id": "azar-genai-wage-effects-2026",
+      "title": "The Wage Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+      "publisher": "IESE Business School (Azar, Gin\u00e9, Sanz-Esp\u00edn)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-21",
+      "excerpt": "Workers who report GenAI-related skills receive a conditional starting-wage premium of approximately 8-9 percent. At the same time, the coefficient on the cell-level GenAI worker share is -0.151 when entered without predetermined exposure and -0.122 when both measures are included. There is no contradiction between these findings. A worker who reports GenAI-related skills may command a premium relative to otherwise comparable workers, while starting wages decline in cells where those skills become more prevalent. The authors treat these skill-based exercises as descriptive conditional associations, not causal returns to acquiring GenAI skills, because reported skills may respond to wages and worker composition."
     }
   ]
 }

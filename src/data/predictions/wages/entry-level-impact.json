@@ -2,10 +2,10 @@
   "id": "wages-entry-level",
   "slug": "entry-level-wage-impact",
   "title": "Entry-Level Wage Impact from AI by 2030",
-  "description": "Projected change in real wages for entry-level positions (0-2 years experience) across AI-exposed industries by 2030.",
+  "description": "Projected change in real wages for junior positions across AI-exposed industries by 2030. Sources measure junior status by both tenure (0-2 years experience) and rank within the firm hierarchy \u2014 the wage decline appears in junior roles at every age, not only among young workers.",
   "category": "wages",
   "unit": "% wage change",
-  "currentValue": -2.2,
+  "currentValue": -3.1,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -49,6 +49,16 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey",
+      "dataType": "observed"
+    },
+    {
+      "date": "2026-08-21",
+      "value": -7.5,
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "metricType": "employment",
       "dataType": "observed"
     }
   ],
@@ -565,6 +575,15 @@
       ],
       "evidenceTier": 1,
       "label": "CREi: junior-biased robotization backloads pay into a steeper wage profile"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Azar et al.: junior wage declines span all ages, not just under-30s"
     }
   ],
   "sources": [
@@ -1109,6 +1128,16 @@
       "datePublished": "2026-08-21",
       "excerpt": "\"We find evidence that exposure to junior-biased robotization led to wage backloading... We find that junior-biased automation predicts an increase in wage growth, implying a steepening of the wage schedule.\" CPS matched panel of individual weekly earnings in consecutive years, regressed on the junior bias in the worker's industry interacted with time, standard errors clustered at the industry level. The theoretical mechanism is that automating junior tasks \"shifts earnings to later in life,\" lowering the present value of experience-intensive careers. The paper reports a direction and a normalized coefficient per standard deviation of junior bias, not a percentage wage change for entry-level workers, so it is recorded as an overlay.",
       "dateAdded": "2026-08-25"
+    },
+    {
+      "id": "azar-genai-wage-effects-2026",
+      "title": "The Wage Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+      "publisher": "IESE Business School (Azar, Gin\u00e9, Sanz-Esp\u00edn)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-21",
+      "excerpt": "By 2026, moving from the 10th to the 90th percentile of exposure is associated with wage declines of approximately 7.5% for junior positions, 3.2% for mid-level positions, and 1.8% for senior positions. The senior estimate is not statistically significant. Within junior positions, we see significant wage declines across all age groups, including workers older than 40. The large junior effect is therefore not simply a young-worker effect. Wage declines appear throughout the junior age distribution and are largest among older juniors. Seniority is measured on Revelio's ordinal hierarchy (scores 1-2 = junior), which is a rank measure rather than the 0-2 years of experience framing used elsewhere on this graph.",
+      "dateAdded": "2026-08-31"
     }
   ]
 }

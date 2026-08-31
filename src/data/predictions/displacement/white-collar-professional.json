@@ -1049,6 +1049,15 @@
       "label": "Stanford DEL: early-career women -4.5%/yr in AI-exposed jobs vs -2.5% men"
     },
     {
+      "date": "2026-07-22",
+      "direction": "down",
+      "sourceIds": [
+        "mccrory-why-no-unemployment-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "McCrory: updated BLS data still shows no unemployment rise in automated roles"
+    },
+    {
       "date": "2026-08-05",
       "direction": "up",
       "sourceIds": [
@@ -1074,9 +1083,28 @@
       ],
       "evidenceTier": 1,
       "label": "Richmond Fed: job-finding -13pp for strongly attached workers vs -2pp marginal"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Azar et al.: no detectable employment effect from GenAI exposure by 2025"
     }
   ],
   "sources": [
+    {
+      "id": "mccrory-why-no-unemployment-2026",
+      "title": "Why hasn't AI increased unemployment?",
+      "url": "https://x.com/PeterMcCrory/status/2079979321607745905",
+      "publisher": "X (Peter McCrory, Head of Economics, Anthropic)",
+      "evidenceTier": 4,
+      "datePublished": "2026-07-22",
+      "excerpt": "As Maxim Massenkoff and I documented in our labor impact report, we haven't seen worsening unemployment rates for workers in roles with a large share of tasks that Claude is being used to automate, relative to workers in other roles. Updating this analysis with more recent data from the BLS doesn't change this result.",
+      "dateAdded": "2026-08-31"
+    },
     {
       "id": "goldman-300m",
       "title": "The Potentially Large Effects of AI on Economic Growth",
@@ -1996,6 +2024,16 @@
       "datePublished": "2026-08-12",
       "excerpt": "Applying the Ahn, Hobijn and Sahin latent-type framework (primary type about 55 per cent of the population and almost always employed; secondary about 14 per cent; tertiary about 31 per cent): \"From the peak in November 2022 until the trough in September 2025, the job-finding rate declined 13 percentage points for the primary type but only 2 percentage points for the secondary type. We have not seen such a significant difference in any of the previous recessions.\" This inverts the normal cyclical pattern - in the Great Recession the same measure fell 19 points for the primary type and 10 for the secondary. Highly exposed occupations in the Webb classification include computer programmers, financial analysts and engineers. \"Whatever is making it harder to find a new job in the current period is hitting strongly attached workers with particular force.\" A job-finding rate rather than a share of roles displaced, so it is recorded as an overlay.",
       "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "azar-genai-wage-effects-2026",
+      "title": "The Wage Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+      "publisher": "IESE Business School (Azar, Gin\u00e9, Sanz-Esp\u00edn)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-21",
+      "excerpt": "We find that moving from the 10th percentile to the 90th percentile of GenAI exposure is associated with a wage decline of 4.9% in OEWS data, with no statistically detectable change in employment. No comparable pattern appears in employment. The post-ChatGPT coefficients are statistically insignificant and do not follow a sustained downward path. The pooled employment estimate is also insignificant. These results point to a decline in labor market dynamism rather than widespread displacement. A null employment result across knowledge-intensive service industries (NAICS 51-56), not a share of roles displaced, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-31"
     }
   ]
 }

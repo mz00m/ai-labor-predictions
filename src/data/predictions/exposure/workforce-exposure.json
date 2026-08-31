@@ -5,7 +5,7 @@
   "description": "Share of US jobs with significant task overlap with current AI capabilities. Exposure measures what AI could automate, not what it has. High exposure does not equal displacement.",
   "category": "exposure",
   "unit": "% of jobs exposed",
-  "currentValue": 44.5,
+  "currentValue": 43.6,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
   "disclaimer": "Exposure measures which tasks could be affected by AI, not which jobs will be lost. Sources use fundamentally different definitions of 'exposure' \u2014 from individual task overlap to full occupation-level capability mapping. The 19\u201393% range reflects these definitional differences, not measurement uncertainty. The weighted average is a mathematical summary, not a consensus estimate. A further limit: these estimates map AI capability onto occupations as currently defined. Evidence that workers increasingly use AI for tasks outside their own occupation suggests the task bundles themselves are shifting, so exposure measured against today's job descriptions will drift from how work is actually organized. Explore task-level detail in the [Task Visualizer](/task-visualizer). For what AI is measurably doing today rather than what it could do, see [Observed AI Use at Work](/predictions/workforce-ai-use).",
@@ -88,6 +88,16 @@
         "eisfeldt-genai-exposure-2025"
       ],
       "evidenceTier": 1,
+      "metricType": "projection",
+      "dataType": "projected"
+    },
+    {
+      "date": "2025-07-09",
+      "value": 31,
+      "sourceIds": [
+        "sigelman-fuller-expertise-upheaval-2025"
+      ],
+      "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected"
     },
@@ -932,6 +942,16 @@
     }
   ],
   "sources": [
+    {
+      "id": "sigelman-fuller-expertise-upheaval-2025",
+      "title": "The Expertise Upheaval: How Generative AI's Impact on Learning Curves Will Reshape the Workplace",
+      "url": "https://pw.hks.harvard.edu/post/the-expertise-upheaval-how-generative-ai-s-impact-on-learning-curves-will-reshape-the-workplace",
+      "publisher": "Burning Glass Institute / Harvard Project on Managing the Future of Work (Sigelman, Fuller, Fenlon, Leiden, Guilford)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-09",
+      "excerpt": "Identifies 273 highly impacted occupations and splits them into two archetypes covering \"the employment of almost 50 million US workers between them.\" Growth Roles: \"approximately 1 in 8 US workers (17.8 million people) are currently in occupations where there could be considerably less entry-level opportunity as a result of GenAI\" - \"about 12% of the labor force.\" Mastery Roles: \"About 1 in 5 workers (28.6 million people) are in fields where GenAI could take on technically sophisticated tasks, reducing hard-skills requirements and expanding access to well-paying jobs\" - \"roughly 19% of the workforce.\" The 31% plotted here is the sum of the two source-stated shares (12% + 19%), i.e. the share of US employment in the 273 occupations the report identifies as highly impacted; the report does not state the union figure itself. Exposure is defined by remapped learning curves rather than task-level overlap, so this is a methodology variant on the graph's construct, not a replication of index-based estimates.",
+      "dateAdded": "2026-08-31"
+    },
     {
       "id": "linkedin-econ-graph-2023",
       "title": "Future of Work Report: AI at Work",

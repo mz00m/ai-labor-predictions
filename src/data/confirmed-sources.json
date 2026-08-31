@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-29",
-  "totalSources": 696,
-  "verifiedCount": 686,
+  "lastUpdated": "2026-08-31",
+  "totalSources": 699,
+  "verifiedCount": 689,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -9854,6 +9854,57 @@
       "usedIn": [
         "ai-adoption-rate",
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "azar-genai-wage-effects-2026": {
+      "id": "azar-genai-wage-effects-2026",
+      "title": "The Wage Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+      "publisher": "IESE Business School (Azar, Gin\u00e9, Sanz-Esp\u00edn)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-21",
+      "excerpt": "Continuous-treatment difference-in-differences around the 30 November 2022 ChatGPT release, across two datasets covering knowledge-intensive service industries (NAICS 51-56). \"We find that moving from the 10th percentile to the 90th percentile of GenAI exposure is associated with a wage decline of 4.9% in OEWS data, with no statistically detectable change in employment. In Revelio data, moving from the 10th to the 90th percentile of exposure is associated with a decline of 8.71% in posted wages, and of 10.76% in starting wages.\" The seniority gradient is the paper's sharpest result: \"By 2026, moving from the 10th to the 90th percentile of exposure is associated with wage declines of approximately 7.5% for junior positions, 3.2% for mid-level positions, and 1.8% for senior positions,\" and critically \"the large junior effect is therefore not simply a young-worker effect. Wage declines appear throughout the junior age distribution and are largest among older juniors.\" On mobility: separations fall 3.0pp (18.6% of the pre-ChatGPT mean) and job-to-job transitions fall 2.8pp (28.8%), with \"no statistically significant change in separations to persistent non-employment.\" The authors read this as deteriorating outside options rather than displacement: \"outside opportunities deteriorate before existing jobs disappear.\" Separation elasticities attenuate most at high exposure, implying markdown increases of 38.2% to 75.1% across exposure quintiles under an inverse-elasticity benchmark the authors call illustrative.",
+      "dateAdded": "2026-08-31",
+      "usedIn": [
+        "median-wage-impact",
+        "entry-level-wage-impact",
+        "high-skill-wage-premium",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mccrory-why-no-unemployment-2026": {
+      "id": "mccrory-why-no-unemployment-2026",
+      "title": "Why hasn't AI increased unemployment?",
+      "url": "https://x.com/PeterMcCrory/status/2079979321607745905",
+      "publisher": "X (Peter McCrory, Head of Economics, Anthropic)",
+      "evidenceTier": 4,
+      "datePublished": "2026-07-22",
+      "excerpt": "A long-form essay synthesizing Anthropic's economic research to argue that GenAI has so far been a skill-biased, labor-augmenting technology. \"In my view, AI has caused no material increase in the unemployment rate to date. Even if we focus on workers with high exposure to current patterns of AI automation, we don't see unexpected increases in unemployment in recent years.\" On the early-career evidence, McCrory offers a macro confound: \"from 2022 to now, the US experienced the largest non-recessionary labor market slowdown on record (the 'immaculate disinflation'). This coincided with a 'low hire, low fire' labor market. This kind of labor market hits early-career entrants hardest. Right now, young workers may be struggling to find jobs for macroeconomic reasons other than AI.\" On software: \"Software Engineering job posts have broadly rebounded since May 2025, compared to all other job posts,\" and \"a 10-20x increase in lines of code generated after the introduction of coding agents yielded only a 30% increase in software releases, and no total increase in app usage.\" He closes: \"I don't expect unemployment to be noticeably higher a year from now - at least not because of AI.\"",
+      "dateAdded": "2026-08-31",
+      "usedIn": [
+        "early-career-employment-decline",
+        "tech-sector-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "sigelman-fuller-expertise-upheaval-2025": {
+      "id": "sigelman-fuller-expertise-upheaval-2025",
+      "title": "The Expertise Upheaval: How Generative AI's Impact on Learning Curves Will Reshape the Workplace",
+      "url": "https://pw.hks.harvard.edu/post/the-expertise-upheaval-how-generative-ai-s-impact-on-learning-curves-will-reshape-the-workplace",
+      "publisher": "Burning Glass Institute / Harvard Project on Managing the Future of Work (Sigelman, Fuller, Fenlon, Leiden, Guilford)",
+      "evidenceTier": 2,
+      "datePublished": "2025-07-09",
+      "excerpt": "Argues that GenAI's primary effect is on the level of expertise required to do jobs rather than the number of jobs: \"GenAI's biggest impacts won't be on the number of jobs so much as on the level of expertise required to do them.\" Identifies 273 highly impacted occupations covering \"almost 50 million US workers\" and splits them by learning-curve shape. Growth Roles (17.8 million, ~12% of the labor force) have back-loaded learning curves, so GenAI \"automates foundational work that historically served as the training ground for future expertise,\" narrowing entry points. Mastery Roles (28.6 million, ~19%) have front-loaded curves, so GenAI \"acts as an equalizer, compressing the time required to gain initial proficiency.\" Growth Roles pay \"28% more on average than Mastery Roles, a difference of $20,000 annually\" and are \"51% more likely to require a college degree,\" implying AI \"will disproportionately restrict entry points to high-value careers.\" Built on Lightcast US job postings for the prior two years, covering \"over 99% of jobs posted online during that timeframe.\"",
+      "dateAdded": "2026-08-31",
+      "usedIn": [
+        "workforce-ai-exposure",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false

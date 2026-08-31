@@ -911,6 +911,24 @@
       "label": "Stanford DEL Canaries: ages 22-25 in most-exposed jobs shrinking 3.5%/yr"
     },
     {
+      "date": "2026-07-22",
+      "direction": "down",
+      "sourceIds": [
+        "mccrory-why-no-unemployment-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "McCrory: software engineering job posts have rebounded since May 2025"
+    },
+    {
+      "date": "2026-07-22",
+      "direction": "down",
+      "sourceIds": [
+        "mccrory-why-no-unemployment-2026"
+      ],
+      "evidenceTier": 4,
+      "label": "McCrory: 10-20x more AI-generated code yielded only 30% more software releases"
+    },
+    {
       "date": "2026-08-06",
       "direction": "up",
       "sourceIds": [
@@ -921,6 +939,16 @@
     }
   ],
   "sources": [
+    {
+      "id": "mccrory-why-no-unemployment-2026",
+      "title": "Why hasn't AI increased unemployment?",
+      "url": "https://x.com/PeterMcCrory/status/2079979321607745905",
+      "publisher": "X (Peter McCrory, Head of Economics, Anthropic)",
+      "evidenceTier": 4,
+      "datePublished": "2026-07-22",
+      "excerpt": "Software Engineering job posts have broadly rebounded since May 2025, compared to all other job posts, indicating rising demand for workers in an occupation where AI capabilities are advancing the most. [...] Recent evidence suggests that weak links are currently a constraint on automating software production: a 10-20x increase in lines of code generated after the introduction of coding agents yielded only a 30% increase in software releases, and no total increase in app usage.",
+      "dateAdded": "2026-08-31"
+    },
     {
       "id": "peng-copilot-2023",
       "title": "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot",

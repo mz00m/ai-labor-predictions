@@ -5,7 +5,7 @@
   "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -1.6,
+  "currentValue": -2.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -180,6 +180,18 @@
       "value": -6.7,
       "sourceIds": [
         "apollo-ai-labor-market-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-08-21",
+      "value": -4.9,
+      "confidenceLow": -6.7,
+      "confidenceHigh": -4.6,
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
       ],
       "evidenceTier": 2,
       "dataType": "observed",
@@ -663,6 +675,33 @@
       ],
       "evidenceTier": 2,
       "label": "Apollo: service occupations -24.3% wage growth (n=239, author cautions)"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Azar et al.: Revelio starting wages fall 10.8% at P90 vs P10 exposure"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Azar et al.: Job-to-job moves down 28.8% in most-exposed roles"
+    },
+    {
+      "date": "2026-08-21",
+      "direction": "down",
+      "sourceIds": [
+        "azar-genai-wage-effects-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Azar et al.: Implied wage markdown rises 38-75% with AI exposure"
     }
   ],
   "sources": [
@@ -1260,6 +1299,15 @@
       "evidenceTier": 2,
       "datePublished": "2026-07-30",
       "excerpt": "Workers who are in high-exposure occupations saw their wages grow about 6.7 percentage points slower than workers not in high-exposure occupations after 2023. Difference-in-differences across 321 matched occupations, BLS OEWS 2015-2025, high exposure defined as an Anthropic Economic Index usage score of 0.5 or above. Service occupations had their real wage growth fall by about 24.3% relative to low-exposure occupations after 2023, though the author notes this rests on a small subsample (n=239) and should be interpreted with caution."
+    },
+    {
+      "id": "azar-genai-wage-effects-2026",
+      "title": "The Wage Effects of Generative AI",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5842084",
+      "publisher": "IESE Business School (Azar, Gin\u00e9, Sanz-Esp\u00edn)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-21",
+      "excerpt": "We find that moving from the 10th percentile to the 90th percentile of GenAI exposure is associated with a wage decline of 4.9% in OEWS data, with no statistically detectable change in employment. In Revelio data, moving from the 10th to the 90th percentile of exposure is associated with a decline of 8.71% in posted wages, and of 10.76% in starting wages. The estimates are -0.114 in 2024 and -0.083 in 2025. Moving from the 10th to the 90th percentile of exposure, these coefficients imply wage declines of approximately 6.7% and 4.9%, respectively. The pooled coefficient is -0.078, corresponding to an average decline of approximately 4.6% over the same exposure contrast."
     }
   ]
 }
