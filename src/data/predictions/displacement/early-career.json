@@ -251,6 +251,15 @@
       ],
       "evidenceTier": 4,
       "label": "Gates: jobs most at risk are entry- and mid-level; fewer openings for youth"
+    },
+    {
+      "date": "2026-08-31",
+      "direction": "up",
+      "sourceIds": [
+        "levanon-half-labor-force-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Levanon: young grads at 70th percentile of own history, young non-grads at 25th"
     }
   ],
   "sources": [
@@ -463,6 +472,16 @@
       "datePublished": "2026-08-12",
       "excerpt": "A direct check on whether labour-market entrants are the margin where AI is biting, and the answer here is no: \"Job-finding rates for new entrants have declined in recent years, but the drop is modest relative to the declines among job losers and job leavers. Entrants do not appear to be the margin where the action is, and we set them aside in what follows.\" Using CPS reason-for-unemployment categories (job losers, job leavers, entrants and re-entrants), the brief finds the action instead among strongly attached incumbents in AI-exposed occupations. This measures job-finding probability rather than the employment shortfall of workers aged 22-25 against least-exposed peers, so it is recorded as an overlay - but it is a meaningful caution that an entrant-specific reading of the AI evidence may be misattributing an incumbent phenomenon.",
       "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "levanon-half-labor-force-2026",
+      "title": "Half the Labor Force Is Having a Very Good Year",
+      "url": "https://www.linkedin.com/pulse/half-labor-force-having-very-good-year-gad-levanon-y1ifc/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-08-31",
+      "excerpt": "The clearest available evidence that the early-career problem is a credential-specific problem rather than an age-specific one. Ranking each group's 12-month moving-average unemployment rate against its own history back to 2003, Levanon finds young college graduates aged 22-34 sitting at the 70th percentile of their own history while young workers of the same age without a degree sit at the 25th. The two series moved together for two decades and decoupled in 2024. Young graduates are roughly 20 million workers, about one in eight in the labor force. The figures are percentile ranks against each group's own history rather than an employment decline against least-exposed peers, and the article makes no AI attribution for the gap, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-31"
     }
   ]
 }

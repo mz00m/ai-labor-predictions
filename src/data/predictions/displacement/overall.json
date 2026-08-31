@@ -2132,6 +2132,24 @@
       ],
       "evidenceTier": 2,
       "label": "Syverson (EIG): over AI's first couple years, remarkably little employment effect either way"
+    },
+    {
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "levanon-half-labor-force-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Levanon: 88M workers without a BA near their best unemployment in 20 years"
+    },
+    {
+      "date": "2026-08-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "levanon-half-labor-force-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Levanon: immigration enforcement and the data-center boom confound the non-graduate strength"
     }
   ],
   "sources": [
@@ -3793,6 +3811,16 @@
       "datePublished": "2026-08-12",
       "excerpt": "Sorting the unemployed by Webb (2019) occupational AI-exposure quartiles: \"Historically, outflow rates by AI-exposure quartile co-moved tightly with the business cycle, with only small level differences across quartiles... Since 2023, outflow rates have diverged: Workers in highly AI-exposed occupations have seen the largest declines in the job-finding rate.\" The authors read this as \"consistent with a literature on automation that emphasizes displacement effects in exposed occupations alongside reallocation toward less-exposed work.\" Their summary: \"Most of the recent decline in unemployment outflow rates is being borne by strongly attached workers, particularly those whose occupations are exposed to AI. This is not the typical recessionary pattern.\" The brief measures job-finding rates rather than a share of jobs lost, and explicitly defers the decomposition of aggregate versus technological components to a forthcoming third article, so it is recorded as an overlay.",
       "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "levanon-half-labor-force-2026",
+      "title": "Half the Labor Force Is Having a Very Good Year",
+      "url": "https://www.linkedin.com/pulse/half-labor-force-having-very-good-year-gad-levanon-y1ifc/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-08-31",
+      "excerpt": "The 88 million US workers aged 22 and over without a bachelor's degree \u2014 more than half the labor force \u2014 sit near the strongest unemployment readings of the past twenty years, while degree-holders have weakened. Levanon ranks each group's 12-month moving-average unemployment rate as a percentile against that group's own history back to 2003, so the numbers are relative rankings rather than rates: young graduates aged 22-34 sit at the 70th percentile of their own history, young non-graduates at the 25th, with the two lines decoupling in 2024 after moving together for two decades. Blue-collar and manual-service workers (65 million) sit at the 18th percentile. STEM is the only occupational group above its own median. Non-metro areas sit at the 12th percentile while the top 50 metros climbed roughly 30 points, and 47 of 51 jurisdictions sit below their own median. Levanon names two non-AI confounds for the non-graduate strength: immigration enforcement shrinking labor supply in the occupations these workers hold, and a construction and data-center building boom raising demand for them. Recorded as overlays: every headline figure is a percentile rank against a group's own history \u2014 an index score, not a rate \u2014 and the raw rates given are not AI-attributed.",
+      "dateAdded": "2026-08-31"
     }
   ]
 }

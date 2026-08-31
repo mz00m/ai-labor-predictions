@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-31",
-  "totalSources": 699,
-  "verifiedCount": 689,
+  "totalSources": 700,
+  "verifiedCount": 690,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -6699,6 +6699,22 @@
         "entry-level-wage-impact",
         "high-skill-wage-premium",
         "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "levanon-half-labor-force-2026": {
+      "id": "levanon-half-labor-force-2026",
+      "title": "Half the Labor Force Is Having a Very Good Year",
+      "url": "https://www.linkedin.com/pulse/half-labor-force-having-very-good-year-gad-levanon-y1ifc/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-08-31",
+      "excerpt": "The 88 million US workers aged 22 and over without a bachelor's degree \u2014 more than half the labor force \u2014 sit near the strongest unemployment readings of the past twenty years, while degree-holders have weakened. Within the same age band, young college graduates aged 22-34 sit at the 70th percentile of their own history since 2003 while young non-graduates sit at the 25th; the two series decoupled in 2024 after moving together for two decades.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false

@@ -1092,6 +1092,15 @@
       ],
       "evidenceTier": 2,
       "label": "Azar et al.: no detectable employment effect from GenAI exposure by 2025"
+    },
+    {
+      "date": "2026-08-31",
+      "direction": "up",
+      "sourceIds": [
+        "levanon-half-labor-force-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Levanon: labor market weakness concentrated in desk-based, metro, college-educated work"
     }
   ],
   "sources": [
@@ -2033,6 +2042,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-21",
       "excerpt": "We find that moving from the 10th percentile to the 90th percentile of GenAI exposure is associated with a wage decline of 4.9% in OEWS data, with no statistically detectable change in employment. No comparable pattern appears in employment. The post-ChatGPT coefficients are statistically insignificant and do not follow a sustained downward path. The pooled employment estimate is also insignificant. These results point to a decline in labor market dynamism rather than widespread displacement. A null employment result across knowledge-intensive service industries (NAICS 51-56), not a share of roles displaced, so it is recorded as an overlay.",
+      "dateAdded": "2026-08-31"
+    },
+    {
+      "id": "levanon-half-labor-force-2026",
+      "title": "Half the Labor Force Is Having a Very Good Year",
+      "url": "https://www.linkedin.com/pulse/half-labor-force-having-very-good-year-gad-levanon-y1ifc/",
+      "publisher": "The Burning Glass Institute (Gad Levanon)",
+      "evidenceTier": 3,
+      "datePublished": "2026-08-31",
+      "excerpt": "Ranking each group's 12-month moving-average unemployment rate against that group's own history back to 2003, Levanon finds the weakness in this labor market is concentrated almost entirely in desk work. STEM is the only occupational group sitting above its own historical median. Blue-collar and manual-service workers \u2014 65 million people \u2014 sit at the 18th percentile of their own history, near their best readings in two decades. Geographically the same split holds: non-metro areas sit at the 12th percentile while the top 50 metropolitan areas climbed roughly 30 percentile points, and 47 of 51 jurisdictions remain below their own median. The figures are percentile ranks against each group's own history, not displacement rates, so this is recorded as an overlay.",
       "dateAdded": "2026-08-31"
     }
   ]
