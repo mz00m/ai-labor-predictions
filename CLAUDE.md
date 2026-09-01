@@ -41,13 +41,13 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 | Route | Description |
 |-------|-------------|
 | `/` | Hero stats + prediction grid (displacement, wages, adoption) |
-| `/predictions/[slug]` | Individual prediction detail pages (19 total) |
+| `/predictions/[slug]` | Individual prediction detail pages (20 total) |
 | `/signals` | Leading indicators: firm response, productivity paths |
 | `/history` | Historical technology comparison (GPT compression, diffusion) |
 | `/j-curve` | J-Curve explainer with interactive visuals |
 | `/about` | Methodology, FAQ |
 
-## Prediction Graph Taxonomy (18 predictions + 1 signal-only chart)
+## Prediction Graph Taxonomy (19 predictions + 1 signal-only chart)
 
 ### Displacement (10)
 | Slug | Title | Unit |
@@ -71,13 +71,14 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 | `high-skill-wage-premium` | High-Skill AI Wage Premium | % wage premium over median |
 | `freelancer-rate-impact` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
 
-### Adoption, Exposure & Signals (5)
+### Adoption, Exposure & Signals (6)
 | Slug | Title | Unit |
 |------|-------|------|
 | `ai-adoption-rate` | AI Adoption Rate Across US Companies | % of firms (Census BTOS) |
 | `genai-work-adoption` | Generative AI Adoption | % of adults at work |
 | `ai-business-formation` | AI Business Formation | % of new businesses |
 | `workforce-ai-exposure` | US Workforce AI Exposure | % of jobs exposed |
+| `workforce-ai-use` | Observed AI Use at Work | % of workers with observed AI use |
 | `earnings-call-ai-mentions` | S&P 500 AI Workforce Mentions in Earnings Calls (signal-only, excluded from prediction counts) | % of S&P 500 |
 
 ### Archived
@@ -107,7 +108,7 @@ Format: `{publisher-slug}-{topic-keywords}-{year}` (e.g., `brynjolfsson-2024`, `
 - Every ingested source must appear here with `usedIn[]` array listing all graph slugs
 - `verified: true`, `synthetic: false` for real sources
 - Update `totalSources` and `verifiedCount` counts on every ingestion
-- Currently: 524 sources, 514 verified
+- Currently: 700 sources, 690 verified (see `src/data/site-stats.json`, regenerated on build)
 
 ### Reading list (`src/data/reading-list.json`)
 Schema: `{ description, articles: [{ title, author, publisher, date, url, takeaway, weekFeatured, tier }] }`
@@ -228,8 +229,8 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 
 | Path | Purpose |
 |------|---------|
-| `src/data/predictions/` | All 19 prediction JSON files (18 predictions + 1 signal-only) |
-| `src/data/confirmed-sources.json` | Master source registry (524 sources) |
+| `src/data/predictions/` | All 20 prediction JSON files (19 predictions + 1 signal-only) |
+| `src/data/confirmed-sources.json` | Master source registry |
 | `src/data/recurring-sources.json` | Recurring release registry (tracked series, cadences, last ingested editions — swept by `/autoresearch`) |
 | `src/data/reading-list.json` | Rolling reading list for Featured Reads |
 | `src/data/last-updated.json` | Site-wide "last updated" date |
