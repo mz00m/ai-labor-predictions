@@ -158,6 +158,8 @@ function computeFromSorted(
   // Trend: for "latest" aggregation (time-series), compare first/last directly.
   // For "weighted" aggregation, use only observed data points so the trend
   // reflects real-world change, not source accretion from new projections.
+  // Charts marked trendComparable: false get no arrow at all — where the endpoints
+  // come from different instruments, first-vs-last measures the method, not the years.
   let trend: "up" | "down" | "flat" = "flat";
   if (useLatest) {
     if (points.length >= 2) {
@@ -166,7 +168,7 @@ function computeFromSorted(
       if (last > first) trend = "up";
       else if (last < first) trend = "down";
     }
-  } else {
+  } else if (prediction.trendComparable !== false) {
     const observed = points.filter((p) => p.dataType === "observed");
     if (observed.length >= 2) {
       const first = observed[0].value;

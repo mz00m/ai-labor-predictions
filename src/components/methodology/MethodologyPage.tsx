@@ -501,6 +501,14 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
             come from different research teams measuring in different ways: the
             arrow is then partly a comparison of methods, not only of years.
           </p>
+          <p>
+            On a few graphs that problem is severe enough that we suppress the
+            arrow entirely. Observed AI use and the high-skill wage premium both
+            collect studies that bracket the same question with very different
+            instruments, so their oldest and newest estimates differ mostly
+            because of how they were measured. Showing a trend there would
+            invent a direction the evidence does not support.
+          </p>
         </DeepDive>
 
         <DeepDive title="Aggregation methods">

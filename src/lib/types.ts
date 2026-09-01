@@ -94,6 +94,12 @@ export interface Prediction {
   aggregationMethod?: "weighted" | "latest";
   /** Prominent disclaimer shown above the chart when sources use incompatible definitions or scopes */
   disclaimer?: string;
+  /**
+   * Set false when the oldest and newest observed points measure the same construct with
+   * different instruments or thresholds. First-vs-last is then a comparison of methods
+   * rather than of years, so the trend arrow is suppressed. Defaults to true.
+   */
+  trendComparable?: boolean;
   timeHorizon: string;
   history: HistoricalDataPoint[];
   overlays?: DirectionalOverlay[];

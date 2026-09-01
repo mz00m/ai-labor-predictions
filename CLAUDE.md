@@ -68,7 +68,7 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 |------|-------|------|
 | `median-wage-impact` | Median Wage Impact from AI by 2030 | % change in real median wage |
 | `entry-level-wage-impact` | Entry-Level Wage Impact from AI by 2030 | % wage change |
-| `high-skill-wage-premium` | High-Skill AI Wage Premium by 2030 | % wage premium over median |
+| `high-skill-wage-premium` | High-Skill AI Wage Premium | % wage premium over median |
 | `freelancer-rate-impact` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
 
 ### Adoption, Exposure & Signals (5)

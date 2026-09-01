@@ -189,7 +189,7 @@ Do NOT use `total-us-jobs-lost` — it is archived (`displacement/_archived/tota
 |------|------|-------|------|
 | `median-wage-impact` | `median-wage-impact.json` | Median Wage Impact from AI by 2030 | % change in real median wage |
 | `entry-level-wage-impact` | `entry-level-impact.json` | Entry-Level Wage Impact from AI by 2030 | % wage change |
-| `high-skill-wage-premium` | `high-skill-premium.json` | High-Skill AI Wage Premium by 2030 | % wage premium over median |
+| `high-skill-wage-premium` | `high-skill-premium.json` | High-Skill AI Wage Premium | % wage premium over median |
 | `freelancer-rate-impact` | `freelancer-rate-impact.json` | Freelancer/Gig Worker Rate Impact by 2028 | % rate change |
 
 There is no `geographic-wage-divergence` graph. Geographic wage findings go to the closest wage graph as overlays.

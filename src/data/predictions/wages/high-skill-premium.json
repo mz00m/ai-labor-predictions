@@ -1,13 +1,15 @@
 {
   "id": "wages-high-skill",
   "slug": "high-skill-wage-premium",
-  "title": "High-Skill AI Wage Premium by 2030",
-  "description": "Projected change in wages for workers with strong AI/ML skills relative to the median, measuring the emerging 'AI premium' in compensation.",
+  "title": "High-Skill AI Wage Premium",
+  "description": "Measured pay advantage for workers with AI/ML skills over comparable workers without them. Unlike most graphs on this site, every estimate here is an observation of a premium that already exists \u2014 none of them is a forecast.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 28.2,
-  "timeHorizon": "By 2030",
+  "currentValue": 30.1,
+  "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
+  "trendComparable": false,
+  "disclaimer": "The estimates here run from 3% to 62%, and the gap is mostly about what gets measured. The high numbers come from job advertisements: what employers offer for roles that ask for AI skills. The low numbers come from workers' actual paychecks. Advertised pay runs ahead of realized pay because the roles asking for AI skills are also more senior, more urban, and concentrated in industries that paid well already \u2014 so a posting premium credits AI for a gap that is partly seniority and location. Read the postings figures as the price of the job and the worker-level figures as the return to the skill. Because these studies bracket different quantities rather than track one over time, the graph shows no trend line.",
   "history": [
     {
       "date": "2023-02-01",
@@ -74,14 +76,12 @@
     },
     {
       "date": "2025-10-15",
-      "value": 30,
-      "confidenceLow": 22,
-      "confidenceHigh": 42,
+      "value": 56,
       "sourceIds": [
         "pwc-ai-wage-premium-2025"
       ],
-      "evidenceTier": 1,
-      "metricType": "survey",
+      "evidenceTier": 2,
+      "metricType": "postings",
       "dataType": "observed"
     },
     {
