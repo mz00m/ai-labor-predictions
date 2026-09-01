@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Businesses Are Using AI to Transform Work, Not Cut Jobs",
+      "author": "Jaison R. Abel, Richard Deitz, Natalia Emanuel and Nick Montalbano",
+      "publisher": "Federal Reserve Bank of New York, Liberty Street Economics",
+      "date": "2026-09-01",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+      "takeaway": "The third year of the NY Fed's AI module, and the first where a majority of firms on both sides of the survey say yes. Service-firm adoption went 25 to 40 to 61 percent; manufacturers went 16 to 26 to 51. That is a steeper curve than any national series shows, and the reason to trust it is that the bar is higher, not lower, since firms using AI only as a search tool are counted as non-users. The finding worth carrying is the gap the same survey opens between adoption and use. Three-quarters of service firms and more than 90 percent of manufacturers call their AI investment minimal to modest, and among firms that do use AI, the median one has just 17 percent of its workers on it in services and 7 percent in manufacturing. Very few sources measure firm adoption and within-firm worker uptake in the same instrument, and here they differ by roughly a factor of four. On labor, the channels roughly cancel: 4 percent of service adopters laid anyone off because of AI (up from 1 percent last year), 15 percent hired fewer than they otherwise would have, 13 percent hired more, and just over a third retrained. Retraining exceeds every displacement channel measured, which is where the title comes from. Two limits worth holding. This is New York State and northern New Jersey, a footprint tilted toward finance, information and professional services, so the 61 percent cannot be set against the national Census figure of roughly 22 percent. And every workforce number is a firm attributing its own hiring decision to AI, with no payroll check behind it.",
+      "weekFeatured": "2026-09-01",
+      "tier": 1
+    },
+    {
       "title": "AI and Employment: So Far, So Good",
       "author": "Alex Tabarrok",
       "publisher": "Marginal Revolution",

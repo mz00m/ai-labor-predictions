@@ -80,6 +80,15 @@
       ],
       "evidenceTier": 1,
       "label": "Google ATLAS: median occupation uses AI for only 21% of tasks \u2014 broad but shallow"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nyfed-transform-work-not-cut-jobs-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: 61% of service firms use AI but median adopter has only 17% of staff on it"
     }
   ],
   "sources": [
@@ -139,6 +148,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-07-30",
       "excerpt": "5.8 million workers in the U.S. are currently working in high exposure occupations, which represents about 3.7% of the U.S. labor force. High exposure is defined as an Anthropic Economic Index observed-usage score of 0.5 or above, a stricter threshold than Anthropic's own 25%-of-tasks cut (49%) or any-observed-coverage cut (70%)."
+    },
+    {
+      "id": "nyfed-transform-work-not-cut-jobs-2026",
+      "title": "Businesses Are Using AI to Transform Work, Not Cut Jobs",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+      "publisher": "Federal Reserve Bank of New York, Liberty Street Economics (Abel, Deitz, Emanuel, Montalbano)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "Third annual AI module in the NY Fed's regional business surveys: \"61 percent of service firms reported using AI this year, up from 40 percent last year and 25 percent in 2024,\" while among manufacturers \"51 percent reported using AI as part of their business processes, roughly double the 26 percent from last year and triple the 16 percent in 2024.\" The bar is stricter than most adoption surveys \u2014 firms using AI \"exclusively as an information search tool but nothing else\" are coded as non-users. Adoption is wide but shallow: \"Three-quarters of service firms and more than 90 percent of manufacturers characterize their AI investments as minimal to modest,\" and among adopters \"the median share of workers using it was just 17 percent for service firms and 7 percent for manufacturers.\" On labor, \"only 4 percent of service firms reported laying off workers\" because of AI (up from 1 percent in 2025), \"about 15 percent of service firms said they had hired fewer workers than they would have if not for AI use,\" and \"about 13 percent of service firms said they had hired more workers due to AI\" \u2014 while \"just over a third of service firms and more than 20 percent of manufacturing firms report retraining workers.\" Recorded as overlays: the survey covers New York State and northern New Jersey only, so it is not comparable to the national Census BTOS series, and the workforce shares are of AI-adopting firms rather than of jobs or workers. The authors caution that \"AI technology and its applications are still evolving rapidly, and these patterns could shift as adoption matures.\"",
+      "dateAdded": "2026-09-01"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-31",
-  "totalSources": 702,
-  "verifiedCount": 692,
+  "totalSources": 703,
+  "verifiedCount": 693,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -6727,6 +6727,22 @@
         "overall-us-displacement",
         "white-collar-professional-displacement",
         "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-transform-work-not-cut-jobs-2026": {
+      "id": "nyfed-transform-work-not-cut-jobs-2026",
+      "title": "Businesses Are Using AI to Transform Work, Not Cut Jobs",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+      "publisher": "Federal Reserve Bank of New York, Liberty Street Economics (Abel, Deitz, Emanuel, Montalbano)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "Third annual AI module in the NY Fed's regional business surveys. \"61 percent of service firms reported using AI this year, up from 40 percent last year and 25 percent in 2024\"; manufacturers reached 51 percent, \"roughly double the 26 percent from last year and triple the 16 percent in 2024.\" Adoption is wide but shallow: three-quarters of service firms and more than 90 percent of manufacturers call their AI investment minimal to modest, and among adopters \"the median share of workers using it was just 17 percent for service firms and 7 percent for manufacturers.\" Only 4 percent of service adopters laid off workers because of AI, 15 percent hired fewer and 13 percent hired more, while just over a third retrained.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "overall-us-displacement",
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false
