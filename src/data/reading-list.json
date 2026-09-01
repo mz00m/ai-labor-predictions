@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "AI and Employment: So Far, So Good",
+      "author": "Alex Tabarrok",
+      "publisher": "Marginal Revolution",
+      "date": "2026-08-31",
+      "url": "https://marginalrevolution.com/marginalrevolution/2026/08/ai-and-employment-what-the-firms-say.html",
+      "takeaway": "The value here is a comparison almost nobody has run. Census has asked firms twice, in identical words, whether AI use changed their total employment over the prior six months. In the first wave (Dec 2023 to Feb 2024), with about 5 percent of firms using AI, 2.8 percent said employment increased, 2.6 percent said it decreased, and 94.6 percent said no change. In the second (Nov 2025 to Feb 2026), with adoption roughly tripled, the answers were 2.3, 2.0 and 95.7. Adoption rose sharply and the reported employment effect got slightly smaller, not larger, with the firms reporting any effect split about evenly between hiring more and hiring fewer. Tabarrok notes the pattern holds across firm sizes and that employment-weighting gives essentially the same answer, which matters because it rules out the obvious objection that the effect is hiding in large employers. He reports the trend that cuts against him too: among the minority of adopters where AI has displaced employee tasks, the share saying it took over a large number of tasks rose from 2.4 to 7.1 percent and a moderate number from 13 to 22 percent, so substitution is deepening even as its footprint stays small. Read the caveats with the finding. This is firms attributing their own employment changes to AI, and a company that slowed hiring for several reasons at once need not name AI as one of them. The adoption question was reworded in November 2025 to cover any business function rather than production specifically, so the later wave's AI users skew toward lighter use. And these counts are firms, not jobs, so the 2 percent is not a share of employment lost.",
+      "weekFeatured": "2026-08-31",
+      "tier": 3
+    },
+    {
       "title": "Understanding AI and Productivity",
       "author": "Chad Syverson",
       "publisher": "Economic Innovation Group / Agglomerations",

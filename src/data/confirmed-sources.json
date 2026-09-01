@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-31",
-  "totalSources": 701,
-  "verifiedCount": 691,
+  "totalSources": 702,
+  "verifiedCount": 692,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -6727,6 +6727,20 @@
         "overall-us-displacement",
         "white-collar-professional-displacement",
         "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "tabarrok-firms-employment-2026": {
+      "id": "tabarrok-firms-employment-2026",
+      "title": "AI and Employment: So Far, So Good",
+      "url": "https://marginalrevolution.com/marginalrevolution/2026/08/ai-and-employment-what-the-firms-say.html",
+      "publisher": "Marginal Revolution (Alex Tabarrok)",
+      "evidenceTier": 3,
+      "datePublished": "2026-08-31",
+      "excerpt": "Census has twice asked firms how AI use affected their total employment over the prior six months. In December 2023 to February 2024, when about 5% of firms used AI, \"2.8% increased, 2.6% decreased and 94.6% reported no change.\" In November 2025 to February 2026, with adoption roughly tripled, \"2.3% increased, 2.0% decreased, and 95.7% reported no change.\" Adoption rose sharply while the share reporting any AI-attributed employment effect fell slightly.",
+      "usedIn": [
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false
