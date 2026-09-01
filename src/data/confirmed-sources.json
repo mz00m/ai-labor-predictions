@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-08-31",
-  "totalSources": 700,
-  "verifiedCount": 690,
+  "totalSources": 701,
+  "verifiedCount": 691,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -2087,6 +2087,18 @@
       "usedIn": [
         "overall-us-displacement"
       ],
+      "verified": true,
+      "synthetic": false
+    },
+    "harvard-workforce-almanac-2025": {
+      "id": "harvard-workforce-almanac-2025",
+      "title": "The Workforce Almanac: A System-Level View of U.S. Workforce Training Providers (v2.0)",
+      "url": "https://pw.hks.harvard.edu/post/expanding-the-workforce-almanac",
+      "publisher": "Harvard Kennedy School Project on Workforce (Fuller, Gable, Forshaw, Hale, Gazzaneo, Simsek)",
+      "evidenceTier": 1,
+      "datePublished": "2025-08-01",
+      "excerpt": "A public-use directory of 20,211 short-term US workforce training providers, up from roughly 17,000 at the November 2023 launch, built by combining IPEDS, TrainingProviderResults.gov, IRS Form 990 series, and RAPIDS into one deduplicated file. Scope is post-high-school training lasting under two years. Providers sort into job training nonprofits (7,408, 37%), WIOA-eligible providers (29%), sub-baccalaureate higher education institutions (3,648, 18%), and Registered Apprenticeship sponsors (3,347, 16%). The authors note it still underestimates the true provider count, so the figures are a floor. Held in the library rather than plotted: it carries no AI attribution and no employment, wage, or training-outcome measure, so it maps to no prediction graph. Its use is as a supply-side denominator for reskilling capacity against the displacement estimates elsewhere in the corpus. Funded by Strada Education Foundation and WorkRise.",
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     },
