@@ -1,0 +1,14 @@
+{
+  "id": "revelio-ai-labor-market-tracker-2026-09",
+  "abstract": "According to Revelio Public Labor Statistics (RPLS), the U.S. economy added 36.5k jobs in August 2026, driven by gains in Public Administration and Health Care sectors, while job openings declined 3%. The report finds that AI is reshaping employment patterns without triggering broad displacement: employment weakens in AI-exposed occupations (especially for younger workers aged 22-25), yet AI-exposed firms show fewer layoffs and AI-adopting firms continue expanding headcount relative to non-adopters.",
+  "keyFindings": [
+    "The U.S. economy added 36.5k jobs in August 2026, with Public Administration and Health Care and Social Assistance sectors driving the largest gains.",
+    "Active job postings declined 3% in August 2026 to 18.3 million, with sharpest declines in Transportation and Warehousing (−13.2%), Wholesale Trade (−11.3%), and Retail Trade (−8.2%).",
+    "Employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations since before ChatGPT, reaching a 19% gap among workers aged 22–25.",
+    "The most AI-exposed firms are experiencing fewer layoffs than the least-exposed firms, and AI-adopting firms continue to expand employment relative to non-adopters.",
+    "The pace of new firm AI adoption has slowed from its spring 2026 peak, with most changes in work content occurring within occupations rather than through shifts in the occupation mix."
+  ],
+  "methodology": "Analysis of Revelio Public Labor Statistics (RPLS) data for August 2026 and year-over-year comparisons to August 2025. The report incorporates the AI Labor Market Tracker to analyze employment trends in AI-exposed occupations and firms. Specific sample size and detailed analytical methods not specified in the source text.",
+  "qualifiers": "The analysis notes that AI-adopting firms were already growing faster before adoption and employment gains remain concentrated in senior roles. The report acknowledges that the pattern of AI impacts represents changes in where employment grows and which workers face weaker opportunities rather than producing 'a broad wave of job losses.' The study period appears limited to recent months (August 2026 and year-over-year comparisons).",
+  "fetchedAt": "2026-09-05"
+}

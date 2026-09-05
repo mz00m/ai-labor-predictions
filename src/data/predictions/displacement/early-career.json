@@ -5,7 +5,7 @@
   "description": "Employment decline for workers aged 22-25 in the most AI-exposed occupations, measured relative to less-exposed occupations. The chart shows only estimates that make this comparison directly. Raw declines that are not adjusted for other causes measure something different, so they appear below the chart as directional signals.",
   "category": "displacement",
   "unit": "% employment decline, ages 22-25, vs least-exposed",
-  "currentValue": 14.4,
+  "currentValue": 14.8,
   "timeHorizon": "Current measure",
   "aggregationMethod": "weighted",
   "disclaimer": "Every point on the chart is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) sit below the chart as directional signals and are left out of the average, because labor markets differ enough between countries that averaging across them would mislead. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. The 2025 and 2026 points are the same Stanford/ADP study a year apart \u2014 not two studies independently reaching the same answer. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations).",
@@ -67,6 +67,19 @@
         "brynjolfsson-chandar-chen-2026-08"
       ],
       "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    }
+  ,
+    {
+      "date": "2026-09-02",
+      "value": 19,
+      "confidenceLow": null,
+      "confidenceHigh": null,
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-09"
+      ],
+      "evidenceTier": 2,
       "dataType": "observed",
       "metricType": "employment"
     }
@@ -482,6 +495,16 @@
       "datePublished": "2026-08-31",
       "excerpt": "The clearest available evidence that the early-career problem is a credential-specific problem rather than an age-specific one. Ranking each group's 12-month moving-average unemployment rate against its own history back to 2003, Levanon finds young college graduates aged 22-34 sitting at the 70th percentile of their own history while young workers of the same age without a degree sit at the 25th. The two series moved together for two decades and decoupled in 2024. Young graduates are roughly 20 million workers, about one in eight in the labor force. The figures are percentile ranks against each group's own history rather than an employment decline against least-exposed peers, and the article makes no AI attribution for the gap, so it is recorded as an overlay.",
       "dateAdded": "2026-08-31"
+    }
+  ,
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-09",
+      "title": "RPLS US Jobs Report: The US Economy Adds 36.5k Jobs in August",
+      "url": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publisher": "reveliolabs.com",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "Since before ChatGPT, employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations, with the gap reaching 19% among workers aged 22\u201325"
     }
   ]
 }

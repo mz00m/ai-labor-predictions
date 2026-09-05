@@ -876,6 +876,16 @@
       "evidenceTier": 1,
       "label": "NY Fed: among adopters, median firm has just 17% of workers using AI (services)"
     }
+  ,
+    {
+      "date": "2026-09-02",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-09"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: pace of new firm AI adoption has slowed from its spring 2026 peak (firm-level, not BTOS)"
+    }
   ],
   "sources": [
     {
@@ -1660,6 +1670,16 @@
       "datePublished": "2026-09-01",
       "excerpt": "Third annual AI module in the NY Fed's regional business surveys: \"61 percent of service firms reported using AI this year, up from 40 percent last year and 25 percent in 2024,\" while among manufacturers \"51 percent reported using AI as part of their business processes, roughly double the 26 percent from last year and triple the 16 percent in 2024.\" The bar is stricter than most adoption surveys \u2014 firms using AI \"exclusively as an information search tool but nothing else\" are coded as non-users. Adoption is wide but shallow: \"Three-quarters of service firms and more than 90 percent of manufacturers characterize their AI investments as minimal to modest,\" and among adopters \"the median share of workers using it was just 17 percent for service firms and 7 percent for manufacturers.\" On labor, \"only 4 percent of service firms reported laying off workers\" because of AI (up from 1 percent in 2025), \"about 15 percent of service firms said they had hired fewer workers than they would have if not for AI use,\" and \"about 13 percent of service firms said they had hired more workers due to AI\" \u2014 while \"just over a third of service firms and more than 20 percent of manufacturing firms report retraining workers.\" Recorded as overlays: the survey covers New York State and northern New Jersey only, so it is not comparable to the national Census BTOS series, and the workforce shares are of AI-adopting firms rather than of jobs or workers. The authors caution that \"AI technology and its applications are still evolving rapidly, and these patterns could shift as adoption matures.\"",
       "dateAdded": "2026-09-01"
+    }
+  ,
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-09",
+      "title": "RPLS US Jobs Report: The US Economy Adds 36.5k Jobs in August",
+      "url": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publisher": "reveliolabs.com",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "the pace of new firm AI adoption has slowed from its spring peak"
     }
   ]
 }

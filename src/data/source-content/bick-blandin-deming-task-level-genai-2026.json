@@ -1,0 +1,13 @@
+{
+  "id": "bick-blandin-deming-task-level-genai-2026",
+  "abstract": "This study measures how workers use generative AI for their jobs using a nationally representative survey, linking genAI adoption to detailed occupations and tasks. The authors develop the first task-level genAI adoption indexes and find that while adoption is widespread across many occupations and tasks, it remains shallow, with fewer than half of workers in most occupations adopting genAI. Substantial variation exists among workers performing similar work, suggesting that understanding which workers adopt may be as important as understanding which tasks genAI assists.",
+  "keyFindings": [
+    "Task-level genAI adoption indexes show that exposure scores explain some but far from all variation in adoption across occupations and tasks.",
+    "Current genAI adoption is widespread but shallow, with adoption present across many occupations and tasks yet fewer than half of workers adopting in most of them.",
+    "Substantial worker-level variation exists among those doing very similar work, indicating that understanding who adopts matters as much as understanding which tasks genAI assists.",
+    "GenAI adoption indexes based on worker surveys differ conceptually from measures based on genAI platform chat logs, which tend to over-classify chats into generic activities spanning many occupations."
+  ],
+  "methodology": "Nationally representative survey linking genAI adoption to detailed occupations and tasks. The study develops task-level genAI adoption indexes and compares them to alternative measures based on genAI platform chat logs. Specific sample size, time period, and detailed analytical approach not specified in provided text.",
+  "qualifiers": "None stated",
+  "fetchedAt": "2026-09-05"
+}

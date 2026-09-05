@@ -560,6 +560,16 @@
       "evidenceTier": 1,
       "label": "FRED: 137 RPS GenAI series added; assisted work hours 6.3% in Q2 2026"
     }
+  ,
+    {
+      "date": "2026-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bick-blandin-deming-task-level-genai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: genAI adoption widespread but shallow \u2014 fewer than half of workers adopt within most occupations"
+    }
   ],
   "sources": [
     {
@@ -1019,6 +1029,16 @@
       "datePublished": "2026-07-20",
       "excerpt": "\"More than half of U.S. workers (52%) now use AI in their role, with 30% using it frequently (a few times a week or more). Fifteen percent use it daily.\" 47% of employees say their organization has integrated AI tools, up from 41%. Fielded May 6-20, 2026 among 22,573 employed U.S. adults, margin of error +/-0.9 percentage points. The 52% figure counts anyone using AI at least a few times a year, a looser threshold than the quarterly survey charted here, so it appears below the chart as a directional signal rather than as a plotted point.",
       "dateAdded": "2026-08-20"
+    }
+  ,
+    {
+      "id": "bick-blandin-deming-task-level-genai-2026",
+      "title": "What Work Does Generative AI Do?",
+      "url": "https://www.nber.org/papers/w35677",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-01",
+      "excerpt": "current adoption is widespread but shallow: genAI is used across many occupations and tasks, yet within most of them, fewer than half of workers adopt"
     }
   ]
 }

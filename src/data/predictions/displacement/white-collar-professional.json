@@ -1102,6 +1102,25 @@
       "evidenceTier": 3,
       "label": "Levanon: labor market weakness concentrated in desk-based, metro, college-educated work"
     }
+  ,
+    {
+      "date": "2026-09-02",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-09"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: most AI-exposed occupations down ~6% in employment vs least-exposed since before ChatGPT (all occupations, relative gap)"
+    },
+    {
+      "date": "2026-09-02",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-09"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: AI-adopting firms expand employment vs non-adopters, but were already growing faster and gains sit in senior roles"
+    }
   ],
   "sources": [
     {
@@ -2053,6 +2072,16 @@
       "datePublished": "2026-08-31",
       "excerpt": "Ranking each group's 12-month moving-average unemployment rate against that group's own history back to 2003, Levanon finds the weakness in this labor market is concentrated almost entirely in desk work. STEM is the only occupational group sitting above its own historical median. Blue-collar and manual-service workers \u2014 65 million people \u2014 sit at the 18th percentile of their own history, near their best readings in two decades. Geographically the same split holds: non-metro areas sit at the 12th percentile while the top 50 metropolitan areas climbed roughly 30 percentile points, and 47 of 51 jurisdictions remain below their own median. The figures are percentile ranks against each group's own history, not displacement rates, so this is recorded as an overlay.",
       "dateAdded": "2026-08-31"
+    }
+  ,
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-09",
+      "title": "RPLS US Jobs Report: The US Economy Adds 36.5k Jobs in August",
+      "url": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publisher": "reveliolabs.com",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "Since before ChatGPT, employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations"
     }
   ]
 }

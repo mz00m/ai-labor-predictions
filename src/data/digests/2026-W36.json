@@ -1,0 +1,105 @@
+{
+  "week": "2026-W36",
+  "generatedAt": "2026-09-05T12:03:41.486Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "NY Fed: Businesses Using AI to Transform Work, Not Cut Jobs",
+      "summary": "Three years of NY Fed regional business survey data show firms are deploying AI to reshape workflows and augment workers rather than reduce headcount outright. AI adoption among surveyed firms has risen markedly, but reported workforce reductions tied directly to AI remain limited. The findings complicate simple displacement narratives and suggest near-term labor market effects are more about task reallocation than mass layoffs (NY Fed Liberty Street Economics, Sep 1 2026).",
+      "source": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+      "authors": [
+        "NY Fed Regional Business Survey Team"
+      ],
+      "publishedAt": "2026-09-01",
+      "score": 0.424,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "NBER: First Task-Level GenAI Adoption Indexes Reveal Uneven Exposure Across Occupations",
+      "summary": "Bick, Blandin, Deming, and Schumacher construct nationally representative, task-level generative AI adoption indexes by linking survey data on worker genAI use to detailed occupational and task classifications. Exposure scores explain meaningful variation in labor market outcomes, providing the most granular measurement of genAI workplace penetration to date. The indexes establish a new empirical baseline for tracking how deeply genAI has embedded itself in daily work across different job categories (NBER Working Paper w35677, Sep 2026).",
+      "source": "https://www.nber.org/papers/w35677",
+      "authors": [
+        "Alexander Bick",
+        "Adam Blandin",
+        "David J. Deming",
+        "Tyler R. Schumacher"
+      ],
+      "publishedAt": "2026-09-05",
+      "score": 0.694,
+      "sourceAdapter": "nber",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "Revelio Labs RPLS: US Economy Adds Only 36.5k Jobs in August as AI-Exposed Occupations Weaken",
+      "summary": "Revelio's Public Labor Statistics tracker recorded a sharply below-trend 36,500 net new jobs in August 2026, with active job postings falling for the third consecutive month. Critically, the AI Labor Market Tracker shows employment deteriorating most in occupations with high AI-task overlap, while AI-complementary roles remain resilient. The divergence signals that aggregate job figures increasingly mask structural displacement concentrated in AI-exposed white-collar and administrative roles (Revelio Labs RPLS, Sep 2 2026).",
+      "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publishedAt": "2026-09-02",
+      "score": 0.384,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Stanford Study: AI Hitting Entry-Level Jobs Hardest",
+      "summary": "A Stanford study finding, widely discussed on Hacker News (145 points, 175 comments), concludes that AI automation pressure is disproportionately concentrated at the entry tier of the labor market, threatening the traditional on-ramp roles that workers use to build skills and experience. The pattern implies that even if aggregate employment holds steady, wage growth and career trajectory for new entrants could be structurally impaired. This evidence strengthens concern that AI is eroding the bottom rungs of professional career ladders faster than the middle or senior tiers (Ars Technica / Stanford, Aug 25 2026).",
+      "source": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+      "publishedAt": "2026-08-25",
+      "score": 0.152,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Hollywood Creatives Labeling Their Own Work to Train AI Replacements",
+      "summary": "A Guardian investigation covered by Hacker News documents Hollywood writers, illustrators, and other creatives being hired — often under financial duress — to annotate and train AI systems that are explicitly designed to automate their own creative tasks. The dynamic creates a perverse labor arrangement where displaced workers fund their own displacement, accelerating capability development in creative AI tools. The piece adds qualitative texture to quantitative signals of rising AI exposure in entertainment and media (The Guardian, Aug 22 2026).",
+      "source": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+      "publishedAt": "2026-08-22",
+      "score": 0.126,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "creative-industry-displacement"
+    }
+  ],
+  "themes": [
+    "Aggregate job counts are increasingly masking structural divergence: AI-exposed occupations are weakening while AI-complementary roles hold, making headline employment figures misleading indicators of labor market health.",
+    "Task-level measurement is maturing — new NBER indexes enable far more precise tracking of genAI penetration by occupation, moving the field beyond coarse exposure proxies toward actionable empirical tools.",
+    "Entry-level and creative workers face the sharpest near-term AI displacement risk, with evidence that career on-ramps and creative gig work are both eroding faster than senior or technical roles.",
+    "Firm-level survey evidence (NY Fed) consistently shows AI redeploying rather than eliminating workers in the short run, but aggregate labor statistics (Revelio) suggest employment softening in high-exposure occupations may be accelerating.",
+    "The Fed's data infrastructure for tracking the AI buildout and its economic impact is expanding, with new indicator frameworks from both Fed Board FEDS Notes and NY Fed providing policymakers timelier signals — though the key quarterly adoption series remains overdue for its next release."
+  ],
+  "watching": [
+    {
+      "title": "Fed Reserve Quarterly AI Adoption Series — Overdue Update",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Last ingested Apr 2026 (155d ago); next expected Jul-Aug 2026. Fresh release will update baseline ai-adoption-rate and workforce-ai-exposure graphs — high priority."
+    },
+    {
+      "title": "Revelio Labs AI Labor Market Tracker — September Monthly Cadence",
+      "source": "https://www.reveliolabs.com/news/rpls",
+      "reason": "August's weak 36.5k print and declining postings in AI-exposed roles warrant close monitoring next release for signs of accelerating structural displacement."
+    },
+    {
+      "title": "Reverse Big Push: GenAI Self-Fulfilling Automation Model",
+      "source": "https://arxiv.org/abs/2608.25602",
+      "reason": "Theoretical model on genAI shifting automation fixed costs to providers may reframe displacement forecasting; watch for empirical follow-on work or policy citations."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 109,
+    "afterDedup": 107
+  }
+}

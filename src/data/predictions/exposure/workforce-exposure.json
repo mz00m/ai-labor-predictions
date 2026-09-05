@@ -940,6 +940,25 @@
       "evidenceTier": 1,
       "label": "BLS: official 4-category relative AI exposure for 831 occupations; no economy-wide share"
     }
+  ,
+    {
+      "date": "2026-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bick-blandin-deming-task-level-genai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: exposure scores explain some but far from all variation in actual adoption"
+    },
+    {
+      "date": "2026-09-02",
+      "direction": "neutral",
+      "sourceIds": [
+        "revelio-ai-labor-market-tracker-2026-09"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: most changes in work content occur within occupations, not through shifts in the occupation mix"
+    }
   ],
   "sources": [
     {
@@ -1716,6 +1735,25 @@
       "datePublished": "2026-08-27",
       "excerpt": "BLS's first official occupational AI exposure product, published to complement the 2025-35 employment projections. \"BLS combined five external data sources to create a four-category classification of relative AI exposure for every detailed occupation for which projections are produced\" \u2014 Low, Moderate, High, Very high. Three inputs are theoretical (Felten/Raj/Seamans; Eloundou et al.; Eisfeldt et al.) and two are observed-usage (Anthropic via Claude conversations and API traffic; Microsoft via Copilot). BLS notes \"the three theoretical sources do not all measure equivalent concepts,\" so each occupation's score is converted to a within-source percentile rank before combining, then clustered on two dimensions: median rank across the theoretical sources and median across the observed sources. Coverage: \"Across 4,155 possible occupation-source combinations ... (831 occupations times 5 sources), 3,944 were observed and 211 were imputed, affecting 75 occupations.\" Recorded as an overlay because the output is an explicitly relative four-category ranking with no denominator \u2014 BLS publishes no economy-wide share of exposed jobs and states \"the exposure category is relative to other occupations. It does not imply an absolute 'high' or 'low' level of exposure.\" BLS is also explicit that a category \"is not a forecast of employment growth or decline,\" not a wage forecast, not an adoption-probability estimate, not a replacement estimate, and not a productivity forecast. Theoretical inputs are pinned to AI capabilities available \"no later than mid-2023.\" Three of the five inputs (Eloundou, Eisfeldt, Felten) are already plotted or overlaid on this chart individually.",
       "dateAdded": "2026-08-28"
+    }
+  ,
+    {
+      "id": "bick-blandin-deming-task-level-genai-2026",
+      "title": "What Work Does Generative AI Do?",
+      "url": "https://www.nber.org/papers/w35677",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-01",
+      "excerpt": "Exposure scores explain some, but far from all, of the variation in adoption across occupations and tasks"
+    },
+    {
+      "id": "revelio-ai-labor-market-tracker-2026-09",
+      "title": "RPLS US Jobs Report: The US Economy Adds 36.5k Jobs in August",
+      "url": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publisher": "reveliolabs.com",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "most changes in work content continue to occur within occupations rather than through shifts in the occupation mix"
     }
   ]
 }

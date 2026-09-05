@@ -643,11 +643,11 @@
       "whatItMeasures": "Talent supply, labor demand, market equilibrium, work content, and matching efficiency, from online professional profiles, job postings, salary records, employee reviews, and WARN notices. Uses the Brynjolfsson/Chandar/Chen event-study design with occupation and month fixed effects.",
       "whyItMatters": "The only monthly-cadence replication of the Canaries early-career finding on data that is fully independent of ADP payroll records — profile-based rather than payroll-based. Its 13% early-career relative decline landing close to the ADP-derived estimate is the strongest cross-dataset corroboration on the site. Also the only source publishing a within-occupation activity-mix dissimilarity index, which speaks directly to the shifting-task-bundles question.",
       "lastIngested": {
-        "sourceId": "revelio-ai-labor-market-tracker-2026-07",
-        "date": "2026-07-28",
-        "value": "Early-career 22-25 most-exposed -13% vs least-exposed; demand -42%; adopters +27% headcount; firm adoption 5.9%"
+        "sourceId": "revelio-ai-labor-market-tracker-2026-09",
+        "date": "2026-09-02",
+        "value": "Early-career 22-25 most-exposed -19% vs least-exposed; all-occupation gap -6% since pre-ChatGPT; AI-exposed firms laying off fewer than least-exposed; new-firm adoption pace off its spring peak"
       },
-      "nextExpected": "Mid-August 2026"
+      "nextExpected": "Early October 2026"
     }
   ]
 }

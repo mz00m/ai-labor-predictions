@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-08-31",
-  "totalSources": 703,
-  "verifiedCount": 693,
+  "lastUpdated": "2026-09-05",
+  "totalSources": 705,
+  "verifiedCount": 695,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -9962,6 +9962,40 @@
       "usedIn": [
         "workforce-ai-exposure",
         "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    }
+  ,
+    "bick-blandin-deming-task-level-genai-2026": {
+      "id": "bick-blandin-deming-task-level-genai-2026",
+      "title": "What Work Does Generative AI Do?",
+      "url": "https://www.nber.org/papers/w35677",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-01",
+      "excerpt": "current adoption is widespread but shallow: genAI is used across many occupations and tasks, yet within most of them, fewer than half of workers adopt",
+      "usedIn": [
+        "genai-work-adoption",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "revelio-ai-labor-market-tracker-2026-09": {
+      "id": "revelio-ai-labor-market-tracker-2026-09",
+      "title": "RPLS US Jobs Report: The US Economy Adds 36.5k Jobs in August",
+      "url": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publisher": "reveliolabs.com",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "Since before ChatGPT, employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations, with the gap reaching 19% among workers aged 22\u201325",
+      "usedIn": [
+        "early-career-employment-decline",
+        "white-collar-professional-displacement",
+        "overall-us-displacement",
+        "ai-adoption-rate",
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false
