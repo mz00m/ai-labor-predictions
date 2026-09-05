@@ -1681,5 +1681,15 @@
       "datePublished": "2026-09-02",
       "excerpt": "the pace of new firm AI adoption has slowed from its spring peak"
     }
+  ,
+    {
+      "id": "syverson-eig-ai-productivity-2026",
+      "title": "Understanding AI and Productivity",
+      "url": "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
+      "publisher": "Economic Innovation Group / Agglomerations (Chad Syverson, Chicago Booth)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-28",
+      "excerpt": "Guest essay for EIG's American Worker Project by Chad Syverson, co-author of the original productivity J-curve paper. On the macro series: labor productivity \"grew throughout the 2010s by about 1.5 percent per year, roughly half of its growth rate during the productivity boom of 1995-2004,\" and \"productivity from mid-2022 on has maintained a faster-than-2010s trajectory involving annual growth of about 2.2 percent.\" He declines to attribute this to AI: \"The timing leans against AI being the sole initial cause,\" since the acceleration began when AI investment was small and coincided with pandemic-era churn and business formation; his stated test is duration. A sustained 1.5-to-2.2 move would leave GDP per capita \"7 percent higher than otherwise\" after a decade, against nearly 3.0 percent annual growth in the 1995-2004 boom and \"in excess of 2.5 percent for a decade or longer\" in past GPT booms. Original cross-sector analysis (Figure 2) plots each sector's change in contribution to economy-wide productivity growth (2019-25 minus 2007-19) against its employment-weighted Census BTOS 2025 AI adoption rate: the correlation is positive but \"weak enough, relative to the number of sectors, that one cannot rule out chance as its source\"; excluding retail it is \"more than twice as large,\" a specification he calls \"treading on thin statistical ice.\" On employment: \"At least over the first couple years of its use, AI has had remarkably little employment effect, positive or negative.\" J-curve restatement: understatement periods \"could extend well beyond a decade, and cumulative productivity mismeasurement of double-digits percent,\" and \"Where are we on the AI J-curve now? It is too early to know that with much precision.\""
+    }
   ]
 }
