@@ -1110,7 +1110,7 @@
         "revelio-ai-labor-market-tracker-2026-09"
       ],
       "evidenceTier": 2,
-      "label": "Revelio: most AI-exposed occupations down ~6% in employment vs least-exposed since before ChatGPT (all occupations, relative gap)"
+      "label": "Revelio: most AI-exposed occupations down ~6% vs least-exposed since pre-ChatGPT (all occupations, relative)"
     },
     {
       "date": "2026-09-02",
@@ -1119,7 +1119,7 @@
         "revelio-ai-labor-market-tracker-2026-09"
       ],
       "evidenceTier": 2,
-      "label": "Revelio: AI-adopting firms expand employment vs non-adopters, but were already growing faster and gains sit in senior roles"
+      "label": "Revelio: AI-adopting firms outgrow non-adopters, but grew faster pre-adoption; gains in senior roles"
     }
   ],
   "sources": [

@@ -923,6 +923,15 @@
       "label": "Revelio: activity-mix dissimilarity +8.4pp yoy; most change within occupations"
     },
     {
+      "date": "2026-08-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "bick-blandin-deming-task-level-genai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: exposure scores explain some but far from all variation in actual adoption"
+    },
+      {
       "date": "2026-08-11",
       "direction": "up",
       "sourceIds": [
@@ -941,15 +950,6 @@
       "label": "BLS: official 4-category relative AI exposure for 831 occupations; no economy-wide share"
     }
   ,
-    {
-      "date": "2026-08-01",
-      "direction": "neutral",
-      "sourceIds": [
-        "bick-blandin-deming-task-level-genai-2026"
-      ],
-      "evidenceTier": 1,
-      "label": "NBER: exposure scores explain some but far from all variation in actual adoption"
-    },
     {
       "date": "2026-09-02",
       "direction": "neutral",

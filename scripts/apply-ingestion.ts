@@ -145,8 +145,8 @@ async function applyIngestion(
         predictionFile.history.push({
           date: dateStr,
           value: stat.value,
-          confidenceLow: stat.confidenceLow ?? null,
-          confidenceHigh: stat.confidenceHigh ?? null,
+          ...(stat.confidenceLow != null ? { confidenceLow: stat.confidenceLow } : {}),
+          ...(stat.confidenceHigh != null ? { confidenceHigh: stat.confidenceHigh } : {}),
           sourceIds: [sourceId],
           evidenceTier,
           dataType: stat.dataType ?? "observed",
