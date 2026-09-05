@@ -93,6 +93,7 @@ async function applyIngestion(
 
   for (const candidate of staging.candidates) {
     const { highlight, sourceId, evidenceTier, extractedStats } = candidate;
+    const candidateSlugs = new Set<string>();
 
     if (!extractedStats || extractedStats.length === 0) continue;
 
@@ -148,6 +149,8 @@ async function applyIngestion(
           confidenceHigh: stat.confidenceHigh ?? null,
           sourceIds: [sourceId],
           evidenceTier,
+          dataType: stat.dataType ?? "observed",
+          ...(stat.metricType ? { metricType: stat.metricType } : {}),
         });
         predictionFile.history.sort(
           (a: any, b: any) =>
@@ -180,6 +183,7 @@ async function applyIngestion(
         JSON.stringify(predictionFile);
         fs.writeFileSync(filePath, JSON.stringify(predictionFile, null, 2));
         modifiedFiles.add(stat.graphSlug);
+        candidateSlugs.add(stat.graphSlug);
         statsAdded++;
         console.log(
           `  + ${stat.graphSlug}: ${stat.type} ${stat.type === "data_point" ? `(${stat.value})` : `(${stat.direction})`}`
@@ -203,7 +207,7 @@ async function applyIngestion(
           highlight.publishedAt ?? today,
         excerpt:
           extractedStats[0]?.quote ?? highlight.summary,
-        usedIn: [...modifiedFiles],
+        usedIn: [...candidateSlugs],
         verified: true,
         synthetic: false,
       };
