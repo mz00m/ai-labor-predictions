@@ -1,0 +1,105 @@
+{
+  "week": "2026-W37",
+  "generatedAt": "2026-09-07T13:59:27.676Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "NY Fed: Businesses Using AI to Transform Work, Not Cut Jobs",
+      "summary": "The New York Federal Reserve's Liberty Street Economics blog reports that three years of regional business surveys show AI adoption is primarily reshaping job tasks and workflows rather than eliminating headcount. Firms broadly indicate workforce transformation—upskilling, reallocation of duties—as the dominant effect of AI integration. This challenges displacement-centric narratives and suggests augmentation is currently winning over automation in surveyed firms.",
+      "source": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+      "authors": [],
+      "publishedAt": "2026-09-01",
+      "score": 0.374,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Revelio Labs RPLS: US Economy Adds Only 36.5k Jobs in August, AI Exposure Occupations Weakening",
+      "summary": "Revelio Public Labor Statistics data for August 2026 shows a sharp slowdown in job creation, with only 36,500 net new jobs added even as active postings declined another 3%. Critically, Revelio's AI Labor Market Tracker reveals employment is weakening most in occupations with high AI exposure, pointing to an emerging displacement signal beneath aggregate resilience. This is one of the clearest near-real-time data points linking AI exposure directly to occupational employment declines.",
+      "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publishedAt": "2026-09-02",
+      "score": 0.325,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Stanford Study: AI Hitting Entry-Level Jobs Hardest",
+      "summary": "A Stanford study covered by Ars Technica finds that AI's labor market impact is most acute at the entry level, with junior and early-career roles disproportionately exposed to automation and task substitution. The Hacker News discussion (145 points, 176 comments) reflects broad public recognition that this dynamic is compressing the traditional career on-ramp for new workforce entrants. The findings carry significant implications for wage formation and career progression pipelines in AI-exposed sectors.",
+      "source": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+      "publishedAt": "2026-08-25",
+      "score": 0.133,
+      "sourceAdapter": "hnAlgolia",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Federal Reserve FEDS Note: Publicly Available Data to Assess AI's Economic Impact",
+      "summary": "A new FEDS Note from Paul Soto, Mason Thieu, and Jeffrey Allen organizes publicly available indicators into three categories to help researchers and policymakers track the generative AI buildout and its economic effects in near real time. The note represents the Fed's most current official synthesis of AI adoption metrics and economic exposure data, providing a methodological framework for ongoing monitoring. This is a high-value institutional resource directly feeding AI adoption rate and workforce exposure tracking.",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "authors": [
+        "Paul E. Soto",
+        "Mason Thieu",
+        "Jeffrey S. Allen"
+      ],
+      "publishedAt": "2026-09-07",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "Technological Polarization and Unequal Growth in the GenAI Era",
+      "summary": "Kyra Mahindru's paper analyzes how Generative and Agentic AI are driving wage polarization, concentrating productivity gains among high-skill workers while displacing mid- and lower-skill roles, with productivity benefits accruing unequally across the income distribution. Using a mixed-methods design, the study finds that GenAI accelerates existing polarization dynamics rather than creating a uniform uplift. The research reinforces concerns that high-skill wage premiums will widen as agentic AI capabilities expand.",
+      "source": "https://doi.org/10.70917/ijcisim-2026-5228",
+      "authors": [
+        "Kyra Mahindru"
+      ],
+      "publishedAt": "2026-08-28",
+      "doi": "10.70917/ijcisim-2026-5228",
+      "score": 0.233,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    }
+  ],
+  "themes": [
+    "Augmentation vs. displacement debate sharpens: institutional survey data (NY Fed) suggests task transformation dominates over headcount cuts, but real-time labor statistics (Revelio) show AI-exposed occupations are already losing ground in employment counts.",
+    "Entry-level job erosion is emerging as the most acute near-term displacement risk, threatening career on-ramps and compressing entry wages as AI substitutes for junior task work.",
+    "Wage polarization is accelerating in the GenAI era, with high-skill premium widening while mid- and lower-skill workers face both displacement pressure and stagnant wage growth.",
+    "Federal Reserve institutions are investing in real-time AI economic monitoring infrastructure, signaling that policymakers regard AI's labor market impact as a macroeconomically significant and measurable phenomenon.",
+    "AI-exposed occupation employment is decoupling from headline job growth, with aggregate resilience masking sector- and skill-level deterioration that standard labor statistics may undercount."
+  ],
+  "watching": [
+    {
+      "title": "Fed Reserve Quarterly AI Adoption Monitor — Overdue Since April 2026",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Quarterly Fed synthesis of US AI adoption surveys is 157 days overdue. Next release imminent; will be key update for ai-adoption-rate and workforce-ai-exposure graphs."
+    },
+    {
+      "title": "Revelio Labs AI Labor Market Tracker — Monthly Occupation-Level Employment",
+      "source": "https://www.reveliolabs.com/news/rpls",
+      "reason": "August data showing AI-exposed occupation weakness warrants monthly monitoring; September release will confirm or reverse the displacement signal in high-exposure roles."
+    },
+    {
+      "title": "The Reverse Big Push: Generative AI and Self-Fulfilling Automation (Banerjee & Wang)",
+      "source": "https://arxiv.org/abs/2608.25602",
+      "reason": "Models how GenAI's cost structure could trigger self-fulfilling automation waves in local service economies—directly relevant to overall-us-displacement trajectory modeling."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [],
+    "totalCandidates": 102,
+    "afterDedup": 101
+  }
+}
