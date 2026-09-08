@@ -1121,6 +1121,43 @@
       "evidenceTier": 2,
       "label": "Revelio: AI-adopting firms outgrow non-adopters, but grew faster pre-adoption; gains in senior roles"
     }
+  ,
+    {
+      "date": "2026-09-04",
+      "direction": "down",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Economist: paralegals +11%, market-research analysts +6% (2023-25) vs ~2.5% average"
+    },
+    {
+      "date": "2026-09-04",
+      "direction": "up",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Economist: professional and business services hiring ~10% below its 2015-19 average"
+    },
+    {
+      "date": "2026-09-04",
+      "direction": "up",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Economist: secretaries and admin assistants employment down ~15% since Jan 2023"
+    },
+    {
+      "date": "2026-09-04",
+      "direction": "down",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Burning Glass (Levanon): ~1% of US professional jobs are AI jobs; 4-5% in computing"
+    }
   ],
   "sources": [
     {
@@ -2082,6 +2119,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-02",
       "excerpt": "Since before ChatGPT, employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations"
+    }
+  ,
+    {
+      "id": "economist-ai-jobs-boom-2026",
+      "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "publisher": "The Economist",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-04",
+      "excerpt": "Hiring in professional and business services is running about 10% below the average in 2015-19."
     }
   ]
 }

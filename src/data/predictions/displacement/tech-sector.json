@@ -937,6 +937,16 @@
       "evidenceTier": 2,
       "label": "Challenger: tech announced 149,023 US job cuts YTD 2026, leading all sectors"
     }
+  ,
+    {
+      "date": "2026-09-04",
+      "direction": "down",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Economist: engineers, developers, data scientists ~730k jobs above trend since 2022"
+    }
   ],
   "sources": [
     {
@@ -1742,6 +1752,16 @@
       "datePublished": "2026-08-06",
       "excerpt": "\"U.S.-based employers announced 33,429 job cuts in July\", the lowest monthly total in two years. \"Artificial Intelligence (AI) led all reasons for job cuts, with 10,970 announced during the month, or 33%\" \u2014 the fifth straight month AI has led all stated reasons. \"So far this year, AI has been cited in 112,713 job cut announcements, approximately 24% of all cuts.\" \"Technology again led all sectors, announcing 9,867 job cuts in July for a total of 149,023 in 2026.\" \"Through July, employers have announced 477,033 job cuts, down 41% from the 806,383 cuts announced in the first seven months of 2025.\" Announced hiring plans reached 107,500 YTD, up 25%.",
       "dateAdded": "2026-08-07"
+    }
+  ,
+    {
+      "id": "economist-ai-jobs-boom-2026",
+      "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "publisher": "The Economist",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-04",
+      "excerpt": "These roles have added roughly 730,000 jobs above trend in recent years"
     }
   ],
   "marketIds": {

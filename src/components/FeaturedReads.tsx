@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "The Economist",
+    title: "The jobs apocalypse is postponed. An AI jobs boom is here",
+    summary:
+      "The Economist puts a number on the creation side of the ledger, which almost no one else does: roughly 1m AI-created US jobs against about 200,000 lay-offs attributed to AI since mid-2023. Understand the construction before quoting the headline. Three channels are stacked — the data-centre build-out, AI-native hiring, and new AI roles at incumbents — and each is measured as employment above trend rather than by direct attribution to AI. Five data-centre-adjacent industries have added roughly 320,000 jobs beyond what construction and manufacturing trends would predict; engineers, developers, mathematicians and data scientists about 730,000. The piece concedes that not all of these owe their existence to AI, which makes the 1m an upper bound on a real effect rather than a measurement of it. Two independent counts land lower: Levanon at Burning Glass puts AI jobs at roughly 1% of professional employment, LinkedIn at about 640,000 AI-specific roles created between 2023 and 2025. It is also more useful than its headline on the destruction side — professional and business services hiring runs about 10% below its 2015-19 average, customer-service employment is down about 10% and secretaries and administrative assistants about 15% since January 2023, and the BLS expects office and administrative support to shed 752,000 jobs by 2035. The tension worth carrying is on young workers: this reads the 20-24 unemployment gap as near a multi-decade low, where Canaries and the Revelio tracker both find early-career workers in exposed occupations well behind their peers. Different comparisons rather than contradictory findings, and holding both is the point.",
+    date: "Sep 4",
+    url: "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+  },
+  {
     author: "Abel, Deitz, Emanuel & Montalbano (NY Fed)",
     title: "Businesses Are Using AI to Transform Work, Not Cut Jobs",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The third vintage of the most-cited paper in the field, now with ADP payroll data through June 2026 — and it changes its own headline measure. Earlier versions led with a regression estimate adjusting for firm shocks (13%, then 16%). This one leads with the simpler descriptive number that needs no modeling choices: employment of 22-25 year olds in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers, up from 15% on the same measure a year ago. Experienced workers show no comparable gap, and Fact 1 remains that there is no economy-wide displacement — the ADP sample grew about 6%. The most useful thing here is the authors arguing against themselves. Education is the one control that bites (the gap attenuates from -18pp to -9pp), and they present the two estimates as bracketing a range rather than picking the flattering one, because generative AI substitutes best for exactly the codified knowledge schooling produces. They also concede the magnitude is ADP-specific: the ACS gap is -2.2pp with a confidence interval spanning zero against -13.2pp in ADP, though the two agree closely within white-collar work. Adjustment runs through hiring, not separations or pay.",
     date: "Aug 12",
     url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
-  },
-  {
-    author: "Revelio Labs",
-    title: "Introducing the Revelio AI Labor Market Tracker",
-    summary:
-      "Simon, Zweig and Wilkie-Rogers launch a live monthly dashboard across five lenses — talent supply, labor demand, equilibrium, work content, matching — built on online professional profiles rather than payroll. The headline finding independently replicates Canaries on non-ADP data: early-career workers (22-25) in the most AI-exposed occupations are down 13% relative to the least exposed since pre-ChatGPT, versus about 4% for all ages. Demand for the most-exposed roles is down 42%. The firm-side picture cuts the other way: AI-adopting firms grow headcount 27% more than non-adopters (though they were already growing faster pre-adoption), gains concentrate in senior roles (+31% vs +6% junior), and more AI-exposed firms see fewer layoffs, not more. Deliberately descriptive rather than predictive: the authors state the evidence does not establish that AI caused the decline in hires per posting. Two series no one else publishes monthly — a within-occupation activity-mix dissimilarity index (+8.4pp yoy, most change inside occupations rather than between them) and matching efficiency at 5.05 postings per hire, +264% yoy.",
-    date: "Jul 28",
-    url: "https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker",
   },
 ];
 

@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-09-05",
-  "totalSources": 705,
-  "verifiedCount": 695,
+  "lastUpdated": "2026-09-08",
+  "totalSources": 706,
+  "verifiedCount": 696,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -9996,6 +9996,25 @@
         "overall-us-displacement",
         "ai-adoption-rate",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    }
+  ,
+    "economist-ai-jobs-boom-2026": {
+      "id": "economist-ai-jobs-boom-2026",
+      "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "publisher": "The Economist",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-04",
+      "excerpt": "The Economist's own estimate that AI has created roughly 1m US jobs against about 200,000 AI-attributed lay-offs since mid-2023, built from the data-centre build-out, AI-native hiring and new AI roles at incumbents. \"The Economist estimates that AI has so far created around 1m new jobs in America. That easily exceeds the roughly 200,000 lay-offs attributed to AI since mid-2023.\" Counter-evidence in the same piece: professional and business services hiring runs about 10% below its 2015-19 average, customer-service employment is down about 10% and secretaries and administrative assistants about 15% since January 2023.",
+      "usedIn": [
+        "overall-us-displacement",
+        "early-career-employment-decline",
+        "white-collar-professional-displacement",
+        "customer-service-automation",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false

@@ -272,6 +272,16 @@
       "evidenceTier": 3,
       "label": "Levanon: young grads at 70th percentile of own history, young non-grads at 25th"
     }
+  ,
+    {
+      "date": "2026-09-04",
+      "direction": "down",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Economist/BLS: 20-24 unemployment gap vs overall rate near a multi-decade low"
+    }
   ],
   "sources": [
     {
@@ -503,6 +513,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-02",
       "excerpt": "Since before ChatGPT, employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations, with the gap reaching 19% among workers aged 22\u201325"
+    }
+  ,
+    {
+      "id": "economist-ai-jobs-boom-2026",
+      "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "publisher": "The Economist",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-04",
+      "excerpt": "the gap between unemployment among 20-24-year-olds and the overall rate is close to a multi-decade low"
     }
   ]
 }

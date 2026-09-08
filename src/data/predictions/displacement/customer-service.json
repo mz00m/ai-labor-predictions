@@ -510,6 +510,16 @@
       "evidenceTier": 2,
       "label": "Goldman: US call-center employment 39% below trend; Canada 33%, Germany 27%"
     }
+  ,
+    {
+      "date": "2026-09-04",
+      "direction": "up",
+      "sourceIds": [
+        "economist-ai-jobs-boom-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Economist: customer-service employment down ~10% since Jan 2023"
+    }
   ],
   "sources": [
     {
@@ -943,6 +953,16 @@
       "datePublished": "2026-08-19",
       "excerpt": "\"Employment in call centers, software publishing, management consulting and advertising has fallen sharply below its historical trend across developed markets... Call centers stand out in particular. Employment in the industry is now below trend in the U.S., 39% lower, Canada, down 33%, and Germany 27% below trend, according to the report. Goldman said the pattern indicates that AI-related employment pressures are already visible in industries where tools capable of automating work are available.\" This is the sharpest labor-side evidence yet on customer service, but it measures a headcount shortfall against a pre-2022 trend, not the share of interactions handled by AI that this chart plots, and offshoring and post-pandemic demand normalization are not separated out. Recorded as an overlay on construct grounds.",
       "dateAdded": "2026-08-26"
+    }
+  ,
+    {
+      "id": "economist-ai-jobs-boom-2026",
+      "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "publisher": "The Economist",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-04",
+      "excerpt": "Since January 2023 employment has fallen by about 10% among customer-service workers"
     }
   ]
 }

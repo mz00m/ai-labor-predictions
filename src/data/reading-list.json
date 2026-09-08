@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
+      "author": "The Economist",
+      "publisher": "The Economist",
+      "date": "2026-09-04",
+      "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
+      "takeaway": "The Economist puts a number on the creation side of the ledger, which almost no one else does, and the number is the reason to read it: roughly 1m AI-created US jobs against about 200,000 lay-offs attributed to AI since mid-2023. The construction is worth understanding before the headline is quoted. Three channels are stacked - the data-centre build-out, AI-native hiring, and new AI roles at incumbents - and each is measured as employment above trend rather than by any direct attribution to AI. Five data-centre-adjacent industries have added about 320,000 jobs beyond what construction and manufacturing trends would predict; engineers, developers, mathematicians and data scientists about 730,000. The authors say plainly that not all of these owe their existence to AI, and the honest reading is that the 1m is an upper bound on a real effect rather than a measurement. Two independent counts sit nearby and land lower: Levanon at Burning Glass puts AI jobs at roughly 1 percent of professional employment, and LinkedIn at about 640,000 AI-specific roles created between 2023 and 2025. The piece is also more useful than its headline on the destruction side. Professional and business services hiring runs about 10 percent below its 2015-19 average, customer-service employment is down about 10 percent and secretaries and administrative assistants about 15 percent since January 2023, and the BLS expects office and administrative support to shed 752,000 jobs by 2035. The tension worth carrying is on young workers: this reads the 20-24 unemployment gap as near a multi-decade low, where Canaries and the Revelio tracker both find early-career workers in exposed occupations well behind their peers. Those are different comparisons rather than contradictory findings, and holding both is the point.",
+      "weekFeatured": "2026-09-08",
+      "tier": 3
+    },
+    {
       "title": "Businesses Are Using AI to Transform Work, Not Cut Jobs",
       "author": "Jaison R. Abel, Richard Deitz, Natalia Emanuel and Nick Montalbano",
       "publisher": "Federal Reserve Bank of New York, Liberty Street Economics",
