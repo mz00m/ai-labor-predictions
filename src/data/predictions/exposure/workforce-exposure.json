@@ -951,6 +951,15 @@
     }
   ,
     {
+      "date": "2026-09-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: observed exposure is 22% of cognitive task time, 14% economy-wide (late 2025)"
+    },
+    {
       "date": "2026-09-02",
       "direction": "neutral",
       "sourceIds": [
@@ -1754,6 +1763,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-02",
       "excerpt": "most changes in work content continue to occur within occupations rather than through shifts in the occupation mix"
+    }
+  ,
+    {
+      "id": "korinek-jones-econ-scenarios-2026",
+      "title": "Economic Scenarios for Transformative AI",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
     }
   ]
 }

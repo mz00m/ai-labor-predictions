@@ -17,6 +17,14 @@ const articles: Article[] = [
     url: "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
   },
   {
+    author: "Korinek, Jones, Sacher, Cotter & McCrory (Anthropic Institute)",
+    title: "Economic Scenarios for Transformative AI",
+    summary:
+      "Converts the AI-and-jobs argument into disagreement about five measurable parameters — what share of tasks AI can do, how widely it is used, the productivity gain per task, how much of that use automates rather than augments, and how fast displaced workers find new work — then returns GDP, the labor share, wages, reallocation and unemployment to 2030. Three illustrations bracket the range. Modest: GDP 1.6% above the no-AI path, unemployment up a tenth of a point. Extreme: GDP 32% above it, growth at 15% a year, the labor share down from 60% to 45%, and nearly one in five cognitive workers unemployed. Read the wage result carefully. The average wage rises in every scenario, but in the extreme case that average is 9.7% up while the cognitive wage is 11.5% down, with the gain landing on construction, care and the trades. The discipline is the reason to trust it. The authors attach no probabilities and say so repeatedly; the scenarios exist to make assumptions comparable, not to forecast. They argue against themselves at length — the innovation channel turns out small, and the model has no robotics, no aggregate demand, no policy response, and workers who differ only by which of two occupation groups they sit in. Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson reviewed it, were not asked to endorse it, and their criticisms are printed rather than buried. The distributional arithmetic is what will get quoted: in the extreme case the economy gains roughly three times what cognitive workers lose, so a transfer of about 9% of GDP would hold them whole — Social Security and Medicare combined.",
+    date: "Sep 1",
+    url: "https://www.anthropic.com/institute/econ-scenarios",
+  },
+  {
     author: "Abel, Deitz, Emanuel & Montalbano (NY Fed)",
     title: "Businesses Are Using AI to Transform Work, Not Cut Jobs",
     summary:
@@ -31,14 +39,6 @@ const articles: Article[] = [
       "A co-author of the productivity J-curve paper returns to the question seven years on and refuses to close it. The value here is the discipline. Syverson reports that labor productivity ran about 1.5% a year through the 2010s and has run about 2.2% since mid-2022, then argues against himself: the acceleration started when AI investment was still small relative to the economy, and its timing matches the pandemic-era jump in labor market churn and business formation. His test is duration rather than magnitude, which is the right test — the longer the acceleration holds, the harder it gets to explain without AI. The original contribution is a cross-sector scatter of each sector's change in contribution to economy-wide productivity growth against its employment-weighted BTOS adoption rate. The correlation is positive and he tells you plainly it cannot be separated from chance; drop retail, a large accelerator with low adoption, and it more than doubles — a move he calls treading on thin statistical ice and declines to lean on. Anyone quoting the ex-retail number as evidence AI is raising productivity is quoting past the author. Two things worth carrying: why productivity growth does not mechanically destroy jobs (output is not fixed, lower costs cut prices, demand rises, slower-growth sectors absorb workers), and the calibration that past general-purpose technologies added 1 to 1.5 points to annual growth for a decade or two, so the 5-10% some boosters claim has no economy-wide precedent. On his own J-curve, he says only that it is too early to know where we are.",
     date: "Aug 28",
     url: "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
-  },
-  {
-    author: "Bill Gates",
-    title: "A Turbulent AI Era and Critical Choices to Make",
-    summary:
-      "Gates's first long AI essay in three years, and the first where labor displacement is the lead risk rather than a footnote. The substantive move is his refusal of the two analogies that normally do the reassuring work. Agriculture-to-office took several generations and created jobs that still needed human cognition; this technology substitutes for cognition. The PC took twenty years because software had to be written, prices had to fall, and people had to learn it; AI runs on the hardware we already own and speaks natural language, so it adapts to us rather than the reverse. From there he is specific about incidence: the jobs most at risk are entry- and mid-level, the new ones will require skills that take years to acquire, and smart robots start competing for construction and hospitality work by the end of the decade. Two proposals are worth tracking. Human Reserved is a domain of work set aside for people by decision rather than by capability limit, and he is honest that he cannot answer who decides, on what criteria, or how you stop firms from cheating. The token-and-robot tax rests on an asymmetry that is easy to verify and hard to defend: hire a person and you pay payroll tax, buy a robot and you expense it immediately. No original data here, and every number is borrowed. Read it as the clearest signal yet of where the philanthropic and policy conversation is heading.",
-    date: "Aug 25",
-    url: "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
   },
   {
     author: "Brynjolfsson, Chandar & Chen",

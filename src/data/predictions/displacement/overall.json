@@ -3,9 +3,10 @@
   "slug": "overall-us-displacement",
   "title": "Projected US Job Displacement from AI by 2030",
   "description": "Projected net percentage of US jobs displaced by AI and automation by 2030, synthesizing displacement estimates, observed employment data, and net-of-job-creation projections. Note that 'net job loss' can carry multiple mechanisms \u2014 direct displacement, capital-labor substitution that erodes labor share, or long-run labor force participation declines driven by income effects as AI-generated wealth (via capital income or transfers) makes work less necessary for consumption. The headline number does not distinguish these; the source mix and the methodology page do.",
+  "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model, not forecasts, and the authors attach no probabilities to them. They are plotted as the increase in the economy-wide unemployment rate above the model's no-AI baseline of 3.8% \u2014 0.1, 0.8 and 8.1 points in the modest, substantial and extreme scenarios. In that model the labor force is fixed and displaced cognitive workers reallocate into other occupations, so this excess unemployment is the net job loss; the gross number of workers changing occupation is far larger.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 2.1,
+  "currentValue": 2.2,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -456,6 +457,39 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 0.1,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-modest-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 0.8,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 8.1,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-extreme-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     }
   ],
   "overlays": [
@@ -3927,6 +3961,34 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-04",
       "excerpt": "The Economist estimates that AI has so far created around 1m new jobs in America. That easily exceeds the roughly 200,000 lay-offs attributed to AI since mid-2023"
+    }
+  ,
+    {
+      "id": "korinek-jones-econ-scenarios-modest-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 modest change scenario",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Modest change scenario (m2030 = 0.20, d2030 = 0.20, automation share 0.50, reinstatement 0.5). \"GDP is 1.6 percent above its no-AI path in 2030... Cognitive employment is 0.5 percent below its mid-2026 level. The unemployment rate is 3.9 percent against a normal level of 3.8: the modest change scenario has only small labor market effects.\" The authors attach no probabilities to the scenarios: \"The scenarios are not predictions, and we attach no probabilities to them; their purpose is to make the consequences of different assumptions comparable.\""
+    },
+    {
+      "id": "korinek-jones-econ-scenarios-substantial-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 substantial change scenario",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Substantial change scenario (m2030 = 0.30, d2030 = 0.40, automation share 0.75, reinstatement 0.25). \"Cognitive employment is 3.9 percent below its mid-2026 level, and employment in all other occupations has risen by 4.6 percent. Because reallocation takes time, the unemployment rate of cognitive workers rises from 2.9 percent in mid-2026 to 4.5 percent in 2030.\" GDP is 8.3 percent above the no-AI path, the average wage 2.1 percent above it, and the labor share falls from 60 to 56 percent. The authors attach no probabilities to the scenarios."
+    },
+    {
+      "id": "korinek-jones-econ-scenarios-extreme-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 extreme change scenario",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Extreme change scenario (m2030 = 0.50, d2030 = 0.60, automation share 0.90, reinstatement 0). \"By 2030, cognitive employment is 21.5 percent below its mid-2026 level, and the unemployment rate for workers who began in cognitive occupations is a stunning 17.9 percent, far above any postwar rate in the United States. The economy-wide unemployment rate rises to 11.9 percent.\" GDP is 32.4 percent above the no-AI path, the cognitive wage 11.5 percent below it, and the labor share falls from 60 to 45 percent. The authors attach no probabilities to the scenarios."
     }
   ]
 }

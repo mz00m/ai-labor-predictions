@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Economic Scenarios for Transformative AI",
+      "author": "Anton Korinek, Charles I. Jones, Szymon Sacher, Tess Cotter and Peter McCrory",
+      "publisher": "The Anthropic Institute, Working Paper 2026-02",
+      "date": "2026-09-01",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "takeaway": "The most useful thing to come out of the AI-and-jobs debate in a while, because it converts disagreement about the future into disagreement about five measurable parameters: what share of tasks AI can do, how widely it is used, the productivity gain per task, how much of that use automates rather than augments, and how fast displaced workers find new work. Set those and the model returns GDP, the labor share, wages, reallocation and unemployment to 2030. Three illustrations bracket the range. In the modest scenario GDP is 1.6 percent above the no-AI path and unemployment rises a tenth of a point. In the extreme one GDP is 32 percent above it, growth runs at 15 percent a year, the labor share falls from 60 to 45 percent, and nearly one in five cognitive workers is unemployed. Read the middle result carefully: the average wage rises in every scenario, but in the extreme case that average is 9.7 percent up while the cognitive wage is 11.5 percent down, with the gain going to construction, care and the trades. The authors are unusually disciplined about what this is not. They attach no probabilities, they say so repeatedly, and the scenarios are meant to make assumptions comparable rather than to forecast. The paper also argues against itself at length: the innovation channel turns out to be small, the model has no robotics, no aggregate demand, no policy response, and workers differ only by which of two occupation groups they sit in. Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson reviewed it and were not asked to endorse it; the reviewer criticisms are printed rather than buried. The distributional arithmetic is what will get quoted: in the extreme case the economy's gain is roughly three times what cognitive workers lose, so a transfer of about 9 percent of GDP would hold them whole, which is Social Security and Medicare combined.",
+      "weekFeatured": "2026-09-09",
+      "tier": 2
+    },
+    {
       "title": "The jobs apocalypse is postponed. An AI jobs boom is here",
       "author": "The Economist",
       "publisher": "The Economist",

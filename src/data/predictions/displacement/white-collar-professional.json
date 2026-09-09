@@ -3,9 +3,10 @@
   "slug": "white-collar-professional-displacement",
   "title": "White-Collar Professional Displacement by 2030",
   "description": "Estimated share of white-collar professional roles facing displacement from AI (higher = more displacement). Most studies find near-zero aggregate displacement but a sharp age gradient: young workers (22-30) in AI-exposed roles show 5-13% displacement across the US, Sweden, and the Netherlands, while older workers are stable or growing. Finland and Denmark find no effect. Estimates span both age-specific and all-worker measurements.",
+  "disclaimer": "Four points dated September 2026 come from one source, the Anthropic Institute's scenario model, and three of them are scenarios rather than forecasts. The authors state plainly that \"the scenarios are not predictions, and we attach no probabilities to them\" \u2014 modest (0.5%), substantial (3.9%) and extreme (21.5%) are illustrations of what different assumptions about AI capability, diffusion and automation would imply, not competing estimates of what will happen. Read them as the width of the argument, not as a range with a middle. The fourth point (4.2%) is different in kind: it is the median outcome across 3,259 US adults' own expectations run through the same model, and it carries an interquartile range. Note also that the model's \"cognitive occupations\" are SOC 11-29, 41 and 43, which include sales and office support and so run broader than most white-collar definitions on this chart.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 6.4,
+  "currentValue": 6.5,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -217,6 +218,52 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 0.5,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-modest-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 3.9,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 21.5,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-extreme-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
+    }
+  ,
+    {
+      "date": "2026-09-01",
+      "value": 4.2,
+      "confidenceLow": 1,
+      "confidenceHigh": 9,
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -1103,6 +1150,15 @@
       "label": "Levanon: labor market weakness concentrated in desk-based, metro, college-educated work"
     }
   ,
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: cognitive unemployment 4.5% (substantial) to 17.9% (extreme) by 2030, vs 2.9% now"
+    },
     {
       "date": "2026-09-02",
       "direction": "down",
@@ -2129,6 +2185,52 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-04",
       "excerpt": "Hiring in professional and business services is running about 10% below the average in 2015-19."
+    }
+  ,
+    {
+      "id": "korinek-jones-econ-scenarios-modest-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 modest change scenario",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Modest change scenario (m2030 = 0.20, d2030 = 0.20, automation share 0.50, reinstatement 0.5). \"GDP is 1.6 percent above its no-AI path in 2030... Cognitive employment is 0.5 percent below its mid-2026 level. The unemployment rate is 3.9 percent against a normal level of 3.8: the modest change scenario has only small labor market effects.\" The authors attach no probabilities to the scenarios: \"The scenarios are not predictions, and we attach no probabilities to them; their purpose is to make the consequences of different assumptions comparable.\""
+    },
+    {
+      "id": "korinek-jones-econ-scenarios-substantial-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 substantial change scenario",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Substantial change scenario (m2030 = 0.30, d2030 = 0.40, automation share 0.75, reinstatement 0.25). \"Cognitive employment is 3.9 percent below its mid-2026 level, and employment in all other occupations has risen by 4.6 percent. Because reallocation takes time, the unemployment rate of cognitive workers rises from 2.9 percent in mid-2026 to 4.5 percent in 2030.\" GDP is 8.3 percent above the no-AI path, the average wage 2.1 percent above it, and the labor share falls from 60 to 56 percent. The authors attach no probabilities to the scenarios."
+    },
+    {
+      "id": "korinek-jones-econ-scenarios-extreme-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 extreme change scenario",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Extreme change scenario (m2030 = 0.50, d2030 = 0.60, automation share 0.90, reinstatement 0). \"By 2030, cognitive employment is 21.5 percent below its mid-2026 level, and the unemployment rate for workers who began in cognitive occupations is a stunning 17.9 percent, far above any postwar rate in the United States. The economy-wide unemployment rate rises to 11.9 percent.\" GDP is 32.4 percent above the no-AI path, the cognitive wage 11.5 percent below it, and the labor share falls from 60 to 45 percent. The authors attach no probabilities to the scenarios."
+    },
+    {
+      "id": "korinek-jones-econ-scenarios-survey-2026",
+      "title": "Economic Scenarios for Transformative AI \u2014 outcomes implied by a survey of US adults",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Model outcomes run on each respondent's own five answers, for the 3,259 of 10,980 surveyed US adults who answered all five items. \"Cognitive employment, pct. change since mid-2026: -4.2 [-9, -1]\", with the interquartile range in brackets. \"The public's answers deliver outcomes close to the substantial change scenario.\" Unlike the three illustrative scenarios, this is a central tendency with a stated dispersion."
+    },
+    {
+      "id": "korinek-jones-econ-scenarios-2026",
+      "title": "Economic Scenarios for Transformative AI",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
     }
   ]
 }

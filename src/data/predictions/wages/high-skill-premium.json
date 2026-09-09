@@ -572,6 +572,16 @@
       "evidenceTier": 2,
       "label": "Azar et al.: GenAI skill premium coexists with lower cell-level wages"
     }
+  ,
+    {
+      "date": "2026-09-01",
+      "direction": "down",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: extreme scenario pays non-cognitive +33.6% vs cognitive -11.5% against the no-AI path"
+    }
   ],
   "sources": [
     {
@@ -1061,6 +1071,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-21",
       "excerpt": "Workers who report GenAI-related skills receive a conditional starting-wage premium of approximately 8-9 percent. At the same time, the coefficient on the cell-level GenAI worker share is -0.151 when entered without predetermined exposure and -0.122 when both measures are included. There is no contradiction between these findings. A worker who reports GenAI-related skills may command a premium relative to otherwise comparable workers, while starting wages decline in cells where those skills become more prevalent. The authors treat these skill-based exercises as descriptive conditional associations, not causal returns to acquiring GenAI skills, because reported skills may respond to wages and worker composition."
+    }
+  ,
+    {
+      "id": "korinek-jones-econ-scenarios-2026",
+      "title": "Economic Scenarios for Transformative AI",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "publisher": "The Anthropic Institute (Korinek, Jones, Sacher, Cotter, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-01",
+      "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
     }
   ]
 }
