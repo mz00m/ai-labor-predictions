@@ -1,0 +1,142 @@
+{
+  "week": "2026-W38",
+  "generatedAt": "2026-09-14T14:47:02.590Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "NY Fed: Businesses Using AI to Transform Work, Not Cut Jobs",
+        "summary": "Three years of NY Fed regional business surveys find that AI adoption is accelerating but firms are primarily redeploying workers rather than eliminating positions outright. The data suggest workforce transformation—task restructuring and upskilling—is the dominant near-term employer response to AI. This challenges displacement-centric narratives and points instead to within-firm labor reallocation (NY Fed Liberty Street Economics, September 2026).",
+        "source": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+        "authors": [],
+        "publishedAt": "2026-09-01",
+        "score": 0.281,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "libertystreeteconomics-ny-fed-businesses-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Revelio RPLS: US Economy Adds Only 36.5k Jobs in August; AI-Exposed Occupations Weakening",
+        "summary": "Revelio Public Labor Statistics recorded a sharply below-trend 36,500 net jobs added in August 2026, while active job postings declined a further 3%. Critically, Revelio's AI Labor Market Tracker shows employment deteriorating most in occupations with the highest AI exposure, suggesting early displacement pressure is concentrating in white-collar and routine cognitive roles. The divergence between aggregate resilience and occupation-level weakness is a key signal to watch (Revelio Labs, September 2026).",
+        "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+        "authors": [],
+        "publishedAt": "2026-09-02",
+        "score": 0.218,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "reveliolabs-revelio-rpls-us-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "data_point",
+          "value": -6,
+          "confidenceLow": -6,
+          "confidenceHigh": -6,
+          "quote": "Since before ChatGPT, employment in the most AI-exposed occupations is down around 6% relative to the least-exposed occupations"
+        },
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI-exposed occupation employment gap reaches 19% for workers aged 22–25",
+          "quote": "with the gap reaching 19% among workers aged 22–25"
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Most AI-exposed firms see fewer layoffs than least-exposed firms",
+          "quote": "The most AI-exposed firms are seeing fewer layoffs than the least-exposed firms, rather than more."
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Pace of new firm AI adoption has slowed from its spring 2026 peak",
+          "quote": "the pace of new firm AI adoption has slowed from its spring peak"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Employment weakening in most AI-exposed occupations, especially younger workers",
+          "quote": "Employment continues to weaken in the occupations most exposed to AI, particularly for younger workers."
+        },
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "AI-exposed occupation employment gap largest (19%) among workers aged 22–25",
+          "quote": "with the gap reaching 19% among workers aged 22–25"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-adopting firms expand employment relative to non-adopters, gains in senior roles",
+          "quote": "AI-adopting firms continue to expand employment relative to non-adopters, although adopters were already growing faster before adoption and the gains remain concentrated in senior roles."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Fed FEDS Note: Publicly Available Indicators to Track the AI Buildout and Its Economic Impact",
+        "summary": "Fed economists Soto, Thieu, and Allen catalogue publicly available, high-frequency indicators—covering capital expenditure, chip shipments, electricity demand, and labor market signals—that can be used to track the AI buildout in near-real time. The note provides a structured framework for policymakers to assess whether AI investment is translating into broader economic and productivity effects. It is among the most policy-relevant Fed publications on AI measurement to date (Federal Reserve Board FEDS Notes, July/September 2026).",
+        "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+        "authors": [
+          "Paul E. Soto",
+          "Mason Thieu",
+          "Jeffrey S. Allen"
+        ],
+        "publishedAt": "2026-09-14",
+        "score": 0.467,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "federalreserve-fed-feds-note-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Substitution vs. Complementarity: How Both Forces Drive Labor Market Polarization",
+        "summary": "Using granular occupational task data and longitudinal employment trends, Li (2026) finds that AI simultaneously substitutes for routine cognitive tasks while complementing high-skill analytical work, producing a polarization effect that compresses middle-skill employment and widens the wage gap between top and bottom skill deciles. The study identifies a tipping threshold in task routineness beyond which substitution dominates complementarity. These findings have direct implications for entry-level and mid-career wage trajectories (OpenAlex, September 2026).",
+        "source": "https://doi.org/10.71222/yyc45228",
+        "authors": [
+          "Jian Li"
+        ],
+        "publishedAt": "2026-09-10",
+        "doi": "10.71222/yyc45228",
+        "score": 0.337,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "doi-ai-substitution-vs-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI and the Screen Entertainment Industries: Value-Chain Disruption Across Film and TV",
+        "summary": "Finney (2026) maps AI's integration across the screen entertainment value chain—from pre-production scripting tools through post-production VFX and distribution—finding that creative and technical mid-tier roles face the sharpest near-term displacement pressure. The book argues that AI is compressing production budgets and reducing demand for contract and freelance crew at scale. It represents one of the most comprehensive sector-level treatments of AI's creative-industry labor impact published this cycle (Routledge, September 2026).",
+        "source": "https://doi.org/10.4324/9781003607922",
+        "authors": [
+          "Angus Finney"
+        ],
+        "publishedAt": "2026-09-09",
+        "doi": "10.4324/9781003607922",
+        "score": 0.235,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "creative-industry-displacement"
+      },
+      "sourceId": "doi-ai-and-the-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    }
+  ]
+}
