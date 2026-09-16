@@ -1,10 +1,10 @@
 {
-  "_comment": "Institutional research feeds polled weekly by the trackedInstitutions adapter. Each entry declares a feedType: 'rss', 'atom', or 'sitemap'. Failing institutions are skipped with a warning (not fatal). Sitemap mode is used when an institution has abandoned RSS but exposes a sitemap.xml \u2014 the adapter filters by lastmod date + URL path substring and fetches metadata per candidate page.",
+  "_comment": "Institutional research feeds polled weekly by the trackedInstitutions adapter. Each entry declares a feedType: 'rss', 'atom', or 'sitemap'. Failing institutions are skipped with a warning (not fatal). Sitemap mode is used when an institution has abandoned RSS but exposes a sitemap.xml — the adapter filters by lastmod date + URL path substring and fetches metadata per candidate page.",
   "_added": "2026-06-30",
   "_history": [
     "2026-06-30: initial scaffold. Discovered that many institutions abandoned RSS (Yale BL, Stanford DEL, Brookings, IMF Blog all return 200 but with empty/redirect bodies). Pivoted to sitemap-based polling for those, RSS for ones that still publish proper feeds (Hamilton Project verified working).",
     "2026-07-02: added Economic Innovation Group (EIG), Ramp Economics Lab (via /leading-indicators sub-sitemap), Revelio Labs, and Ara Kharazian's Econ Lab substack. Prompted by the Casselman NYT July 2 piece which named EIG/Goldschlag and Ramp/Revelio as the three most notable non-academic institutional voices on AI labor measurement.",
-    "2026-07-23: added 8 verified feeds surfaced by July 2026 ingest sessions: Stripe Economics, Fed FEDS Notes, NY Fed Liberty Street, FactSet Insight, Census Newsroom, Challenger Gray, OpenAI News, Guy Lichtinger substack. All RSS-verified with curl before adding. Skipped: Gusto (403 bot-block on all paths \u2014 rely on Google CSE), St. Louis Fed On the Economy (connection timeouts \u2014 content reachable via FRED adapter + FEDS Notes)."
+    "2026-07-23: added 8 verified feeds surfaced by July 2026 ingest sessions: Stripe Economics, Fed FEDS Notes, NY Fed Liberty Street, FactSet Insight, Census Newsroom, Challenger Gray, OpenAI News, Guy Lichtinger substack. All RSS-verified with curl before adding. Skipped: Gusto (403 bot-block on all paths — rely on Google CSE), St. Louis Fed On the Economy (connection timeouts — content reachable via FRED adapter + FEDS Notes)."
   ],
   "institutions": [
     {
@@ -31,7 +31,7 @@
       "feedType": "sitemap",
       "tier": 1,
       "pathInclude": "/publication",
-      "notes": "Canaries, AI Economic Indicators, Brynjolfsson group. Small sitemap (~1KB), may be an index \u2014 adapter resolves nested sitemaps automatically."
+      "notes": "Canaries, AI Economic Indicators, Brynjolfsson group. Small sitemap (~1KB), may be an index — adapter resolves nested sitemaps automatically."
     },
     {
       "publisher": "Brookings",
@@ -49,7 +49,7 @@
       "feedType": "sitemap",
       "tier": 2,
       "pathInclude": "/research/",
-      "notes": "Economic Index reports (Primitives Jan, Learning Curves Mar, Cadences Jun 2026) + labor research. No public RSS. Anthropic has commercial interest \u2014 apply Tier 2."
+      "notes": "Economic Index reports (Primitives Jan, Learning Curves Mar, Cadences Jun 2026) + labor research. No public RSS. Anthropic has commercial interest — apply Tier 2."
     },
     {
       "publisher": "Economic Innovation Group",
@@ -57,7 +57,7 @@
       "feedUrl": "https://eig.org/sitemap.xml",
       "feedType": "sitemap",
       "tier": 1,
-      "notes": "Nathan Goldschlag's shop; publishes rigorous measurement-focused research on AI labor impacts (see 'AI and Jobs: The Final Word' July 2026). Small sitemap \u2014 no pathInclude needed. Does NOT cover the Agglomerations Substack \u2014 that is a separate subdomain with its own entry."
+      "notes": "Nathan Goldschlag's shop; publishes rigorous measurement-focused research on AI labor impacts (see 'AI and Jobs: The Final Word' July 2026). Small sitemap — no pathInclude needed. Does NOT cover the Agglomerations Substack — that is a separate subdomain with its own entry."
     },
     {
       "publisher": "EIG Agglomerations",
@@ -65,7 +65,7 @@
       "feedUrl": "https://agglomerations.eig.org/feed",
       "feedType": "rss",
       "tier": 2,
-      "notes": "EIG's Substack, on a subdomain the eig.org sitemap does not reach. Carries the American Worker Project guest essays by outside economists \u2014 Chad Syverson's Aug 2026 productivity piece surfaced here and nowhere else, and was missed by the eig.org feed. Tier 2 by default (newsletter), but guest authors are often Tier 1 researchers writing outside peer review, so read the byline before assigning tier."
+      "notes": "EIG's Substack, on a subdomain the eig.org sitemap does not reach. Carries the American Worker Project guest essays by outside economists — Chad Syverson's Aug 2026 productivity piece surfaced here and nowhere else, and was missed by the eig.org feed. Tier 2 by default (newsletter), but guest authors are often Tier 1 researchers writing outside peer review, so read the byline before assigning tier."
     },
     {
       "publisher": "Ramp Economics Lab",
@@ -73,7 +73,7 @@
       "feedUrl": "https://ramp.com/sitemap/leading-indicators.xml",
       "feedType": "sitemap",
       "tier": 2,
-      "notes": "Ara Kharazian's Economics Lab publishes at /leading-indicators \u2014 firm-level spending data cross-referenced to Revelio Labs workforce records. The June 30 2026 'AI Jobs Impact' paper (heavy AI adopters +10% headcount, +12% entry-level) is the current headline finding."
+      "notes": "Ara Kharazian's Economics Lab publishes at /leading-indicators — firm-level spending data cross-referenced to Revelio Labs workforce records. The June 30 2026 'AI Jobs Impact' paper (heavy AI adopters +10% headcount, +12% entry-level) is the current headline finding."
     },
     {
       "publisher": "Revelio Labs",
@@ -82,7 +82,7 @@
       "feedType": "sitemap",
       "tier": 2,
       "pathInclude": "/news/",
-      "notes": "Labor market data firm publishing weekly analytical pieces on /news/. Nested sitemap index \u2014 adapter resolves automatically."
+      "notes": "Labor market data firm publishing weekly analytical pieces on /news/. Nested sitemap index — adapter resolves automatically."
     },
     {
       "publisher": "Econ Lab (Ara Kharazian)",
@@ -138,7 +138,7 @@
       "feedUrl": "https://www.challengergray.com/feed/",
       "feedType": "rss",
       "tier": 2,
-      "notes": "Monthly job-cuts report with AI-attribution category \u2014 the most-cited 'AI layoffs' source in press coverage. RSS verified 2026-07-23."
+      "notes": "Monthly job-cuts report with AI-attribution category — the most-cited 'AI layoffs' source in press coverage. RSS verified 2026-07-23."
     },
     {
       "publisher": "OpenAI News & Research",
@@ -146,7 +146,7 @@
       "feedUrl": "https://openai.com/news/rss.xml",
       "feedType": "rss",
       "tier": 2,
-      "notes": "OpenAI economic research (Jobs Transition Framework, Chatterji collaboration announcements). Direct page fetches 403 \u2014 RSS is the reliable channel. Verified 2026-07-23."
+      "notes": "OpenAI economic research (Jobs Transition Framework, Chatterji collaboration announcements). Direct page fetches 403 — RSS is the reliable channel. Verified 2026-07-23."
     },
     {
       "publisher": "Guy Lichtinger",
@@ -155,14 +155,24 @@
       "feedType": "rss",
       "tier": 3,
       "notes": "Seniority-biased technological change research line (with Hosseini-Maasoum). 4 papers from this author already ingested. RSS verified 2026-07-23."
+    },
+    {
+      "publisher": "US Census Bureau CES Working Papers",
+      "domain": "census.gov",
+      "feedUrl": "https://www2.census.gov/library/working-papers/2026/adrm/ces/",
+      "feedType": "directory",
+      "filePattern": "CES-WP-\\d\\d-\\d+\\.pdf$",
+      "tier": 1,
+      "notes": "The Census Newsroom RSS entry carries only press releases (BTOS, BFS) and does NOT reach CES working papers, which is how 'Graduating into Disruption' (CES-26-56, Sep 2026) was missed entirely by the W38 digest despite being the week's most significant release. This series already supplied tucker-qwi-early-career-hires-2026. No RSS exists, census.gov's sitemap is flat and stale-dated with no paper pages, and RePEc publishes no feed for the cen:wpaper series - the open www2 directory index is the only machine-readable listing. It carries no dates, so the adapter takes each paper's date from its Last-Modified header. Feed URL is year-scoped: roll to .../2027/adrm/ces/ in January."
     }
   ],
   "_planned_but_not_yet_working": [
-    "OECD AI Observatory (oecd.ai) \u2014 no functional RSS or sitemap discovered",
-    "IMF Blog (blogs.imf.org) \u2014 sitemap returns 403, RSS empty",
-    "Goldman Sachs Insights (goldmansachs.com/insights) \u2014 no public feed",
-    "Dallas Fed / Atlanta Fed / St Louis Fed research \u2014 RSS endpoints 404; would need custom HTML scrapers",
-    "IZA Discussion Papers \u2014 RSS endpoint 404",
-    "VoxEU / CEPR \u2014 RSS returns 403 (likely Cloudflare bot protection)"
-  ]
+    "OECD AI Observatory (oecd.ai) — no functional RSS or sitemap discovered",
+    "IMF Blog (blogs.imf.org) — sitemap returns 403, RSS empty",
+    "Goldman Sachs Insights (goldmansachs.com/insights) — no public feed",
+    "Dallas Fed / Atlanta Fed / St Louis Fed research — RSS endpoints 404; would need custom HTML scrapers",
+    "IZA Discussion Papers — RSS endpoint 404",
+    "VoxEU / CEPR — RSS returns 403 (likely Cloudflare bot protection)"
+  ],
+  "changelog": null
 }

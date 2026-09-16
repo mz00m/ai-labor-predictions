@@ -32,10 +32,14 @@ interface TrackedInstitution {
   publisher: string;
   domain: string;
   feedUrl: string;
-  feedType: "rss" | "atom" | "sitemap";
+  feedType: "rss" | "atom" | "sitemap" | "directory";
   tier: number;
   /** For sitemap mode: only include URLs whose path contains this substring */
   pathInclude?: string;
+  /** For directory mode: regex matching the filenames to collect from the index */
+  filePattern?: string;
+  /** For directory mode: page whose <a> titles name each file, for readable titles */
+  titleIndexUrl?: string;
   notes?: string;
 }
 
@@ -314,6 +318,66 @@ async function fetchFeedInstitution(
   return results;
 }
 
+/**
+ * Directory mode: an open file index (Apache-style) that lists documents but
+ * carries no dates. We read the filenames, then take each file's publication
+ * date from its Last-Modified header. Built for the Census CES working-paper
+ * series, which publishes no RSS, is absent from census.gov's sitemap, and has
+ * no RePEc feed — the directory is the only machine-readable listing there is.
+ */
+async function fetchDirectoryInstitution(
+  inst: TrackedInstitution,
+  query: string,
+  since: Date
+): Promise<RawItem[]> {
+  const html = await fetchWithRetry(
+    () =>
+      fetch(inst.feedUrl, {
+        headers: { "User-Agent": "jobsdata-digest/1.0" },
+        signal: AbortSignal.timeout(15000),
+      }).then((r) => {
+        if (!r.ok) throw new Error(`${inst.publisher} directory returned ${r.status}`);
+        return r.text();
+      }),
+    { label: inst.publisher }
+  );
+
+  const pattern = new RegExp(inst.filePattern ?? "[^\"/>]+\\.pdf", "g");
+  const names = [...new Set([...html.matchAll(/href="([^"]+)"/g)]
+    .map((m) => m[1])
+    .filter((h) => new RegExp(inst.filePattern ?? "\\.pdf$").test(h)))];
+  void pattern;
+
+  // Newest files last in these indexes; only HEAD the tail to stay cheap.
+  const recent = names.slice(-SITEMAP_MAX_PAGES_PER_INST);
+  const base = inst.feedUrl.endsWith("/") ? inst.feedUrl : inst.feedUrl + "/";
+
+  const items: RawItem[] = [];
+  for (const name of recent) {
+    const url = name.startsWith("http") ? name : base + name.replace(/^\.?\//, "");
+    try {
+      const head = await fetch(url, {
+        method: "HEAD",
+        headers: { "User-Agent": "jobsdata-digest/1.0" },
+        signal: AbortSignal.timeout(SITEMAP_PAGE_TIMEOUT_MS),
+      });
+      const lm = head.headers.get("last-modified");
+      if (!lm) continue;
+      const publishedAt = new Date(lm);
+      if (Number.isNaN(publishedAt.getTime()) || publishedAt < since) continue;
+      items.push({
+        title: `${inst.publisher}: ${name.split("/").pop()}`,
+        url,
+        publishedAt,
+        source: "trackedInstitutions",
+      });
+    } catch {
+      // A single unreachable file must not drop the whole institution.
+    }
+  }
+  return items;
+}
+
 async function fetchInstitution(
   inst: TrackedInstitution,
   query: string,
@@ -321,6 +385,9 @@ async function fetchInstitution(
 ): Promise<RawItem[]> {
   if (inst.feedType === "sitemap") {
     return fetchSitemapInstitution(inst, query, since);
+  }
+  if (inst.feedType === "directory") {
+    return fetchDirectoryInstitution(inst, query, since);
   }
   return fetchFeedInstitution(inst, query, since);
 }
