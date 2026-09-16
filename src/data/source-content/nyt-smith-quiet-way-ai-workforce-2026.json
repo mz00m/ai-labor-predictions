@@ -1,0 +1,14 @@
+{
+  "id": "nyt-smith-quiet-way-ai-workforce-2026",
+  "abstract": "New York Times economics piece arguing that AI's labor market effect is showing up quietly - through slower wage growth in exposed occupations and a pullback in hiring, especially for young workers - rather than through layoffs. Frames this against Dario Amodei's May 2025 prediction that AI could eliminate half of entry-level white-collar jobs and push unemployment above 10 percent; unemployment was 4.1 percent in August 2026.",
+  "keyFindings": [
+    "Liminal Capital estimated in August 2026 that about a third of jobs are more exposed to substitution than augmentation by AI, and that in those occupations new hires among workers aged 22 to 25 have fallen by a third since 2021 while firings barely budged.",
+    "The Edlich and Slok result across 321 occupations is regressive: service workers in administrative and support roles have seen a 24 percent decline in real wages and the bottom quarter of workers an 11 percent decline, while top earners have barely been affected.",
+    "Sector contraction: the US tech sector lost about 7,000 jobs in the latest month and roughly 48,000 over the year, and financial services has lost 100,000 jobs since the start of the year, taking the share of US adults employed by financial firms to its lowest level since 1981.",
+    "Average hourly earnings growth for rank-and-file workers fell from above 6 percent in 2022 to near 3 percent, which is unusual while unemployment is falling, and the labor share of national income is down about 10 percentage points from its late-1990s peak.",
+    "The mechanism described by employers is a raised hiring bar rather than dismissal: companies capture AI productivity gains by hiring less than they otherwise would, and by lowering pay offers for roles they now regard as commodifiable."
+  ],
+  "methodology": "Reporting, synthesising three quantitative sources - Edlich (Princeton) and Slok (Apollo) on 321 occupations, Liminal Capital on substitution exposure and early-career hiring, and Joey Politano on sector employment counts - alongside interviews with employers at Sogolytics, B2B eCommerce Agency and Bartesian.",
+  "qualifiers": "Tier 3 secondary reporting. The headline 6.7 figure comes from the Apollo study jobsdata.ai already carries as a primary, and the Times states it as a 'percent decline in real wage growth' where the primary states 6.7 percentage points of slower real wage growth - not the same quantity. The Liminal Capital and Politano figures are reported without linked papers, so they are carried here as directional signals rather than plotted. Employer anecdotes are illustrative and not representative.",
+  "fetchedAt": "2026-09-16"
+}

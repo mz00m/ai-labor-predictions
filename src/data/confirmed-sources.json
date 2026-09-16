@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-09-16",
-  "totalSources": 713,
-  "verifiedCount": 703,
+  "totalSources": 715,
+  "verifiedCount": 705,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -10128,6 +10128,37 @@
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions?\" National share answering yes: 22.4% for the two weeks ending 2026-08-09 (cycle 202617) and 23.2% for the two weeks ending 2026-08-23 (cycle 202618), up from 21.8% in the cycle ending 2026-07-26. Q24, six-month expectation of AI use, rose from 25.9% to 27.3% over the same cycles. Values are dated to reference-period end rather than publication date; collection for cycle 202618 ran 2026-08-24 to 2026-09-06.",
       "usedIn": [
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    }
+  ,
+    "jacobs-imas-economic-policy-agi-2026": {
+      "id": "jacobs-imas-economic-policy-agi-2026",
+      "title": "Economic Policy for AGI",
+      "url": "https://institute.deepmind.com/essays/economic-policy-for-agi/",
+      "publisher": "DeepMind Institute (Julian Jacobs, Alex Imas)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-09",
+      "excerpt": "Evaluates eleven redistributive and labor-market policies for an AGI transition across four dimensions - welfare and resilience, agency and voice, feasibility and efficiency, and durability across scenarios - and proposes sequencing them against observable economic triggers rather than picking one. Three least-regret interventions by scenario: expanded UI, EITC and employer-led retraining for mild disruption; EITC transitioning to a Negative Income Tax if prolonged unemployment spells and falling median wages outrun job reinstatement; and a Universal Basic Capital backstop if labor's share of GDP declines persistently while capital returns rise. The policy ratings come from 51 AI agent personas built on survey data from 51 real economists (EDSL, Horton's method), not from 51 economists rating policies directly. Real US survey findings reported alongside them: 85% support publicly funded worker retraining, 72% unemployment insurance, 54% universal basic capital.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    }
+  ,
+    "nyt-smith-quiet-way-ai-workforce-2026": {
+      "id": "nyt-smith-quiet-way-ai-workforce-2026",
+      "title": "The Quiet Way A.I. Is Hitting the Work Force",
+      "url": "https://www.nytimes.com/2026/09/16/business/ai-raises-hiring.html",
+      "publisher": "The New York Times (Talmon Joseph Smith)",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-16",
+      "excerpt": "Reports that AI is registering through slower wage growth and reduced hiring rather than layoffs. Carries three things not already on the site: Liminal Capital's August estimate that new hires aged 22-25 in substitution-exposed occupations are down by a third since 2021 while firings barely moved; the distributional split of the Edlich/Slok result, with service roles at -24% real wages and the bottom quarter at -11% while top earners are barely affected; and sector counts of roughly 48,000 tech jobs lost over the year and 100,000 in financial services since January, with the adult share employed at financial firms the lowest since 1981. The headline 6.7 figure is secondary here - jobsdata.ai holds it from the Apollo primary, which states it as percentage points of slower real wage growth rather than a percent decline.",
+      "usedIn": [
+        "early-career-employment-decline",
+        "median-wage-impact",
+        "tech-sector-displacement",
+        "financial-services-displacement"
       ],
       "verified": true,
       "synthetic": false

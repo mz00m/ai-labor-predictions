@@ -292,6 +292,16 @@
       "evidenceTier": 1,
       "label": "Census CES: top-decile AI-exposed majors 5pp less likely to be employed the quarter after graduation"
     }
+  ,
+    {
+      "date": "2026-09-16",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-smith-quiet-way-ai-workforce-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Liminal Capital via NYT: new hires aged 22-25 in substitution-exposed jobs down a third since 2021"
+    }
   ],
   "sources": [
     {
@@ -543,6 +553,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-10",
       "excerpt": "We find that graduates in the top decile of AI-exposed majors experienced a five-percentage point decline in their likelihood of employment in the quarter after graduation in comparison to graduates in the bottom six deciles of AI exposure. Exposure is assigned by college major rather than by occupation, so the assignment is fixed years before labor market entry. Reported in percentage points from a linear probability model, not as a relative percent decline, so it is not directly comparable to the estimates plotted on this chart."
+    }
+  ,
+    {
+      "id": "nyt-smith-quiet-way-ai-workforce-2026",
+      "title": "The Quiet Way A.I. Is Hitting the Work Force",
+      "url": "https://www.nytimes.com/2026/09/16/business/ai-raises-hiring.html",
+      "publisher": "The New York Times (Talmon Joseph Smith)",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-16",
+      "excerpt": "Liminal Capital, an investment firm, estimated in August that about a third of jobs appear to be more exposed to substitution than augmentation by A.I. In those occupations, new hires among workers ages 22 to 25 have fallen by a third since 2021, even as firings have barely budged. A hiring-flow measure against a 2021 baseline, not an employment-level gap against less-exposed occupations, so it is not directly comparable to the estimates plotted on this chart."
     }
   ]
 }

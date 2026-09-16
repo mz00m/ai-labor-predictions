@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Jacobs & Imas (DeepMind Institute)",
+    title: "Economic Policy for AGI",
+    summary:
+      "The first serious attempt to compare the policy options for an AI transition on a common rubric rather than argue for one. Jacobs and Imas rate eleven interventions — retraining, wage insurance, EITC, a jobs guarantee, UI, negative income tax, UBI, a sovereign AI dividend, universal basic capital, universal basic services and industrial policy — across welfare, agency, feasibility and durability under three scenarios. The central argument is against picking one: since nobody can say which scenario arrives, policies should be designed now and sequenced against observable triggers. Expanded UI, EITC and employer-led retraining for mild disruption; EITC converting to a negative income tax if unemployment spells lengthen and median wages fall faster than jobs are reinstated; universal basic capital held in reserve for a sustained decline in labor's share of GDP. The useful output is the tension between dimensions. EITC tops feasibility at 79.8 and sits near the bottom on durability under full transformation at 31.9. UBC inverts it: first on agency at 76.3 and 93.5 on durability under transformation, but second-last on feasibility at 33.1. The case against UBI is made on efficiency rather than ideology — blunt, expensive, and it leaves recipients no stake in the automated economy. One caveat to hold firmly: the scores come from 51 AI agent personas built on survey data from 51 real economists, not from 51 economists, and that distinction gets lost fast in summary. The real survey numbers are separate and worth more — 85% of Americans back publicly funded retraining, 72% UI, 54% UBC.",
+    date: "Jul 9",
+    url: "https://institute.deepmind.com/essays/economic-policy-for-agi/",
+  },
+  {
     author: "Orr, Tucker & Warren (Census CES)",
     title: "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The third year of the NY Fed's AI module, and the first where a majority of firms on both sides of the survey say yes. Service-firm adoption went 25% to 40% to 61%; manufacturers went 16% to 26% to 51%. That is a steeper curve than any national series shows, and the reason to trust it is that the bar is higher, not lower — firms using AI only as a search tool are counted as non-users. The finding worth carrying is the gap the same survey opens between adoption and use. Three-quarters of service firms and more than 90% of manufacturers call their AI investment minimal to modest, and among firms that do use AI, the median one has just 17% of its workers on it in services and 7% in manufacturing. Very few sources measure firm adoption and within-firm worker uptake in the same instrument, and here they differ by roughly a factor of four. On labor, the channels roughly cancel: 4% of service adopters laid anyone off because of AI (from 1% last year), 15% hired fewer than they otherwise would have, 13% hired more, and just over a third retrained — retraining exceeds every displacement channel measured, which is where the title comes from. Two limits worth holding. This is New York State and northern New Jersey, a footprint tilted toward finance, information and professional services, so the 61% cannot be set against the national Census figure of roughly 22%. And every workforce number is a firm attributing its own hiring decision to AI, with no payroll check behind it.",
     date: "Sep 1",
     url: "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
-  },
-  {
-    author: "Chad Syverson (EIG)",
-    title: "Understanding AI and Productivity",
-    summary:
-      "A co-author of the productivity J-curve paper returns to the question seven years on and refuses to close it. The value here is the discipline. Syverson reports that labor productivity ran about 1.5% a year through the 2010s and has run about 2.2% since mid-2022, then argues against himself: the acceleration started when AI investment was still small relative to the economy, and its timing matches the pandemic-era jump in labor market churn and business formation. His test is duration rather than magnitude, which is the right test — the longer the acceleration holds, the harder it gets to explain without AI. The original contribution is a cross-sector scatter of each sector's change in contribution to economy-wide productivity growth against its employment-weighted BTOS adoption rate. The correlation is positive and he tells you plainly it cannot be separated from chance; drop retail, a large accelerator with low adoption, and it more than doubles — a move he calls treading on thin statistical ice and declines to lean on. Anyone quoting the ex-retail number as evidence AI is raising productivity is quoting past the author. Two things worth carrying: why productivity growth does not mechanically destroy jobs (output is not fixed, lower costs cut prices, demand rises, slower-growth sectors absorb workers), and the calibration that past general-purpose technologies added 1 to 1.5 points to annual growth for a decade or two, so the 5-10% some boosters claim has no economy-wide precedent. On his own J-curve, he says only that it is too early to know where we are.",
-    date: "Aug 28",
-    url: "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
   },
 ];
 

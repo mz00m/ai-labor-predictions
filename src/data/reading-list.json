@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Economic Policy for AGI",
+      "author": "Julian Jacobs and Alex Imas",
+      "publisher": "DeepMind Institute",
+      "date": "2026-07-09",
+      "url": "https://institute.deepmind.com/essays/economic-policy-for-agi/",
+      "takeaway": "The first serious attempt to compare the policy options for an AI transition on a common rubric rather than argue for one, and worth reading for the structure even where you disagree with the scores. Jacobs and Imas rate eleven interventions - retraining, wage insurance, EITC, a jobs guarantee, unemployment insurance, negative income tax, UBI, a sovereign AI dividend, universal basic capital, universal basic services and industrial policy - across welfare, agency, feasibility and durability under three scenarios. The central argument is against picking one: since nobody can say which scenario will arrive, policies should be designed now and sequenced against observable triggers. Expanded UI, EITC and employer-led retraining for mild disruption; EITC converting to a negative income tax if unemployment spells lengthen and median wages fall faster than jobs are reinstated; universal basic capital held in reserve for a sustained decline in labor's share of GDP. The most useful output is the tension between dimensions. EITC tops feasibility at 79.8 and sits near the bottom on durability under full transformation at 31.9. Universal basic capital inverts that, leading on agency at 76.3 and scoring 93.5 on durability under transformation while ranking last but one on feasibility at 33.1. The case against UBI is made on efficiency rather than ideology: it is blunt, expensive, and leaves recipients with no stake in the automated economy. Read the scores with one caveat firmly in mind. They come from 51 AI agent personas built on survey data from 51 real economists, not from 51 economists - the tables say so, and the distinction gets lost fast in summary. The real survey numbers in the piece are separate and worth more: 85 percent of Americans back publicly funded retraining, 72 percent unemployment insurance, 54 percent universal basic capital. Published in July and updated in September; note also that Google DeepMind is not a disinterested party in how AGI policy gets framed.",
+      "weekFeatured": "2026-09-16",
+      "tier": 2
+    },
+    {
       "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
       "author": "Cody Orr, Lee C. Tucker and Lawrence Warren",
       "publisher": "US Census Bureau, Center for Economic Studies (CES-WP-26-56)",

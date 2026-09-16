@@ -747,6 +747,16 @@
       "evidenceTier": 2,
       "label": "Anthropic Institute: cognitive wage -0.3% (substantial) to -11.5% (extreme) vs the no-AI path"
     }
+  ,
+    {
+      "date": "2026-09-16",
+      "direction": "down",
+      "sourceIds": [
+        "nyt-smith-quiet-way-ai-workforce-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Edlich/Slok via NYT: wage hit concentrated low - service roles -24%, bottom quarter -11%, top earners spared"
+    }
   ],
   "sources": [
     {
@@ -1389,6 +1399,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-01",
       "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
+    }
+  ,
+    {
+      "id": "nyt-smith-quiet-way-ai-workforce-2026",
+      "title": "The Quiet Way A.I. Is Hitting the Work Force",
+      "url": "https://www.nytimes.com/2026/09/16/business/ai-raises-hiring.html",
+      "publisher": "The New York Times (Talmon Joseph Smith)",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-16",
+      "excerpt": "Ms. Edlich and Mr. Slok found that occupations highly exposed to A.I. have experienced a 6.7 percent decline in real wage growth since 2023 and that the effect is harshest among lower earners. Service workers, often in administrative or support roles, have experienced a 24 percent decline in real wages. The bottom quarter of workers has seen an 11 percent decline. Top earners, however, have barely been affected. The headline 6.7 figure is already carried on this chart from the Apollo primary, which states it as percentage points of slower real wage growth rather than a percent decline."
     }
   ]
 }

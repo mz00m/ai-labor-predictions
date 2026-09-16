@@ -367,6 +367,16 @@
       "evidenceTier": 3,
       "label": "Dimon (JPMorgan Q2 2026): AI already cut 30-40% of staff in some units; most redeployed, not laid off"
     }
+  ,
+    {
+      "date": "2026-09-16",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-smith-quiet-way-ai-workforce-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "NYT: financial services down ~100,000 jobs since January; adult share at financial firms lowest since 1981"
+    }
   ],
   "sources": [
     {
@@ -723,6 +733,16 @@
       "datePublished": "2026-02-17",
       "excerpt": "Governor Barr's speech at the NY Association for Business Economics (Feb 17, 2026): 'AI could contribute between 0.3 and 0.9 of a percentage point to annual total factor productivity growth over the next decade.' '17 percent of businesses in the U.S. Census Business Trends and Outlook Survey report using AI in their business functions; about 30 percent of businesses with more than 250 employees report using AI.' 'Early-career workers in occupations highly exposed to AI — such as software developers and customer service representatives — have experienced a decline in employment relative to other early-career workers in less exposed fields.' A NY Fed survey found firms 'plan to retrain their existing workforce' rather than pursue significant layoffs.",
       "dateAdded": "2026-07-21"
+    }
+  ,
+    {
+      "id": "nyt-smith-quiet-way-ai-workforce-2026",
+      "title": "The Quiet Way A.I. Is Hitting the Work Force",
+      "url": "https://www.nytimes.com/2026/09/16/business/ai-raises-hiring.html",
+      "publisher": "The New York Times (Talmon Joseph Smith)",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-16",
+      "excerpt": "And financial services, another sector highly exposed to A.I., is experiencing an outright contraction in employment levels, with 100,000 jobs lost since the start of the year. The share of U.S. adults employed by financial firms, a long reliable vault into the upper middle class, or higher, has fallen to the lowest level since 1981."
     }
   ]
 }

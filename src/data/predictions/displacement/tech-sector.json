@@ -957,6 +957,16 @@
       "evidenceTier": 1,
       "label": "Census CES: exposed grads' share of Information jobs -3pp, Professional/Scientific/Technical -6pp"
     }
+  ,
+    {
+      "date": "2026-09-16",
+      "direction": "up",
+      "sourceIds": [
+        "nyt-smith-quiet-way-ai-workforce-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "Politano via NYT: US tech sector lost about 7,000 jobs last month and roughly 48,000 over the past year"
+    }
   ],
   "sources": [
     {
@@ -1782,6 +1792,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-10",
       "excerpt": "The share of top-decile jobs in the Professional, Scientific, and Technical sector, the largest source of high paying jobs for highly-exposed majors, contracted by nearly six percentage points. The highest paying sector, Information, shrunk its share of exposed graduate employment by over three percentage points, while Accommodation & Food Services and Retail Trade each gained more than two percentage points."
+    }
+  ,
+    {
+      "id": "nyt-smith-quiet-way-ai-workforce-2026",
+      "title": "The Quiet Way A.I. Is Hitting the Work Force",
+      "url": "https://www.nytimes.com/2026/09/16/business/ai-raises-hiring.html",
+      "publisher": "The New York Times (Talmon Joseph Smith)",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-16",
+      "excerpt": "But the U.S. tech sector overall is hemorrhaging jobs, losing about 7,000 last month and roughly 48,000 over the past year, according to Joey Politano, an economic analyst."
     }
   ],
   "marketIds": {
