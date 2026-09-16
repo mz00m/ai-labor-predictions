@@ -1,0 +1,12 @@
+{
+  "id": "census-btos-ai-biweekly-sep-2026",
+  "abstract": "Census Bureau Business Trends and Outlook Survey, biweekly cycles 202617 and 202618. Question 7 asks whether a business used artificial intelligence in any of its business functions in the last two weeks; Question 24 asks whether it expects to within six months. This is the most rigorous firm-side AI adoption measure available, and the series jobsdata.ai charts on ai-adoption-rate. Values are dated to reference-period end rather than publication date, which for BTOS differ by six to seven weeks.",
+  "keyFindings": [
+    "National AI use reached 23.2 percent of firms for the two weeks ending 2026-08-23 (cycle 202618), up from 22.4 percent for the cycle ending 2026-08-09 and 21.8 percent for the cycle ending 2026-07-26 - three consecutive increases.",
+    "The six-month expectation of AI use (Q24) rose to 27.3 percent from 25.9 percent across the same two cycles, so the gap between current use and expected use widened rather than closed.",
+    "Firm-share measures overstate the share of work actually done with AI: adopters use it on a minority of tasks and on only some instances of each, which is why modeling work such as Korinek et al. anchors task-level diffusion near 0.10 while firm adoption reads above 20 percent."
+  ],
+  "methodology": "Biweekly establishment survey run by the Census Bureau across a large national sample, published as experimental data. Estimates are collected over a two-week window covering a two-week reference period that ends six to seven weeks before publication. The November 2025 rewording from AI use 'in producing goods or services' to 'in any business function' is a same-construct instrument change; Census publishes one continuous series and so does jobsdata.ai.",
+  "qualifiers": "A firm-level adoption share, not a measure of how much work AI performs. It counts any use in the prior two weeks, so it sets a low bar per firm and cannot be compared directly with posting-based measures (roughly 5.9 percent of eligible hiring firms) or with regional surveys such as the New York Fed's, which reads far higher on a narrower footprint. The biannual AI Supplement is a separate instrument with an 11-week reference window and should not be treated as the latest point in this series.",
+  "fetchedAt": "2026-09-16"
+}

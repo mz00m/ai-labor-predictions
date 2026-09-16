@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 21.8,
+  "currentValue": 23.2,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (21.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
@@ -149,6 +149,28 @@
       "value": 21.8,
       "sourceIds": [
         "census-btos-ai-biweekly-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    }
+  ,
+    {
+      "date": "2026-08-09",
+      "value": 22.4,
+      "sourceIds": [
+        "census-btos-ai-biweekly-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    }
+  ,
+    {
+      "date": "2026-08-23",
+      "value": 23.2,
+      "sourceIds": [
+        "census-btos-ai-biweekly-sep-2026"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -1690,6 +1712,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-08-28",
       "excerpt": "Guest essay for EIG's American Worker Project by Chad Syverson, co-author of the original productivity J-curve paper. On the macro series: labor productivity \"grew throughout the 2010s by about 1.5 percent per year, roughly half of its growth rate during the productivity boom of 1995-2004,\" and \"productivity from mid-2022 on has maintained a faster-than-2010s trajectory involving annual growth of about 2.2 percent.\" He declines to attribute this to AI: \"The timing leans against AI being the sole initial cause,\" since the acceleration began when AI investment was small and coincided with pandemic-era churn and business formation; his stated test is duration. A sustained 1.5-to-2.2 move would leave GDP per capita \"7 percent higher than otherwise\" after a decade, against nearly 3.0 percent annual growth in the 1995-2004 boom and \"in excess of 2.5 percent for a decade or longer\" in past GPT booms. Original cross-sector analysis (Figure 2) plots each sector's change in contribution to economy-wide productivity growth (2019-25 minus 2007-19) against its employment-weighted Census BTOS 2025 AI adoption rate: the correlation is positive but \"weak enough, relative to the number of sectors, that one cannot rule out chance as its source\"; excluding retail it is \"more than twice as large,\" a specification he calls \"treading on thin statistical ice.\" On employment: \"At least over the first couple years of its use, AI has had remarkably little employment effect, positive or negative.\" J-curve restatement: understatement periods \"could extend well beyond a decade, and cumulative productivity mismeasurement of double-digits percent,\" and \"Where are we on the AI J-curve now? It is too early to know that with much precision.\""
+    }
+  ,
+    {
+      "id": "census-btos-ai-biweekly-sep-2026",
+      "title": "Business Trends and Outlook Survey \u2014 Biweekly AI Use (cycles 202617-202618)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-06",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions?\" National share answering yes: 22.4% for the two weeks ending 2026-08-09 (cycle 202617) and 23.2% for the two weeks ending 2026-08-23 (cycle 202618), up from 21.8% in the cycle ending 2026-07-26. Q24, six-month expectation of AI use, rose from 25.9% to 27.3% over the same cycles. Values are dated to reference-period end rather than publication date; collection for cycle 202618 ran 2026-08-24 to 2026-09-06."
     }
   ]
 }
