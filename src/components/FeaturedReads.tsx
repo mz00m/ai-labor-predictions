@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Orr, Tucker & Warren (Census CES)",
+    title: "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+    summary:
+      "The first study here to identify AI exposure by field of study rather than occupation, and that choice is the reason to take it seriously: a major is picked years before anyone meets a hiring manager, which sidesteps the anticipation problem in occupation-based measures, where employers may be pulling back from roles they expect AI to take rather than work it already does. Census PSEO and LEHD administrative records, 6,665,500 bachelor's graduates, about 29% of all US bachelor's degrees conferred 2016-2024. Graduates in the most AI-exposed decile of majors — largely computer science, information systems and software-adjacent fields — became 5 percentage points less likely to be employed in the quarter after graduation and earned about 13% less, both against the least exposed fields and both starting immediately after ChatGPT. The recession literature puts initial earnings losses from graduating into a downturn at 9-10%, so this is worse, though concentrated in a few fields rather than economy-wide. The decomposition is the most useful part: roughly half the decline is lower pay inside the same industries and half is graduates moving into worse-paying ones. The share entering Professional, Scientific and Technical services fell almost 6 points and Information over 3, while Accommodation and Food Services and Retail each gained more than 2. Counting that shift, top-decile earnings fell 15%, to levels last seen before 2016. Two honest limits: the effect attenuates to about 5% after two years, and the sampled institutions skew large, public and research-heavy.",
+    date: "Sep 10",
+    url: "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+  },
+  {
     author: "Korinek, Jones, Sacher, Cotter & McCrory (Anthropic Institute)",
     title: "Economic Scenarios for Transformative AI",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "A co-author of the productivity J-curve paper returns to the question seven years on and refuses to close it. The value here is the discipline. Syverson reports that labor productivity ran about 1.5% a year through the 2010s and has run about 2.2% since mid-2022, then argues against himself: the acceleration started when AI investment was still small relative to the economy, and its timing matches the pandemic-era jump in labor market churn and business formation. His test is duration rather than magnitude, which is the right test — the longer the acceleration holds, the harder it gets to explain without AI. The original contribution is a cross-sector scatter of each sector's change in contribution to economy-wide productivity growth against its employment-weighted BTOS adoption rate. The correlation is positive and he tells you plainly it cannot be separated from chance; drop retail, a large accelerator with low adoption, and it more than doubles — a move he calls treading on thin statistical ice and declines to lean on. Anyone quoting the ex-retail number as evidence AI is raising productivity is quoting past the author. Two things worth carrying: why productivity growth does not mechanically destroy jobs (output is not fixed, lower costs cut prices, demand rises, slower-growth sectors absorb workers), and the calibration that past general-purpose technologies added 1 to 1.5 points to annual growth for a decade or two, so the 5-10% some boosters claim has no economy-wide precedent. On his own J-curve, he says only that it is too early to know where we are.",
     date: "Aug 28",
     url: "https://agglomerations.eig.org/p/understanding-ai-and-productivity",
-  },
-  {
-    author: "Brynjolfsson, Chandar & Chen",
-    title: "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of AI",
-    summary:
-      "The third vintage of the most-cited paper in the field, now with ADP payroll data through June 2026 — and it changes its own headline measure. Earlier versions led with a regression estimate adjusting for firm shocks (13%, then 16%). This one leads with the simpler descriptive number that needs no modeling choices: employment of 22-25 year olds in AI-exposed occupations stands 19% below where it would be had it kept pace with less-exposed peers, up from 15% on the same measure a year ago. Experienced workers show no comparable gap, and Fact 1 remains that there is no economy-wide displacement — the ADP sample grew about 6%. The most useful thing here is the authors arguing against themselves. Education is the one control that bites (the gap attenuates from -18pp to -9pp), and they present the two estimates as bracketing a range rather than picking the flattering one, because generative AI substitutes best for exactly the codified knowledge schooling produces. They also concede the magnitude is ADP-specific: the ACS gap is -2.2pp with a confidence interval spanning zero against -13.2pp in ADP, though the two agree closely within white-collar work. Adjustment runs through hiring, not separations or pay.",
-    date: "Aug 12",
-    url: "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
   },
 ];
 

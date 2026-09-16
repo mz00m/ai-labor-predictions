@@ -318,6 +318,16 @@
       "evidenceTier": 2,
       "label": "Stripe: ~40% of new businesses now in metros under 1M people; frontier AI labs still 80% in SF"
     }
+  ,
+    {
+      "date": "2026-09-10",
+      "direction": "up",
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES: self-employment among top-decile grads +0.48pp vs +0.06pp for the least exposed"
+    }
   ],
   "sources": [
     {
@@ -576,6 +586,16 @@
       "datePublished": "2026-08-27",
       "excerpt": "Stripe Economics analysis of where AI-era businesses are forming, using Stripe sign-up data by metro. \"Close to 40% of new businesses on Stripe this year are in metros with fewer than one million people, up 10% relative to four years ago.\" \"This year, twice as many new businesses were formed per person in Cheyenne, Wyoming than in New York City; in 2022, the rates of business formation in both cities were equal.\" Within major metros, \"close to 80% of sign-ups in major metropolitan areas are outside of the city center and high-density inner ring\"; Houston \"saw 37% of new businesses forming in the outer suburbs this year, up four percentage points relative to 2023.\" The shift \"is also reflected in Census data and is roughly one third as large as the COVID-era move away from major cities.\" Frontier AI work is the exception: \"Almost 80% of AI businesses closest to the technological frontier (the labs) are in San Francisco alone,\" and 50% of AI product companies are in San Francisco or top-10 metros. Authors caution that AI cannot be cleanly disentangled from remote work, though formation \"appears uncorrelated with work from home intensity.\"",
       "dateAdded": "2026-08-27"
+    }
+  ,
+    {
+      "id": "orr-tucker-warren-ai-exposed-majors-2026",
+      "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+      "publisher": "US Census Bureau, Center for Economic Studies (Orr, Tucker, Warren)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-10",
+      "excerpt": "From 2022 to 2024, the self-employment rate among graduates in the top decile of AI exposure increased by 0.48 percentage points, from 1.01 percent to 1.49 percent, while the self-employment rate for the bottom six deciles of graduates increased by only 0.06 percentage points."
     }
   ]
 }

@@ -282,6 +282,16 @@
       "evidenceTier": 3,
       "label": "Economist/BLS: 20-24 unemployment gap vs overall rate near a multi-decade low"
     }
+  ,
+    {
+      "date": "2026-09-10",
+      "direction": "up",
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES: top-decile AI-exposed majors 5pp less likely to be employed the quarter after graduation"
+    }
   ],
   "sources": [
     {
@@ -523,6 +533,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-04",
       "excerpt": "the gap between unemployment among 20-24-year-olds and the overall rate is close to a multi-decade low"
+    }
+  ,
+    {
+      "id": "orr-tucker-warren-ai-exposed-majors-2026",
+      "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+      "publisher": "US Census Bureau, Center for Economic Studies (Orr, Tucker, Warren)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-10",
+      "excerpt": "We find that graduates in the top decile of AI-exposed majors experienced a five-percentage point decline in their likelihood of employment in the quarter after graduation in comparison to graduates in the bottom six deciles of AI exposure. Exposure is assigned by college major rather than by occupation, so the assignment is fixed years before labor market entry. Reported in percentage points from a linear probability model, not as a relative percent decline, so it is not directly comparable to the estimates plotted on this chart."
     }
   ]
 }

@@ -5,7 +5,7 @@
   "description": "Projected change in real wages for junior positions across AI-exposed industries by 2030. Sources measure junior status by both tenure (0-2 years experience) and rank within the firm hierarchy \u2014 the wage decline appears in junior roles at every age, not only among young workers.",
   "category": "wages",
   "unit": "% wage change",
-  "currentValue": -3.1,
+  "currentValue": -6.9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -60,6 +60,18 @@
       "evidenceTier": 2,
       "metricType": "employment",
       "dataType": "observed"
+    }
+  ,
+    {
+      "date": "2026-09-10",
+      "value": -13,
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "sampleSize": 6665500
     }
   ],
   "overlays": [
@@ -584,6 +596,26 @@
       ],
       "evidenceTier": 2,
       "label": "Azar et al.: junior wage declines span all ages, not just under-30s"
+    }
+  ,
+    {
+      "date": "2026-09-10",
+      "direction": "down",
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES: with the shift into lower-wage sectors, top-decile earnings fell 15%, to pre-2016 levels"
+    }
+  ,
+    {
+      "date": "2026-09-10",
+      "direction": "neutral",
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES: the 13% initial earnings gap attenuates to ~7% after a year and ~5% after two years"
     }
   ],
   "sources": [
@@ -1138,6 +1170,16 @@
       "datePublished": "2026-08-21",
       "excerpt": "By 2026, moving from the 10th to the 90th percentile of exposure is associated with wage declines of approximately 7.5% for junior positions, 3.2% for mid-level positions, and 1.8% for senior positions. The senior estimate is not statistically significant. Within junior positions, we see significant wage declines across all age groups, including workers older than 40. The large junior effect is therefore not simply a young-worker effect. Wage declines appear throughout the junior age distribution and are largest among older juniors. Seniority is measured on Revelio's ordinal hierarchy (scores 1-2 = junior), which is a rank measure rather than the 0-2 years of experience framing used elsewhere on this graph.",
       "dateAdded": "2026-08-31"
+    }
+  ,
+    {
+      "id": "orr-tucker-warren-ai-exposed-majors-2026",
+      "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+      "publisher": "US Census Bureau, Center for Economic Studies (Orr, Tucker, Warren)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-10",
+      "excerpt": "They also saw declines in associated quarterly earnings of about thirteen percent relative to the least exposed fields, attenuating to about five percent after two years. Administrative PSEO/LEHD records on 6,665,500 bachelor's graduates, roughly 29% of US bachelor's degrees conferred 2016-2024. \"This earnings decline is comparable in magnitude to the earnings losses associated with graduating into a large recession\" - larger, in fact, than the nine to ten percent initial losses in the recession literature. Roughly half the decline is lower pay within the same sectors and half is a shift in industry mix toward lower-wage sectors such as restaurants and retail."
     }
   ]
 }

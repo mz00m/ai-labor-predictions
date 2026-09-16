@@ -947,6 +947,16 @@
       "evidenceTier": 3,
       "label": "Economist: engineers, developers, data scientists ~730k jobs above trend since 2022"
     }
+  ,
+    {
+      "date": "2026-09-10",
+      "direction": "up",
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES: exposed grads' share of Information jobs -3pp, Professional/Scientific/Technical -6pp"
+    }
   ],
   "sources": [
     {
@@ -1762,6 +1772,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-04",
       "excerpt": "These roles have added roughly 730,000 jobs above trend in recent years"
+    }
+  ,
+    {
+      "id": "orr-tucker-warren-ai-exposed-majors-2026",
+      "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+      "publisher": "US Census Bureau, Center for Economic Studies (Orr, Tucker, Warren)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-10",
+      "excerpt": "The share of top-decile jobs in the Professional, Scientific, and Technical sector, the largest source of high paying jobs for highly-exposed majors, contracted by nearly six percentage points. The highest paying sector, Information, shrunk its share of exposed graduate employment by over three percentage points, while Accommodation & Food Services and Retail Trade each gained more than two percentage points."
     }
   ],
   "marketIds": {

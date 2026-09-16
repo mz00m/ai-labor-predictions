@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-09-09",
-  "totalSources": 711,
-  "verifiedCount": 701,
+  "lastUpdated": "2026-09-16",
+  "totalSources": 712,
+  "verifiedCount": 702,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -10095,6 +10095,24 @@
         "median-wage-impact",
         "high-skill-wage-premium",
         "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    }
+  ,
+    "orr-tucker-warren-ai-exposed-majors-2026": {
+      "id": "orr-tucker-warren-ai-exposed-majors-2026",
+      "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+      "publisher": "US Census Bureau, Center for Economic Studies (Orr, Tucker, Warren)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-10",
+      "excerpt": "They also saw declines in associated quarterly earnings of about thirteen percent relative to the least exposed fields, attenuating to about five percent after two years. Administrative PSEO/LEHD records on 6,665,500 bachelor's graduates, roughly 29% of US bachelor's degrees conferred 2016-2024. \"This earnings decline is comparable in magnitude to the earnings losses associated with graduating into a large recession\" - larger, in fact, than the nine to ten percent initial losses in the recession literature. Roughly half the decline is lower pay within the same sectors and half is a shift in industry mix toward lower-wage sectors such as restaurants and retail.",
+      "usedIn": [
+        "entry-level-wage-impact",
+        "early-career-employment-decline",
+        "tech-sector-displacement",
+        "ai-business-formation"
       ],
       "verified": true,
       "synthetic": false

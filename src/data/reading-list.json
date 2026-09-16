@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
+      "author": "Cody Orr, Lee C. Tucker and Lawrence Warren",
+      "publisher": "US Census Bureau, Center for Economic Studies (CES-WP-26-56)",
+      "date": "2026-09-10",
+      "url": "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
+      "takeaway": "The first study on the site to identify AI exposure by field of study rather than by occupation, and that design choice is the reason to take it seriously. A major is chosen years before anyone meets a hiring manager, which sidesteps the anticipation problem that clouds occupation-based exposure measures, where employers may be pulling back from roles they expect AI to take rather than from work AI already does. Using Census PSEO and LEHD administrative records covering 6,665,500 bachelor's graduates, about 29 percent of all US bachelor's degrees conferred from 2016 to 2024, the authors find that graduates in the most AI-exposed decile of majors - largely computer science, information systems and software-adjacent fields - became five percentage points less likely to be employed in the quarter after graduation, and earned about thirteen percent less, both relative to the least exposed fields and both beginning immediately after ChatGPT's release. For scale, the recession literature puts initial earnings losses from graduating into a downturn at nine to ten percent, so this is worse, though concentrated in a subset of fields rather than economy-wide. The decomposition is the most useful part. Roughly half the earnings decline is lower pay inside the same industries, and half is graduates moving into lower-paying ones - the share of top-decile graduates entering Professional, Scientific and Technical services fell almost six percentage points and Information over three, while Accommodation and Food Services and Retail each gained more than two. Counting that composition shift, top-decile earnings fell fifteen percent, to levels last seen before 2016. Two honest limits: effects attenuate as graduates get further from entry, to roughly five percent after two years, and the sampled institutions skew large, public and research-heavy, so the estimates may not describe the whole postsecondary landscape.",
+      "weekFeatured": "2026-09-16",
+      "tier": 1
+    },
+    {
       "title": "Economic Scenarios for Transformative AI",
       "author": "Anton Korinek, Charles I. Jones, Szymon Sacher, Tess Cotter and Peter McCrory",
       "publisher": "The Anthropic Institute, Working Paper 2026-02",

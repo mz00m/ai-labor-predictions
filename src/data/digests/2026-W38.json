@@ -1,0 +1,115 @@
+{
+  "week": "2026-W38",
+  "generatedAt": "2026-09-16T12:25:32.478Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Revelio Labs RPLS: US Economy Adds Only 36.5k Jobs in August as AI-Exposed Occupations Weaken",
+      "summary": "Revelio Public Labor Statistics recorded just 36,500 net new US jobs in August 2026, with active job postings declining a further 3%. Critically, the firm's AI Labor Market Tracker shows employment deteriorating most sharply in occupations with the highest AI exposure, signaling early-stage displacement pressure concentrated in white-collar roles. This divergence between aggregate resilience and occupation-level weakening is a key pattern to monitor as AI adoption accelerates.",
+      "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-36-5k-jobs-in-august",
+      "publishedAt": "2026-09-02",
+      "score": 0.203,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Federal Reserve FEDS Note: Publicly Available Indicators to Track the AI Buildout and Its Economic Impact",
+      "summary": "A new FEDS Note from Fed economists Soto, Thieu, and Allen catalogues publicly available data series—covering capital expenditure, energy infrastructure, and labor market shifts—that researchers and policymakers can use to monitor the generative AI buildout in near-real time. The note organizes indicators into three categories and provides a framework for assessing AI's evolving macroeconomic footprint. As a Tier-1 source, this publication is directly relevant to tracking economy-wide AI adoption rates.",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "authors": [
+        "Paul E. Soto",
+        "Mason Thieu",
+        "Jeffrey S. Allen"
+      ],
+      "publishedAt": "2026-09-16",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Banking Sector AI Adoption Triggers Contradictory Employment Outcomes, Literature Review Finds",
+      "summary": "A systematic literature review by Zhaofeng Chen synthesizes mainstream research on AI's dual impact on banking employment, finding simultaneous job displacement in routine financial roles and creation of higher-skill positions, with net effects highly sensitive to firm size, market structure, and worker adaptability. The review draws on Reinforcement Sensitivity Theory and labor market equilibrium models to explain divergent behavioral responses among displaced workers. The findings are directly relevant to the trajectory of financial-services displacement as AI automates credit, compliance, and customer-facing workflows.",
+      "source": "https://doi.org/10.70267/aitia.2026390394",
+      "authors": [
+        "Zhaofeng Chen"
+      ],
+      "publishedAt": "2026-09-13",
+      "doi": "10.70267/aitia.2026390394",
+      "score": 0.517,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "financial-services-displacement"
+    },
+    {
+      "title": "Firm-Level Evidence from Slovakia Shows AI Adoption Hides Simultaneous Hiring and Cutting Within Same Companies",
+      "summary": "Štetka, Hajduová, and Grisáková analyze firm-level workforce reconfiguration during AI adoption in Slovakia, finding that aggregate net employment figures mask substantial within-firm churning—firms simultaneously cut lower-skill roles while hiring for AI-complementary positions. The study shows that AI adoption stage and self-reported automation intensity are strong predictors of the degree of internal labor reallocation. These findings challenge single-number displacement estimates and suggest overall US displacement metrics may understate structural occupational change.",
+      "source": "https://doi.org/10.21511/ppm.24(3).2026.37",
+      "authors": [
+        "Peter Štetka",
+        "Zuzana Hajduová",
+        "Nora Grisáková"
+      ],
+      "publishedAt": "2026-09-14",
+      "doi": "10.21511/ppm.24(3).2026.37",
+      "score": 0.472,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Generative AI vs. Industrial Robotics: Divergent Labour Market Effects with Distinct Implications for White-Collar Workers",
+      "summary": "Sabeer Virdi's analysis of the Australian economy argues that generative AI and industrial robotics should not be treated as equivalent automation forces, as they strike different occupational strata and operate through distinct economic mechanisms. While robotics primarily displaces manual and production workers, generative AI poses the greater threat to cognitive, creative, and professional roles—a distinction with direct implications for wage and displacement forecasts in white-collar segments. The paper calls for differentiated policy responses and labor market measurement frameworks.",
+      "source": "https://doi.org/10.67521/sjbe.2026.003",
+      "authors": [
+        "Sabeer Virdi"
+      ],
+      "publishedAt": "2026-09-12",
+      "doi": "10.67521/sjbe.2026.003",
+      "score": 0.3,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    }
+  ],
+  "themes": [
+    "Aggregate job numbers remain superficially resilient but occupation-level data reveals concentrated weakness in AI-exposed white-collar and professional roles",
+    "Financial services faces a dual AI impact—simultaneous displacement of routine roles and demand for higher-skill AI-adjacent positions—with net outcomes highly uncertain",
+    "Firm-level evidence consistently shows that headline displacement figures mask large-scale within-firm labor reallocation, understating structural workforce transformation",
+    "Generative AI and industrial robotics are increasingly recognized as distinct automation forces requiring separate measurement frameworks and policy responses",
+    "Federal Reserve and institutional data infrastructure for tracking AI's economic impact is maturing, with new indicator dashboards enabling more timely policymaker monitoring"
+  ],
+  "watching": [
+    {
+      "title": "Census Business Trends & Outlook Survey — AI Supplement (Overdue)",
+      "source": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "reason": "Biweekly US firm-side AI adoption measure is 34 days since last ingest; next release overdue and will update ai-adoption-rate with freshest available signal."
+    },
+    {
+      "title": "Federal Reserve FEDS Notes: Monitoring AI Adoption in the US Economy (Overdue)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Quarterly Fed AI-adoption synthesis is 166 days overdue; expected July-August 2026. Key Tier-1 input to ai-adoption-rate and workforce-ai-exposure graphs."
+    },
+    {
+      "title": "Revelio Labs RPLS Jobs Report — September 2026",
+      "source": "https://www.reveliolabs.com/news/rpls",
+      "reason": "Monthly RPLS release will show whether August's AI-exposed occupation weakness deepens or stabilizes, critical for white-collar-professional-displacement trajectory."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 112,
+    "afterDedup": 110
+  }
+}
