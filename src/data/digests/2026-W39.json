@@ -1,0 +1,120 @@
+{
+  "week": "2026-W39",
+  "generatedAt": "2026-09-21T14:51:42.968Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Gendered AI Risk: Women Face Amplified Labour Market Vulnerabilities as AI Transforms Workplaces",
+      "summary": "A new arxiv study by Fernandez et al. (2026) conducts a gendered analysis of AI-driven workplace transformation, finding that existing structural inequalities in women's earnings and economic security risk amplification through AI adoption. The research identifies specific task and occupational categories where women face disproportionate displacement exposure. This has significant implications for modelling differential displacement rates across demographic groups in white-collar and professional roles.",
+      "source": "https://arxiv.org/abs/2609.21756v1",
+      "authors": [
+        "Miriam Fernandez",
+        "Ángel Pavón Pérez",
+        "Damiano Giallongo",
+        "Davide Ghia",
+        "Maryam Yaqub",
+        "Daniele Quercia",
+        "Tania Cerquitelli"
+      ],
+      "publishedAt": "2026-09-18",
+      "score": 0.532,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Federal Reserve Publishes Framework for Tracking AI Buildout and Economic Impact Using Public Data",
+      "summary": "A new FEDS Note by Soto, Thieu, and Allen presents a set of publicly available indicators organised into three categories to help researchers and policymakers track the generative AI buildout and its economic impact on a timely basis. The note is notable as an official Fed synthesis tool and signals growing institutional attention to real-time AI adoption measurement. This release partially addresses the overdue quarterly Fed AI adoption monitoring series last ingested in April 2026.",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "authors": [
+        "Paul E. Soto",
+        "Mason Thieu",
+        "Jeffrey S. Allen"
+      ],
+      "publishedAt": "2026-09-21",
+      "score": 0.467,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Yale Budget Lab Launches Ongoing AI Labor Market Tracker",
+      "summary": "The Yale Budget Lab has published a dedicated tracker monitoring AI's impact on the US labour market, providing a regular institutional touchpoint for displacement and wage trend data. The tracker complements Yale's concurrent analysis of healthcare employment growth, underscoring the lab's focus on sectoral divergence in an AI-influenced economy. This is a high-value recurring data source for benchmarking overall US displacement trajectories.",
+      "source": "http://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publishedAt": "2026-09-16",
+      "score": 0.331,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Banking Sector AI Adoption Drives Contradictory Employment Outcomes, Literature Review Finds",
+      "summary": "A systematic literature review by Chen (2026) in an open-access journal examines how widespread AI adoption in banking has produced simultaneous job displacement and new role creation, creating contradictory net labour market signals. The review draws on Reinforcement Sensitivity Theory frameworks alongside traditional labour economics to model worker behavioural responses to automation risk. Findings reinforce the difficulty of producing clean net displacement estimates for financial services without firm-level granularity.",
+      "source": "https://doi.org/10.70267/aitia.2026390394",
+      "authors": [
+        "Zhaofeng Chen"
+      ],
+      "publishedAt": "2026-09-13",
+      "doi": "10.70267/aitia.2026390394",
+      "score": 0.408,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "financial-services-displacement"
+    },
+    {
+      "title": "Slovak Firm-Level Evidence Shows AI Adoption Stage Determines Whether Firms Hire or Cut — Net Figures Mislead",
+      "summary": "Štetka, Hajduová, and Grisáková (2026) use firm-level survey data from Slovakia to demonstrate that aggregate employment figures mask simultaneous hiring and cutting occurring within the same firm during AI adoption, with the net effect highly contingent on adoption stage and self-assessed AI maturity. Early-stage adopters tend toward workforce expansion while mature adopters show consolidation and role elimination. The findings challenge single-figure displacement forecasts and call for stage-sensitive modelling of AI workforce reconfiguration.",
+      "source": "https://doi.org/10.21511/ppm.24(3).2026.37",
+      "authors": [
+        "Peter Štetka",
+        "Zuzana Hajduová",
+        "Nora Grisáková"
+      ],
+      "publishedAt": "2026-09-14",
+      "doi": "10.21511/ppm.24(3).2026.37",
+      "score": 0.346,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    }
+  ],
+  "themes": [
+    "Gendered and demographic disparities in AI displacement risk are receiving increased empirical scrutiny, with evidence that existing inequalities may be structurally amplified by AI adoption patterns",
+    "Official and institutional AI labour market tracking is maturing — the Fed FEDS Note framework and Yale Budget Lab tracker signal policy infrastructure catching up to the pace of AI deployment",
+    "Financial services and banking remain a focal sector for AI displacement research, with contradictory net employment signals complicating clean displacement forecasting",
+    "Firm-level and task-level analyses are displacing aggregate occupational exposure models as the preferred methodology, revealing simultaneous hire-and-cut dynamics hidden in net employment figures",
+    "The substitution-versus-complementarity debate continues to generate new theoretical and empirical work, with growing consensus that the net labour market effect of AI depends heavily on adoption stage, sector, and task structure"
+  ],
+  "watching": [
+    {
+      "title": "AI and the Screen Entertainment Industries",
+      "source": "https://doi.org/10.4324/9781003607922",
+      "reason": "Book-length value-chain analysis of AI integration in screen/entertainment sector; relevant to creative-industry-displacement if empirical displacement data surfaces in reviews or excerpts."
+    },
+    {
+      "title": "Revelio Labs: One Year of Revelio Public Labor Statistics Retrospective",
+      "source": "https://www.reveliolabs.com/news/macro/one-year-of-revelio-public-labor-statistics-a-retrospective",
+      "reason": "Revelio RPLS retrospective may contain revised AI-exposed role counts and wage trends; worth monitoring for updated workforce-ai-exposure benchmark data."
+    },
+    {
+      "title": "Microsoft Exec 'Largest Theft of Labor' AI Scraping Filing (TechCrunch/HN)",
+      "source": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+      "reason": "High-engagement HN story (940pts/825 comments) on creative labor and AI training data; could drive policy or wage signals for freelancer-rate-impact and creative-industry-displacement."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 108,
+    "afterDedup": 104
+  }
+}
