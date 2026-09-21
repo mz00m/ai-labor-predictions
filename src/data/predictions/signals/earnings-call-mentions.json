@@ -5,7 +5,7 @@
   "description": "Percentage of S&P 500 companies mentioning AI in the context of workforce efficiency, headcount, or restructuring during quarterly earnings calls.",
   "category": "adoption",
   "unit": "% of S&P 500",
-  "currentValue": 68,
+  "currentValue": 67,
   "aggregationMethod": "latest",
   "timeHorizon": "Latest quarter",
   "history": [
@@ -158,6 +158,16 @@
       "value": 68,
       "sourceIds": [
         "factset-earnings-q1-final-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "corporate"
+    },
+    {
+      "date": "2026-07-15",
+      "value": 67,
+      "sourceIds": [
+        "factset-earnings-q2-final-2026"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -388,6 +398,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-06-12",
       "excerpt": "Final full-season count for the Q1 2026 reporting period (calls conducted March 15 through June 11, 2026), by John Butters. \"Overall, the term 'AI' was cited on 337 earnings calls conducted by S&P 500 companies during this period.\" \"This number also reflects 68% (337 out of 498) of the earnings calls conducted by S&P 500 companies during this period.\" \"This number is well above the 5-year average of 164 and the 10-year average of 103.\" Supersedes the May 8 in-season update (65%, taken at 89% reported), which was an interim rather than a final."
+    },
+    {
+      "id": "factset-earnings-q2-final-2026",
+      "title": "More Than 65% of S&P 500 Earnings Calls for Q2 Cited \u201cAI\u201d",
+      "url": "https://insight.factset.com/more-than-65-of-sp-500-earnings-calls-for-q2-cited-ai",
+      "publisher": "FactSet",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-18",
+      "excerpt": "Final full-season count for the Q2 2026 reporting period (calls conducted June 15 through September 14, 2026), by John Butters. \"FactSet searched for the term 'AI' in the conference call transcripts of all the S&P 500 companies that conducted earnings conference calls from June 15 through September 14.\" \"Overall, the term 'AI' was cited on 331 earnings calls conducted by S&P 500 companies during this period.\" \"This number reflects 67% (331 out of 493) of the earnings calls conducted by S&P 500 companies during this period.\" \"This number is well above the 5-year average of 178 and the 10-year average of 114.\" \"This marks the 3rd consecutive quarter that the term 'AI' was cited on more than 65% of the earnings calls conducted by S&P 500 companies.\" Sector leaders by count: Information Technology (72) and Financials (67); by share: Information Technology (97%), Financials (91%), Communication Services (90%).",
+      "dateAdded": "2026-09-21"
     }
   ]
 }

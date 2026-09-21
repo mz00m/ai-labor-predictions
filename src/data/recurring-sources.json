@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-08-19",
-  "lastSweep": "2026-08-20",
+  "asOf": "2026-09-21",
+  "lastSweep": "2026-09-21",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -121,8 +121,8 @@
         "value": "Broader synthesis of BTOS + ADP + SCE"
       },
       "nextExpected": "~July-August 2026",
-      "lastSweep": "2026-08-27",
-      "sweepNote": "Swept 2026-08-27: still no new edition. The Apr 3, 2026 note remains latest in this series; the Jul 17 buildout note (already ingested) is its de facto successor. Overdue against cadence, but not behind the publisher."
+      "lastSweep": "2026-09-21",
+      "sweepNote": "Swept 2026-09-21: still no new edition, second consecutive sweep with none. The 2026 FEDS Notes index carries nothing on AI adoption after the Apr 3 note; the newest AI-related notes are Jul 14 (current account) and Jul 17 (buildout, already ingested). 171 days stale against a quarterly cadence, but the publisher has not released — the ~quarterly expectation looks wrong, not the feed."
     },
     {
       "id": "census-btos-ai",
@@ -145,7 +145,7 @@
         "value": "23.2% national AI use, two weeks ending Aug 23 2026 (cycle 202618); 22.4% for the cycle ending Aug 9"
       },
       "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
-      "lastSweep": "2026-08-19"
+      "lastSweep": "2026-09-21"
     },
     {
       "id": "factset-earnings-ai-mentions",
@@ -161,14 +161,14 @@
       ],
       "topicLine": "How often S&P 500 companies mention 'AI' on their quarterly earnings calls.",
       "whatItMeasures": "The percentage of S&P 500 companies whose earnings call transcripts include the term 'AI.' Reported quarterly with an interim update after ~50% of companies have reported.",
-      "whyItMatters": "The clearest cadence-consistent read of corporate AI focus. Q4 2025 hit an all-time high (68%); Q1 2026's slight dip to 65% was the first sequential decline in the ChatGPT era.",
+      "whyItMatters": "The clearest cadence-consistent read of corporate AI focus. On finals the series has now held above 65% for three straight quarters — 68% in Q4 2025, 68% in Q1 2026, 67% in Q2 2026. The 65% once read as a Q1 dip was an in-season interim, not a final.",
       "lastIngested": {
-        "sourceId": "factset-earnings-q1-final-2026",
-        "date": "2026-06-12",
-        "value": "68% (337 of 498) of S&P 500 calls cited AI, Q1 2026 final — supersedes the 65% interim"
+        "sourceId": "factset-earnings-q2-final-2026",
+        "date": "2026-09-21",
+        "value": "67% (331 of 493) of S&P 500 calls cited AI, Q2 2026 final — third straight quarter above 65%"
       },
-      "nextExpected": "~mid-September 2026 for the Q2 2026 final. FactSet publishes interim counts during the reporting season and a definitive full-season count once effectively all companies have reported — only ingest the final, and never plot an interim next to finals.",
-      "lastSweep": "2026-08-19"
+      "nextExpected": "~mid-December 2026 for the Q3 2026 final (the Q2 final landed Sep 18, 2026). FactSet publishes interim counts during the reporting season and a definitive full-season count once effectively all companies have reported — only ingest the final, and never plot an interim next to finals.",
+      "lastSweep": "2026-09-21"
     },
     {
       "id": "bick-blandin-deming-rps",

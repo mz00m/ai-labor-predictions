@@ -1,0 +1,17 @@
+{
+  "id": "factset-earnings-q2-final-2026",
+  "abstract": "FactSet Earnings Insight report by John Butters, published September 18, 2026, giving the final full-season count of S&P 500 earnings calls citing the term \"AI\" for the Q2 2026 reporting period (calls conducted June 15 through September 14, 2026). The term was cited on 331 calls, representing 67% of the 493 calls conducted. This is the third consecutive quarter in which more than 65% of S&P 500 earnings calls cited AI, and the count remains far above the 5-year average of 178 and the 10-year average of 114.",
+  "keyFindings": [
+    "\"AI\" was cited on 331 S&P 500 earnings calls during the Q2 2026 reporting period",
+    "That is 67% (331 out of 493) of all S&P 500 earnings calls conducted in the period",
+    "Well above the 5-year average of 178 calls and the 10-year average of 114 calls",
+    "Third consecutive quarter with more than 65% of S&P 500 calls citing AI (Q4 2025 68%, Q1 2026 68%, Q2 2026 67%)",
+    "Information Technology (72) and Financials (67) had the highest counts; Information Technology (97%), Financials (91%) and Communication Services (90%) the highest sector shares",
+    "Companies citing AI on Q2 calls outperformed non-citers from December 31, 2025 through September 17, 2026 (15.7% vs 8.1%) and from June 30, 2026 through September 17, 2026 (2.0% vs -2.2%)"
+  ],
+  "methodology": "FactSet searches S&P 500 earnings call transcripts for the term \"AI\" and counts the number of calls on which it appears at least once, then expresses that as a share of all S&P 500 calls conducted within the reporting period. The Q2 2026 period runs June 15 through September 14, 2026. FactSet publishes interim counts during the reporting season and a definitive count once effectively all companies have reported; only the latter is a final. This report covers \"all the S&P 500 companies that conducted earnings conference calls\" in the window, so it is a final.",
+  "qualifiers": "Keyword-frequency measure - a single passing mention counts the same as a substantive discussion of AI strategy, and the measure cannot distinguish AI as a product line from AI as an internal workforce or efficiency initiative. The denominator varies by quarter (493 calls in Q2 2026 vs 498 in Q1 2026 and 485 in Q4 2025) because not every S&P 500 constituent holds a call within the window, so small sequential moves in the percentage are partly denominator noise. The 68% to 67% step from Q1 to Q2 2026 is within that range and should not be read as a decline in corporate AI focus. Interim in-season readings are not comparable to finals and should not be plotted alongside them. The share-price comparison is a raw average, not risk-adjusted or controlled.",
+  "url": "https://insight.factset.com/more-than-65-of-sp-500-earnings-calls-for-q2-cited-ai",
+  "publisher": "FactSet",
+  "datePublished": "2026-09-18"
+}
