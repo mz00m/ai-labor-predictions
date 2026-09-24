@@ -89,6 +89,20 @@ interface ParsedEntry {
   pubDate: string | null;
 }
 
+/**
+ * Strip a CDATA wrapper if present. <title> and <description> were parsed with
+ * explicit CDATA patterns but <link> was not, so feeds that wrap their links
+ * (the Fed's feds_notes.xml does) yielded urls of the literal form
+ * "<![CDATA[https://...]]>". That defeated URL matching everywhere downstream:
+ * the digest could not tell an already-ingested source from a new one, and an
+ * ingest from this adapter would have written the malformed string as the
+ * source url. Found 2026-09-24.
+ */
+function stripCdata(v: string): string {
+  const m = v.match(/^\s*<!\[CDATA\[([\s\S]*?)\]\]>\s*$/);
+  return (m ? m[1] : v).trim();
+}
+
 function parseRssItems(xml: string): ParsedEntry[] {
   const items: ParsedEntry[] = [];
   for (const match of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
@@ -97,7 +111,9 @@ function parseRssItems(xml: string): ParsedEntry[] {
       entry.match(/<title><!\[CDATA\[([\s\S]*?)\]\]><\/title>/)?.[1]?.trim() ??
       entry.match(/<title>([\s\S]*?)<\/title>/)?.[1]?.trim() ??
       "";
-    const link = entry.match(/<link>(.*?)<\/link>/)?.[1]?.trim() ?? "";
+    const link = stripCdata(
+      entry.match(/<link>([\s\S]*?)<\/link>/)?.[1] ?? ""
+    );
     const description =
       entry
         .match(

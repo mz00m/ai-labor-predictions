@@ -118,6 +118,59 @@ interface SourceHealth {
   error?: string;
 }
 
+/**
+ * URLs we should not surface again: sources already ingested, and items that
+ * already appeared as a highlight in a previous digest.
+ *
+ * Both gaps were live until 2026-09-24. The W39 digest's top-scored highlight
+ * (0.954) was a Fed FEDS Note already sitting in confirmed-sources, and three
+ * of its five highlights were verbatim repeats of W38. Nothing in the scoring
+ * path had ever looked at what we already hold.
+ */
+function normalizeUrl(u: string): string {
+  if (!u) return "";
+  return u
+    .trim()
+    .toLowerCase()
+    .replace(/^https?:\/\//, "")
+    .replace(/^www\./, "")
+    .split(/[?#]/)[0]
+    .replace(/\/+$/, "");
+}
+
+function loadAlreadySeen(): { ingested: Set<string>; digested: Set<string> } {
+  const ingested = new Set<string>();
+  const digested = new Set<string>();
+
+  try {
+    const reg = JSON.parse(
+      fs.readFileSync("src/data/confirmed-sources.json", "utf-8")
+    );
+    for (const src of Object.values<any>(reg.sources ?? {})) {
+      const n = normalizeUrl(src?.url ?? "");
+      if (n) ingested.add(n);
+    }
+  } catch {
+    console.warn("[dedupe] could not read confirmed-sources.json; skipping ingested filter");
+  }
+
+  try {
+    const dir = "src/data/digests";
+    for (const f of fs.readdirSync(dir)) {
+      if (!/^\d{4}-W\d{2}\.json$/.test(f)) continue;
+      const d = JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8"));
+      for (const h of d.highlights ?? []) {
+        const n = normalizeUrl(h?.source ?? "");
+        if (n) digested.add(n);
+      }
+    }
+  } catch {
+    console.warn("[dedupe] could not read prior digests; skipping repeat filter");
+  }
+
+  return { ingested, digested };
+}
+
 async function main() {
   const since = new Date();
   since.setDate(since.getDate() - days);
@@ -192,7 +245,32 @@ async function main() {
   );
   console.log(`On-topic after relevance gate: ${onTopic.length}`);
 
-  const scored = onTopic
+  // Drop what we already hold or already surfaced. recurringSeries items are
+  // work-queue entries keyed to a series page, not discovery candidates, so
+  // they are exempt - a series stays due until it is actually ingested.
+  const seen = loadAlreadySeen();
+  let droppedIngested = 0;
+  let droppedRepeat = 0;
+  const fresh = onTopic.filter((item) => {
+    if (item.source === "recurringSeries") return true;
+    const n = normalizeUrl(item.url);
+    if (!n) return true;
+    if (seen.ingested.has(n)) {
+      droppedIngested++;
+      return false;
+    }
+    if (seen.digested.has(n)) {
+      droppedRepeat++;
+      return false;
+    }
+    return true;
+  });
+  console.log(
+    `After dedupe against prior work: ${fresh.length} ` +
+      `(dropped ${droppedIngested} already ingested, ${droppedRepeat} seen in an earlier digest)`
+  );
+
+  const scored = fresh
     .map((item) => ({
       ...item,
       publishedAt: item.publishedAt.toISOString(),

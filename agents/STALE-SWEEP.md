@@ -15,11 +15,20 @@ Read `src/data/recurring-sources.json`. For each entry in `series`, age
 
 | cadence | overdue after |
 |---|---|
-| biweekly | 30d |
-| monthly | 60d |
-| quarterly | 120d |
-| annual | 400d |
+| biweekly | 14d |
+| monthly | 31d |
+| quarterly | 92d |
+| semiannual | 183d |
+| annual | 366d |
 | biennial | 800d |
+
+These are the thresholds `scripts/autoresearch/auto-audit.js` uses (`CADENCE_DAYS`),
+and they are deliberately the nominal cadence interval rather than a padded one:
+a series is due the moment the next release should have arrived. An earlier
+version of this runbook used the digest adapter's grace-padded values (quarterly
+120d and so on), which let a sweep report the queue clear while the site's own
+audit still listed six series due. If you change these, change `CADENCE_DAYS` to
+match — the audit is the authority, and the two must not disagree.
 
 ## 2. Check each overdue series for a new release
 
