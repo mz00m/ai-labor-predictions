@@ -129,14 +129,14 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 - **Arrays sorted by date** ascending
 - **One source entry per file** even if multiple stats from same source
 
-## Hero Stats (HeroTriad + data-loader)
+## Hero Stats (HeroTriad)
 
-Three homepage hero stats. Two are computed, one is hardcoded:
-1. **~21% Productivity boost** — hardcoded in `src/components/HeroTriad.tsx` (`center={21} low={14} high={35}`). Manually maintained; update if the median/range of productivity studies drifts.
-2. **Projected job loss** — computed at build time by `getHeroStats()` in `src/lib/data-loader.ts`: weighted average of `overall-us-displacement` (all tiers), rounded absolute value. Updates automatically on ingestion — no manual sync needed, but sanity-check the computed value after ingesting into displacement graphs.
-3. **Measured job loss** — computed by `getHeroStats()` from the most recent `dataType: "observed"` point of `overall-us-displacement`.
+All three homepage hero stats are hand-set in `src/components/HeroTriad.tsx` from a source audit (Sep 2026). They are NOT computed from `overall-us-displacement`, which mixes net, gross, exposure and scenario estimates — a mechanical average drifted with every ingest. Re-verify against sources when the evidence moves:
+1. **~21% Productivity boost** — `center={21} low={13} high={56}`. Median % time saved across the controlled studies in `ResearchEvidence.tsx` that carry `timeSavedPct` (computed there; keep in sync).
+2. **~1% Projected net job loss by 2030** — `center={1} low={0.6} high={3}`. Median of 5 independent net US forecasts (Goldman net unemployment effect, Anthropic Institute substantial scenario, Bloom et al., Metaculus, Acemoglu). Gross displacement estimates (6–9%) are a different construct.
+3. **0% Measured US job loss** — `center={0} low={0} high={0.2}`. Every quantified source lands at 0.1–0.2% of US employment; losses concentrated among workers 22–25.
 
-Note: `scripts/autoresearch/auto-audit.js` still checks hero stats against a hardcoded ~3% and greps `page.tsx` — treat its hero-drift findings with suspicion.
+`scripts/autoresearch/auto-audit.js` reports the three wobble ranges from HeroTriad for manual re-verification.
 
 ## Weighted Average Computation
 
@@ -234,10 +234,10 @@ Note: All TypeScript scripts use `tsx` runner and load `.env.local` via `loadEnv
 | `src/data/recurring-sources.json` | Recurring release registry (tracked series, cadences, last ingested editions — swept by `/autoresearch`) |
 | `src/data/reading-list.json` | Rolling reading list for Featured Reads |
 | `src/data/last-updated.json` | Site-wide "last updated" date |
-| `src/app/page.tsx` | Hero section with hardcoded stats |
+| `src/app/page.tsx` | Hero section (stats hand-set in `HeroTriad.tsx`) |
 | `src/lib/types.ts` | TypeScript interfaces (Prediction, Source, etc.) |
 | `src/lib/prediction-stats.ts` | Weighted average computation |
-| `src/lib/data-loader.ts` | Loads all prediction JSONs; computes hero stats via `getHeroStats()` |
+| `src/lib/data-loader.ts` | Loads all prediction JSONs |
 | `scripts/` | Digest pipeline, ingestion, signal fetching |
 | `scripts/lib/ingest/` | Extraction, fetching, writing logic |
 | `.claude/commands/` | Claude skills (11 total) |
