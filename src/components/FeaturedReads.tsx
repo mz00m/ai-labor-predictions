@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Chandar & Klein Teeselink (Stanford DEL)",
+    title: "How Does AI Change Labor Demand? Evidence from 41 Countries",
+    summary:
+      "The firm-side counterpart to Canaries, by one of its authors, and it complicates the entry-level story. Chandar and Klein Teeselink instrument AI adoption off job ads involving generative AI, then trace what happens inside the foreign affiliates of adopting companies against matched controls — 1.25 billion job postings and 154 million employment records across 41 countries. The junior share of employment at adopters falls 1.9 percentage points by March 2026, about 3.3% of a 57.1% baseline. The mechanism is the finding: that decline comes mostly from senior employment rising 6.7%, not from junior employment falling — the junior change is −2.5% and not statistically significant, and total employment is up 3.3%. Juniors are being diluted rather than displaced, at least at this horizon. Occupation mix barely moves — under half a point in 21 of 22 groups — and the exception is the one that matters: computer and mathematical occupations, the most exposed group, where the employment share grows 0.8 points while the junior share inside it falls 3.3. The authors read that as AI being labor expanding rather than labor saving for software, with the cost landing on who gets hired rather than on how many are employed. Among technology affiliates it is sharper: junior share −3.9 points, senior employment +14.6%, total +7.8%. Two things to hold. This is a firm-level cross-border design, so it answers what happens inside adopting companies, not to a national labor market. And junior here means seniority, not age 22-25, so it is not the same quantity as the Canaries series even though it points the same way.",
+    date: "Sep 20",
+    url: "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+  },
+  {
     author: "Jacobs & Imas (DeepMind Institute)",
     title: "Economic Policy for AGI",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The Economist puts a number on the creation side of the ledger, which almost no one else does: roughly 1m AI-created US jobs against about 200,000 lay-offs attributed to AI since mid-2023. Understand the construction before quoting the headline. Three channels are stacked — the data-centre build-out, AI-native hiring, and new AI roles at incumbents — and each is measured as employment above trend rather than by direct attribution to AI. Five data-centre-adjacent industries have added roughly 320,000 jobs beyond what construction and manufacturing trends would predict; engineers, developers, mathematicians and data scientists about 730,000. The piece concedes that not all of these owe their existence to AI, which makes the 1m an upper bound on a real effect rather than a measurement of it. Two independent counts land lower: Levanon at Burning Glass puts AI jobs at roughly 1% of professional employment, LinkedIn at about 640,000 AI-specific roles created between 2023 and 2025. It is also more useful than its headline on the destruction side — professional and business services hiring runs about 10% below its 2015-19 average, customer-service employment is down about 10% and secretaries and administrative assistants about 15% since January 2023, and the BLS expects office and administrative support to shed 752,000 jobs by 2035. The tension worth carrying is on young workers: this reads the 20-24 unemployment gap as near a multi-decade low, where Canaries and the Revelio tracker both find early-career workers in exposed occupations well behind their peers. Different comparisons rather than contradictory findings, and holding both is the point.",
     date: "Sep 4",
     url: "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
-  },
-  {
-    author: "Abel, Deitz, Emanuel & Montalbano (NY Fed)",
-    title: "Businesses Are Using AI to Transform Work, Not Cut Jobs",
-    summary:
-      "The third year of the NY Fed's AI module, and the first where a majority of firms on both sides of the survey say yes. Service-firm adoption went 25% to 40% to 61%; manufacturers went 16% to 26% to 51%. That is a steeper curve than any national series shows, and the reason to trust it is that the bar is higher, not lower — firms using AI only as a search tool are counted as non-users. The finding worth carrying is the gap the same survey opens between adoption and use. Three-quarters of service firms and more than 90% of manufacturers call their AI investment minimal to modest, and among firms that do use AI, the median one has just 17% of its workers on it in services and 7% in manufacturing. Very few sources measure firm adoption and within-firm worker uptake in the same instrument, and here they differ by roughly a factor of four. On labor, the channels roughly cancel: 4% of service adopters laid anyone off because of AI (from 1% last year), 15% hired fewer than they otherwise would have, 13% hired more, and just over a third retrained — retraining exceeds every displacement channel measured, which is where the title comes from. Two limits worth holding. This is New York State and northern New Jersey, a footprint tilted toward finance, information and professional services, so the 61% cannot be set against the national Census figure of roughly 22%. And every workforce number is a firm attributing its own hiring decision to AI, with no payroll check behind it.",
-    date: "Sep 1",
-    url: "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
   },
 ];
 

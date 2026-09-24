@@ -1,0 +1,131 @@
+{
+  "week": "2026-W39",
+  "generatedAt": "2026-09-24T10:41:26.171Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Fed FEDS Note: Publicly Available Indicators to Track AI's Economic Impact",
+      "summary": "A Federal Reserve FEDS Note by Soto, Thieu, and Allen presents a curated set of publicly available indicators—organized across capital investment, adoption, and labor market dimensions—to help researchers and policymakers track the generative AI buildout on a timely basis. The framework is designed to bridge the lag in official statistics by stitching together earnings-call data, survey series, and compute metrics. This is among the most authoritative near-real-time monitoring frameworks published to date by a Tier 1 institution (Federal Reserve Board, July 2026).",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/the-ai-buildout-and-the-economy-publicly-available-data-to-assess-ais-impact-20260717.html",
+      "authors": [
+        "Paul E. Soto",
+        "Mason Thieu",
+        "Jeffrey S. Allen"
+      ],
+      "publishedAt": "2026-07-17",
+      "score": 0.954,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Gendered Displacement Risk: Women Face Disproportionate AI Exposure in the Workplace",
+      "summary": "A multi-author study (Fernandez et al., 2026) applies an occupational task-exposure framework to show that women are concentrated in roles with higher susceptibility to AI substitution, particularly in administrative, clerical, and service functions, amplifying pre-existing wage and career gaps. The analysis finds that complementarity gains from AI accrue unevenly, with male-dominated high-skill occupations more likely to benefit while female-dominated roles face net displacement pressure. The authors call for targeted reskilling policy and algorithmic-impact assessments disaggregated by gender (arXiv:2609.21756).",
+      "source": "https://arxiv.org/abs/2609.21756",
+      "authors": [
+        "Miriam Fernandez",
+        "Ángel Pavón Pérez",
+        "Damiano Giallongo",
+        "Davide Ghia",
+        "Maryam Yaqub",
+        "Daniele Quercia",
+        "Tania Cerquitelli"
+      ],
+      "publishedAt": "2026-09-18",
+      "doi": "10.48550/arxiv.2609.21756",
+      "score": 0.256,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "GPT-6 Astra Cuts Labor-Market Research Time and Cost by Half at Parallel",
+      "summary": "OpenAI's case study with Parallel documents that deploying GPT-6 Astra agents to research and synthesize labor-market data reduced both elapsed time and per-task cost by approximately 50% relative to the prior model generation. The result is a concrete, firm-level benchmark of productivity substitution in knowledge-work tasks that have historically been the domain of white-collar analysts. The finding is directly relevant to tracking the pace of generative AI adoption in professional workflows (OpenAI, September 2026).",
+      "source": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+      "publishedAt": "2026-09-22",
+      "score": 0.343,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "Dual Impact of AI on Banking Employment: Simultaneous Displacement and Augmentation",
+      "summary": "A literature review by Zhaofeng Chen (2026) synthesizes mainstream research on how AI adoption in banking produces contradictory labor-market outcomes—displacing routine credit, compliance, and back-office roles while augmenting relationship-management and risk-advisory functions, leading to within-firm polarization rather than uniform job loss. The review highlights that net employment figures at the firm level mask simultaneous hiring and cutting, echoing findings from firm-level survey work in other economies. Financial-sector workers without advanced analytical skills face the starkest downside risk (DOI: 10.70267/aitia.2026390394).",
+      "source": "https://doi.org/10.70267/aitia.2026390394",
+      "authors": [
+        "Zhaofeng Chen"
+      ],
+      "publishedAt": "2026-09-13",
+      "doi": "10.70267/aitia.2026390394",
+      "score": 0.374,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "financial-services-displacement"
+    },
+    {
+      "title": "Firm-Level Evidence: AI Adoption Stage Shapes Whether Firms Hire or Cut—Often Both Simultaneously",
+      "summary": "Štetka, Hajduová, and Grisáková (2026) use Slovak firm-level survey data to demonstrate that AI adoption stage is a stronger predictor of workforce reconfiguration than sector or firm size, and that firms in mid-adoption phases simultaneously expand headcount in high-skill roles while contracting routine positions—a pattern invisible in aggregate net-employment statistics. The study also finds that self-reported future plans systematically underestimate upcoming cuts relative to reported past behavior, suggesting displacement forecasts based on intention data may be conservative. The findings have direct implications for calibrating displacement projection models (DOI: 10.21511/ppm.24(3).2026.37).",
+      "source": "https://doi.org/10.21511/ppm.24(3).2026.37",
+      "authors": [
+        "Peter Štetka",
+        "Zuzana Hajduová",
+        "Nora Grisáková"
+      ],
+      "publishedAt": "2026-09-14",
+      "doi": "10.21511/ppm.24(3).2026.37",
+      "score": 0.306,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    }
+  ],
+  "themes": [
+    "Generative AI is compressing knowledge-work costs at measurable rates—GPT-6-class models are now delivering 50% time/cost reductions in analyst-grade tasks, accelerating white-collar displacement timelines",
+    "Displacement risk is structurally gendered: women's occupational concentration in administrative and service roles creates disproportionate AI exposure that amplifies existing wage gaps without targeted policy intervention",
+    "Firm-level adoption data consistently reveals simultaneous hiring-and-cutting dynamics that aggregate employment statistics obscure, making mid-adoption phase the critical monitoring window for displacement signals",
+    "Financial services remains a leading-edge displacement sector, with AI substituting routine banking tasks while augmenting high-skill advisory roles—producing within-sector polarization rather than uniform job loss",
+    "Authoritative real-time AI monitoring frameworks (e.g., Fed FEDS Note) are maturing, improving the ability of researchers and policymakers to track adoption and labor-market impacts with reduced statistical lag"
+  ],
+  "watching": [
+    {
+      "title": "Federal Reserve Quarterly AI Adoption Series — Overdue Ingest (174 days)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Official Fed synthesis of US AI-adoption surveys is 174 days past last ingest; next expected July-Aug 2026. Fresh release would materially update ai-adoption-rate and workforce-ai-exposure graphs."
+    },
+    {
+      "title": "AI Substitution vs. Complementarity and Labor Market Polarization (Li, 2026)",
+      "source": "https://doi.org/10.71222/yyc45228",
+      "reason": "Uses granular occupational task data to model polarization mechanisms; methodology could sharpen displacement vs. augmentation split in projection models across multiple slugs."
+    },
+    {
+      "title": "Robotics vs. Generative AI: Differing Labour Market Effects in Australia (Virdi, 2026)",
+      "source": "https://doi.org/10.67521/sjbe.2026.003",
+      "reason": "Disaggregates automation types rarely separated in US data; findings on GenAI-specific wage and displacement effects may be transferable to US workforce-ai-exposure modeling."
+    },
+    {
+      "title": "State of AI and Society: AI's Impacts on Quality of Work (Thomas et al., LSE, 2026)",
+      "source": "https://orcid.org/0000-0001-7903-4796",
+      "reason": "Shifts focus from job counts to job conditions—task autonomy, monitoring, stress—a dimension currently under-represented in displacement graphs but increasingly policy-relevant."
+    },
+    {
+      "title": "Multi-Agent AI Governance in Regulated Finance and Collective Discrimination Risk",
+      "source": "https://arxiv.org/abs/2609.27994v1",
+      "reason": "Agentic workflow deployment in credit and compliance may accelerate financial-services-displacement while introducing systemic fair-lending risk; worth tracking as deployments scale."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 110,
+    "afterDedup": 107
+  }
+}

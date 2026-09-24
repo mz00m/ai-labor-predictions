@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "How Does AI Change Labor Demand? Evidence from 41 Countries",
+      "author": "Bharat Chandar and Bouke Klein Teeselink",
+      "publisher": "Stanford Digital Economy Lab / King's College London",
+      "date": "2026-09-20",
+      "url": "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+      "takeaway": "The firm-side counterpart to Canaries, by one of its authors, and it complicates the entry-level story in a way worth sitting with. Chandar and Klein Teeselink instrument AI adoption off job advertisements involving generative AI, then trace what happens inside the foreign affiliates of adopting companies against matched controls - 1.25 billion job postings and 154 million employment records across 41 countries. The headline is that the junior share of employment at adopters falls 1.9 percentage points by March 2026, about 3.3 percent of a 57.1 percent baseline. The mechanism is the finding. That decline comes mostly from senior employment rising 6.7 percent, not from junior employment falling: the junior change is minus 2.5 percent and not statistically significant, and total employment is up 3.3 percent. In other words juniors are being diluted rather than displaced, at least at this horizon. Occupation mix barely moves - in 21 of 22 groups the shift is under half a percentage point - and the exception is the one that matters here: computer and mathematical occupations, the most exposed group, where the employment share grows 0.8 points while the junior share inside it falls 3.3 points. The authors read that as AI being labor expanding rather than labor saving for software work, with the cost landing on who gets hired into it rather than on how many people it employs. Among technology affiliates the pattern is sharper still: junior share down 3.9 points, senior employment up 14.6 percent, total up 7.8 percent. Two things to hold. This is a firm-level, cross-border design, so it answers what happens inside adopting companies rather than what happens to a national labor market, and the pooled estimate spans 41 countries; the US shows a significant junior-share decline but its posting data stop in October 2025. And 'junior' here is seniority, not age 22-25, so it is not the same quantity as the Canaries series even though it points the same direction.",
+      "weekFeatured": "2026-09-24",
+      "tier": 1
+    },
+    {
       "title": "Economic Policy for AGI",
       "author": "Julian Jacobs and Alex Imas",
       "publisher": "DeepMind Institute",

@@ -967,6 +967,26 @@
       "evidenceTier": 3,
       "label": "Politano via NYT: US tech sector lost about 7,000 jobs last month and roughly 48,000 over the past year"
     }
+  ,
+    {
+      "date": "2026-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "chandar-kleinteeselink-labor-demand-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: computer and mathematical employment share +0.8pp at AI adopters; tech affiliates total +7.8%"
+    }
+  ,
+    {
+      "date": "2026-09-20",
+      "direction": "up",
+      "sourceIds": [
+        "chandar-kleinteeselink-labor-demand-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: junior share within computer and mathematical occupations falls 3.3pp at AI-adopting firms"
+    }
   ],
   "sources": [
     {
@@ -1802,6 +1822,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-16",
       "excerpt": "But the U.S. tech sector overall is hemorrhaging jobs, losing about 7,000 last month and roughly 48,000 over the past year, according to Joey Politano, an economic analyst."
+    }
+  ,
+    {
+      "id": "chandar-kleinteeselink-labor-demand-2026",
+      "title": "How Does AI Change Labor Demand? Evidence from 41 Countries",
+      "url": "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+      "publisher": "Stanford Digital Economy Lab / King's College London (Chandar, Klein Teeselink)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-20",
+      "excerpt": "\"The exception is computer and mathematical occupations, the most AI-exposed of the 22 groups, whose employment share grows by 0.8 percentage points while its junior share falls by 3.3 points.\" The authors read the share growth as evidence that \"AI is labor expanding rather than labor saving for these occupations.\" Among technology affiliates specifically, adoption lowers the junior share by 3.9 percentage points, raises senior employment by 14.6 percent, and raises total employment by 7.8 percent."
     }
   ],
   "marketIds": {

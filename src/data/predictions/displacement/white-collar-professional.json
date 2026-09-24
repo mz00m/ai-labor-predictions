@@ -1214,6 +1214,16 @@
       "evidenceTier": 3,
       "label": "Burning Glass (Levanon): ~1% of US professional jobs are AI jobs; 4-5% in computing"
     }
+  ,
+    {
+      "date": "2026-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "chandar-kleinteeselink-labor-demand-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: AI-adopting firms grow total employment 3.3% and senior employment 6.7% against matched controls"
+    }
   ],
   "sources": [
     {
@@ -2231,6 +2241,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-01",
       "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
+    }
+  ,
+    {
+      "id": "chandar-kleinteeselink-labor-demand-2026",
+      "title": "How Does AI Change Labor Demand? Evidence from 41 Countries",
+      "url": "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+      "publisher": "Stanford Digital Economy Lab / King's College London (Chandar, Klein Teeselink)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-20",
+      "excerpt": "\"From mid-2024 the senior increase begins to dominate, and by March 2026 total employment is 3.3 percent higher at treated affiliates.\" Senior employment ends 6.7 percent higher while junior employment is an insignificant 2.5 percent lower. Adoption also shifts senior labor demand toward the most AI-exposed occupations by 5 percent, and away from the most-exposed occupations among juniors by 2 percent. Evidence of reallocation within firms rather than net displacement."
     }
   ]
 }

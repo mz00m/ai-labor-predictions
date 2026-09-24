@@ -2241,6 +2241,16 @@
       "evidenceTier": 3,
       "label": "Economist: ~1m AI-created US jobs vs ~200k AI-attributed lay-offs since mid-2023"
     }
+  ,
+    {
+      "date": "2026-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "chandar-kleinteeselink-labor-demand-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: total employment +3.3% at AI-adopting affiliates; no country of 41 shows a significant decline"
+    }
   ],
   "sources": [
     {
@@ -3989,6 +3999,16 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-01",
       "excerpt": "Extreme change scenario (m2030 = 0.50, d2030 = 0.60, automation share 0.90, reinstatement 0). \"By 2030, cognitive employment is 21.5 percent below its mid-2026 level, and the unemployment rate for workers who began in cognitive occupations is a stunning 17.9 percent, far above any postwar rate in the United States. The economy-wide unemployment rate rises to 11.9 percent.\" GDP is 32.4 percent above the no-AI path, the cognitive wage 11.5 percent below it, and the labor share falls from 60 to 45 percent. The authors attach no probabilities to the scenarios."
+    }
+  ,
+    {
+      "id": "chandar-kleinteeselink-labor-demand-2026",
+      "title": "How Does AI Change Labor Demand? Evidence from 41 Countries",
+      "url": "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+      "publisher": "Stanford Digital Economy Lab / King's College London (Chandar, Klein Teeselink)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-20",
+      "excerpt": "\"Total employment goes up by a marginally significant 3.3 percent.\" Across the country-by-country meta-analysis, \"senior employment rises by a marginally significant 3.4 percent on average, and no country shows a significant decline in total employment,\" with average junior-share decline of 1.1 percentage points. Cross-country dispersion is small enough that a common effect cannot be rejected. A global estimate at the firm level, not a US economy-wide one."
     }
   ]
 }

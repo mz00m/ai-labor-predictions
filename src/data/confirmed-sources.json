@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-09-21",
-  "totalSources": 716,
-  "verifiedCount": 706,
+  "lastUpdated": "2026-09-24",
+  "totalSources": 717,
+  "verifiedCount": 707,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -10174,6 +10174,24 @@
       "dateAdded": "2026-09-21",
       "usedIn": [
         "earnings-call-ai-mentions"
+      ],
+      "verified": true,
+      "synthetic": false
+    }
+  ,
+    "chandar-kleinteeselink-labor-demand-2026": {
+      "id": "chandar-kleinteeselink-labor-demand-2026",
+      "title": "How Does AI Change Labor Demand? Evidence from 41 Countries",
+      "url": "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+      "publisher": "Stanford Digital Economy Lab / King's College London (Chandar, Klein Teeselink)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-20",
+      "excerpt": "Instrumented event study over 1.25 billion job postings and 154 million employment records across 41 countries, inferring firm AI adoption from job advertisements that involve generative AI. \"The junior share of employment at treated affiliates begins to fall after the introduction of ChatGPT, and it is 1.9 percentage points lower than in control affiliates by March 2026. This decline primarily reflects growth in senior employment rather than a fall in junior employment: senior employment rises by 6.7 percent, while junior employment is 2.5 percent lower, an estimate that is not statistically significant.\" Total employment at adopters rises 3.3 percent. The one occupation group that moves materially is computer and mathematical, whose employment share grows 0.8 points while its junior share falls 3.3 points. Bharat Chandar is a co-author of the Canaries papers; this is the firm-side counterpart to that occupation-side work.",
+      "usedIn": [
+        "early-career-employment-decline",
+        "white-collar-professional-displacement",
+        "tech-sector-displacement",
+        "overall-us-displacement"
       ],
       "verified": true,
       "synthetic": false

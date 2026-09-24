@@ -302,6 +302,26 @@
       "evidenceTier": 3,
       "label": "Liminal Capital via NYT: new hires aged 22-25 in substitution-exposed jobs down a third since 2021"
     }
+  ,
+    {
+      "date": "2026-09-20",
+      "direction": "down",
+      "sourceIds": [
+        "chandar-kleinteeselink-labor-demand-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL (41 countries): junior share -1.9pp at AI adopters, driven by senior growth, not junior job losses"
+    }
+  ,
+    {
+      "date": "2026-09-20",
+      "direction": "up",
+      "sourceIds": [
+        "chandar-kleinteeselink-labor-demand-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: in computer and mathematical occupations the junior share falls 3.3pp even as the occupation grows"
+    }
   ],
   "sources": [
     {
@@ -563,6 +583,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-16",
       "excerpt": "Liminal Capital, an investment firm, estimated in August that about a third of jobs appear to be more exposed to substitution than augmentation by A.I. In those occupations, new hires among workers ages 22 to 25 have fallen by a third since 2021, even as firings have barely budged. A hiring-flow measure against a 2021 baseline, not an employment-level gap against less-exposed occupations, so it is not directly comparable to the estimates plotted on this chart."
+    }
+  ,
+    {
+      "id": "chandar-kleinteeselink-labor-demand-2026",
+      "title": "How Does AI Change Labor Demand? Evidence from 41 Countries",
+      "url": "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
+      "publisher": "Stanford Digital Economy Lab / King's College London (Chandar, Klein Teeselink)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-20",
+      "excerpt": "\"The junior share of employment at treated affiliates begins to fall after the introduction of ChatGPT, and it is 1.9 percentage points lower than in control affiliates by March 2026. This decline primarily reflects growth in senior employment rather than a fall in junior employment: senior employment rises by 6.7 percent, while junior employment is 2.5 percent lower, an estimate that is not statistically significant.\" Juniors hold 57.1% of positions at baseline, so the 1.9-point drop equals 3.3% of that share. Instrumented event study over 1.25 billion job postings and 154 million employment records across 41 countries, with AI adoption inferred from job advertisements involving generative AI. Not plotted on this chart: the measure is a percentage-point change in a firm's junior share, not a relative percent employment decline against least-exposed occupations; 'junior' is defined by seniority rather than ages 22-25; and the estimate is pooled across 41 countries, which this chart excludes from its average by design."
     }
   ]
 }
