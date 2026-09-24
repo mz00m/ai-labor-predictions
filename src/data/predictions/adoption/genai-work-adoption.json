@@ -414,7 +414,7 @@
         "gallup-workplace-ai-feb-2026"
       ],
       "evidenceTier": 2,
-      "label": "Gallup: Only 30% of workers say manager supports AI use; 27% in AI-adopting orgs report disruptive changes"
+      "label": "Gallup: Only 30% of workers say manager supports AI use; 27% in AI-adopting orgs report disruptive"
     },
     {
       "date": "2026-04-13",
@@ -522,7 +522,7 @@
         "anthropic-economic-index-cadences-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic Cadences (n=9,700 biased Claude users): ~50% say AI handles 50%+ of their tasks; 4% say entire job"
+      "label": "Anthropic Cadences (n=9,700 biased Claude users): ~50% say AI handles 50%+ of their tasks"
     },
     {
       "date": "2026-06-26",
@@ -568,7 +568,7 @@
         "bick-blandin-deming-task-level-genai-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER: genAI adoption widespread but shallow \u2014 fewer than half of workers adopt within most occupations"
+      "label": "NBER: genAI adoption widespread but shallow \u2014 fewer than half of workers adopt within most"
     }
   ],
   "sources": [

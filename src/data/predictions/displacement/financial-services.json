@@ -158,7 +158,7 @@
         "cao-cheng-gu-jiang-chatgpt-analysts-2025"
       ],
       "evidenceTier": 1,
-      "label": "Cao et al.: ChatGPT cuts analyst report length 8.9%, quality -17%; more AI reliance = worse forecasts"
+      "label": "Cao et al.: ChatGPT cuts analyst report length 8.9%, quality -17%"
     },
     {
       "date": "2025-01-08",
@@ -203,7 +203,7 @@
         "deloitte-global-insurance-outlook-2026"
       ],
       "evidenceTier": 2,
-      "label": "Deloitte 2026 Insurance Outlook: 90% of execs see urgency to reinvent work for AI; only 25% acting yet"
+      "label": "Deloitte 2026 Insurance Outlook: 90% of execs see urgency to reinvent work for AI"
     },
     {
       "date": "2025-10-15",
@@ -248,7 +248,7 @@
         "banking-dive-big6-headcount-2026"
       ],
       "evidenceTier": 3,
-      "label": "Banking Dive: Big-6 banks at 1.09M employees, -10,600 YoY (lowest since 2021); Citi trimming 20K by end-2026"
+      "label": "Banking Dive: Big-6 banks at 1.09M employees, -10,600 YoY (lowest since 2021)"
     },
     {
       "date": "2026-02-04",
@@ -275,7 +275,7 @@
         "fed-barr-ai-labor-speech-2026"
       ],
       "evidenceTier": 1,
-      "label": "Gov. Barr (Fed): AI could add 0.3-0.9pp to TFP; early-career workers in AI-exposed roles seeing employment declines"
+      "label": "Gov. Barr (Fed): AI could add 0.3-0.9pp to TFP; early-career workers in AI-exposed roles seeing"
     },
     {
       "date": "2026-02-19",
@@ -329,7 +329,7 @@
         "fed-feds-notes-ai-job-postings-2026"
       ],
       "evidenceTier": 1,
-      "label": "Fed FEDS Notes: No evidence higher-AI-adoption industries post fewer jobs; firm-level effect precisely-estimated null"
+      "label": "Fed FEDS Notes: No evidence higher-AI-adoption industries post fewer jobs"
     },
     {
       "date": "2026-03-31",
@@ -365,7 +365,7 @@
         "biggo-jpmorgan-q2-ai-cuts-2026"
       ],
       "evidenceTier": 3,
-      "label": "Dimon (JPMorgan Q2 2026): AI already cut 30-40% of staff in some units; most redeployed, not laid off"
+      "label": "Dimon (JPMorgan Q2 2026): AI already cut 30-40% of staff in some units"
     }
   ,
     {
@@ -375,7 +375,7 @@
         "nyt-smith-quiet-way-ai-workforce-2026"
       ],
       "evidenceTier": 3,
-      "label": "NYT: financial services down ~100,000 jobs since January; adult share at financial firms lowest since 1981"
+      "label": "NYT: financial services down ~100,000 jobs since January"
     }
   ],
   "sources": [

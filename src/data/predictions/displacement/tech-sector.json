@@ -467,7 +467,7 @@
         "brynjolfsson-chandar-chen-2025"
       ],
       "evidenceTier": 1,
-      "label": "Brynjolfsson et al. August preprint: ~13% early-career SWE decline (revised to ~1.3% in November publication)"
+      "label": "Brynjolfsson et al.: ~13% early-career SWE decline in August, revised to ~1.3% in November"
     },
     {
       "date": "2025-08-01",
@@ -647,7 +647,7 @@
         "yale-budgetlab-occupation-exposure-2026"
       ],
       "evidenceTier": 1,
-      "label": "Yale Budget Lab: Computer/math occupations score 8.4/10 exposure (highest of 22 groups, 342 BLS occupations)"
+      "label": "Yale Budget Lab: computer/math occupations score 8.4/10 exposure, highest of 22 groups"
     },
     {
       "date": "2026-02-24",
@@ -965,7 +965,7 @@
         "nyt-smith-quiet-way-ai-workforce-2026"
       ],
       "evidenceTier": 3,
-      "label": "Politano via NYT: US tech sector lost about 7,000 jobs last month and roughly 48,000 over the past year"
+      "label": "Politano via NYT: US tech sector lost about 7,000 jobs last month and roughly 48"
     }
   ,
     {
@@ -975,7 +975,7 @@
         "chandar-kleinteeselink-labor-demand-2026"
       ],
       "evidenceTier": 1,
-      "label": "Stanford DEL: computer and mathematical employment share +0.8pp at AI adopters; tech affiliates total +7.8%"
+      "label": "Stanford DEL: computer and mathematical employment share +0.8pp at AI adopters"
     }
   ,
     {
@@ -985,7 +985,7 @@
         "chandar-kleinteeselink-labor-demand-2026"
       ],
       "evidenceTier": 1,
-      "label": "Stanford DEL: junior share within computer and mathematical occupations falls 3.3pp at AI-adopting firms"
+      "label": "Stanford DEL: junior share within computer and mathematical occupations falls 3.3pp at AI-adopting"
     }
   ],
   "sources": [

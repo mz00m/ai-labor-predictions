@@ -194,7 +194,7 @@
         "nyt-amazon-1m-robots-2025"
       ],
       "evidenceTier": 3,
-      "label": "NYT: Amazon aims to automate 75% of ops, avoid hiring 600K workers by 2033; 160K fewer US hires by 2027"
+      "label": "NYT: Amazon aims to automate 75% of ops, avoid hiring 600K workers by 2033"
     },
     {
       "date": "2025-11-25",
@@ -230,7 +230,7 @@
         "ifr-top5-robotics-trends-2026"
       ],
       "evidenceTier": 2,
-      "label": "IFR: 2026 industrial robot market hits all-time high $16.7B; humanoid reliability + labor-gap solutions named top trends"
+      "label": "IFR: 2026 industrial robot market hits all-time high $16.7B"
     },
     {
       "date": "2026-01-15",
@@ -257,7 +257,7 @@
         "motley-fool-ups-automation-2026"
       ],
       "evidenceTier": 3,
-      "label": "UPS: 127 facilities automated; 68% of US package volume via automation by end-2026; 28% lower cost/piece"
+      "label": "UPS: 127 facilities automated; 68% of US package volume via automation by end-2026"
     },
     {
       "date": "2026-06-05",
@@ -266,7 +266,7 @@
         "cnbc-amazon-proteus-ai-layoffs-2026"
       ],
       "evidenceTier": 3,
-      "label": "CNBC: Amazon Proteus deployed in 25 US fulfillment centers; 30K corporate cuts since Oct amid AI push"
+      "label": "CNBC: Amazon Proteus deployed in 25 US fulfillment centers"
     },
     {
       "date": "2026-07-02",

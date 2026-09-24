@@ -200,7 +200,7 @@
         "experian-health-rcm-predictions-2026"
       ],
       "evidenceTier": 3,
-      "label": "Experian Health: 53% expect widespread AI adoption in RCM with human oversight; 69% AI users saw denial reductions"
+      "label": "Experian Health: 53% expect widespread AI adoption in RCM with human oversight"
     },
     {
       "date": "2026-01-13",
@@ -209,7 +209,7 @@
         "finthrive-rcm-priorities-2026"
       ],
       "evidenceTier": 2,
-      "label": "FinThrive: 76% of RCM leaders name automation #1 initiative for 2026; 60% plan RCM vendor consolidation in 3 yrs"
+      "label": "FinThrive: 76% of RCM leaders name automation #1 initiative for 2026"
     },
     {
       "date": "2026-01-15",
@@ -281,7 +281,7 @@
         "yale-budgetlab-occupation-exposure-2026"
       ],
       "evidenceTier": 1,
-      "label": "Yale Budget Lab: Healthcare overall 4.44/10 exposure; admin roles score higher (medical records 9/10)"
+      "label": "Yale Budget Lab: healthcare overall 4.44/10 exposure, with admin roles scoring higher"
     },
     {
       "date": "2026-03-01",
@@ -326,7 +326,7 @@
         "beckers-rcm-ai-arms-race-2026"
       ],
       "evidenceTier": 3,
-      "label": "Becker's: RCM 'arms race' — payers ahead on AI; provider teams evolving with new AI-focused roles under strain"
+      "label": "Becker's: RCM 'arms race' — payers ahead on AI; provider teams evolving with new AI-focused roles"
     },
     {
       "date": "2026-04-13",
@@ -353,7 +353,7 @@
         "oliver-wyman-ai-rcm-2026"
       ],
       "evidenceTier": 2,
-      "label": "Oliver Wyman: 63% of health orgs have integrated AI into RCM; up to 46% coding-time cuts; 90%+ accuracy in some domains"
+      "label": "Oliver Wyman: 63% of health orgs have integrated AI into RCM; up to 46% coding-time cuts"
     },
     {
       "date": "2026-06-10",

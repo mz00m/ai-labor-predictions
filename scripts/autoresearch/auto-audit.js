@@ -372,12 +372,12 @@ function checkSchema(prediction, report) {
       report.addMustFix(prediction.slug, `${prefix}: invalid direction "${o.direction}"`, "", "Fix direction");
       valid = false;
     }
-    if (o.label && o.label.length > 120) {
+    if (o.label && o.label.length > 100) {
       report.addShouldFix(
         prediction.slug,
         `${prefix}: label too long (${o.label.length} chars)`,
         `"${o.label.substring(0, 60)}..."`,
-        "Shorten label to <= 120 chars"
+        "Shorten label to <= 100 chars"
       );
       valid = false;
     }

@@ -429,7 +429,7 @@
         "autor-kausik-automation-paradox-2026"
       ],
       "evidenceTier": 1,
-      "label": "Autor (NBER): Falling labor share drove 16% of US real wage growth; automation paradoxically raises wages"
+      "label": "Autor (NBER): Falling labor share drove 16% of US real wage growth"
     },
     {
       "date": "2025-12-30",
@@ -456,7 +456,7 @@
         "gans-goldfarb-oring-automation-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER (Gans/Goldfarb): O-ring model -- partial automation can raise wages via bottleneck task revaluation"
+      "label": "NBER (Gans/Goldfarb): O-ring model -- partial automation can raise wages via bottleneck task"
     },
     {
       "date": "2026-01-07",
@@ -755,7 +755,7 @@
         "nyt-smith-quiet-way-ai-workforce-2026"
       ],
       "evidenceTier": 3,
-      "label": "Edlich/Slok via NYT: wage hit concentrated low - service roles -24%, bottom quarter -11%, top earners spared"
+      "label": "Edlich/Slok via NYT: wage hit concentrated low - service roles -24%, bottom quarter -11%"
     }
   ],
   "sources": [

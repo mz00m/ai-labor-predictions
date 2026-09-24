@@ -97,7 +97,7 @@ Optional: `ADZUNA_APP_ID`, `ADZUNA_APP_KEY`, `TWITTER_BEARER_TOKEN`, `GOOGLE_CSE
 
 ### Prediction JSON schema (`src/data/predictions/{category}/{slug}.json`)
 - `history[]` entries: `date` (YYYY-MM-DD), `value` (number), `confidenceLow?`, `confidenceHigh?`, `sourceIds[]`, `evidenceTier` (1-4), `dataType?` (observed/projected), `metricType?`, `sampleSize?`, `isProxy?`, `proxyContext?`
-- `overlays[]` entries: `date`, `direction` (up/down/neutral), `sourceIds[]`, `evidenceTier`, `label` (≤80 chars, format: "Publisher: finding")
+- `overlays[]` entries: `date`, `direction` (up/down/neutral), `sourceIds[]`, `evidenceTier`, `label` (≤100 chars, enforced by `auto-audit.js`; format: "Publisher: finding")
 - `sources[]` entries: `id`, `title`, `url`, `publisher`, `evidenceTier`, `datePublished`, `excerpt`
 - `aggregationMethod`: `"weighted"` (default, tier×recency×sampleSize weighting) or `"latest"` (use most recent data point)
 

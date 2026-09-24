@@ -1157,7 +1157,7 @@
         "korinek-jones-econ-scenarios-2026"
       ],
       "evidenceTier": 2,
-      "label": "Anthropic Institute: cognitive unemployment 4.5% (substantial) to 17.9% (extreme) by 2030, vs 2.9% now"
+      "label": "Anthropic Institute: cognitive unemployment 4.5% (substantial) to 17.9% (extreme) by 2030"
     },
     {
       "date": "2026-09-02",
@@ -1166,7 +1166,7 @@
         "revelio-ai-labor-market-tracker-2026-09"
       ],
       "evidenceTier": 2,
-      "label": "Revelio: most AI-exposed occupations down ~6% vs least-exposed since pre-ChatGPT (all occupations, relative)"
+      "label": "Revelio: most AI-exposed occupations down ~6% vs least-exposed since pre-ChatGPT"
     },
     {
       "date": "2026-09-02",
@@ -1222,7 +1222,7 @@
         "chandar-kleinteeselink-labor-demand-2026"
       ],
       "evidenceTier": 1,
-      "label": "Stanford DEL: AI-adopting firms grow total employment 3.3% and senior employment 6.7% against matched controls"
+      "label": "Stanford DEL: AI-adopting firms grow total employment 3.3% and senior employment 6.7% against"
     }
   ],
   "sources": [

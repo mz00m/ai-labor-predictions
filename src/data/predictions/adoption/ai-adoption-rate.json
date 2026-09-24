@@ -446,7 +446,7 @@
         "eurostat-ai-enterprises-2025"
       ],
       "evidenceTier": 1,
-      "label": "Eurostat: 19.95% of EU enterprises (10+ employees) used at least one AI technology in 2025 (isoc_eb_ai)"
+      "label": "Eurostat: 19.95% of EU enterprises (10+ employees) used at least one AI technology in 2025"
     },
     {
       "date": "2025-12-15",
@@ -752,7 +752,7 @@
         "carlyle-compass-ai-saas-2026"
       ],
       "evidenceTier": 2,
-      "label": "Carlyle: 11% of management teams cite SaaS licenses as AI spending offset; 17% cite no meaningful reallocation"
+      "label": "Carlyle: 11% of management teams cite SaaS licenses as AI spending offset"
     },
     {
       "date": "2026-05-01",
@@ -788,7 +788,7 @@
         "nber-chen-sialm-xu-ai-investing-2026"
       ],
       "evidenceTier": 1,
-      "label": "NBER: AI hedge funds peaked at ~2.7% of all hedge funds; AI labor intensity 1.17% of adviser postings"
+      "label": "NBER: AI hedge funds peaked at ~2.7% of all hedge funds; AI labor intensity 1.17% of adviser"
     },
     {
       "date": "2026-07-20",
@@ -869,7 +869,7 @@
         "syverson-eig-ai-productivity-2026"
       ],
       "evidenceTier": 2,
-      "label": "Syverson (EIG): sector BTOS adoption vs productivity gain positive but not distinguishable from chance"
+      "label": "Syverson (EIG): sector AI adoption vs productivity gain correlates, but not beyond chance"
     },
     {
       "date": "2026-09-01",
