@@ -5,10 +5,10 @@
   "description": "Employment decline for workers aged 22-25 in the most AI-exposed occupations, measured relative to less-exposed occupations. The chart shows only estimates that make this comparison directly. Raw declines that are not adjusted for other causes measure something different, so they appear below the chart as directional signals.",
   "category": "displacement",
   "unit": "% employment decline, ages 22-25, vs least-exposed",
-  "currentValue": 14.8,
+  "currentValue": 13.4,
   "timeHorizon": "Current measure",
   "aggregationMethod": "weighted",
-  "disclaimer": "Every point on the chart is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) sit below the chart as directional signals and are left out of the average, because labor markets differ enough between countries that averaging across them would mislead. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. The 2025 and 2026 points are the same Stanford/ADP study a year apart \u2014 not two studies independently reaching the same answer. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Every point on the chart is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) sit below the chart as directional signals and are left out of the average, because labor markets differ enough between countries that averaging across them would mislead. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. The 2025 and 2026 points are the same Stanford/ADP study a year apart \u2014 not two studies independently reaching the same answer. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations). One point is a proxy conversion rather than a figure the source states. The Census CES study (Orr, Tucker and Warren) reports a 4.8 percentage-point fall in the probability of employment one quarter after graduation, which is not this chart's unit; dividing by the base share employed from that paper's own Figure 1 (axis .6 to .9, central 0.75) puts it at 6.4% [5.6-7.4]. It carries isProxy and a 0.5x weight discount. It sits roughly three standard deviations below the occupation-based estimates here, and that gap is the interesting part rather than a flaw: exposure in that study is assigned by college major, chosen years before anyone meets a hiring manager, while occupation-based measures may partly capture employers pulling back from roles they expect AI to take rather than work it already does.",
   "history": [
     {
       "date": "2025-11-13",
@@ -80,6 +80,28 @@
       "evidenceTier": 2,
       "dataType": "observed",
       "metricType": "employment"
+    }
+  ,
+    {
+      "date": "2026-09-10",
+      "value": 6.4,
+      "confidenceLow": 5.6,
+      "confidenceHigh": 7.4,
+      "sourceIds": [
+        "orr-tucker-warren-ai-exposed-majors-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "sampleSize": 6665500,
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "percentage-point change in the probability of employment one quarter post-graduation",
+        "conversionFactor": 1.33,
+        "conversionLow": 1.18,
+        "conversionHigh": 1.54,
+        "rationale": "Divides the 4.8pp effect by the base share employed one quarter post-graduation to express it in this chart's unit, a relative percent decline. The denominator is the paper's own Figure 1 (\"Employment one quarter post-grad\"), whose axis runs .6 to .9 in share employed; central 0.75, bounded 0.65-0.85. The conversion is arithmetic and insensitive to the denominator across that range (5.6-7.4%). Sits about 3 standard deviations below the occupation-based estimates on this chart, which is signal rather than artifact: exposure here is assigned by college major, fixed years before labor market entry, whereas the occupation-based measures may partly capture employers pulling back from roles they expect AI to take."
+      }
     }
   ],
   "overlays": [
@@ -310,7 +332,7 @@
         "chandar-kleinteeselink-labor-demand-2026"
       ],
       "evidenceTier": 1,
-      "label": "Stanford DEL (41 countries): junior share -1.9pp at AI adopters, driven by senior growth, not junior job losses"
+      "label": "Stanford DEL (41 countries): junior share -1.9pp at AI adopters, driven by senior growth"
     }
   ,
     {
@@ -320,7 +342,7 @@
         "chandar-kleinteeselink-labor-demand-2026"
       ],
       "evidenceTier": 1,
-      "label": "Stanford DEL: in computer and mathematical occupations the junior share falls 3.3pp even as the occupation grows"
+      "label": "Stanford DEL: computer and mathematical junior share falls 3.3pp as the occupation itself grows"
     }
   ],
   "sources": [

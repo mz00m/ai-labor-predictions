@@ -57,6 +57,7 @@ Does the stat's unit exactly match the graph's unit?
 | Relative posting change (%) | % jobs displaced | 0.30 | 0.15–0.45 | Relative comparisons (high-AI vs low-AI occupations) capture substitution patterns but overstate net displacement due to composition effects |
 | Productivity gain (%) | % wage change | 0.40 | 0.20–0.60 | Historical productivity-to-wage pass-through is ~40% in the medium run (Stansbury/Summers 2020), lower in the short run |
 | Revenue automation (%) | % jobs displaced | 0.25 | 0.10–0.40 | Revenue automation often precedes headcount reallocation not reduction; firms redeploy savings to growth areas |
+| Percentage-point change in employment probability | % relative employment decline | 1.33 | 1.18–1.54 | Divide by the base employment share to restate a linear-probability effect as a relative decline. Factor is 1/base; the range spans base rates 0.85 to 0.65. Use a base rate the source itself reports (Orr/Tucker/Warren 2026 plot share employed one quarter post-graduation on a .6–.9 axis); if the source states no base rate, use an overlay instead. |
 
 ### Conversion Mechanics
 
