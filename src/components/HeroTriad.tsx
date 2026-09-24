@@ -6,14 +6,6 @@ import HeroStatWobble from "./HeroStatWobble";
 /*  Client-side hero stat triad with confidence-interval Easter egg    */
 /* ------------------------------------------------------------------ */
 
-interface HeroTriadProps {
-  projectedJobLoss: number;
-  projectedEstimateCount: number;
-  projectedLow: number;
-  projectedHigh: number;
-  measuredJobLoss: number;
-}
-
 const maskStyle = {
   maskImage:
     "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)",
@@ -21,17 +13,14 @@ const maskStyle = {
     "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 85%)",
 };
 
-export default function HeroTriad({
-  projectedJobLoss,
-  projectedEstimateCount,
-  projectedLow,
-  projectedHigh,
-  measuredJobLoss,
-}: HeroTriadProps) {
+/* All three stats are hand-set from a source audit (Sep 2026), not derived
+   from the displacement series: that series mixes net, gross, exposure, and
+   scenario estimates, so a mechanical average moved with every ingest. */
+export default function HeroTriad() {
   return (
     <div className="mt-6 relative grid grid-cols-3 place-items-center pb-6">
-      {/* Productivity boost - range: 14% to 35% across studies */}
-      <HeroStatWobble center={21} low={14} high={35}>
+      {/* Productivity boost - median of 8 controlled studies (% time saved), range 13-56% */}
+      <HeroStatWobble center={21} low={13} high={56}>
         {(displayValue, wobbling) => (
           <a
             href="#evidence-funnel"
@@ -55,14 +44,14 @@ export default function HeroTriad({
               Productivity boost
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Median task-level gain, 18 studies
+              Median of 8 controlled studies; range 13–56%
             </p>
           </a>
         )}
       </HeroStatWobble>
 
-      {/* Projected job loss - range from actual data bounds */}
-      <HeroStatWobble center={projectedJobLoss} low={projectedLow} high={projectedHigh}>
+      {/* Projected job loss - median of 5 independent net US forecasts to ~2030, range 0.6-3% */}
+      <HeroStatWobble center={1} low={0.6} high={3}>
         {(displayValue, wobbling) => (
           <a
             href="/predictions/overall-us-displacement"
@@ -73,7 +62,7 @@ export default function HeroTriad({
               style={maskStyle}
             >
               <span className="relative">
-                {displayValue ?? projectedJobLoss}
+                {displayValue ?? "1"}
                 <span className="absolute left-full top-0 text-heading-xl sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
                   %
                 </span>
@@ -83,17 +72,17 @@ export default function HeroTriad({
               <span className="text-3xs font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
-              Projected job loss
+              Projected net job loss by 2030
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Weighted avg of {projectedEstimateCount} data points
+              Median of 5 forecasts (0.6–3%)
             </p>
           </a>
         )}
       </HeroStatWobble>
 
-      {/* Measured job loss - range: -0.5% to 0.5% */}
-      <HeroStatWobble center={measuredJobLoss} low={-0.5} high={0.5}>
+      {/* Measured job loss - rounds to 0; quantified sources land at 0.1-0.2% of US employment */}
+      <HeroStatWobble center={0} low={0} high={0.2}>
         {(displayValue, wobbling) => (
           <a
             href="#evidence-funnel"
@@ -104,7 +93,7 @@ export default function HeroTriad({
               style={maskStyle}
             >
               <span className="relative">
-                {displayValue ?? measuredJobLoss}
+                {displayValue ?? "0"}
                 <span className="absolute left-full top-0 text-heading-xl sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
                   %
                 </span>
@@ -114,10 +103,10 @@ export default function HeroTriad({
               <span className="text-3xs font-light opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 mr-0.5">
                 ~
               </span>
-              Measured job loss
+              Measured US job loss
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Yale, NBER, Dallas Fed, ECB
+              Early job impacts concentrated among workers 22–25
             </p>
           </a>
         )}

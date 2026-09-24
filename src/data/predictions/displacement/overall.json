@@ -43,7 +43,7 @@
       "dataType": "projected"
     },
     {
-      "date": "2024-11-01",
+      "date": "2026-01-13",
       "value": 6,
       "confidenceLow": 3,
       "confidenceHigh": 11,
@@ -52,7 +52,15 @@
       ],
       "evidenceTier": 2,
       "metricType": "survey",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US jobs lost to AI and automation by 2030, gross (not net of jobs created)",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "Gross job losses; Forrester does not net out job creation, so net displacement is lower"
+      }
     },
     {
       "date": "2025-01-01",
@@ -84,7 +92,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "first-5-year share of long-run job loss in one of three search-model equilibria",
+        "conversionFactor": 1,
+        "conversionLow": 0,
+        "conversionHigh": 1,
+        "rationale": "Conditional model outcome in the 'some-AI' steady state, not a central forecast; the other equilibria imply little or no loss"
+      }
     },
     {
       "date": "2025-08-01",
@@ -96,7 +112,15 @@
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US workers displaced over ~10 years if AI is widely adopted, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.05,
+        "conversionHigh": 1,
+        "rationale": "Gross displacement over a decade; Goldman's own net estimate is a transitory ~0.5pp rise in unemployment"
+      }
     },
     {
       "date": "2025-10-01",
@@ -130,10 +154,18 @@
       ],
       "evidenceTier": 1,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of 240 freelance projects the best AI agent completed (automation benchmark)",
+        "conversionFactor": 1,
+        "conversionLow": 0,
+        "conversionHigh": 1,
+        "rationale": "Task benchmark of agent capability, not a forecast of jobs lost"
+      }
     },
     {
-      "date": "2025-12-01",
+      "date": "2025-01-08",
       "value": 8,
       "confidenceLow": 5,
       "confidenceHigh": 14,
@@ -142,7 +174,15 @@
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of global jobs displaced by 2030 from all drivers, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0,
+        "conversionHigh": 0.5,
+        "rationale": "Global churn from all causes (92M displaced, 170M created); the net figure is +7% job growth, not loss"
+      }
     },
     {
       "date": "2026-01-01",
@@ -153,8 +193,8 @@
         "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2026-01-06",
@@ -197,8 +237,8 @@
         "icle-ai-productivity-2026"
       ],
       "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
+      "metricType": "employment",
+      "dataType": "observed"
     },
     {
       "date": "2026-02-05",
@@ -231,7 +271,7 @@
       ],
       "evidenceTier": 1,
       "metricType": "survey",
-      "dataType": "observed"
+      "dataType": "projected"
     },
     {
       "date": "2026-02-24",
@@ -243,7 +283,15 @@
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US workers displaced over ~10 years if AI is widely adopted, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.05,
+        "conversionHigh": 1,
+        "rationale": "Restates Goldman's 2025 gross-displacement baseline (same model); net effect is a transitory ~0.5pp rise in unemployment"
+      }
     },
     {
       "date": "2026-02-24",
@@ -253,7 +301,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "employment",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% employment change since late 2022 in the 10% of sectors most exposed to AI",
+        "conversionFactor": 1,
+        "conversionLow": 0.05,
+        "conversionHigh": 0.3,
+        "rationale": "Sector-level decline (vs +2.5% for all employment), not a share of all US jobs lost"
+      }
     },
     {
       "date": "2026-03-01",
@@ -302,6 +358,14 @@
       "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US jobs vulnerable to AI job loss over 2-5 years, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "9.3M jobs vulnerable (2.7-19.5M); the report explicitly excludes job creation, so this is gross exposure to loss"
+      },
       "confidenceLow": 1.8,
       "confidenceHigh": 12.9
     },
@@ -362,7 +426,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "projection",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "cumulative flow of US workers displaced over 10 years, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.05,
+        "conversionHigh": 1,
+        "rationale": "Gross flow of workers leaving jobs; Goldman notes a 5% pickup in hiring would reabsorb them"
+      }
     },
     {
       "date": "2026-06-10",
@@ -381,7 +453,7 @@
         "conversionFactor": 1,
         "conversionLow": 0.5,
         "conversionHigh": 1.5,
-        "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly"
+        "rationale": "Current annual employment change in the most AI-exposed occupations, not a count of jobs lost to AI; used as a leading indicator of displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly"
       }
     },
     {
@@ -425,7 +497,7 @@
         "conversionFactor": 1,
         "conversionLow": 0.5,
         "conversionHigh": 1.5,
-        "rationale": "Current annual contraction rate in AI-exposed occupations is a leading-indicator proxy for projected 2030 displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly. Monthly refresh of the same Canaries dashboard series last ingested 2026-06-10."
+        "rationale": "Current annual employment change in the most AI-exposed occupations, not a count of jobs lost to AI; used as a leading indicator of displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly. Monthly refresh of the same Canaries dashboard series last ingested 2026-06-10."
       }
     },
     {
@@ -467,7 +539,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "projection",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "excess US unemployment in the modest-change scenario",
+        "conversionFactor": 1,
+        "conversionLow": 0,
+        "conversionHigh": 1,
+        "rationale": "One of three scenarios the authors say are not predictions and carry no probabilities; the substantial-change scenario is treated as the central case"
+      }
     }
   ,
     {
@@ -489,7 +569,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "projection",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "excess US unemployment in the extreme-change scenario",
+        "conversionFactor": 1,
+        "conversionLow": 0,
+        "conversionHigh": 1,
+        "rationale": "One of three scenarios the authors say are not predictions and carry no probabilities; the substantial-change scenario is treated as the central case"
+      }
     }
   ],
   "overlays": [
@@ -2369,7 +2457,7 @@
       "url": "https://www.forrester.com/press-newsroom/forrester-impact-ai-jobs-forecast/",
       "publisher": "Forrester",
       "evidenceTier": 2,
-      "datePublished": "2025-01-06",
+      "datePublished": "2026-01-13",
       "excerpt": "AI and automation could account for 6% of total US job losses by 2030, equating to 10.4 million roles. Widespread AI-driven job replacement remains unlikely. AI will augment 20% of jobs rather than eliminate them.",
       "dateAdded": "2026-03-01"
     },
@@ -2731,8 +2819,8 @@
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
       "publisher": "World Economic Forum",
       "evidenceTier": 2,
-      "datePublished": "2025-12-01",
-      "excerpt": "40% of employers globally expect to reduce headcount as AI automates tasks. Net displacement estimates range from 5-14% of current roles by 2030.",
+      "datePublished": "2025-01-08",
+      "excerpt": "92 million roles will be displaced by 2030, equivalent to 8% of current jobs, offset by the creation of 170 million new roles for a net gain of 78 million (7%). Global, all drivers of change. 40% of employers expect to reduce headcount where AI can automate tasks.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -3612,7 +3700,7 @@
     {
       "id": "goldman-briggs-15m-displacement-revision-2026",
       "title": "Goldman Sachs Revised Forecast: ~9% / 15M US Workers Displaced over 10 Years",
-      "url": "https://www.goldmansachs.com/insights/articles/how-will-ai-affect-the-us-labor-market",
+      "url": "https://allwork.space/2026/07/goldman-sachs-says-ai-could-displace-9-of-the-u-s-workforce/",
       "publisher": "Goldman Sachs Research (Joseph Briggs)",
       "evidenceTier": 2,
       "datePublished": "2026-06-01",
@@ -3876,7 +3964,7 @@
       "id": "goldman-exchanges-briggs-acemoglu-2026",
       "title": "How Will AI Impact the Labor Market? (Goldman Sachs Exchanges)",
       "url": "https://www.goldmansachs.com/insights/goldman-sachs-exchanges/how-will-ai-impact-the-labor-market",
-      "publisher": "Goldman Sachs Exchanges (Briggs, Acemoglu, Thompson)",
+      "publisher": "Daron Acemoglu, on Goldman Sachs Exchanges",
       "evidenceTier": 2,
       "datePublished": "2026-07-02",
       "excerpt": "Daron Acemoglu, asked how large AI's labor market impact will be: \"I would expect some net job losses, limited, but net job losses within the next five years... none of this, in my estimation, will be of a scale anywhere close to the kinds of things that some expect. I would say less than two to four percent.\" The 2-4% is plotted as a midpoint with the range as its confidence band; note it is stated as an upper bound over a five-year horizon rather than a point estimate to 2030. Acemoglu attributes the ceiling to missing deployment infrastructure: \"we don't have easy to use applications based on the foundation models that can be adopted by many large-scale employers,\" with coding an exception. He puts the most vulnerable pool - cognitive routine work such as customer service reps and back-office staff - at \"eight million in the United States, nine million,\" and expects \"bigger net job losses within the next 10 to 15 years if things continue like this.\" Goldman's Joseph Briggs, on the same episode, sizes the current imprint at \"probably a 10 to 15,000 drag on month-over-month job growth from AI impacts,\" concentrated in tech, management consulting and graphic design, and reiterates the 9%/15M ten-year reallocation forecast under a 15% productivity uplift, adding that \"the unemployment rate increase in any given year would be less than one percentage point.\" Recorded June 2026, published July 2, 2026.",

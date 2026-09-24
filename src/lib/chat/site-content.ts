@@ -184,12 +184,12 @@ Firms use productivity gains to enter new markets or create new services. This i
 /** Hero stats content */
 export const HERO_CONTENT = `# Key Dashboard Statistics
 
-The site headline is: "How is AI reshaping the labor market?" with the thesis: "AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they are disappearing. No measurable macro displacement, yet."
+The site headline is: "How is AI reshaping the labor market?" with the thesis: "AI adoption is accelerating, productivity is climbing, and jobs are changing faster than they are disappearing. No measurable job displacement, maybe?"
 
 Three hero statistics:
-1. ~21% Productivity boost: Median of 18 studies measuring AI's impact on worker productivity
-2. ~1% Projected job loss: Weighted average of estimates for overall US job displacement (from the overall-us-displacement prediction, all evidence tiers weighted)
-3. ~0% Measured job loss: Based on Yale, Goldman Sachs, and Dallas Fed observed data. Despite high exposure estimates, actual macro-level job losses attributable to AI remain near zero as of early 2026.
+1. ~21% Productivity boost: Median time saved per task across 8 controlled studies (RCTs and field experiments), range 13-56%. Surveys and firm-level studies are shown on the productivity page but excluded from this median because they measure different things.
+2. ~1% Projected net job loss by 2030: Median of 5 independent forecasts of net US job loss (Goldman Sachs, Anthropic Institute central scenario, Bloom et al. executive survey, Metaculus, Acemoglu), range 0.6-3%. Gross displacement estimates (workers displaced before most are re-employed) are higher, about 6-9% (Forrester, Tufts, Goldman Sachs).
+3. ~0% Measured US job loss: Rounds to zero. Every source that quantifies aggregate AI job loss so far lands at about 0.1-0.2% of US employment (Goldman Sachs tracker, Challenger AI-attributed layoffs, Dallas Fed upper bound, Bloom et al.), and Yale Budget Lab detects no aggregate effect. The losses are concentrated among workers aged 22-25 in AI-exposed jobs, where Stanford finds a 19% relative employment gap (Aug 2026).
 
 These three numbers capture the core tension: AI demonstrably boosts productivity and is projected to displace some jobs, but observed displacement so far is minimal. The gap between projected and observed displacement is one of the most important findings on the site.`;
 

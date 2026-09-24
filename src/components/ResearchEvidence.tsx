@@ -18,6 +18,9 @@ interface MicroStudy {
   citation: string;
   url: string;
   note?: string;
+  /** Controlled task-level estimate, harmonized to % time saved per task.
+   *  Present only for studies included in the headline median. */
+  timeSavedPct?: number;
 }
 
 const MICRO_STUDIES: MicroStudy[] = [
@@ -27,11 +30,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     year: 2025,
     title: "Human-AI Ad Teams",
     domain: "Advertising",
-    effectPct: 73,
-    effectLabel: "+73%",
-    finding: "Human-AI teams showed roughly 73% higher productivity per worker for ad copy; human-human teams remained superior for images.",
+    effectPct: 50,
+    effectLabel: "+50%",
+    finding: "Human-AI teams produced about 50% more ads per worker than human-human teams (current version of the paper; earlier drafts reported 60% and 73%). Human-human teams remained superior for images.",
     citation: "arXiv:2503.18238",
     url: "https://arxiv.org/abs/2503.18238",
+    note: "AI replaces a human teammate rather than assisting one; not in the controlled-study median",
   },
   {
     id: "peng-copilot-2023",
@@ -44,6 +48,7 @@ const MICRO_STUDIES: MicroStudy[] = [
     finding: "Developers completed a coding task 55.8% faster with GitHub Copilot assistance.",
     citation: "arXiv:2302.06590",
     url: "https://arxiv.org/abs/2302.06590",
+    timeSavedPct: 55.8,
   },
   {
     id: "gambacorta-2024",
@@ -63,9 +68,9 @@ const MICRO_STUDIES: MicroStudy[] = [
     year: 2024,
     title: "GitHub Copilot Observational",
     domain: "Software dev",
-    effectPct: 46,
-    effectLabel: "+37–55%",
-    finding: "37–55% increase in commits, mainly through contributions building on others' work (debugging, small edits).",
+    effectPct: 34,
+    effectLabel: "+28–40%",
+    finding: "28–40% increase in open-source contributions, mainly through work building on others' code (debugging, small edits).",
     citation: "arXiv:2409.08379",
     url: "https://arxiv.org/abs/2409.08379",
   },
@@ -75,11 +80,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     year: 2023,
     title: "Writing Tasks RCT",
     domain: "Writing",
-    effectPct: 37,
-    effectLabel: "+0.8 SD faster",
-    finding: "Workers completed tasks 0.8 standard deviations faster and produced output rated 0.4 standard deviations higher in quality. Lower-performing workers saw the largest gains.",
+    effectPct: 40,
+    effectLabel: "−40% time",
+    finding: "Workers completed writing tasks 40% faster and produced output rated 18% higher in quality. Lower-performing workers saw the largest gains.",
     citation: "Science 381(6654): 187–192",
     url: "https://www.science.org/doi/10.1126/science.adh2586",
+    timeSavedPct: 40,
   },
   {
     id: "gs-ai-nxiety-2026",
@@ -103,8 +109,9 @@ const MICRO_STUDIES: MicroStudy[] = [
     effectPct: 26,
     effectLabel: "+26%",
     finding: "26% increase in completed pull requests; 13.55% increase in commits; 38.38% increase in builds. Build success rate fell by 5.53 percentage points.",
-    citation: "Working paper (2025)",
-    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5106604",
+    citation: "Management Science (2025)",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4945566",
+    timeSavedPct: 20.7,
   },
   {
     id: "dellacqua-bcg-2023",
@@ -116,7 +123,8 @@ const MICRO_STUDIES: MicroStudy[] = [
     effectLabel: "+25.1%",
     finding: "For tasks within AI's capabilities: 12.2% more tasks completed, 25.1% faster, output rated 40% higher quality. For tasks outside AI's frontier, performance was 19 percentage points worse.",
     citation: "HBS Working Paper 24-013",
-    url: "https://www.hbs.edu/ris/Publication%20Files/24-013_d9b45b68-9e74-42d6-a1c6-c72fb70c7571.pdf",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321",
+    timeSavedPct: 25.1,
   },
   {
     id: "paradis-google-2024",
@@ -125,11 +133,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     title: "Google Internal RCT",
     domain: "Software dev",
     effectPct: 21,
-    effectLabel: "+21%",
-    finding: "21% reduction in time spent per task. More experienced developers saw bigger effects.",
+    effectLabel: "−21% time",
+    finding: "21% reduction in time spent per task (wide confidence interval, n=96). More experienced developers saw bigger effects.",
     citation: "arXiv:2410.12944",
     url: "https://arxiv.org/abs/2410.12944",
     note: "Time reduction; experienced devs benefited more",
+    timeSavedPct: 21,
   },
   {
     id: "metr-2026",
@@ -138,11 +147,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     title: "METR Open-Source Devs (Updated)",
     domain: "Software dev",
     effectPct: 18,
-    effectLabel: "+18%",
-    finding: "For the subset of original developers who participated in the later study, METR now estimates an 18% reduction in task completion time (CI: 9% to 38% faster). Among newly-recruited developers the estimated time reduction is 4% (CI: -9% to +15%).",
+    effectLabel: "−18% time",
+    finding: "For the subset of original developers who participated in the later study, METR now estimates an 18% reduction in task completion time (CI: 38% faster to 9% slower). Among newly-recruited developers the estimated time reduction is 4% (CI: 15% faster to 9% slower). METR calls both estimates an unreliable signal.",
     citation: "METR Blog, Feb 2026",
     url: "https://metr.org/blog/2026-02-24-uplift-update/",
-    note: "Updated from initial finding; time reduction = productivity increase; wide confidence intervals",
+    note: "Updated from initial finding; both confidence intervals include zero",
+    timeSavedPct: 18,
   },
   {
     id: "fang-ecommerce-2025",
@@ -162,11 +172,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     year: 2025,
     title: "Customer Support Productivity",
     domain: "Customer service",
-    effectPct: 14,
-    effectLabel: "+14%",
-    finding: "14–15% increase in customer support issues resolved per hour on average; 30–35% gains for less experienced agents; minimal gains for highly skilled agents.",
+    effectPct: 15,
+    effectLabel: "+15%",
+    finding: "15% increase in customer support issues resolved per hour on average; 30–35% gains for less experienced agents; minimal gains for highly skilled agents.",
     citation: "QJE 140(2): 889–942",
     url: "https://academic.oup.com/qje/article/140/2/889/7990658",
+    timeSavedPct: 13,
   },
   {
     id: "dellacqua-pg-2025",
@@ -174,12 +185,13 @@ const MICRO_STUDIES: MicroStudy[] = [
     year: 2025,
     title: "\"Cybernetic Teammate\" / P&G",
     domain: "Product dev",
-    effectPct: 12,
-    effectLabel: "Quality +",
-    finding: "AI raised solution quality for individuals and teams; reduced expertise gaps between technical and commercial specialists.",
+    effectPct: 16.4,
+    effectLabel: "−16% time",
+    finding: "Individuals with AI worked 16.4% faster and produced solutions rated 0.37 SD higher in quality, matching two-person teams without AI. AI also narrowed expertise gaps between technical and commercial specialists.",
     citation: "HBS Working Paper 25-043 / NBER 33641",
     url: "https://www.nber.org/papers/w33641",
-    note: "Quality improvement; gap reduction",
+    note: "Time saved plus quality improvement; gap reduction",
+    timeSavedPct: 16.4,
   },
   {
     id: "bloom-firm-data-ai-2026",
@@ -204,7 +216,7 @@ const MICRO_STUDIES: MicroStudy[] = [
     effectLabel: "~0%",
     finding: "No statistically significant average effect on revenues. High-performing businesses improved ~15%, low performers did 8–10% worse, widening performance gaps.",
     citation: "HBS Working Paper 24-042",
-    url: "https://www.hbs.edu/ris/Publication%20Files/24-042_9d69e71a-98c6-4a9a-9755-93462d7e4394.pdf",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4671369",
     note: "Widened performance gaps",
   },
   {
@@ -230,12 +242,12 @@ const MICRO_STUDIES: MicroStudy[] = [
     effectLabel: "96% no ROI",
     finding: "Survey of Fortune 100 companies and 12,000+ knowledge workers found 96% of businesses have not seen dramatic improvements from AI. Only 4% report true ROI despite widespread adoption.",
     citation: "Atlassian AI Collaboration Report, 2025",
-    url: "https://www.atlassian.com/blog/announcements/state-of-ai-report-2025",
+    url: "https://www.atlassian.com/blog/ai-collaboration-report-2025",
     note: "Org-level vs individual productivity gap",
   },
   {
     id: "hbr-workslop-2025",
-    authors: "Niederhoffer, Teevan & Jaffe",
+    authors: "Niederhoffer, Rosen Kellerman, Lee, Liebscher, Rapuano & Hancock",
     year: 2025,
     title: "AI Workslop / BetterUp Survey",
     domain: "Knowledge work",
@@ -243,7 +255,7 @@ const MICRO_STUDIES: MicroStudy[] = [
     effectLabel: "\u22122 hrs/incident",
     finding: "40% of knowledge workers have received \u2018AI workslop\u2019: low-quality AI-generated output passed off as finished work. Each incident costs ~2 hours to fix, eroding trust and team productivity.",
     citation: "Harvard Business Review, 2025",
-    url: "https://hbr.org/2025/05/research-ai-generated-work-is-creating-a-hidden-burden-for-colleagues",
+    url: "https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity",
     note: "Time lost per workslop incident; net negative productivity",
   },
 ];
@@ -668,9 +680,15 @@ export default function ResearchEvidence() {
   const positiveCount = MICRO_STUDIES.filter((s) => s.effectPct > 0).length;
   const negativeCount = MICRO_STUDIES.filter((s) => s.effectPct < 0).length;
   const neutralCount = MICRO_STUDIES.filter((s) => s.effectPct === 0).length;
-  const medianEffect = [...MICRO_STUDIES]
-    .map((s) => s.effectPct)
-    .sort((a, b) => a - b)[Math.floor(MICRO_STUDIES.length / 2)];
+  // Headline median: controlled task-level studies only, on one scale (% time saved).
+  // Surveys and firm-level results stay on the chart but are not comparable.
+  const controlled = MICRO_STUDIES.flatMap((s) =>
+    s.timeSavedPct === undefined ? [] : [s.timeSavedPct]
+  ).sort((a, b) => a - b);
+  const mid = Math.floor(controlled.length / 2);
+  const medianEffect = Math.round(
+    controlled.length % 2 ? controlled[mid] : (controlled[mid - 1] + controlled[mid]) / 2
+  );
 
   return (
     <section id="research-evidence" className="mt-12">
@@ -716,7 +734,7 @@ export default function ResearchEvidence() {
               </span>
             )}
             <span className="text-xs font-bold px-2 py-1 rounded-full bg-purple-50 text-purple-700">
-              Median: +{medianEffect}%
+              Median of {controlled.length} controlled studies: {medianEffect}% less time
             </span>
           </div>
 

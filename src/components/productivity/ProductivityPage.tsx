@@ -91,7 +91,7 @@ export default function ProductivityPage() {
           <StatHighlight
             value="~21%"
             label="Median task-level gain"
-            detail="Median of 18 micro studies"
+            detail="Median of 8 controlled studies (time saved)"
             color="#22c55e"
           />
           <StatHighlight
@@ -102,8 +102,8 @@ export default function ProductivityPage() {
           />
           <StatHighlight
             value="~0%"
-            label="Measured job loss"
-            detail="Yale, Goldman, Dallas Fed"
+            label="Measured US job loss"
+            detail="Stanford, Yale, NBER, Dallas Fed"
             color="#f59e0b"
           />
         </div>
