@@ -106,7 +106,7 @@ export default function HeroTriad() {
               Measured US job loss
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Stanford, Yale, NBER, Dallas Fed · concentrated among workers 22–25
+              Early job impacts concentrated among workers 22–25
             </p>
           </a>
         )}
