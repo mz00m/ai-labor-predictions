@@ -81,8 +81,8 @@ export default function HeroTriad() {
         )}
       </HeroStatWobble>
 
-      {/* Measured job loss - every quantified source lands at 0.1-0.2% of US employment */}
-      <HeroStatWobble center={0.2} low={0} high={0.2}>
+      {/* Measured job loss - rounds to 0; quantified sources land at 0.1-0.2% of US employment */}
+      <HeroStatWobble center={0} low={0} high={0.2}>
         {(displayValue, wobbling) => (
           <a
             href="#evidence-funnel"
@@ -93,7 +93,7 @@ export default function HeroTriad() {
               style={maskStyle}
             >
               <span className="relative">
-                {displayValue ?? "<0.2"}
+                {displayValue ?? "0"}
                 <span className="absolute left-full top-0 text-heading-xl sm:text-[60px] font-normal opacity-0 group-hover/stat:opacity-40 transition-opacity duration-200 ml-0.5">
                   %
                 </span>

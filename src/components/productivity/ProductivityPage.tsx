@@ -101,7 +101,7 @@ export default function ProductivityPage() {
             color="#5C61F6"
           />
           <StatHighlight
-            value="<0.2%"
+            value="~0%"
             label="Measured US job loss"
             detail="Stanford, Yale, NBER, Dallas Fed"
             color="#f59e0b"
