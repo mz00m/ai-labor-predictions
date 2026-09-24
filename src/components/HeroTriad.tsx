@@ -75,7 +75,7 @@ export default function HeroTriad() {
               Projected net job loss by 2030
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Median of 5 forecasts (0.6–3%). Gross displacement: 6–9%
+              Median of 5 forecasts (0.6–3%)
             </p>
           </a>
         )}
