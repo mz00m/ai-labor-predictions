@@ -405,15 +405,12 @@ function checkRequiredFields(prediction, report) {
   }
 }
 
-// Hero stats architecture: projected & measured job loss are COMPUTED at build
-// time by getHeroStats() in src/lib/data-loader.ts from overall-us-displacement.
-// Only the productivity stat is hardcoded, in src/components/HeroTriad.tsx.
-// So this check validates the INPUTS to the computation, and mirrors the
-// computation to report the values the site will display.
+// Hero stats architecture: all three stats are hand-set in
+// src/components/HeroTriad.tsx from a source audit (Sep 2026). They are NOT
+// derived from overall-us-displacement, which mixes net, gross, exposure and
+// scenario estimates. This check reports the displayed values so a human can
+// re-verify them against the literature.
 function checkHeroStats(predictions, report) {
-  const overall = predictions.find((p) => p.slug === "overall-us-displacement");
-
-  // Productivity boost — hardcoded in HeroTriad.tsx as center={N} low={L} high={H}
   let heroTriad = "";
   try {
     heroTriad = fs.readFileSync(HERO_TRIAD_PATH, "utf-8");
@@ -424,65 +421,30 @@ function checkHeroStats(predictions, report) {
       HERO_TRIAD_PATH,
       "Hero stat architecture changed — update auto-audit.js paths"
     );
-  }
-  const wobble = heroTriad.match(/center=\{(\d+)\}\s+low=\{(\d+)\}\s+high=\{(\d+)\}/);
-  if (wobble) {
-    report.addHeroStat(
-      "Productivity boost",
-      `~${wobble[1]}% (range ${wobble[2]}-${wobble[3]})`,
-      "hardcoded in HeroTriad.tsx — manual check vs productivity studies",
-      true
-    );
-  } else if (heroTriad) {
-    report.addShouldFix(
-      "hero-stats",
-      "Could not locate productivity wobble values in HeroTriad.tsx",
-      "Expected center={N} low={N} high={N}",
-      "Update the extraction pattern in auto-audit.js if HeroTriad changed"
-    );
-  }
-
-  if (!overall) {
-    report.addMustFix(
-      "hero-stats",
-      "overall-us-displacement not found",
-      "getHeroStats() will throw at build time",
-      "Restore src/data/predictions/displacement/overall.json"
-    );
     return;
   }
 
-  // Projected job loss — mirror getHeroStats(): weighted avg, all tiers, rounded abs
-  const recomputed = computeWeightedAvg(overall);
-  report.addHeroStat(
-    "Projected job loss",
-    `~${Math.round(Math.abs(recomputed))}%`,
-    `computed by getHeroStats() from ${overall.history.length} estimates`,
-    true
-  );
-
-  // Measured job loss — getHeroStats() uses the latest observed point.
-  // Validate the inputs: at least one observed point must exist, none in the future.
-  const observed = overall.history.filter((d) => d.dataType === "observed");
-  if (observed.length === 0) {
-    report.addMustFix(
+  const labels = ["Productivity boost", "Projected net job loss", "Measured US job loss"];
+  const wobbles = [
+    ...heroTriad.matchAll(/center=\{([\d.]+)\}\s+low=\{([\d.]+)\}\s+high=\{([\d.]+)\}/g),
+  ];
+  if (wobbles.length !== labels.length) {
+    report.addShouldFix(
       "hero-stats",
-      "No observed data points in overall-us-displacement",
-      "Measured job loss hero stat will silently fall back to 0",
-      "Ensure observed data points carry dataType: \"observed\""
+      `Found ${wobbles.length} hero wobble ranges in HeroTriad.tsx, expected ${labels.length}`,
+      "Expected center={N} low={N} high={N} for each stat",
+      "Update the extraction pattern in auto-audit.js if HeroTriad changed"
     );
-  } else {
-    const latest = observed
-      .slice()
-      .sort((a, b) => a.date.localeCompare(b.date))
-      .pop();
+    return;
+  }
+  wobbles.forEach((m, i) => {
     report.addHeroStat(
-      "Measured job loss",
-      `~${Math.round(Math.abs(latest.value))}%`,
-      `latest observed point ${latest.date}`,
+      labels[i],
+      `~${m[1]}% (range ${m[2]}-${m[3]})`,
+      "hand-set in HeroTriad.tsx — re-verify against sources",
       true
     );
-  }
+  });
 }
 
 function checkConfirmedSourcesCounts(confirmedSources, predictions, report) {

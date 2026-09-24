@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPredictions, getLastUpdated, getHeroStats } from "@/lib/data-loader";
+import { getAllPredictions, getLastUpdated } from "@/lib/data-loader";
 import { getSourceCount } from "@/lib/search-sources";
 import { getAllOccupationSlugs } from "@/lib/assessment/scorecard";
 import { JOB_PROFILES } from "@/data/job-tasks";
@@ -23,7 +23,6 @@ import {
 
 const predictions = getAllPredictions();
 const lastUpdated = getLastUpdated();
-const heroStats = getHeroStats();
 const occupationCount = getAllOccupationSlugs().length;
 const taskProfileCount = JOB_PROFILES.length;
 
@@ -77,13 +76,7 @@ export default function Home() {
           </p>
 
           {/* Hero data triad - numbers emerge from behind the ticker, dissolve upward */}
-          <HeroTriad
-            projectedJobLoss={heroStats.projectedJobLoss}
-            projectedEstimateCount={heroStats.projectedEstimateCount}
-            projectedLow={heroStats.projectedLow}
-            projectedHigh={heroStats.projectedHigh}
-            measuredJobLoss={heroStats.measuredJobLoss}
-          />
+          <HeroTriad />
         </div>
 
         {/* News Ticker - overlaps the bottom of the numbers, clipping them */}
