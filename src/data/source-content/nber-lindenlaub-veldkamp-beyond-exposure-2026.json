@@ -1,0 +1,13 @@
+{
+  "abstract": "Lindenlaub, Oh, Rodriguez and Veldkamp (NBER w35271, May 2026) document a gap between AI exposure measures and actual workplace AI adoption, and propose an adoption index based on comparative advantage. Using the representative German DiWaBe employee survey linked to worker and establishment data, they find that worker-reported AI use relates only weakly to prominent exposure measures. Their framework makes adoption depend on profitability as well as technical feasibility (AI's absolute advantage, measured by exposure): AI productivity and user costs are weighed against worker productivity and wages. At the task level they estimate worker productivity relative to pay, map exposure indices into AI productivity, and infer task-specific AI user costs from revealed-preference adoption. The resulting occupation-level index explains almost 60% of cross-occupation variation in observed AI adoption, vs 14% for an exposure-only model. The two approaches diverge substantially for about 30% of workers. The authors conclude that comparative advantage, not exposure alone, is needed to assess AI's labor-market impact.",
+  "keyFindings": [
+    "A comparative-advantage adoption index explains almost 60% of cross-occupation variation in observed AI adoption, vs 14% for exposure alone (Germany)",
+    "The two indices diverge substantially for about 30% of workers",
+    "Worker-reported AI use relates only weakly to prominent exposure measures",
+    "Adoption depends on profitability (AI productivity and user cost vs worker productivity and wage), not just technical feasibility"
+  ],
+  "methodology": "Representative German DiWaBe employee survey linked to administrative worker and establishment data. Task-level structural framework: worker productivity-to-pay estimates, exposure mapped to AI productivity, AI user costs inferred from revealed adoption; aggregated to an occupation-level index.",
+  "qualifiers": "Tier 1 by repo NBER convention (unrefereed). Caveats: German data, so not directly applicable to US exposure levels; the explained-variance figures are model fit statistics, not shares of jobs; the index is fit to observed adoption, so its predictive edge partly reflects that calibration. Only the abstract was read.",
+  "id": "nber-lindenlaub-veldkamp-beyond-exposure-2026",
+  "fetchedAt": "2026-09-24"
+}

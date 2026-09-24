@@ -133,6 +133,15 @@
       "label": "HBR: GenAI will enhance, not erase, customer service jobs"
     },
     {
+      "date": "2024-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "alibaba-agentic-ai-hitl-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Alibaba RCT: AI agent fully resolved 35% of eligible chats (<10% of volume)"
+    },
+    {
       "date": "2024-09-01",
       "direction": "up",
       "sourceIds": [
@@ -963,6 +972,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-04",
       "excerpt": "Since January 2023 employment has fallen by about 10% among customer-service workers"
+    },
+    {
+      "id": "alibaba-agentic-ai-hitl-2026",
+      "title": "Agentic AI and Human-in-the-Loop Interventions: Field Experimental Evidence from Alibaba's Customer Service Operations",
+      "url": "https://arxiv.org/abs/2605.14830",
+      "publisher": "Zhejiang University / Fudan University / Dartmouth Tuck / Alibaba Group",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-14",
+      "excerpt": "The remaining 3,874 chats, or 35.0 percent of the sample, involve no escalation and are resolved entirely by the agentic AI system. … At the time of the experiment, AI-eligible chats accounted for less than 10 percent of total chat volume.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

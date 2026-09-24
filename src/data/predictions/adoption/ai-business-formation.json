@@ -55,6 +55,18 @@
       "metricType": "employment"
     },
     {
+      "date": "2024-12-31",
+      "value": 20,
+      "confidenceLow": 4,
+      "confidenceHigh": 39,
+      "sourceIds": [
+        "bena-bian-giannetti-genai-entrepreneurship-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
       "date": "2025-03-01",
       "value": 10,
       "confidenceLow": 5,
@@ -130,6 +142,15 @@
       "label": "HBS RCT: No avg effect of GPT-4 on entrepreneurs; high performers +20%, low -10%"
     },
     {
+      "date": "2024-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "bena-bian-giannetti-genai-entrepreneurship-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Bena/Bian/Giannetti: GenAI-exposed industry entry adds +7% new-firm employment, +5% earnings"
+    },
+    {
       "date": "2025-01-01",
       "direction": "up",
       "sourceIds": [
@@ -164,6 +185,24 @@
       ],
       "evidenceTier": 1,
       "label": "SBA: Small-firm AI adoption pace rising; gap with large firms narrowing"
+    },
+    {
+      "date": "2025-07-31",
+      "direction": "up",
+      "sourceIds": [
+        "kim-kang-song-solo-entrepreneurship-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Kim/Kang/Song: Product Hunt launches +40% in 2023; solo entry grew ~90% more than team entry"
+    },
+    {
+      "date": "2025-07-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "kim-kang-song-solo-entrepreneurship-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Kim/Kang/Song: teams' share of Product Hunt Top 10 rose 50% to 53% after ChatGPT"
     },
     {
       "date": "2025-09-01",
@@ -218,6 +257,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Horton et al.): AI agents collapse transaction costs, expanding feasible market designs"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "openai-ai-at-work-spring-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "OpenAI: 4M+ Americans used ChatGPT to start, run or plan a business in March 2026"
     },
     {
       "date": "2026-05-01",
@@ -327,6 +375,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census CES: self-employment among top-decile grads +0.48pp vs +0.06pp for the least exposed"
+    },
+    {
+      "date": "2026-09-11",
+      "direction": "down",
+      "sourceIds": [
+        "census-bfs-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BFS Aug 2026: 532K business applications (-7.8% MoM); 28.5K projected formations (-4.6%)"
     }
   ],
   "sources": [
@@ -596,6 +653,46 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-10",
       "excerpt": "From 2022 to 2024, the self-employment rate among graduates in the top decile of AI exposure increased by 0.48 percentage points, from 1.01 percent to 1.49 percent, while the self-employment rate for the bottom six deciles of graduates increased by only 0.06 percentage points."
+    },
+    {
+      "id": "census-bfs-aug-2026",
+      "title": "Business Formation Statistics, August 2026 (CB26-148)",
+      "url": "https://www.census.gov/econ/bfs/pdf/bfs_current.pdf",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-11",
+      "excerpt": "Business Applications for August 2026, adjusted for seasonal variation, were 531,728, a decrease of 7.8 percent compared to July 2026. ... Projected Business Formations (within 4 quarters) for August 2026, adjusted for seasonal variation, were 28,501, a decrease of 4.6 percent compared to July 2026.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "bena-bian-giannetti-genai-entrepreneurship-2026",
+      "title": "Prompted to Start: How Generative AI is Transforming Entrepreneurship",
+      "url": "https://conference.nber.org/conf_papers/f238865.pdf",
+      "publisher": "NBER conference paper (Bena, Bian & Giannetti; UBC Sauder / Stockholm School of Economics)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-08",
+      "excerpt": "We show that following the diffusion of GenAI, industries with higher task-level exposure to the new technology experience 20% more startup formation than less-exposed industries ... Column 4 of Table 3 implies that new firms increase by over 20% more in industries with GenAI exposure above the median following the introduction of GenAI, relative to less-exposed industries.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "openai-ai-at-work-spring-2026",
+      "title": "AI at Work, Spring 2026",
+      "url": "https://openaiglobalaffairs.substack.com/p/ai-at-work-spring-2026",
+      "publisher": "OpenAI Global Affairs (The Prompt newsletter)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-05",
+      "excerpt": "OpenAI Economic Research conservatively estimates that at least 4 million Americans who were starting, running, or planning a business in March 2026 did so with help from ChatGPT.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "kim-kang-song-solo-entrepreneurship-2026",
+      "title": "Generative AI Fuels Solo Entrepreneurship, but Teams Still Lead at the Top",
+      "url": "https://arxiv.org/abs/2605.10291",
+      "publisher": "Seoul National University Business School (Kim, Kang, Song)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-11",
+      "excerpt": "Entrepreneurial entry increased sharply following the release of ChatGPT-3.5, rising by 40% from 29,326 in 2022 to 41,169 in 2023, and continued to grow toward twice its pre-release level by 2025 ... By 2025, solo entry grew nearly 90% more than team entry (β = 0.621, p < 0.001).",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

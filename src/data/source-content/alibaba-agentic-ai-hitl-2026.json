@@ -1,0 +1,14 @@
+{
+  "abstract": "Randomized field experiment on Taobao, August 15–31, 2024: 647 customer-service workers randomized by employee ID (302 treated), about 680,676 chats. Treated workers supervised an LLM-based agentic AI system that autonomously handled AI-eligible chats (standardized issues, under 10 percent of chat volume) while they continued to handle other chats; control workers handled all chats. Deployment cut average chat duration by 3.2 percent overall, 16.8 percent in AI-eligible chats and 1.8 percent in AI-ineligible chats, with limited effects on retrials but substantially lower ratings for AI-eligible chats. Of 11,069 AI-eligible chats, 35.0 percent were resolved entirely by the agent, 44.1 percent escalated for technical limits, 8.6 percent for customer frustration and 12.3 percent by human initiative. Emotional escalations were 40.8 percent longer, had 6 pp more retrials and ratings 0.928 points lower than comparable human-handled chats; early human-initiated intervention performed best.",
+  "keyFindings": [
+    "−3.2% average chat duration overall; −16.8% in AI-eligible chats; −1.8% in AI-ineligible chats",
+    "35.0% of AI-eligible chats resolved entirely by the agentic AI; AI-eligible chats were under 10% of total volume",
+    "Fully AI-resolved chats: 64.6% shorter but ratings 0.858 points lower on a 5-point scale",
+    "Emotional escalations: +40.8% duration, +6 pp retrial rate, −0.928 rating points",
+    "Human-initiated escalations: +9.5% duration, −3.2 pp retrial rate — early intervention works best"
+  ],
+  "methodology": "Worker-level randomized field experiment at Alibaba/Taobao; 14-day pretreatment (Aug 1–14, 2024) and 17-day treatment (Aug 15–31, 2024); 647 workers; chat-level regressions with matched counterfactuals by escalation type.",
+  "qualifiers": "arXiv working paper with Alibaba co-author (repo convention: Tier 1). Short 17-day window, one platform in China. Chat duration is elapsed customer time, not worker effort. The AI performs rather than assists, so this is an automation result, not a worker-productivity estimate.",
+  "id": "alibaba-agentic-ai-hitl-2026",
+  "fetchedAt": "2026-09-24"
+}

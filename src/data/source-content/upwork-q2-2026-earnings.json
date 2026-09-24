@@ -1,0 +1,14 @@
+{
+  "id": "upwork-q2-2026-earnings",
+  "abstract": "Upwork's Q2 2026 results (Aug 10, 2026) show total marketplace volume shrinking while AI-related and complex work grows. Gross services volume (GSV) fell 4% (3.6%) year over year to $966.4M; revenue fell 2% to $191.7M; active clients fell 4% to 763,000; GSV per active client rose 5% to a record $5,230. GSV from AI-related work rose more than 22% and AI Strategy & Consulting more than 50%. CEO Hayden Brown said 'lower-complexity work continues to shift toward automation' while demand grows for high-value AI talent and more complex projects. Upwork lowered full-year 2026 revenue guidance to $730–750M from $760–790M in May, and incurred $13.8M of restructuring costs from the May 2026 plan that cut about 24% of its workforce.",
+  "keyFindings": [
+    "GSV $966.4M, down 4% year over year; revenue $191.7M, down 2%.",
+    "Active clients 763,000, down 4% from 796,000.",
+    "GSV per active client $5,230, up 5% (eighth consecutive quarter of sequential growth).",
+    "GSV from AI-related work up more than 22% year over year; AI Strategy & Consulting up more than 50%.",
+    "FY2026 revenue guidance $730–750M, down from $760–790M given in May."
+  ],
+  "methodology": "Upwork Inc. (Nasdaq: UPWK) Q2 2026 earnings press release with unaudited condensed statements and company-defined key metrics (GSV, active clients, GSV per active client).",
+  "qualifiers": "Tier 1 per repo convention for SEC-filer earnings releases. Single platform. No hourly rate is disclosed; GSV per client reflects project size and client mix, not the price of freelancer time. AI attribution is management commentary. The AI-related growth rate slowed from more than 40% in Q1 2026 to more than 22% in Q2.",
+  "fetchedAt": "2026-09-24"
+}

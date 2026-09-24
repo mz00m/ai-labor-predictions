@@ -262,6 +262,15 @@
       "label": "Wolfe & Dangol: AI labs frame experts as interchangeable, pressuring freelancer rates"
     },
     {
+      "date": "2026-05-07",
+      "direction": "neutral",
+      "sourceIds": [
+        "upwork-q1-2026-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Upwork Q1 2026: GSV flat, GSV/client +5%, AI-related GSV +40%; 24% staff cut"
+    },
+    {
       "date": "2026-06-12",
       "direction": "neutral",
       "sourceIds": [
@@ -296,6 +305,51 @@
       ],
       "evidenceTier": 2,
       "label": "Upwork: AI freelancers earn 34% more/hr; complex-AI work +45% YoY earnings"
+    },
+    {
+      "date": "2026-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "fiverr-q2-2026-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Fiverr Q2 2026: active buyers -21.9%; marketplace rev -15.5%; spend/buyer +15.6%"
+    },
+    {
+      "date": "2026-07-29",
+      "direction": "down",
+      "sourceIds": [
+        "fiverr-q2-2026-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Fiverr: FY2026 guidance cut on AI demand headwinds in AI-exposed categories"
+    },
+    {
+      "date": "2026-07-31",
+      "direction": "up",
+      "sourceIds": [
+        "yiu-seamans-raj-liu-worker-repositioning-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Org Science: AI-exposed freelancers switch domains, bid on higher-value work"
+    },
+    {
+      "date": "2026-08-10",
+      "direction": "down",
+      "sourceIds": [
+        "upwork-q2-2026-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Upwork Q2 2026: GSV -4% YoY; CEO says low-complexity work shifting to automation"
+    },
+    {
+      "date": "2026-08-10",
+      "direction": "up",
+      "sourceIds": [
+        "upwork-q2-2026-earnings"
+      ],
+      "evidenceTier": 1,
+      "label": "Upwork Q2 2026: AI-related GSV +22% YoY; GSV per client +5% to $5,230"
     }
   ],
   "sources": [
@@ -537,6 +591,46 @@
       "datePublished": "2026-06-12",
       "excerpt": "The 114th International Labour Conference adopted Convention C193 on Decent Work in the Platform Economy on June 12, 2026 — the first legally binding international treaty dedicated entirely to regulating the digital platform economy. Attendance: 5,700+ delegates from 187 ILO Member States. The Convention extends fundamental rights (freedom of association, collective bargaining, protection from discrimination and forced labor), occupational safety and health, adequate remuneration, data protection, and algorithmic decision-review mechanisms to platform workers. It establishes global protections for more than 150 million workers who earn their living through digital labour platforms.",
       "dateAdded": "2026-07-21"
+    },
+    {
+      "id": "fiverr-q2-2026-earnings",
+      "title": "Fiverr Announces Second Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-second-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-29",
+      "excerpt": "Marketplace revenue in the second quarter of 2026 was $63.1 million, compared to $74.7 million in the second quarter of 2025, a decline of 15.5% year over year. Annual active buyers1 as of June 30, 2026, were 2.7 million, compared to 3.4 million as of June 30, 2025, a decline of 21.9% year over year. Annual spend per buyer1 as of June 30, 2026, reached $368, compared to $318 as of June 30, 2025, an increase of 15.6% year over year.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "upwork-q2-2026-earnings",
+      "title": "Upwork Reports Second Quarter 2026 Financial Results",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2026-financial-results",
+      "publisher": "Upwork (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-10",
+      "excerpt": "GSV(1) was $966.4 million, decreased 4% year-over-year … While lower-complexity work continues to shift toward automation, we are increasingly seeing what is emerging in its place: growing demand for high-value AI talent, more complex projects, and new categories of work across SMB and Enterprise.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "upwork-q1-2026-earnings",
+      "title": "Upwork Reports First Quarter 2026 Financial Results",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-first-quarter-2026-financial-results",
+      "publisher": "Upwork (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "GSV(1) was $987.1 million, approximately flat year-over-year … GSV per active client(1) of $5,138 increased 5% year-over-year … GSV from AI-related work increased more than 40% year-over-year in Q1 2026. … Today, Upwork is also announcing a restructuring plan that includes a reduction of the Company’s total workforce by approximately 24%.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "yiu-seamans-raj-liu-worker-repositioning-2026",
+      "title": "Worker Repositioning and Technological Change: Evidence from an Online Labor Market",
+      "url": "https://doi.org/10.1287/orsc.2025.20566",
+      "publisher": "Organization Science (Yiu, Seamans, Raj, Liu)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-31",
+      "excerpt": "Using proprietary data on incumbent freelancers and a difference-in-differences design that leverages cross-sectional variation in pre-period AI exposure and skill-level, we show that freelancers more exposed to AI shift away from prior domains and reorient bidding toward higher-value contracts.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

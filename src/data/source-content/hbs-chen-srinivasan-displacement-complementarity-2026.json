@@ -1,0 +1,14 @@
+{
+  "abstract": "Updated vintage of Chen, Srinivasan and Zakerinia's working paper 'Displacement or Complementarity? The Labor Market Impact of Generative AI', as reported by HBS Working Knowledge in HBR (March 4, 2026). It supersedes the data window of hbs-chen-srinivasan-displacement-complementarity-2025 (2019-June 2024) with postings from 2019 through March 2025 covering nearly all US vacancies. After ChatGPT's launch, postings for occupations heavy in structured, repetitive tasks that GenAI can likely replace fell 13%, while demand for analytical, technical or creative jobs that AI can enhance grew 20%. The largest reductions were in finance and technology. Automation-prone roles listed 7% fewer skills in postings, while augmentation-prone roles added AI-related skills such as prompt writing. Occupations were scored by using ChatGPT to classify over 19,000 tasks across more than 900 occupations for automation potential, plus an augmentation score from the share of exposed and unexposed tasks. The authors stress that firms' choices, particularly reskilling and treating AI as augmentation, will decide whether workers face displacement or opportunity.",
+  "keyFindings": [
+    "Postings for automation-prone occupations (structured, repetitive tasks) decreased 13% after ChatGPT's November 2022 launch (data to March 2025).",
+    "Employer demand for augmentation-prone jobs (analytical, technical, creative) grew 20%.",
+    "The largest reductions were in the finance and technology sectors.",
+    "Automation-prone roles registered 7% fewer skills in job postings, and fewer newly emerging skills.",
+    "Task classification covered over 19,000 tasks in more than 900 occupations."
+  ],
+  "methodology": "Working paper (HBS; Chen at HKUST, Zakerinia at Ohio State) using a near-universal dataset of US job postings, 2019-March 2025. Tasks classified by ChatGPT for GenAI automation potential; occupation-level automation and augmentation scores; before/after comparison around November 2022. This record is based on the HBS Working Knowledge summary published in HBR, not on the updated paper itself.",
+  "qualifiers": "Tier 2 for this summary article; the underlying working paper's 2025 vintage is carried as Tier 1. Caveats: secondary summary. The comparison group and exact specification behind -13% and +20% are not given in the article, and the metric differs from the 2025 vintage's skills-per-firm-per-quarter measure, so the two vintages are not directly comparable. Postings measure demand, not employment. Task scoring by an LLM is itself a modelling choice. The authors describe the effects as short-term and US-only.",
+  "id": "hbs-chen-srinivasan-displacement-complementarity-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -11,6 +11,16 @@
   "aggregationMethod": "weighted",
   "history": [
     {
+      "date": "2024-12-31",
+      "value": -4.05,
+      "sourceIds": [
+        "chicagofed-broady-dunson-barr-automation-risk-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
       "date": "2025-02-10",
       "value": -1.2,
       "sourceIds": [
@@ -20,6 +30,26 @@
       "metricType": "employment",
       "note": "Paralegal employment projected to grow 1.2% (counter-displacement)",
       "dataType": "projected"
+    },
+    {
+      "date": "2025-03-31",
+      "value": 2.4,
+      "confidenceLow": 1.2,
+      "confidenceHigh": 3.6,
+      "sourceIds": [
+        "dallasfed-dodini-smith-postings-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative job posting decline per 10-percentage-point higher share of automatable tasks, within industry, Texas, 2022Q4-2025Q1",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.45,
+        "rationale": "Relative posting decline (8%) converted with the documented relative-posting factor, as for eisfeldt-genai-firm-values-2026. The most-exposed occupations are software, web design, managers, clerical workers and editors, i.e. white-collar. Texas only; national re-estimate reported similar."
+      }
     },
     {
       "date": "2025-07-01",
@@ -1130,6 +1160,15 @@
       ],
       "evidenceTier": 1,
       "label": "Richmond Fed: job-finding -13pp for strongly attached workers vs -2pp marginal"
+    },
+    {
+      "date": "2026-08-19",
+      "direction": "up",
+      "sourceIds": [
+        "richmond-fed-aggregate-structural-unemployment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Richmond Fed: AI-driven gap in job-finding is unprecedented since early-2000s PC era"
     },
     {
       "date": "2026-08-21",
@@ -2251,6 +2290,36 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-20",
       "excerpt": "\"From mid-2024 the senior increase begins to dominate, and by March 2026 total employment is 3.3 percent higher at treated affiliates.\" Senior employment ends 6.7 percent higher while junior employment is an insignificant 2.5 percent lower. Adoption also shifts senior labor demand toward the most AI-exposed occupations by 5 percent, and away from the most-exposed occupations among juniors by 2 percent. Evidence of reallocation within firms rather than net displacement."
+    },
+    {
+      "id": "dallasfed-dodini-smith-postings-automation-2026",
+      "title": "Job postings show early signs of AI automation impact",
+      "url": "https://www.dallasfed.org/research/economics/2026/0901",
+      "publisher": "Federal Reserve Bank of Dallas (Dodini, Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "The findings suggest job postings fell 5 percent for more-exposed positions relative to less-exposed ones by the end of 2023 and by approximately 8 percent by first quarter 2025",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "chicagofed-broady-dunson-barr-automation-risk-2026",
+      "title": "Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-12",
+      "publisher": "Federal Reserve Bank of Chicago (Broady, Dunson, Barr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-01",
+      "excerpt": "Overall, employment in these occupations increased by 335,800 jobs, or 4.05 percent, between 2019 and 2024.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "richmond-fed-aggregate-structural-unemployment-2026",
+      "title": "Aggregate or Structural? Diagnosing the Rise in Unemployment (Economic Brief 26-27)",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-27",
+      "publisher": "Federal Reserve Bank of Richmond (Borovickova, Macaluso)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-19",
+      "excerpt": "The structural, AI-related component — while meaningful and unprecedented outside of the proliferation of personal computers in the early 2000s — accounts for a minority of the total decline.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

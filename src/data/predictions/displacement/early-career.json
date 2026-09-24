@@ -21,6 +21,26 @@
       "metricType": "employment"
     },
     {
+      "date": "2025-12-31",
+      "value": 1.0,
+      "confidenceLow": 0.9,
+      "confidenceHigh": 1.2,
+      "sourceIds": [
+        "stlouisfed-rodgers-kassens-young-workers-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "percentage-point change in recent college graduates' employment-to-population ratio attributed to AI-related job openings, April 2023-December 2025",
+        "conversionFactor": 1.27,
+        "conversionLow": 1.18,
+        "conversionHigh": 1.54,
+        "rationale": "Divides the -0.79pp AI-attributed EPOP change by the base employment rate the source reports for recent graduates (79% nationally, 2026 Q1): 0.79/0.79 = 1.0% relative decline. Bounds use the documented factor range. Attribution comes from a regression decomposition on state-by-month Lightcast AI-job postings, not an exposure contrast."
+      }
+    },
+    {
       "date": "2026-01-06",
       "value": 13,
       "sourceIds": [
@@ -151,6 +171,24 @@
       "label": "ESB/Rabobank: Dutch youth in GenAI-exposed jobs fell 13% (Netherlands)"
     },
     {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "eig-ozimek-goldschlag-young-adult-jobs-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: employment rates fell for young adults with and without degrees alike"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "down",
+      "sourceIds": [
+        "eig-ozimek-goldschlag-young-adult-jobs-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: call-centre and data-entry jobs are ~3% of workers 22-25, too few to drive trend"
+    },
+    {
       "date": "2026-03-16",
       "direction": "up",
       "sourceIds": [
@@ -158,6 +196,24 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk: Sweden ages 22-25 in high-AI occupations -5.5%; gradient monotonic"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "handshake-class-of-2026-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Handshake: early-talent job postings -2% YoY, 12% below pre-pandemic"
+    },
+    {
+      "date": "2026-04-15",
+      "direction": "down",
+      "sourceIds": [
+        "nace-job-outlook-spring-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "NACE: employers project 5.6% more Class of 2026 new-grad hires"
     },
     {
       "date": "2026-05-07",
@@ -169,6 +225,51 @@
       "label": "Yale Budget Lab: 16-34 unemployment +0.5pp but not statistically significant"
     },
     {
+      "date": "2026-05-07",
+      "direction": "down",
+      "sourceIds": [
+        "epi-class-of-2026-weaker-market-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "EPI: 98% of young-grad unemployment rise 2024-26 from labor force growth"
+    },
+    {
+      "date": "2026-05-08",
+      "direction": "down",
+      "sourceIds": [
+        "eig-eckhardt-goldschlag-students-grads-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: CS grads' share in computer/math jobs fell <1pp vs pre-COVID in 2023-24"
+    },
+    {
+      "date": "2026-05-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "eig-eckhardt-goldschlag-students-grads-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "EIG: enrollment in most AI-exposed degrees up 8% vs 2017 despite CS decline"
+    },
+    {
+      "date": "2026-05-20",
+      "direction": "down",
+      "sourceIds": [
+        "epi-class-of-2026-hires-rate-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "EPI: information sector -8.5% since 2023 but employs only 2.3% of young grads"
+    },
+    {
+      "date": "2026-05-21",
+      "direction": "down",
+      "sourceIds": [
+        "epi-class-of-2026-occupations-ai-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "EPI: grads far more AI-exposed than noncollege peers, same unemployment rise"
+    },
+    {
       "date": "2026-05-22",
       "direction": "up",
       "sourceIds": [
@@ -178,6 +279,42 @@
       "label": "Solomon (Goldman): cites Stanford 16% entry-level decline in exposed roles"
     },
     {
+      "date": "2026-05-22",
+      "direction": "neutral",
+      "sourceIds": [
+        "wang-wei-wang-labor-demand-reorganization-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Purdue: junior-posting GenAI exposure fell mainly via hiring shifts (60%)"
+    },
+    {
+      "date": "2026-06-01",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-emanuel-harrington-pallais-remote-work-youth-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: remote work explains 64% of the rise in young college grads' unemployment"
+    },
+    {
+      "date": "2026-06-01",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-emanuel-harrington-pallais-remote-work-youth-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: youth unemployment rise predates AI and persists holding AI exposure constant"
+    },
+    {
+      "date": "2026-06-30",
+      "direction": "up",
+      "sourceIds": [
+        "stlouisfed-rodgers-kassens-young-workers-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "St. Louis Fed: AI job demand explains ~45% of 18-24 employment-rate drop"
+    },
+    {
       "date": "2026-07-07",
       "direction": "down",
       "sourceIds": [
@@ -185,6 +322,15 @@
       ],
       "evidenceTier": 1,
       "label": "OECD: no break in junior LLM-exposed postings when firms began adopting LLMs"
+    },
+    {
+      "date": "2026-07-08",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-gallacher-destruction-to-creation-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: 71% of the software postings rebound came from senior roles"
     },
     {
       "date": "2026-07-22",
@@ -212,6 +358,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: at AI adopters, senior headcount +31% vs +6% junior since Nov 2022"
+    },
+    {
+      "date": "2026-08-01",
+      "direction": "up",
+      "sourceIds": [
+        "nyfed-college-labor-market-q2-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: recent-grad unemployment ~5.6%, underemployment 42% in Q2 2026"
     },
     {
       "date": "2026-08-11",
@@ -326,6 +481,15 @@
     }
   ,
     {
+      "date": "2026-09-17",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-ai-exposure-advertised-pay-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: entry-level share of exposed-job postings fell 29% to 10%, 2021-26"
+    },
+    {
       "date": "2026-09-20",
       "direction": "down",
       "sourceIds": [
@@ -343,6 +507,15 @@
       ],
       "evidenceTier": 1,
       "label": "Stanford DEL: computer and mathematical junior share falls 3.3pp as the occupation itself grows"
+    },
+    {
+      "date": "2026-09-22",
+      "direction": "up",
+      "sourceIds": [
+        "dallasfed-college-grads-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: +10pp exposure → 1.7pp lower first-year employment, Texas grads"
     }
   ],
   "sources": [
@@ -615,6 +788,146 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-20",
       "excerpt": "\"The junior share of employment at treated affiliates begins to fall after the introduction of ChatGPT, and it is 1.9 percentage points lower than in control affiliates by March 2026. This decline primarily reflects growth in senior employment rather than a fall in junior employment: senior employment rises by 6.7 percent, while junior employment is 2.5 percent lower, an estimate that is not statistically significant.\" Juniors hold 57.1% of positions at baseline, so the 1.9-point drop equals 3.3% of that share. Instrumented event study over 1.25 billion job postings and 154 million employment records across 41 countries, with AI adoption inferred from job advertisements involving generative AI. Not plotted on this chart: the measure is a percentage-point change in a firm's junior share, not a relative percent employment decline against least-exposed occupations; 'junior' is defined by seniority rather than ages 22-25; and the estimate is pooled across 41 countries, which this chart excludes from its average by design."
+    },
+    {
+      "id": "indeed-ai-exposure-advertised-pay-2026",
+      "title": "AI Exposure Isn’t Squeezing Advertised Pay in the US — It’s Boosting It",
+      "url": "https://hiringlab.indeed.com/2026/09/17/ai-exposure-isnt-squeezing-advertised-pay-in-the-us-its-boosting-it/",
+      "publisher": "Indeed Hiring Lab (Jack Kennedy)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-17",
+      "excerpt": "In the most-exposed occupations, the entry-level share of postings fell from 29% to 10% between 2021 and 2026, while the senior share rose from 22% to 47%. In the least-exposed, the tilt was around a third as large.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "dallasfed-college-grads-ai-2026",
+      "title": "AI plays a role in weak labor market for college graduates",
+      "url": "https://www.dallasfed.org/research/economics/2026/0922",
+      "publisher": "Federal Reserve Bank of Dallas (Samuel Dodini, Tucker Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-22",
+      "excerpt": "Since then, a 10-percentage-point higher share of automatable tasks is associated with a 1.7-percentage-point relative decline in employment rates.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "nyfed-college-labor-market-q2-2026",
+      "title": "The Labor Market for Recent College Graduates (2026:Q2 update)",
+      "url": "https://www.newyorkfed.org/research/college-labor-market",
+      "publisher": "Federal Reserve Bank of New York",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-01",
+      "excerpt": "Labor market conditions remained challenging for recent college graduates through the second quarter of 2026. The unemployment rate stayed elevated at about 5.6 percent, and the underemployment rate edged up to 42 percent.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "handshake-class-of-2026-ai-2026",
+      "title": "AI and the workforce ahead: What the Class of 2026 tells us about the future of the labor market",
+      "url": "https://joinhandshake.com/research/economic-research/class-of-2026-ai-outlook/",
+      "publisher": "Handshake (Randy Tarnowski)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Job postings are 2% down from last year and 12% below pre-pandemic levels. Senior pessimism has climbed from 46% to 62% from two years ago — a 16-point rise.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "epi-class-of-2026-weaker-market-2026",
+      "title": "Young college graduates face a weaker labor market—but a more mixed picture than the headlines suggest: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-young-college-graduates-face-a-weaker-labor-market-but-a-more-mixed-picture-than-the-headlines-suggest/",
+      "publisher": "Economic Policy Institute (Joe Fast, Elise Gould)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-07",
+      "excerpt": "Nearly all (98%) of the increase in the unemployment rate between 2024 and 2026 for young college graduates was driven by the increase in the labor force—meaning more young workers are entering the labor market in search of opportunities as opposed to giving up and leaving the labor force or never entering it at all.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "epi-class-of-2026-hires-rate-2026",
+      "title": "A depressed hires rate is a major cause of labor market weakness for young college graduates: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-a-depressed-hires-rate-is-a-major-cause-of-labor-market-weakness-for-young-college-graduates/",
+      "publisher": "Economic Policy Institute (Elise Gould, Joe Fast)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-20",
+      "excerpt": "Among the most closely watched of these industries is the information sector, which has seen an 8.5% employment decline since 2023.2 While these losses are notable—and especially relevant to understanding AI’s fingerprints on the labor market for young college-educated workers—it cannot be overemphasized just how small this sector is in the overall economy. Less than 2% of overall employment is in the information sector, including only 2.3% of young college graduates.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "epi-class-of-2026-occupations-ai-2026",
+      "title": "What occupation data show about AI and the young college graduate workforce: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-what-occupation-data-show-about-ai-and-the-young-college-graduate-workforce/",
+      "publisher": "Economic Policy Institute (Elise Gould, Joe Fast)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-21",
+      "excerpt": "What is striking is that the AI exposure among young college graduates (1.00) is considerably higher than that of young noncollege workers (-0.61).",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "nace-job-outlook-spring-2026",
+      "title": "Job Outlook 2026: Spring Update",
+      "url": "https://www.naceweb.org/research/reports/2026/job-outlook/spring-update/",
+      "publisher": "National Association of Colleges and Employers (NACE)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-15",
+      "excerpt": "Employers expect to increase new college graduate hiring from the Class of 2026 by 5.6%,* according to results of NACE’s",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "wang-wei-wang-labor-demand-reorganization-2026",
+      "title": "Generative AI and the Reorganization of Labor Demand",
+      "url": "https://arxiv.org/abs/2605.23159",
+      "publisher": "Purdue University, Mitch Daniels School of Business (Wang, Wei, Wang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-22",
+      "excerpt": "From Q3 of 2023 onward, the composition effect accounts for 60.15% of the aggregate absolute contribution, making hiring reallocation the largest margin. The within-cell exposure effect accounts for 18.22%, while the interaction effect accounts for 21.63%.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "nyfed-emanuel-harrington-pallais-remote-work-youth-2026",
+      "title": "Remote Work Leaves Younger Workers Sidelined",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/06/remote-work-leaves-younger-workers-sidelined/",
+      "publisher": "Federal Reserve Bank of New York, Liberty Street Economics (Emanuel, Harrington, Pallais)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-01",
+      "excerpt": "Since so many young college graduates are in remotable occupations, our back-of-the-envelope calculation indicates that remote work can explain 64 percent of the increase in unemployment for all young college graduates between 2017−19 and 2022−24.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "indeed-gallacher-destruction-to-creation-2026",
+      "title": "AI and Job Postings: From Destruction to Creation?",
+      "url": "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/",
+      "publisher": "Indeed Hiring Lab (Gallacher)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-08",
+      "excerpt": "71% of the increase in software development job postings between May 2025 and May 2026 is from senior roles, and 37% is due to jobs that mention AI in their title.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "stlouisfed-rodgers-kassens-young-workers-2026",
+      "title": "How Shifts in Labor Supply and Demand Shape Outcomes for Young Workers",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jun/how-shifts-labor-supply-demand-shape-outcomes-young-workers",
+      "publisher": "Federal Reserve Bank of St. Louis (Rodgers, Kassens)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-30",
+      "excerpt": "Recent College Graduates Actual Change (Percentage Points) -3.23 1.98 -1.58 Predicted Change (Percentage Points) Job Openings -2.64 2.20 -0.82 ... AI-Related Job Openings -0.79 1.68 0.70 [table columns: Employment-to-Population Ratio, Unemployment Rate, Labor Force Participation Rate]; \"Although recent graduates still had relatively high employment-to-population ratios—79% nationally and 82% in Eighth District states in the first quarter of 2026\"",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "eig-ozimek-goldschlag-young-adult-jobs-2026",
+      "title": "AI and Young-adult Jobs: The Real Mystery",
+      "url": "https://eig.org/ai-and-young-adult-jobs-the-real-mystery/",
+      "publisher": "Economic Innovation Group (Ozimek, Goldschlag)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "It turns out that employment rates have declined for young adults both with and without degrees. If anything, those without degrees have actually endured marginally worse labor market outcomes.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "eig-eckhardt-goldschlag-students-grads-ai-2026",
+      "title": "How Students and Recent Grads are Responding to the Rise of AI",
+      "url": "https://eig.org/how-students-and-recent-grads-are-responding-to-the-rise-of-ai/",
+      "publisher": "Economic Innovation Group (Eckhardt, Goldschlag)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-08",
+      "excerpt": "The overwhelming majority of Computer Science graduates work in Computer and Mathematics occupations, the share having fallen less than a percentage point from the pre-COVID average to the years 2023 and 2024.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

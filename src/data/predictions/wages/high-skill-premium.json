@@ -537,6 +537,15 @@
       "label": "Revelio: certification pay gap is selection into certifying, not a causal return"
     },
     {
+      "date": "2026-06-24",
+      "direction": "neutral",
+      "sourceIds": [
+        "atalay-jes-ai-exposure-wages-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Atalay (JES): more AI-exposed US occupations pay more (671 jobs, cross-section)"
+    },
+    {
       "date": "2026-07-23",
       "direction": "up",
       "sourceIds": [
@@ -581,6 +590,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic Institute: extreme scenario pays non-cognitive +33.6% vs cognitive -11.5%"
+    },
+    {
+      "date": "2026-09-17",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-ai-exposure-advertised-pay-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: exposed-occupation pay gap since 2021 ~17 pts senior, ~12 mid, 2 entry"
     }
   ],
   "sources": [
@@ -1081,6 +1099,26 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-01",
       "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
+    },
+    {
+      "id": "indeed-ai-exposure-advertised-pay-2026",
+      "title": "AI Exposure Isn’t Squeezing Advertised Pay in the US — It’s Boosting It",
+      "url": "https://hiringlab.indeed.com/2026/09/17/ai-exposure-isnt-squeezing-advertised-pay-in-the-us-its-boosting-it/",
+      "publisher": "Indeed Hiring Lab (Jack Kennedy)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-17",
+      "excerpt": "At the senior level, the gap is largest and opens earliest: More-exposed pay grew 45% from its 2021 level by mid-2026, compared with 28% for less-exposed pay, a gap of about 17 points. Mid-level roles show a clear but smaller gap of about 12 points, opening from around 2024. Finally, at the entry level, there is only a modest 2-point gap.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "atalay-jes-ai-exposure-wages-2026",
+      "title": "Artificial intelligence exposure and occupational wages: Evidence from the United States",
+      "url": "https://doi.org/10.1108/JES-03-2026-0281",
+      "publisher": "Journal of Economic Studies (Atalay)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-24",
+      "excerpt": "The results indicate a positive and statistically significant association between AI exposure and wages. Occupations with higher exposure tend to have higher wage levels.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "abstract": "Atalay studies how occupational exposure to AI relates to wages across 671 US occupations, combining occupation-level wage data with an AI exposure index. Cross-sectional regressions with robust standard errors, controlling for employment size and occupational characteristics, find a positive and statistically significant association: more-exposed occupations have higher wages. The pattern holds across specifications and across the wage distribution in quantile regressions. It is broadly robust to an instrumental-variable approach and stronger in occupations with higher cognitive skill intensity. The author notes that occupational skill composition explains part of the relationship, while a residual association remains. The full text was not accessible, so no coefficient sizes are recorded here.",
+  "keyFindings": [
+    "Across 671 US occupations, AI exposure is positively and significantly associated with wage levels",
+    "The association holds across model specifications and across the wage distribution (quantile regression), and is broadly consistent under an instrumental-variable approach",
+    "The association is stronger in occupations with higher cognitive skill intensity",
+    "Occupational skill composition explains part of the exposure–wage relationship; a residual association remains"
+  ],
+  "methodology": "Occupation-level cross-section of 671 US occupations; wage data combined with an AI exposure index (potential exposure). OLS with robust standard errors, controls for employment size and occupational characteristics; quantile regressions; instrumental-variable robustness check. Data years and exposure index not confirmed (full text inaccessible).",
+  "qualifiers": "Tier 1: peer-reviewed (Journal of Economic Studies, Emerald). Cross-sectional association, not a causal wage effect of AI: high-exposure occupations were already high-wage cognitive jobs, and the author concedes that skill composition explains part of the link. Occupation-level data miss within-occupation wage variation. The exposure index measures potential exposure, not firm-level adoption (the author's own stated limitation). Coefficients not verified: only the publisher abstract was read.",
+  "id": "atalay-jes-ai-exposure-wages-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -19,7 +19,7 @@ const maskStyle = {
 export default function HeroTriad() {
   return (
     <div className="mt-6 relative grid grid-cols-3 place-items-center pb-6">
-      {/* Productivity boost - median of 8 controlled studies (% time saved), range 13-56% */}
+      {/* Productivity boost - median of 9 controlled studies (% time saved), range 13-56% */}
       <HeroStatWobble center={21} low={13} high={56}>
         {(displayValue, wobbling) => (
           <a
@@ -44,7 +44,7 @@ export default function HeroTriad() {
               Productivity boost
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Median of 8 controlled studies; range 13–56%
+              Median of 9 controlled studies; range 13–56%
             </p>
           </a>
         )}

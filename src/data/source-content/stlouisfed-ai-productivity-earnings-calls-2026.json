@@ -1,0 +1,14 @@
+{
+  "abstract": "St. Louis Fed economists analyze about 490,000 earnings call transcripts from 5,198 US public firms (2000–2025) using an LLM to tag roughly 910,955 productivity-related sentences by AI mention, direction and tense. The share of productivity sentences that mention AI was near zero before ChatGPT, rose in 2023, plateaued in 2024 and accelerated in 2025 to roughly 15% by year-end. About 95% of AI-related productivity sentences refer to future gains, versus roughly three-fourths of non-AI productivity sentences, and 95% describe productivity as increasing. Meanwhile utilization-adjusted TFP grew only 0.07% over the four quarters ending Q1 2026. The authors conclude earnings calls signal investment and expectation rather than realized gains.",
+  "keyFindings": [
+    "~15% of productivity-related earnings-call sentences mentioned AI by end-2025, up from near zero before ChatGPT",
+    "~95% of AI-related productivity sentences refer to future gains vs ~75% of non-AI productivity sentences",
+    "95% of AI-related productivity sentences describe productivity as increasing",
+    "Utilization-adjusted TFP grew only 0.07% over the four quarters ending Q1 2026 (SF Fed series)",
+    "Corpus: ~490,000 transcripts, 5,198 US public firms, 2000–2025"
+  ],
+  "methodology": "Text analysis of S&P Global earnings call transcripts; keyword extraction of productivity sentences plus context, classified by an open-source LLM (Qwen3-3B) for AI mention, direction and tense; four-quarter trailing averages.",
+  "qualifiers": "Fed blog post (repo convention for St. Louis Fed: Tier 1), not peer-reviewed. LLM classification of sentences can misclassify; executive talk is not measured productivity. One author is a former Fed economist.",
+  "id": "stlouisfed-ai-productivity-earnings-calls-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "microsoft-ai-diffusion-q2-2026",
+  "abstract": "Microsoft AI Economy Institute's Global AI Diffusion report for Q2 2026 (published September 21, 2026). It measures AI diffusion as the share of people aged 15 to 64 who used a generative AI product during the period. Global usage reached 18.8% of the working-age population in June 2026, about one point above Q1, with gains in almost every economy. The United States rose 1.7 points to 33.0%, holding 21st place. The UAE (73.3%) and Singapore (64.3%) lead. The Global North–South gap widened further (28.8% vs 16.2%). The report also covers open-weight model usage via APIs and differences in consumer Copilot use by region.",
+  "keyFindings": [
+    "Global AI user share was 18.8% of the working-age population in June 2026, up about 1 point from Q1 2026.",
+    "The United States reached 33.0%, up 1.7 percentage points from 31.3% in Q1 2026, ranking 21st.",
+    "The UAE (73.3%) and Singapore (64.3%) lead, followed by Ireland (49.9%) and France (49.6%).",
+    "Usage is 28.8% in the Global North versus 16.2% in the Global South, a widening gap.",
+    "South Korea gained 3.5 points in the quarter, the largest absolute increase, and nearly 15 points over 12 months."
+  ],
+  "methodology": "Share of people aged 15–64 who used a generative AI product during the reported period, derived from aggregated and anonymized Microsoft telemetry and adjusted for operating-system and device market share, internet penetration and population (methodology in Misra et al., arXiv 2511.02781). Country-level quarterly estimates; Q2 refers to June 2026.",
+  "qualifiers": "Tier 2: corporate research, matching other Microsoft sources in the corpus. It measures any GenAI use by the whole working-age population, not use at work, and relies on Microsoft telemetry modeled up to population totals. Microsoft itself says no single metric is perfect and that the next report will expand coverage to newer tools, which it expects to raise measured usage almost everywhere (a coming series break).",
+  "fetchedAt": "2026-09-24"
+}

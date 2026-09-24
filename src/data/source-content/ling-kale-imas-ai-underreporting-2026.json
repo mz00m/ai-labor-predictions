@@ -1,0 +1,12 @@
+{
+  "abstract": "Ling, Kale and Imas (CHI 2026) ask whether social desirability bias helps explain why self-reported AI adoption estimates disagree by up to 40 percentage points within the same setting. They survey 338 university students using indirect questioning, a psychology method: students report both their own AI use and their peers' use. About 60% of students say they use AI, but they estimate that 90% of their peers do. Qualitative analysis of students' explanations points to social desirability bias as a key driver of mis-measurement, which leads to underestimates of AI adoption in educational settings. The implication for labor-market tracking is that self-reported worker surveys, which most AI adoption measures rely on, may understate true use where AI use is stigmatized.",
+  "keyFindings": [
+    "About 60% of 338 surveyed university students report using AI themselves, vs about 90% they attribute to peers",
+    "Self-reported AI adoption measures within the same setting can differ by up to 40 percentage points",
+    "Qualitative explanations identify social desirability bias as a key driver of underreporting"
+  ],
+  "methodology": "Survey of 338 university students with indirect questioning (own use vs perceived peer use) plus qualitative coding of explanations for the gap.",
+  "qualifiers": "Tier 1: peer-reviewed CHI proceedings. Caveats: student sample, not workers; the peer estimate can overshoot as well as correct own-use reports, so 90% is not a true adoption rate; single setting. Only the abstract was read (publisher and SSRN blocked automated access).",
+  "id": "ling-kale-imas-ai-underreporting-2026",
+  "fetchedAt": "2026-09-24"
+}

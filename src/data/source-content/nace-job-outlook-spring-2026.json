@@ -1,0 +1,14 @@
+{
+  "id": "nace-job-outlook-spring-2026",
+  "abstract": "NACE's Job Outlook 2026 Spring Update (April 2026), surveying 185 employers Feb 12–Mar 17, 2026, finds employers expect to hire 5.6% more new college graduates from the Class of 2026, up from a flat projection in the fall and following two lackluster years. More than a third of respondents plan to increase hiring. A plurality (45%) rate the job market for the class as 'fair.' On AI, NACE reports that more than one-third of entry-level jobs now require AI skills according to responding employers — nearly triple the fall 2025 figure; 28% seek early-career talent who can use AI and nearly 60% assign interns AI projects. Just 11% of employers are discussing AI replacing some positions, more than half say AI is not reducing entry-level tasks, and just over a quarter say it has reduced the need for them. NACE concludes AI is largely reshaping rather than replacing early-career work.",
+  "keyFindings": [
+    "Employers project a 5.6% increase in Class of 2026 new-graduate hiring.",
+    "45% of employers rate the Class of 2026 job market 'fair'.",
+    "More than one-third of entry-level jobs require AI skills per responding employers, nearly triple fall 2025 (landing page separately shows 10.5% of entry-level job posts requiring AI skills).",
+    "Just 11% of employers are discussing AI replacing some positions; just over a quarter say AI has reduced the need for entry-level tasks.",
+    "Nearly 70% of employers use skills-based hiring."
+  ],
+  "methodology": "Employer survey fielded Feb 12–Mar 17, 2026: 185 respondents (142 NACE employer members, 19.9% of eligible members, plus 43 nonmembers), updating hiring projections collected Aug–Sep 2025.",
+  "qualifiers": "Tier 2: industry association survey. Small, self-selected employer sample skewed to NACE members (30.8% from the Great Lakes); hiring projections are intentions, not realized hires. The full report is gated and was not reviewed; figures come from NACE's public summaries. AI-skill requirement figures on the landing page and in the article measure different things.",
+  "fetchedAt": "2026-09-24"
+}

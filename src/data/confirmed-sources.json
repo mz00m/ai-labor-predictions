@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-09-24",
-  "totalSources": 717,
-  "verifiedCount": 707,
+  "totalSources": 778,
+  "verifiedCount": 768,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -10192,6 +10192,867 @@
         "white-collar-professional-displacement",
         "tech-sector-displacement",
         "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "indeed-ai-exposure-advertised-pay-2026": {
+      "id": "indeed-ai-exposure-advertised-pay-2026",
+      "title": "AI Exposure Isn’t Squeezing Advertised Pay in the US — It’s Boosting It",
+      "url": "https://hiringlab.indeed.com/2026/09/17/ai-exposure-isnt-squeezing-advertised-pay-in-the-us-its-boosting-it/",
+      "publisher": "Indeed Hiring Lab (Jack Kennedy)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-17",
+      "excerpt": "The core premium is positive in all three, but smaller the more of the seniority shift the specification removes: 5.7% under occupation fixed effects (median pay), 4.7% comparing postings within the same job title, and 2.4% when the seniority mix is held constant within occupations.",
+      "usedIn": [
+        "median-wage-impact",
+        "entry-level-wage-impact",
+        "high-skill-wage-premium",
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dallasfed-college-grads-ai-2026": {
+      "id": "dallasfed-college-grads-ai-2026",
+      "title": "AI plays a role in weak labor market for college graduates",
+      "url": "https://www.dallasfed.org/research/economics/2026/0922",
+      "publisher": "Federal Reserve Bank of Dallas (Samuel Dodini, Tucker Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-22",
+      "excerpt": "Among graduates who found work in Texas, first-year earnings for more-exposed majors also fell by approximately 5 percent from 2021 to 2024 relative to less-exposed majors",
+      "usedIn": [
+        "entry-level-wage-impact",
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fiverr-q2-2026-earnings": {
+      "id": "fiverr-q2-2026-earnings",
+      "title": "Fiverr Announces Second Quarter 2026 Results",
+      "url": "https://investors.fiverr.com/news-releases/news-release-details/fiverr-announces-second-quarter-2026-results",
+      "publisher": "Fiverr International Ltd. (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-29",
+      "excerpt": "Marketplace revenue in the second quarter of 2026 was $63.1 million, compared to $74.7 million in the second quarter of 2025, a decline of 15.5% year over year. Annual active buyers1 as of June 30, 2026, were 2.7 million, compared to 3.4 million as of June 30, 2025, a decline of 21.9% year over year. Annual spend per buyer1 as of June 30, 2026, reached $368, compared to $318 as of June 30, 2025, an increase of 15.6% year over year.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "upwork-q2-2026-earnings": {
+      "id": "upwork-q2-2026-earnings",
+      "title": "Upwork Reports Second Quarter 2026 Financial Results",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2026-financial-results",
+      "publisher": "Upwork (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-10",
+      "excerpt": "GSV(1) was $966.4 million, decreased 4% year-over-year … While lower-complexity work continues to shift toward automation, we are increasingly seeing what is emerging in its place: growing demand for high-value AI talent, more complex projects, and new categories of work across SMB and Enterprise.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "upwork-q1-2026-earnings": {
+      "id": "upwork-q1-2026-earnings",
+      "title": "Upwork Reports First Quarter 2026 Financial Results",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-first-quarter-2026-financial-results",
+      "publisher": "Upwork (SEC Filing / Press Release)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-07",
+      "excerpt": "GSV(1) was $987.1 million, approximately flat year-over-year … GSV per active client(1) of $5,138 increased 5% year-over-year … GSV from AI-related work increased more than 40% year-over-year in Q1 2026. … Today, Upwork is also announcing a restructuring plan that includes a reduction of the Company’s total workforce by approximately 24%.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-ted-labor-share-q2-2026": {
+      "id": "bls-ted-labor-share-q2-2026",
+      "title": "Labor share at its lowest level, 52.8 percent, in second quarter 2026",
+      "url": "https://www.bls.gov/opub/ted/2026/labor-share-at-its-lowest-level-52-8-percent-in-second-quarter-2026.htm",
+      "publisher": "U.S. Bureau of Labor Statistics (The Economics Daily)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-15",
+      "excerpt": "Labor share—the fraction of economic output that accrues to workers as compensation in exchange for their labor—in the nonfarm business sector was 52.8 percent in the second quarter of 2026, the lowest level ever recorded.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fortune-goldman-labor-share-2026": {
+      "id": "fortune-goldman-labor-share-2026",
+      "title": "The economy is rewarding capital ownership over labor — most Americans don't benefit",
+      "url": "https://fortune.com/2026/09/16/goldman-middle-class-labor-share-income-record-low/",
+      "publisher": "Fortune (reporting Goldman Sachs Research, Abhay Duggirala)",
+      "evidenceTier": 3,
+      "datePublished": "2026-09-16",
+      "excerpt": "The remaining 60%, or about 4.5 percentage points, is real, Goldman concludes, and it traces mostly to rising corporate markups, automation and the decades-long erosion of workers’ bargaining power.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-college-labor-market-q2-2026": {
+      "id": "nyfed-college-labor-market-q2-2026",
+      "title": "The Labor Market for Recent College Graduates (2026:Q2 update)",
+      "url": "https://www.newyorkfed.org/research/college-labor-market",
+      "publisher": "Federal Reserve Bank of New York",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-01",
+      "excerpt": "Labor market conditions remained challenging for recent college graduates through the second quarter of 2026. The unemployment rate stayed elevated at about 5.6 percent, and the underemployment rate edged up to 42 percent.",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "handshake-class-of-2026-ai-2026": {
+      "id": "handshake-class-of-2026-ai-2026",
+      "title": "AI and the workforce ahead: What the Class of 2026 tells us about the future of the labor market",
+      "url": "https://joinhandshake.com/research/economic-research/class-of-2026-ai-outlook/",
+      "publisher": "Handshake (Randy Tarnowski)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Job postings are 2% down from last year and 12% below pre-pandemic levels. Senior pessimism has climbed from 46% to 62% from two years ago — a 16-point rise.",
+      "usedIn": [
+        "early-career-employment-decline",
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "epi-class-of-2026-weaker-market-2026": {
+      "id": "epi-class-of-2026-weaker-market-2026",
+      "title": "Young college graduates face a weaker labor market—but a more mixed picture than the headlines suggest: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-young-college-graduates-face-a-weaker-labor-market-but-a-more-mixed-picture-than-the-headlines-suggest/",
+      "publisher": "Economic Policy Institute (Joe Fast, Elise Gould)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-07",
+      "excerpt": "Nearly all (98%) of the increase in the unemployment rate between 2024 and 2026 for young college graduates was driven by the increase in the labor force—meaning more young workers are entering the labor market in search of opportunities as opposed to giving up and leaving the labor force or never entering it at all.",
+      "usedIn": [
+        "early-career-employment-decline",
+        "entry-level-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "epi-class-of-2026-hires-rate-2026": {
+      "id": "epi-class-of-2026-hires-rate-2026",
+      "title": "A depressed hires rate is a major cause of labor market weakness for young college graduates: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-a-depressed-hires-rate-is-a-major-cause-of-labor-market-weakness-for-young-college-graduates/",
+      "publisher": "Economic Policy Institute (Elise Gould, Joe Fast)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-20",
+      "excerpt": "Among the most closely watched of these industries is the information sector, which has seen an 8.5% employment decline since 2023.2 While these losses are notable—and especially relevant to understanding AI’s fingerprints on the labor market for young college-educated workers—it cannot be overemphasized just how small this sector is in the overall economy. Less than 2% of overall employment is in the information sector, including only 2.3% of young college graduates.",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "epi-class-of-2026-occupations-ai-2026": {
+      "id": "epi-class-of-2026-occupations-ai-2026",
+      "title": "What occupation data show about AI and the young college graduate workforce: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-what-occupation-data-show-about-ai-and-the-young-college-graduate-workforce/",
+      "publisher": "Economic Policy Institute (Elise Gould, Joe Fast)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-21",
+      "excerpt": "What is striking is that the AI exposure among young college graduates (1.00) is considerably higher than that of young noncollege workers (-0.61).",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nace-job-outlook-spring-2026": {
+      "id": "nace-job-outlook-spring-2026",
+      "title": "Job Outlook 2026: Spring Update",
+      "url": "https://www.naceweb.org/research/reports/2026/job-outlook/spring-update/",
+      "publisher": "National Association of Colleges and Employers (NACE)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-15",
+      "excerpt": "Employers expect to increase new college graduate hiring from the Class of 2026 by 5.6%,* according to results of NACE’s",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ilo-genai-gender-segregation-2026": {
+      "id": "ilo-genai-gender-segregation-2026",
+      "title": "Gen AI, occupational segregation and gender equality in the world of work",
+      "url": "https://www.ilo.org/publications/gen-ai-occupational-segregation-and-gender-equality-world-work",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "In high-income countries, 41 per cent of jobs are exposed, compared to 11 per cent in low-income countries.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brookings-political-geography-ai-exposure-2026": {
+      "id": "brookings-political-geography-ai-exposure-2026",
+      "title": "The political geography of AI exposure",
+      "url": "https://www.brookings.edu/articles/ai-political-geography-worker-exposure/",
+      "publisher": "Brookings Metro (Muro, Jones, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-03",
+      "excerpt": "Figure 1 shows that 62 of the 100 most AI-exposed counties in the nation went “blue” in the 2024 presidential election. These counties make up 75% of the population of those 100 most AI-exposed counties, and between 14% and 19% of workers there are in occupations where AI is both theoretically capable of handling tasks and already being used to automate work more than augment it.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "wang-wei-wang-labor-demand-reorganization-2026": {
+      "id": "wang-wei-wang-labor-demand-reorganization-2026",
+      "title": "Generative AI and the Reorganization of Labor Demand",
+      "url": "https://arxiv.org/abs/2605.23159",
+      "publisher": "Purdue University, Mitch Daniels School of Business (Wang, Wei, Wang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-22",
+      "excerpt": "From Q3 of 2023 onward, the composition effect accounts for 60.15% of the aggregate absolute contribution, making hiring reallocation the largest margin. The within-cell exposure effect accounts for 18.22%, while the interaction effect accounts for 21.63%.",
+      "usedIn": [
+        "early-career-employment-decline",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "atalay-jes-ai-exposure-wages-2026": {
+      "id": "atalay-jes-ai-exposure-wages-2026",
+      "title": "Artificial intelligence exposure and occupational wages: Evidence from the United States",
+      "url": "https://doi.org/10.1108/JES-03-2026-0281",
+      "publisher": "Journal of Economic Studies (Atalay)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-24",
+      "excerpt": "The results indicate a positive and statistically significant association between AI exposure and wages. Occupations with higher exposure tend to have higher wage levels.",
+      "usedIn": [
+        "high-skill-wage-premium"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "atlanta-fed-ai-demand-southeast-2026": {
+      "id": "atlanta-fed-ai-demand-southeast-2026",
+      "title": "The Geography of AI Demand in the Southeast: Patterns of Growth and Labor Market Structure",
+      "url": "https://www.atlantafed.org/research-and-data/publications/workforce-currents/2026/08/13/the-geography-of-ai-demand-in-the-southeast-patterns-of-growth-and-labor-market-structure",
+      "publisher": "Federal Reserve Bank of Atlanta, Workforce Currents 2026-04 (Galeano)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-13",
+      "excerpt": "As of December 2025, Georgia (2.93 percent) leads the region by a substantial margin and is only slightly below the national average of three percent.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-autor-ai-expertise-patent-2026": {
+      "id": "nber-autor-ai-expertise-patent-2026",
+      "title": "Does AI Assistance Enhance or Erode Expertise? Evidence from a Three-Month Field Experiment in Patent Drafting",
+      "url": "https://www.nber.org/papers/w35720",
+      "publisher": "NBER",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "Pre-registered three-month RCT (AEARCTR-0015823) with 133 practicing patent lawyers at eleven U.S. IP law firms, randomized to a custom Google AI drafting assistant (InFlow) or no access; study period May 2025 through February 2026. Blinded expert patent attorneys scored all work. AI access raised the quality of benchmark patent drafts by 0.34 SD at 10 days (p = 0.03) and 0.38 SD at 90 days (p = 0.01), with larger gains for juniors. On a later unaided redlining task, treated lawyers outperformed controls by 0.32 SD (p = 0.04), but the gain was concentrated among senior lawyers (0.45 SD, p = 0.02); juniors showed no average gain and their scores bifurcated. As a secondary finding, treated participants self-reported finishing the 10-day drafting task about 10 minutes faster against a 112-minute baseline (p = 0.05), roughly 9% less time; the 90-day task showed a similar but insignificant 10-minute saving on a 125-minute base (p = 0.27). Time savings were concentrated among juniors; seniors did not work faster with AI.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "microsoft-cli-coding-agents-2026": {
+      "id": "microsoft-cli-coding-agents-2026",
+      "title": "Adoption and Impact of Command-Line AI Coding Agents: A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI",
+      "url": "https://arxiv.org/abs/2607.01418",
+      "publisher": "Microsoft Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-01",
+      "excerpt": "Microsoft researchers study tens of thousands of Microsoft engineers during the early-2026 internal rollout of two agentic command-line coding tools, Claude Code and GitHub Copilot CLI (post-period January 5 – April 29, 2026). Using developer-level telemetry, they find first use spread mainly through social networks and retention tracked coding activity more than demographics. A synthetic-control (CausalImpact) estimate finds adopters merged 24.0% more pull requests per engineer per day than their counterfactual (95% CI +14.5% to +33.7%), with no statistically distinguishable decay: +29.4% in February versus +20.0% across March–April. Within-person fixed-effects models show a dose-response from +15.0% in weeks with three tool-use days to +50.1% at five or more, and a larger lift for Copilot CLI (+24.9%) than Claude Code (+11.4%) among single-tool users. Merged PRs are the output proxy; the authors acknowledge a merged PR is not the same as the value it delivers.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "judgegpt-pakistan-courts-2026": {
+      "id": "judgegpt-pakistan-courts-2026",
+      "title": "Courts of Tomorrow: Evidence from a Nationwide Rollout of Generative AI",
+      "url": "https://conference.nber.org/conf_papers/f247308.pdf",
+      "publisher": "NBER (conference paper)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-14",
+      "excerpt": "First large-scale field experiment on generative AI in a national justice system. With Pakistan's judiciary, the authors built JudgeGPT, a custom assistant for trial courts, and randomized 1,559 judges across 118 courts (about half of the country's trial judges) into AI access with targeted training, AI access with generic training, or generic training without AI. Targeted training raised adoption, intensity and persistence of use. District administrative records show that at median-district exposure, AI with targeted training corresponds to 1,848 additional cases resolved per year, a 6.3 percent increase over the mean, with no apparent loss of quality: appeals slightly decline and text-based writing measures slightly improve. Chat logs show judges mainly use AI to clarify legal concepts and support drafting; targeted training shifts use toward text improvement and away from open-ended legal queries.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-default-judgment-ai-2026": {
+      "id": "stanford-default-judgment-ai-2026",
+      "title": "AI Assistance for Human Review of Default Judgments",
+      "url": "https://arxiv.org/abs/2607.01256",
+      "publisher": "Stanford University (Computer Science / Deborah L. Rhode Center, Stanford Law School)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-04",
+      "excerpt": "Stanford researchers audited 188 debt-collection cases granted default judgment by the Superior Court of Los Angeles County and found 4% contained major defects that should have prevented judgment, 10% contained inconsistencies requiring reduced judgments, and 32% contained errors requiring amendment. With court attorneys and judges they built a Default Assistant that uses LLMs to check each case against statutory requirements and cite supporting quotes from the filings. In a controlled study with 66 law students randomly assigned to review cases with or without the assistant, assisted reviewers were 6.0% more accurate on the average requirement (p < 1.0e-4) and 25.9% faster in reviewing the average requirement (p < 2.5e-10). Requirements that demand extensive document search showed the largest gains, with error reductions up to 62% and time savings up to 34%.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "alibaba-genai-customer-service-2026": {
+      "id": "alibaba-genai-customer-service-2026",
+      "title": "Generative AI in Action: Field Experimental Evidence from Alibaba's Customer Service Operations",
+      "url": "https://arxiv.org/abs/2603.29888",
+      "publisher": "Fudan University / Zhejiang University / Dartmouth Tuck / Alibaba Group",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-31",
+      "excerpt": "Field experiment on Taobao after-sales chat support: 5,940 new customer-service agents (tenure under one year) were randomized at the agent level, 2,895 to a generative AI assistant that drafts issue diagnoses and solution proposals in the opening stage of each chat, over January 23 – February 19, 2024 (about 2.56 million chats). Intent-to-treat estimates show access reduced issue-identification time by 8.2% and chat duration by 1.1% (3.2 and 5.7 seconds), cut the dissatisfaction rate by 3.4% and raised ratings by 1.2%, with no significant effect on three-day retrials. Instrumented for usage, moving from zero to full use cuts issue-identification time by 32.3% and chat duration by 4.2%. Lower-performing agents benefit most; top-quintile agents see declines in subjective and objective quality, consistent with workflow disruption.",
+      "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "alibaba-agentic-ai-hitl-2026": {
+      "id": "alibaba-agentic-ai-hitl-2026",
+      "title": "Agentic AI and Human-in-the-Loop Interventions: Field Experimental Evidence from Alibaba's Customer Service Operations",
+      "url": "https://arxiv.org/abs/2605.14830",
+      "publisher": "Zhejiang University / Fudan University / Dartmouth Tuck / Alibaba Group",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-14",
+      "excerpt": "The remaining 3,874 chats, or 35.0 percent of the sample, involve no escalation and are resolved entirely by the agentic AI system. … At the time of the experiment, AI-eligible chats accounted for less than 10 percent of total chat volume.",
+      "usedIn": [
+        "customer-service-automation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-productivity-q2-2026-revised": {
+      "id": "bls-productivity-q2-2026-revised",
+      "title": "Productivity and Costs, Second Quarter 2026, Revised",
+      "url": "https://www.bls.gov/news.release/prod2.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-03",
+      "excerpt": "Real hourly compensation, which takes into account consumer prices, decreased 3.3 percent in the second quarter of 2026 and decreased 0.1 percent over the last four quarters. The labor share, which is the percentage of output that accrues to workers in the form of compensation, was 52.8 percent in the second quarter of 2026, the lowest level in the series, which begins in the first quarter of 1947.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "frbsf-productivity-regime-2026": {
+      "id": "frbsf-productivity-regime-2026",
+      "title": "Have We Entered an Era of High Productivity Growth?",
+      "url": "https://www.frbsf.org/research-and-insights/publications/economic-letter/2026/05/have-we-entered-era-of-high-productivity-growth/",
+      "publisher": "Federal Reserve Bank of San Francisco",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-26",
+      "excerpt": "More recently, the probabilities based on these two measures have picked up to varying degrees: around 57% based on labor productivity and 21% based on TFP as of the fourth quarter of 2025.",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stlouisfed-ai-productivity-earnings-calls-2026": {
+      "id": "stlouisfed-ai-productivity-earnings-calls-2026",
+      "title": "AI and Productivity: What Firms Are Saying on Earnings Calls",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jul/ai-productivity-what-firms-say-earnings-calls",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-31",
+      "excerpt": "It rose quickly in 2023, plateaued in 2024, and then accelerated again in 2025, reaching roughly 15% of productivity sentences by the end of that year.",
+      "usedIn": [
+        "earnings-call-ai-mentions"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-btos-ai-biweekly-cycle19-2026": {
+      "id": "census-btos-ai-biweekly-cycle19-2026",
+      "title": "Business Trends and Outlook Survey — Biweekly AI Use (cycle 202619)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-24",
+      "excerpt": "National.xlsx, 'Response Estimates' sheet, Question 7 \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\", column 202619: \"23.8%\"; 'Response Standard Errors' sheet, same row: \"0.26%\". Question 24 \"During the next six months, do you think this business will be using Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\", column 202619: \"27.6%\" (SE \"0.29%\"). 'Collection and Reference Dates' sheet, Smpdt 202619: Collection Start 2026-09-07, Col End 2026-09-20, Reference Period Start 2026-08-24, Ref End 2026-09-06, Publication Date 2026-09-24.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-fr-btos-ai-core-questions-2026": {
+      "id": "census-fr-btos-ai-core-questions-2026",
+      "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Business Trends and Outlook Survey (FR Doc. 2026-18304, 91 FR 57314)",
+      "url": "https://www.federalregister.gov/documents/2026/09/09/2026-18304/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+      "publisher": "US Census Bureau (Federal Register)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-09",
+      "excerpt": "Last, the Bureau is requesting approval to add three core questions. Two of these questions (Generative AI usage and the impact of AI on the total number of employees) are being moved from the AI supplement, and the third is a new question about the impact of AI on new employees, conceptually expanding on the others. The new question has undergone cognitive testing to determine the finalized wording. To minimize respondent burden, the Bureau will employ skip logic for these questions, only asking them of businesses that report AI usage.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-bfs-aug-2026": {
+      "id": "census-bfs-aug-2026",
+      "title": "Business Formation Statistics, August 2026 (CB26-148)",
+      "url": "https://www.census.gov/econ/bfs/pdf/bfs_current.pdf",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-11",
+      "excerpt": "Business Applications for August 2026, adjusted for seasonal variation, were 531,728, a decrease of 7.8 percent compared to July 2026. ... Projected Business Formations (within 4 quarters) for August 2026, adjusted for seasonal variation, were 28,501, a decrease of 4.6 percent compared to July 2026.",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ramp-ai-index-sep-2026": {
+      "id": "ramp-ai-index-sep-2026",
+      "title": "Cracks in the AI Thesis Part 2 (Ramp AI Index, September 2026)",
+      "url": "https://ramp.com/data/ai-index-sept-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-09",
+      "excerpt": "In August, Anthropic extended its lead in business AI adoption. 43.8% of U.S. businesses paid for subscriptions or tokens from Anthropic, up 0.34 percentage points month over month. OpenAI underperformed overall AI adoption, rising only 0.09 percentage points to 39.8% of businesses. In general, new AI adoption continues to grow but is decelerating.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bena-bian-giannetti-genai-entrepreneurship-2026": {
+      "id": "bena-bian-giannetti-genai-entrepreneurship-2026",
+      "title": "Prompted to Start: How Generative AI is Transforming Entrepreneurship",
+      "url": "https://conference.nber.org/conf_papers/f238865.pdf",
+      "publisher": "NBER conference paper (Bena, Bian & Giannetti; UBC Sauder / Stockholm School of Economics)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-08",
+      "excerpt": "We show that following the diffusion of GenAI, industries with higher task-level exposure to the new technology experience 20% more startup formation than less-exposed industries ... Column 4 of Table 3 implies that new firms increase by over 20% more in industries with GenAI exposure above the median following the introduction of GenAI, relative to less-exposed industries.",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "pew-americans-ai-chatbots-2026": {
+      "id": "pew-americans-ai-chatbots-2026",
+      "title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
+      "url": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
+      "publisher": "Pew Research Center (Gottfried, Bishop, Anderson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-17",
+      "excerpt": "38% of employed adults report using chatbots for tasks at work. ... according to our survey of 5,119 U.S. adults conducted Feb. 17-23, 2026.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "microsoft-ai-diffusion-q2-2026": {
+      "id": "microsoft-ai-diffusion-q2-2026",
+      "title": "Global AI Diffusion Q2 2026 Trends and Insights (\"The continued state of global AI diffusion in 2026\")",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/09/21/the-continued-state-of-global-ai-diffusion-in-2026/",
+      "publisher": "Microsoft AI Economy Institute (Juan Lavista Ferres)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-21",
+      "excerpt": "In June, AI usage was 18.8% of the working-age population worldwide, an increase of about 1% from the first quarter of this year. ... [Report table, Q2 2026 AI diffusion] 21 United States 33.0% 1.7pp",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "microsoft-ai-diffusion-q1-2026": {
+      "id": "microsoft-ai-diffusion-q1-2026",
+      "title": "Global AI Diffusion Q1 2026 Trends and Insights (\"The state of global AI diffusion in 2026\")",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/",
+      "publisher": "Microsoft AI Economy Institute (Juan Lavista Ferres)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-07",
+      "excerpt": "During the quarter, AI usage increased by 1.5 percentage points from 16.3% to 17.8% of the world’s working age population. ... The United States finally started to move up the national rankings, albeit only from 24th to 21st based on a 31.3% usage rate by the working age population.",
+      "usedIn": [
+        "genai-work-adoption",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chatterji-holtz-openai-enterprise-adoption-2026": {
+      "id": "chatterji-holtz-openai-enterprise-adoption-2026",
+      "title": "How Organizations Use AI: Evidence from ChatGPT",
+      "url": "https://arxiv.org/abs/2608.12236",
+      "publisher": "OpenAI Economic Research (Chatterji, Holtz, Rakholia, Tambe, Weeratunga)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-12",
+      "excerpt": "Aggregate output tokens produced by ChatGPT Enterprise customers grew roughly sevenfold between June 2025 and March 2026, and by nearly fourfold within a consistent cohort of firms that adopted between January 2024 and June 2025. Thus, about half of the growth in token consumption over this period occurred within already-adopting firms.",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mit-yu-thompson-sp500-ai-adoption-2026": {
+      "id": "mit-yu-thompson-sp500-ai-adoption-2026",
+      "title": "AI Adoption in S&P 500 Firms",
+      "url": "https://arxiv.org/abs/2607.08920",
+      "publisher": "MIT FutureTech (Yu, Fleming, Hampton, Combemale, Thompson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-09",
+      "excerpt": "In 2025, 11% of S&P 500 enterprises had AI deeply integrated into their business processes, and a further 10% were using AI in the production of goods and delivery of services. AI adoption has more than quadrupled from 5% in 2022",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "openai-ai-at-work-spring-2026": {
+      "id": "openai-ai-at-work-spring-2026",
+      "title": "AI at Work, Spring 2026",
+      "url": "https://openaiglobalaffairs.substack.com/p/ai-at-work-spring-2026",
+      "publisher": "OpenAI Global Affairs (The Prompt newsletter)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-05",
+      "excerpt": "OpenAI Economic Research conservatively estimates that at least 4 million Americans who were starting, running, or planning a business in March 2026 did so with help from ChatGPT.",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "kim-kang-song-solo-entrepreneurship-2026": {
+      "id": "kim-kang-song-solo-entrepreneurship-2026",
+      "title": "Generative AI Fuels Solo Entrepreneurship, but Teams Still Lead at the Top",
+      "url": "https://arxiv.org/abs/2605.10291",
+      "publisher": "Seoul National University Business School (Kim, Kang, Song)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-11",
+      "excerpt": "Entrepreneurial entry increased sharply following the release of ChatGPT-3.5, rising by 40% from 29,326 in 2022 to 41,169 in 2023, and continued to grow toward twice its pre-release level by 2025 ... By 2025, solo entry grew nearly 90% more than team entry (β = 0.621, p < 0.001).",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-emanuel-harrington-pallais-remote-work-youth-2026": {
+      "id": "nyfed-emanuel-harrington-pallais-remote-work-youth-2026",
+      "title": "Remote Work Leaves Younger Workers Sidelined",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/06/remote-work-leaves-younger-workers-sidelined/",
+      "publisher": "Federal Reserve Bank of New York, Liberty Street Economics (Emanuel, Harrington, Pallais)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-01",
+      "excerpt": "Since so many young college graduates are in remotable occupations, our back-of-the-envelope calculation indicates that remote work can explain 64 percent of the increase in unemployment for all young college graduates between 2017−19 and 2022−24.",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "dallasfed-dodini-smith-postings-automation-2026": {
+      "id": "dallasfed-dodini-smith-postings-automation-2026",
+      "title": "Job postings show early signs of AI automation impact",
+      "url": "https://www.dallasfed.org/research/economics/2026/0901",
+      "publisher": "Federal Reserve Bank of Dallas (Dodini, Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "Given AI usage rates and automation scores across occupations and Texas’ industry composition, the estimates imply that automation exposure to generative AI reduced total Lightcast job postings in Texas by approximately 1.8 percent in 2024 and by 2.6 percent in 2025.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "chicagofed-broady-dunson-barr-automation-risk-2026": {
+      "id": "chicagofed-broady-dunson-barr-automation-risk-2026",
+      "title": "Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-12",
+      "publisher": "Federal Reserve Bank of Chicago (Broady, Dunson, Barr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-01",
+      "excerpt": "Overall, employment in these occupations increased by 335,800 jobs, or 4.05 percent, between 2019 and 2024.",
+      "usedIn": [
+        "white-collar-professional-displacement",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "indeed-gallacher-destruction-to-creation-2026": {
+      "id": "indeed-gallacher-destruction-to-creation-2026",
+      "title": "AI and Job Postings: From Destruction to Creation?",
+      "url": "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/",
+      "publisher": "Indeed Hiring Lab (Gallacher)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-08",
+      "excerpt": "Even after the recent rise, software development job postings remain about 27.5% below their pre-pandemic level, while overall job postings are essentially the same as in February 2020.",
+      "usedIn": [
+        "tech-sector-displacement",
+        "overall-us-displacement",
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "richmond-fed-aggregate-structural-unemployment-2026": {
+      "id": "richmond-fed-aggregate-structural-unemployment-2026",
+      "title": "Aggregate or Structural? Diagnosing the Rise in Unemployment (Economic Brief 26-27)",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-27",
+      "publisher": "Federal Reserve Bank of Richmond (Borovickova, Macaluso)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-19",
+      "excerpt": "But their share of total unemployment is small, and their contribution to the aggregate decline is correspondingly limited, at most about one-third of the total.",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stlouisfed-rodgers-kassens-young-workers-2026": {
+      "id": "stlouisfed-rodgers-kassens-young-workers-2026",
+      "title": "How Shifts in Labor Supply and Demand Shape Outcomes for Young Workers",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jun/how-shifts-labor-supply-demand-shape-outcomes-young-workers",
+      "publisher": "Federal Reserve Bank of St. Louis (Rodgers, Kassens)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-30",
+      "excerpt": "Recent College Graduates Actual Change (Percentage Points) -3.23 1.98 -1.58 Predicted Change (Percentage Points) Job Openings -2.64 2.20 -0.82 ... AI-Related Job Openings -0.79 1.68 0.70 [table columns: Employment-to-Population Ratio, Unemployment Rate, Labor Force Participation Rate]; \"Although recent graduates still had relatively high employment-to-population ratios—79% nationally and 82% in Eighth District states in the first quarter of 2026\"",
+      "usedIn": [
+        "early-career-employment-decline",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "eig-ozimek-goldschlag-young-adult-jobs-2026": {
+      "id": "eig-ozimek-goldschlag-young-adult-jobs-2026",
+      "title": "AI and Young-adult Jobs: The Real Mystery",
+      "url": "https://eig.org/ai-and-young-adult-jobs-the-real-mystery/",
+      "publisher": "Economic Innovation Group (Ozimek, Goldschlag)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "It turns out that employment rates have declined for young adults both with and without degrees. If anything, those without degrees have actually endured marginally worse labor market outcomes.",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "challenger-august-2026": {
+      "id": "challenger-august-2026",
+      "title": "Challenger Report: August Layoffs Rise 58% to 52,881, Lowest August Since 2022; Hiring Plans Up 37% Over Last Year",
+      "url": "https://www.challengergray.com/wp-content/uploads/2026/09/Challenger-Report-August-2026.pdf",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-03",
+      "excerpt": "Artificial Intelligence fell to the fourth-most cited reason with 3,462 cuts in August, its lowest monthly total since December 2025 when 142 cuts were attributed to AI. It ends a five-month run, beginning in March, in which AI was the leading monthly reason.",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "eig-eckhardt-goldschlag-students-grads-ai-2026": {
+      "id": "eig-eckhardt-goldschlag-students-grads-ai-2026",
+      "title": "How Students and Recent Grads are Responding to the Rise of AI",
+      "url": "https://eig.org/how-students-and-recent-grads-are-responding-to-the-rise-of-ai/",
+      "publisher": "Economic Innovation Group (Eckhardt, Goldschlag)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-08",
+      "excerpt": "The overwhelming majority of Computer Science graduates work in Computer and Mathematics occupations, the share having fallen less than a percentage point from the pre-COVID average to the years 2023 and 2024.",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "hbs-chen-srinivasan-displacement-complementarity-2026": {
+      "id": "hbs-chen-srinivasan-displacement-complementarity-2026",
+      "title": "Research: How AI Is Changing the Labor Market",
+      "url": "https://hbr.org/2026/03/research-how-ai-is-changing-the-labor-market",
+      "publisher": "Harvard Business Review / HBS Working Knowledge (Azpúrua; research by Chen, Srinivasan, Zakerinia)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-04",
+      "excerpt": "After the public launch of ChatGPT in November 2022, job postings for occupations that involve lots of structured and repetitive tasks, likely replaceable by generative AI, decreased by 13%.",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-demirer-musolff-yang-writing-shipping-code-2026": {
+      "id": "nber-demirer-musolff-yang-writing-shipping-code-2026",
+      "title": "Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools",
+      "url": "https://www.nber.org/papers/w35275",
+      "publisher": "NBER (Demirer, Musolff, Yang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-01",
+      "excerpt": "These gains, however, attenuate sharply across the production hierarchy: the 240% cumulative effect falls to 80% for the number of projects, and to 30% for actual releases.",
+      "usedIn": [
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "frb-shed-genai-work-2025": {
+      "id": "frb-shed-genai-work-2025",
+      "title": "Economic Well-Being of U.S. Households in 2025: Employment and Job Quality",
+      "url": "https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-employment-and-job-quality.htm",
+      "publisher": "Board of Governors of the Federal Reserve System (SHED)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "The 44 percent who agree that generative AI saves time is higher than the 25 percent of workers who said they used AI in their job in the prior month.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-cps-aug-2026": {
+      "id": "yale-budgetlab-cps-aug-2026",
+      "title": "Tracking the Impact of AI on the Labor Market (September 15, 2026 update, August 2026 CPS)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-15",
+      "excerpt": "The Budget Lab's labor market analysis, updated to incorporate August 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends.",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yiu-seamans-raj-liu-worker-repositioning-2026": {
+      "id": "yiu-seamans-raj-liu-worker-repositioning-2026",
+      "title": "Worker Repositioning and Technological Change: Evidence from an Online Labor Market",
+      "url": "https://doi.org/10.1287/orsc.2025.20566",
+      "publisher": "Organization Science (Yiu, Seamans, Raj, Liu)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-31",
+      "excerpt": "Using proprietary data on incumbent freelancers and a difference-in-differences design that leverages cross-sectional variation in pre-period AI exposure and skill-level, we show that freelancers more exposed to AI shift away from prior domains and reorient bidding toward higher-value contracts.",
+      "usedIn": [
+        "freelancer-rate-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mit-futuretech-lashkari-ai-scale-2026": {
+      "id": "mit-futuretech-lashkari-ai-scale-2026",
+      "title": "AI and Scale: A Quantitative Task-Based Theory of Automation",
+      "url": "https://futuretech.mit.edu/publication/ai-and-scale-a-quantitative-task-based-theory-of-automation-2",
+      "publisher": "MIT FutureTech (Lashkari, Li, Qiu, Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-05",
+      "excerpt": "As compute prices fall, adoption follows an S-curve, rising from under 1% of firms in 2023 to 23% by 2035 (60% in employment-weighted terms as larger firms automate first).",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026": {
+      "id": "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026",
+      "title": "The Adoption of Industrial AI in America",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20261033",
+      "publisher": "AEA Papers and Proceedings (McElheran, Yang, Kroff, Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Despite widespread digitization, only 22.8 percent of plants report any AI use as of 2021; intensity-weighted adoption is far lower.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ling-kale-imas-ai-underreporting-2026": {
+      "id": "ling-kale-imas-ai-underreporting-2026",
+      "title": "Underreporting of AI Use: The Role of Social Desirability Bias",
+      "url": "https://doi.org/10.1145/3772318.3791073",
+      "publisher": "ACM CHI 2026 (Ling, Kale, Imas)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-13",
+      "excerpt": "We find a significant gap, with approximately 60% of students reporting that they use AI compared to 90% of their peers.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "demirer-horton-chaining-tasks-2026": {
+      "id": "demirer-horton-chaining-tasks-2026",
+      "title": "Chaining Tasks, Redefining Work: A Theory of AI Automation",
+      "url": "https://arxiv.org/abs/2606.15960",
+      "publisher": "arXiv / NBER w34859 (Demirer, Horton, Immorlica, Lucier, Shahidi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-14",
+      "excerpt": "Of the 872 occupations, 605 (69%) contain at least one AI-exposed task and 555 (64%) contain at least one AI-executed task. we find that a 10 percentage point increase in occupation-level AI exposure is associated with a 1.2 to 6.6 percentage point increase in the share of occupation tasks executed by AI.",
+      "usedIn": [
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "google-futuretech-ai-in-science-2026": {
+      "id": "google-futuretech-ai-in-science-2026",
+      "title": "AI in Science: Early Insights",
+      "url": "https://futuretech.mit.edu/publication/ai-in-science-early-insights",
+      "publisher": "Google / MIT FutureTech (Codreanu, Imas, Rock, Thompson, Manyika et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-16",
+      "excerpt": "Nearly half of surveyed scientists report using AI every day as part of their workflow. The average scientist’s time savings are around 6.9 hours per week.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-ai-tax-system-2026": {
+      "id": "yale-budgetlab-ai-tax-system-2026",
+      "title": "How potential AI futures would play out in the current tax system",
+      "url": "https://budgetlab.yale.edu/research/how-potential-ai-futures-would-play-out-current-tax-system",
+      "publisher": "The Budget Lab at Yale (Iselin, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-20",
+      "excerpt": "In those two scenarios, labor income shrinks by between 0.3 and 1.0 percentage points and tax revenue from labor income declines (in most cases).",
+      "usedIn": [
+        "median-wage-impact"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "brynjolfsson-nguyen-genai-worth-2026": {
+      "id": "brynjolfsson-nguyen-genai-worth-2026",
+      "title": "What is Generative AI Worth?",
+      "url": "https://digitaleconomy.stanford.edu/publication/what-is-generative-ai-worth/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Collis, Eggers, Kazinnik, Nguyen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-13",
+      "excerpt": "Almost half of all respondents (48.6%) report using generative AI for work, while 1 in 4 has access to a paid subscription.",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-lindenlaub-veldkamp-beyond-exposure-2026": {
+      "id": "nber-lindenlaub-veldkamp-beyond-exposure-2026",
+      "title": "Beyond Exposure: Predicting AI Adoption Based on Comparative Advantage",
+      "url": "https://www.nber.org/papers/w35271",
+      "publisher": "NBER (Lindenlaub, Oh, Rodriguez, Veldkamp)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "The resulting occupation-level index accounts for almost 60% of cross-occupation variation in observed AI adoption, compared to 14% for an exposure-only model. The two approaches diverge substantially for approximately 30% of workers, highlighting that comparative advantage—not exposure alone—is crucial for assessing AI’s labor-market impact.",
+      "usedIn": [
+        "workforce-ai-exposure"
       ],
       "verified": true,
       "synthetic": false

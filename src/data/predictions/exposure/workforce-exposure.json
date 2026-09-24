@@ -491,6 +491,33 @@
       "label": "Anthropic: ~70% of workers have some observed AI task coverage; theoretical far exceeds actual"
     },
     {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "ilo-genai-gender-segregation-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO: 41% of jobs GenAI-exposed in high-income countries vs 11% in low-income"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "ilo-genai-gender-segregation-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO: 29% of female-dominated occupations GenAI-exposed vs 16% of male-dominated"
+    },
+    {
+      "date": "2026-03-05",
+      "direction": "neutral",
+      "sourceIds": [
+        "ilo-genai-gender-segregation-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "ILO: 16% of female-dominated occupations in top automation gradients vs 3% male"
+    },
+    {
       "date": "2026-03-13",
       "direction": "neutral",
       "sourceIds": [
@@ -761,6 +788,15 @@
       "label": "Yin & Ogut: BLS reweighting cuts platform-based exposure estimates 42-93%"
     },
     {
+      "date": "2026-05-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-lindenlaub-veldkamp-beyond-exposure-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER: comparative advantage explains ~60% of AI adoption vs 14% for exposure"
+    },
+    {
       "date": "2026-05-04",
       "direction": "up",
       "sourceIds": [
@@ -768,6 +804,15 @@
       ],
       "evidenceTier": 1,
       "label": "arXiv: 59% of O*NET tasks digitally feasible for RL automation"
+    },
+    {
+      "date": "2026-05-22",
+      "direction": "down",
+      "sourceIds": [
+        "wang-wei-wang-labor-demand-reorganization-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Purdue: posting GenAI exposure fell in 2023; hiring shifts 52%, redesign 39.5%"
     },
     {
       "date": "2026-05-27",
@@ -831,6 +876,33 @@
       ],
       "evidenceTier": 1,
       "label": "Low precarity occupations: mean LLM exposure 0.386 (CI 0.356\u20130.417)"
+    },
+    {
+      "date": "2026-06-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-political-geography-ai-exposure-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: 62 of 100 most AI-exposed counties voted blue; 14–19% of workers"
+    },
+    {
+      "date": "2026-06-03",
+      "direction": "neutral",
+      "sourceIds": [
+        "brookings-political-geography-ai-exposure-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Brookings: state observed AI exposure 13–17% (MA, NY, CA, DC) vs 10–11% (NV, MS)"
+    },
+    {
+      "date": "2026-06-14",
+      "direction": "neutral",
+      "sourceIds": [
+        "demirer-horton-chaining-tasks-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Demirer et al.: 69% of occupations have an AI-exposed task; execution lags"
     },
     {
       "date": "2026-06-19",
@@ -967,6 +1039,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: most changes in work content occur within occupations"
+    },
+    {
+      "date": "2026-09-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-cps-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: Aug 2026 CPS exposure-group shares flat since ChatGPT"
     }
   ],
   "sources": [
@@ -1773,6 +1854,66 @@
       "evidenceTier": 2,
       "datePublished": "2026-09-01",
       "excerpt": "Task-based model mapping AI capability, diffusion, productivity gain, automation share and reinstatement into paths for GDP, the labor share, wages, reallocation and unemployment to 2030. Cognitive occupations are SOC 11-29, 41 and 43 (management, professional, sales and office work), 62.4 percent of employment. \"In the modest change scenario, AI acts like a 'normal technology' over the next five years and has small macroeconomic effects. In the extreme scenario, AI is transformative: by 2030 GDP is 32 percent above its no-AI path and nearly one in five cognitive workers is unemployed.\" Reviewed by Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson among others, who were not asked to endorse its conclusions."
+    },
+    {
+      "id": "ilo-genai-gender-segregation-2026",
+      "title": "Gen AI, occupational segregation and gender equality in the world of work",
+      "url": "https://www.ilo.org/publications/gen-ai-occupational-segregation-and-gender-equality-world-work",
+      "publisher": "International Labour Organization",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-05",
+      "excerpt": "In high-income countries, 41 per cent of jobs are exposed, compared to 11 per cent in low-income countries.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "brookings-political-geography-ai-exposure-2026",
+      "title": "The political geography of AI exposure",
+      "url": "https://www.brookings.edu/articles/ai-political-geography-worker-exposure/",
+      "publisher": "Brookings Metro (Muro, Jones, Methkupally)",
+      "evidenceTier": 2,
+      "datePublished": "2026-06-03",
+      "excerpt": "Figure 1 shows that 62 of the 100 most AI-exposed counties in the nation went “blue” in the 2024 presidential election. These counties make up 75% of the population of those 100 most AI-exposed counties, and between 14% and 19% of workers there are in occupations where AI is both theoretically capable of handling tasks and already being used to automate work more than augment it.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "wang-wei-wang-labor-demand-reorganization-2026",
+      "title": "Generative AI and the Reorganization of Labor Demand",
+      "url": "https://arxiv.org/abs/2605.23159",
+      "publisher": "Purdue University, Mitch Daniels School of Business (Wang, Wei, Wang)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-22",
+      "excerpt": "Hiring reallocation explains the largest share of the aggregate decline in exposure, accounting for 52% on average, while within-job redesign becomes increasingly important, accounting for 39.5%.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "yale-budgetlab-cps-aug-2026",
+      "title": "Tracking the Impact of AI on the Labor Market (September 15, 2026 update, August 2026 CPS)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "The Budget Lab at Yale (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-15",
+      "excerpt": "The Budget Lab's labor market analysis, updated to incorporate August 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "demirer-horton-chaining-tasks-2026",
+      "title": "Chaining Tasks, Redefining Work: A Theory of AI Automation",
+      "url": "https://arxiv.org/abs/2606.15960",
+      "publisher": "arXiv / NBER w34859 (Demirer, Horton, Immorlica, Lucier, Shahidi)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-14",
+      "excerpt": "Of the 872 occupations, 605 (69%) contain at least one AI-exposed task and 555 (64%) contain at least one AI-executed task. we find that a 10 percentage point increase in occupation-level AI exposure is associated with a 1.2 to 6.6 percentage point increase in the share of occupation tasks executed by AI.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "nber-lindenlaub-veldkamp-beyond-exposure-2026",
+      "title": "Beyond Exposure: Predicting AI Adoption Based on Comparative Advantage",
+      "url": "https://www.nber.org/papers/w35271",
+      "publisher": "NBER (Lindenlaub, Oh, Rodriguez, Veldkamp)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "The resulting occupation-level index accounts for almost 60% of cross-occupation variation in observed AI adoption, compared to 14% for an exposure-only model. The two approaches diverge substantially for approximately 30% of workers, highlighting that comparative advantage—not exposure alone—is crucial for assessing AI’s labor-market impact.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }
