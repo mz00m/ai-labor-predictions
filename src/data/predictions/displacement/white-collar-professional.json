@@ -6,7 +6,7 @@
   "disclaimer": "Four points dated September 2026 come from one source, the Anthropic Institute's scenario model, and three of them are scenarios rather than forecasts. The authors state plainly that \"the scenarios are not predictions, and we attach no probabilities to them\" \u2014 modest (0.5%), substantial (3.9%) and extreme (21.5%) are illustrations of what different assumptions about AI capability, diffusion and automation would imply, not competing estimates of what will happen. Read them as the width of the argument, not as a range with a middle. The fourth point (4.2%) is different in kind: it is the median outcome across 3,259 US adults' own expectations run through the same model, and it carries an interquartile range. Note also that the model's \"cognitive occupations\" are SOC 11-29, 41 and 43, which include sales and office support and so run broader than most white-collar definitions on this chart.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 2.3,
+  "currentValue": 2.1,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -249,32 +249,6 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 3.9,
-      "confidenceLow": 0.5,
-      "confidenceHigh": 21.5,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-substantial-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 4.2,
-      "confidenceLow": 1,
-      "confidenceHigh": 9,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-survey-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -1223,6 +1197,24 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic Institute (extreme scenario): cognitive employment 21.5% below mid-2026 level by 2030"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: substantial scenario, 3.9% excess unemployment (not a prediction)"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: public-survey scenario input, 4.2% white-collar displacement (not a forecast)"
     },
     {
       "date": "2026-09-02",

@@ -50,7 +50,7 @@ export default function HeroTriad() {
         )}
       </HeroStatWobble>
 
-      {/* Projected job loss - median of 5 independent net US forecasts to ~2030, range 0.6-3% */}
+      {/* Projected job loss - median of 4 independent net US forecasts to ~2030, range 0.6-3% */}
       <HeroStatWobble center={1} low={0.6} high={3}>
         {(displayValue, wobbling) => (
           <a
@@ -75,7 +75,7 @@ export default function HeroTriad() {
               Projected net job loss by 2030
             </p>
             <p className="relative z-[2] text-2xs sm:text-xs text-[var(--muted)] opacity-50 leading-snug">
-              Median of 5 forecasts (0.6–3%)
+              Median of 4 forecasts (0.6–3%)
             </p>
           </a>
         )}
