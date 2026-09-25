@@ -11,7 +11,7 @@
   "disclaimer": "Measures interaction automation, not job elimination. Actual headcount effects depend on demand response and service quality. A high automation rate may reduce headcount but does not imply equivalent job loss.",
   "history": [
     {
-      "date": "2024-01-20",
+      "date": "2024-02-27",
       "value": 66,
       "confidenceLow": 55,
       "confidenceHigh": 75,
@@ -20,19 +20,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
-      "date": "2024-02-01",
-      "value": 12,
-      "confidenceLow": 8,
-      "confidenceHigh": 18,
-      "sourceIds": [
-        "shopify-earnings-2024"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "company-reported share of interactions, single firm",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Vendor self-report from one firm's first month of deployment; not independently measured and not representative of the sector. Klarna later partly reversed course (see 2025 overlay)."
+      }
     },
     {
       "date": "2025-02-12",
@@ -44,7 +40,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "corporate",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "company-reported share of interactions, single firm",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Vendor self-report of merchant support queries resolved without a human at one firm; not independently measured and not representative of the sector."
+      }
     },
     {
       "date": "2025-09-02",
@@ -54,21 +58,17 @@
       "sourceIds": [
         "salesforce-cs-ai-agents-2025"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
-      "date": "2025-10-15",
-      "value": 25,
-      "confidenceLow": 20,
-      "confidenceHigh": 30,
-      "sourceIds": [
-        "gartner-cs-2026-forecast"
-      ],
-      "evidenceTier": 2,
-      "metricType": "survey",
-      "dataType": "projected"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "company-reported share of interactions, single firm",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "CEO podcast remark reported by Fortune ('50% are with agents, 50% are with humans'); vendor of the AI agents in question, single firm, not independently measured."
+      }
     },
     {
       "date": "2025-11-13",
@@ -101,7 +101,15 @@
       ],
       "evidenceTier": 2,
       "metricType": "corporate",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "company-reported ticket deflection, single technology firm selected from 51 successful deployments",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "One case chosen from a sample selected on success; ticket deflection at a single firm, not a sector-wide automation rate."
+      }
     }
   ],
   "overlays": [
@@ -122,6 +130,15 @@
       ],
       "evidenceTier": 2,
       "label": "Gartner: Conversational AI will reduce contact center labor costs by $80B in 2026"
+    },
+    {
+      "date": "2024-02-01",
+      "direction": "up",
+      "sourceIds": [
+        "shopify-earnings-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Shopify: AI resolved 12% of merchant support queries a year before its 40% (company-reported)"
     },
     {
       "date": "2024-05-10",
@@ -255,7 +272,7 @@
       "sourceIds": [
         "salesforce-cs-ai-agents-2025"
       ],
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "label": "Salesforce: Cut CS workforce 44% (9K to 5K); AI agents handle 50% of conversations"
     },
     {
@@ -612,7 +629,7 @@
       "title": "Salesforce CEO Marc Benioff says his company has cut 4,000 customer service jobs as AI steps in",
       "url": "https://fortune.com/2025/09/02/salesforce-ceo-billionaire-marc-benioff-ai-agents-jobs-layoffs-customer-service-sales/",
       "publisher": "Fortune (Benioff interview on The Logan Bartlett Show)",
-      "evidenceTier": 1,
+      "evidenceTier": 3,
       "datePublished": "2025-09-02",
       "excerpt": "50% are with agents, 50% are with humans. From 9,000 heads to about 5,000 because I need less heads. Support costs reduced by 17%.",
       "dateAdded": "2026-03-08"

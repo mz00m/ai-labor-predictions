@@ -22,38 +22,24 @@
       "dataType": "projected"
     },
     {
-      "date": "2025-01-10",
-      "value": 30,
-      "confidenceLow": 22,
-      "confidenceHigh": 38,
-      "sourceIds": [
-        "deloitte-health-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "survey",
-      "dataType": "projected"
-    },
-    {
       "date": "2025-02-10",
       "value": 4.7,
       "sourceIds": [
         "bls-mlr-ai-employment-projections-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2025-07-01",
-      "value": 8,
-      "confidenceLow": 5,
-      "confidenceHigh": 12,
+      "value": -8,
       "sourceIds": [
         "bls-health-admin-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-03-25",
@@ -407,16 +393,6 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "deloitte-health-2025",
-      "title": "2025 Global Health Care Outlook — AI and Administrative Efficiency",
-      "url": "https://www2.deloitte.com/us/en/insights/industry/health-care/global-health-care-outlook.html",
-      "publisher": "Deloitte",
-      "evidenceTier": 2,
-      "datePublished": "2025-01-10",
-      "excerpt": "Health systems deploying AI for revenue cycle management report 30% reduction in administrative FTEs within 18 months.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "reuters-health-admin-cuts",
       "title": "Insurers say they'll deploy more AI to combat 'aggressive' coding by hospitals",
       "url": "https://www.statnews.com/2025/10/31/health-insurer-ai-fights-hospital-ai-coding-billing/",
@@ -433,7 +409,7 @@
       "publisher": "Bureau of Labor Statistics",
       "evidenceTier": 1,
       "datePublished": "2025-07-01",
-      "excerpt": "Medical records, billing, and coding specialist employment projected to decline 8% through 2033, the steepest decline among healthcare occupations.",
+      "excerpt": "BLS projects employment of medical records specialists to grow 8% from 2025 to 2035.",
       "dateAdded": "2026-03-01"
     },
     {

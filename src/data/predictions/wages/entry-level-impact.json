@@ -10,18 +10,6 @@
   "aggregationMethod": "weighted",
   "history": [
     {
-      "date": "2025-04-01",
-      "value": -5.5,
-      "confidenceLow": -8,
-      "confidenceHigh": -3,
-      "sourceIds": [
-        "oecd-youth-employment-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
-    },
-    {
       "date": "2025-06-30",
       "value": -5,
       "sourceIds": [
@@ -30,26 +18,6 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
-    },
-    {
-      "date": "2025-07-01",
-      "value": -5.2,
-      "sourceIds": [
-        "bls-entry-wages-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-03-18",
-      "value": 2,
-      "sourceIds": [
-        "freund-mann-job-transformation-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
     },
     {
       "date": "2026-04-06",
@@ -70,18 +38,19 @@
       "evidenceTier": 2,
       "metricType": "employment",
       "dataType": "observed"
-    }
-  ,
+    },
     {
       "date": "2026-09-10",
-      "value": -13,
+      "value": -5,
       "sourceIds": [
         "orr-tucker-warren-ai-exposed-majors-2026"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment",
-      "sampleSize": 6665500
+      "sampleSize": 6665500,
+      "confidenceLow": -13,
+      "confidenceHigh": -3.3
     }
   ],
   "overlays": [
@@ -410,6 +379,15 @@
       "label": "Anthropic: AI exposure concentrates in credentialed roles (17.4% vs 4.5% grad degrees)"
     },
     {
+      "date": "2026-03-18",
+      "direction": "up",
+      "sourceIds": [
+        "freund-mann-job-transformation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Freund & Mann (model): low-wage workers gain ~2% on average from AI; not entry-level"
+    },
+    {
       "date": "2026-03-25",
       "direction": "down",
       "sourceIds": [
@@ -573,7 +551,7 @@
     },
     {
       "date": "2026-07-21",
-      "direction": "up",
+      "direction": "down",
       "sourceIds": [
         "revelio-wage-concentration-2026"
       ],
@@ -727,26 +705,6 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "oecd-youth-employment-2025",
-      "title": "OECD Youth Employment Outlook 2025",
-      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2025_c5e15f4a-en.html",
-      "publisher": "OECD",
-      "evidenceTier": 1,
-      "datePublished": "2025-04-01",
-      "excerpt": "Youth (18-24) employment in OECD countries in AI-exposed sectors declined 4.5% YoY. Real starting salaries fell 3-8% across knowledge-work sectors.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "bls-entry-wages-2025",
-      "title": "Usual Weekly Earnings \u2014 Workers 16-24",
-      "url": "https://www.bls.gov/cps/",
-      "publisher": "Bureau of Labor Statistics",
-      "evidenceTier": 1,
-      "datePublished": "2025-07-01",
-      "excerpt": "Real median weekly earnings for workers aged 16-24 in professional services fell 5.2% from 2023 to 2025.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "mckinsey-entry-level-2025",
       "title": "Generative AI and the future of work in America",
       "url": "https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america",
@@ -802,7 +760,7 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
+      "datePublished": "2025-12-11",
       "excerpt": "35.9% of US workers used generative AI by December 2025; adoption concentrated among younger, college-educated workers. Small positive wage effects overall.",
       "dateAdded": "2026-03-07"
     },

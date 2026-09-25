@@ -4,7 +4,7 @@
   "title": "Generative AI Adoption",
   "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey, published as 137 official FRED series since July 2026). Work adoption (45.2%, May 2026) lags overall use (57.9%, Q1 2026), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
-  "unit": "% of adults at work",
+  "unit": "% of employed adults 18\u201364 who have used genAI for work",
   "currentValue": 45.2,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
@@ -38,25 +38,6 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
-    },
-    {
-      "date": "2024-12-31",
-      "value": 30,
-      "confidenceLow": 25,
-      "confidenceHigh": 35,
-      "sourceIds": [
-        "daniotti-ai-code-diffusion-2025"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of Python code on GitHub that is AI-assisted",
-        "conversionFactor": 1,
-        "conversionLow": 0.8,
-        "conversionHigh": 1.2,
-        "rationale": "AI-assisted code share as proxy for developer AI adoption at work"
-      }
     },
     {
       "date": "2025-02-01",
@@ -130,38 +111,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2026-01-15",
-      "value": 41,
-      "sourceIds": [
-        "census-ces-ai-diffusion-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-22",
-      "value": 43,
-      "sourceIds": [
-        "indeed-hiringlab-ai-jobs-labor-2026"
-      ],
-      "evidenceTier": 2,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-28",
-      "value": 41.1,
-      "confidenceLow": 36,
-      "confidenceHigh": 46,
-      "sourceIds": [
-        "oecd-ai-adoption-firms-individuals-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-02-01",
       "value": 43,
       "sourceIds": [
@@ -210,6 +159,15 @@
       ],
       "evidenceTier": 1,
       "label": "NHH/Carvajal: Male students 25% more likely to be high AI users (n=595)"
+    },
+    {
+      "date": "2024-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "daniotti-ai-code-diffusion-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Daniotti et al.: ~30% of US Python code AI-assisted by Q4 2024 (share of code, not workers)"
     },
     {
       "date": "2025-01-01",
@@ -291,6 +249,33 @@
       ],
       "evidenceTier": 2,
       "label": "Deloitte: ~60% of workers at AI-using firms now have sanctioned AI access"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "census-ces-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES: workers use AI in 41% of firms, employment-weighted (firm-level measure)"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-hiringlab-ai-jobs-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed Hiring Lab: about 43% of US workers regularly used AI at work (restates Bick-Deming)"
+    },
+    {
+      "date": "2026-01-28",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-ai-adoption-firms-individuals-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD: 41.1% of employed individuals OECD-wide used genAI in 2025 (not US-only)"
     },
     {
       "date": "2026-02-23",
