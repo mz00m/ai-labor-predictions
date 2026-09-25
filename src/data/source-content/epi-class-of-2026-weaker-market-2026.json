@@ -1,0 +1,14 @@
+{
+  "id": "epi-class-of-2026-weaker-market-2026",
+  "abstract": "First post in EPI's Class of 2026 series (May 7, 2026). Young college graduates (ages 22–27 with only a bachelor's degree) saw unemployment rise from a low of 4.0% in July 2023 to 5.3% in March 2026, faster than the overall rate (3.6% to 4.3%); young noncollege workers rose 1.2 points to 7.1% since March 2024. EPI finds that nearly all (98%) of the 2024–2026 rise in young-graduate unemployment came from higher labor force participation, with their employment-to-population ratio steady since 2024, and argues it is premature to read the rise as AI substituting for entry-level white-collar work. Real median wages of young graduates rose 0.4% over the past year and 7.4% since 2019. The college wage premium peaked around 2015 and stands at 55.2% overall.",
+  "keyFindings": [
+    "Young-graduate unemployment rose from 4.0% (July 2023) to 5.3% (March 2026); overall rate rose from 3.6% to 4.3%.",
+    "98% of the 2024–2026 increase in young-graduate unemployment was driven by labor force growth; EPOP held steady.",
+    "Young noncollege unemployment rose 1.2 points to 7.1% since March 2024.",
+    "Real median wages of young graduates +0.4% since 2025 and +7.4% since 2019.",
+    "College wage premium 55.2%, roughly late-1990s levels, after peaking around 2015."
+  ],
+  "methodology": "EPI analysis of CPS basic monthly microdata (EPI extracts v2026.4.13); 12-month moving averages, latest April 2025–March 2026; young college graduates defined as ages 22–27 with only a four-year degree, enrolled students included.",
+  "qualifiers": "Tier 3: think-tank blog post (ingest.md places think-tank blogs at Tier 3); descriptive CPS analysis with no exposure-based design. EPI's inference against an AI explanation rests on comparisons across education groups, not a causal test.",
+  "fetchedAt": "2026-09-24"
+}

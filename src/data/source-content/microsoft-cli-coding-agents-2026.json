@@ -1,0 +1,14 @@
+{
+  "abstract": "Microsoft researchers study tens of thousands of Microsoft engineers during the early-2026 internal rollout of two agentic command-line coding tools, Claude Code and GitHub Copilot CLI (post-period January 5 – April 29, 2026). Using developer-level telemetry, they find first use spread mainly through social networks and retention tracked coding activity more than demographics. A synthetic-control (CausalImpact) estimate finds adopters merged 24.0% more pull requests per engineer per day than their counterfactual (95% CI +14.5% to +33.7%), with no statistically distinguishable decay: +29.4% in February versus +20.0% across March–April. Within-person fixed-effects models show a dose-response from +15.0% in weeks with three tool-use days to +50.1% at five or more, and a larger lift for Copilot CLI (+24.9%) than Claude Code (+11.4%) among single-tool users. Merged PRs are the output proxy; the authors acknowledge a merged PR is not the same as the value it delivers.",
+  "keyFindings": [
+    "+24.0% merged PRs per engineer per day for adopters vs synthetic counterfactual (95% CI +14.5% to +33.7%)",
+    "Lift persisted: +29.4% in Feb 2026 vs +20.0% in Mar–Apr 2026, overlapping CIs",
+    "Dose-response: +15.0% PRs in weeks with 3 tool-use days, +50.1% at 5+ days, vs the same engineer's zero-use weeks",
+    "Copilot CLI +24.9% vs Claude Code +11.4% among single-tool users (p < 0.0001)",
+    "Initial adoption spread through peers: +216% odds of trying Copilot CLI when most skip-level peers used it"
+  ],
+  "methodology": "Enterprise telemetry and HR data for Microsoft engineers; pre-period Oct 1, 2024 – Jan 4, 2026, post-period Jan 5 – Apr 29, 2026. Part 1: Bayesian structural time-series synthetic control for a rollout-week adopter cohort vs never-users. Part 2: within-person Poisson FE by weekly tool-use days. Sample restricted to active engineers (≥2 merged PRs in four pre-rollout weeks), P5–P95 trimmed.",
+  "qualifiers": "Company-authored arXiv preprint about its own rollout; tiered 2 as industry research. Adoption is voluntary, so estimates are observational; the synthetic control does not absorb adopter-specific shocks. Output is merged-PR count, not value or quality. Single firm; not a controlled task-level estimate, so excluded from the time-saved median.",
+  "id": "microsoft-cli-coding-agents-2026",
+  "fetchedAt": "2026-09-24"
+}

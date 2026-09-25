@@ -22,6 +22,16 @@
       "dataType": "observed"
     },
     {
+      "date": "2025-06-30",
+      "value": -5,
+      "sourceIds": [
+        "dallasfed-college-grads-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
       "date": "2025-07-01",
       "value": -5.2,
       "sourceIds": [
@@ -526,6 +536,15 @@
       "label": "Yale Budget Lab: 16-34 cohort unemployment ~+0.5pp but statistically insignificant"
     },
     {
+      "date": "2026-05-07",
+      "direction": "neutral",
+      "sourceIds": [
+        "epi-class-of-2026-weaker-market-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "EPI: young grads' real median wage +0.4% since 2025, +7.4% since 2019"
+    },
+    {
       "date": "2026-05-15",
       "direction": "up",
       "sourceIds": [
@@ -542,6 +561,15 @@
       ],
       "evidenceTier": 2,
       "label": "PwC: 'seniorised' entry-level roles +35% since 2019 vs -10% for others (n=2.4M US)"
+    },
+    {
+      "date": "2026-06-30",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-ai-exposure-advertised-pay-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: entry-level advertised-pay gap ~2–5 pts in AI-exposed jobs"
     },
     {
       "date": "2026-07-21",
@@ -616,6 +644,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census CES: the 13% initial earnings gap attenuates to ~7% after a year and ~5% after two years"
+    },
+    {
+      "date": "2026-09-22",
+      "direction": "down",
+      "sourceIds": [
+        "dallasfed-college-grads-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: exposed-field master's grads saw similar relative earnings drops"
     }
   ],
   "sources": [
@@ -1180,6 +1217,36 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-10",
       "excerpt": "They also saw declines in associated quarterly earnings of about thirteen percent relative to the least exposed fields, attenuating to about five percent after two years. Administrative PSEO/LEHD records on 6,665,500 bachelor's graduates, roughly 29% of US bachelor's degrees conferred 2016-2024. \"This earnings decline is comparable in magnitude to the earnings losses associated with graduating into a large recession\" - larger, in fact, than the nine to ten percent initial losses in the recession literature. Roughly half the decline is lower pay within the same sectors and half is a shift in industry mix toward lower-wage sectors such as restaurants and retail."
+    },
+    {
+      "id": "indeed-ai-exposure-advertised-pay-2026",
+      "title": "AI Exposure Isn’t Squeezing Advertised Pay in the US — It’s Boosting It",
+      "url": "https://hiringlab.indeed.com/2026/09/17/ai-exposure-isnt-squeezing-advertised-pay-in-the-us-its-boosting-it/",
+      "publisher": "Indeed Hiring Lab (Jack Kennedy)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-17",
+      "excerpt": "But specifically on the post-ChatGPT change, measured against a 2022 baseline, the gap is far more even across levels — roughly 5 points at entry, 6 at mid, and 7 at senior.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "dallasfed-college-grads-ai-2026",
+      "title": "AI plays a role in weak labor market for college graduates",
+      "url": "https://www.dallasfed.org/research/economics/2026/0922",
+      "publisher": "Federal Reserve Bank of Dallas (Samuel Dodini, Tucker Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-22",
+      "excerpt": "Among graduates who found work in Texas, first-year earnings for more-exposed majors also fell by approximately 5 percent from 2021 to 2024 relative to less-exposed majors",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "epi-class-of-2026-weaker-market-2026",
+      "title": "Young college graduates face a weaker labor market—but a more mixed picture than the headlines suggest: Class of 2026",
+      "url": "https://www.epi.org/blog/class-of-2026-young-college-graduates-face-a-weaker-labor-market-but-a-more-mixed-picture-than-the-headlines-suggest/",
+      "publisher": "Economic Policy Institute (Joe Fast, Elise Gould)",
+      "evidenceTier": 3,
+      "datePublished": "2026-05-07",
+      "excerpt": "Real (inflation-adjusted) median wages of young college graduates rose slightly over the last year, up just 0.4% since 2025, consistent with the slowdown in wage growth for workers overall. Since 2019, young college graduate wages have grown 7.4% after adjusting for inflation.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

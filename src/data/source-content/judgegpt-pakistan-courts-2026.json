@@ -1,0 +1,14 @@
+{
+  "abstract": "First large-scale field experiment on generative AI in a national justice system. With Pakistan's judiciary, the authors built JudgeGPT, a custom assistant for trial courts, and randomized 1,559 judges across 118 courts (about half of the country's trial judges) into AI access with targeted training, AI access with generic training, or generic training without AI. Targeted training raised adoption, intensity and persistence of use. District administrative records show that at median-district exposure, AI with targeted training corresponds to 1,848 additional cases resolved per year, a 6.3 percent increase over the mean, with no apparent loss of quality: appeals slightly decline and text-based writing measures slightly improve. Chat logs show judges mainly use AI to clarify legal concepts and support drafting; targeted training shifts use toward text improvement and away from open-ended legal queries.",
+  "keyFindings": [
+    "1,559 judges across 118 courts randomized into three arms",
+    "+6.3% cases resolved per year (1,848 cases) at median-district exposure to AI with targeted training",
+    "Appeals slightly decline and judicial writing measures slightly improve — no measured quality loss",
+    "Targeted training increased adoption and sustained use relative to generic training",
+    "Before treatment only about 25% of judges reported familiarity with LLMs such as ChatGPT"
+  ],
+  "methodology": "Pre-registered RCT (AEARCTR-0012906) of JudgeGPT access and training among Pakistani trial judges; outcomes from baseline and ~3-month follow-up surveys, platform chat logs, and district-year administrative case-resolution data (Law and Justice Commission of Pakistan) covering 2021–2024, with one post-intervention year.",
+  "qualifiers": "NBER conference paper, unrefereed (repo convention for NBER papers: Tier 1). Case-resolution effect is identified from district-level variation in the share of treated judges, not judge-level output, and rests on a single post-treatment year. Pakistan's trial courts; not US evidence. Survey outcomes are perceptions.",
+  "id": "judgegpt-pakistan-courts-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -91,7 +91,7 @@ export default function ProductivityPage() {
           <StatHighlight
             value="~21%"
             label="Median task-level gain"
-            detail="Median of 8 controlled studies (time saved)"
+            detail="Median of 9 controlled studies (time saved)"
             color="#22c55e"
           />
           <StatHighlight

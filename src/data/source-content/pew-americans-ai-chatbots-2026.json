@@ -1,0 +1,14 @@
+{
+  "id": "pew-americans-ai-chatbots-2026",
+  "abstract": "Pew Research Center's 2026 survey of how Americans use and view AI, fielded February 17–23, 2026 among 5,119 US adults on the American Trends Panel and published June 17, 2026. About half of US adults (49%) now use AI chatbots such as ChatGPT, Gemini or Copilot, up from 33% in 2024, and roughly a quarter use them daily. Searching for information (42%) and work tasks (38% of employed adults) are the most common uses. ChatGPT use specifically reached 44% of adults, up from 34% in 2025. Views remain negative on balance: more adults expect AI to have a negative than a positive impact on them and on society. This survey supersedes Pew's ChatGPT-only work-use question (28% of employed adults, 2025) with a broader any-chatbot question.",
+  "keyFindings": [
+    "38% of employed US adults report using chatbots for tasks at work (February 2026).",
+    "49% of US adults say they ever use AI chatbots like ChatGPT, Gemini or Copilot, up from 33% in 2024 (the 2024 question was worded differently).",
+    "44% of US adults report using ChatGPT, up from 34% in 2025 and more than double the 2023 share.",
+    "42% use chatbots to search for information, 25% for fun or entertainment, 24% to create or edit images or videos, 20% for medical advice, 13% for news, 10% for emotional support and 4% for companionship.",
+    "About a quarter of US adults use chatbots daily; about half do not use them at all."
+  ],
+  "methodology": "Pew Research Center American Trends Panel, a probability-based online panel weighted to represent the full US adult population. n = 5,119 US adults, fielded February 17–23, 2026. 'Employed' means working full or part time for pay at the time of the survey. The 2026 chatbot questions cover AI chatbots in general; earlier Pew waves (2023–2025) asked only about ChatGPT and only of those who had heard of it.",
+  "qualifiers": "Tier 1 matches the repo's treatment of Pew's 2025 ChatGPT survey. Question wording changed in 2026 (any chatbot rather than ChatGPT only; asked of all adults rather than only those aware of ChatGPT), so part of the rise from 28% to 38% in work use reflects the broader instrument. 'Ever use for tasks at work' sets no frequency threshold. Self-reported. The employed subsample size is not stated on the report page.",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,14 @@
+{
+  "abstract": "San Francisco Fed economists ask whether the US has entered a high-productivity-growth era. GDP grew about 2.5% a year over three years with near-zero employment growth, and labor productivity rose solidly while utilization-adjusted TFP lagged. A regime-switching model puts the probability of a high-growth regime at about 57% using labor productivity and 21% using TFP as of Q4 2025 — neither a definitive signal. The divergence suggests AI-related investment is making workers more productive through capital deepening, while broader efficiency gains remain unrealized. Re-running the model with data only through 1997 shows the 1990s boom looked similarly ambiguous in real time, which the authors read as grounds for cautious optimism.",
+  "keyFindings": [
+    "~57% probability of a high-productivity-growth regime using labor productivity, Q4 2025",
+    "~21% probability using utilization-adjusted TFP, Q4 2025",
+    "US output grew ~2.5% a year over three years with near-zero employment growth",
+    "Labor productivity–TFP divergence points to capital deepening from AI investment, not broad efficiency gains",
+    "Mid-1990s regime probabilities looked similarly mixed in real time before the boom became clear"
+  ],
+  "methodology": "Regime-switching model (Foerster and Matthes 2022) applied to US business-sector labor productivity and utilization-adjusted TFP (Fernald 2014), with a real-time counterfactual using data only through 1997.",
+  "qualifiers": "Fed research letter (repo convention: Tier 1). Model-based probabilities, not forecasts of AI's contribution. Views are the authors', not the Federal Reserve's. Explicitly declines to claim a regime shift has occurred.",
+  "id": "frbsf-productivity-regime-2026",
+  "fetchedAt": "2026-09-24"
+}

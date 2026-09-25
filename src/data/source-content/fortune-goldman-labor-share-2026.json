@@ -1,0 +1,13 @@
+{
+  "id": "fortune-goldman-labor-share-2026",
+  "abstract": "Fortune (Sept 16, 2026) reports a Sept 15 Goldman Sachs Research note by economist Abhay Duggirala, 'What Explains the Decline in the Labor Share of Income?'. Per Fortune, the nonfarm business labor share has fallen roughly 7.5 percentage points since the 1990s. Goldman estimates about 40% of that drop reflects measurement: tax-driven relabeling of wages as pass-through business income, rising depreciation as short-lived capital like software grows, and stock compensation counted only at vesting or exercise. The remaining 60%, about 4.5 points, is real and traces mostly to rising markups at superstar firms, automation, and eroding worker bargaining power. Fortune quotes the note as saying that 'if AI continues to automate many additional tasks,' the labor share 'will likely continue to decline.'",
+  "keyFindings": [
+    "Nonfarm business labor share down roughly 7.5 pp since the 1990s (BLS data cited by Goldman).",
+    "About 40% of the decline attributed to measurement: pass-through relabeling, higher depreciation, timing of stock compensation.",
+    "About 60%, or roughly 4.5 pp, judged real: markups, automation, weaker bargaining power.",
+    "Goldman (as quoted by Fortune): if AI continues to automate many additional tasks, the labor share will likely continue to decline."
+  ],
+  "methodology": "Journalistic summary of a Goldman Sachs Research decomposition of the BLS nonfarm business labor share; the underlying note was not available for review.",
+  "qualifiers": "Tier 3: secondary reporting; the primary Goldman note is client-only and was not read. Figures are Fortune's rendering. Automation is one of three structural drivers, with no AI-specific share quantified; the AI statement is conditional and forward-looking. Labor share is not a median-wage measure.",
+  "fetchedAt": "2026-09-24"
+}

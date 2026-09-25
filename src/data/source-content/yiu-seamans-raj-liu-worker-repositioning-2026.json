@@ -1,0 +1,13 @@
+{
+  "abstract": "Yiu, Seamans, Raj and Liu (Organization Science, 2026) study how incumbent freelancers on a large online labor market repositioned after ChatGPT launched in November 2022. They argue that ChatGPT reduced expected returns to labor in AI-exposed skill domains, and they examine the supply-side response: participation, horizontal positioning (which skill domains workers bid in) and vertical positioning (which contract values they target). Using proprietary platform data and a difference-in-differences design based on pre-period AI exposure and skill level, they find that freelancers more exposed to AI move away from their prior domains and shift bidding toward higher-value contracts. High-skill freelancers, who face higher adjustment costs, are less likely to cut participation, switch domains or move upmarket. The paper frames technological change as reshaping labor markets through worker adaptation, not only through labor-demand shifts, with domain-specific human capital limiting how workers can respond. Effect sizes are not in the abstract.",
+  "keyFindings": [
+    "AI-exposed incumbent freelancers shift away from their prior skill domains after ChatGPT's launch (direction only; magnitudes not in accessible text)",
+    "AI-exposed freelancers reorient bidding toward higher-value contracts",
+    "High-skill freelancers are less likely to reduce participation, reposition across domains or move upmarket, which the authors attribute to higher adjustment costs",
+    "Supply-side adaptation is a separate channel from the demand declines documented by earlier freelance studies (e.g., Hui, Reshef and Zhou)"
+  ],
+  "methodology": "Difference-in-differences on proprietary incumbent-freelancer data from a large online labor market, using cross-sectional variation in pre-period AI exposure and skill level around ChatGPT's November 2022 launch. Outcomes: platform participation, domain (horizontal) repositioning and contract-value (vertical) repositioning.",
+  "qualifiers": "Tier 1: peer-reviewed (Organization Science). Caveats: single platform, not the whole gig economy; incumbents only, so entry and exit of new workers is not the focus; the directional findings come from the abstract only. The full text with effect sizes was not accessible, so no magnitude should be cited from this record.",
+  "id": "yiu-seamans-raj-liu-worker-repositioning-2026",
+  "fetchedAt": "2026-09-24"
+}

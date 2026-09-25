@@ -1,0 +1,14 @@
+{
+  "abstract": "Demirer, Horton, Immorlica, Lucier and Shahidi model production as an ordered sequence of steps that can be done manually, augmented with AI, or fully automated within contiguous AI-executed 'chains'. Firms bundle steps into tasks and jobs, trading specialization gains against coordination costs. The model shows that comparative-advantage logic can fail when AI chains steps: whether a step is automated depends on its neighbors, not just its own AI suitability. It implies non-linear productivity gains from AI quality improvements and a CES representation at the macro level. Empirically, the authors map O*NET task sequences to Eloundou et al. exposure and Anthropic Economic Index usage. Of 872 occupations, 69% contain at least one AI-exposed task and 64% contain at least one AI-executed task. A 10 percentage point rise in occupation-level exposure is associated with only a 1.2 to 6.6 percentage point rise in the share of tasks AI actually executes. Greater dispersion (fragmentation) of AI-able steps lowers AI execution at the job level, and adjacency to AI-executed steps raises the chance that a step is AI-executed. The paper implies that exposure scores overstate near-term automation where AI-able tasks are scattered through a job.",
+  "keyFindings": [
+    "69% of 872 occupations (605) contain at least one AI-exposed task; 64% (555) contain at least one AI-executed task",
+    "A 10 pp increase in occupation-level AI exposure is associated with a 1.2-6.6 pp increase in the share of tasks executed by AI",
+    "Fragmentation of AI-exposed steps within a job lowers realized AI execution, controlling for exposure",
+    "Adjacency to AI-executed steps raises the likelihood a step is AI-executed (chains)",
+    "Theory: automation can violate task-by-task comparative advantage; AI quality gains raise productivity non-linearly"
+  ],
+  "methodology": "Theoretical model of step sequencing, chaining and job design, plus empirical tests using O*NET task/DWA sequences, Eloundou et al. (2024) E1/E2 exposure, and Anthropic Economic Index conversation classifications (automation vs augmentation) mapped to 2,347 tasks.",
+  "qualifiers": "Tier 1 by repo convention for NBER/arXiv working papers (unrefereed). Caveats: mainly a theory paper; task order is constructed from O*NET, with LLM-assisted sequencing; AI execution is inferred from Claude conversation data, which covers one provider's users; occupation counts are not employment-weighted.",
+  "id": "demirer-horton-chaining-tasks-2026",
+  "fetchedAt": "2026-09-24"
+}

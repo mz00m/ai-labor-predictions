@@ -1,0 +1,15 @@
+{
+  "id": "ramp-ai-index-sep-2026",
+  "abstract": "The September 2026 Ramp AI Index, published September 9, 2026 by Ara Kharazian as \"Cracks in the AI Thesis Part 2,\" covering August 2026 transactions. Built from corporate card and bill-pay data across more than 70,000 US businesses, it tracks the share of firms paying each major AI vendor and per-employee AI spend. The edition's thesis: paid business AI adoption is still rising but decelerating, spend per employee fell among the heaviest-spending firms, and effective token prices dropped sharply as businesses shifted volume from frontier models to cheaper standard models.",
+  "keyFindings": [
+    "43.8% of US businesses paid for subscriptions or tokens from Anthropic in August 2026, up 0.34 percentage points month over month.",
+    "39.8% of US businesses paid for OpenAI, up only 0.09 percentage points; Ramp describes new AI adoption as still growing but decelerating.",
+    "Monthly AI spend per employee for the top 1% of firms fell 9.7%, from $7,976 to $7,205 per employee per month (July was revised up from about $7.4K).",
+    "Ramp's effective price per million tokens fell 41% to $0.68 from a 2026 peak of $1.15 in March.",
+    "Frontier models (Opus, Fable, Sol) drove 45% of token share, down from a 53% peak in August.",
+    "Open-source models are used by 6.4% of AI-spending businesses and 3.6% of businesses overall (measured via routing platforms, so likely an overstatement)."
+  ],
+  "methodology": "Transaction-level analysis of corporate card and bill-pay data from Ramp's customer base (more than 70,000 US businesses). Adoption is a business having paid for a given AI vendor's subscription or tokens in the reference month, measured from payment records rather than self-report. Spend is per employee per month for the median, top-10% and top-1% firms. Published monthly on the Ramp Economics Lab AI Index.",
+  "qualifiers": "Tier 2: private-sector research. Measures paid vendor relationships, not AI use, so it is a different construct from the Census BTOS self-report plotted on ai-adoption-rate, and it is carried as a directional signal. Ramp's customer base skews toward venture-backed tech and professional-services firms, so levels are an upper bound; month-over-month changes are the more reliable signal. Ramp itself flags that the top-1% spend estimate is volatile and subject to revision, and offers a seasonal explanation (August vacations) for part of the decline.",
+  "fetchedAt": "2026-09-24"
+}

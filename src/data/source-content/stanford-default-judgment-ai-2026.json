@@ -1,0 +1,14 @@
+{
+  "abstract": "Stanford researchers audited 188 debt-collection cases granted default judgment by the Superior Court of Los Angeles County and found 4% contained major defects that should have prevented judgment, 10% contained inconsistencies requiring reduced judgments, and 32% contained errors requiring amendment. With court attorneys and judges they built a Default Assistant that uses LLMs to check each case against statutory requirements and cite supporting quotes from the filings. In a controlled study with 66 law students randomly assigned to review cases with or without the assistant, assisted reviewers were 6.0% more accurate on the average requirement (p < 1.0e-4) and 25.9% faster in reviewing the average requirement (p < 2.5e-10). Requirements that demand extensive document search showed the largest gains, with error reductions up to 62% and time savings up to 34%.",
+  "keyFindings": [
+    "25.9% less time per requirement reviewed with the AI assistant (−12.8 seconds, p < 2.5e-10)",
+    "6.0% higher accuracy per requirement (+5.3 pp, p < 1.0e-4)",
+    "Time savings of 24% to 34% across requirement types; error reductions up to 62% (Charge-off Balance)",
+    "Audit: 32% of 188 LA County default judgments needed amendment; 10% needed reduced judgments; 4% had major defects",
+    "LA County court staff spend on average four minutes per case to verify over a dozen statutory requirements"
+  ],
+  "methodology": "Audit of 188 LA County debt-collection default judgments; randomized two-arm human study (n = 66 law students, 204 case evaluations per arm, 12 cases each, 10-minute per-case cap), measuring requirement-level accuracy against gold labels and logged time per requirement.",
+  "qualifiers": "arXiv preprint, under review (repo convention for arXiv research: Tier 1). Participants were law students in a simulation, not court staff; the 10-minute cap exceeds the ~4 minutes staff actually spend, which the authors note may change measured relative time savings. IRB consulted; formal review not required.",
+  "id": "stanford-default-judgment-ai-2026",
+  "fetchedAt": "2026-09-24"
+}

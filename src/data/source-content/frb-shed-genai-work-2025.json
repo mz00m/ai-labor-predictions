@@ -1,0 +1,15 @@
+{
+  "abstract": "The Federal Reserve Board's Survey of Household Economics and Decisionmaking (SHED), in the employment and job quality chapter of 'Economic Well-Being of U.S. Households in 2025' (May 2026), added questions on generative AI at work. One in four workers (25 percent) had used generative AI in the prior month as part of their job. Among users, 81 percent agreed it saves them time, 52 percent that it improves quality and 55 percent that it enables new tasks; 44 percent of all workers agreed it would save time in their job. Use rises steeply with education, from 10 percent of workers with a high school degree or less to 34 percent with a bachelor's and 43 percent with a graduate degree. Workers under 30 used it less than those aged 30-59 and were 4 points more likely to worry AI would replace their job than to expect it to improve their career. Employees with more control over how they do tasks used it more (30 vs 20 percent). The question was adapted from the Bick, Blandin and Deming instrument and excludes AI results from search engines.",
+  "keyFindings": [
+    "25 percent of workers used generative AI in the prior month as part of their job (October 2025).",
+    "81 percent of generative AI users agreed it saves them time; 52 percent that it improves quality; 55 percent that it enables new tasks.",
+    "44 percent of all workers agreed generative AI would save time in their job.",
+    "Use by education: 10% (high school or less), 17% (some college), 20% (associate), 34% (bachelor's), 43% (graduate degree).",
+    "Workers under 30 were less likely to use generative AI than workers 30-59, and 4 points more likely to worry it would replace their job than to say it would improve their career.",
+    "30 percent of employees who often or always control how they complete tasks used generative AI at work, versus 20 percent with less control."
+  ],
+  "methodology": "Annual nationally representative online survey of US adults run by the Federal Reserve Board, fielded in October 2025; final sample of 12,934 respondents. The generative AI question defines it as AI that creates text, images, audio or video in response to prompts, gives example platforms, excludes AI results from search engines, and is based on Bick, Blandin and Deming's 'The Rapid Adoption of Generative AI'. Asked of workers; prior-month reference window.",
+  "qualifiers": "Tier 1: Federal Reserve Board official survey. Caveats: self-reported use. The prior-month, 'as a part of their job' wording and exclusion of AI search results likely make this more conservative than RPS-style measures (about 41% in late 2025), so level differences across surveys are partly instrument-driven. Attitude items are agree/disagree and do not measure productivity. The worker subsample size is not reported in the chapter.",
+  "id": "frb-shed-genai-work-2025",
+  "fetchedAt": "2026-09-24"
+}

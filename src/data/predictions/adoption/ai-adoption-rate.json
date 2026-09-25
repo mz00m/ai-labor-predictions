@@ -5,10 +5,10 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 23.2,
+  "currentValue": 23.8,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
-  "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (21.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (23.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2023-08-15",
@@ -175,9 +175,28 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "survey"
+    },
+    {
+      "date": "2026-09-06",
+      "value": 23.8,
+      "sourceIds": [
+        "census-btos-ai-biweekly-cycle19-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
     }
   ],
   "overlays": [
+    {
+      "date": "2021-12-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "AEA P&P / Census: 22.8% of US manufacturing plants used any AI in 2021"
+    },
     {
       "date": "2023-08-01",
       "direction": "up",
@@ -467,6 +486,24 @@
       "label": "Census BTOS: AI adoption 78.4% annualized growth; 80.9% non-adopters cite inapplicability"
     },
     {
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "mit-yu-thompson-sp500-ai-adoption-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "MIT FutureTech: 21% of S&P 500 had deep or production AI adoption in 2025, up from 5% in 2022"
+    },
+    {
+      "date": "2025-12-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "mit-yu-thompson-sp500-ai-adoption-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "MIT FutureTech: tech sector is 2/3 of deep S&P 500 AI adoption; no capex or productivity gap"
+    },
+    {
       "date": "2026-01-01",
       "direction": "neutral",
       "sourceIds": [
@@ -692,6 +729,24 @@
       "label": "INSEAD/HBS RCT: mapping problem solved, AI use cases +44% (n=515)"
     },
     {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "chatterji-holtz-openai-enterprise-adoption-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: ChatGPT Enterprise tokens grew 7x Jun 2025–Mar 2026; ~4x within existing adopters"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "chatterji-holtz-openai-enterprise-adoption-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: ChatGPT Enterprise adopters far larger; median 2,934 employees vs 424 non-adopters"
+    },
+    {
       "date": "2026-04-01",
       "direction": "neutral",
       "sourceIds": [
@@ -762,6 +817,15 @@
       ],
       "evidenceTier": 2,
       "label": "Strada: 92% of employers engaging with AI; only 8% have no plans to adopt"
+    },
+    {
+      "date": "2026-05-05",
+      "direction": "up",
+      "sourceIds": [
+        "mit-futuretech-lashkari-ai-scale-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "MIT FutureTech: computer-vision AI projected at 23% of firms by 2035"
     },
     {
       "date": "2026-05-14",
@@ -836,6 +900,15 @@
       "label": "Ramp: 43.5% of US businesses pay for Anthropic, 39.7% OpenAI; $11.95/employee median"
     },
     {
+      "date": "2026-08-13",
+      "direction": "neutral",
+      "sourceIds": [
+        "atlanta-fed-ai-demand-southeast-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Atlanta Fed: 3% of US job postings required AI skills in Dec 2025; Georgia 2.93%"
+    },
+    {
       "date": "2026-08-19",
       "direction": "neutral",
       "sourceIds": [
@@ -907,6 +980,33 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: pace of new firm AI adoption has slowed from its spring 2026 peak (firm-level, not BTOS)"
+    },
+    {
+      "date": "2026-09-09",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-fr-btos-ai-core-questions-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census: BTOS to add 3 core AI questions (GenAI use, AI headcount effects) for AI users"
+    },
+    {
+      "date": "2026-09-09",
+      "direction": "up",
+      "sourceIds": [
+        "ramp-ai-index-sep-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ramp: 43.8% of US businesses pay Anthropic, 39.8% OpenAI; new adoption decelerating"
+    },
+    {
+      "date": "2026-09-09",
+      "direction": "down",
+      "sourceIds": [
+        "ramp-ai-index-sep-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ramp: top-1% firms' AI spend per employee fell 9.7% in Aug to $7,205/month"
     }
   ],
   "sources": [
@@ -1722,6 +1822,86 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-06",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions?\" National share answering yes: 22.4% for the two weeks ending 2026-08-09 (cycle 202617) and 23.2% for the two weeks ending 2026-08-23 (cycle 202618), up from 21.8% in the cycle ending 2026-07-26. Q24, six-month expectation of AI use, rose from 25.9% to 27.3% over the same cycles. Values are dated to reference-period end rather than publication date; collection for cycle 202618 ran 2026-08-24 to 2026-09-06."
+    },
+    {
+      "id": "atlanta-fed-ai-demand-southeast-2026",
+      "title": "The Geography of AI Demand in the Southeast: Patterns of Growth and Labor Market Structure",
+      "url": "https://www.atlantafed.org/research-and-data/publications/workforce-currents/2026/08/13/the-geography-of-ai-demand-in-the-southeast-patterns-of-growth-and-labor-market-structure",
+      "publisher": "Federal Reserve Bank of Atlanta, Workforce Currents 2026-04 (Galeano)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-13",
+      "excerpt": "As of December 2025, Georgia (2.93 percent) leads the region by a substantial margin and is only slightly below the national average of three percent.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "census-btos-ai-biweekly-cycle19-2026",
+      "title": "Business Trends and Outlook Survey — Biweekly AI Use (cycle 202619)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-24",
+      "excerpt": "National.xlsx, 'Response Estimates' sheet, Question 7 \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\", column 202619: \"23.8%\"; 'Response Standard Errors' sheet, same row: \"0.26%\". Question 24 \"During the next six months, do you think this business will be using Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\", column 202619: \"27.6%\" (SE \"0.29%\"). 'Collection and Reference Dates' sheet, Smpdt 202619: Collection Start 2026-09-07, Col End 2026-09-20, Reference Period Start 2026-08-24, Ref End 2026-09-06, Publication Date 2026-09-24.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "census-fr-btos-ai-core-questions-2026",
+      "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Business Trends and Outlook Survey (FR Doc. 2026-18304, 91 FR 57314)",
+      "url": "https://www.federalregister.gov/documents/2026/09/09/2026-18304/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+      "publisher": "US Census Bureau (Federal Register)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-09",
+      "excerpt": "Last, the Bureau is requesting approval to add three core questions. Two of these questions (Generative AI usage and the impact of AI on the total number of employees) are being moved from the AI supplement, and the third is a new question about the impact of AI on new employees, conceptually expanding on the others. The new question has undergone cognitive testing to determine the finalized wording. To minimize respondent burden, the Bureau will employ skip logic for these questions, only asking them of businesses that report AI usage.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "ramp-ai-index-sep-2026",
+      "title": "Cracks in the AI Thesis Part 2 (Ramp AI Index, September 2026)",
+      "url": "https://ramp.com/data/ai-index-sept-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-09",
+      "excerpt": "In August, Anthropic extended its lead in business AI adoption. 43.8% of U.S. businesses paid for subscriptions or tokens from Anthropic, up 0.34 percentage points month over month. OpenAI underperformed overall AI adoption, rising only 0.09 percentage points to 39.8% of businesses. In general, new AI adoption continues to grow but is decelerating.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "chatterji-holtz-openai-enterprise-adoption-2026",
+      "title": "How Organizations Use AI: Evidence from ChatGPT",
+      "url": "https://arxiv.org/abs/2608.12236",
+      "publisher": "OpenAI Economic Research (Chatterji, Holtz, Rakholia, Tambe, Weeratunga)",
+      "evidenceTier": 2,
+      "datePublished": "2026-08-12",
+      "excerpt": "Aggregate output tokens produced by ChatGPT Enterprise customers grew roughly sevenfold between June 2025 and March 2026, and by nearly fourfold within a consistent cohort of firms that adopted between January 2024 and June 2025. Thus, about half of the growth in token consumption over this period occurred within already-adopting firms.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "mit-yu-thompson-sp500-ai-adoption-2026",
+      "title": "AI Adoption in S&P 500 Firms",
+      "url": "https://arxiv.org/abs/2607.08920",
+      "publisher": "MIT FutureTech (Yu, Fleming, Hampton, Combemale, Thompson)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-09",
+      "excerpt": "In 2025, 11% of S&P 500 enterprises had AI deeply integrated into their business processes, and a further 10% were using AI in the production of goods and delivery of services. AI adoption has more than quadrupled from 5% in 2022",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "mit-futuretech-lashkari-ai-scale-2026",
+      "title": "AI and Scale: A Quantitative Task-Based Theory of Automation",
+      "url": "https://futuretech.mit.edu/publication/ai-and-scale-a-quantitative-task-based-theory-of-automation-2",
+      "publisher": "MIT FutureTech (Lashkari, Li, Qiu, Thompson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-05",
+      "excerpt": "As compute prices fall, adoption follows an S-curve, rising from under 1% of firms in 2023 to 23% by 2035 (60% in employment-weighted terms as larger firms automate first).",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026",
+      "title": "The Adoption of Industrial AI in America",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20261033",
+      "publisher": "AEA Papers and Proceedings (McElheran, Yang, Kroff, Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Despite widespread digitization, only 22.8 percent of plants report any AI use as of 2021; intensity-weighted adoption is far lower.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

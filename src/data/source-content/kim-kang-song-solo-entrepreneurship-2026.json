@@ -1,0 +1,14 @@
+{
+  "id": "kim-kang-song-solo-entrepreneurship-2026",
+  "abstract": "Kim, Kang and Song (Seoul National University; arXiv 2605.10291, May 2026) study 160,143 product launches on Product Hunt from April 2020 to July 2025, using ChatGPT-3.5's November 2022 release in a difference-in-differences and event-study design. Entry rose 40% from 2022 to 2023 and approached twice its pre-release level by 2025. Solo founders drove the growth: by 2025, solo entry had grown nearly 90% more than team entry, most of all in historically team-heavy categories such as SaaS and fintech. Much of the new solo entry is low-commitment and one-shot, and it does not reach the top of the quality distribution, where teams' share of the daily Top 10 rose from 50% to 53%. The authors conclude that GenAI lowers barriers to solo entry while reinforcing team advantages at the top.",
+  "keyFindings": [
+    "Product Hunt launches rose 40%, from 29,326 in 2022 to 41,169 in 2023, and approached twice the pre-release level by 2025.",
+    "By 2025, solo entry grew nearly 90% more than team entry (beta = 0.621, p < 0.001).",
+    "The one-shot rate among solo ventures (no update within 12 months) rose from 95.1% to 97%, more than twice the increase for team ventures.",
+    "Teams' share of the platform's daily Top 10 rose from 50% to 53% (p = 0.006), and their Top 30 share rose from 38% to 40% (p = 0.057); across all products, the team share fell 2 points.",
+    "Post-ChatGPT gains in top-ranked products are concentrated in teams of more than three members; solo and duo ventures lost ground at the top."
+  ],
+  "methodology": "Product Hunt launch data: 160,143 launches, monthly April 2020 to July 2025 and yearly 2019 to 2025. Difference-in-differences comparing solo and team ventures before and after November 30, 2022, with event studies, placebo permutation tests, category heterogeneity by pre-shock solo share, post-launch update activity (one-shot status over 12 months) and daily ranking tiers as early quality measures.",
+  "qualifiers": "Tier 2: unrefereed arXiv working paper. Product Hunt launches are digital product introductions on a global platform, not incorporated firms. Many are small or short-lived, and the platform's user base may itself have shifted after ChatGPT. Not US-specific. The solo-vs-team comparison identifies relative, not absolute, effects of GenAI, and ranking tiers are early popularity signals, not long-run venture outcomes.",
+  "fetchedAt": "2026-09-24"
+}

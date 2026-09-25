@@ -70,11 +70,11 @@
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
       "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
-        "sourceId": "challenger-july-2026",
-        "date": "2026-08-06",
-        "value": "112,713 AI-attributed job cuts YTD (24% of all cuts); AI led all reasons 5th straight month"
+        "sourceId": "challenger-august-2026",
+        "date": "2026-09-03",
+        "value": "116,175 AI-attributed job cuts YTD (22% of all cuts); AI fell to 4th monthly reason in August (3,462), ending a 5-month run"
       },
-      "nextExpected": "September 3, 2026 (August data)"
+      "nextExpected": "October 1, 2026 (September data)"
     },
     {
       "id": "ramp-ai-velocity",
@@ -93,11 +93,11 @@
       "whatItMeasures": "Aggregated spend and hiring patterns across 70,000+ businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
       "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS — private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
       "lastIngested": {
-        "sourceId": "ramp-ai-index-aug-2026",
-        "date": "2026-08-12",
-        "value": "Anthropic 43.5% of US businesses, OpenAI 39.7%; $11.95/employee median AI spend"
+        "sourceId": "ramp-ai-index-sep-2026",
+        "date": "2026-09-09",
+        "value": "Anthropic 43.8% of US businesses (+0.34pp), OpenAI 39.8% (+0.09pp); top-1% AI spend/employee -9.7% to $7,205/mo"
       },
-      "nextExpected": "~September 2026"
+      "nextExpected": "~October 2026"
     },
     {
       "id": "fed-ai-adoption-monitoring",
@@ -140,11 +140,11 @@
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
       "lastIngested": {
-        "sourceId": "census-btos-ai-biweekly-sep-2026",
-        "date": "2026-09-06",
-        "value": "23.2% national AI use, two weeks ending Aug 23 2026 (cycle 202618); 22.4% for the cycle ending Aug 9"
+        "sourceId": "census-btos-ai-biweekly-cycle19-2026",
+        "date": "2026-09-24",
+        "value": "23.8% national AI use, two weeks ending Sep 6 2026 (cycle 202619, SE 0.26%); six-month expectation 27.6%"
       },
-      "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
+      "nextExpected": "Next: cycle 202620 (reference Sep 7–20) publishes October 8, 2026. Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
       "lastSweep": "2026-09-21"
     },
     {
@@ -209,11 +209,11 @@
       "whatItMeasures": "Uses the Current Population Survey to test whether AI-exposed occupations are seeing employment declines. Complements the ADP-based Canaries with a different dataset and a different unit of analysis.",
       "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field — anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
       "lastIngested": {
-        "sourceId": "yale-budgetlab-not-yet-2026",
-        "date": "2026-06-15",
-        "value": "AI 'probably not (yet)' the reason for labor market weakening"
+        "sourceId": "yale-budgetlab-cps-aug-2026",
+        "date": "2026-09-15",
+        "value": "Aug 2026 CPS: no clear evidence of AI labor market disruption; SDID null through 2026Q2"
       },
-      "nextExpected": "~August 2026 (with July CPS)",
+      "nextExpected": "~October 2026 (with September CPS)",
       "lastSweep": "2026-08-19",
       "sweepNote": "Swept 2026-08-19: no new data. The Jul 16, 2026 tracker update replaced the prose with an embedded interactive; the underlying SDID analysis (May 7, already ingested as budgetlab-ai-no-effects-2026) still runs only through Q1 2026."
     },
@@ -425,11 +425,11 @@
       "whatItMeasures": "New business applications (any) and high-propensity applications (likely to become employer businesses), by state, industry, and month.",
       "whyItMatters": "The universe-scale ground truth on US business formation. AI's role is inferred from sectoral patterns (professional services growing 4x faster than construction since ChatGPT) rather than directly tagged.",
       "lastIngested": {
-        "sourceId": "census-bfs-jul-2026",
-        "date": "2026-08-12",
-        "value": "578,926 business applications (+8.1% MoM); 29,959 projected formations"
+        "sourceId": "census-bfs-aug-2026",
+        "date": "2026-09-11",
+        "value": "531,728 business applications (-7.8% MoM); 28,501 projected formations (-4.6%)"
       },
-      "nextExpected": "September 11, 2026 (August data)"
+      "nextExpected": "October 14, 2026 (September data)"
     },
     {
       "id": "wef-future-of-jobs",
@@ -648,6 +648,73 @@
         "value": "Early-career 22-25 most-exposed -19% vs least-exposed; all-occupation gap -6% since pre-ChatGPT; AI-exposed firms laying off fewer than least-exposed; new-firm adoption pace off its spring peak"
       },
       "nextExpected": "Early October 2026"
+    },
+    {
+      "id": "nyfed-college-labor-market",
+      "name": "NY Fed — The Labor Market for Recent College Graduates",
+      "publisher": "Federal Reserve Bank of New York",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly",
+      "releasePattern": "Unemployment and underemployment updated quarterly, generally in February, May, August and November; wages and outcomes by major annually in February",
+      "url": "https://www.newyorkfed.org/research/college-labor-market",
+      "targetGraphs": [
+        "early-career-employment-decline",
+        "entry-level-wage-impact"
+      ],
+      "topicLine": "Unemployment and underemployment of recent college graduates (22-27), tracked since 1990.",
+      "whatItMeasures": "Unemployment and underemployment rates for recent graduates versus other groups, early-career wages vs high-school graduates, and outcomes by major.",
+      "whyItMatters": "The most-cited official read on the new-graduate labor market that AI-exposure studies are benchmarked against.",
+      "lastIngested": {
+        "sourceId": "nyfed-college-labor-market-q2-2026",
+        "date": "2026-08-01",
+        "value": "Recent-grad unemployment ~5.6%; underemployment 42% (2026:Q2)"
+      },
+      "nextExpected": "November 2026 (2026:Q3 update)"
+    },
+    {
+      "id": "bls-productivity-costs",
+      "name": "Productivity and Costs (Nonfarm Business Labor Productivity)",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly (preliminary, then revised)",
+      "releasePattern": "Preliminary estimate about five weeks after quarter end; revised estimate about a month later (Q2 2026 revised landed Sep 3, 2026).",
+      "url": "https://www.bls.gov/news.release/prod2.toc.htm",
+      "targetGraphs": [
+        "median-wage-impact"
+      ],
+      "topicLine": "The official US measure of output per hour — where an AI productivity boom would show up first in aggregate data.",
+      "whatItMeasures": "Output per hour, hours, unit labor costs, real hourly compensation and the labor share for the nonfarm business and manufacturing sectors.",
+      "whyItMatters": "Feeds the macro side of the productivity section, which contrasts 13–56% task-level gains with aggregate data. Also tracks whether pay keeps up with productivity: in Q2 2026 the labor share hit a record-low 52.8%.",
+      "lastIngested": {
+        "sourceId": "bls-productivity-q2-2026-revised",
+        "date": "2026-09-03",
+        "value": "+2.2% y/y nonfarm productivity Q2 2026 (revised); 2.1%/yr since Q4 2019; labor share 52.8%, series low"
+      },
+      "nextExpected": "Early November 2026 (Q3 2026 preliminary); confirm date on the BLS release calendar"
+    },
+    {
+      "id": "microsoft-ai-diffusion",
+      "name": "Microsoft Global AI Diffusion Report",
+      "publisher": "Microsoft AI Economy Institute",
+      "tier": 2,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly (since Q1 2026; semiannual in 2025)",
+      "releasePattern": "Blog post by Juan Lavista Ferres on blogs.microsoft.com/on-the-issues about 5–12 weeks after quarter end, with report PDF (aka.ms/AIDiffusionReport<YYYY>Q<n>) and a separate occasional US state/county report",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/ai-economy-institute/reports/global-ai-diffusion-report/",
+      "targetGraphs": [
+        "genai-work-adoption"
+      ],
+      "topicLine": "Share of the working-age population using generative AI, by country, from Microsoft telemetry.",
+      "whatItMeasures": "The share of people aged 15–64 who used a generative AI product during the period, derived from aggregated, anonymized Microsoft telemetry and adjusted for OS and device market share, internet penetration and population. Gives a national leaderboard (US 33.0% in Q2 2026, 21st) and Global North/South gaps.",
+      "whyItMatters": "The only quarterly, population-normalized cross-country GenAI usage measure. It puts the US worker-survey numbers in context: the US ranks only about 21st globally in population usage even though it leads in AI development. It measures any use, not use at work, so it is carried as overlays.",
+      "lastIngested": {
+        "sourceId": "microsoft-ai-diffusion-q2-2026",
+        "date": "2026-09-21",
+        "value": "Global 18.8% of working-age population (June 2026); US 33.0% (21st), up 1.7pp from Q1"
+      },
+      "nextExpected": "~November–December 2026 (Q3 2026). Microsoft says the next report will expand the measure to newer AI tools and expects that to raise user share in almost every economy, so treat Q3 as a likely series break."
     }
   ]
 }

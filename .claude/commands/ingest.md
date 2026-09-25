@@ -512,7 +512,7 @@ console.log(noKb.length||noReg.length?"SOURCE CHECK FAILED":"SOURCE CHECK PASSED
 
 Investigate every `SUSPECT`/`UNSORTED`/`WARN` line that involves an entry you just added. Then confirm the headline didn't move unexpectedly: report the graph's `currentValue` (or latest point on `"latest"` graphs) before vs. after.
 
-**Hero stats are computed, not hardcoded.** `getHeroStats()` in `src/lib/data-loader.ts` derives the homepage triad from `overall-us-displacement` at build time — no manual update needed. If you changed that file, state the new computed weighted average and latest observed value in your completion summary so the user knows what the hero will show.
+**Hero stats are hand-set, not computed.** All three live in `src/components/HeroTriad.tsx` (see CLAUDE.md "Hero Stats"). Ingesting into `overall-us-displacement` does not move them. If a new source adds a controlled task-level study (`timeSavedPct` in `ResearchEvidence.tsx`), recheck the productivity median, range and study count in HeroTriad, FunnelStrip, ProductivityPage and `src/lib/chat/site-content.ts`; if it changes the net-forecast or measured-loss evidence, flag it for the owner.
 
 ### Step 9.7: Site-Content Improvement Pass (mandatory)
 

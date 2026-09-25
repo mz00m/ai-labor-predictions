@@ -1,0 +1,14 @@
+{
+  "id": "mit-yu-thompson-sp500-ai-adoption-2026",
+  "abstract": "MIT FutureTech researchers (arXiv 2607.08920, July 2026) measure AI adoption among S&P 500 firms from 2016 to 2025 using a rubric applied to SEC 10-K filings, where false or misleading statements carry legal liability, to separate deep adoption from AI hype. In 2025, 11% of S&P 500 firms had AI deeply integrated into business processes and a further 10% used AI in producing goods or delivering services: 21% in total, more than four times the 5% of 2022. Adoption among non-tech firms is accelerating slowly. The technology sector adopts aggressively and accounts for two-thirds of deep integration. Profitability traces a J-curve from no adoption to deep adoption, but adopters show no differences in capex or productivity.",
+  "keyFindings": [
+    "21% of S&P 500 firms had deep (11%) or production-level (10%) AI adoption in 2025, according to 10-K filings.",
+    "Adoption more than quadrupled from 5% in 2022.",
+    "The technology sector accounts for two-thirds of deeply integrated enterprise adoption.",
+    "Firm profitability shows a J-curve as firms move to deep adoption, but there are no differences in capex or productivity.",
+    "Among technology firms only, adoption is higher for firms with more employees and higher Tobin's q."
+  ],
+  "methodology": "Firm-year panel of S&P 500 constituents from 2016 to 2025. A novel rubric scores 10-K filing text for the depth of AI adoption (deep integration in business processes; use in production or service delivery; lower tiers). Adoption is then regressed on financial outcomes (profitability, capex, productivity, Tobin's q, employment). Funded by the Alfred P. Sloan Foundation.",
+  "qualifiers": "Tier 2: unrefereed arXiv working paper. It covers only the S&P 500, the largest US public firms, so it cannot stand in for economy-wide adoption; the authors frame these firms as bellwethers. 10-K disclosure captures what firms choose to report as material, so it likely undercounts informal or employee-level GenAI use, which is a deliberately higher bar than Census BTOS. Associations with financial outcomes are not causal.",
+  "fetchedAt": "2026-09-24"
+}

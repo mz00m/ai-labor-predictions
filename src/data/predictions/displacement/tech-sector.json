@@ -277,6 +277,26 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
+    },
+    {
+      "date": "2026-06-30",
+      "value": 9.6,
+      "confidenceLow": 5.5,
+      "confidenceHigh": 13.8,
+      "sourceIds": [
+        "indeed-gallacher-destruction-to-creation-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% below pre-pandemic (Feb 2020) level, US software development postings on Indeed, June 2026",
+        "conversionFactor": 0.35,
+        "conversionLow": 0.2,
+        "conversionHigh": 0.5,
+        "rationale": "Level decline in postings converted with the documented job-posting-decline factor; the gap vs Feb 2020 also reflects the post-pandemic tech hiring bust and rates, not only AI."
+      }
     }
   ],
   "overlays": [
@@ -767,6 +787,15 @@
       "label": "FRI: Moderate scenario \u2192 most 5-day freelance SW engineering jobs automatable by 2030"
     },
     {
+      "date": "2026-03-31",
+      "direction": "down",
+      "sourceIds": [
+        "microsoft-ai-diffusion-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Microsoft (BLS data): US software developer jobs ~4% above a year earlier"
+    },
+    {
       "date": "2026-04-01",
       "direction": "up",
       "sourceIds": [
@@ -857,6 +886,15 @@
       "label": "Jo et al.: 96%+ of collaborator-tool PRs are agent-initiated (n=29,585)"
     },
     {
+      "date": "2026-06-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-demirer-musolff-yang-writing-shipping-code-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Demirer et al.): AI agents +240% commits but only +30% software releases"
+    },
+    {
       "date": "2026-06-04",
       "direction": "down",
       "sourceIds": [
@@ -902,6 +940,15 @@
       "label": "Bloomberg: tech = 1/3 of all announced layoffs 2026; ~102k AI-attributed"
     },
     {
+      "date": "2026-07-08",
+      "direction": "down",
+      "sourceIds": [
+        "indeed-gallacher-destruction-to-creation-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: software dev postings +15% since Claude Code launch vs -7% overall"
+    },
+    {
       "date": "2026-07-22",
       "direction": "down",
       "sourceIds": [
@@ -938,6 +985,15 @@
       "label": "Challenger: tech announced 149,023 US job cuts YTD 2026, leading all sectors"
     }
   ,
+    {
+      "date": "2026-09-03",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-august-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: tech announced 155,126 US job cuts YTD 2026, up 52%, 29% of all cuts"
+    },
     {
       "date": "2026-09-04",
       "direction": "down",
@@ -1832,6 +1888,46 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-20",
       "excerpt": "\"The exception is computer and mathematical occupations, the most AI-exposed of the 22 groups, whose employment share grows by 0.8 percentage points while its junior share falls by 3.3 points.\" The authors read the share growth as evidence that \"AI is labor expanding rather than labor saving for these occupations.\" Among technology affiliates specifically, adoption lowers the junior share by 3.9 percentage points, raises senior employment by 14.6 percent, and raises total employment by 7.8 percent."
+    },
+    {
+      "id": "microsoft-ai-diffusion-q1-2026",
+      "title": "Global AI Diffusion Q1 2026 Trends and Insights (\"The state of global AI diffusion in 2026\")",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/",
+      "publisher": "Microsoft AI Economy Institute (Juan Lavista Ferres)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-07",
+      "excerpt": "In 2025, total software developer employment reached approximately 2.2 million, rising 8.5% year over year and marking a record high for the profession. Early BLS data also shows that software developer employment in March 2026 was about 4% higher than in March 2025.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "indeed-gallacher-destruction-to-creation-2026",
+      "title": "AI and Job Postings: From Destruction to Creation?",
+      "url": "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/",
+      "publisher": "Indeed Hiring Lab (Gallacher)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-08",
+      "excerpt": "Even after the recent rise, software development job postings remain about 27.5% below their pre-pandemic level, while overall job postings are essentially the same as in February 2020.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "challenger-august-2026",
+      "title": "Challenger Report: August Layoffs Rise 58% to 52,881, Lowest August Since 2022; Hiring Plans Up 37% Over Last Year",
+      "url": "https://www.challengergray.com/wp-content/uploads/2026/09/Challenger-Report-August-2026.pdf",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-03",
+      "excerpt": "Technology announced 6,103 cuts in August, its lowest monthly total of 2026, for a year-to-date total of 155,126. That is an increase of 52% from the 102,239 cuts announced in this sector through August 2025. Technology still accounts for 29% of all job cuts announced this year, more than any other industry.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "nber-demirer-musolff-yang-writing-shipping-code-2026",
+      "title": "Writing Code vs. Shipping Code: Productivity Effects Across Generations of AI Coding Tools",
+      "url": "https://www.nber.org/papers/w35275",
+      "publisher": "NBER (Demirer, Musolff, Yang)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-01",
+      "excerpt": "These gains, however, attenuate sharply across the production hierarchy: the 240% cumulative effect falls to 80% for the number of projects, and to 30% for actual releases.",
+      "dateAdded": "2026-09-24"
     }
   ],
   "marketIds": {

@@ -1,0 +1,14 @@
+{
+  "id": "upwork-q1-2026-earnings",
+  "abstract": "Upwork's Q1 2026 results (May 7, 2026): gross services volume was about flat at $987.1M (-0.1%), revenue rose 1% to $195.5M, active clients fell 3% to 784,000, and GSV per active client rose 5% to $5,138. GSV from AI-related work grew more than 40% year over year and AI Integration & Automation more than 50%. CEO Hayden Brown described 'a challenging demand environment' as 'the nature of work continues to shift as AI advances.' Upwork announced a restructuring cutting about 24% of its total workforce, with $16–23M of pre-tax charges, and raised full-year adjusted EBITDA guidance.",
+  "keyFindings": [
+    "GSV $987.1M, about flat (-0.1%) year over year; revenue $195.5M, up 1%.",
+    "Active clients 784,000, down 3% from 812,000.",
+    "GSV per active client $5,138, up 5%.",
+    "GSV from AI-related work up more than 40% year over year; AI Integration & Automation up more than 50%.",
+    "Restructuring to cut about 24% of Upwork's own workforce."
+  ],
+  "methodology": "Upwork Inc. Q1 2026 earnings press release with unaudited condensed statements and company-defined key metrics.",
+  "qualifiers": "Tier 1 per repo convention for SEC-filer earnings releases. Single platform; no hourly rate disclosed. The 24% workforce reduction is Upwork's own staff, not freelancers on the platform. AI attribution is management commentary.",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,14 @@
+{
+  "abstract": "Brookings Metro maps occupational AI exposure onto 2024 presidential voting. The authors take Anthropic's observed-exposure estimates, built from actual Claude usage with automation-type use weighted twice as heavily as augmentation, and weight them by each county's occupational employment mix. AI exposure concentrates in Democratic-leaning places: 62 of the 100 most AI-exposed counties voted Democratic in 2024, and those counties hold 75% of the population of the top 100. In those counties between 14% and 19% of workers are in occupations where AI is both theoretically capable of the tasks and already used more to automate than to augment. At the state level, AI-heavy states such as Massachusetts, New York, California and the DC area show observed exposure of 13% to 17%, against 10% to 11% in Nevada, Mississippi, Wyoming and North Dakota; Nevada ranks last. The authors attribute the partisan pattern to occupational sorting, not ideology, and stress that it is a correlation without causality.",
+  "keyFindings": [
+    "62 of the 100 most AI-exposed US counties voted Democratic in the 2024 presidential election; they account for 75% of the population of those 100 counties",
+    "In the 100 most-exposed counties, 14%–19% of workers are in occupations where AI is theoretically capable and already used more for automation than augmentation",
+    "States with large AI-oriented metros (Massachusetts, New York, California, DC area) show observed AI exposure of 13%–17%",
+    "Nevada, Mississippi, Wyoming and North Dakota show observed AI exposure of 10%–11%; Nevada ranks last among states",
+    "Swing states Arizona and Georgia are among the 15 most AI-exposed states; Michigan, North Carolina, Pennsylvania and Wisconsin show moderate exposure"
+  ],
+  "methodology": "Occupation-level observed AI exposure from Anthropic (Claude usage data; automative uses weighted twice augmentative uses), weighted by local employment to build county and state exposure measures, then correlated with 2024 presidential county vote shares. Descriptive correlation; no regression estimates reported in the article.",
+  "qualifiers": "Tier 2: think-tank analysis, not peer-reviewed. Correlation only; the authors say explicitly that the partisan pattern reflects occupational sorting (where people work and what skills they hold) and that the analysis does not imply blue places face imminent job dislocation. Exposure is based on usage of one AI provider's product (Claude), so it reflects that user base. All reported figures are county- or state-level; no national share is given. The political reading is an inference; partisanship is not measured directly.",
+  "id": "brookings-political-geography-ai-exposure-2026",
+  "fetchedAt": "2026-09-24"
+}

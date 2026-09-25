@@ -1,0 +1,11 @@
+{
+  "id": "nyfed-college-labor-market-q2-2026",
+  "abstract": "The New York Fed's quarterly tracker of recent college graduates (ages 22–27 with a bachelor's degree or higher) reports that labor market conditions remained challenging through Q2 2026: the unemployment rate stayed elevated at about 5.6% and the underemployment rate — the share working in jobs that typically do not require a degree, based on O*NET — edged up to 42%. The feature makes no AI attribution.",
+  "keyFindings": [
+    "Recent-graduate unemployment rate about 5.6% in 2026:Q2.",
+    "Recent-graduate underemployment rate edged up to 42% in 2026:Q2."
+  ],
+  "methodology": "NY Fed web feature using national microdata (CPS for unemployment/underemployment, ACS for wages and outcomes by major); recent graduates are ages 22–27 with at least a bachelor's degree; underemployment defined via O*NET education requirements. Unemployment and underemployment updated quarterly (Feb/May/Aug/Nov); wages and majors annually (Feb).",
+  "qualifiers": "Tier 1: Federal Reserve data product, though the page notes it does not represent official NY Fed estimates. Levels only; no comparison by AI exposure and no causal claim. The Q2 update date is inferred from the stated August release cadence (published date set to 2026-08-01).",
+  "fetchedAt": "2026-09-24"
+}

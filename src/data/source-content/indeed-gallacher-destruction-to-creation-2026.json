@@ -1,0 +1,15 @@
+{
+  "abstract": "Indeed Hiring Lab economist Guillermo Gallacher (July 8, 2026) documents a reversal in the relationship between AI exposure and job postings. US software development postings on Indeed have risen almost 15 percent since Claude Code's launch in late February 2025, while overall postings fell 7 percent. The rebound starts from a low base: software postings are still about 27.5 percent below their February 2020 level, while overall postings are essentially back to it. Between May 2022 and May 2026, more AI-exposed occupations saw larger posting declines, a pattern that began before ChatGPT. Between May 2025 and May 2026 the relationship flipped, with the most exposed occupations rebounding most. The rebound is concentrated: 71 percent of the software increase came from senior roles and 37 percent from jobs with AI in the title. Gallacher reads this as a possible shift from job destruction toward creation in agentic AI's wake, but still seniority-biased, and repeatedly cautions that correlation does not imply causation.",
+  "keyFindings": [
+    "US software development postings rose almost 15% after Claude Code's late-February 2025 launch, while overall postings fell 7%.",
+    "Software development postings remain about 27.5% below their pre-pandemic level; overall postings are essentially at their February 2020 level.",
+    "May 2022-May 2026: the more AI-exposed an occupation, the more its postings declined (statistically significant, uncontrolled); declines began before ChatGPT.",
+    "May 2025-May 2026: the relationship flips, with more AI-exposed occupations rebounding more, beyond software development.",
+    "71% of the May 2025-May 2026 increase in software postings came from senior roles; 37% from jobs mentioning AI in the title.",
+    "Outside the US, the software share of postings is rising in most large developed economies analysed, except Germany and France."
+  ],
+  "methodology": "Indeed US job postings, seasonally adjusted, indexed to February 24, 2025 and to February 1, 2020; occupation-level changes plotted against GenAI exposure for May 2022-May 2026 and May 2025-May 2026; decomposition of the software postings increase by seniority and AI-in-title. Cross-country comparison of the software share of postings in six economies.",
+  "qualifiers": "Tier 2: industry research from a job platform. Caveats: postings measure employer demand on one platform, not employment. The exposure-postings relationships are uncontrolled correlations, and the author stresses correlation is not causation; the Claude Code timing is a coincidence 'that cannot be ignored', not an identified effect. The rebound starts from a deeply depressed base. Senior and AI-title categories overlap. Supports a seniority-biased reading of AI's effect even as software demand recovers.",
+  "id": "indeed-gallacher-destruction-to-creation-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "chatterji-holtz-openai-enterprise-adoption-2026",
+  "abstract": "OpenAI economists with Columbia and Wharton co-authors (arXiv 2608.12236, August 2026) link ChatGPT Enterprise account records to usage, worker job titles, message-level task classifications and Compustat financials through March 2026. They document four facts. Enterprise usage grew rapidly: output tokens rose about sevenfold from June 2025 to March 2026, and about half of that growth came from deeper use inside already-adopting firms. Among US public companies, adopters are larger, more valuable, and more R&D- and SG&A-intensive. Use within adopting firms spans job functions and seniority levels, with early-career workers the most intensive users. Tasks span writing, communication, information synthesis, research, data analysis, legal and finance work.",
+  "keyFindings": [
+    "ChatGPT Enterprise output tokens grew roughly sevenfold between June 2025 and March 2026, and nearly fourfold within firms that adopted between January 2024 and June 2025.",
+    "Adopting US public firms are much larger than non-adopters: median revenue $2,275.1M vs $209.6M; median employment 2,934 vs 424 workers.",
+    "Within industries, firms in the top revenue quartile are 7.2 percentage points more likely to adopt, and firms in the top 5% are 11.3 points more likely.",
+    "At the average adopting firm after six months, managers and directors are about 24% of weekly active users; early-career workers and trainees are 7%.",
+    "Early-career workers and trainees send roughly eight to nine more weekly messages than the average active user in the same firm."
+  ],
+  "methodology": "Internal ChatGPT Enterprise data (organization-week usage panel; worker-level sample of over 1,500 organizations and over 17 million messages at the six-month adoption horizon), linked to job titles, privacy-preserving task classifiers, and Compustat for US public companies (410 adopter tickers with positive message volume vs 11,784 non-adopter tickers, from a random sample). Descriptive and conditional-association regressions; no causal design.",
+  "qualifiers": "Tier 2: company research on its own product. The authors are OpenAI staff or paid OpenAI contractors, and the paper is an unrefereed working paper. It covers one vendor's enterprise product only; firms classed as non-adopters may use other AI tools. The public-company sample is a random draw chosen to limit commercial disclosure, so it yields no economy-wide adoption rate. Message volume measures intensity, not productivity.",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,15 @@
+{
+  "abstract": "The August 2026 Challenger, Gray & Christmas job cuts report (released September 3, 2026). US employers announced 52,881 cuts, up 58 percent from July's 33,429 but down 38 percent from August 2025 and the lowest August since 2022. The AI signal broke trend: AI fell to the fourth-most-cited reason with 3,462 cuts, its lowest monthly total since December 2025, ending a five-month run (March-July) as the leading monthly reason. Restructuring led August with 16,173 cuts. Year to date, AI has been cited in 116,175 cuts, about 22 percent of the total, and remains the leading reason. Technology announced 6,103 cuts in August, its lowest month of 2026, bringing its YTD total to 155,126, up 52 percent and 29 percent of all cuts. Total YTD cuts of 529,914 are down 41 percent, largely because 2025 included federal workforce reductions. Announced hiring plans are up 37 percent YTD to 119,825.",
+  "keyFindings": [
+    "\"U.S.-based employers announced 52,881 job cuts in August, up 58% from the 33,429 cuts announced in July.\" Down 38% from August 2025; lowest August since 2022.",
+    "\"Artificial Intelligence fell to the fourth-most cited reason with 3,462 cuts in August, its lowest monthly total since December 2025\", ending a five-month run as the leading monthly reason.",
+    "\"So far this year, AI has been cited in 116,175 job cut announcements, approximately 22% of all cuts, and it remains the leading reason year-to-date.\"",
+    "Technology: 6,103 cuts in August (lowest of 2026); 155,126 YTD, up 52% from 102,239, and 29% of all cuts announced this year.",
+    "\"Through August, employers have announced 529,914 job cuts, down 41% from the 892,362 cuts announced in the first eight months of 2025.\" Excluding Government, cuts are down 15%.",
+    "Restructuring led August reasons with 16,173 cuts (31%); hiring plans total 119,825 YTD, up 37%."
+  ],
+  "methodology": "Monthly census of publicly announced US job cut plans compiled by Challenger, Gray & Christmas from company announcements, WARN notices and press reports, each coded to one employer-stated reason and an industry. Monthly and year-to-date counts compared with the prior year; announced hiring plans compiled on the same basis.",
+  "qualifiers": "Tier 2 per the registered series. Announced cuts, not realised separations, and no population denominator, so these are carried as overlays like every prior Challenger release. Attribution is employer-stated and may run upward, since naming AI is reputationally cheaper than naming weak demand. The August drop in AI-attributed cuts is one month and follows a record July share (33%); one large restructuring can move the monthly mix. The YTD AI share slipped from 24% (July) to 22%. The YTD fall in total cuts is dominated by 2025's federal reductions (Government down 92%).",
+  "id": "challenger-august-2026",
+  "fetchedAt": "2026-09-24"
+}

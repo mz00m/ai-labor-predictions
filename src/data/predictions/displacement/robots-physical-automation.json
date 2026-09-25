@@ -107,6 +107,15 @@
       "label": "Acemoglu & Restrepo: One robot per 1K workers reduces employment 0.39pp"
     },
     {
+      "date": "2021-12-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "AEA P&P: industrial AI at 22.8% of plants (2021); intensity far lower"
+    },
+    {
       "date": "2024-10-01",
       "direction": "down",
       "sourceIds": [
@@ -486,6 +495,16 @@
       "datePublished": "2026-07-02",
       "excerpt": "Daron Acemoglu on what would break his own ceiling of \"less than two to four percent\" net job losses over five years: \"There are also so many big wildcards. The big, big, big wildcard, is the integration of AI and robotics. There are efforts on this much more outside of the US than the US, but also in the United States. And if there were amazing breakthroughs there, that would open up the number of jobs that AI would impact hugely. Physical tasks is about 50% of the work in the US economy.\" The 50% is the share of US work that is physical, not the share automated, so it sizes the exposed pool rather than supplying a point for this chart. Recorded June 2026, published July 2, 2026.",
       "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026",
+      "title": "The Adoption of Industrial AI in America",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20261033",
+      "publisher": "AEA Papers and Proceedings (McElheran, Yang, Kroff, Brynjolfsson)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "Despite widespread digitization, only 22.8 percent of plants report any AI use as of 2021; intensity-weighted adoption is far lower.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }
