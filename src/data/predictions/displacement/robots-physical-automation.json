@@ -5,7 +5,7 @@
   "description": "Projected percentage of physical/manual task jobs displaced by industrial robots, warehouse automation, and other physical AI systems by 2030. Synthesizes IFR installation data, academic studies on robot-worker substitution, and institutional forecasts on automation of predictable physical tasks.",
   "category": "displacement",
   "unit": "% of physical-task jobs displaced",
-  "currentValue": 6.1,
+  "currentValue": 3.6,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
