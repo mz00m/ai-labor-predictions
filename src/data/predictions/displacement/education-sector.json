@@ -11,42 +11,6 @@
   "disclaimer": "Insufficient evidence for confident projection. Only 4 estimates, two of which come from single companies (Chegg, Pearson) rather than sector-wide measurements. BLS projects just 3% displacement in education support roles, and SHRM found education has the lowest automation rate of any sector at 7.3%. Treat this estimate with more caution than others on this site.",
   "history": [
     {
-      "date": "2024-07-01",
-      "value": 23,
-      "confidenceLow": 15,
-      "confidenceHigh": 30,
-      "sourceIds": [
-        "chegg-enrollment-decline"
-      ],
-      "evidenceTier": 4,
-      "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
-      "date": "2025-01-20",
-      "value": 20,
-      "confidenceLow": 15,
-      "confidenceHigh": 35,
-      "sourceIds": [
-        "oecd-education-outlook-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-03-01",
-      "value": 18,
-      "confidenceLow": 12,
-      "confidenceHigh": 25,
-      "sourceIds": [
-        "pearson-10k-2024"
-      ],
-      "evidenceTier": 4,
-      "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
       "date": "2025-07-15",
       "value": 3,
       "confidenceLow": 1,
@@ -55,8 +19,8 @@
         "bls-education-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
+      "metricType": "projection",
+      "dataType": "projected"
     },
     {
       "date": "2026-03-25",
@@ -108,6 +72,15 @@
       "label": "RAND: 18% of K-12 teachers used AI; 60% of districts planned AI training"
     },
     {
+      "date": "2024-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "chegg-enrollment-decline"
+      ],
+      "evidenceTier": 3,
+      "label": "Chegg: cut 23% of workforce as students shifted to ChatGPT (single firm)"
+    },
+    {
       "date": "2024-09-01",
       "direction": "down",
       "sourceIds": [
@@ -151,6 +124,15 @@
       ],
       "evidenceTier": 1,
       "label": "Fed Reserve: education field GenAI exposure z=0.68 lang / -0.69 image (n=376K)"
+    },
+    {
+      "date": "2025-03-01",
+      "direction": "up",
+      "sourceIds": [
+        "pearson-10k-2024"
+      ],
+      "evidenceTier": 3,
+      "label": "Pearson: editorial headcount cut 18% in pivot to AI-first content (single firm)"
     },
     {
       "date": "2025-04-03",
@@ -342,7 +324,7 @@
       "title": "Chegg Q2 2024 Earnings — ChatGPT Impact on Tutoring Market",
       "url": "https://investor.chegg.com/press-releases/news-details/2024/Chegg-Reports-Q2-2024-Financial-Results/",
       "publisher": "Chegg (Earnings Report)",
-      "evidenceTier": 2,
+      "evidenceTier": 3,
       "datePublished": "2024-07-01",
       "excerpt": "Chegg subscribers fell 50% from peak as students shifted to ChatGPT. Company laid off 23% of workforce, citing AI as primary competitive threat.",
       "dateAdded": "2026-03-01"
@@ -382,7 +364,7 @@
       "title": "Pearson plc 2024 Annual Report — AI Strategy",
       "url": "https://plc.pearson.com/en-GB/investors",
       "publisher": "Pearson plc",
-      "evidenceTier": 2,
+      "evidenceTier": 3,
       "datePublished": "2025-03-01",
       "excerpt": "Pearson pivoted to AI-first content delivery, reducing editorial headcount by 18% while growing AI-generated adaptive learning content 300%.",
       "dateAdded": "2026-03-01"

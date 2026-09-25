@@ -20,7 +20,15 @@
       "evidenceTier": 2,
       "metricType": "survey",
       "dataType": "projected",
-      "sampleSize": 93
+      "sampleSize": 93,
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "average expected net workforce cut over 3-5 years, survey of 93 CIOs/CTOs at global banks",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Global bank sample, not US-only, and a 3-5 year horizon rather than 2030; value unscaled, weight discounted for geography and horizon mismatch."
+      }
     },
     {
       "date": "2025-02-01",
@@ -30,19 +38,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-09-01",
-      "value": 3,
-      "confidenceLow": 1.5,
-      "confidenceHigh": 5,
-      "sourceIds": [
-        "bloomberg-wall-st-ai-cuts-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "projected employment change for a single occupation (credit analysts), not all financial-services roles",
+        "conversionFactor": 1,
+        "conversionLow": 0.5,
+        "conversionHigh": 1.5,
+        "rationale": "One occupation's BLS projection used as a sector proxy; matches the white-collar paralegal treatment"
+      }
     },
     {
       "date": "2025-10-30",
@@ -57,30 +61,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2025-12-01",
-      "value": 10,
-      "confidenceLow": 8,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "morgan-stanley-european-banks-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-12-31",
-      "value": 1,
-      "confidenceLow": 0.5,
-      "confidenceHigh": 1.5,
-      "sourceIds": [
-        "big-six-banks-headcount-2025"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
       "date": "2026-03-13",
       "value": 1.2,
       "confidenceLow": 0.8,
@@ -91,17 +71,35 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "sampleSize": 748,
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% change in finance-sector employment CFOs expect from AI in 2026 (one-year expectation, not 2030)",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "2026 one-year expectation, not 2030; cumulative displacement by 2030 would be larger if the pace persists, so the value is a floor rather than a 2030 estimate."
+      }
     },
     {
       "date": "2026-03-25",
       "value": 16.5,
+      "confidenceLow": 4.8,
+      "confidenceHigh": 34.6,
       "sourceIds": [
         "tufts-digital-planet-ai-jobs-risk-2026"
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US finance and insurance jobs vulnerable to AI job loss over 2-5 years, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "9.3M jobs vulnerable (2.7-19.5M); the report explicitly excludes job creation, so this is gross exposure to loss"
+      }
     },
     {
       "date": "2026-04-20",
@@ -197,6 +195,15 @@
       "label": "PwC: AI-exposed financial services productivity growth nearly quadrupled"
     },
     {
+      "date": "2025-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "bloomberg-wall-st-ai-cuts-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Bloomberg Intelligence (reprint): global banks to shed 200K roles, ~3% of headcount, in 3-5 years"
+    },
+    {
       "date": "2025-10-09",
       "direction": "up",
       "sourceIds": [
@@ -224,6 +231,15 @@
       "label": "ABN Amro: Plans ~20% FTE reduction by 2028 citing AI capabilities"
     },
     {
+      "date": "2025-12-01",
+      "direction": "up",
+      "sourceIds": [
+        "morgan-stanley-european-banks-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Morgan Stanley: 200K+ European bank jobs, ~10% of 35 lenders' staff, could go by 2030"
+    },
+    {
       "date": "2025-12-21",
       "direction": "neutral",
       "sourceIds": [
@@ -231,6 +247,15 @@
       ],
       "evidenceTier": 3,
       "label": "Fortune/Yale: Experts call finance AI job takeover 'smoke and mirrors' for now"
+    },
+    {
+      "date": "2025-12-31",
+      "direction": "down",
+      "sourceIds": [
+        "big-six-banks-headcount-2025"
+      ],
+      "evidenceTier": 3,
+      "label": "Fortune: experts call Wall Street's AI layoffs more hype than takeover, for now"
     },
     {
       "date": "2026-01-14",

@@ -23,18 +23,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2023-07-01",
-      "value": 27,
-      "confidenceLow": 20,
-      "confidenceHigh": 35,
-      "sourceIds": [
-        "oecd-2023"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
       "date": "2023-07-26",
       "value": 19,
       "sourceIds": [
@@ -43,18 +31,6 @@
       "evidenceTier": 2,
       "metricType": "survey",
       "dataType": "observed"
-    },
-    {
-      "date": "2024-01-14",
-      "value": 40,
-      "confidenceLow": 30,
-      "confidenceHigh": 50,
-      "sourceIds": [
-        "imf-ai-2024"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
     },
     {
       "date": "2024-03-01",
@@ -124,18 +100,6 @@
       "evidenceTier": 2,
       "metricType": "survey",
       "dataType": "projected"
-    },
-    {
-      "date": "2026-01-15",
-      "value": 67,
-      "confidenceLow": 50,
-      "confidenceHigh": 85,
-      "sourceIds": [
-        "jones-tonetti-weak-links-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
     }
   ],
   "overlays": [
@@ -167,6 +131,15 @@
       "evidenceTier": 1
     },
     {
+      "date": "2023-07-01",
+      "direction": "up",
+      "sourceIds": [
+        "oecd-2023"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD (2023): 27% of jobs OECD-wide in occupations at high risk of automation (pre-genAI)"
+    },
+    {
       "date": "2023-10-04",
       "direction": "neutral",
       "label": "IMF (Pizzinelli): complementarity adjustment shrinks AE\u2013EM exposure gap",
@@ -183,6 +156,15 @@
       ],
       "evidenceTier": 2,
       "label": "LinkedIn: 55% of members hold jobs impacted by generative AI"
+    },
+    {
+      "date": "2024-01-14",
+      "direction": "up",
+      "sourceIds": [
+        "imf-ai-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "IMF: almost 40% of global employment exposed to AI (global, not US)"
     },
     {
       "date": "2024-01-24",
@@ -345,6 +327,15 @@
       ],
       "evidenceTier": 2,
       "label": "Deloitte: 84% of firms have not redesigned jobs around AI (n=3,235)"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "jones-tonetti-weak-links-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Jones-Tonetti: 50% to 85% of tasks already automated by sector (historical, not AI exposure)"
     },
     {
       "date": "2026-01-21",
@@ -1147,8 +1138,8 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "LLM adoption among U.S. workers increased from 30.1% to 38.3% between December 2024 and December 2025. Small effects on wages in exposed occupations; no significant effects on job openings or total jobs.",
+      "datePublished": "2025-12-11",
+      "excerpt": "We find that LLM adoption among U.S. workers has increased rapidly from 30.1% as of December 2024 to 38.3% as of December 2025, and adoption in the U.S. remains is near the top of advanced economies. (SSRN abstract, last revised 11 Dec 2025)",
       "dateAdded": "2026-03-07"
     },
     {
