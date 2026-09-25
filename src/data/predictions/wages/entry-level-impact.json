@@ -5,7 +5,7 @@
   "description": "Projected change in real wages for junior positions across AI-exposed industries by 2030. Sources measure junior status by both tenure (0-2 years experience) and rank within the firm hierarchy \u2014 the wage decline appears in junior roles at every age, not only among young workers.",
   "category": "wages",
   "unit": "% wage change",
-  "currentValue": -6.9,
+  "currentValue": -4.9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

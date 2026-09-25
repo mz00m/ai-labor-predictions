@@ -5,7 +5,7 @@
   "description": "Share of US workers with AI observed doing part of their actual work, from platform telemetry and nationally representative worker surveys. This is the measured counterpart to AI exposure: what AI is doing, not what it could do.",
   "category": "exposure",
   "unit": "% of workers with observed AI use",
-  "currentValue": 35,
+  "currentValue": 35.2,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
   "trendComparable": false,

@@ -5,7 +5,7 @@
   "description": "Percentage of customer service interactions fully handled by AI without human intervention. The chart shows only estimates where a source states an automation rate directly.",
   "category": "displacement",
   "unit": "% of interactions automated",
-  "currentValue": 43.5,
+  "currentValue": 47.8,
   "timeHorizon": "By 2028",
   "aggregationMethod": "weighted",
   "disclaimer": "Measures interaction automation, not job elimination. Actual headcount effects depend on demand response and service quality. A high automation rate may reduce headcount but does not imply equivalent job loss.",

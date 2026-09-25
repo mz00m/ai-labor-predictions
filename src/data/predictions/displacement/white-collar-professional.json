@@ -6,7 +6,7 @@
   "disclaimer": "Four points dated September 2026 come from one source, the Anthropic Institute's scenario model, and three of them are scenarios rather than forecasts. The authors state plainly that \"the scenarios are not predictions, and we attach no probabilities to them\" \u2014 modest (0.5%), substantial (3.9%) and extreme (21.5%) are illustrations of what different assumptions about AI capability, diffusion and automation would imply, not competing estimates of what will happen. Read them as the width of the argument, not as a range with a middle. The fourth point (4.2%) is different in kind: it is the median outcome across 3,259 US adults' own expectations run through the same model, and it carries an interquartile range. Note also that the model's \"cognitive occupations\" are SOC 11-29, 41 and 43, which include sales and office support and so run broader than most white-collar definitions on this chart.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 6.5,
+  "currentValue": 2.3,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

@@ -6,7 +6,7 @@
   "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model rather than forecasts, and the authors attach no probabilities to them. They are the average wage relative to the model's no-AI counterfactual path, which is the same AI-attributable construct this chart plots, but an average rather than a median \u2014 in a model with two groups of workers those differ. The scenarios also hide the split the paper cares most about: in the extreme case the average wage is 9.7% above the no-AI path while the cognitive wage is 11.5% below it, with the gain landing on workers outside cognitive occupations.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -1.3,
+  "currentValue": -0.1,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [

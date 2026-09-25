@@ -5,7 +5,7 @@
   "description": "Measured pay advantage for workers with AI/ML skills over comparable workers without them. Unlike most graphs on this site, every estimate here is an observation of a premium that already exists \u2014 none of them is a forecast.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 30.1,
+  "currentValue": 29.4,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
   "trendComparable": false,
