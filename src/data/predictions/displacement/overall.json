@@ -6,7 +6,7 @@
   "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model, not forecasts, and the authors attach no probabilities to them. They are plotted as the increase in the economy-wide unemployment rate above the model's no-AI baseline of 3.8% \u2014 0.1, 0.8 and 8.1 points in the modest, substantial and extreme scenarios. In that model the labor force is fixed and displaced cognitive workers reallocate into other occupations, so this excess unemployment is the net job loss; the gross number of workers changing occupation is far larger.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 2.2,
+  "currentValue": 1.4,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -40,26 +40,14 @@
       ],
       "evidenceTier": 1,
       "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-01-01",
-      "value": 0.6,
-      "confidenceLow": 0.3,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "bonfiglioli-ai-epop-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed",
+      "dataType": "projected",
       "isProxy": true,
       "proxyContext": {
-        "actualUnit": "percentage point decline in employment-to-population ratio",
+        "actualUnit": "10-year TFP bound (0.53\u20130.66%), not a share of jobs displaced",
         "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 1.5,
-        "rationale": "EPOP decline used as direct proxy for job displacement percentage"
+        "conversionLow": 0.4,
+        "conversionHigh": 3,
+        "rationale": "Acemoglu estimates TFP gains of 0.53-0.66% over 10 years and states no share of jobs displaced. The plotted 0.5 is the lower TFP bound taken 1:1 as an order-of-magnitude stand-in for net job loss; there is no documented TFP-to-displacement conversion, hence the wide range and proxy discount."
       }
     },
     {
@@ -103,38 +91,6 @@
       }
     },
     {
-      "date": "2025-08-01",
-      "value": 6.5,
-      "confidenceLow": 3,
-      "confidenceHigh": 14,
-      "sourceIds": [
-        "goldman-ai-workforce-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of US workers displaced over ~10 years if AI is widely adopted, gross",
-        "conversionFactor": 1,
-        "conversionLow": 0.05,
-        "conversionHigh": 1,
-        "rationale": "Gross displacement over a decade; Goldman's own net estimate is a transitory ~0.5pp rise in unemployment"
-      }
-    },
-    {
-      "date": "2025-10-01",
-      "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 2,
-      "sourceIds": [
-        "kinder-brookings-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
-    },
-    {
       "date": "2025-10-15",
       "value": 0,
       "confidenceLow": 0,
@@ -145,24 +101,6 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "dataType": "observed"
-    },
-    {
-      "date": "2025-10-30",
-      "value": 2.5,
-      "sourceIds": [
-        "cais-scale-remote-labor-index-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of 240 freelance projects the best AI agent completed (automation benchmark)",
-        "conversionFactor": 1,
-        "conversionLow": 0,
-        "conversionHigh": 1,
-        "rationale": "Task benchmark of agent capability, not a forecast of jobs lost"
-      }
     },
     {
       "date": "2025-12-31",
@@ -207,26 +145,6 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "dataType": "observed"
-    },
-    {
-      "date": "2026-01-06",
-      "value": 0.9,
-      "confidenceLow": 0.4,
-      "confidenceHigh": 1.5,
-      "sourceIds": [
-        "dallasfed-young-workers-ai-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "percentage point drop in AI-exposed occupation employment share",
-        "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 1.5,
-        "rationale": "16.4% to 15.5% employment share decline in AI-exposed occupations used as displacement proxy"
-      }
     },
     {
       "date": "2026-01-13",
@@ -295,26 +213,6 @@
     },
     {
       "date": "2026-02-24",
-      "value": 6.5,
-      "confidenceLow": 3,
-      "confidenceHigh": 14,
-      "sourceIds": [
-        "goldman-mei-ai-labor-2026"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of US workers displaced over ~10 years if AI is widely adopted, gross",
-        "conversionFactor": 1,
-        "conversionLow": 0.05,
-        "conversionHigh": 1,
-        "rationale": "Restates Goldman's 2025 gross-displacement baseline (same model); net effect is a transitory ~0.5pp rise in unemployment"
-      }
-    },
-    {
-      "date": "2026-02-24",
       "value": 1,
       "sourceIds": [
         "dallas-fed-davis-ai-wages-2026"
@@ -332,19 +230,6 @@
       }
     },
     {
-      "date": "2026-03-01",
-      "value": 0.2,
-      "confidenceLow": 0,
-      "confidenceHigh": 0.4,
-      "sourceIds": [
-        "nber-baslandze-ai-productivity-workforce-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "projected",
-      "metricType": "survey",
-      "sampleSize": 750
-    },
-    {
       "date": "2026-03-13",
       "value": 0.37,
       "confidenceLow": 0.01,
@@ -356,6 +241,16 @@
       "metricType": "survey",
       "sampleSize": 748,
       "dataType": "projected"
+    },
+    {
+      "date": "2026-03-18",
+      "value": 0.6,
+      "sourceIds": [
+        "goldman-briggs-us-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "projected",
+      "metricType": "projection"
     },
     {
       "date": "2026-03-19",
@@ -409,34 +304,6 @@
       }
     },
     {
-      "date": "2026-04-17",
-      "value": 18,
-      "sourceIds": [
-        "openai-jobs-transition-framework-2026"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of US jobs at higher short-term automation risk (framework category)",
-        "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 1,
-        "rationale": "OpenAI's framework classifies 18% of 921 occupations (147.9M jobs) as facing higher short-term automation risk \u2014 high exposure, weak human necessity, limited demand offset. Authors explicitly caveat that categories are NOT forecasts of direct job loss; this is an upper-bound risk share, hence proxy discount."
-      }
-    },
-    {
-      "date": "2026-04-20",
-      "value": 1.9,
-      "sourceIds": [
-        "metaculus-labor-hub-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
       "date": "2026-06-01",
       "value": 9,
       "confidenceLow": 7,
@@ -454,26 +321,6 @@
         "conversionLow": 0.05,
         "conversionHigh": 1,
         "rationale": "Gross flow of workers leaving jobs; Goldman notes a 5% pickup in hiring would reabsorb them"
-      }
-    },
-    {
-      "date": "2026-06-10",
-      "value": 0.2,
-      "confidenceLow": 0.1,
-      "confidenceHigh": 0.3,
-      "sourceIds": [
-        "stanford-del-canaries-april-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "YoY % decline in most-AI-exposed occupations (April 2026 ADP data)",
-        "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 1.5,
-        "rationale": "Current annual employment change in the most AI-exposed occupations, not a count of jobs lost to AI; used as a leading indicator of displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly"
       }
     },
     {
@@ -561,52 +408,6 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
-    },
-    {
-      "date": "2026-09-01",
-      "value": 0.1,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-modest-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "excess US unemployment in the modest-change scenario",
-        "conversionFactor": 1,
-        "conversionLow": 0,
-        "conversionHigh": 1,
-        "rationale": "One of three scenarios the authors say are not predictions and carry no probabilities; the substantial-change scenario is treated as the central case"
-      }
-    },
-    {
-      "date": "2026-09-01",
-      "value": 0.8,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-substantial-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    },
-    {
-      "date": "2026-09-01",
-      "value": 8.1,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-extreme-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "excess US unemployment in the extreme-change scenario",
-        "conversionFactor": 1,
-        "conversionLow": 0,
-        "conversionHigh": 1,
-        "rationale": "One of three scenarios the authors say are not predictions and carry no probabilities; the substantial-change scenario is treated as the central case"
-      }
     }
   ],
   "overlays": [
@@ -717,6 +518,15 @@
       ],
       "evidenceTier": 1,
       "label": "Bao et al.: GenAI increased STEM entrepreneurship; displacement may be offset by new firms"
+    },
+    {
+      "date": "2025-01-01",
+      "direction": "up",
+      "sourceIds": [
+        "bonfiglioli-ai-epop-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Bonfiglioli et al.: AI adoption slowed US commuting-zone EPOP growth ~0.6pp, 2000-2020"
     },
     {
       "date": "2025-01-08",
@@ -944,6 +754,15 @@
       "label": "St. Louis Fed: AI-exposed occupations see larger unemployment rises (r=0.47)"
     },
     {
+      "date": "2025-08-01",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-ai-workforce-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman Sachs: 6-7% of US workers displaced over ~10 years if AI widely adopted (gross)"
+    },
+    {
       "date": "2025-09-01",
       "direction": "down",
       "sourceIds": [
@@ -996,6 +815,24 @@
       ],
       "evidenceTier": 1,
       "label": "Ramp: 50%+ of businesses using freelancers in 2022 have stopped entirely"
+    },
+    {
+      "date": "2025-10-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "kinder-brookings-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Brookings: labor market shows more continuity than disruption since ChatGPT"
+    },
+    {
+      "date": "2025-10-30",
+      "direction": "down",
+      "sourceIds": [
+        "cais-scale-remote-labor-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "CAIS/Scale: best AI agent completed 2.5% of 240 freelance projects (benchmark)"
     },
     {
       "date": "2025-11-01",
@@ -1086,6 +923,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Gans/Goldfarb): O-ring model -- automating one task changes the return to automating all"
+    },
+    {
+      "date": "2026-01-06",
+      "direction": "up",
+      "sourceIds": [
+        "dallasfed-young-workers-ai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: young most-exposed workers' employment share fell 16.4% to 15.5%, 2022-25"
     },
     {
       "date": "2026-01-07",
@@ -1313,6 +1159,15 @@
       "label": "Goldman (Mei): only 5-10K/mo drag so far; baseline 6-7% displaced; +\u00bdpp unemployment"
     },
     {
+      "date": "2026-02-24",
+      "direction": "up",
+      "sourceIds": [
+        "goldman-mei-ai-labor-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Goldman Sachs (Mei): restates 6-7% gross displacement baseline, ~0.5pp unemployment rise"
+    },
+    {
       "date": "2026-03-01",
       "direction": "neutral",
       "sourceIds": [
@@ -1365,6 +1220,15 @@
       ],
       "evidenceTier": 1,
       "label": "Korinek & Stiglitz: Policy should shift from tech steering to redistribution as AI devalues labor"
+    },
+    {
+      "date": "2026-03-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "nber-baslandze-ai-productivity-workforce-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER (Baslandze et al.): CFOs expect AI to cut 2026 employment by less than 0.4%"
     },
     {
       "date": "2026-03-03",
@@ -1880,6 +1744,24 @@
       "label": "Census/QWI: 150K+ early-career jobs lost in most AI-exposed industries since ChatGPT"
     },
     {
+      "date": "2026-04-17",
+      "direction": "up",
+      "sourceIds": [
+        "openai-jobs-transition-framework-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 18% of US jobs at higher short-term automation risk; not a job-loss forecast"
+    },
+    {
+      "date": "2026-04-20",
+      "direction": "up",
+      "sourceIds": [
+        "metaculus-labor-hub-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Metaculus (Apr 2026 vintage): employment -1.9% by 2030 from AI; revised to -1.3% in Aug"
+    },
+    {
       "date": "2026-04-21",
       "direction": "up",
       "sourceIds": [
@@ -2058,6 +1940,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: little firm evidence AI has hurt the labor market as a whole"
+    },
+    {
+      "date": "2026-06-10",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-canaries-april-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL Canaries (Apr 2026): most-exposed occupations -0.2% YoY; superseded by Jul"
     },
     {
       "date": "2026-06-25",
@@ -2412,6 +2303,33 @@
       "label": "Dallas Fed: incumbent Texas firms cut AI-exposed postings 8-9% by early 2026"
     },
     {
+      "date": "2026-09-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-modest-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: modest scenario, unemployment +0.1pp over 3.8% no-AI baseline"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-extreme-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: extreme scenario, unemployment +8.1pp over 3.8% no-AI baseline"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: substantial scenario, 0.8% excess unemployment (not a prediction)"
+    },
+    {
       "date": "2026-09-02",
       "direction": "neutral",
       "sourceIds": [
@@ -2546,17 +2464,17 @@
       "publisher": "NBER (Acemoglu)",
       "evidenceTier": 1,
       "datePublished": "2024-04-01",
-      "excerpt": "AI may increase TFP by only 0.53-0.66% over 10 years under the most aggressive assumptions. Only about 4.6% of all tasks will be affected by AI, and cost savings on these tasks are modest (averaging 27%). The implied GDP effect is 0.93-1.16% over a decade \u2014 far below popular estimates. The displacement effect on jobs is correspondingly small, well under 1% of employment.",
+      "excerpt": "Using existing estimates on exposure to AI and productivity improvements at the task level, these macroeconomic effects appear nontrivial but modest\u2014no more than a 0.66% increase in total factor productivity (TFP) over 10 years. [...] Consequently, predicted TFP gains over the next 10 years are even more modest and are predicted to be less than 0.53%.",
       "dateAdded": "2026-03-01"
     },
     {
       "id": "bonfiglioli-ai-epop-2025",
-      "title": "AI Adoption and Employment-to-Population Ratio",
+      "title": "Artificial Intelligence and Jobs: Evidence from US Commuting Zones",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4608807",
       "publisher": "SSRN (Bonfiglioli et al.)",
       "evidenceTier": 1,
       "datePublished": "2025-01-01",
-      "excerpt": "AI adoption associated with -0.6 percentage point decline in employment-to-population ratio.",
+      "excerpt": "To have a sense of the magnitude of the effect, if the CZ with average AI adoption over the sample period (0.004) had hypothetically had no AI adoption at all, its employment-to-population ratio would have grown by 0.6 p.p. more, i.e., 20% faster than observed growth. While these numbers cannot be interpreted as a counterfactual exercise, they neverthess suggest that AI adoption has contributed to slowing down job creation in the US over the last two decades. US commuting zones, 2000-2020, before generative AI.",
       "dateAdded": "2026-03-12"
     },
     {
@@ -2967,7 +2885,7 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
+      "datePublished": "2025-12-11",
       "excerpt": "35.9% of US workers used generative AI by December 2025; small positive wage effects, no significant decline in job openings.",
       "dateAdded": "2026-03-01"
     },

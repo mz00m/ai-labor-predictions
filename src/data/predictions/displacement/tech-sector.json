@@ -5,28 +5,10 @@
   "description": "The weighted average (12.1%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points \u2014 firms stopped creating junior roles as senior devs absorb that work with AI tools.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 12,
+  "currentValue": 8.6,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
-    {
-      "date": "2024-02-20",
-      "value": 22,
-      "sourceIds": [
-        "indeed-tech-postings-feb-2024"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "postings",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% decline in tech job postings from peak",
-        "conversionFactor": 0.4,
-        "conversionLow": 0.3,
-        "conversionHigh": 0.5,
-        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
-      }
-    },
     {
       "date": "2024-03-15",
       "value": 0,
@@ -60,28 +42,10 @@
       }
     },
     {
-      "date": "2024-11-29",
-      "value": 16.5,
-      "sourceIds": [
-        "indeed-sw-dev-postings-2025"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "postings",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% decline in tech job postings from peak",
-        "conversionFactor": 0.4,
-        "conversionLow": 0.3,
-        "conversionHigh": 0.5,
-        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
-      }
-    },
-    {
       "date": "2025-01-20",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
+      "value": 4.9,
+      "confidenceLow": 2.8,
+      "confidenceHigh": 7,
       "sourceIds": [
         "lightcast-tech-postings-2025"
       ],
@@ -90,64 +54,18 @@
       "metricType": "postings",
       "isProxy": true,
       "proxyContext": {
-        "actualUnit": "% decline in tech job postings from peak",
-        "conversionFactor": 0.4,
-        "conversionLow": 0.3,
+        "actualUnit": "% decline in backend engineer job postings (Lightcast via Bloomberry)",
+        "conversionFactor": 0.35,
+        "conversionLow": 0.2,
         "conversionHigh": 0.5,
-        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
+        "rationale": "Documented job-posting-decline factor (0.35, range 0.20-0.50) applied; one role family's posting decline, not tech employment."
       }
-    },
-    {
-      "date": "2025-02-10",
-      "value": 9.6,
-      "sourceIds": [
-        "bls-ooh-programmer-decline-2023-2033"
-      ],
-      "evidenceTier": 1,
-      "dataType": "projected",
-      "metricType": "projection",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% decline in computer programmer employment (SOC 15-1251), 2023-2033 projection",
-        "conversionFactor": 0.5,
-        "conversionLow": 0.3,
-        "conversionHigh": 0.7,
-        "rationale": "BLS projects 9.6% decline for the narrow 'computer programmers' category. Broader software developer category is growing. This overstates sector-wide displacement."
-      }
-    },
-    {
-      "date": "2025-07-30",
-      "value": 13.5,
-      "sourceIds": [
-        "indeed-tech-hiring-freeze-2025"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "postings",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% decline in tech job postings from peak",
-        "conversionFactor": 0.4,
-        "conversionLow": 0.3,
-        "conversionHigh": 0.5,
-        "rationale": "Job posting declines overstate actual displacement by ~2-3x; reduced hiring velocity != job elimination"
-      }
-    },
-    {
-      "date": "2025-11-13",
-      "value": 1.3,
-      "confidenceLow": -1.5,
-      "confidenceHigh": 4.5,
-      "sourceIds": [
-        "brynjolfsson-chandar-chen-2025"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment"
     },
     {
       "date": "2026-01-10",
-      "value": 6,
+      "value": 3,
+      "confidenceLow": 1.8,
+      "confidenceHigh": 4.2,
       "sourceIds": [
         "bls-programmer-projections-2034"
       ],
@@ -160,113 +78,68 @@
         "conversionFactor": 0.5,
         "conversionLow": 0.3,
         "conversionHigh": 0.7,
-        "rationale": "Updated BLS projection shows slower decline than 2023-2033 vintage. Narrow SOC code, not full tech sector."
-      }
-    },
-    {
-      "date": "2026-01-22",
-      "value": 11,
-      "sourceIds": [
-        "esb-dutch-youth-genai-employment-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% decline in Dutch ICT youth employment despite 6.5% sector growth",
-        "conversionFactor": 0.6,
-        "conversionLow": 0.4,
-        "conversionHigh": 0.8,
-        "rationale": "Netherlands youth (22-25) ICT employment, not US. Strong signal for age-gradient displacement pattern but geographic scope limits direct comparability."
+        "rationale": "Narrow SOC 15-1251 (computer programmers) whose employment was already in secular decline before ChatGPT as work shifted to software developers (15-1252); the projection mostly extends that pre-existing trend and is not an AI-attributed, sector-wide displacement estimate."
       }
     },
     {
       "date": "2026-02-24",
       "value": 5,
+      "confidenceLow": 0.5,
+      "confidenceHigh": 5,
       "sourceIds": [
         "dallas-fed-davis-ai-wages-2026"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
-      "date": "2026-03-16",
-      "value": 5.5,
-      "sourceIds": [
-        "lodefalk-age-gradient-hiring-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
       "metricType": "employment",
       "isProxy": true,
       "proxyContext": {
-        "actualUnit": "% decline in employment of 22-25 year olds in high-AI-exposure occupations (Sweden)",
-        "conversionFactor": 0.6,
-        "conversionLow": 0.4,
-        "conversionHigh": 0.8,
-        "rationale": "Swedish data, not US. Measures age-specific displacement in high-AI-exposure roles within same employers. Workers over 50 rose 1.3%."
-      }
-    },
-    {
-      "date": "2026-03-20",
-      "value": 9,
-      "confidenceLow": 6,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "fed-crane-soto-coder-employment-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% fewer coder jobs vs counterfactual (3pp lower annual growth \u00d7 ~3 years)",
-        "conversionFactor": 0.7,
-        "conversionLow": 0.5,
-        "conversionHigh": 0.9,
-        "rationale": "Fed finds coder employment growth 3pp lower annually since ChatGPT, implying ~500K fewer jobs vs counterfactual. Actual employment is flat (not declining), so displacement is relative to trend, not absolute."
+        "actualUnit": "% employment change since fall 2022, computer systems design and related services (NAICS 5415), no AI attribution",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "Total sector employment change; the article does not attribute the decline to AI, so the AI share could be anywhere from a small fraction to all of it."
       }
     },
     {
       "date": "2026-03-25",
       "value": 18.3,
+      "confidenceLow": 5.3,
+      "confidenceHigh": 38.4,
       "sourceIds": [
         "tufts-digital-planet-ai-jobs-risk-2026"
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2026-04-13",
-      "value": 20,
-      "sourceIds": [
-        "stanford-hai-ai-index-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "employment",
+      "dataType": "projected",
       "isProxy": true,
       "proxyContext": {
-        "actualUnit": "% decline in employment for software devs aged 22-25 since 2024",
-        "conversionFactor": 0.3,
-        "conversionLow": 0.2,
-        "conversionHigh": 0.5,
-        "rationale": "Age-specific (22-25 only) and combines AI displacement with macro hiring slowdown. The 20% figure is for the most-affected age group, not the full tech workforce."
+        "actualUnit": "% of US Information-sector jobs vulnerable to AI job loss over 2-5 years, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "9.3M jobs vulnerable (2.7-19.5M); the report explicitly excludes job creation, so this is gross exposure to loss"
       }
     },
     {
       "date": "2026-04-17",
-      "value": 30,
+      "value": 9,
+      "confidenceLow": 6,
+      "confidenceHigh": 15,
       "sourceIds": [
         "tucker-qwi-early-career-hires-2026"
       ],
       "evidenceTier": 1,
       "metricType": "employment",
-      "note": "Ages 22-24 employment decline in Information sector (NAICS 51), QWI 2022q4-2025q2, unadjusted tabulation",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "early-career (ages 22-24) employment change, NAICS Information, QWI 2022q4-2025q2, unadjusted tabulation",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.2,
+        "conversionHigh": 0.5,
+        "rationale": "Age-specific (early-career only) and combines AI displacement with the macro hiring slowdown; the figure is for the most-affected age group, not the full tech workforce."
+      }
     },
     {
       "date": "2026-04-20",
@@ -346,6 +219,15 @@
       "label": "MIT: Only 23% of vision-task wages cost-effective to automate with AI today"
     },
     {
+      "date": "2024-02-20",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-tech-postings-feb-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed (2024 vintage): tech postings well below pre-pandemic; superseded by Jul 2026 update"
+    },
+    {
       "date": "2024-04-01",
       "direction": "up",
       "sourceIds": [
@@ -409,6 +291,15 @@
       "label": "HBS/Hoffmann: AI-generated code has 41% more vulnerabilities; devs overestimate security"
     },
     {
+      "date": "2024-11-29",
+      "direction": "up",
+      "sourceIds": [
+        "indeed-sw-dev-postings-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed (2025 vintage): software dev postings below pre-pandemic; superseded by Jul 2026 update"
+    },
+    {
       "date": "2025-01-06",
       "direction": "down",
       "sourceIds": [
@@ -443,6 +334,15 @@
       ],
       "evidenceTier": 1,
       "label": "Alphabet: AI tools reduced need for certain engineering and support roles"
+    },
+    {
+      "date": "2025-02-10",
+      "direction": "up",
+      "sourceIds": [
+        "bls-ooh-programmer-decline-2023-2033"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS (2023-33 vintage): programmer employment projected to decline; superseded by 2024-34"
     },
     {
       "date": "2025-06-01",
@@ -481,13 +381,13 @@
       "label": "OECD: Employment Outlook 2025 on AI and the labour market"
     },
     {
-      "date": "2025-08-01",
-      "direction": "neutral",
+      "date": "2025-07-30",
+      "direction": "up",
       "sourceIds": [
-        "brynjolfsson-chandar-chen-2025"
+        "indeed-tech-hiring-freeze-2025"
       ],
-      "evidenceTier": 1,
-      "label": "Brynjolfsson et al.: ~13% early-career SWE decline in August, revised to ~1.3% in November"
+      "evidenceTier": 2,
+      "label": "Indeed (Jul 2025 vintage): tech hiring freeze; superseded by Jul 2026 update"
     },
     {
       "date": "2025-08-01",
@@ -551,6 +451,15 @@
       ],
       "evidenceTier": 1,
       "label": "Sarkar (UChicago/Cursor): 39% more code merges after AI agent became default mode"
+    },
+    {
+      "date": "2025-11-13",
+      "direction": "down",
+      "sourceIds": [
+        "brynjolfsson-chandar-chen-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Brynjolfsson et al.: site-computed age-weighted average shows tech employment growth"
     },
     {
       "date": "2025-11-26",
@@ -632,6 +541,15 @@
       ],
       "evidenceTier": 2,
       "label": "Indeed: Tech postings 34% below pre-pandemic; AI tech postings 45% above"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch ICT youth (15-24) employment fell ~11% as sector grew 6.5% (Netherlands)"
     },
     {
       "date": "2026-02-16",
@@ -760,6 +678,15 @@
       "label": "Anthropic: Programmers highest AI exposure (74.5%) but no unemployment impact detected"
     },
     {
+      "date": "2026-03-16",
+      "direction": "up",
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden ages 22-25 in high-AI occupations -5.5%; youngest devs fall most"
+    },
+    {
       "date": "2026-03-18",
       "direction": "down",
       "sourceIds": [
@@ -767,6 +694,15 @@
       ],
       "evidenceTier": 2,
       "label": "GS Research (Briggs): Tech employment share has fallen below long-term trend"
+    },
+    {
+      "date": "2026-03-20",
+      "direction": "up",
+      "sourceIds": [
+        "fed-crane-soto-coder-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed (Crane & Soto): coder job growth ~3pp/yr lower post-ChatGPT; not read as 500K jobs lost"
     },
     {
       "date": "2026-03-24",
@@ -857,6 +793,15 @@
       ],
       "evidenceTier": 3,
       "label": "Anthropic: coding 94% theoretical exposure but only ~30% actual task adoption"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-hai-ai-index-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Stanford HAI AI Index: restates Canaries early-career decline in AI-exposed jobs"
     },
     {
       "date": "2026-04-21",

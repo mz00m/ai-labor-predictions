@@ -11,10 +11,10 @@
   "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (23.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
   "history": [
     {
-      "date": "2023-08-15",
-      "value": 3.8,
-      "confidenceLow": 2.5,
-      "confidenceHigh": 5,
+      "date": "2023-09-10",
+      "value": 3.7,
+      "confidenceLow": 3.5,
+      "confidenceHigh": 3.9,
       "sourceIds": [
         "census-bts-ai-2023"
       ],
@@ -23,10 +23,10 @@
       "dataType": "observed"
     },
     {
-      "date": "2024-05-01",
-      "value": 6.6,
-      "confidenceLow": 5,
-      "confidenceHigh": 9,
+      "date": "2024-05-05",
+      "value": 4.8,
+      "confidenceLow": 4.6,
+      "confidenceHigh": 5,
       "sourceIds": [
         "census-bts-ai-2024"
       ],
@@ -35,24 +35,12 @@
       "dataType": "observed"
     },
     {
-      "date": "2025-07-01",
-      "value": 10.2,
-      "confidenceLow": 8,
-      "confidenceHigh": 15,
+      "date": "2025-07-13",
+      "value": 9.4,
+      "confidenceLow": 9.1,
+      "confidenceHigh": 9.7,
       "sourceIds": [
         "census-bts-ai-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2025-10-01",
-      "value": 9.7,
-      "confidenceLow": 7,
-      "confidenceHigh": 12,
-      "sourceIds": [
-        "anthropic-economic-index-2025"
       ],
       "evidenceTier": 1,
       "metricType": "survey",
@@ -71,26 +59,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2025-12-31",
-      "value": 18,
-      "sourceIds": [
-        "fed-ai-adoption-monitoring-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-15",
-      "value": 18,
-      "sourceIds": [
-        "census-ces-ai-diffusion-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-02-08",
       "value": 17.5,
       "confidenceLow": 16,
@@ -101,17 +69,6 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
-    },
-    {
-      "date": "2026-02-08",
-      "value": 17.9,
-      "sourceIds": [
-        "census-btos-ai-supplement-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "survey",
-      "sampleSize": 117000
     },
     {
       "date": "2026-04-19",
@@ -405,6 +362,15 @@
       "label": "Philadelphia Fed: ~50% of surveyed Third District firms using generative AI"
     },
     {
+      "date": "2025-10-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-economic-index-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Anthropic Economic Index: restates Census BTOS, 9.7% of firms using AI"
+    },
+    {
       "date": "2025-11-01",
       "direction": "up",
       "sourceIds": [
@@ -504,6 +470,15 @@
       "label": "MIT FutureTech: tech sector is 2/3 of deep S&P 500 AI adoption; no capex or productivity gap"
     },
     {
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "fed-ai-adoption-monitoring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Federal Reserve (FEDS Notes): about 18% of firms used AI at end-2025, per BTOS"
+    },
+    {
       "date": "2026-01-01",
       "direction": "neutral",
       "sourceIds": [
@@ -519,7 +494,7 @@
         "hartley-genai-labor-2026"
       ],
       "evidenceTier": 1,
-      "label": "Hartley: 36% worker-level AI adoption (broader definition than Census BTOS firm-level measure)"
+      "label": "Hartley: 38.3% worker-level AI adoption (broader definition than Census BTOS firm-level measure)"
     },
     {
       "date": "2026-01-15",
@@ -556,6 +531,15 @@
       ],
       "evidenceTier": 2,
       "label": "Deloitte: 71% of orgs use GenAI in at least one function; 92% plan investment"
+    },
+    {
+      "date": "2026-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "census-ces-ai-diffusion-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census CES working paper: 18% of firms use AI; 32% employment-weighted"
     },
     {
       "date": "2026-01-22",
@@ -619,6 +603,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: Multi-country firm survey finds AI boosting sales/employee but mixed employment"
+    },
+    {
+      "date": "2026-02-08",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-btos-ai-supplement-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS AI Supplement: 17.9% of firms used AI (pooled Nov 2025 to Feb 2026)"
     },
     {
       "date": "2026-02-15",
@@ -1032,12 +1025,12 @@
     },
     {
       "id": "census-bts-ai-2023",
-      "title": "Business Trends and Outlook Survey: AI Module Q3 2023",
-      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "title": "Business Trends and Outlook Survey: AI use in producing goods or services, cycle 202319",
+      "url": "https://www.census.gov/hfp/btos/downloads/AI%20Core%20Questions.xlsx",
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
-      "datePublished": "2023-08-15",
-      "excerpt": "3.8% of US firms reported using AI in production. An additional 6.4% were in testing/pilot phase. Adoption highest in information (18%) and professional services (12%).",
+      "datePublished": "2023-09-10",
+      "excerpt": "BTOS AI Core Questions.xlsx, National Estimates, Question 7 \"In the last two weeks, did this business use Artificial Intelligence (AI) in producing goods or services? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\": 3.7% (SE 0.11%) in cycle 202319, reference period Aug 28 to Sep 10, 2023, the first cycle the question was asked.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1052,12 +1045,12 @@
     },
     {
       "id": "census-bts-ai-2024",
-      "title": "Business Trends and Outlook Survey: AI Module Q2 2024",
-      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "title": "Business Trends and Outlook Survey: AI use in producing goods or services, cycle 202410",
+      "url": "https://www.census.gov/hfp/btos/downloads/AI%20Core%20Questions.xlsx",
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
-      "datePublished": "2024-05-01",
-      "excerpt": "AI usage among US firms rose to 6.6%, with an additional 9.1% in testing. Information sector at 24%, finance/insurance at 15%.",
+      "datePublished": "2024-05-05",
+      "excerpt": "BTOS AI Core Questions.xlsx, National Estimates, Question 7 \"In the last two weeks, did this business use Artificial Intelligence (AI) in producing goods or services? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\": 4.8% (SE 0.09%) in cycle 202410, reference period Apr 22 to May 5, 2024.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1082,12 +1075,12 @@
     },
     {
       "id": "census-bts-ai-2025",
-      "title": "Business Trends and Outlook Survey: AI Module Q2 2025",
-      "url": "https://www.census.gov/data/experimental-data-products/business-trends-and-outlook-survey.html",
+      "title": "Business Trends and Outlook Survey: AI use in producing goods or services, cycle 202515",
+      "url": "https://www.census.gov/hfp/btos/downloads/AI%20Core%20Questions.xlsx",
       "publisher": "US Census Bureau",
       "evidenceTier": 1,
-      "datePublished": "2025-07-01",
-      "excerpt": "US firm AI usage in production reached 10.2%, with 14.8% in testing. Large firms (500+ employees) at 28%. Adoption accelerating across all sectors.",
+      "datePublished": "2025-07-13",
+      "excerpt": "BTOS AI Core Questions.xlsx, National Estimates, Question 7 \"In the last two weeks, did this business use Artificial Intelligence (AI) in producing goods or services? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\", Answer \"Yes\": 9.4% (SE 0.15%) in cycle 202515, reference period Jun 30 to Jul 13, 2025. The last cycle on this wording (202520, ref. Sep 8 to 21, 2025) read 10.0%.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -1146,8 +1139,8 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank (Hartley, Jolevski, Melo, Moore)",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
-      "excerpt": "35.9% of US workers used generative AI by December 2025. Adoption concentrated among younger, college-educated, higher-earning employees.",
+      "datePublished": "2025-12-11",
+      "excerpt": "We find that LLM adoption among U.S. workers has increased rapidly from 30.1% as of December 2024 to 38.3% as of December 2025, and adoption in the U.S. remains is near the top of advanced economies. (SSRN abstract, last revised 11 Dec 2025)",
       "dateAdded": "2026-03-07"
     },
     {

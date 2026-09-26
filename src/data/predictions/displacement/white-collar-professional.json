@@ -6,7 +6,7 @@
   "disclaimer": "Four points dated September 2026 come from one source, the Anthropic Institute's scenario model, and three of them are scenarios rather than forecasts. The authors state plainly that \"the scenarios are not predictions, and we attach no probabilities to them\" \u2014 modest (0.5%), substantial (3.9%) and extreme (21.5%) are illustrations of what different assumptions about AI capability, diffusion and automation would imply, not competing estimates of what will happen. Read them as the width of the argument, not as a range with a middle. The fourth point (4.2%) is different in kind: it is the median outcome across 3,259 US adults' own expectations run through the same model, and it carries an interquartile range. Note also that the model's \"cognitive occupations\" are SOC 11-29, 41 and 43, which include sales and office support and so run broader than most white-collar definitions on this chart.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 6.5,
+  "currentValue": 2.1,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -29,7 +29,15 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "note": "Paralegal employment projected to grow 1.2% (counter-displacement)",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% projected employment change 2023-33, paralegals and legal assistants only (sign flipped: +1.2% growth)",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "One occupation's projection standing in for all white-collar roles; value unscaled, weight discounted for representativeness."
+      }
     },
     {
       "date": "2025-03-31",
@@ -50,18 +58,6 @@
         "conversionHigh": 0.45,
         "rationale": "Relative posting decline (8%) converted with the documented relative-posting factor, as for eisfeldt-genai-firm-values-2026. The most-exposed occupations are software, web design, managers, clerical workers and editors, i.e. white-collar. Texas only; national re-estimate reported similar."
       }
-    },
-    {
-      "date": "2025-07-01",
-      "value": 21.5,
-      "confidenceLow": 18,
-      "confidenceHigh": 25,
-      "sourceIds": [
-        "oecd-white-collar-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
     },
     {
       "date": "2025-08-01",
@@ -103,21 +99,29 @@
     },
     {
       "date": "2025-11-01",
-      "value": 18,
-      "confidenceLow": 6,
-      "confidenceHigh": 30,
+      "value": 5.4,
+      "confidenceLow": 2.7,
+      "confidenceHigh": 8.1,
       "sourceIds": [
         "worldbank-liu-wang-yu-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
+      "metricType": "postings",
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative job posting decline, high- vs low-AI-substitution occupations, year three after ChatGPT (Lightcast)",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.45,
+        "rationale": "Relative posting decline overstates net displacement; captures hiring freezes not eliminations (documented relative-posting factor 0.30, range 0.15-0.45)"
+      }
     },
     {
       "date": "2025-11-13",
-      "value": 6,
-      "confidenceLow": 3,
-      "confidenceHigh": 9,
+      "value": 1.8,
+      "confidenceLow": 1.2,
+      "confidenceHigh": 3,
       "sourceIds": [
         "brynjolfsson-chandar-chen-wc-2025"
       ],
@@ -125,7 +129,15 @@
       "metricType": "employment",
       "sampleSize": 5000000,
       "note": "Ages 22-25 in most AI-exposed occupations, US ADP payroll data",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% employment change, ages 22-25 only, most AI-exposed occupations (ADP)",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.2,
+        "conversionHigh": 0.5,
+        "rationale": "Age-specific (ages 22-25 only): the most-affected entry-level cohort, not all white-collar workers; converted with the factor used for age-specific points on the tech chart."
+      }
     },
     {
       "date": "2025-12-15",
@@ -153,31 +165,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2026-01-15",
-      "value": 0,
-      "confidenceLow": -2,
-      "confidenceHigh": 0,
-      "sourceIds": [
-        "hbr-ai-potential-layoffs-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-01-22",
-      "value": 13,
-      "confidenceLow": 10,
-      "confidenceHigh": 16,
-      "sourceIds": [
-        "esb-dutch-youth-genai-employment-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "note": "Youth employment in GenAI-exposed occupations, Netherlands Q4 2022-Q3 2025",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-03-05",
       "value": 0,
       "confidenceLow": -1,
@@ -202,42 +189,56 @@
       "metricType": "survey",
       "sampleSize": 748,
       "note": "All workers, routine clerical share expected to decline 2.19pp by 2028; skilled-technical up 1.35pp",
-      "dataType": "projected"
-    },
-    {
-      "date": "2026-03-16",
-      "value": 5.5,
-      "confidenceLow": 4,
-      "confidenceHigh": 7,
-      "sourceIds": [
-        "lodefalk-age-gradient-hiring-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "sampleSize": 4600000,
-      "note": "Ages 22-25 in top-quartile AI-exposed occupations, Sweden employer-level DiD",
-      "dataType": "observed"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "pp decline in routine clerical employment share expected by 2028 (CFO survey)",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Change in one occupation group's share of employment, not a displacement rate for white-collar roles; partly offset by skilled-technical gains."
+      }
     },
     {
       "date": "2026-03-25",
       "value": 15.6,
+      "confidenceLow": 4.5,
+      "confidenceHigh": 32.7,
       "sourceIds": [
         "tufts-digital-planet-ai-jobs-risk-2026"
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US professional, scientific and technical services jobs vulnerable to AI job loss over 2-5 years, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "9.3M jobs vulnerable (2.7-19.5M); the report explicitly excludes job creation, so this is gross exposure to loss"
+      }
     },
     {
       "date": "2026-04-17",
-      "value": 12.4,
+      "value": 3.7,
+      "confidenceLow": 2.5,
+      "confidenceHigh": 6.2,
       "sourceIds": [
         "tucker-qwi-early-career-hires-2026"
       ],
       "evidenceTier": 1,
       "metricType": "employment",
       "note": "Ages 22-24 in most AI-exposed industry-state quintile, QWI 2022q4-2025q2, regression-adjusted vs less-exposed industries",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "regression-adjusted early-career employment change, ages 22-24 only, most AI-exposed industry-state quintile (QWI)",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.2,
+        "conversionHigh": 0.5,
+        "rationale": "Age-specific (ages 22-24 only): the most-affected entry-level cohort, not all white-collar workers; converted with the factor used for age-specific points on the tech chart."
+      }
     },
     {
       "date": "2026-04-20",
@@ -248,52 +249,6 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 0.5,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-modest-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 3.9,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-substantial-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 21.5,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-extreme-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 4.2,
-      "confidenceLow": 1,
-      "confidenceHigh": 9,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-survey-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "survey"
     }
   ],
   "overlays": [
@@ -676,6 +631,15 @@
       "label": "Frank et al.: Unemployment risk rose in AI-exposed occupations from early 2022"
     },
     {
+      "date": "2026-01-15",
+      "direction": "neutral",
+      "sourceIds": [
+        "hbr-ai-potential-layoffs-2026"
+      ],
+      "evidenceTier": 3,
+      "label": "HBR: firms lay off for AI's potential, not its performance; no displacement estimate"
+    },
+    {
       "date": "2026-01-21",
       "direction": "neutral",
       "sourceIds": [
@@ -710,6 +674,15 @@
       ],
       "evidenceTier": 1,
       "label": "ESB/Rabobank: Dutch GenAI-vulnerable job postings down 25% vs <10% elsewhere (since 2022)"
+    },
+    {
+      "date": "2026-01-22",
+      "direction": "up",
+      "sourceIds": [
+        "esb-dutch-youth-genai-employment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "ESB/Rabobank: Dutch youth in GenAI-exposed jobs fell 13% (Netherlands)"
     },
     {
       "date": "2026-02-01",
@@ -881,6 +854,15 @@
       ],
       "evidenceTier": 1,
       "label": "Lodefalk et al.: Effect ~2x larger for young women (-0.016 vs -0.007); 1/3 from occupational sorting"
+    },
+    {
+      "date": "2026-03-16",
+      "direction": "up",
+      "sourceIds": [
+        "lodefalk-age-gradient-hiring-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Lodefalk et al.: Sweden ages 22-25 in high-AI occupations -5.5% vs less exposed, same employers"
     },
     {
       "date": "2026-03-18",
@@ -1199,6 +1181,42 @@
       "label": "Anthropic Institute: cognitive unemployment 4.5% (substantial) to 17.9% (extreme) by 2030"
     },
     {
+      "date": "2026-09-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-modest-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute (modest scenario): cognitive employment 0.5% below mid-2026 level by 2030"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-extreme-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute (extreme scenario): cognitive employment 21.5% below mid-2026 level by 2030"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: substantial scenario, 3.9% excess unemployment (not a prediction)"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-survey-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: public-survey scenario input, 4.2% white-collar displacement (not a forecast)"
+    },
+    {
       "date": "2026-09-02",
       "direction": "down",
       "sourceIds": [
@@ -1471,16 +1489,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-06-01",
       "excerpt": "Non-routine cognitive job workers now face rising unemployment risk, surpassing non-routine manual workers for the first time.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "oecd-white-collar-2025",
-      "title": "OECD Employment Outlook 2025: AI and High-Skill Occupations",
-      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook_19991266.html",
-      "publisher": "OECD",
-      "evidenceTier": 1,
-      "datePublished": "2025-07-01",
-      "excerpt": "Professional services occupations face the largest task-level AI exposure among high-income economies, with 18-25% of tasks fully automatable by current LLMs.",
       "dateAdded": "2026-03-01"
     },
     {

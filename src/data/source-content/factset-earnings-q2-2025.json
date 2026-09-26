@@ -1,0 +1,14 @@
+{
+  "id": "factset-earnings-q2-2025",
+  "abstract": "FactSet's count of S&P 500 companies citing the term \"AI\" on earnings calls held June 15 through September 5, 2025 (Q2 2025 reporting season). 287 companies cited \"AI\", the highest count in the 10 years FactSet has tracked the term.",
+  "keyFindings": [
+    "The term \"AI\" was cited on 287 S&P 500 earnings calls conducted from June 15 through September 5, 2025.",
+    "287 of 500 companies is about 57% of the index, plotted on jobsdata.ai as 57.4%."
+  ],
+  "methodology": "FactSet full-text search of earnings-call transcripts for all S&P 500 companies reporting in the window. The count is of calls mentioning the term, not of workforce or headcount discussion.",
+  "qualifiers": [
+    "Counts any mention of \"AI\", not AI-driven workforce changes.",
+    "Share computed by jobsdata.ai as count ÷ 500."
+  ],
+  "fetchedAt": "2026-09-25"
+}

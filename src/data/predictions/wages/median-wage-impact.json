@@ -3,10 +3,10 @@
   "slug": "median-wage-impact",
   "title": "Median Wage Impact from AI by 2030",
   "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
-  "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model rather than forecasts, and the authors attach no probabilities to them. They are the average wage relative to the model's no-AI counterfactual path, which is the same AI-attributable construct this chart plots, but an average rather than a median \u2014 in a model with two groups of workers those differ. The scenarios also hide the split the paper cares most about: in the extreme case the average wage is 9.7% above the no-AI path while the cognitive wage is 11.5% below it, with the gain landing on workers outside cognitive occupations.",
+  "disclaimer": "The Anthropic Institute's three September 2026 scenarios appear as context signals, not plotted estimates, because they are not forecasts and the authors attach no probabilities to them. They show the average wage relative to the model's no-AI counterfactual path, which is the same AI-attributable construct this chart plots, but an average rather than a median \u2014 in a model with two groups of workers those differ. The scenarios also hide the split the paper cares most about: in the extreme case the average wage is 9.7% above the no-AI path while the cognitive wage is 11.5% below it, with the gain landing on workers outside cognitive occupations.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -1.3,
+  "currentValue": -0.4,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -23,18 +23,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2023-09-01",
-      "value": 0,
-      "confidenceLow": -4,
-      "confidenceHigh": 4,
-      "sourceIds": [
-        "ilo-wages-2023"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
       "date": "2023-10-01",
       "value": -0.6,
       "confidenceLow": -1.4,
@@ -44,7 +32,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "employment",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative wage-growth gap, exposed vs less-exposed occupations; not a level effect",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Hourly wage change per one-standard-deviation increase in GenAI exposure (CPS, Jan 2022-Oct 2023); -1.4% for core-task exposure. A cross-sectional exposure gradient, not a change in the economy-wide median; plotted at the raw gap with proxy half-weight."
+      }
     },
     {
       "date": "2024-02-01",
@@ -59,30 +55,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2024-06-01",
-      "value": -2,
-      "confidenceLow": -7,
-      "confidenceHigh": 2,
-      "sourceIds": [
-        "webb-2024"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2024-10-01",
-      "value": -3,
-      "confidenceLow": -8,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "atlantic-wages-2024"
-      ],
-      "evidenceTier": 3,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
       "date": "2025-02-01",
       "value": -1,
       "confidenceLow": -5,
@@ -93,78 +65,6 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "dataType": "observed"
-    },
-    {
-      "date": "2025-05-01",
-      "value": -5,
-      "confidenceLow": -10,
-      "confidenceHigh": -1,
-      "sourceIds": [
-        "substack-wages-doom"
-      ],
-      "evidenceTier": 4,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-08-01",
-      "value": -2,
-      "confidenceLow": -6,
-      "confidenceHigh": 2,
-      "sourceIds": [
-        "epi-wages-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-09-01",
-      "value": -2,
-      "confidenceLow": -5,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "korinek-trammell-growth-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-11-01",
-      "value": -2.5,
-      "confidenceLow": -7,
-      "confidenceHigh": 1.5,
-      "sourceIds": [
-        "pwc-ai-jobs-barometer-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "survey",
-      "dataType": "projected"
-    },
-    {
-      "date": "2026-01-01",
-      "value": -3,
-      "confidenceLow": -8,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "bls-may-2024-wage-data"
-      ],
-      "evidenceTier": 2,
-      "metricType": "employment",
-      "dataType": "observed"
-    },
-    {
-      "date": "2026-03-25",
-      "value": -8.5,
-      "sourceIds": [
-        "tufts-digital-planet-ai-jobs-risk-2026"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected",
-      "confidenceLow": -15,
-      "confidenceHigh": -2
     },
     {
       "date": "2026-04-20",
@@ -196,7 +96,15 @@
       ],
       "evidenceTier": 2,
       "dataType": "observed",
-      "metricType": "employment"
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative wage-growth gap, exposed vs less-exposed occupations; not a level effect",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Apollo DiD coefficient (-0.0667, SE 0.0181): real wage growth in high-exposure occupations (3.7% of the labor force) vs low-exposure ones after 2023. A cross-occupation contrast, not a change in the economy-wide median; no documented conversion to a level effect, so plotted at the raw gap with proxy half-weight."
+      }
     },
     {
       "date": "2026-08-21",
@@ -208,43 +116,36 @@
       ],
       "evidenceTier": 2,
       "dataType": "observed",
-      "metricType": "employment"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 0.7,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-modest-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 2.1,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-substantial-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
-    }
-  ,
-    {
-      "date": "2026-09-01",
-      "value": 9.7,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-extreme-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection"
+      "metricType": "employment",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative wage-growth gap, exposed vs less-exposed occupations; not a level effect",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "OEWS median hourly wage change moving from the 10th to the 90th percentile of GenAI exposure, knowledge-intensive services (NAICS 51-56) only. The authors state the coefficients capture differential changes across the exposure distribution, not the aggregate effect; plotted at the raw gap with proxy half-weight."
+      }
     }
   ],
   "overlays": [
+    {
+      "date": "2020-01-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "webb-2024"
+      ],
+      "evidenceTier": 1,
+      "label": "Webb (Stanford): AI projected to cut 90:10 wage inequality 4-9%; no median-wage estimate"
+    },
+    {
+      "date": "2023-01-20",
+      "direction": "neutral",
+      "sourceIds": [
+        "atlantic-wages-2024"
+      ],
+      "evidenceTier": 3,
+      "label": "The Atlantic (Lowrey): too early to know if AI will cause mass white-collar job loss"
+    },
     {
       "date": "2023-05-16",
       "direction": "neutral",
@@ -390,6 +291,15 @@
       "label": "CESifo RCT: GenAI boosts e-commerce sales 0-16.3% (TFP gains); larger for small sellers"
     },
     {
+      "date": "2025-11-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "pwc-ai-jobs-barometer-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "PwC: AI-skilled workers command a 56% wage premium (skill premium, not median wage)"
+    },
+    {
       "date": "2025-11-05",
       "direction": "up",
       "sourceIds": [
@@ -478,6 +388,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER (Gans/Goldfarb): O-ring model -- partial automation can raise wages via bottleneck task"
+    },
+    {
+      "date": "2026-01-01",
+      "direction": "down",
+      "sourceIds": [
+        "bls-may-2024-wage-data"
+      ],
+      "evidenceTier": 2,
+      "label": "BLS OES: clerical wages +1.1% vs +3.8% for other occupations; not AI-attributed"
     },
     {
       "date": "2026-01-07",
@@ -586,6 +505,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic: Claude tasks avg $47.9/hr vs $37.3 US avg wage"
+    },
+    {
+      "date": "2026-03-25",
+      "direction": "down",
+      "sourceIds": [
+        "tufts-digital-planet-ai-jobs-risk-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Tufts Digital Planet: AI job losses would cost 2-15% of US wage income (employment channel)"
     },
     {
       "date": "2026-03-26",
@@ -788,6 +716,33 @@
     }
   ,
     {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-modest-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: modest scenario, average wage +0.7% vs the no-AI path in 2030"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-extreme-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: extreme scenario, average wage +9.7% vs the no-AI path in 2030"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: substantial scenario, 2.1% median wage change (not a prediction)"
+    },
+    {
       "date": "2026-09-15",
       "direction": "down",
       "sourceIds": [
@@ -836,15 +791,6 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "ilo-wages-2023",
-      "title": "Global Wage Report 2022-23: The impact of inflation and COVID-19 on wages and purchasing power",
-      "url": "https://www.ilo.org/publications/flagship-reports/global-wage-report-2022-23-impact-inflation-and-covid-19-wages-and",
-      "publisher": "International Labour Organization",
-      "evidenceTier": 1,
-      "datePublished": "2023-09-01",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "otis-kenyan-entrepreneurs-2023",
       "title": "The Uneven Impact of Generative AI on Entrepreneurial Performance",
       "url": "https://www.hbs.edu/ris/Publication%20Files/24-042_05d87e28-7543-4644-b5a4-cba80e69c3e9.pdf",
@@ -875,32 +821,23 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "epi-wages-2025",
-      "title": "Unbalanced labor market power is what makes technology — including AI — threatening to workers",
-      "url": "https://www.epi.org/publication/ai-unbalanced-labor-markets/",
-      "publisher": "Economic Policy Institute (Bivens, Zipperer)",
-      "evidenceTier": 2,
-      "datePublished": "2024-03-28",
-      "excerpt": "AI is unlikely to be a direct threat to wages; the root causes of sluggish wage growth are policy decisions that led to imbalanced employer power. Productivity growth has not historically caused higher unemployment or inequality.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "webb-2024",
       "title": "The Impact of Artificial Intelligence on the Labor Market",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3482150",
       "publisher": "Stanford (Webb)",
       "evidenceTier": 1,
-      "datePublished": "2024-06-01",
-      "excerpt": "AI exposure is concentrated among high-skill, high-wage occupations, but wage effects may cascade downward.",
+      "datePublished": "2020-01-01",
+      "excerpt": "I find that AI is projected to reduce inequality measured as the ratio of the 90th to the 10th percentile of wages. On the other hand, it is projected to increase inequality at the top of the distribution, measured as the ratio of the 99th to the 90th percentile. Applying the estimated software coefficient to AI, I project a 4% decrease in 90:10 inequality; using the robot coefficient, the decrease is 9%.",
       "dateAdded": "2026-03-01"
     },
     {
       "id": "atlantic-wages-2024",
-      "title": "AI could be coming for higher-paid workers this time",
+      "title": "How ChatGPT Will Destabilize White-Collar Work",
       "url": "https://www.theatlantic.com/ideas/archive/2023/01/chatgpt-ai-economy-automation-jobs/672767/",
-      "publisher": "The Atlantic",
+      "publisher": "The Atlantic (Annie Lowrey)",
       "evidenceTier": 3,
-      "datePublished": "2024-10-01",
+      "datePublished": "2023-01-20",
+      "excerpt": "No single technology in modern memory has caused mass job loss among highly educated workers. Will generative AI really be an exception? No one can answer this question, given how new the technology is and given how slowly employment can adjust in response to technological change.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -960,15 +897,6 @@
       "excerpt": "Automation AI negatively impacts low-skilled wages; augmentation AI raises high-skilled wages."
     },
     {
-      "id": "substack-wages-doom",
-      "title": "The Wage Compression that Persisted",
-      "url": "https://arindube.substack.com/p/the-wage-compression-that-persisted",
-      "publisher": "Arin Dube (Substack)",
-      "evidenceTier": 4,
-      "datePublished": "2025-05-01",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "brynjolfsson-li-raymond-qje-wages-2025",
       "title": "Generative AI at Work",
       "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
@@ -1015,16 +943,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-08-21",
       "excerpt": "Audit of 500 AI vendors finds surveillance pay spreading across healthcare, customer service, and logistics."
-    },
-    {
-      "id": "korinek-trammell-growth-2025",
-      "title": "Economic Growth under Transformative AI",
-      "url": "https://www.nber.org/papers/w31815",
-      "publisher": "Annual Review of Economics / NBER (Korinek, Trammell)",
-      "evidenceTier": 1,
-      "datePublished": "2025-09-01",
-      "excerpt": "Sufficiently advanced AI could dramatically raise growth rates and lower labor share, breaking Kaldor Facts. Wages may rise or fall depending on returns to scale and direction of technical change.",
-      "dateAdded": "2026-03-01"
     },
     {
       "id": "klump-robots-wages-meta-2025",
@@ -1118,7 +1036,7 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
+      "datePublished": "2025-12-11",
       "excerpt": "Small positive wage effects identified for workers in AI-exposed occupations; adoption concentrated among younger, college-educated, higher-earning employees.",
       "dateAdded": "2026-03-07"
     },

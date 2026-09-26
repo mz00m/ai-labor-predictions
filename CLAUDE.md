@@ -133,7 +133,7 @@ Must be updated with today's date on every ingestion. Hero reads this to display
 
 All three homepage hero stats are hand-set in `src/components/HeroTriad.tsx` from a source audit (Sep 2026). They are NOT computed from `overall-us-displacement`, which mixes net, gross, exposure and scenario estimates — a mechanical average drifted with every ingest. Re-verify against sources when the evidence moves:
 1. **~21% Productivity boost** — `center={21} low={13} high={56}`. Median % time saved across the controlled studies in `ResearchEvidence.tsx` that carry `timeSavedPct` (computed there; keep in sync).
-2. **~1% Projected net job loss by 2030** — `center={1} low={0.6} high={3}`. Median of 5 independent net US forecasts (Goldman net unemployment effect, Anthropic Institute substantial scenario, Bloom et al., Metaculus, Acemoglu). Gross displacement estimates (6–9%) are a different construct.
+2. **~1% Projected net job loss by 2030** — `center={1} low={0.6} high={3}`. Median of 4 independent net US forecasts (Goldman net unemployment effect, Bloom et al., Metaculus, Acemoglu). Scenario exercises such as the Anthropic Institute economic scenarios are overlays, not forecasts: their authors attach no probabilities. Gross displacement estimates (6–9%) are a different construct.
 3. **0% Measured US job loss** — `center={0} low={0} high={0.2}`. Every quantified source lands at 0.1–0.2% of US employment; losses concentrated among workers 22–25.
 
 `scripts/autoresearch/auto-audit.js` reports the three wobble ranges from HeroTriad for manual re-verification.

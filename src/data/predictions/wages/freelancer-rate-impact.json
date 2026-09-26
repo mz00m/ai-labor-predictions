@@ -5,7 +5,7 @@
   "description": "Projected change in average freelancer hourly rates for AI-exposed categories (writing, design, translation, data work) by 2028.",
   "category": "wages",
   "unit": "% rate change",
-  "currentValue": -18.9,
+  "currentValue": -13.7,
   "timeHorizon": "By 2028",
   "aggregationMethod": "weighted",
   "history": [
@@ -19,55 +19,27 @@
       ],
       "evidenceTier": 1,
       "metricType": "corporate",
-      "dataType": "observed"
-    },
-    {
-      "date": "2023-11-01",
-      "value": -10,
-      "confidenceLow": -18,
-      "confidenceHigh": -3,
-      "sourceIds": [
-        "fiverr-market-report-2023"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "volume/spend, not rate",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Job postings for writing freelancers, not rates. No documented conversion from posting volume to rates; plotted at the raw value with proxy half-weight."
+      }
     },
     {
       "date": "2024-03-15",
-      "value": -15,
-      "confidenceLow": -24,
-      "confidenceHigh": -8,
+      "value": -5.2,
+      "confidenceLow": -8.3,
+      "confidenceHigh": -2.1,
       "sourceIds": [
         "nber-freelance-ai-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2024-07-01",
-      "value": -20,
-      "confidenceLow": -30,
-      "confidenceHigh": -12,
-      "sourceIds": [
-        "upwork-earnings-q2-2024"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
+      "metricType": "employment",
       "dataType": "observed"
-    },
-    {
-      "date": "2025-05-01",
-      "value": -18,
-      "confidenceLow": -28,
-      "confidenceHigh": -10,
-      "sourceIds": [
-        "ilo-gig-workers-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
     },
     {
       "date": "2025-10-01",
@@ -79,7 +51,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "corporate",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "volume/spend, not rate",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Business spend on freelance marketplaces (share of total card spend fell from 0.66% to 0.14%), not per-hour or per-project rates. No documented conversion from spend to rates; plotted at the raw value with proxy half-weight."
+      }
     },
     {
       "date": "2025-11-14",
@@ -101,15 +81,23 @@
     },
     {
       "date": "2026-02-01",
-      "value": -32,
-      "confidenceLow": -44,
-      "confidenceHigh": -22,
+      "value": -25,
+      "confidenceLow": -50,
+      "confidenceHigh": -20,
       "sourceIds": [
         "sciencedirect-freelancer-demand-2025"
       ],
       "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
+      "metricType": "postings",
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "volume/spend, not rate",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Difference-in-differences decline in job postings for LLM-substitutable skill clusters relative to unaffected clusters; cluster-level declines span 20-50%. Demand volume, not prices. No documented conversion from posting volume to rates, so plotted at the raw value with proxy half-weight."
+      }
     },
     {
       "date": "2026-07-14",
@@ -364,33 +352,13 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "fiverr-market-report-2023",
-      "title": "Fiverr Business Trends Report H2 2023",
-      "url": "https://www.fiverr.com/cp/business-trends-index-october-2023",
-      "publisher": "Fiverr",
-      "evidenceTier": 1,
-      "datePublished": "2023-11-01",
-      "excerpt": "Average order value for writing gigs declined 20%. AI-assisted gig categories (AI art, prompt writing) grew 4x but at lower price points.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "nber-freelance-ai-2024",
-      "title": "The Impact of Generative AI on Freelance Labor Markets",
+      "title": "The Short-Term Effects of Generative Artificial Intelligence on Employment: Evidence from an Online Labor Market",
       "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2023.18441",
       "publisher": "Organization Science (Hui, Reshef, Zhou)",
       "evidenceTier": 1,
       "datePublished": "2024-03-15",
-      "excerpt": "ChatGPT's launch caused a 21% decline in freelance writing job postings and a 15% drop in average hourly rates within 6 months.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "upwork-earnings-q2-2024",
-      "title": "Upwork Q2 2024 Earnings Report",
-      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
-      "publisher": "Upwork (SEC Filing)",
-      "evidenceTier": 1,
-      "datePublished": "2024-07-01",
-      "excerpt": "Gross services volume in writing declined 33% YoY. Translation down 40%. Company pivoting to AI-augmented freelancer model.",
+      "excerpt": "Freelancers in more affected occupations experienced a decrease of 2% in the number of monthly jobs and a decrease of 5.2% in monthly earnings on the platform, following the release of ChatGPT, compared to freelancers in less-affected occupations.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -401,16 +369,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-01-01",
       "excerpt": "Generative AI is upending freelance work. High-skill freelancers were disproportionately impacted, with top performers seeing the largest setbacks in both contracts and earnings.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "ilo-gig-workers-2025",
-      "title": "World Employment and Social Outlook 2025: Platform Labour",
-      "url": "https://www.ilo.org/publications/flagship-reports/world-employment-and-social-outlook-trends-2025",
-      "publisher": "International Labour Organization",
-      "evidenceTier": 1,
-      "datePublished": "2025-05-01",
-      "excerpt": "Platform workers in writing, translation, and data labeling report median earnings declines of 15-25% since 2023.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -430,7 +388,7 @@
       "publisher": "Journal of Economic Behavior & Organization (Teutloff, Einsiedler, Kässi, Braesemann, Mishkin, del Rio-Chanona)",
       "evidenceTier": 1,
       "datePublished": "2025-01-29",
-      "excerpt": "Demand for substitutable skills (writing, translation) decreased 20-50% relative to counterfactual after ChatGPT launch. Short-term (1-3 week) jobs saw sharpest decline. ML programming demand grew 24%; AI chatbot development nearly tripled. Novice worker demand declined across complementary skill clusters.",
+      "excerpt": "Demand for substitutable skills, such as writing and translation, decreased by 20-50% relative to the counterfactual trend, with the sharpest decline observed for short-term (1-3 week) jobs. The difference-in-differences analysis reveals that, compared to the unaffected clusters, substitutable clusters experienced a 25% decline, while complementary clusters as a whole showed no significant effects.",
       "dateAdded": "2026-03-01"
     },
     {

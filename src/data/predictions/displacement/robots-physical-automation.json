@@ -5,10 +5,30 @@
   "description": "Projected percentage of physical/manual task jobs displaced by industrial robots, warehouse automation, and other physical AI systems by 2030. Synthesizes IFR installation data, academic studies on robot-worker substitution, and institutional forecasts on automation of predictable physical tasks.",
   "category": "displacement",
   "unit": "% of physical-task jobs displaced",
-  "currentValue": 6.1,
+  "currentValue": 3.6,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
+    {
+      "date": "2018-03-08",
+      "value": 4.2,
+      "confidenceLow": 2.1,
+      "confidenceHigh": 7,
+      "sourceIds": [
+        "oecd-automation-risk-2024"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "share of jobs at high risk of automation (>70% probability), OECD PIAAC countries: 14%",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.5,
+        "rationale": "Technical automation feasibility, not realized displacement; task-automation-potential factor from the proxy methodology. Covers all automation, not robots only, across OECD countries."
+      }
+    },
     {
       "date": "2020-06-01",
       "value": 3.3,
@@ -20,56 +40,35 @@
       "evidenceTier": 1,
       "metricType": "employment",
       "sampleSize": 722,
-      "dataType": "observed"
-    },
-    {
-      "date": "2024-04-01",
-      "value": 5,
-      "confidenceLow": 1,
-      "confidenceHigh": 9,
-      "sourceIds": [
-        "acemoglu-macro-2024"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-01-07",
-      "value": 5,
-      "confidenceLow": 2,
-      "confidenceHigh": 8,
-      "sourceIds": [
-        "wef-future-of-jobs-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "survey",
-      "sampleSize": 1000,
-      "dataType": "projected"
-    },
-    {
-      "date": "2025-09-01",
-      "value": 14,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
-      "sourceIds": [
-        "oecd-automation-risk-2024"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "site-derived share from US robot-driven employment loss 1990-2007 (~400K jobs; 0.18-0.34pp EPOP per robot per 1,000 workers)",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "The paper reports a pp effect on the employment-to-population ratio and ~400K jobs lost, not a share of physical-task jobs. The 3.3 value and its 1.3-5.6 range are site-derived and the denominator is undocumented."
+      }
     },
     {
       "date": "2025-10-01",
-      "value": 15,
-      "confidenceLow": 8,
-      "confidenceHigh": 20,
+      "value": 4.5,
+      "confidenceLow": 2.25,
+      "confidenceHigh": 7.5,
       "sourceIds": [
         "shrm-automation-risk-2025"
       ],
       "evidenceTier": 2,
       "metricType": "survey",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "share of US jobs at high risk of displacement from automation and generative AI: 15%",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.5,
+        "rationale": "Technical automation feasibility, not realized displacement; task-automation-potential factor from the proxy methodology. Combines robotics and generative AI."
+      }
     },
     {
       "date": "2025-11-25",
@@ -81,7 +80,15 @@
       ],
       "evidenceTier": 2,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "site-derived from MGI technical automation potential (57% of US work hours automatable); no 7% figure in the source",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "MGI reports technical automation potential and occupational shifts, not a displacement share. The derivation of 7 (range 3-12) is undocumented and could not be reproduced from source text."
+      }
     },
     {
       "date": "2026-01-15",
@@ -93,7 +100,15 @@
       ],
       "evidenceTier": 1,
       "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "projected employment change, mining, quarrying, and oil and gas extraction industry only, 2024-34: -1.6%",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "One industry stands in for all physical-task jobs, and BLS does not attribute the decline to robotics."
+      }
     }
   ],
   "overlays": [
@@ -140,7 +155,7 @@
         "wef-future-of-jobs-2025"
       ],
       "evidenceTier": 2,
-      "label": "WEF: Robots and automation to displace 5M more jobs than they create by 2030"
+      "label": "WEF: robots and automation a net 5M global job loss by 2030 (employer survey)"
     },
     {
       "date": "2025-01-07",
@@ -317,16 +332,6 @@
       "dateAdded": "2026-03-10"
     },
     {
-      "id": "acemoglu-macro-2024",
-      "title": "The Simple Macroeconomics of AI",
-      "url": "https://www.nber.org/papers/w32487",
-      "publisher": "NBER (Acemoglu)",
-      "evidenceTier": 1,
-      "datePublished": "2024-04-01",
-      "excerpt": "Automation always produces a positive productivity effect on wages by reducing costs; simultaneously, it displaces workers from the tasks they used to perform. Net displacement from all AI and automation estimated at 1-5% of employment.",
-      "dateAdded": "2026-03-10"
-    },
-    {
       "id": "ifr-world-robotics-2025",
       "title": "World Robotics 2025 — Industrial Robots",
       "url": "https://ifr.org/ifr-press-releases/news/global-robot-demand-in-factories-doubles-over-10-years",
@@ -358,11 +363,11 @@
     },
     {
       "id": "oecd-automation-risk-2024",
-      "title": "The Risk of Automation for Jobs in OECD Countries",
-      "url": "https://www.oecd.org/en/publications/the-risk-of-automation-for-jobs-in-oecd-countries_5jlz9h56dvq7-en.html",
-      "publisher": "OECD",
+      "title": "Automation, skills use and training",
+      "url": "https://doi.org/10.1787/2e2f4eea-en",
+      "publisher": "OECD (Nedelkoska & Quintini)",
       "evidenceTier": 2,
-      "datePublished": "2024-09-01",
+      "datePublished": "2018-03-08",
       "excerpt": "14% of jobs across OECD countries are at high risk of automation. An additional 32% may be significantly changed but not eliminated. 27% of jobs at high risk when including all automation technologies including AI.",
       "dateAdded": "2026-03-10"
     },
