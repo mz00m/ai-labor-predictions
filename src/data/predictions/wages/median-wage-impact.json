@@ -3,10 +3,10 @@
   "slug": "median-wage-impact",
   "title": "Median Wage Impact from AI by 2030",
   "description": "Projected change in real median wages in the US due to AI adoption, combining productivity gains and displacement effects.",
-  "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model rather than forecasts, and the authors attach no probabilities to them. They are the average wage relative to the model's no-AI counterfactual path, which is the same AI-attributable construct this chart plots, but an average rather than a median \u2014 in a model with two groups of workers those differ. The scenarios also hide the split the paper cares most about: in the extreme case the average wage is 9.7% above the no-AI path while the cognitive wage is 11.5% below it, with the gain landing on workers outside cognitive occupations.",
+  "disclaimer": "The Anthropic Institute's three September 2026 scenarios appear as context signals, not plotted estimates, because they are not forecasts and the authors attach no probabilities to them. They show the average wage relative to the model's no-AI counterfactual path, which is the same AI-attributable construct this chart plots, but an average rather than a median \u2014 in a model with two groups of workers those differ. The scenarios also hide the split the paper cares most about: in the extreme case the average wage is 9.7% above the no-AI path while the cognitive wage is 11.5% below it, with the gain landing on workers outside cognitive occupations.",
   "category": "wages",
   "unit": "% change in real median wage",
-  "currentValue": -0.1,
+  "currentValue": -0.4,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -125,18 +125,6 @@
         "conversionHigh": 1,
         "rationale": "OEWS median hourly wage change moving from the 10th to the 90th percentile of GenAI exposure, knowledge-intensive services (NAICS 51-56) only. The authors state the coefficients capture differential changes across the exposure distribution, not the aggregate effect; plotted at the raw gap with proxy half-weight."
       }
-    },
-    {
-      "date": "2026-09-01",
-      "value": 2.1,
-      "sourceIds": [
-        "korinek-jones-econ-scenarios-substantial-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "projected",
-      "metricType": "projection",
-      "confidenceLow": 0.7,
-      "confidenceHigh": 9.7
     }
   ],
   "overlays": [
@@ -744,6 +732,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic Institute: extreme scenario, average wage +9.7% vs the no-AI path in 2030"
+    },
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "korinek-jones-econ-scenarios-substantial-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic Institute: substantial scenario, 2.1% median wage change (not a prediction)"
     },
     {
       "date": "2026-09-15",
