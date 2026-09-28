@@ -1,0 +1,124 @@
+{
+  "week": "2026-W40",
+  "generatedAt": "2026-09-28T16:28:21.808Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Macroeconomic Effect of AI Sized Through Software Engineering Productivity Channel",
+      "summary": "Blumenfeld, Hazell, Lian, and Schaab (NBER w35793) develop a forward-looking, real-time measure of AI's macroeconomic impact by tracking how AI productivity shocks affect software engineering firms' stock returns. Their methodology links financial market signals to economy-wide output effects, providing a novel instrument for quantifying the tech sector's AI-driven productivity gains. The findings have direct implications for how rapidly AI is reshaping labor demand within software and engineering roles.",
+      "source": "https://www.nber.org/papers/w35793",
+      "authors": [
+        "Alex Blumenfeld",
+        "Jonathon Hazell",
+        "Chen Lian",
+        "Andreas Schaab"
+      ],
+      "publishedAt": "2026-09-28",
+      "score": 0.617,
+      "sourceAdapter": "nber",
+      "graphSlug": "tech-sector-displacement"
+    },
+    {
+      "title": "Labor Commoditization: How AI Simplifies Jobs and Erodes Worker Bargaining Power",
+      "summary": "Fukui, Nakamura, and Steinsson (NBER w35815) present a theoretical and empirical account of how technical change — including AI — renders workers more substitutable by simplifying tasks, a process they term 'commoditization.' As jobs become easier to fill by a broader pool of workers, firm bargaining power rises and wage-setting leverage for workers falls, compressing median wages. The paper offers a rigorous mechanism connecting AI-driven task simplification directly to downward wage pressure across skill groups.",
+      "source": "https://www.nber.org/papers/w35815",
+      "authors": [
+        "Masao Fukui",
+        "Emi Nakamura",
+        "Jón Steinsson"
+      ],
+      "publishedAt": "2026-09-28",
+      "score": 0.467,
+      "sourceAdapter": "nber",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Generative AI Extends Automation to Cognitive and Language-Intensive Tasks",
+      "summary": "Li (2026) conducts a task-level analysis of generative AI's dual role in displacing and augmenting labor, finding that GenAI has meaningfully expanded the automation frontier beyond routine physical work into language, reasoning, and creative cognitive tasks. The paper maps specific task families at highest risk of substitution versus those where AI acts as a complement, offering granular guidance for workforce transition planning. Results suggest white-collar and professional occupations face materially elevated exposure compared to pre-LLM automation waves.",
+      "source": "https://doi.org/10.54254/2754-1169/2026.ld36811",
+      "authors": [
+        "Yida Li"
+      ],
+      "publishedAt": "2026-09-15",
+      "doi": "10.54254/2754-1169/2026.ld36811",
+      "score": 0.127,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Global Survey: Workers Expect AI to Augment Rather Than Displace — But Fears Are Uneven",
+      "summary": "Bruschi et al. (2026) surveyed over 64,000 adults across 32 countries representing 85% of global output, finding that workers on balance expect AI to facilitate rather than threaten their jobs, though pessimism is significantly higher among lower-income and routine-task workers. Beliefs vary sharply by country, sector, and education level, with augmentation optimism concentrated among high-skill respondents. The data suggest public expectations are diverging in ways that may shape policy responses and adoption rates.",
+      "source": "https://doi.org/10.65864/56xgd2p83v",
+      "authors": [
+        "Claudia Bruschi",
+        "Francesco D'Acunto",
+        "Fiorella De Fiore",
+        "Damiano Sandri",
+        "Michael Weber"
+      ],
+      "publishedAt": "2026-09-21",
+      "doi": "10.65864/56xgd2p83v",
+      "score": 0.233,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "AI Adoption by IT Firms Drives Market Share Gains and Signals Sector-Wide Labor Demand Shifts",
+      "summary": "Singla and Behl (2026) examine Indian IT services firms and global capability centres, finding that AI adopters grow market share and revenues significantly faster than non-adopters, creating a structural divergence in labor demand within the sector. Faster-growing AI-adopting firms hire for higher-skill roles while shedding routine positions, implying an overall recomposition rather than simple contraction of sector employment. The findings provide early-indicator evidence on how AI adoption rates translate into observable workforce reshaping in a major global IT hub.",
+      "source": "https://doi.org/10.47191/jefms/v9-i9-24",
+      "authors": [
+        "Sanchi Singla",
+        "Chavi Behl"
+      ],
+      "publishedAt": "2026-09-25",
+      "doi": "10.47191/jefms/v9-i9-24",
+      "score": 0.323,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "ai-adoption-rate"
+    }
+  ],
+  "themes": [
+    "AI is extending automation's reach into cognitive and language-intensive white-collar tasks, broadening displacement risk well beyond historical routine-job categories",
+    "Labor commoditization — AI simplifying jobs to make workers more substitutable — is emerging as a primary mechanism linking technology adoption to wage compression",
+    "Financial market signals are being deployed as real-time proxies for AI's macroeconomic footprint, particularly in the software engineering and tech sectors",
+    "Global worker sentiment on AI skews toward augmentation optimism, but pessimism is concentrated precisely among lower-skill and routine-task workers most exposed to displacement",
+    "AI-adopting firms are pulling ahead on growth and market share, accelerating within-sector labor demand recomposition toward higher-skill roles in IT and professional services"
+  ],
+  "watching": [
+    {
+      "title": "Fed Reserve FEDS Notes: Monitoring AI Adoption in the US Economy (overdue Q3 update)",
+      "source": "https://www.federalreserve.gov/econres/notes/feds-notes/",
+      "reason": "Quarterly Fed synthesis of US AI-adoption surveys is 178 days overdue; next release could materially update ai-adoption-rate and workforce-ai-exposure baselines."
+    },
+    {
+      "title": "Frontier Technology Adopters and the Aggregate Decline of Routine Jobs",
+      "source": "https://doi.org/10.1016/j.jebo.2026.107732",
+      "reason": "Micro-founded German establishment data linking frontier tech adoption to economy-wide occupational shifts; watch for policy uptake and US replication studies."
+    },
+    {
+      "title": "Task-Based Analysis of AI-Driven Transformation of Clinical Work in Diabetes Care",
+      "source": "https://doi.org/10.1038/s41598-026-70628-w",
+      "reason": "Task-level Delphi study in healthcare signals admin and clinical workflow disruption; early evidence for healthcare-admin-displacement trajectory."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "ssrn",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "fred",
+      "trackedInstitutions",
+      "googleCse",
+      "hnAlgolia",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "totalCandidates": 106,
+    "afterDedup": 104
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "week": "2026-W40",
+  "generatedAt": "2026-09-28T16:29:26.127Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Macroeconomic Effect of AI Sized Through Software Engineering Productivity Channel",
+        "summary": "Blumenfeld, Hazell, Lian, and Schaab (NBER w35793) develop a forward-looking, real-time measure of AI's macroeconomic impact by tracking how AI productivity shocks affect software engineering firms' stock returns. Their methodology links financial market signals to economy-wide output effects, providing a novel instrument for quantifying the tech sector's AI-driven productivity gains. The findings have direct implications for how rapidly AI is reshaping labor demand within software and engineering roles.",
+        "source": "https://www.nber.org/papers/w35793",
+        "authors": [
+          "Alex Blumenfeld",
+          "Jonathon Hazell",
+          "Chen Lian",
+          "Andreas Schaab"
+        ],
+        "publishedAt": "2026-09-28",
+        "score": 0.617,
+        "sourceAdapter": "nber",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "nber-macroeconomic-effect-of-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI raised software engineering productivity equiv. to permanent 32.6% gain",
+          "quote": "From November 2022 to December 2025, AI increased the market's expected present value of software engineering productivity by the equivalent of a permanent 32.6% productivity increase."
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI effect on GDP level: 3.6% baseline, 6.5% with R&D spillovers",
+          "quote": "The corresponding effect on the level of GDP is 3.6% in the baseline and 6.5% when higher software engineering productivity also raises R&D productivity."
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "By mid-2026 AI productivity/GDP impact more than doubled vs. end of 2025",
+          "quote": "By mid-2026, amid rapid progress in coding agents, the effect of AI on productivity and GDP had more than doubled relative to the end of 2025."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Labor Commoditization: How AI Simplifies Jobs and Erodes Worker Bargaining Power",
+        "summary": "Fukui, Nakamura, and Steinsson (NBER w35815) present a theoretical and empirical account of how technical change — including AI — renders workers more substitutable by simplifying tasks, a process they term 'commoditization.' As jobs become easier to fill by a broader pool of workers, firm bargaining power rises and wage-setting leverage for workers falls, compressing median wages. The paper offers a rigorous mechanism connecting AI-driven task simplification directly to downward wage pressure across skill groups.",
+        "source": "https://www.nber.org/papers/w35815",
+        "authors": [
+          "Masao Fukui",
+          "Emi Nakamura",
+          "Jón Steinsson"
+        ],
+        "publishedAt": "2026-09-28",
+        "score": 0.467,
+        "sourceAdapter": "nber",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "nber-labor-commoditization-how-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Generative AI Extends Automation to Cognitive and Language-Intensive Tasks",
+        "summary": "Li (2026) conducts a task-level analysis of generative AI's dual role in displacing and augmenting labor, finding that GenAI has meaningfully expanded the automation frontier beyond routine physical work into language, reasoning, and creative cognitive tasks. The paper maps specific task families at highest risk of substitution versus those where AI acts as a complement, offering granular guidance for workforce transition planning. Results suggest white-collar and professional occupations face materially elevated exposure compared to pre-LLM automation waves.",
+        "source": "https://doi.org/10.54254/2754-1169/2026.ld36811",
+        "authors": [
+          "Yida Li"
+        ],
+        "publishedAt": "2026-09-15",
+        "doi": "10.54254/2754-1169/2026.ld36811",
+        "score": 0.127,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "doi-generative-ai-extends-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "GenAI extends automation to cognitive/language-intensive white-collar tasks",
+          "quote": "Generative AI Extends Automation to Cognitive and Language-Intensive Tasks"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Global Survey: Workers Expect AI to Augment Rather Than Displace — But Fears Are Uneven",
+        "summary": "Bruschi et al. (2026) surveyed over 64,000 adults across 32 countries representing 85% of global output, finding that workers on balance expect AI to facilitate rather than threaten their jobs, though pessimism is significantly higher among lower-income and routine-task workers. Beliefs vary sharply by country, sector, and education level, with augmentation optimism concentrated among high-skill respondents. The data suggest public expectations are diverging in ways that may shape policy responses and adoption rates.",
+        "source": "https://doi.org/10.65864/56xgd2p83v",
+        "authors": [
+          "Claudia Bruschi",
+          "Francesco D'Acunto",
+          "Fiorella De Fiore",
+          "Damiano Sandri",
+          "Michael Weber"
+        ],
+        "publishedAt": "2026-09-21",
+        "doi": "10.65864/56xgd2p83v",
+        "score": 0.233,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-global-survey-workers-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI Adoption by IT Firms Drives Market Share Gains and Signals Sector-Wide Labor Demand Shifts",
+        "summary": "Singla and Behl (2026) examine Indian IT services firms and global capability centres, finding that AI adopters grow market share and revenues significantly faster than non-adopters, creating a structural divergence in labor demand within the sector. Faster-growing AI-adopting firms hire for higher-skill roles while shedding routine positions, implying an overall recomposition rather than simple contraction of sector employment. The findings provide early-indicator evidence on how AI adoption rates translate into observable workforce reshaping in a major global IT hub.",
+        "source": "https://doi.org/10.47191/jefms/v9-i9-24",
+        "authors": [
+          "Sanchi Singla",
+          "Chavi Behl"
+        ],
+        "publishedAt": "2026-09-25",
+        "doi": "10.47191/jefms/v9-i9-24",
+        "score": 0.323,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "doi-ai-adoption-by-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-adopting India IT firms show higher revenue than non-adopters",
+          "quote": "companies characterized by a greater degree of AI adoption have much better revenue indicators than those characterized by a lower degree of AI adoption, thus confirming the assumption that AI makes companies more productive and efficient and improves their competitive position"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "India IT sector: revenue growth far outpaces job creation rate",
+          "quote": "there is a situation where revenue expansion is much faster than job creation, which indicates weakening relationship between output growth and labor demand"
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "AI restructures India IT labor demand; routine tasks declining",
+          "quote": "Though net hiring slows down, total job roles in the industry still grow which suggests that AI does not eliminate jobs, but restructures labor demand since the trend now indicates that routine tasks are becoming less and less common"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "India top IT firms have 250,000+ highly skilled AI employees",
+          "quote": "India's top IT firms have more than 250,000 highly skilled AI employees"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "24 India GCC centres crossed $1bn revenue amid AI adoption wave",
+          "quote": "India's GCC sector surges: 24 Centres cross $1 bn revenue, on path for further growth"
+        }
+      ]
+    }
+  ]
+}
