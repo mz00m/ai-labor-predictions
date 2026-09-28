@@ -5,7 +5,7 @@
   "description": "The weighted average (12.1%) reflects a mix of direct employment measures and job-posting proxy data. One peer-reviewed study (Brynjolfsson et al. 2025) finds net tech employment grew +1.3%, but this masks a K-shaped split: developers aged 22-25 saw ~20% employment decline since late 2022, while those 35-49 grew +9%. Job posting data from Indeed, Lightcast, and BLS show 13-22% declines in tech hiring volume. The primary channel is not mass layoffs but evaporated entry points \u2014 firms stopped creating junior roles as senior devs absorb that work with AI tools.",
   "category": "displacement",
   "unit": "% of jobs displaced",
-  "currentValue": 12,
+  "currentValue": 11.8,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -939,6 +939,15 @@
     }
   ,
     {
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "challenger-august-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: tech cuts 6,103 in Aug, its lowest month of 2026; 155,126 YTD is 29% of all cuts"
+    },
+{
       "date": "2026-09-04",
       "direction": "down",
       "sourceIds": [
@@ -1832,6 +1841,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-20",
       "excerpt": "\"The exception is computer and mathematical occupations, the most AI-exposed of the 22 groups, whose employment share grows by 0.8 percentage points while its junior share falls by 3.3 points.\" The authors read the share growth as evidence that \"AI is labor expanding rather than labor saving for these occupations.\" Among technology affiliates specifically, adoption lowers the junior share by 3.9 percentage points, raises senior employment by 14.6 percent, and raises total employment by 7.8 percent."
+    },
+    {
+      "id": "challenger-august-2026",
+      "title": "Challenger Report: August Job Cuts Up 58%, Consumer Products, Food Lead",
+      "url": "https://www.challengergray.com/blog/challenger-report-august-job-cuts-up-58-consumer-products-food-lead/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "\"U.S.-based employers announced 52,881 job cuts in August 2026, up 58% from July but the lowest August total since 2022.\" Artificial Intelligence \"fell to the fourth-most cited reason with 3,462 cuts in August,\" ending a five-month run as the leading stated reason for cuts. Year to date, AI has been cited in 116,175 announced cuts, about 22% of the 529,914 cuts announced through August, against 892,362 over the same period of 2025 (down 41%). Technology announced 6,103 cuts in August, its lowest monthly total of 2026, for 155,126 year to date, or 29% of all 2026 cuts. Announced hiring plans were 12,325 in August against 1,494 in August 2025, and 119,825 year to date against 87,626 (up 37%).",
+      "dateAdded": "2026-09-28"
     }
   ],
   "marketIds": {

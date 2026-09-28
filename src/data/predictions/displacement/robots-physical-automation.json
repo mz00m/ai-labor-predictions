@@ -215,6 +215,33 @@
       "label": "McKinsey: Robot costs must fall from $150-500K to $20-50K for mass adoption"
     },
     {
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "ifr-world-robotics-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IFR: 600K+ industrial robots installed globally in 2025, up 11%; US +12% to 38,500 units"
+    },
+{
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "ifr-world-robotics-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IFR: operational stock up 9% to a record 5M robots; China took 59% of 2025 installations"
+    },
+{
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "ifr-world-robotics-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "IFR forecast: annual installations reach 655K units in 2026 and 806K by 2029"
+    },
+{
       "date": "2026-01-01",
       "direction": "down",
       "sourceIds": [
@@ -486,6 +513,16 @@
       "datePublished": "2026-07-02",
       "excerpt": "Daron Acemoglu on what would break his own ceiling of \"less than two to four percent\" net job losses over five years: \"There are also so many big wildcards. The big, big, big wildcard, is the integration of AI and robotics. There are efforts on this much more outside of the US than the US, but also in the United States. And if there were amazing breakthroughs there, that would open up the number of jobs that AI would impact hugely. Physical tasks is about 50% of the work in the US economy.\" The 50% is the share of US work that is physical, not the share automated, so it sizes the exposed pool rather than supplying a point for this chart. Recorded June 2026, published July 2, 2026.",
       "dateAdded": "2026-08-26"
+    },
+    {
+      "id": "ifr-world-robotics-2026",
+      "title": "World Robotics 2026 - Industrial Robots",
+      "url": "https://ifr.org/ifr-press-releases/news/world-robotics-2026",
+      "publisher": "International Federation of Robotics",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-24",
+      "excerpt": "World Robotics 2026, covering calendar year 2025. The global operational stock of industrial robots rose 9 percent to a record 5 million units, with more than 600,000 new units installed over the year, up 11 percent on 2024. China installed 354,000 units (+20 percent), 59 percent of global deployments, with domestic manufacturers at 55 percent market share. The United States installed 38,500 units (+12 percent) and passed Japan to become the second-largest market; Japan fell to third at 36,219 units (-19 percent). Germany led Europe with fewer than 25,000 units (-8 percent) and Italy installed about 7,800 (-11 percent). India took sixth place with nearly 10,500 units (+15 percent), a 27 percent average annual growth rate since 2020. IFR forecasts 655,000 installations in 2026 and 806,000 by 2029.",
+      "dateAdded": "2026-09-28"
     }
   ]
 }

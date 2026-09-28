@@ -320,6 +320,15 @@
     }
   ,
     {
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "census-bfs-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BFS Aug 2026: 532K business applications (-7.8% MoM); 28.5K projected formations (-4.6%)"
+    },
+{
       "date": "2026-09-10",
       "direction": "up",
       "sourceIds": [
@@ -596,6 +605,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-10",
       "excerpt": "From 2022 to 2024, the self-employment rate among graduates in the top decile of AI exposure increased by 0.48 percentage points, from 1.01 percent to 1.49 percent, while the self-employment rate for the bottom six deciles of graduates increased by only 0.06 percentage points."
+    },
+    {
+      "id": "census-bfs-aug-2026",
+      "title": "Business Formation Statistics, August 2026",
+      "url": "https://www.census.gov/econ/bfs/current/index.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-11",
+      "excerpt": "\"Business Applications for August 2026, adjusted for seasonal variation, were 531,728, a decrease of 7.8 percent compared to July 2026.\" \"Projected Business Formations (within 4 quarters) for August 2026, adjusted for seasonal variation, were 28,501, a decrease of 4.6 percent compared to July 2026.\" This reverses July's 8.1 percent jump in applications and returns the series close to its June 2026 level of about 531,000.",
+      "dateAdded": "2026-09-28"
     }
   ]
 }

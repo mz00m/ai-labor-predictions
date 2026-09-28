@@ -6,7 +6,7 @@
   "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model, not forecasts, and the authors attach no probabilities to them. They are plotted as the increase in the economy-wide unemployment rate above the model's no-AI baseline of 3.8% \u2014 0.1, 0.8 and 8.1 points in the modest, substantial and extreme scenarios. In that model the labor force is fixed and displaced cognitive workers reallocate into other occupations, so this excess unemployment is the net job loss; the gross number of workers changing occupation is far larger.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 2.2,
+  "currentValue": 1.7,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -43,26 +43,6 @@
       "dataType": "projected"
     },
     {
-      "date": "2026-01-13",
-      "value": 6,
-      "confidenceLow": 3,
-      "confidenceHigh": 11,
-      "sourceIds": [
-        "forrester-6pct"
-      ],
-      "evidenceTier": 2,
-      "metricType": "survey",
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of US jobs lost to AI and automation by 2030, gross (not net of jobs created)",
-        "conversionFactor": 1,
-        "conversionLow": 0.1,
-        "conversionHigh": 1,
-        "rationale": "Gross job losses; Forrester does not net out job creation, so net displacement is lower"
-      }
-    },
-    {
       "date": "2025-01-01",
       "value": 0.6,
       "confidenceLow": 0.3,
@@ -80,6 +60,26 @@
         "conversionLow": 0.5,
         "conversionHigh": 1.5,
         "rationale": "EPOP decline used as direct proxy for job displacement percentage"
+      }
+    },
+    {
+      "date": "2025-01-08",
+      "value": 8,
+      "confidenceLow": 5,
+      "confidenceHigh": 14,
+      "sourceIds": [
+        "wef-future-jobs-2025"
+      ],
+      "evidenceTier": 2,
+      "metricType": "projection",
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of global jobs displaced by 2030 from all drivers, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0,
+        "conversionHigh": 0.5,
+        "rationale": "Global churn from all causes (92M displaced, 170M created); the net figure is +7% job growth, not loss"
       }
     },
     {
@@ -165,26 +165,6 @@
       }
     },
     {
-      "date": "2025-01-08",
-      "value": 8,
-      "confidenceLow": 5,
-      "confidenceHigh": 14,
-      "sourceIds": [
-        "wef-future-jobs-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "projection",
-      "dataType": "projected",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "% of global jobs displaced by 2030 from all drivers, gross",
-        "conversionFactor": 1,
-        "conversionLow": 0,
-        "conversionHigh": 0.5,
-        "rationale": "Global churn from all causes (92M displaced, 170M created); the net figure is +7% job growth, not loss"
-      }
-    },
-    {
       "date": "2026-01-01",
       "value": 0,
       "confidenceLow": 0,
@@ -226,6 +206,26 @@
         "conversionLow": 0.5,
         "conversionHigh": 1.5,
         "rationale": "16.4% to 15.5% employment share decline in AI-exposed occupations used as displacement proxy"
+      }
+    },
+    {
+      "date": "2026-01-13",
+      "value": 6,
+      "confidenceLow": 3,
+      "confidenceHigh": 11,
+      "sourceIds": [
+        "forrester-6pct"
+      ],
+      "evidenceTier": 2,
+      "metricType": "survey",
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US jobs lost to AI and automation by 2030, gross (not net of jobs created)",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "Gross job losses; Forrester does not net out job creation, so net displacement is lower"
       }
     },
     {
@@ -2292,6 +2292,60 @@
       "label": "Tabarrok: AI taking over 'a large number' of tasks rose 2.4%\u21927.1% of adopters"
     },
     {
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "bls-employment-situation-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Aug 2026: nonfarm +162K against a +31K prior-12-month average; U-rate steady at 4.1%"
+    },
+{
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "bls-employment-situation-aug-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: June revised +20K to +31K and July revised -23K to +21K, erasing July's reported loss"
+    },
+{
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "challenger-august-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: AI cited in 3,462 Aug cuts (6.5% of 52,881), ending its five-month run as top reason"
+    },
+{
+      "date": "2026-08-31",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-august-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: 116,175 AI-attributed cuts YTD 2026, about 22% of all 529,914 announced cuts"
+    },
+{
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-tracker-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: through Aug 2026 CPS, no clear AI labor-market disruption; metrics still flat"
+    },
+{
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "fairlie-wu-recent-grads-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER Fairlie & Wu: recent-grad unemployment 7.3% summer 2026, inside its 6.3-7.8% range since 2022"
+    },
+{
       "date": "2026-09-01",
       "direction": "down",
       "sourceIds": [
@@ -4097,6 +4151,46 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-20",
       "excerpt": "\"Total employment goes up by a marginally significant 3.3 percent.\" Across the country-by-country meta-analysis, \"senior employment rises by a marginally significant 3.4 percent on average, and no country shows a significant decline in total employment,\" with average junior-share decline of 1.1 percentage points. Cross-country dispersion is small enough that a common effect cannot be rejected. A global estimate at the firm level, not a US economy-wide one."
+    },
+    {
+      "id": "bls-employment-situation-aug-2026",
+      "title": "BLS Employment Situation: August 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_09042026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-04",
+      "excerpt": "\"Total nonfarm payroll employment rose by 162,000 in August, higher than the average monthly gain of 31,000 over the prior 12 months.\" The unemployment rate was unchanged at 4.1 percent. \"Information employment declined by 23,000 in August, following losses that had averaged 8,000 per month over the prior 12 months.\" \"Employment in health care continued to trend up in August (+13,000) but at a slower pace than the average monthly gain over the prior 12 months (+32,000).\" \"Employment showed little change over the month in other major industries, including ... professional and business services.\" \"The change in total nonfarm payroll employment for June was revised up by 11,000, from +20,000 to +31,000, and the change for July was revised up by 44,000, from -23,000 to +21,000.\" Average hourly earnings rose 10 cents, or 0.3 percent, to $37.75, up 3.1 percent over the year.",
+      "dateAdded": "2026-09-28"
+    },
+    {
+      "id": "challenger-august-2026",
+      "title": "Challenger Report: August Job Cuts Up 58%, Consumer Products, Food Lead",
+      "url": "https://www.challengergray.com/blog/challenger-report-august-job-cuts-up-58-consumer-products-food-lead/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-02",
+      "excerpt": "\"U.S.-based employers announced 52,881 job cuts in August 2026, up 58% from July but the lowest August total since 2022.\" Artificial Intelligence \"fell to the fourth-most cited reason with 3,462 cuts in August,\" ending a five-month run as the leading stated reason for cuts. Year to date, AI has been cited in 116,175 announced cuts, about 22% of the 529,914 cuts announced through August, against 892,362 over the same period of 2025 (down 41%). Technology announced 6,103 cuts in August, its lowest monthly total of 2026, for 155,126 year to date, or 29% of all 2026 cuts. Announced hiring plans were 12,325 in August against 1,494 in August 2025, and 119,825 year to date against 87,626 (up 37%).",
+      "dateAdded": "2026-09-28"
+    },
+    {
+      "id": "yale-budgetlab-tracker-sep-2026",
+      "title": "Tracking the Impact of AI on the Labor Market (September 2026 update)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-15",
+      "excerpt": "\"The Budget Lab's labor market analysis, updated to incorporate August 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends.\" Key takeaways unchanged: \"The occupational mix is not yet changing in ways that clearly align with the introduction of AI into the workforce\"; \"Measures of AI usage show no connection to changes in employment or unemployment\"; \"A synthetic differences-in-differences analysis of AI exposure does not yet clearly indicate an AI-related labor market footprint.\" This is the first update to extend the tracker past the Q1 2026 window covered by the May 2026 analysis.",
+      "dateAdded": "2026-09-28"
+    },
+    {
+      "id": "fairlie-wu-recent-grads-2026",
+      "title": "The Early Impacts of AI on Employment among Recent College Graduates (NBER WP 35796)",
+      "url": "https://www.nber.org/papers/w35796",
+      "publisher": "NBER (Fairlie & Wu)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "\"Using CPS microdata, we provide the first estimates of the effects of AI on the unemployment of recent college graduates in June, July and August 2026. We provide evidence suggesting that unemployment rates are especially high for summer months and that 2026 might be the first year of widespread enough AI use in the workplace to detect impacts of AI on recent college graduates, the group argued to be most vulnerable to AI replacement.\" The unemployment rate for recent college graduates (bachelor's degree holders aged 22 to 25) was 7.3 percent in summer 2026, inside the 6.3 to 7.8 percent range observed since 2022. Rates did not rise significantly relative to older college graduates or to young workers without a degree; difference-in-differences and event-study specifications give similar results. The authors do find some positive correlation between 2026 unemployment and remote-work availability by occupation. Not plotted on the early-career chart: this is an unemployment rate level for a demographic group, not a relative percent employment decline measured against least-exposed occupations.",
+      "dateAdded": "2026-09-28"
     }
   ]
 }

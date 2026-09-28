@@ -1,0 +1,14 @@
+{
+  "id": "bls-employment-situation-aug-2026",
+  "abstract": "The BLS Employment Situation for August 2026, released September 4, 2026. Nonfarm payrolls rose 162,000 and the unemployment rate held at 4.1 percent. The release matters to jobsdata.ai as the aggregate check on AI displacement claims: if AI were removing jobs at the scale the louder forecasts imply, it would show here first. It also carries the single most AI-relevant industry line, information employment.",
+  "keyFindings": [
+    "Total nonfarm payroll employment rose by 162,000 in August, well above the average monthly gain of 31,000 over the prior 12 months, and the unemployment rate was unchanged at 4.1 percent.",
+    "Information employment fell 23,000 in August, against losses averaging 8,000 a month over the prior 12 months - the sharpest single-month decline in the sector most exposed to generative AI.",
+    "Revisions went the other way from the July vintage: June was revised up 11,000 to +31,000 and July up 44,000 to +21,000, which erases the reported July payroll loss that several AI-displacement readings leaned on.",
+    "Health care added 13,000, well below its +32,000 prior-12-month average; professional and business services showed little change over the month.",
+    "Average hourly earnings rose 10 cents, or 0.3 percent, to $37.75, up 3.1 percent over the year."
+  ],
+  "methodology": "Two monthly surveys run for BLS by the Census Bureau: the establishment survey of roughly 119,000 businesses and agencies (payroll employment, hours, earnings) and the household survey of about 60,000 households (unemployment rate, labor force participation). Seasonally adjusted. Payroll estimates are revised in each of the two following releases as more reports arrive.",
+  "qualifiers": "An aggregate measure with no AI attribution of any kind. Sectoral moves such as the information decline are consistent with AI displacement but equally consistent with post-pandemic normalization, interest rates, or sector-specific restructuring; the release cannot separate them. Monthly payroll changes carry sampling error of roughly plus or minus 130,000 at the 90 percent confidence level, so a single month's figure is weaker evidence than its precision suggests, and the size of this month's revisions demonstrates the point.",
+  "fetchedAt": "2026-09-28"
+}

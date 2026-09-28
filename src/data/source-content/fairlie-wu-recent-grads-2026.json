@@ -1,0 +1,14 @@
+{
+  "id": "fairlie-wu-recent-grads-2026",
+  "abstract": "NBER Working Paper 35796 (September 2026), by Robert W. Fairlie and Jane Wu. The first estimates of AI's effect on unemployment among recent college graduates using summer 2026 CPS microdata. Recent graduates are the group most often argued to be first exposed to AI, on the reasoning that firms can stop opening entry-level roles for routine office work long before they lay off experienced staff. The paper finds no spike.",
+  "keyFindings": [
+    "The unemployment rate for recent college graduates - bachelor's degree holders aged 22 to 25 - was 7.3 percent in summer 2026, inside the 6.3 to 7.8 percent range observed since 2022.",
+    "Unemployment did not rise significantly relative to older college graduates, or relative to young workers without a degree, over June, July and August 2026.",
+    "Difference-in-differences and event-study specifications give similar results, and the finding holds when the definition is widened to include those who want employment but are not actively searching.",
+    "The authors do find some positive correlation between 2026 unemployment and remote-work availability by occupation, which they flag as the one channel worth watching.",
+    "The paper's own framing concedes that 2026 'might be the first year of widespread enough AI use in the workplace to detect impacts,' so a null here is an early null rather than a settled one."
+  ],
+  "methodology": "CPS microdata for June, July and August 2026, benchmarked against the same summer months in prior years to handle the strong seasonality in new-graduate unemployment. Difference-in-differences and event-study designs use older college graduates and young non-graduates as comparison groups.",
+  "qualifiers": "Measures an unemployment rate level for a demographic group, not a relative employment decline against least-exposed occupations, which is why it sits beneath the early-career chart rather than on it. Unemployment rates miss graduates who never enter the labor force or who take jobs below their qualification level, both plausible AI-era margins. Three summer months is a short window and CPS cell sizes for 22-to-25-year-old degree holders are small, so the confidence intervals are wide enough to admit moderate effects. A null result at this sample size is not evidence that the effect is zero.",
+  "fetchedAt": "2026-09-28"
+}

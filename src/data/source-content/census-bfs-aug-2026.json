@@ -1,0 +1,12 @@
+{
+  "id": "census-bfs-aug-2026",
+  "abstract": "Census Bureau Business Formation Statistics for August 2026, released September 11, 2026. The universe-scale count of new US business applications and projected formations. AI's role is inferred from sectoral composition rather than tagged, so the series enters jobsdata.ai as context beneath the ai-business-formation chart rather than as a plotted value.",
+  "keyFindings": [
+    "Business applications for August 2026, seasonally adjusted, were 531,728, a decrease of 7.8 percent from July 2026.",
+    "Projected business formations within four quarters were 28,501, down 4.6 percent from July.",
+    "The decline reverses July's 8.1 percent jump and returns applications close to their June 2026 level of about 531,000, so the July spike now reads as a one-month outlier rather than an inflection."
+  ],
+  "methodology": "Derived from Employer Identification Number applications (IRS Form SS-4) covering the full universe of US business applications, with formations projected from historical transition rates between application and first payroll. Published monthly with national, regional, and state detail, seasonally adjusted.",
+  "qualifiers": "Nothing in the series identifies AI as a driver: the AI reading comes from sectoral patterns, notably professional services growing faster than construction since ChatGPT, which is an inference rather than a measurement. Application counts are a weak proxy for real firm creation - many applications never become operating businesses, and the four-quarter formation projection is a model output, not an observation. Month-to-month moves of this size are common in the series and should not be over-read.",
+  "fetchedAt": "2026-09-28"
+}

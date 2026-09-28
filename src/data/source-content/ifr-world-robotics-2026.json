@@ -1,0 +1,15 @@
+{
+  "id": "ifr-world-robotics-2026",
+  "abstract": "World Robotics 2026, published September 24, 2026 by the International Federation of Robotics, covering calendar year 2025. The definitive global count of industrial robot installations and operational stock by country, sector and application. It is the physical-automation counterweight on a site otherwise dominated by generative-AI knowledge-work signals, and it underlies the Acemoglu-Restrepo robot-exposure literature.",
+  "keyFindings": [
+    "The global operational stock of industrial robots rose 9 percent to a record 5 million units, with more than 600,000 new units installed in 2025, up 11 percent on 2024.",
+    "China installed 354,000 units, up 20 percent and 59 percent of global deployments, with domestic manufacturers now holding 55 percent of their home market.",
+    "The United States installed 38,500 units, up 12 percent, passing Japan to become the second-largest market; Japan fell to third at 36,219 units, down 19 percent.",
+    "Europe went the other way: Germany led with fewer than 25,000 units, down 8 percent, and Italy installed about 7,800, down 11 percent.",
+    "India took sixth place with nearly 10,500 units, up 15 percent, on a 27 percent average annual growth rate since 2020.",
+    "IFR forecasts 655,000 installations in 2026 and 806,000 by 2029, citing labor shortages, supply-chain reshoring, and advances in AI and machine vision."
+  ],
+  "methodology": "Annual census of industrial robot installations and operational stock compiled from robot suppliers worldwide, broken out by country, industry, application and robot type. Operational stock is estimated by accumulating installations over an assumed average service life of twelve years.",
+  "qualifiers": "Installation counts are an input measure, not a displacement measure: the chart's unit is the share of physical-task jobs displaced, and no documented conversion exists from unit counts to that quantity, which is why these figures sit as overlays rather than plotted points. The data is supplier-reported and covers industrial robots, so it understates warehouse automation, autonomous mobile robots and purpose-built machinery that displace the same work. US growth of 12 percent is off a base roughly one-ninth of China's, so rank changes flow as much from Japan's 19 percent contraction as from American adoption. The employment link runs through Acemoglu-Restrepo elasticities estimated on 1990-2007 US commuting zones, whose external validity to 2025 robot types is unestablished.",
+  "fetchedAt": "2026-09-28"
+}

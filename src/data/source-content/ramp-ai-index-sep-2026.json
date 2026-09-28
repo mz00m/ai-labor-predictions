@@ -1,0 +1,14 @@
+{
+  "id": "ramp-ai-index-sep-2026",
+  "abstract": "The September 2026 Ramp AI Index, published September 9, 2026, drawn from corporate card and bill-pay transactions across more than 70,000 US businesses. Measures paid AI vendor adoption in near-real time, filling the gap between quarterly earnings and monthly government statistics. It sits below the ai-adoption-rate chart as a directional signal rather than a plotted point.",
+  "keyFindings": [
+    "43.8 percent of US businesses paid for subscriptions or tokens from Anthropic, up 0.34 percentage points month over month; OpenAI rose only 0.09 points to 39.8 percent.",
+    "Per-employee AI spend at the top 1 percent of firms fell 9.7 percent, from $7,976 to $7,205 a month - the first decline at the top of the distribution, and the basis for the report's 'cracks in the AI thesis' framing.",
+    "Token prices fell 41 percent to $0.68, down from the 2026 peak of $1.15 in March.",
+    "Frontier models drove 45 percent of token share, down from a 53 percent peak in August, as firms set company-wide defaults to cheaper standard models they judge good enough.",
+    "Open-weight models remain marginal: 6.4 percent of AI-spending businesses and 3.6 percent of businesses overall."
+  ],
+  "methodology": "Aggregated, anonymized spend data from businesses using Ramp's corporate card and bill-pay platform, deduplicated to vendor level and expressed as the share of businesses with any paid spend on a given vendor in the period. Updated monthly.",
+  "qualifiers": "Measures paid vendor subscriptions, not use - it misses free-tier and consumer-account use inside firms, and counts a single seat the same as an enterprise deployment, so it is not comparable to the Census BTOS self-reported measure despite both being expressed as a share of firms. Ramp's customer base skews toward venture-backed startups and mid-market firms in technology-adjacent sectors, which biases the level upward against the US business universe. Falling per-employee spend is ambiguous: it is consistent with retrenchment and equally consistent with the 41 percent price decline the same report documents.",
+  "fetchedAt": "2026-09-28"
+}

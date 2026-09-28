@@ -296,6 +296,15 @@
     }
   ,
     {
+      "date": "2026-08-31",
+      "direction": "down",
+      "sourceIds": [
+        "fairlie-wu-recent-grads-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NBER Fairlie & Wu: no summer-2026 unemployment spike for 22-25 grads vs older grads or non-grads"
+    },
+{
       "date": "2026-09-04",
       "direction": "down",
       "sourceIds": [
@@ -615,6 +624,16 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-20",
       "excerpt": "\"The junior share of employment at treated affiliates begins to fall after the introduction of ChatGPT, and it is 1.9 percentage points lower than in control affiliates by March 2026. This decline primarily reflects growth in senior employment rather than a fall in junior employment: senior employment rises by 6.7 percent, while junior employment is 2.5 percent lower, an estimate that is not statistically significant.\" Juniors hold 57.1% of positions at baseline, so the 1.9-point drop equals 3.3% of that share. Instrumented event study over 1.25 billion job postings and 154 million employment records across 41 countries, with AI adoption inferred from job advertisements involving generative AI. Not plotted on this chart: the measure is a percentage-point change in a firm's junior share, not a relative percent employment decline against least-exposed occupations; 'junior' is defined by seniority rather than ages 22-25; and the estimate is pooled across 41 countries, which this chart excludes from its average by design."
+    },
+    {
+      "id": "fairlie-wu-recent-grads-2026",
+      "title": "The Early Impacts of AI on Employment among Recent College Graduates (NBER WP 35796)",
+      "url": "https://www.nber.org/papers/w35796",
+      "publisher": "NBER (Fairlie & Wu)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "\"Using CPS microdata, we provide the first estimates of the effects of AI on the unemployment of recent college graduates in June, July and August 2026. We provide evidence suggesting that unemployment rates are especially high for summer months and that 2026 might be the first year of widespread enough AI use in the workplace to detect impacts of AI on recent college graduates, the group argued to be most vulnerable to AI replacement.\" The unemployment rate for recent college graduates (bachelor's degree holders aged 22 to 25) was 7.3 percent in summer 2026, inside the 6.3 to 7.8 percent range observed since 2022. Rates did not rise significantly relative to older college graduates or to young workers without a degree; difference-in-differences and event-study specifications give similar results. The authors do find some positive correlation between 2026 unemployment and remote-work availability by occupation. Not plotted on the early-career chart: this is an unemployment rate level for a demographic group, not a relative percent employment decline measured against least-exposed occupations.",
+      "dateAdded": "2026-09-28"
     }
   ]
 }

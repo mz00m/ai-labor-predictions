@@ -1,0 +1,14 @@
+{
+  "id": "yale-budgetlab-tracker-sep-2026",
+  "abstract": "The September 15, 2026 update to the Yale Budget Lab's AI labor market tracker, the first to extend past the Q1 2026 window covered by the lab's May 2026 analysis. Incorporates August 2026 CPS microdata and continues to find no clear AI footprint. This is the main CPS-based counterweight to the ADP-based Canaries finding, and anyone claiming aggregate AI displacement has to reconcile with it.",
+  "keyFindings": [
+    "Updated to incorporate August 2026 CPS microdata, the analysis 'does not provide clear evidence of labor market disruption associated with AI.'",
+    "Churn across occupations, AI exposure among the unemployed, and usage data all 'remain flat, lie within historical ranges, or continue along pre-AI trends.'",
+    "The occupational mix is not yet changing in ways that clearly align with the introduction of AI into the workforce.",
+    "Measures of AI usage show no connection to changes in employment or unemployment.",
+    "A synthetic differences-in-differences analysis of AI exposure does not yet clearly indicate an AI-related labor market footprint."
+  ],
+  "methodology": "Current Population Survey microdata analyzed three ways: occupational dissimilarity (churn) indices benchmarked against historical technology transitions, AI-exposure rates among the unemployed, and a synthetic difference-in-differences comparison of AI-exposed against unexposed occupations. Published as an interactive tracker updated with each CPS release, with methodology documented in Gimbel et al. (2025) and Gimbel, Kendall, and Kulsakdinun (2026).",
+  "qualifiers": "A null result, not evidence of absence: the CPS sample is too small to detect effects concentrated in narrow occupations or in a single age band, which is exactly where the ADP-based and Revelio-based analyses locate the signal. Occupation-level AI exposure indices are contested and assign exposure by task content rather than observed use. The tracker measures aggregate composition, so a displacement effect offset by growth elsewhere would not appear. The authors say plainly that findings may change as new data arrive.",
+  "fetchedAt": "2026-09-28"
+}

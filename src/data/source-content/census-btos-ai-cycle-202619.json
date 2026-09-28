@@ -1,0 +1,12 @@
+{
+  "id": "census-btos-ai-cycle-202619",
+  "abstract": "Census Bureau Business Trends and Outlook Survey, biweekly cycle 202619, published September 24, 2026. Question 7 asks whether a business used artificial intelligence in any of its business functions in the last two weeks; Question 24 asks whether it expects to within six months. This is the highest-frequency firm-side AI adoption measure in the US and the series jobsdata.ai plots on ai-adoption-rate. Values are dated to reference-period end, which for BTOS falls six to seven weeks before publication.",
+  "keyFindings": [
+    "National AI use reached 23.8 percent of firms (SE 0.26 percent) for the two weeks ending 2026-09-06, up from 23.2 percent for the cycle ending 2026-08-23 - a fourth consecutive increase.",
+    "The six-month expectation of AI use (Q24) was 27.6 percent, up only 0.3 points from 27.3 percent, so the gap between current and expected use narrowed to 3.8 points as realized adoption caught up with stated intent.",
+    "The increase is within roughly two standard errors of the prior cycle, so the level is firm but the single-cycle change is not individually significant; the four-cycle run is the signal."
+  ],
+  "methodology": "Biweekly establishment survey across a large national sample of about 1.2 million US businesses, published as an experimental data product. Each estimate is collected over a two-week window covering a two-week reference period ending six to seven weeks before publication; cycle 202619 was collected 2026-09-07 to 2026-09-20 for the reference period 2026-08-24 to 2026-09-06. The November 2025 rewording from AI use 'in producing goods or services' to 'in any business function' is a same-construct instrument change, and Census publishes one continuous series.",
+  "qualifiers": "A firm-level adoption share, not a measure of how much work AI performs. It counts any use in the prior two weeks, so it sets a low bar per firm and says nothing about intensity - other surveys find that adopters apply AI to a minority of tasks. Not directly comparable to posting-based measures or to regional surveys such as the New York Fed's, which read far higher on narrower footprints. The biannual AI Supplement is a separate instrument with an 11-week reference window and should not be treated as the latest point in this series.",
+  "fetchedAt": "2026-09-28"
+}

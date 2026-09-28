@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-09-21",
-  "lastSweep": "2026-09-21",
+  "asOf": "2026-09-28",
+  "lastSweep": "2026-09-28",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -20,11 +20,11 @@
       "whatItMeasures": "Net change in nonfarm payroll employment and the unemployment rate, from two Census-run surveys (~119K businesses and ~60K households). Broken out by industry, age, race, and education.",
       "whyItMatters": "The single most-cited labor market signal. AI's aggregate effect (or lack thereof) shows up here first if it's happening at scale. Prior-month revisions often reveal that early estimates over- or under-stated the trend.",
       "lastIngested": {
-        "sourceId": "bls-employment-situation-jul-2026",
-        "date": "2026-08-07",
-        "value": "-23K nonfarm; U-rate 4.1%; June revised +57K to +20K"
+        "sourceId": "bls-employment-situation-aug-2026",
+        "date": "2026-09-04",
+        "value": "+162K nonfarm vs +31K 12-month average; U-rate 4.1%; information -23K; July revised -23K to +21K"
       },
-      "nextExpected": "September 4, 2026 (August data)"
+      "nextExpected": "October 2, 2026 (September data)"
     },
     {
       "id": "bls-employment-projections",
@@ -70,11 +70,11 @@
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
       "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
-        "sourceId": "challenger-july-2026",
-        "date": "2026-08-06",
-        "value": "112,713 AI-attributed job cuts YTD (24% of all cuts); AI led all reasons 5th straight month"
+        "sourceId": "challenger-august-2026",
+        "date": "2026-09-02",
+        "value": "116,175 AI-attributed cuts YTD (22% of all cuts); AI fell to 4th-most-cited reason, ending its 5-month run"
       },
-      "nextExpected": "September 3, 2026 (August data)"
+      "nextExpected": "October 1, 2026 (September data)"
     },
     {
       "id": "ramp-ai-velocity",
@@ -93,11 +93,11 @@
       "whatItMeasures": "Aggregated spend and hiring patterns across 70,000+ businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
       "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS — private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
       "lastIngested": {
-        "sourceId": "ramp-ai-index-aug-2026",
-        "date": "2026-08-12",
-        "value": "Anthropic 43.5% of US businesses, OpenAI 39.7%; $11.95/employee median AI spend"
+        "sourceId": "ramp-ai-index-sep-2026",
+        "date": "2026-09-09",
+        "value": "Anthropic 43.8% of US businesses, OpenAI 39.8%; top-1% per-employee spend -9.7%; token prices -41%"
       },
-      "nextExpected": "~September 2026"
+      "nextExpected": "~October 2026"
     },
     {
       "id": "fed-ai-adoption-monitoring",
@@ -121,8 +121,8 @@
         "value": "Broader synthesis of BTOS + ADP + SCE"
       },
       "nextExpected": "~July-August 2026",
-      "lastSweep": "2026-09-21",
-      "sweepNote": "Swept 2026-09-21: still no new edition, second consecutive sweep with none. The 2026 FEDS Notes index carries nothing on AI adoption after the Apr 3 note; the newest AI-related notes are Jul 14 (current account) and Jul 17 (buildout, already ingested). 171 days stale against a quarterly cadence, but the publisher has not released — the ~quarterly expectation looks wrong, not the feed."
+      "lastSweep": "2026-09-28",
+      "sweepNote": "Swept 2026-09-28: still no new edition, third consecutive sweep with none. The 2026 FEDS Notes index carries nothing on AI adoption after the Apr 3 note; the newest notes are Sep 25 (FDI and China), Sep 22 (China current account) and Sep 4 (monetary aggregates), none AI-labor. 178 days stale against a quarterly cadence. Three empty sweeps running means the ~quarterly expectation is wrong, not the feed - 'Monitoring AI Adoption' looks like a one-off note rather than a series, and the cadence should probably be reset to annual or the entry retired."
     },
     {
       "id": "census-btos-ai",
@@ -140,12 +140,12 @@
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
       "lastIngested": {
-        "sourceId": "census-btos-ai-biweekly-sep-2026",
-        "date": "2026-09-06",
-        "value": "23.2% national AI use, two weeks ending Aug 23 2026 (cycle 202618); 22.4% for the cycle ending Aug 9"
+        "sourceId": "census-btos-ai-cycle-202619",
+        "date": "2026-09-24",
+        "value": "23.8% national AI use, two weeks ending Sep 6 2026 (cycle 202619); fourth consecutive increase"
       },
       "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
-      "lastSweep": "2026-09-21"
+      "lastSweep": "2026-09-28"
     },
     {
       "id": "factset-earnings-ai-mentions",
@@ -209,13 +209,13 @@
       "whatItMeasures": "Uses the Current Population Survey to test whether AI-exposed occupations are seeing employment declines. Complements the ADP-based Canaries with a different dataset and a different unit of analysis.",
       "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field — anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
       "lastIngested": {
-        "sourceId": "yale-budgetlab-not-yet-2026",
-        "date": "2026-06-15",
-        "value": "AI 'probably not (yet)' the reason for labor market weakening"
+        "sourceId": "yale-budgetlab-tracker-sep-2026",
+        "date": "2026-09-15",
+        "value": "Tracker extended to August 2026 CPS; still no clear AI labor-market disruption"
       },
-      "nextExpected": "~August 2026 (with July CPS)",
-      "lastSweep": "2026-08-19",
-      "sweepNote": "Swept 2026-08-19: no new data. The Jul 16, 2026 tracker update replaced the prose with an embedded interactive; the underlying SDID analysis (May 7, already ingested as budgetlab-ai-no-effects-2026) still runs only through Q1 2026."
+      "nextExpected": "~October 2026 (with September CPS)",
+      "lastSweep": "2026-09-28",
+      "sweepNote": "Swept 2026-09-28: the Sep 15, 2026 update is the first to carry the tracker past Q1 2026 - it now runs through August 2026 CPS microdata. The page body is an embedded interactive; the substance is in the 'Current Update' panel and the printable PDF at /sites/default/files/page_to_pdf/1419/publication_1419.pdf, not in the prose. Read the PDF rather than the page."
     },
     {
       "id": "stanford-del-aiei",
@@ -264,7 +264,9 @@
         "date": "2026-06-26",
         "value": "50% say Claude handles 50%+ of tasks; 4% say entire job"
       },
-      "nextExpected": "~September 2026 (Q3 report)"
+      "nextExpected": "~September 2026 (Q3 report)",
+      "lastSweep": "2026-09-28",
+      "sweepNote": "Swept 2026-09-28: no Q3 report. anthropic.com/economic-index still reads 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together."
     },
     {
       "id": "pwc-ai-jobs-barometer",
@@ -425,11 +427,13 @@
       "whatItMeasures": "New business applications (any) and high-propensity applications (likely to become employer businesses), by state, industry, and month.",
       "whyItMatters": "The universe-scale ground truth on US business formation. AI's role is inferred from sectoral patterns (professional services growing 4x faster than construction since ChatGPT) rather than directly tagged.",
       "lastIngested": {
-        "sourceId": "census-bfs-jul-2026",
-        "date": "2026-08-12",
-        "value": "578,926 business applications (+8.1% MoM); 29,959 projected formations"
+        "sourceId": "census-bfs-aug-2026",
+        "date": "2026-09-11",
+        "value": "531,728 business applications (-7.8% MoM); 28,501 projected formations (-4.6%)"
       },
-      "nextExpected": "September 11, 2026 (August data)"
+      "nextExpected": "October 14, 2026 (September data)",
+      "lastSweep": "2026-09-28",
+      "sweepNote": "The figures are not in the press release, which is a tip sheet only, and not in the API, which now requires a registered key. Read https://www.census.gov/econ/bfs/current/index.html, which carries the seasonally adjusted applications and projected-formations sentences verbatim."
     },
     {
       "id": "wef-future-of-jobs",
@@ -497,11 +501,13 @@
       "whatItMeasures": "Not a data series — a working-paper feed. Where Brynjolfsson/Chandar/Chen (Canaries), Humlum/Vestergaard (Still Waters), Autor/Thompson (Expertise), Manning/Aguirre (adaptive capacity), Acemoglu (Simple Macro of AI + Pro-Worker AI), and Bick/Blandin/Deming (RPS) all publish first.",
       "whyItMatters": "Every ingested Tier 1 paper on the site traces back to this feed. Tracking NBER weekly is how the site stays ahead of Fed / IMF / OECD syntheses (which lag academic publication by 3-9 months). This is where the 'first inning' research Kolko flags is being written.",
       "lastIngested": {
-        "sourceId": "nber-bloom-profile-mutability-2026",
-        "date": "2026-08-03",
-        "value": "Bloom/Moore/Simon/Wilkie-Rogers on retroactive editing of professional profiles (measurement caveat for Revelio-derived series)"
+        "sourceId": "fairlie-wu-recent-grads-2026",
+        "date": "2026-09-28",
+        "value": "Fairlie & Wu (WP 35796): no summer-2026 unemployment spike for recent college graduates"
       },
-      "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly"
+      "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly",
+      "lastSweep": "2026-09-28",
+      "sweepNote": "The nber.org topic-facet page renders its paper list client-side and reads as empty to a fetcher. Use the RSS feed at https://back.nber.org/rss/new.xml instead. Swept 2026-09-28: ingested Fairlie & Wu (WP 35796); left Blumenfeld/Hazell/Lian/Schaab (WP 35793, software-engineering productivity and GDP) unmapped - no graph on the site carries that unit."
     },
     {
       "id": "ilo-ai-future-of-work",
@@ -543,11 +549,13 @@
       "whatItMeasures": "Industrial robot installations and operational stock by country, industry, and application. Covers cobots, service robots, and mobile robots. Data underlies Acemoglu-Restrepo's JPE 2020 finding that one more robot per thousand workers reduces employment-to-population by 0.2pp.",
       "whyItMatters": "The physical-automation counterweight to a site dominated by GenAI/knowledge-work signals. Robotics adoption is real, measurable, and directly implicated in manufacturing employment. Feeds robots-physical-automation-displacement — currently the thinnest displacement graph on the site.",
       "lastIngested": {
-        "sourceId": "ifr-world-robotics-2025",
-        "date": "2025-09-24",
-        "value": "Global robot installations +6% to 575K units in 2025; US +11% to 38K units"
+        "sourceId": "ifr-world-robotics-2026",
+        "date": "2026-09-24",
+        "value": "World Robotics 2026: 600K+ installations in 2025 (+11%); stock 5M (+9%); US +12% to 38,500 units, now #2"
       },
-      "nextExpected": "September 24, 2026 (World Robotics 2026 full report)"
+      "nextExpected": "September 2027 (World Robotics 2027 full report)",
+      "lastSweep": "2026-09-28",
+      "sweepNote": "The /worldrobotics/ landing page is a shop listing and carries no figures. The headline numbers are in the press release at https://ifr.org/ifr-press-releases/news/world-robotics-2026 - go there, not to the shop page."
     },
     {
       "id": "anthropic-economic-index-dashboard",
@@ -572,7 +580,9 @@
         "date": "2026-06-26",
         "value": "Dashboard updated with each themed report; latest: Cadences (June 2026)"
       },
-      "nextExpected": "~September 2026 (with Q3 themed report)"
+      "nextExpected": "~September 2026 (with Q3 themed report)",
+      "lastSweep": "2026-09-28",
+      "sweepNote": "Swept 2026-09-28: no Q3 report. anthropic.com/economic-index still reads 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together."
     },
     {
       "id": "stripe-atlas",

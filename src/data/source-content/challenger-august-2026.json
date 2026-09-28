@@ -1,0 +1,14 @@
+{
+  "id": "challenger-august-2026",
+  "abstract": "Challenger, Gray & Christmas job-cut report for August 2026, published September 2, 2026. Challenger is the only monthly US series that tags announced layoffs with AI as a stated reason, which is why jobsdata.ai tracks it despite its tier 2 standing. The August edition breaks a five-month run in which AI led all stated reasons for cuts.",
+  "keyFindings": [
+    "US employers announced 52,881 job cuts in August 2026, up 58 percent from July but the lowest August total since 2022.",
+    "AI fell to the fourth-most cited reason with 3,462 cuts, about 6.5 percent of the month's total, ending five consecutive months as the leading stated reason.",
+    "Year to date, AI has been cited in 116,175 announced cuts, roughly 22 percent of the 529,914 cuts announced through August - a share that has drifted down from the 24 percent reported through July.",
+    "Technology announced 6,103 cuts in August, its lowest monthly total of 2026, for 155,126 year to date, or 29 percent of all cuts this year.",
+    "Announced hiring plans were 12,325 in August against 1,494 a year earlier, and 119,825 year to date against 87,626, up 37 percent."
+  ],
+  "methodology": "Challenger compiles announced job cuts from public sources, company statements, and its own outreach to employers, and assigns each announcement a stated reason from the employer's own rationale. Counts are announcements, not separations: they are forward-looking, may never fully execute, and are not reconciled against payroll data.",
+  "qualifiers": "Attribution reflects what employers say publicly, which both over- and under-states AI's real role - naming AI can flatter a restructuring story to investors, while a firm quietly not backfilling AI-automated roles never appears in the series at all. The month-to-month AI figure is volatile on a small base (3,462 cuts is about 0.002 percent of US employment), so the streak ending is weaker evidence of a turn than the headline suggests. Announced cuts are a leading but noisy indicator and should not be read as realized job loss.",
+  "fetchedAt": "2026-09-28"
+}

@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 23.2,
+  "currentValue": 23.8,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (21.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
@@ -171,6 +171,16 @@
       "value": 23.2,
       "sourceIds": [
         "census-btos-ai-biweekly-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-09-06",
+      "value": 23.8,
+      "sourceIds": [
+        "census-btos-ai-cycle-202619"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -907,6 +917,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: pace of new firm AI adoption has slowed from its spring 2026 peak (firm-level, not BTOS)"
+    },
+    {
+      "date": "2026-09-09",
+      "direction": "up",
+      "sourceIds": [
+        "ramp-ai-index-sep-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ramp: 43.8% of US businesses pay for Anthropic, 39.8% OpenAI; token prices down 41% to $0.68"
     }
   ],
   "sources": [
@@ -1722,6 +1741,26 @@
       "evidenceTier": 1,
       "datePublished": "2026-09-06",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions?\" National share answering yes: 22.4% for the two weeks ending 2026-08-09 (cycle 202617) and 23.2% for the two weeks ending 2026-08-23 (cycle 202618), up from 21.8% in the cycle ending 2026-07-26. Q24, six-month expectation of AI use, rose from 25.9% to 27.3% over the same cycles. Values are dated to reference-period end rather than publication date; collection for cycle 202618 ran 2026-08-24 to 2026-09-06."
+    },
+    {
+      "id": "census-btos-ai-cycle-202619",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202619)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-24",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" National share answering yes: 23.8% (SE 0.26%) for the two weeks ending 2026-09-06, up from 23.2% for the cycle ending 2026-08-23 and 22.4% for the cycle ending 2026-08-09. Q24, the six-month expectation of AI use, was 27.6% (SE 0.29%), up from 27.3%. Collection for cycle 202619 ran 2026-09-07 to 2026-09-20; published 2026-09-24. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-09-28"
+    },
+    {
+      "id": "ramp-ai-index-sep-2026",
+      "title": "Cracks in the AI Thesis, Part 2 (Ramp AI Index, September 2026)",
+      "url": "https://ramp.com/data/ai-index-sept-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-09",
+      "excerpt": "Ramp AI Index, September 2026, based on corporate card and bill-pay transactions from more than 70,000 US businesses. \"43.8% of U.S. businesses paid for subscriptions or tokens from Anthropic, up 0.34 percentage points month over month\"; OpenAI rose \"only 0.09 percentage points\" to \"39.8% of businesses.\" Per-employee AI spend at the top 1% of firms fell 9.7%, from $7,976 to $7,205 per month. \"Prices have declined 41% to $0.68 as of this week, down from the 2026 peak of $1.15 in March.\" Frontier models drove \"45% of token share ... down from a 53% peak in August\" as firms set company-wide defaults to cheaper standard models. Open-weight models remain marginal: \"only 6.4% of AI spending businesses use them and 3.6% of businesses overall.\" Measures paid vendor subscriptions rather than self-reported use, so it sits below the chart as a directional signal.",
+      "dateAdded": "2026-09-28"
     }
   ]
 }
