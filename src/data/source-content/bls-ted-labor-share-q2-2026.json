@@ -1,0 +1,12 @@
+{
+  "id": "bls-ted-labor-share-q2-2026",
+  "abstract": "BLS The Economics Daily (Sept 15, 2026): the labor share of output in the US nonfarm business sector was 52.8% in Q2 2026, the lowest level recorded since the series began in 1947. The share was generally 60–66% through much of the postwar period, began a sustained decline after 2000 with large drops following the 2001 and 2007–09 recessions, stabilized after 2010, spiked temporarily to 58.9% in Q2 2020, and then resumed a mostly downward trend. The note makes no claim about AI.",
+  "keyFindings": [
+    "Nonfarm business labor share: 52.8% in Q2 2026, lowest since 1947.",
+    "Postwar range was generally 60–66%.",
+    "Temporary spike to 58.9% in Q2 2020 before resuming its decline."
+  ],
+  "methodology": "BLS Productivity program estimate: labor compensation (wages, salaries, benefits, pensions, employer social-insurance contributions, other earnings) as a share of nonfarm business sector output; quarterly, 1947Q1–2026Q2.",
+  "qualifiers": "Tier 1: official BLS statistic. The note attributes nothing to AI; the decline long predates generative AI. Measured labor share is sensitive to depreciation, pass-through relabeling of wages as profits, and timing of stock compensation (see the Goldman decomposition reported by Fortune, fortune-goldman-labor-share-2026), so it is not a direct read on median wages.",
+  "fetchedAt": "2026-09-24"
+}

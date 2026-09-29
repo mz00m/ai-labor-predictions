@@ -1,0 +1,13 @@
+{
+  "id": "epi-class-of-2026-occupations-ai-2026",
+  "abstract": "Third post in EPI's Class of 2026 series (May 21, 2026). 85% of young college graduates (22–27) work in the four occupation groups with the fastest job growth since 2023, and 62.8% work in professional, management, business and financial occupations. Using the Gimbel–Kendall–Kulsakdinun aggregate AI-exposure score (a PCA z-score centered at 0), young graduates' mean exposure is 1.00 — similar to all graduates (1.07) and far above young noncollege workers (-0.61). Yet both young groups saw similar unemployment increases over the last two to three years, and employment-rate trends were consistent across them, so EPI concludes AI is not likely driving the weakness for new entrants. Underemployment of recent graduates has ticked up slightly but remains below post–Great Recession levels.",
+  "keyFindings": [
+    "85% of young college graduates work in occupation groups with strong growth since 2023.",
+    "Mean AI-exposure score: young graduates 1.00, all graduates 1.07, young noncollege -0.61 (PCA z-score, centered at 0).",
+    "Young graduates and young noncollege workers saw similar unemployment increases over the past two to three years.",
+    "Professional and related employment +3.1% and management/business/financial +4.9% since 2023."
+  ],
+  "methodology": "EPI analysis of CPS microdata pooled April 2022–March 2026, with an updated Gimbel, Kendall and Kulsakdinun aggregate AI-exposure PCA score by detailed occupation (provided by the authors May 13, 2026).",
+  "qualifiers": "Tier 3: think-tank blog. The test is a between-group comparison (college vs noncollege), not an exposure-gradient event study like Brynjolfsson/Chandar/Chen; it cannot rule out AI effects within occupations or offsetting forces. Exposure scores are index values, not shares of jobs.",
+  "fetchedAt": "2026-09-24"
+}

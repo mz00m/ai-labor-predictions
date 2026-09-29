@@ -1,0 +1,14 @@
+{
+  "abstract": "Richmond Fed Economic Brief 26-27 (August 2026), the final article in Katarina Borovickova and Claudia Macaluso's series after EB 26-26. It asks how much of the decline in unemployment outflow (job-finding) rates since mid-2023 is aggregate versus structural. Outflow rates for primary (strongly attached, ~55% of the population) and secondary (~14%) workers historically move together over the cycle; since 2023 the primary rate has fallen more, which the authors read as structural change. Within primary workers the decline concentrates in above-median AI-exposed occupations (Webb 2019), pointing to AI as the driver of that structural shift, a divergence unprecedented except during early-2000s PC diffusion. A flows-based decomposition from July 2023 to March 2026, however, shows the structural AI component is a minority: less-exposed workers (primary and secondary) account for roughly half of the aggregate decline, and strongly attached high-exposure workers at most about one-third, because their share of unemployment is small. Compositional shifts contribute less than 3 percent. Conclusion: AI exposure is important but not dominant, and retraining aimed at exposed occupations would miss most of the decline.",
+  "keyFindings": [
+    "Less-exposed workers, primary and secondary, account for roughly half of the aggregate decline in the job-finding rate since mid-2023.",
+    "Strongly attached workers in high-AI-exposure occupations have the largest within-group decline, but contribute at most about one-third of the aggregate decline.",
+    "The largest single contribution comes from secondary workers in low-AI-exposure occupations.",
+    "Compositional shifts across groups contribute less than 3 percent of the change.",
+    "The AI-related structural gap is described as unprecedented outside the early-2000s proliferation of personal computers."
+  ],
+  "methodology": "CPS-based unemployment outflow rates for latent attachment types (following Ahn, Hobijn and Sahin), split at the median of Webb (2019) occupational AI exposure. Unemployment-share-weighted decomposition of the change in the aggregate outflow rate into five groups, benchmarked to July 2023 and computed monthly through March 2026. Details in the online appendix. US.",
+  "qualifiers": "Tier 1: Federal Reserve Bank economic brief. Caveats: the outcome is the unemployment outflow rate (exits to employment or out of the labor force), a flow measure, not job loss. AI attribution rests on the divergence pattern within primary workers, not on a causal design. Webb (2019) exposure predates generative AI. The 'at most about one-third' is an upper bound read from a figure. Read alongside EB 26-26, which documents the concentration of the decline among strongly attached, highly exposed workers.",
+  "id": "richmond-fed-aggregate-structural-unemployment-2026",
+  "fetchedAt": "2026-09-24"
+}

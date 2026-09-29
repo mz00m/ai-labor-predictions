@@ -6,10 +6,20 @@
   "disclaimer": "Four points dated September 2026 come from one source, the Anthropic Institute's scenario model, and three of them are scenarios rather than forecasts. The authors state plainly that \"the scenarios are not predictions, and we attach no probabilities to them\" \u2014 modest (0.5%), substantial (3.9%) and extreme (21.5%) are illustrations of what different assumptions about AI capability, diffusion and automation would imply, not competing estimates of what will happen. Read them as the width of the argument, not as a range with a middle. The fourth point (4.2%) is different in kind: it is the median outcome across 3,259 US adults' own expectations run through the same model, and it carries an interquartile range. Note also that the model's \"cognitive occupations\" are SOC 11-29, 41 and 43, which include sales and office support and so run broader than most white-collar definitions on this chart.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 6.5,
+  "currentValue": 6,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
+    {
+      "date": "2024-12-31",
+      "value": -4.05,
+      "sourceIds": [
+        "chicagofed-broady-dunson-barr-automation-risk-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
     {
       "date": "2025-02-10",
       "value": -1.2,
@@ -20,6 +30,26 @@
       "metricType": "employment",
       "note": "Paralegal employment projected to grow 1.2% (counter-displacement)",
       "dataType": "projected"
+    },
+    {
+      "date": "2025-03-31",
+      "value": 2.4,
+      "confidenceLow": 1.2,
+      "confidenceHigh": 3.6,
+      "sourceIds": [
+        "dallasfed-dodini-smith-postings-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative job posting decline per 10-percentage-point higher share of automatable tasks, within industry, Texas, 2022Q4-2025Q1",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.45,
+        "rationale": "Relative posting decline (8%) converted with the documented relative-posting factor, as for eisfeldt-genai-firm-values-2026. The most-exposed occupations are software, web design, managers, clerical workers and editors, i.e. white-collar. Texas only; national re-estimate reported similar."
+      }
     },
     {
       "date": "2025-07-01",
@@ -1130,6 +1160,15 @@
       ],
       "evidenceTier": 1,
       "label": "Richmond Fed: job-finding -13pp for strongly attached workers vs -2pp marginal"
+    },
+    {
+      "date": "2026-08-19",
+      "direction": "up",
+      "sourceIds": [
+        "richmond-fed-aggregate-structural-unemployment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Richmond Fed: AI-driven gap in job-finding is unprecedented since early-2000s PC era"
     },
     {
       "date": "2026-08-21",
@@ -2270,6 +2309,36 @@
       "datePublished": "2026-09-04",
       "excerpt": "\"Total nonfarm payroll employment rose by 162,000 in August, higher than the average monthly gain of 31,000 over the prior 12 months.\" The unemployment rate was unchanged at 4.1 percent. \"Information employment declined by 23,000 in August, following losses that had averaged 8,000 per month over the prior 12 months.\" \"Employment in health care continued to trend up in August (+13,000) but at a slower pace than the average monthly gain over the prior 12 months (+32,000).\" \"Employment showed little change over the month in other major industries, including ... professional and business services.\" \"The change in total nonfarm payroll employment for June was revised up by 11,000, from +20,000 to +31,000, and the change for July was revised up by 44,000, from -23,000 to +21,000.\" Average hourly earnings rose 10 cents, or 0.3 percent, to $37.75, up 3.1 percent over the year.",
       "dateAdded": "2026-09-28"
+    },
+    {
+      "id": "dallasfed-dodini-smith-postings-automation-2026",
+      "title": "Job postings show early signs of AI automation impact",
+      "url": "https://www.dallasfed.org/research/economics/2026/0901",
+      "publisher": "Federal Reserve Bank of Dallas (Dodini, Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "The findings suggest job postings fell 5 percent for more-exposed positions relative to less-exposed ones by the end of 2023 and by approximately 8 percent by first quarter 2025",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "chicagofed-broady-dunson-barr-automation-risk-2026",
+      "title": "Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-12",
+      "publisher": "Federal Reserve Bank of Chicago (Broady, Dunson, Barr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-01",
+      "excerpt": "Overall, employment in these occupations increased by 335,800 jobs, or 4.05 percent, between 2019 and 2024.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "richmond-fed-aggregate-structural-unemployment-2026",
+      "title": "Aggregate or Structural? Diagnosing the Rise in Unemployment (Economic Brief 26-27)",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-27",
+      "publisher": "Federal Reserve Bank of Richmond (Borovickova, Macaluso)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-19",
+      "excerpt": "The structural, AI-related component — while meaningful and unprecedented outside of the proliferation of personal computers in the early 2000s — accounts for a minority of the total decline.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

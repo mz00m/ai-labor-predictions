@@ -658,6 +658,73 @@
         "value": "Early-career 22-25 most-exposed -19% vs least-exposed; all-occupation gap -6% since pre-ChatGPT; AI-exposed firms laying off fewer than least-exposed; new-firm adoption pace off its spring peak"
       },
       "nextExpected": "Early October 2026"
+    },
+    {
+      "id": "nyfed-college-labor-market",
+      "name": "NY Fed — The Labor Market for Recent College Graduates",
+      "publisher": "Federal Reserve Bank of New York",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly",
+      "releasePattern": "Unemployment and underemployment updated quarterly, generally in February, May, August and November; wages and outcomes by major annually in February",
+      "url": "https://www.newyorkfed.org/research/college-labor-market",
+      "targetGraphs": [
+        "early-career-employment-decline",
+        "entry-level-wage-impact"
+      ],
+      "topicLine": "Unemployment and underemployment of recent college graduates (22-27), tracked since 1990.",
+      "whatItMeasures": "Unemployment and underemployment rates for recent graduates versus other groups, early-career wages vs high-school graduates, and outcomes by major.",
+      "whyItMatters": "The most-cited official read on the new-graduate labor market that AI-exposure studies are benchmarked against.",
+      "lastIngested": {
+        "sourceId": "nyfed-college-labor-market-q2-2026",
+        "date": "2026-08-01",
+        "value": "Recent-grad unemployment ~5.6%; underemployment 42% (2026:Q2)"
+      },
+      "nextExpected": "November 2026 (2026:Q3 update)"
+    },
+    {
+      "id": "bls-productivity-costs",
+      "name": "Productivity and Costs (Nonfarm Business Labor Productivity)",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly (preliminary, then revised)",
+      "releasePattern": "Preliminary estimate about five weeks after quarter end; revised estimate about a month later (Q2 2026 revised landed Sep 3, 2026).",
+      "url": "https://www.bls.gov/news.release/prod2.toc.htm",
+      "targetGraphs": [
+        "median-wage-impact"
+      ],
+      "topicLine": "The official US measure of output per hour — where an AI productivity boom would show up first in aggregate data.",
+      "whatItMeasures": "Output per hour, hours, unit labor costs, real hourly compensation and the labor share for the nonfarm business and manufacturing sectors.",
+      "whyItMatters": "Feeds the macro side of the productivity section, which contrasts 13–56% task-level gains with aggregate data. Also tracks whether pay keeps up with productivity: in Q2 2026 the labor share hit a record-low 52.8%.",
+      "lastIngested": {
+        "sourceId": "bls-productivity-q2-2026-revised",
+        "date": "2026-09-03",
+        "value": "+2.2% y/y nonfarm productivity Q2 2026 (revised); 2.1%/yr since Q4 2019; labor share 52.8%, series low"
+      },
+      "nextExpected": "Early November 2026 (Q3 2026 preliminary); confirm date on the BLS release calendar"
+    },
+    {
+      "id": "microsoft-ai-diffusion",
+      "name": "Microsoft Global AI Diffusion Report",
+      "publisher": "Microsoft AI Economy Institute",
+      "tier": 2,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly (since Q1 2026; semiannual in 2025)",
+      "releasePattern": "Blog post by Juan Lavista Ferres on blogs.microsoft.com/on-the-issues about 5–12 weeks after quarter end, with report PDF (aka.ms/AIDiffusionReport<YYYY>Q<n>) and a separate occasional US state/county report",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/ai-economy-institute/reports/global-ai-diffusion-report/",
+      "targetGraphs": [
+        "genai-work-adoption"
+      ],
+      "topicLine": "Share of the working-age population using generative AI, by country, from Microsoft telemetry.",
+      "whatItMeasures": "The share of people aged 15–64 who used a generative AI product during the period, derived from aggregated, anonymized Microsoft telemetry and adjusted for OS and device market share, internet penetration and population. Gives a national leaderboard (US 33.0% in Q2 2026, 21st) and Global North/South gaps.",
+      "whyItMatters": "The only quarterly, population-normalized cross-country GenAI usage measure. It puts the US worker-survey numbers in context: the US ranks only about 21st globally in population usage even though it leads in AI development. It measures any use, not use at work, so it is carried as overlays.",
+      "lastIngested": {
+        "sourceId": "microsoft-ai-diffusion-q2-2026",
+        "date": "2026-09-21",
+        "value": "Global 18.8% of working-age population (June 2026); US 33.0% (21st), up 1.7pp from Q1"
+      },
+      "nextExpected": "~November–December 2026 (Q3 2026). Microsoft says the next report will expand the measure to newer AI tools and expects that to raise user share in almost every economy, so treat Q3 as a likely series break."
     }
   ]
 }

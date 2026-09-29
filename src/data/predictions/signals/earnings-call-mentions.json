@@ -194,6 +194,15 @@
       "label": "Fortune: AI-mentioning companies outperformed by 8.2pp"
     },
     {
+      "date": "2025-12-31",
+      "direction": "up",
+      "sourceIds": [
+        "stlouisfed-ai-productivity-earnings-calls-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "St. Louis Fed: ~15% of earnings-call productivity talk cites AI; 95% future"
+    },
+    {
       "date": "2026-01-01",
       "direction": "up",
       "sourceIds": [
@@ -408,6 +417,16 @@
       "datePublished": "2026-09-18",
       "excerpt": "Final full-season count for the Q2 2026 reporting period (calls conducted June 15 through September 14, 2026), by John Butters. \"FactSet searched for the term 'AI' in the conference call transcripts of all the S&P 500 companies that conducted earnings conference calls from June 15 through September 14.\" \"Overall, the term 'AI' was cited on 331 earnings calls conducted by S&P 500 companies during this period.\" \"This number reflects 67% (331 out of 493) of the earnings calls conducted by S&P 500 companies during this period.\" \"This number is well above the 5-year average of 178 and the 10-year average of 114.\" \"This marks the 3rd consecutive quarter that the term 'AI' was cited on more than 65% of the earnings calls conducted by S&P 500 companies.\" Sector leaders by count: Information Technology (72) and Financials (67); by share: Information Technology (97%), Financials (91%), Communication Services (90%).",
       "dateAdded": "2026-09-21"
+    },
+    {
+      "id": "stlouisfed-ai-productivity-earnings-calls-2026",
+      "title": "AI and Productivity: What Firms Are Saying on Earnings Calls",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jul/ai-productivity-what-firms-say-earnings-calls",
+      "publisher": "Federal Reserve Bank of St. Louis",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-31",
+      "excerpt": "It rose quickly in 2023, plateaued in 2024, and then accelerated again in 2025, reaching roughly 15% of productivity sentences by the end of that year.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

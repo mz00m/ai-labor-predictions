@@ -1,0 +1,14 @@
+{
+  "abstract": "BLS revised estimate for the second quarter of 2026. Nonfarm business labor productivity rose 1.4 percent (annualized) as output rose 1.7 percent and hours 0.3 percent; productivity was up 2.2 percent from a year earlier. Since the fourth quarter of 2019, productivity has grown at a 2.1 percent annualized rate, above the 1.5 percent rate of the 2007–2019 cycle and equal to the long-term 2.1 percent rate since 1947. Unit labor costs rose 1.2 percent. Real hourly compensation fell 3.3 percent in the quarter and 0.1 percent over four quarters. The labor share fell to 52.8 percent, the lowest in a series that begins in 1947. Manufacturing productivity rose 2.4 percent in the quarter but only 1.1 percent year over year.",
+  "keyFindings": [
+    "+2.2% nonfarm business labor productivity, Q2 2026 vs Q2 2025",
+    "+1.4% annualized productivity growth in Q2 2026 (output +1.7%, hours +0.3%)",
+    "2.1% annualized productivity growth since Q4 2019 vs 1.5% in the 2007–2019 cycle",
+    "−0.1% real hourly compensation over the last four quarters (−3.3% annualized in Q2)",
+    "52.8% labor share in Q2 2026, lowest since the series began in 1947"
+  ],
+  "methodology": "Official BLS Productivity and Costs release (USDL 26-1434, Sep 3, 2026): output per hour of all persons, nonfarm business sector, seasonally adjusted annualized rates; revised Q2 2026 estimate.",
+  "qualifiers": "Tier 1 government statistics. Measures total productivity and pay; says nothing about AI's share. Quarterly figures are volatile and revised. The labor-share low is consistent with capital deepening, including AI investment, but BLS does not attribute it.",
+  "id": "bls-productivity-q2-2026-revised",
+  "fetchedAt": "2026-09-24"
+}

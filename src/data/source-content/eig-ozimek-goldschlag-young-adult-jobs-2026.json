@@ -1,0 +1,13 @@
+{
+  "abstract": "Economic Innovation Group analysis (March 5, 2026, originally on the Agglomerations Substack) by Adam Ozimek and Nathan Goldschlag. They argue the AI-and-young-graduates story rests too heavily on the unemployment rate. Non-college 22-25 year-olds have disproportionately left the labor force, which flatters their unemployment rate, while young college graduates participate at about mid-2023 rates. On the employment rate, the share of all 22-25 year-olds working, employment has fallen for young adults with and without degrees, with non-graduates marginally worse, and young people of all education levels lag other workers. Excluding students changes little. AI-substitutable entry jobs such as call-centre work (2.7 percent of employed 22-25 year-olds in 2018-21) and data entry (0.2 percent) are too small to drive the youth market. They conclude the real mystery is weakness among young people of all types, not a college-graduate or AI-specific story.",
+  "keyFindings": [
+    "Employment rates (share of all 22-25 year-olds working) have declined for young adults both with and without degrees; those without degrees have done marginally worse.",
+    "Young college-educated workers participate in the labor force at about the same rate as in mid-2023, while non-college 22-25 year-olds have disproportionately stopped looking.",
+    "Results are nearly unchanged when those attending school are excluded; enrollment rates for this age group are about where they were three years earlier.",
+    "Customer service representatives were 2.7% and data entry keyers 0.2% of employed 22-25 year-olds in 2018-2021."
+  ],
+  "methodology": "Descriptive CPS analysis of unemployment, participation and employment rates for 22-25 year-olds by college attainment versus all other workers, with and without school enrollees. Replication code on GitHub. US.",
+  "qualifiers": "Tier 2: think-tank analysis first published on a Substack. Caveats: descriptive, with no exposure contrast and no causal design; it disputes the framing (education vs age) rather than estimating an AI effect. Most magnitudes are in charts only. The authors are explicit that the cause of young workers' weakness is an unresolved 'mystery'.",
+  "id": "eig-ozimek-goldschlag-young-adult-jobs-2026",
+  "fetchedAt": "2026-09-24"
+}

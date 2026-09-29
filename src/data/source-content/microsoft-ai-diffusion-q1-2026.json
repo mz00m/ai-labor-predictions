@@ -1,0 +1,15 @@
+{
+  "id": "microsoft-ai-diffusion-q1-2026",
+  "abstract": "Microsoft AI Economy Institute's Global AI Diffusion report for Q1 2026 (blog by Juan Lavista Ferres, May 7, 2026). Global AI usage rose 1.5 points in the quarter, from 16.3% to 17.8% of the world's working-age population, and 26 economies now exceed 30%. The UAE leads at 70.1%. The United States moved up from 24th to 21st at 31.3%. The North–South gap widened (27.5% vs 15.4%). The report also argues that AI coding tools may be raising demand for software developers: git pushes rose 78% year over year globally, while US software developer employment hit a record of about 2.2 million in 2025 (+8.5%) and was about 4% higher in March 2026 than a year earlier.",
+  "keyFindings": [
+    "Global AI user share rose from 16.3% to 17.8% of the working-age population in Q1 2026.",
+    "US usage reached 31.3% of the working-age population, moving the US from 24th to 21st.",
+    "26 economies now exceed 30% usage; the UAE leads at 70.1%.",
+    "Usage is 27.5% in the Global North versus 15.4% in the Global South.",
+    "US software developer employment reached about 2.2 million in 2025, up 8.5% year over year and a record high; March 2026 was about 4% above March 2025 (BLS Current Population Survey).",
+    "Git pushes rose 78% year over year globally."
+  ],
+  "methodology": "Share of people aged 15–64 who used a generative AI product in the period, from aggregated, anonymized Microsoft telemetry adjusted for OS and device market share, internet penetration and population (Misra et al., arXiv 2511.02781). Q1 refers to March 2026. Developer employment figures are cited from BLS Current Population Survey data.",
+  "qualifiers": "Tier 2: corporate research. Diffusion measures any GenAI use by the whole working-age population, not use at work. The developer-employment claim uses CPS occupational counts, which are noisy month to month, and offers no causal link to AI; Microsoft presents it only as consistent with a demand-expansion theory. Microsoft sells AI coding tools (GitHub Copilot) and has an interest in that reading.",
+  "fetchedAt": "2026-09-24"
+}

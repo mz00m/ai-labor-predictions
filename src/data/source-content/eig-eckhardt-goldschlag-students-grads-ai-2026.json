@@ -1,0 +1,14 @@
+{
+  "abstract": "Economic Innovation Group analysis (May 8, 2026, originally on Agglomerations) by Sarah Eckhardt and Nathan Goldschlag on whether students and recent graduates are moving away from AI-exposed fields. Degree-level exposure is built from Eloundou et al. GPT-4 occupation scores and 2009-2019 ACS degree-to-occupation flows for graduates aged 22-27. National Student Clearinghouse enrollment shows undergraduates moving toward the most-exposed degrees, up 8 percent versus 2017: a Computer and Information Sciences decline (8 percent in 2024-25) is more than offset by engineering and business. Graduates with the most-exposed degrees also earn the most. Among recent graduates, ACS data show no displacement out of field: Computer Science graduates' share in computer and mathematical occupations fell less than a percentage point from the pre-COVID average to 2023-2024, and the share of graduates entering their degree's three most common occupations has barely changed. The authors doubt next year's data will show a move away from exposed degrees.",
+  "keyFindings": [
+    "Enrollment in the most-AI-exposed degree group was up 8 percent last year compared with 2017.",
+    "Computer and Information Sciences enrollment fell 8 percent between 2024 and 2025, offset by rises in engineering and business; the linear enrollment-exposure trend is not significant at 5% (-17.17 [8.97]).",
+    "Computer Science graduates' share working in computer and mathematical occupations fell less than a percentage point from the pre-COVID average to 2023-2024.",
+    "The share of young graduates entering their degree's three most common (2015-19) occupations has changed little, for CS, the most-exposed degrees and all degrees.",
+    "Wages are highest for graduates with the most-AI-exposed degrees."
+  ],
+  "methodology": "Degree exposure: Eloundou et al. (2024) GPT-4 beta scores averaged over the occupations of 22-27 year-old graduates by degree in 1-year ACS 2009-2019, grouped into quintiles across 39 degree groups. Enrollment: National Student Clearinghouse declared majors (97% of Title IV institutions in fall 2024). Occupational sorting: ACS through 2024, top-three-occupation shares and L1 distance of the occupation mix. US.",
+  "qualifiers": "Tier 2: think-tank analysis first published on Substack. Caveats: descriptive. The ACS runs only through 2024, so few graduates could have chosen majors in response to GenAI. Exposure measures cannot separate augmentation from automation, as the authors note. Stable degree-to-occupation shares do not rule out lower employment or longer job searches within field; the authors suggest graduates may be waiting in unemployment for in-field jobs.",
+  "id": "eig-eckhardt-goldschlag-students-grads-ai-2026",
+  "fetchedAt": "2026-09-24"
+}
