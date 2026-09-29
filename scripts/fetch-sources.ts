@@ -112,7 +112,7 @@ function deduplicate(items: RawItem[]): RawItem[] {
 
 interface SourceHealth {
   name: SourceName;
-  status: "ok" | "error";
+  status: "ok" | "error" | "skipped";
   items: number;
   durationMs: number;
   error?: string;
@@ -181,8 +181,13 @@ async function main() {
   console.log(`Adapters: ${ADAPTERS.map((a) => a.name).join(", ")}\n`);
 
   // Run all adapters in parallel
+  const missingEnv = (a: (typeof ADAPTERS)[number]) =>
+    (a.requiresEnv ?? []).filter((k) => !process.env[k]);
+  const skipped = ADAPTERS.filter((a) => missingEnv(a).length > 0);
+  const runnable = ADAPTERS.filter((a) => missingEnv(a).length === 0);
+
   const adapterResults = await Promise.allSettled(
-    ADAPTERS.map(async (adapter): Promise<{ adapter: typeof adapter; items: RawItem[]; durationMs: number }> => {
+    runnable.map(async (adapter): Promise<{ adapter: typeof adapter; items: RawItem[]; durationMs: number }> => {
       const start = Date.now();
       const items = await adapter.fetch(query, since);
       return { adapter, items, durationMs: Date.now() - start };
@@ -194,10 +199,24 @@ async function main() {
   const sourceHealth: SourceHealth[] = [];
   const succeeded: string[] = [];
   const failed: string[] = [];
+  const skippedNames: string[] = [];
+
+  for (const adapter of skipped) {
+    const missing = missingEnv(adapter).join(", ");
+    skippedNames.push(adapter.name);
+    sourceHealth.push({
+      name: adapter.name,
+      status: "skipped",
+      items: 0,
+      durationMs: 0,
+      error: `missing ${missing}`,
+    });
+    console.warn(`  [skip] ${adapter.name}: missing ${missing}`);
+  }
 
   for (let i = 0; i < adapterResults.length; i++) {
     const result = adapterResults[i];
-    const adapter = ADAPTERS[i];
+    const adapter = runnable[i];
 
     if (result.status === "fulfilled") {
       allItems.push(...result.value.items);
@@ -296,6 +315,7 @@ async function main() {
     sources: {
       succeeded,
       failed,
+      skipped: skippedNames,
       totalCandidates: allItems.length,
       afterDedup: deduped.length,
     },

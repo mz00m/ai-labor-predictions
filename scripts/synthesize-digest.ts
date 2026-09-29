@@ -52,6 +52,7 @@ export const DigestSchema = z.object({
   sources: z.object({
     succeeded: z.array(z.string()),
     failed: z.array(z.string()),
+    skipped: z.array(z.string()).optional(),
     totalCandidates: z.number().int(),
     afterDedup: z.number().int(),
   }),
@@ -142,27 +143,34 @@ async function main() {
 wages, and workforce transformation.
 
 Given the following ${items.length} research items from the past ${lookbackDays} days, produce a weekly
-digest. For each highlight, identify which of the following jobsdata.ai prediction
-graphs it is most relevant to (use the slug exactly):
+digest whose main output is a RANKED LIST OF INGEST CANDIDATES for jobsdata.ai: new
+evidence the site should add, most useful first. Rank by (1) new quantitative evidence
+that maps to a prediction graph below, (2) evidence quality (government data, peer-reviewed
+or working papers, Fed and major institutional research first; blogs, forums and opinion
+last or omitted), (3) recency. Omit items with no labor-market evidence. Items titled
+"SERIES DUE" are overdue recurring releases: list them under "watching", not highlights.
+For each highlight, identify which of the following jobsdata.ai prediction graphs it is
+most relevant to (use the slug exactly):
 
 DISPLACEMENT: overall-us-displacement,
   white-collar-professional-displacement, tech-sector-displacement,
   creative-industry-displacement, education-sector-displacement,
   healthcare-admin-displacement, financial-services-displacement,
-  customer-service-automation
+  customer-service-automation, early-career-employment-decline,
+  robots-physical-automation-displacement
 WAGES: median-wage-impact, entry-level-wage-impact,
   high-skill-wage-premium, freelancer-rate-impact
-ADOPTION: ai-adoption-rate, genai-work-adoption, workforce-ai-exposure,
-  earnings-call-ai-mentions
+ADOPTION: ai-adoption-rate, genai-work-adoption, ai-business-formation,
+  workforce-ai-exposure, workforce-ai-use, earnings-call-ai-mentions
 
 Return ONLY valid JSON. No preamble, no markdown fences.
 Schema: {
   "week": "YYYY-WNN",
   "generatedAt": "ISO timestamp",
   "lookbackDays": number,
-  "highlights": [max 5, each: {
+  "highlights": [up to 15 ranked ingest candidates, best first, each: {
     "title": string,
-    "summary": "2-3 sentences with source citation",
+    "summary": "1-2 sentences stating the key number(s) and what they measure",
     "source": "URL",
     "authors": [optional],
     "publishedAt": "ISO date" (optional),
@@ -171,7 +179,7 @@ Schema: {
     "sourceAdapter": "adapter name",
     "graphSlug": "best-matching slug from the list above"
   }],
-  "themes": ["max 5 bulleted themes"],
+  "themes": ["max 3 short themes"],
   "watching": [{
     "title": string,
     "source": "URL",
@@ -196,7 +204,7 @@ ${itemsText}`;
   const client = new Anthropic();
   const response = await client.messages.create({
     model: CLAUDE_SONNET,
-    max_tokens: 4096,
+    max_tokens: 8192,
     messages: [{ role: "user", content: synthesisPrompt }],
   });
 
@@ -216,7 +224,7 @@ ${itemsText}`;
   // Pre-process: fix common LLM response issues before validation
   const obj = parsed as any;
   if (Array.isArray(obj.highlights)) {
-    obj.highlights = obj.highlights.slice(0, 5).map((h: any) => ({
+    obj.highlights = obj.highlights.slice(0, 15).map((h: any) => ({
       ...h,
       // Clamp score to 0-1 (Claude sometimes returns percentages like 85 instead of 0.85)
       score: typeof h.score === "number"
@@ -227,7 +235,7 @@ ${itemsText}`;
     }));
   }
   if (Array.isArray(obj.themes)) {
-    obj.themes = obj.themes.slice(0, 5);
+    obj.themes = obj.themes.slice(0, 3);
   }
   if (Array.isArray(obj.watching)) {
     // Filter out watching items with invalid URLs
@@ -282,6 +290,32 @@ ${itemsText}`;
     )
   );
   console.log(`Updated latest pointer to ${weekId}`);
+
+  // Keep the full scored candidate list next to the digest. Before this, only
+  // the highlights survived a run, so there was no way to tell whether a missed
+  // paper had been fetched and ranked out or never fetched at all.
+  const candidatesPath = path.join(outputDir, `${weekId}.candidates.json`);
+  fs.writeFileSync(
+    candidatesPath,
+    JSON.stringify(
+      {
+        week: weekId,
+        fetchedAt: fetchData.fetchedAt,
+        sources: sourcesInfo,
+        sourceHealth: fetchData.sourceHealth ?? [],
+        items: items.map((it: any) => ({
+          title: it.title,
+          url: it.url,
+          source: it.source,
+          publishedAt: it.publishedAt,
+          score: it.score,
+        })),
+      },
+      null,
+      2
+    ) + "\n"
+  );
+  console.log(`Wrote ${items.length} scored candidates to ${candidatesPath}`);
 
   // Summary
   console.log("\n--- Digest Summary ---");

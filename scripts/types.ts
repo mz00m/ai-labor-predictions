@@ -41,5 +41,8 @@ export interface RawItem {
 export interface SourceAdapter {
   name: SourceName;
   tier: "academic" | "policy" | "signal";
+  /** Env vars the adapter cannot run without. When any is missing the run
+   *  reports the adapter as "skipped" instead of a silent "ok, 0 items". */
+  requiresEnv?: string[];
   fetch(query: string, since: Date): Promise<RawItem[]>;
 }

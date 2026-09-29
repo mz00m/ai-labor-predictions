@@ -191,11 +191,14 @@ async function fetchPubMed(query: string, since: Date): Promise<RawItem[]> {
 // ─── Policy & Practitioner Adapters ───────────────────────────────────
 
 async function fetchBLS(query: string, since: Date): Promise<RawItem[]> {
+  // v2 needs a registration key and returns calculations. Without a key, fall
+  // back to the keyless v1 endpoint (25 queries/day, no calculations) and
+  // derive the month-over-month change from the two latest observations.
   const apiKey = process.env.BLS_API_KEY;
-  if (!apiKey) {
-    console.warn("[bls] BLS_API_KEY not set — skipping BLS adapter");
-    return [];
-  }
+  const endpoint = apiKey
+    ? "https://api.bls.gov/publicAPI/v2/timeseries/data/"
+    : "https://api.bls.gov/publicAPI/v1/timeseries/data/";
+  if (!apiKey) console.warn("[bls] BLS_API_KEY not set — using keyless v1 API");
 
   const BLS_SERIES = [
     "CEU0000000001",
@@ -210,17 +213,21 @@ async function fetchBLS(query: string, since: Date): Promise<RawItem[]> {
 
   const res = await fetchWithRetry(
     () =>
-      fetchJson("https://api.bls.gov/publicAPI/v2/timeseries/data/", "bls", {
+      fetchJson(endpoint, "bls", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          seriesid: BLS_SERIES,
-          startyear: startYear,
-          endyear: endYear,
-          registrationkey: apiKey,
-          calculations: true,
-          annualaverage: false,
-        }),
+        body: JSON.stringify(
+          apiKey
+            ? {
+                seriesid: BLS_SERIES,
+                startyear: startYear,
+                endyear: endYear,
+                registrationkey: apiKey,
+                calculations: true,
+                annualaverage: false,
+              }
+            : { seriesid: BLS_SERIES, startyear: startYear, endyear: endYear }
+        ),
       }),
     { label: "bls", retries: 3, baseDelayMs: 2000 }
   );
@@ -235,7 +242,10 @@ async function fetchBLS(query: string, since: Date): Promise<RawItem[]> {
     if (!latestData) return [];
 
     const periodLabel = `${latestData.year} ${latestData.periodName}`;
-    const change = latestData.calculations?.net_changes?.["1"];
+    const prior = series.data?.[1];
+    const change =
+      latestData.calculations?.net_changes?.["1"] ??
+      (prior ? Math.round((Number(latestData.value) - Number(prior.value)) * 10) / 10 : undefined);
 
     return [
       {
@@ -300,42 +310,6 @@ async function fetchFRED(query: string, since: Date): Promise<RawItem[]> {
 
 // ─── Signal Adapters ──────────────────────────────────────────────────
 
-async function fetchHNAlgolia(
-  query: string,
-  since: Date
-): Promise<RawItem[]> {
-  const sinceUnix = Math.floor(since.getTime() / 1000);
-  const tokens = query
-    .split(/\s+/)
-    .filter((t) => t.length >= 3)
-    .slice(0, 12)
-    .join(",");
-  const url =
-    `https://hn.algolia.com/api/v1/search?` +
-    `query=${encodeURIComponent(query)}&` +
-    `optionalWords=${encodeURIComponent(tokens)}&` +
-    `tags=story&` +
-    `numericFilters=created_at_i>${sinceUnix},points>15&` +
-    `hitsPerPage=20`;
-
-  const res = await fetchWithRetry(
-    () => fetchJson(url, "hn-algolia"),
-    { label: "hn-algolia", retries: 3, baseDelayMs: 500 }
-  );
-
-  return (res.hits ?? []).map(
-    (hit: any): RawItem => ({
-      title: hit.title,
-      url:
-        hit.url ??
-        `https://news.ycombinator.com/item?id=${hit.objectID}`,
-      abstract: `HN discussion (${hit.points} pts, ${hit.num_comments} comments): ${hit.title}`,
-      publishedAt: new Date(hit.created_at),
-      source: "hnAlgolia",
-    })
-  );
-}
-
 async function fetchGoogleCSE(
   query: string,
   since: Date
@@ -375,21 +349,32 @@ export const ADAPTERS: SourceAdapter[] = [
     fetch: fetchSemanticScholar,
   },
   { name: "arxiv", tier: "academic", fetch: fetchArxiv },
-  { name: "ssrn", tier: "academic", fetch: fetchSSRN },
+  {
+    name: "ssrn",
+    tier: "academic",
+    requiresEnv: ["GOOGLE_CSE_KEY", "GOOGLE_CSE_ID"],
+    fetch: fetchSSRN,
+  },
   { name: "pubmed", tier: "academic", fetch: fetchPubMed },
   { name: "openAlex", tier: "academic", fetch: fetchOpenAlex },
   // Policy
   { name: "nber", tier: "policy", fetch: fetchNBER },
   { name: "bls", tier: "policy", fetch: fetchBLS },
-  { name: "fred", tier: "policy", fetch: fetchFRED },
+  { name: "fred", tier: "policy", requiresEnv: ["FRED_API_KEY"], fetch: fetchFRED },
   {
     name: "trackedInstitutions",
     tier: "policy",
     fetch: fetchTrackedInstitutions,
   },
   // Signal
-  { name: "googleCse", tier: "signal", fetch: fetchGoogleCSE },
-  { name: "hnAlgolia", tier: "signal", fetch: fetchHNAlgolia },
+  {
+    name: "googleCse",
+    tier: "signal",
+    requiresEnv: ["GOOGLE_CSE_KEY", "GOOGLE_CSE_ID"],
+    fetch: fetchGoogleCSE,
+  },
+  // hnAlgolia removed 2026-09-29: it supplied 20 of ~100 weekly candidates and
+  // its forum/blog posts displaced research in the top highlights (W34-W36).
   { name: "recurringSeries", tier: "signal", fetch: fetchRecurringSeries },
 ];
 

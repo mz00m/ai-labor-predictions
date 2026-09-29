@@ -7,6 +7,10 @@ Built on the Claude Managed Agents API (beta, April 2026).
 
 ### 1. Research Agent (`research_agent.py`)
 
+> **Retired from the schedule 2026-09-29.** Its weekly workflow duplicated the TypeScript
+> digest (`.github/workflows/weekly-digest.yml`), which is now the only weekly research scan.
+> The script still runs locally.
+
 Weekly scan for new AI labor market research. Searches NBER, Brookings, BLS,
 McKinsey, IMF, and major outlets. Extracts quantitative statistics and maps
 them to the 17 prediction graphs.
@@ -49,7 +53,6 @@ python factcheck_agent.py
 Copy the workflow files to your repo:
 
 ```
-.github/workflows/research_agent.yml    # Mondays at 8am ET
 .github/workflows/factcheck_agent.yml   # 1st of month at 9am ET
 ```
 
