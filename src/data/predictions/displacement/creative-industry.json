@@ -5,22 +5,30 @@
   "description": "Estimated share of creative work (design, writing, marketing, illustration) significantly affected by generative AI by 2030. Sources measure different things — freelance platform declines, job posting changes, executive surveys, and model projections — making direct comparison difficult. Effects are concentrated in commoditized, entry-level tasks; experienced creative professionals show wage growth and productivity gains from AI augmentation.",
   "category": "displacement",
   "unit": "% of roles displaced",
-  "currentValue": 20.7,
+  "currentValue": 12,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "disclaimer": "The evidence here is mixed — interpret with caution. This estimate combines 8 findings that measure fundamentally different things: freelance platform revenue declines, job posting volume changes, illustration upload trends, executive surveys, and model-based projections. These are not interchangeable metrics. The 14–33% range reflects both genuine uncertainty and definitional incompatibility across sources. Observed platform-level effects (Upwork, Pixiv) capture commoditized creative tasks — entry-level, template-driven work — not the full creative sector. The directional signals below the chart show experienced designers saw +16.7% wage growth (Dallas Fed), and human-AI teams showed 73% higher productivity (Ju & Aral). The weighted average is a mathematical summary of mixed evidence, not a consensus estimate of sector-wide role elimination.",
   "history": [
     {
       "date": "2023-06-14",
-      "value": 32.5,
-      "confidenceLow": 25,
-      "confidenceHigh": 40,
+      "value": 9.8,
+      "confidenceLow": 4.9,
+      "confidenceHigh": 16.3,
       "sourceIds": [
         "mckinsey-creative-automation"
       ],
       "evidenceTier": 2,
       "metricType": "survey",
-      "dataType": "projected"
+      "dataType": "projected",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of time spent on creative tasks that GenAI could automate (midpoint of 25-40%), task exposure",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.5,
+        "rationale": "Task automation potential, not realized job loss; documented task-automation factor (0.30, range 0.15-0.50): only a fraction of technically automatable tasks leads to job restructuring."
+      }
     },
     {
       "date": "2024-01-30",
@@ -33,31 +41,27 @@
       "evidenceTier": 2,
       "metricType": "survey",
       "sampleSize": 300,
-      "dataType": "observed"
-    },
-    {
-      "date": "2024-05-20",
-      "value": 22,
-      "confidenceLow": 17,
-      "confidenceHigh": 30,
-      "sourceIds": [
-        "upwork-freelancer-impact"
-      ],
-      "evidenceTier": 1,
-      "metricType": "corporate",
-      "dataType": "observed"
+      "dataType": "projected"
     },
     {
       "date": "2024-08-15",
-      "value": 21,
-      "confidenceLow": 14,
-      "confidenceHigh": 28,
+      "value": 6.3,
+      "confidenceLow": 3.2,
+      "confidenceHigh": 9.5,
       "sourceIds": [
         "nber-creative-ai-2024"
       ],
       "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
+      "metricType": "postings",
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "relative decline in job posts for automation-prone writing and coding jobs vs manual-intensive jobs, 8 months after ChatGPT, global freelancing platform (image creation: 17%)",
+        "conversionFactor": 0.3,
+        "conversionLow": 0.15,
+        "conversionHigh": 0.45,
+        "rationale": "Relative posting decline on one global freelance platform, and the 21% covers writing plus coding posts; documented relative-posting factor (0.30, range 0.15-0.45)."
+      }
     },
     {
       "date": "2025-02-15",
@@ -73,27 +77,23 @@
     },
     {
       "date": "2025-07-15",
-      "value": 33,
-      "confidenceLow": 25,
-      "confidenceHigh": 40,
+      "value": 11.6,
+      "confidenceLow": 6.6,
+      "confidenceHigh": 16.5,
       "sourceIds": [
         "indeed-graphic-artist-postings-2025"
       ],
       "evidenceTier": 2,
       "metricType": "postings",
-      "dataType": "observed"
-    },
-    {
-      "date": "2025-10-01",
-      "value": 30,
-      "confidenceLow": 20,
-      "confidenceHigh": 40,
-      "sourceIds": [
-        "uoc-creative-automation-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "projection",
-      "dataType": "projected"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% decline in computer graphic artist job postings on Indeed vs pre-ChatGPT level",
+        "conversionFactor": 0.35,
+        "conversionLow": 0.2,
+        "conversionHigh": 0.5,
+        "rationale": "Documented job-posting-decline factor (0.35, range 0.20-0.50); posting declines overstate displacement ~2-3x because reduced hiring != job elimination."
+      }
     },
     {
       "date": "2026-01-01",
@@ -117,14 +117,22 @@
     {
       "date": "2026-03-25",
       "value": 4.7,
+      "confidenceLow": 1.4,
+      "confidenceHigh": 9.9,
       "sourceIds": [
         "tufts-digital-planet-ai-jobs-risk-2026"
       ],
       "evidenceTier": 2,
       "metricType": "projection",
       "dataType": "projected",
-      "confidenceLow": 4.7,
-      "confidenceHigh": 4.7
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% of US arts, entertainment and recreation jobs vulnerable to AI job loss over 2-5 years, gross",
+        "conversionFactor": 1,
+        "conversionLow": 0.1,
+        "conversionHigh": 1,
+        "rationale": "9.3M jobs vulnerable (2.7-19.5M); the report explicitly excludes job creation, so this is gross exposure to loss"
+      }
     },
     {
       "date": "2026-04-20",
@@ -200,15 +208,6 @@
       ],
       "evidenceTier": 3,
       "label": "UNCTAD: Creative services exports surged to $1.4T; discusses AI's impact on creative economy"
-    },
-    {
-      "date": "2025-01-15",
-      "direction": "down",
-      "sourceIds": [
-        "demirci-jebo-freelance-2025"
-      ],
-      "evidenceTier": 1,
-      "label": "JEBO (peer-reviewed): writing postings -30%, graphic design -18% within 8 months of ChatGPT"
     },
     {
       "date": "2025-02-19",
@@ -449,23 +448,13 @@
       "dateAdded": "2026-03-01"
     },
     {
-      "id": "upwork-freelancer-impact",
-      "title": "Upwork Q2 2024 Earnings — Freelancer Market Trends",
-      "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-second-quarter-2024-financial-results",
-      "publisher": "Upwork (Earnings Report)",
-      "evidenceTier": 1,
-      "datePublished": "2024-05-20",
-      "excerpt": "Writing and translation freelancer job volume declined ~30% YoY. Graphic design jobs fell 17%. AI-augmented creative roles grew 45%.",
-      "dateAdded": "2026-03-01"
-    },
-    {
       "id": "nber-creative-ai-2024",
-      "title": "Generative AI and Creative Work: Evidence from Freelance Platforms",
+      "title": "Who Is AI Replacing? The Impact of Generative AI on Online Freelancing Platforms",
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4602944",
-      "publisher": "CESifo / Management Science (Demirci, Hannane, Zhu)",
+      "publisher": "Management Science (Demirci, Hannane, Zhu)",
       "evidenceTier": 1,
       "datePublished": "2024-08-15",
-      "excerpt": "Image generation AI reduced demand for freelance illustrators by 21% within 12 months of widespread availability.",
+      "excerpt": "Our findings indicate a 21% decrease in the number of job posts for automation-prone jobs related to writing and coding compared with jobs requiring manual-intensive skills within eight months after the introduction of ChatGPT. ... We also find that the introduction of image-generating AI technologies led to a 17% decrease in the number of job posts related to image creation.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -506,16 +495,6 @@
       "evidenceTier": 2,
       "datePublished": "2025-02-19",
       "excerpt": "Fiverr FY2024 marketplace revenue declined 1.3% YoY to $303.1M. Active buyers fell 10% to 3.6M. AI-related categories showed strong growth while traditional low-complexity gig categories contracted.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "uoc-creative-automation-2025",
-      "title": "AI Can Automate Creative Professions, UOC Study Finds",
-      "url": "https://www.uoc.edu/en/news/2025/ai-could-automate-creative-professions",
-      "publisher": "Universitat Oberta de Catalunya",
-      "evidenceTier": 1,
-      "datePublished": "2025-09-15",
-      "excerpt": "Peer-reviewed study finds AI can now automate substantial portions of creative work. Freelance writing gigs dropped 30% post-ChatGPT launch.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -576,16 +555,6 @@
       "evidenceTier": 1,
       "datePublished": "2025-06-01",
       "excerpt": "Survey of 335 freelance creative workers: 73% believe GenAI is altering quality of work; 68% feel job security reduced; 61% say value placed on their work has decreased; 55% report decline in financial compensation.",
-      "dateAdded": "2026-03-01"
-    },
-    {
-      "id": "demirci-jebo-freelance-2025",
-      "title": "Winners and Losers of Generative AI: Early Evidence of Shifts in Freelancer Demand",
-      "url": "https://www.sciencedirect.com/science/article/pii/S0167268124004591",
-      "publisher": "Journal of Economic Behavior & Organization (Demirci, Jiang, Kartal, Trujillo)",
-      "evidenceTier": 1,
-      "datePublished": "2025-01-15",
-      "excerpt": "Peer-reviewed analysis of 2M job postings: freelance writing postings fell 30.37%, graphic design 18.49%, 3D modeling 15.57% within 8 months of ChatGPT launch. Applications per posting rose 8.57%.",
       "dateAdded": "2026-03-01"
     },
     {

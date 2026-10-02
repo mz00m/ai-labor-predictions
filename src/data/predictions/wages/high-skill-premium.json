@@ -5,7 +5,7 @@
   "description": "Measured pay advantage for workers with AI/ML skills over comparable workers without them. Unlike most graphs on this site, every estimate here is an observation of a premium that already exists \u2014 none of them is a forecast.",
   "category": "wages",
   "unit": "% wage premium over median",
-  "currentValue": 30.1,
+  "currentValue": 29.4,
   "timeHorizon": "Current estimate",
   "aggregationMethod": "weighted",
   "trendComparable": false,
@@ -24,18 +24,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2024-01-15",
-      "value": 20,
-      "confidenceLow": 14,
-      "confidenceHigh": 30,
-      "sourceIds": [
-        "lightcast-2024"
-      ],
-      "evidenceTier": 2,
-      "metricType": "postings",
-      "dataType": "observed"
-    },
-    {
       "date": "2025-02-26",
       "value": 23,
       "confidenceLow": 18,
@@ -47,7 +35,13 @@
       "metricType": "postings",
       "sampleSize": 10000000,
       "isProxy": true,
-      "proxyContext": "UK job vacancies; US premium likely higher based on PwC/Lightcast data",
+      "proxyContext": {
+        "actualUnit": "UK posted-salary premium for AI skills in online job vacancies",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "UK job vacancies (10M+, 2018-2024), not US; US premium likely higher based on PwC/Lightcast data. No documented UK-to-US conversion; plotted at the raw value with proxy half-weight."
+      },
       "dataType": "observed"
     },
     {
@@ -63,28 +57,6 @@
       "dataType": "observed"
     },
     {
-      "date": "2025-08-01",
-      "value": 25,
-      "confidenceLow": 17,
-      "confidenceHigh": 36,
-      "sourceIds": [
-        "oecd-skills-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
-    },
-    {
-      "date": "2025-10-15",
-      "value": 56,
-      "sourceIds": [
-        "pwc-ai-wage-premium-2025"
-      ],
-      "evidenceTier": 2,
-      "metricType": "postings",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-01-01",
       "value": 35,
       "confidenceLow": 25,
@@ -92,15 +64,21 @@
       "sourceIds": [
         "indexdev-ai-salary-2026"
       ],
-      "evidenceTier": 2,
+      "evidenceTier": 3,
       "metricType": "postings",
-      "dataType": "observed"
+      "dataType": "observed",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "occupation pay gap (AI/ML engineer vs general software engineer), not a skill premium",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Vendor blog comparing median compensation across two occupations rather than the return to AI skills within comparable jobs; synthesizes Levels.fyi, Glassdoor and other secondary data. Plotted at the raw value with proxy half-weight."
+      }
     },
     {
       "date": "2026-01-15",
-      "value": 3,
-      "confidenceLow": 3,
-      "confidenceHigh": 15,
+      "value": 8.5,
       "sourceIds": [
         "imf-skill-gaps-premium-2026"
       ],
@@ -120,13 +98,17 @@
       "metricType": "survey",
       "dataType": "observed",
       "isProxy": true,
-      "proxyContext": "Willingness-to-pay premium reported by 45% of leaders; likely understates actual market premium"
+      "proxyContext": {
+        "actualUnit": "employer willingness-to-pay premium for strong AI skills (leader survey)",
+        "conversionFactor": 1,
+        "conversionLow": 1,
+        "conversionHigh": 1,
+        "rationale": "Willingness-to-pay premium (11-15%) reported by 45% of leaders; likely understates actual market premium. Plotted at the raw value with proxy half-weight."
+      }
     },
     {
       "date": "2026-06-15",
       "value": 62,
-      "confidenceLow": 16,
-      "confidenceHigh": 118,
       "sourceIds": [
         "pwc-ai-jobs-barometer-2026"
       ],
@@ -166,6 +148,15 @@
       ],
       "evidenceTier": 1,
       "label": "Noy & Zhang: low-ability workers gain most from AI"
+    },
+    {
+      "date": "2024-01-15",
+      "direction": "up",
+      "sourceIds": [
+        "lightcast-2024"
+      ],
+      "evidenceTier": 2,
+      "label": "Lightcast 2024: ~20% premium for AI-skill postings (superseded by 2025 edition, 28%)"
     },
     {
       "date": "2024-04-25",
@@ -303,6 +294,15 @@
       "label": "Fortune: AI talent commands 30% salary premium as demand outstrips supply"
     },
     {
+      "date": "2025-10-15",
+      "direction": "up",
+      "sourceIds": [
+        "pwc-ai-wage-premium-2025"
+      ],
+      "evidenceTier": 2,
+      "label": "PwC AI Jobs Barometer 2025: 56% AI-skill premium (superseded by 2026 edition, 62%)"
+    },
+    {
       "date": "2025-12-01",
       "direction": "up",
       "sourceIds": [
@@ -310,6 +310,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio Labs: demand for $100K+ jobs up ~150% in 2 years; K-shaped recovery"
+    },
+    {
+      "date": "2025-12-09",
+      "direction": "neutral",
+      "sourceIds": [
+        "oecd-skills-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "OECD Skills Outlook: AI-complemented workers may earn more; no AI skill premium estimated"
     },
     {
       "date": "2026-01-01",
@@ -676,7 +685,8 @@
       "url": "https://www.oecd.org/en/publications/oecd-skills-outlook-2025_26163cd3-en.html",
       "publisher": "OECD",
       "evidenceTier": 1,
-      "datePublished": "2025-08-01",
+      "datePublished": "2025-12-09",
+      "excerpt": "On the supply side, workers in occupations highly exposed to generative AI substitution may suffer reductions in earnings and employment opportunities (Hui, Reshef and Zhou, 2023; Liu et al., 2024), whereas those in jobs complemented by AI may increase their earnings (Qiao, Rui and Xiong, 2024).",
       "dateAdded": "2026-03-01"
     },
     {
@@ -724,7 +734,7 @@
       "title": "AI Salary Statistics 2026: Global Compensation Trends",
       "url": "https://www.index.dev/blog/ai-developer-salary-trends",
       "publisher": "Index.dev",
-      "evidenceTier": 2,
+      "evidenceTier": 3,
       "datePublished": "2026-01-05",
       "excerpt": "AI/ML engineers median total compensation reached $185K in 2025, with top-tier researchers commanding $500K-$1M+. The premium over general software roles widened to 35%.",
       "dateAdded": "2026-03-01"
@@ -756,7 +766,7 @@
       "publisher": "IMF Staff Discussion Note",
       "evidenceTier": 2,
       "datePublished": "2026-01-15",
-      "excerpt": "Job postings with 4+ new skills pay up to 15% more (UK) and 8.5% more (US); middle-skill roles being squeezed while high-skill workers gain.",
+      "excerpt": "The presence of a new skill in a vacancy is associated with about 3 to 3.4 percent higher wages. The wage premium is higher when employers demand multiple new skills, reaching 15.1 percent in the United Kingdom for vacancies listing four or more new skills and 8.5 percent in the United States.",
       "dateAdded": "2026-03-01"
     },
     {
@@ -775,7 +785,7 @@
       "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5136877",
       "publisher": "Stanford / World Bank",
       "evidenceTier": 1,
-      "datePublished": "2026-01-01",
+      "datePublished": "2025-12-11",
       "excerpt": "Adoption concentrated among younger, college-educated, higher-earning employees, reinforcing wage premium for AI-complementary skills.",
       "dateAdded": "2026-03-07"
     },
