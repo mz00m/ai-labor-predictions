@@ -4,7 +4,8 @@
   "_history": [
     "2026-06-30: initial scaffold. Discovered that many institutions abandoned RSS (Yale BL, Stanford DEL, Brookings, IMF Blog all return 200 but with empty/redirect bodies). Pivoted to sitemap-based polling for those, RSS for ones that still publish proper feeds (Hamilton Project verified working).",
     "2026-07-02: added Economic Innovation Group (EIG), Ramp Economics Lab (via /leading-indicators sub-sitemap), Revelio Labs, and Ara Kharazian's Econ Lab substack. Prompted by the Casselman NYT July 2 piece which named EIG/Goldschlag and Ramp/Revelio as the three most notable non-academic institutional voices on AI labor measurement.",
-    "2026-07-23: added 8 verified feeds surfaced by July 2026 ingest sessions: Stripe Economics, Fed FEDS Notes, NY Fed Liberty Street, FactSet Insight, Census Newsroom, Challenger Gray, OpenAI News, Guy Lichtinger substack. All RSS-verified with curl before adding. Skipped: Gusto (403 bot-block on all paths — rely on Google CSE), St. Louis Fed On the Economy (connection timeouts — content reachable via FRED adapter + FEDS Notes)."
+    "2026-07-23: added 8 verified feeds surfaced by July 2026 ingest sessions: Stripe Economics, Fed FEDS Notes, NY Fed Liberty Street, FactSet Insight, Census Newsroom, Challenger Gray, OpenAI News, Guy Lichtinger substack. All RSS-verified with curl before adding. Skipped: Gusto (403 bot-block on all paths — rely on Google CSE), St. Louis Fed On the Economy (connection timeouts — content reachable via FRED adapter + FEDS Notes).",
+    "2026-09-29: added Richmond Fed, Chicago Fed, SF Fed, Indeed Hiring Lab, EPI, Pew, Microsoft On the Issues, MIT FutureTech after a gap scan found ~70 missed sources, most from publishers not on this list. Tested but not added: Dallas/Atlanta Fed (no RSS; sitemaps empty), St. Louis Fed (timeouts), BLS TED (403 to scripts), NY Fed research RSS (empty)."
   ],
   "institutions": [
     {
@@ -164,15 +165,84 @@
       "filePattern": "CES-WP-\\d\\d-\\d+\\.pdf$",
       "tier": 1,
       "notes": "The Census Newsroom RSS entry carries only press releases (BTOS, BFS) and does NOT reach CES working papers, which is how 'Graduating into Disruption' (CES-26-56, Sep 2026) was missed entirely by the W38 digest despite being the week's most significant release. This series already supplied tucker-qwi-early-career-hires-2026. No RSS exists, census.gov's sitemap is flat and stale-dated with no paper pages, and RePEc publishes no feed for the cen:wpaper series - the open www2 directory index is the only machine-readable listing. It carries no dates, so the adapter takes each paper's date from its Last-Modified header. Feed URL is year-scoped: roll to .../2027/adrm/ces/ in January."
+    },
+    {
+      "publisher": "Richmond Fed Economic Briefs",
+      "domain": "richmondfed.org",
+      "feedUrl": "https://www.richmondfed.org/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "pathInclude": "/publications/research/",
+      "notes": "Economic Briefs and working papers (e.g. EB 26-26/26-27 on AI and job-finding). No RSS. Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "Chicago Fed Working Papers",
+      "domain": "chicagofed.org",
+      "feedUrl": "https://www.chicagofed.org/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "pathInclude": "/publications/working-papers/2026",
+      "notes": "Chicago Fed rewrites every sitemap lastmod daily, so scope by year path (bump to /2027 in January). Caught WP 2026-12 late. Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "San Francisco Fed",
+      "domain": "frbsf.org",
+      "feedUrl": "https://www.frbsf.org/feed/",
+      "feedType": "rss",
+      "tier": 1,
+      "notes": "Economic Letters (e.g. 2026-14 productivity regime). Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "Indeed Hiring Lab",
+      "domain": "hiringlab.indeed.com",
+      "feedUrl": "https://hiringlab.indeed.com/feed/",
+      "feedType": "rss",
+      "tier": 2,
+      "notes": "Postings and advertised-pay analysis (AI pay premium, software postings). Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "Economic Policy Institute",
+      "domain": "epi.org",
+      "feedUrl": "https://www.epi.org/feed/",
+      "feedType": "rss",
+      "tier": 2,
+      "notes": "Class of 2026 series, wage research. Page fetches may 403; feed works. Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "Pew Research Center",
+      "domain": "pewresearch.org",
+      "feedUrl": "https://www.pewresearch.org/feed/",
+      "feedType": "rss",
+      "tier": 2,
+      "notes": "Worker AI-use surveys. High-volume feed; relies on keyword relevance filter. Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "Microsoft On the Issues",
+      "domain": "blogs.microsoft.com",
+      "feedUrl": "https://blogs.microsoft.com/on-the-issues/feed/",
+      "feedType": "rss",
+      "tier": 2,
+      "notes": "Quarterly AI Diffusion Reports (registered recurring series microsoft-ai-diffusion). Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "MIT FutureTech",
+      "domain": "futuretech.mit.edu",
+      "feedUrl": "https://futuretech.mit.edu/sitemap.xml",
+      "feedType": "sitemap",
+      "tier": 1,
+      "pathInclude": "/publication/",
+      "notes": "Thompson group: S&P 500 AI adoption, AI and Scale, computer-vision automation. Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
     }
   ],
   "_planned_but_not_yet_working": [
     "OECD AI Observatory (oecd.ai) — no functional RSS or sitemap discovered",
     "IMF Blog (blogs.imf.org) — sitemap returns 403, RSS empty",
     "Goldman Sachs Insights (goldmansachs.com/insights) — no public feed",
-    "Dallas Fed / Atlanta Fed / St Louis Fed research — RSS endpoints 404; would need custom HTML scrapers",
     "IZA Discussion Papers — RSS endpoint 404",
-    "VoxEU / CEPR — RSS returns 403 (likely Cloudflare bot protection)"
+    "VoxEU / CEPR — RSS returns 403 (likely Cloudflare bot protection)",
+    "Dallas Fed / Atlanta Fed research — no RSS; sitemap.xml returns an empty body (retested 2026-09-29)",
+    "St. Louis Fed On the Economy — connection timeouts (retested 2026-09-29)",
+    "BLS The Economics Daily — ted.rss returns 403 to scripts (retested 2026-09-29)"
   ],
   "changelog": null
 }
