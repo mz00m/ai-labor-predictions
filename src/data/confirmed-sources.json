@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-09-29",
-  "totalSources": 782,
-  "verifiedCount": 772,
+  "lastUpdated": "2026-10-02",
+  "totalSources": 784,
+  "verifiedCount": 774,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -11088,6 +11088,34 @@
       "usedIn": [
         "earnings-call-ai-mentions"
       ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fed-tito-ai-manufacturing-postings-2026": {
+      "id": "fed-tito-ai-manufacturing-postings-2026",
+      "title": "AI on the Factory Floor: Evidence from Manufacturing Job Postings",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html",
+      "publisher": "Federal Reserve Board FEDS Notes (Maria D. Tito)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-30",
+      "excerpt": "AI-related requirements surged in the second half of last year, reaching 11 percent in manufacturing versus 8 percent economy-wide.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "high-skill-wage-premium",
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nber-blumenfeld-hazell-ai-software-macro-2026": {
+      "id": "nber-blumenfeld-hazell-ai-software-macro-2026",
+      "title": "The Macroeconomic Effect of AI: Sizing the Software Engineering Channel",
+      "url": "https://www.nber.org/papers/w35793",
+      "publisher": "NBER (Blumenfeld, Hazell, Lian, Schaab)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "From November 2022 to December 2025, AI increased the market’s expected present value of software engineering productivity by the equivalent of a permanent 32.6% productivity increase. The corresponding effect on the level of GDP is 3.6% in the baseline and 6.5% when higher software engineering productivity also raises R&D productivity.",
+      "usedIn": [],
       "verified": true,
       "synthetic": false
     }
