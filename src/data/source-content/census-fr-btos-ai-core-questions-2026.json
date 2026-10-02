@@ -1,0 +1,14 @@
+{
+  "id": "census-fr-btos-ai-core-questions-2026",
+  "abstract": "Federal Register notice (FR Doc. 2026-18304, published September 9, 2026) in which the Commerce Department submits a revision of the Business Trends and Outlook Survey to OMB, with a 30-day comment period. It makes three requests: repeat the AI supplement with minor content changes; add a new core question on business uncertainty; and add three AI questions to the biweekly core. Two of the three AI questions (generative AI usage, and the impact of AI on total employees) move from the supplement to the core; the third is new and asks about AI's impact on new employees. All three are asked only of businesses that report AI use. The Bureau is also exploring publishing AI-supplement data more often than annually but less often than biweekly.",
+  "keyFindings": [
+    "Three AI questions would join the biweekly BTOS core: generative AI usage, AI's impact on the total number of employees, and a new question on AI's impact on new employees.",
+    "The new AI questions use skip logic and are asked only of businesses that report AI usage; the existing current-use question (Q7) is not reworded.",
+    "The AI supplement would be repeated with minor content changes, and Census is exploring publishing it more often than annually but less often than biweekly.",
+    "The current BTOS sample is approximately 1.2 million businesses split into six panels; each panel reports once every 12 weeks.",
+    "Estimated burden: 396,000 responses in cycles 1, 3 and 4 and 132,000 in cycle 2; 110,000 burden hours."
+  ],
+  "methodology": "Paperwork Reduction Act notice for OMB Control Number 0607-1022 (Regular submission, revision of a currently approved collection). Earlier comment periods ran December 18, 2024 (60 days) and March 31, 2025 (30 days); this notice opens an additional 30 days.",
+  "qualifiers": "Tier 1: official federal notice. It is a proposal pending OMB approval, not fielded content, and gives no start date. It contains no adoption statistics. It matters for jobsdata.ai because once fielded, BTOS would give biweekly firm-reported data on AI's employment effects, a direct firm-side measure the displacement graphs currently lack. Whether adding follow-ups behind Q7 changes Q7 response rates is untested.",
+  "fetchedAt": "2026-09-24"
+}

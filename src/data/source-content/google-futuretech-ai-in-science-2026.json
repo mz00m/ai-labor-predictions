@@ -1,0 +1,14 @@
+{
+  "abstract": "Codreanu, Imas, Rock, Thompson, Manyika and co-authors (Google with MIT FutureTech, September 2026) give early evidence on how scientists use AI, drawing on 15 million Gemini interactions, an inventory of more than 2,600 specialized scientific AI models, and a July-August 2026 survey of 637 active researchers in the US and UK. Scientists are overrepresented among Gemini users relative to their employment share, and nearly half of surveyed scientists use AI every day. LLMs and specialized models act as complements: LLMs handle coding, analysis and writing, while specialized models handle domain-specific prediction, generation and classification. Just below three quarters of respondents report net time savings (6% report net time lost), averaging about 6.9 hours a week. The saved time goes mostly into more research output (just below 30%), lab work and data collection (about 21%) and harder problems (about 19%); about 18% report better work-life balance. Bottlenecks move downstream: about 44% say their primary constraint has shifted to lab execution, validation or field work, 41% report a growing backlog of untested hypotheses, and 89% of time-savers spend more than a tenth of the saved time verifying AI outputs. 49% say AI pushes them toward safer, more incremental projects, against 28% who say it enables riskier ones.",
+  "keyFindings": [
+    "Nearly half of 637 surveyed US/UK scientists use AI every day",
+    "About 6.9 hours per week saved on average; just below three quarters report net time savings, 6% net time lost (self-reported)",
+    "About 84% report a net increase in lab or professional output over the past three years",
+    "41% report a growing backlog of untested hypotheses; 89% of time-savers spend more than a tenth of saved time verifying AI outputs",
+    "49% say AI pushes them toward safer, incremental projects vs 28% toward riskier ones"
+  ],
+  "methodology": "Three sources: a sample of 15 million Gemini interactions classified to a new scientific-task taxonomy; an inventory of more than 2,600 specialized AI models mapped to OpenAlex fields; a survey of 637 active researchers in the US and UK run by More in Common (July-August 2026), using a time-savings module following Yotzov et al. (2026).",
+  "qualifiers": "Tier 2: industry-academic report co-authored by Google staff, using Google product data, not peer reviewed. Caveats: survey time savings are self-reported and uncontrolled; the survey covers US and UK scientists only; Gemini usage covers one provider's users; results describe one occupation group and should not be generalized to the workforce.",
+  "id": "google-futuretech-ai-in-science-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "openai-ai-at-work-spring-2026",
+  "abstract": "OpenAI Global Affairs' 'AI at Work, Spring 2026' newsletter (May 5, 2026) reports that OpenAI Economic Research conservatively estimates at least 4 million Americans used ChatGPT in March 2026 to plan, start, run or grow a business. The estimate comes from OpenAI's 'Main Street Entrepreneurship, Powered by ChatGPT' analysis (Kevin Wadman, May 2026), which classified all March 2026 messages from a random sample of over 300,000 US consumer-plan users. Activity was concentrated in service businesses (professional services, retail/e-commerce, home and trade services) rather than tech startups. The newsletter also reports a TrueDot survey (n=5,060) comparing job-automation risk with worker concern.",
+  "keyFindings": [
+    "At least 4 million people in the US used ChatGPT in March 2026 to help plan, start, run or grow a business; OpenAI calls this a lower bound.",
+    "Top industries for active entrepreneurs: professional and agency services 22%, retail/e-commerce 21%, home/trade services 12%, health/beauty 11%, food/hospitality 8%.",
+    "Top use cases for active entrepreneurs: marketing and copywriting 26%, customer communication 11%, legal and compliance 10%, branding 9%, sales 7%.",
+    "Among workers in jobs expected to see more demand from AI, 51% are concerned AI may reduce the need for people in their roles; 72% of this group are weekly AI users."
+  ],
+  "methodology": "Privacy-preserving automated classifiers applied to all March 2026 messages from a fully randomized sample of more than 300,000 US ChatGPT consumer-plan users (Free, Plus, Pro, Go). A user counted only if messages explicitly tied them to a venture and showed concrete business activity or specific venture exploration, then scaled to the US user base. The worker survey was fielded via TrueDot (n=5,060), with occupations mapped to OpenAI's jobs-transition framework.",
+  "qualifiers": "Tier 3: a policy newsletter from OpenAI about its own product; the underlying analysis is unrefereed company research. It is a count of users, not of businesses formed, with no denominator; it cannot show whether ChatGPT caused any business to start. It covers consumer plans only, and the scaling method from the sample to 4 million is not detailed.",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "epi-class-of-2026-hires-rate-2026",
+  "abstract": "Second post in EPI's Class of 2026 series (May 20, 2026). EPI argues that a depressed overall hires rate — now at 2013–2014 levels — is a key driver of weaker outcomes for young college graduates, and that the pattern holds across industries rather than in those that disproportionately employ young graduates, pointing away from a structural cause like AI. The information sector, often cited as AI-exposed, has lost 8.5% of employment since 2023 but employs only 2.3% of young graduates and is 2.0% below 2019. Census-defined high-tech industries employ 10.3% of young graduates and have fallen 0.7% since 2023. Between 2023 and 2026 the hires rate fell 0.8 pp and separations 0.6 pp, with smaller declines in industries where young graduates concentrate.",
+  "keyFindings": [
+    "Information-sector employment down 8.5% since 2023 (2.0% below 2019); it employs 2.3% of young college graduates.",
+    "High-tech industries employ 10.3% of young graduates; tech-sector employment down 0.7% since 2023.",
+    "Hires rate fell 0.8 pp and separations 0.6 pp, 2023–2026; hires now at 2013–2014 levels.",
+    "Industries employing young graduates saw smaller hiring declines than the overall economy."
+  ],
+  "methodology": "EPI analysis of CPS microdata (industry shares, ages 22–27), BLS CES (employment by sector), and JOLTS (hires and separations, 12-month moving averages); Census experimental high-tech industry definition mapped to CPS industry codes.",
+  "qualifiers": "Tier 3: think-tank blog; descriptive, not causal. JOLTS has no age breakdown, so the link from low hiring to young graduates is inferred. Industry-level analysis cannot detect occupation-level AI effects within industries.",
+  "fetchedAt": "2026-09-24"
+}

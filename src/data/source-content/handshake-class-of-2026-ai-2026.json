@@ -1,0 +1,14 @@
+{
+  "id": "handshake-class-of-2026-ai-2026",
+  "abstract": "Handshake's April 2026 report on the Class of 2026, by Head of Economic Research Randy Tarnowski, combines a March 2026 survey of 1,248 graduating seniors with Handshake postings and resume data. AI use among seniors went from split to near-universal in two years: 85% of the Class of 2026 use AI, up 31 points from the Class of 2024, and more than a third use it daily. The early-talent market is tight: postings are 2% below last year and 12% below pre-pandemic, and seniors' pessimism rose from 46% to 62%. Among pessimistic seniors, 75% cite firms hiring fewer entry-level workers and 50% cite AI (up from 34% in 2024). Employer AI demand inflected in 2025: more than 10% of active internships mention AI keywords and the share of full-time postings mentioning AI nearly doubled year over year to 4.2%. 58% of seniors say they will need stronger AI skills, but only 28% say their program has meaningfully integrated AI.",
+  "keyFindings": [
+    "85% of Class of 2026 seniors use AI; more than a third daily; close to half of the Class of 2024 had never used it.",
+    "Early-talent job postings down 2% year over year and 12% below pre-pandemic levels.",
+    "Senior pessimism about starting careers rose from 46% to 62% in two years; 50% of pessimists cite AI, 75% cite fewer entry-level hires.",
+    "Full-time postings mentioning AI nearly doubled to 4.2% (March 2026); more than 10% of active internships mention AI.",
+    "58% of seniors say they need stronger AI skills; 28% say their program has meaningfully integrated AI."
+  ],
+  "methodology": "Handshake Network Trends survey fielded via Sprig in March 2026: stratified random sample of graduating bachelor's-seeking seniors at US four-year institutions, weighted to IPEDS; 1,248 respondents from 498 institutions after cleaning. Postings index: full-time jobs posted to Handshake July–March by class year. Resume analysis of Class of 2026 vs Class of 2022 resumes.",
+  "qualifiers": "Tier 2: industry research from a platform with an interest in the early-career market; unrefereed. Postings reflect Handshake's employer base, not the whole market. Student AI use is self-reported and is not work adoption. Sentiment is not an outcome. No causal claim about AI and hiring.",
+  "fetchedAt": "2026-09-24"
+}

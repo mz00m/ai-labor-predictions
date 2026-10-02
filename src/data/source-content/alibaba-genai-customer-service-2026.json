@@ -1,0 +1,14 @@
+{
+  "abstract": "Field experiment on Taobao after-sales chat support: 5,940 new customer-service agents (tenure under one year) were randomized at the agent level, 2,895 to a generative AI assistant that drafts issue diagnoses and solution proposals in the opening stage of each chat, over January 23 – February 19, 2024 (about 2.56 million chats). Intent-to-treat estimates show access reduced issue-identification time by 8.2% and chat duration by 1.1% (3.2 and 5.7 seconds), cut the dissatisfaction rate by 3.4% and raised ratings by 1.2%, with no significant effect on three-day retrials. Instrumented for usage, moving from zero to full use cuts issue-identification time by 32.3% and chat duration by 4.2%. Lower-performing agents benefit most; top-quintile agents see declines in subjective and objective quality, consistent with workflow disruption.",
+  "keyFindings": [
+    "ITT: −8.2% issue-identification time and −1.1% chat duration (−3.2 s and −5.7 s)",
+    "LATE (usage 0→1): −32.3% issue-identification time and −4.2% chat duration",
+    "ITT: dissatisfaction rate −3.4% relative, ratings +1.2%; no significant effect on retrials",
+    "Usage fell from 39.3% of chats for bottom-quintile agents to 18.3% for top-quintile agents",
+    "Top performers' quality declined; shift-away time rose 23.8% (p < 0.1)"
+  ],
+  "methodology": "Agent-level randomized field experiment at Alibaba/Taobao; 4-week pretreatment (Dec 26, 2023 – Jan 22, 2024) and 4-week treatment (Jan 23 – Feb 19, 2024); 5,940 agents; DiD-style ITT and IV (LATE) regressions on chat-level outcomes.",
+  "qualifiers": "arXiv working paper with Alibaba co-authors (repo convention: Tier 1). Assistant acts only at the opening stage, so full-chat time effects are small. China, one platform, new agents only. LATE relies on the exclusion restriction. Chat duration is elapsed time with multitasking agents.",
+  "id": "alibaba-genai-customer-service-2026",
+  "fetchedAt": "2026-09-24"
+}

@@ -1,0 +1,14 @@
+{
+  "abstract": "McElheran, Yang, Kroff and Brynjolfsson (AEA Papers and Proceedings, May 2026) use a mandatory, purpose-designed Census Bureau survey of about 28,500 manufacturing establishments to measure industrial AI adoption in US manufacturing. Despite widespread digitization, only 22.8 percent of plants reported any AI use as of 2021, and intensity-weighted adoption is far lower. Adoption correlates with more recent digital infrastructure, namely cloud computing and predictive analytics, rather than legacy on-premises IT or descriptive analytics. Structured production-process management and plant size are significant predictors. The most cited barriers are cost and lack of an applicable use case, followed by lack of expertise. Prior productivity does not predict AI use, which the authors read as pointing to organizational readiness as a key barrier to diffusion.",
+  "keyFindings": [
+    "22.8% of US manufacturing plants reported any AI use as of 2021 (Census survey, about 28,500 establishments)",
+    "Intensity-weighted adoption is far lower than the any-use rate",
+    "Adoption tracks cloud computing and predictive analytics, not legacy on-premises IT or descriptive analytics",
+    "Structured production-process management and plant size predict adoption; prior productivity does not",
+    "Top barriers: cost and no applicable use case, then lack of expertise"
+  ],
+  "methodology": "Mandatory Census Bureau establishment survey of about 28,500 US manufacturing plants, reference year 2021. Cross-sectional correlates of any-AI use and intensity-weighted use with digital infrastructure, management practices, size and prior productivity; self-reported barriers.",
+  "qualifiers": "Tier 1: peer-reviewed proceedings using Census microdata. Caveats: manufacturing plants only, so not comparable to BTOS all-sector firm rates; 2021 predates generative AI; 'any AI use' is broad and intensity is much lower; correlational, not causal. Only the abstract was read; detailed estimates are in the paywalled PDF.",
+  "id": "mcelheran-yang-kroff-brynjolfsson-industrial-ai-2026",
+  "fetchedAt": "2026-09-24"
+}

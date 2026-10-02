@@ -6,7 +6,7 @@
   "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model, not forecasts, and the authors attach no probabilities to them. They are plotted as the increase in the economy-wide unemployment rate above the model's no-AI baseline of 3.8% \u2014 0.1, 0.8 and 8.1 points in the modest, substantial and extreme scenarios. In that model the labor force is fixed and displaced cognitive workers reallocate into other occupations, so this excess unemployment is the net job loss; the gross number of workers changing occupation is far larger.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 1.7,
+  "currentValue": 1.6,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -162,6 +162,26 @@
         "conversionLow": 0,
         "conversionHigh": 1,
         "rationale": "Task benchmark of agent capability, not a forecast of jobs lost"
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "value": 0.9,
+      "confidenceLow": 0.5,
+      "confidenceHigh": 1.3,
+      "sourceIds": [
+        "dallasfed-dodini-smith-postings-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "postings",
+      "isProxy": true,
+      "proxyContext": {
+        "actualUnit": "% reduction in total Lightcast job postings in Texas attributed to GenAI automation exposure, 2025",
+        "conversionFactor": 0.35,
+        "conversionLow": 0.2,
+        "conversionHigh": 0.5,
+        "rationale": "Aggregate posting reduction (2.6%) converted with the documented job-posting-decline factor; postings overstate displacement because most reflect hiring pullback rather than eliminations. Texas only; the authors report national estimates are similar."
       }
     },
     {
@@ -1374,6 +1394,24 @@
       "label": "Citadel: Little evidence of AI disruption in labor data; tracking improved"
     },
     {
+      "date": "2026-03-04",
+      "direction": "up",
+      "sourceIds": [
+        "hbs-chen-srinivasan-displacement-complementarity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "HBS (Chen et al.): automation-prone job postings fell 13% after ChatGPT (to Mar 2025)"
+    },
+    {
+      "date": "2026-03-04",
+      "direction": "down",
+      "sourceIds": [
+        "hbs-chen-srinivasan-displacement-complementarity-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "HBS (Chen et al.): augmentation-prone job postings grew 20% after ChatGPT (to Mar 2025)"
+    },
+    {
       "date": "2026-03-05",
       "direction": "up",
       "sourceIds": [
@@ -2040,6 +2078,15 @@
       "evidenceTier": 2
     },
     {
+      "date": "2026-06-30",
+      "direction": "down",
+      "sourceIds": [
+        "stlouisfed-rodgers-kassens-young-workers-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "St. Louis Fed: falling job openings, not AI, drive most young-worker weakness"
+    },
+    {
       "date": "2026-07-01",
       "direction": "up",
       "sourceIds": [
@@ -2047,6 +2094,24 @@
       ],
       "evidenceTier": 3,
       "label": "Bloomberg: tech+finance shedding 28k jobs/mo (2026 avg) \u2014 accelerating"
+    },
+    {
+      "date": "2026-07-01",
+      "direction": "down",
+      "sourceIds": [
+        "chicagofed-broady-dunson-barr-automation-risk-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chicago Fed: most AI-applicable occupations grew employment 4.05% in 2019-24"
+    },
+    {
+      "date": "2026-07-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "chicagofed-broady-dunson-barr-automation-risk-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Chicago Fed: high/moderate automation-risk jobs fell 3%/6% vs +8% low-risk, 2019-24"
     },
     {
       "date": "2026-07-02",
@@ -2092,6 +2157,15 @@
       ],
       "evidenceTier": 1,
       "label": "OECD (AU/CA/EU/US): LLM diffusion not the main cause of youth unemployment gap"
+    },
+    {
+      "date": "2026-07-08",
+      "direction": "down",
+      "sourceIds": [
+        "indeed-gallacher-destruction-to-creation-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Indeed: most AI-exposed occupations led the postings rebound, May 2025-May 2026"
     },
     {
       "date": "2026-07-17",
@@ -2218,6 +2292,15 @@
       ],
       "evidenceTier": 2,
       "label": "Goldman: 10% more AI exposure cuts annual headcount growth 0.1pp in US, France, Canada"
+    },
+    {
+      "date": "2026-08-19",
+      "direction": "down",
+      "sourceIds": [
+        "richmond-fed-aggregate-structural-unemployment-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Richmond Fed: AI-exposed workers explain at most a third of the job-finding decline"
     },
     {
       "date": "2026-08-21",
@@ -2364,6 +2447,15 @@
       "label": "NY Fed: a third of service adopters retrained workers \u2014 more than any cut channel"
     }
   ,
+    {
+      "date": "2026-09-01",
+      "direction": "up",
+      "sourceIds": [
+        "dallasfed-dodini-smith-postings-automation-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Dallas Fed: incumbent Texas firms cut AI-exposed postings 8-9% by early 2026"
+    },
     {
       "date": "2026-09-02",
       "direction": "neutral",
@@ -4191,6 +4283,66 @@
       "datePublished": "2026-09-01",
       "excerpt": "\"Using CPS microdata, we provide the first estimates of the effects of AI on the unemployment of recent college graduates in June, July and August 2026. We provide evidence suggesting that unemployment rates are especially high for summer months and that 2026 might be the first year of widespread enough AI use in the workplace to detect impacts of AI on recent college graduates, the group argued to be most vulnerable to AI replacement.\" The unemployment rate for recent college graduates (bachelor's degree holders aged 22 to 25) was 7.3 percent in summer 2026, inside the 6.3 to 7.8 percent range observed since 2022. Rates did not rise significantly relative to older college graduates or to young workers without a degree; difference-in-differences and event-study specifications give similar results. The authors do find some positive correlation between 2026 unemployment and remote-work availability by occupation. Not plotted on the early-career chart: this is an unemployment rate level for a demographic group, not a relative percent employment decline measured against least-exposed occupations.",
       "dateAdded": "2026-09-28"
+    },
+    {
+      "id": "dallasfed-dodini-smith-postings-automation-2026",
+      "title": "Job postings show early signs of AI automation impact",
+      "url": "https://www.dallasfed.org/research/economics/2026/0901",
+      "publisher": "Federal Reserve Bank of Dallas (Dodini, Smith)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-01",
+      "excerpt": "Given AI usage rates and automation scores across occupations and Texas’ industry composition, the estimates imply that automation exposure to generative AI reduced total Lightcast job postings in Texas by approximately 1.8 percent in 2024 and by 2.6 percent in 2025.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "chicagofed-broady-dunson-barr-automation-risk-2026",
+      "title": "Rethinking Automation Risk: AI Applicability and Occupational Outcomes, 2019–24",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-12",
+      "publisher": "Federal Reserve Bank of Chicago (Broady, Dunson, Barr)",
+      "evidenceTier": 1,
+      "datePublished": "2026-07-01",
+      "excerpt": "Overall, employment in these occupations increased by 335,800 jobs, or 4.05 percent, between 2019 and 2024.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "indeed-gallacher-destruction-to-creation-2026",
+      "title": "AI and Job Postings: From Destruction to Creation?",
+      "url": "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/",
+      "publisher": "Indeed Hiring Lab (Gallacher)",
+      "evidenceTier": 2,
+      "datePublished": "2026-07-08",
+      "excerpt": "But over the past year, the most AI-exposed occupations have generally seen the largest rebound in postings.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "richmond-fed-aggregate-structural-unemployment-2026",
+      "title": "Aggregate or Structural? Diagnosing the Rise in Unemployment (Economic Brief 26-27)",
+      "url": "https://www.richmondfed.org/publications/research/economic_brief/2026/eb_26-27",
+      "publisher": "Federal Reserve Bank of Richmond (Borovickova, Macaluso)",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-19",
+      "excerpt": "But their share of total unemployment is small, and their contribution to the aggregate decline is correspondingly limited, at most about one-third of the total.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "stlouisfed-rodgers-kassens-young-workers-2026",
+      "title": "How Shifts in Labor Supply and Demand Shape Outcomes for Young Workers",
+      "url": "https://www.stlouisfed.org/on-the-economy/2026/jun/how-shifts-labor-supply-demand-shape-outcomes-young-workers",
+      "publisher": "Federal Reserve Bank of St. Louis (Rodgers, Kassens)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-30",
+      "excerpt": "AI is not eliminating jobs across the economy. Instead, it is raising the bar for young workers trying to secure their first foothold in the labor market,",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "hbs-chen-srinivasan-displacement-complementarity-2026",
+      "title": "Research: How AI Is Changing the Labor Market",
+      "url": "https://hbr.org/2026/03/research-how-ai-is-changing-the-labor-market",
+      "publisher": "Harvard Business Review / HBS Working Knowledge (Azpúrua; research by Chen, Srinivasan, Zakerinia)",
+      "evidenceTier": 2,
+      "datePublished": "2026-03-04",
+      "excerpt": "After the public launch of ChatGPT in November 2022, job postings for occupations that involve lots of structured and repetitive tasks, likely replaceable by generative AI, decreased by 13%.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

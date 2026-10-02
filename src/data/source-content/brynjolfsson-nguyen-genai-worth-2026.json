@@ -1,0 +1,14 @@
+{
+  "abstract": "Brynjolfsson, Collis, Eggers, Kazinnik and Nguyen (Stanford Digital Economy Lab working paper, April 2026) estimate US consumer welfare gains from generative AI chatbots using online choice experiments. Census-representative samples of users were asked what they would accept to give up access to all AI tools for a month, in July 2025 (N=1,491 after cleaning) and March 2026 (N=1,908). Mean willingness to accept rose from $98 to $124.50 (+27%), and the median from $3.40 to $11.40. Combined with growth in the adult user base from 98 million to 115 million, aggregate consumer surplus rose from $116 billion to $172 billion a year, well above estimated US generative AI revenue, so consumers capture most of the gains. Usage frequency is the strongest predictor of valuation, followed by workplace use and paid subscriptions. In the March 2026 sample, 48.6% of users say they use generative AI for work, and respondents report on average about 20% of their work as AI-supported (median 10%); 12% say more than half their work is. The authors argue that welfare gains are arriving before they show up in measured productivity or GDP.",
+  "keyFindings": [
+    "$172 billion per year US consumer surplus from generative AI chatbots in 2026, up from $116 billion in 2025",
+    "Mean monthly willingness to accept $124.50 (2026) vs $98 (2025), +27%; median $11.40 vs $3.40",
+    "Adult user base 98 million to 115 million between the two waves (calibrated to Bick et al. adoption rates)",
+    "48.6% of generative AI users use it for work; average about 20% of their work AI-supported (median 10%), 12% say more than half",
+    "Usage frequency, workplace use and paid subscription are the strongest predictors of valuation"
+  ],
+  "methodology": "Incentive-compatible-style online discrete choice experiments (7 random price points, $1-$500) on Census-representative US user samples, July 2025 and March 2026; aggregate surplus = WTA x users x 12, with user counts from Census population and Bick et al. adoption rates.",
+  "qualifiers": "Tier 1 by repo working-paper convention (unrefereed; strict rubric T2). Caveats: stated-preference WTA, which runs higher than willingness to pay; the sample is users only, so work-use shares are conditional on using AI; aggregate surplus depends on external adoption estimates; consumer surplus is a welfare measure, not productivity or GDP.",
+  "id": "brynjolfsson-nguyen-genai-worth-2026",
+  "fetchedAt": "2026-09-24"
+}

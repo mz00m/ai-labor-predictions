@@ -1,0 +1,14 @@
+{
+  "id": "fiverr-q2-2026-earnings",
+  "abstract": "Fiverr's Q2 2026 results (July 29, 2026) show the AI squeeze on low-value freelance work accelerating. Revenue fell 10.0% year over year to $97.8M; marketplace revenue fell 15.5% to $63.1M; annual active buyers fell 21.9% to 2.7M, while annual spend per buyer rose 15.6% to $368. Services revenue grew 2.0% to $34.6M. Fiverr cut full-year 2026 guidance to $356–372M (-17% to -14% year over year) and Q3 to $80–88M (-26% to -18%), citing 'AI-related demand and traffic headwinds' and 'persistent weakness across categories most exposed to AI automation.' CEO Micha Kaufman described AI absorbing 'high-volume, low-value, transactional tasks' while creating demand for longer projects; clients completing $1,000+ projects grew 13% on a trailing twelve-month basis.",
+  "keyFindings": [
+    "Annual active buyers: 2.7M at June 30, 2026, down 21.9% from 3.4M a year earlier (steeper than Q1's -17.8%).",
+    "Marketplace revenue: $63.1M, down 15.5% year over year; total revenue $97.8M, down 10.0%.",
+    "Annual spend per buyer: $368, up 15.6% from $318.",
+    "Clients completing $1,000+ projects: +13% year over year (trailing twelve months).",
+    "FY2026 revenue guidance cut to $356–372M, -17% to -14% year over year, attributed to AI-related demand and traffic headwinds."
+  ],
+  "methodology": "Fiverr International Ltd. (NYSE: FVRR) Q2 2026 earnings press release, with unaudited consolidated statements and key performance metrics (annual active buyers, spend per buyer, take rate) as defined by the company.",
+  "qualifiers": "Tier 1 per repo convention for SEC-filer earnings releases. One platform, global buyers and sellers, weighted toward lower-value transactional gigs. No hourly rate is disclosed: rising spend per buyer mixes churn of small buyers with growth in larger projects, so it is not a rate measure. AI attribution is management's characterization; the release also cites traffic headwinds and a recent reduction in force.",
+  "fetchedAt": "2026-09-24"
+}

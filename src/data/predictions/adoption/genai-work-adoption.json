@@ -100,6 +100,16 @@
       "dataType": "observed"
     },
     {
+      "date": "2025-10-31",
+      "value": 25,
+      "sourceIds": [
+        "frb-shed-genai-work-2025"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    },
+    {
       "date": "2025-11-01",
       "value": 40.7,
       "sourceIds": [
@@ -160,6 +170,16 @@
       "evidenceTier": 1,
       "metricType": "survey",
       "dataType": "observed"
+    },
+    {
+      "date": "2026-02-23",
+      "value": 38,
+      "sourceIds": [
+        "pew-americans-ai-chatbots-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
     },
     {
       "date": "2026-05-01",
@@ -291,6 +311,15 @@
       "label": "Schneider Electric: AI troubleshooting halves maintenance-report time"
     },
     {
+      "date": "2026-02-23",
+      "direction": "up",
+      "sourceIds": [
+        "pew-americans-ai-chatbots-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Pew: 49% of US adults use AI chatbots (Feb 2026), up from 33% in 2024"
+    },
+    {
       "date": "2026-03-01",
       "direction": "up",
       "sourceIds": [
@@ -372,6 +401,24 @@
       "label": "FRI: Economists forecast 10.1% of work hours GenAI-assisted by 2030 (n=69, unconditional)"
     },
     {
+      "date": "2026-03-31",
+      "direction": "up",
+      "sourceIds": [
+        "microsoft-ai-diffusion-q1-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Microsoft: US GenAI user share 31.3% in Q1 2026, up from 24th to 21st; world 17.8%"
+    },
+    {
+      "date": "2026-03-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "brynjolfsson-nguyen-genai-worth-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: 48.6% of US genAI users use it for work"
+    },
+    {
       "date": "2026-04-01",
       "direction": "up",
       "sourceIds": [
@@ -379,6 +426,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: 3.35% work hours AI-assisted (2024); economists forecast 10.1% by 2030"
+    },
+    {
+      "date": "2026-04-01",
+      "direction": "up",
+      "sourceIds": [
+        "handshake-class-of-2026-ai-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Handshake: 85% of Class of 2026 seniors use AI, more than a third daily"
     },
     {
       "date": "2026-04-03",
@@ -424,6 +480,15 @@
       ],
       "evidenceTier": 2,
       "label": "Gallup Q1 2026: 50% of workers use AI at least a few times a year"
+    },
+    {
+      "date": "2026-04-13",
+      "direction": "up",
+      "sourceIds": [
+        "ling-kale-imas-ai-underreporting-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "CHI 2026: students report ~60% own AI use vs 90% for peers"
     },
     {
       "date": "2026-04-14",
@@ -498,6 +563,15 @@
       "label": "Hundreds of millions use AI for writing assistance"
     },
     {
+      "date": "2026-05-01",
+      "direction": "up",
+      "sourceIds": [
+        "frb-shed-genai-work-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed SHED: 43% of graduate-degree workers used GenAI at work vs 10% of HS-or-less"
+    },
+    {
       "date": "2026-05-05",
       "direction": "down",
       "sourceIds": [
@@ -532,6 +606,15 @@
       ],
       "evidenceTier": 2,
       "label": "Anthropic Cadences: ~50% of users say AI already handles 50%+ of their tasks"
+    },
+    {
+      "date": "2026-06-30",
+      "direction": "up",
+      "sourceIds": [
+        "microsoft-ai-diffusion-q2-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Microsoft: 33.0% of US working-age pop used GenAI in Q2 2026 (21st); world 18.8%"
     },
     {
       "date": "2026-07-20",
@@ -569,6 +652,15 @@
       ],
       "evidenceTier": 1,
       "label": "NBER: genAI adoption widespread but shallow \u2014 fewer than half of workers adopt within most"
+    },
+    {
+      "date": "2026-09-16",
+      "direction": "up",
+      "sourceIds": [
+        "google-futuretech-ai-in-science-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Google/FutureTech: ~half of US/UK scientists use AI daily; ~7 hrs/wk saved"
     }
   ],
   "sources": [
@@ -1039,6 +1131,86 @@
       "evidenceTier": 1,
       "datePublished": "2026-08-01",
       "excerpt": "current adoption is widespread but shallow: genAI is used across many occupations and tasks, yet within most of them, fewer than half of workers adopt"
+    },
+    {
+      "id": "handshake-class-of-2026-ai-2026",
+      "title": "AI and the workforce ahead: What the Class of 2026 tells us about the future of the labor market",
+      "url": "https://joinhandshake.com/research/economic-research/class-of-2026-ai-outlook/",
+      "publisher": "Handshake (Randy Tarnowski)",
+      "evidenceTier": 2,
+      "datePublished": "2026-04-01",
+      "excerpt": "Close to half of seniors in the class of 2024 reported never using AI. By the class of 2026, 85% use it — and more than a third use it daily.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "pew-americans-ai-chatbots-2026",
+      "title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
+      "url": "https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/",
+      "publisher": "Pew Research Center (Gottfried, Bishop, Anderson et al.)",
+      "evidenceTier": 1,
+      "datePublished": "2026-06-17",
+      "excerpt": "38% of employed adults report using chatbots for tasks at work. ... according to our survey of 5,119 U.S. adults conducted Feb. 17-23, 2026.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "microsoft-ai-diffusion-q2-2026",
+      "title": "Global AI Diffusion Q2 2026 Trends and Insights (\"The continued state of global AI diffusion in 2026\")",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/09/21/the-continued-state-of-global-ai-diffusion-in-2026/",
+      "publisher": "Microsoft AI Economy Institute (Juan Lavista Ferres)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-21",
+      "excerpt": "In June, AI usage was 18.8% of the working-age population worldwide, an increase of about 1% from the first quarter of this year. ... [Report table, Q2 2026 AI diffusion] 21 United States 33.0% 1.7pp",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "microsoft-ai-diffusion-q1-2026",
+      "title": "Global AI Diffusion Q1 2026 Trends and Insights (\"The state of global AI diffusion in 2026\")",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/",
+      "publisher": "Microsoft AI Economy Institute (Juan Lavista Ferres)",
+      "evidenceTier": 2,
+      "datePublished": "2026-05-07",
+      "excerpt": "During the quarter, AI usage increased by 1.5 percentage points from 16.3% to 17.8% of the world’s working age population. ... The United States finally started to move up the national rankings, albeit only from 24th to 21st based on a 31.3% usage rate by the working age population.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "frb-shed-genai-work-2025",
+      "title": "Economic Well-Being of U.S. Households in 2025: Employment and Job Quality",
+      "url": "https://www.federalreserve.gov/publications/2026-economic-well-being-of-us-households-in-2025-employment-and-job-quality.htm",
+      "publisher": "Board of Governors of the Federal Reserve System (SHED)",
+      "evidenceTier": 1,
+      "datePublished": "2026-05-01",
+      "excerpt": "The 44 percent who agree that generative AI saves time is higher than the 25 percent of workers who said they used AI in their job in the prior month.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "ling-kale-imas-ai-underreporting-2026",
+      "title": "Underreporting of AI Use: The Role of Social Desirability Bias",
+      "url": "https://doi.org/10.1145/3772318.3791073",
+      "publisher": "ACM CHI 2026 (Ling, Kale, Imas)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-13",
+      "excerpt": "We find a significant gap, with approximately 60% of students reporting that they use AI compared to 90% of their peers.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "google-futuretech-ai-in-science-2026",
+      "title": "AI in Science: Early Insights",
+      "url": "https://futuretech.mit.edu/publication/ai-in-science-early-insights",
+      "publisher": "Google / MIT FutureTech (Codreanu, Imas, Rock, Thompson, Manyika et al.)",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-16",
+      "excerpt": "Nearly half of surveyed scientists report using AI every day as part of their workflow. The average scientist’s time savings are around 6.9 hours per week.",
+      "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "brynjolfsson-nguyen-genai-worth-2026",
+      "title": "What is Generative AI Worth?",
+      "url": "https://digitaleconomy.stanford.edu/publication/what-is-generative-ai-worth/",
+      "publisher": "Stanford Digital Economy Lab (Brynjolfsson, Collis, Eggers, Kazinnik, Nguyen)",
+      "evidenceTier": 1,
+      "datePublished": "2026-04-13",
+      "excerpt": "Almost half of all respondents (48.6%) report using generative AI for work, while 1 in 4 has access to a paid subscription.",
+      "dateAdded": "2026-09-24"
     }
   ]
 }

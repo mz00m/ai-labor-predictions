@@ -1,0 +1,14 @@
+{
+  "abstract": "Iselin and Nunn (The Budget Lab at Yale, July 20, 2026) estimate how the current federal tax system would collect revenue from AI-driven growth. They take three Karger et al. (2026) survey scenarios for 2026-30: Slow (2.0% real GDP growth, labor share 55.0% in 2030), Moderate (2.6%, 53.8%) and Rapid (3.3%, 51.3%). They combine these with compressive, proportional or expansive assumptions about labor-income inequality and run them through the Budget Lab tax microsimulation model. In the Rapid scenario, federal revenue in 2030 rises by up to $216 billion (3.3% above CBO's baseline). The Moderate scenario raises $85-127 billion, and the Slow scenario barely changes revenue. Because growth skews toward capital, which is taxed at lower rates and often not taxed at all (unrealized gains, retirement income), revenue gains in the Rapid scenario are roughly half what they would be with fixed factor shares. In the most extreme case, the gain is 82% smaller. In the Slow and Rapid scenarios, aggregate labor income falls 0.3 to 1.0 percentage points relative to the CBO baseline, because the labor share falls faster than output grows. The measured labor share was 53.7% in 2026Q1, less than 3 points above the Rapid scenario's 51.3%. The authors conclude AI should not be expected to solve fiscal sustainability on its own. Spending responses are not modeled.",
+  "keyFindings": [
+    "Up to $216 billion (3.3%) more federal revenue in 2030 in the Rapid scenario (3.3% annual GDP growth, labor share 51.3%)",
+    "Rapid-scenario revenue gains are roughly half what they would be with capital and labor shares fixed at 2026 levels",
+    "Aggregate labor income 0.3-1.0 pp below the CBO baseline by 2030 in the Slow and Rapid scenarios",
+    "Measured nonfarm labor share 53.7% in 2026Q1, less than 3 pp above the Rapid scenario's 2030 level",
+    "CBO's 2026 baseline already includes about 10 bp per year of AI growth effects"
+  ],
+  "methodology": "Tax microsimulation on the 2015 IRS Public Use File aged to 2030, with assets imputed from the Survey of Consumer Finances. Karger et al. (2026) growth and labor-share scenarios; labor-income inequality varied with the GDP shock; corporate tax scaled to capital income; debt-to-GDP via the Budget Lab Small Macro Model.",
+  "qualifiers": "Tier 1 by Budget Lab precedent. Caveats: the scenario inputs are expert-survey medians, not Budget Lab forecasts; inequality shifts are stylized; outlay responses, labor-supply effects beyond the GDP path, and tax-avoidance effects are excluded; excess capital income is assumed to be realized at baseline rates.",
+  "id": "yale-budgetlab-ai-tax-system-2026",
+  "fetchedAt": "2026-09-24"
+}
