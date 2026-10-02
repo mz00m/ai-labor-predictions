@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Imas & Schaal (Ghosts of Electricity)",
+    title: "Has AI impacted the labor market yet?",
+    summary:
+      "The best current map of the junior-hiring debate, and its verdict is narrower than the headlines: AI may already be cutting hiring into the most exposed junior white-collar roles, but the attribution is contested and aggregate disruption has not appeared. The Canaries gap for 22-25-year-olds in exposed jobs reached 19% by June 2026 — but roughly halves once occupational education is controlled for, and the within-firm estimates attenuated with a cleaner data pipeline. The replication is uneven: the UK, Switzerland and Sweden show junior declines, while population-wide Nordic data does not — in Norway, employment in the most exposed occupations grew 0.1% against 0.3% in the least exposed, an insignificant gap. The sharpest dispute is remote work: in postings from four countries the AI coefficient drops to zero once work-from-home exposure is added, yet on ADP payroll data the same specification leaves AI standing and shrinks remote work. Adoption evidence cuts the other way too — Danish workers show precise nulls on earnings, and the heaviest AI spenders in Ramp data grew entry-level employment 12%. Only 1% of laid-off workers attribute their layoff to AI.",
+    date: "Sep 29",
+    url: "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market",
+  },
+  {
     author: "Chandar & Klein Teeselink (Stanford DEL)",
     title: "How Does AI Change Labor Demand? Evidence from 41 Countries",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "Converts the AI-and-jobs argument into disagreement about five measurable parameters — what share of tasks AI can do, how widely it is used, the productivity gain per task, how much of that use automates rather than augments, and how fast displaced workers find new work — then returns GDP, the labor share, wages, reallocation and unemployment to 2030. Three illustrations bracket the range. Modest: GDP 1.6% above the no-AI path, unemployment up a tenth of a point. Extreme: GDP 32% above it, growth at 15% a year, the labor share down from 60% to 45%, and nearly one in five cognitive workers unemployed. Read the wage result carefully. The average wage rises in every scenario, but in the extreme case that average is 9.7% up while the cognitive wage is 11.5% down, with the gain landing on construction, care and the trades. The discipline is the reason to trust it. The authors attach no probabilities and say so repeatedly; the scenarios exist to make assumptions comparable, not to forecast. They argue against themselves at length — the innovation channel turns out small, and the model has no robotics, no aggregate demand, no policy response, and workers who differ only by which of two occupation groups they sit in. Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson reviewed it, were not asked to endorse it, and their criticisms are printed rather than buried. The distributional arithmetic is what will get quoted: in the extreme case the economy gains roughly three times what cognitive workers lose, so a transfer of about 9% of GDP would hold them whole — Social Security and Medicare combined.",
     date: "Sep 1",
     url: "https://www.anthropic.com/institute/econ-scenarios",
-  },
-  {
-    author: "The Economist",
-    title: "The jobs apocalypse is postponed. An AI jobs boom is here",
-    summary:
-      "The Economist puts a number on the creation side of the ledger, which almost no one else does: roughly 1m AI-created US jobs against about 200,000 lay-offs attributed to AI since mid-2023. Understand the construction before quoting the headline. Three channels are stacked — the data-centre build-out, AI-native hiring, and new AI roles at incumbents — and each is measured as employment above trend rather than by direct attribution to AI. Five data-centre-adjacent industries have added roughly 320,000 jobs beyond what construction and manufacturing trends would predict; engineers, developers, mathematicians and data scientists about 730,000. The piece concedes that not all of these owe their existence to AI, which makes the 1m an upper bound on a real effect rather than a measurement of it. Two independent counts land lower: Levanon at Burning Glass puts AI jobs at roughly 1% of professional employment, LinkedIn at about 640,000 AI-specific roles created between 2023 and 2025. It is also more useful than its headline on the destruction side — professional and business services hiring runs about 10% below its 2015-19 average, customer-service employment is down about 10% and secretaries and administrative assistants about 15% since January 2023, and the BLS expects office and administrative support to shed 752,000 jobs by 2035. The tension worth carrying is on young workers: this reads the 20-24 unemployment gap as near a multi-decade low, where Canaries and the Revelio tracker both find early-career workers in exposed occupations well behind their peers. Different comparisons rather than contradictory findings, and holding both is the point.",
-    date: "Sep 4",
-    url: "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
   },
 ];
 

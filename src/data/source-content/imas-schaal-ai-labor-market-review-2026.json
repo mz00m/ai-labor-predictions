@@ -1,0 +1,22 @@
+{
+  "id": "imas-schaal-ai-labor-market-review-2026",
+  "abstract": "Literature review (a 'now-cast', current through September 2026) of empirical evidence on whether AI has affected the labor market, focused on early-career workers. Concludes that AI may already be affecting the hiring margin for junior white-collar roles most exposed to AI, but the attribution is contested (remote work, post-pandemic normalization, interest rates) and aggregate labor-market disruption has yet to appear.",
+  "keyFindings": [
+    "Canaries (Brynjolfsson, Chandar, Chen): employment of 22-25-year-olds in high-exposure roles 19% below less-exposed peers by June 2026, up from 15% at the July 2025 vintage; the gap roughly halves when controlling for occupational education levels; within-firm estimates attenuated with an improved data pipeline.",
+    "Norway (Hernæs & Kostøl): employment in the most AI-exposed occupations grew 0.1% since October 2022 vs 0.3% in the least exposed, an insignificant gap; a 22-25 gap opens from spring 2025; parallel pre-trends rejected in every age group.",
+    "Finland (Kauhanen & Rouvinen) finds no effect of AI exposure on youth wages or employment; Norway (Facius & Iacono) finds no significant junior effect through March 2025.",
+    "Sweden (Lodefalk et al.): exposed junior hiring falls 5.5% after ChatGPT, confounded by an October 2022 staffing-law change. Switzerland (Klaeui & Siegenthaler): unemployed job seekers up 27% in exposed occupations.",
+    "Lambert & Schindler: with work-from-home exposure entered jointly, the AI exposure coefficient on junior share drops to zero or turns positive (job postings, 4 countries, 2017-2025). Brynjolfsson et al. rerun the same specification on ADP payroll data and find the opposite.",
+    "Hosseini & Lichtinger: junior employment falls 8-10% at GenAI-adopting firms within 2 years, including in positions unsuited to remote work.",
+    "Humlum & Vestergaard (Denmark): precise null effects on earnings and hours, ruling out effects above 2%, despite 93% use in firms with enterprise chatbots and training.",
+    "Kharazian, Simon & Stevens (Ramp): high-intensity AI spenders grow employment 10% and entry-level employment 12% relative to not-yet adopters.",
+    "Gallup: only 1% of laid-off workers attribute their layoff to AI. Google ATLAS: AI use covers 88% of US employment but only 21% of tasks in those jobs."
+  ],
+  "methodology": "Narrative review of working papers, administrative-data studies, surveys and usage data; no new estimates.",
+  "qualifiers": [
+    "Substack post by Alex Imas (Chicago Booth) and Jacob Schaal; review, not primary research.",
+    "Imas contributed to Google's ATLAS, which the review cites.",
+    "Explicitly a now-cast of current effects, not a forecast."
+  ],
+  "fetchedAt": "2026-10-02"
+}
