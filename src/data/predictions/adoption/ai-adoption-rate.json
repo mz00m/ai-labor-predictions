@@ -875,6 +875,15 @@
       "label": "Revelio: cumulative firm AI adoption ~5.9% of eligible hiring firms (postings)"
     },
     {
+      "date": "2026-07-31",
+      "direction": "up",
+      "sourceIds": [
+        "fed-tito-ai-manufacturing-postings-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed FEDS Note: 11% of manufacturing job postings require AI skills vs 8% economy-wide"
+    },
+    {
       "date": "2026-08-05",
       "direction": "neutral",
       "sourceIds": [
@@ -1886,6 +1895,16 @@
       "datePublished": "2026-05-01",
       "excerpt": "Despite widespread digitization, only 22.8 percent of plants report any AI use as of 2021; intensity-weighted adoption is far lower.",
       "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "fed-tito-ai-manufacturing-postings-2026",
+      "title": "AI on the Factory Floor: Evidence from Manufacturing Job Postings",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html",
+      "publisher": "Federal Reserve Board FEDS Notes (Maria D. Tito)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-30",
+      "excerpt": "AI-related requirements surged in the second half of last year, reaching 11 percent in manufacturing versus 8 percent economy-wide.",
+      "dateAdded": "2026-10-02"
     }
   ]
 }

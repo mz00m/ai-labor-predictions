@@ -488,6 +488,19 @@ const MACRO_STUDIES: MacroStudy[] = [
     url: "https://futuretech.mit.edu/publication/ai-and-scale-a-quantitative-task-based-theory-of-automation-2",
     direction: "positive",
   },
+  {
+    id: "blumenfeld-hazell-software-channel-2026",
+    authors: "Blumenfeld, Hazell, Lian & Schaab",
+    year: 2026,
+    title: "Software Engineering Channel (market-implied)",
+    metric: "GDP level",
+    effectPct: 3.6,
+    effectLabel: "+3.6% GDP level",
+    finding: "Stock-market reactions imply AI raised expected software-engineering productivity by the equivalent of a permanent 32.6% gain (Nov 2022–Dec 2025), worth 3.6% of GDP (6.5% if it also lifts R&D productivity). The effect more than doubled by mid-2026 as coding agents improved.",
+    citation: "NBER Working Paper 35793",
+    url: "https://www.nber.org/papers/w35793",
+    direction: "positive",
+  },
 ];
 
 /* ------------------------------------------------------------------ */

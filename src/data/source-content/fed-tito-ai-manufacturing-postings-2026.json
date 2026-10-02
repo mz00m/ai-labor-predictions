@@ -1,0 +1,17 @@
+{
+  "id": "fed-tito-ai-manufacturing-postings-2026",
+  "abstract": "FEDS Note using Lightcast online job postings for manufacturing establishments (data through July 2026) to track how manufacturers' demand for AI-related and computer skills, and the posted-wage premia attached to them, have evolved. Manufacturing accounts for about 6.5% of new hiring demand and Lightcast tracks JOLTS closely for the sector.",
+  "keyFindings": [
+    "AI-related skill requirements surged in the second half of 2025, reaching 11% of manufacturing postings versus 8% economy-wide (about 1% of vacancies in 2018 per Acemoglu et al. 2022).",
+    "Computer skills appear in 35% of manufacturing postings on average vs 24% across all sectors.",
+    "Generative AI skills remain under 1% of postings and are essentially absent from production-worker postings through the first half of 2026; machine learning requirements rose notably since mid-2025.",
+    "Postings requiring AI skills advertise wages around 70% higher than all manufacturing postings on average (volatile, small sample); for production occupations the AI-skill wage gap widened from 2023 and has averaged roughly 30% since."
+  ],
+  "methodology": "Lightcast posting-level data; AI skills per Acemoglu et al. (2022) taxonomy, computer skills per Deming and Kahn (2018); average posted wages by skill requirement.",
+  "qualifiers": [
+    "Postings measure stated skill requirements and hiring demand, not skills of hires or employment.",
+    "Manufacturing only; production occupations (SOC 51-0000) are among the least AI-exposed roles.",
+    "AI wage differential is volatile due to small samples of AI-related postings."
+  ],
+  "fetchedAt": "2026-10-02"
+}

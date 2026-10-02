@@ -582,6 +582,15 @@
       "label": "Apollo: management/professional wages -4.1% vs non-exposed peers"
     },
     {
+      "date": "2026-07-31",
+      "direction": "up",
+      "sourceIds": [
+        "fed-tito-ai-manufacturing-postings-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed FEDS Note: AI-skill manufacturing postings pay ~70% more; production roles ~30% (2023+)"
+    },
+    {
       "date": "2026-08-21",
       "direction": "down",
       "sourceIds": [
@@ -1129,6 +1138,16 @@
       "datePublished": "2026-06-24",
       "excerpt": "The results indicate a positive and statistically significant association between AI exposure and wages. Occupations with higher exposure tend to have higher wage levels.",
       "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "fed-tito-ai-manufacturing-postings-2026",
+      "title": "AI on the Factory Floor: Evidence from Manufacturing Job Postings",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html",
+      "publisher": "Federal Reserve Board FEDS Notes (Maria D. Tito)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-30",
+      "excerpt": "Among all manufacturing positions, postings requiring AI skills are associated with wages that are, on average, around 70 percent higher than all manufacturing posted wages over the sample period, with substantial volatility likely stemming from the small sample of AI-related postings and shifts in which types of positions require these skills.",
+      "dateAdded": "2026-10-02"
     }
   ]
 }

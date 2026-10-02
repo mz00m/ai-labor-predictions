@@ -329,6 +329,15 @@
       "label": "Acemoglu: AI-robotics integration is the big wildcard; physical work is ~50% of US tasks"
     },
     {
+      "date": "2026-07-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "fed-tito-ai-manufacturing-postings-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Fed FEDS Note: GenAI skills essentially absent from manufacturing production-worker postings"
+    },
+    {
       "date": "2026-08-21",
       "direction": "up",
       "sourceIds": [
@@ -547,6 +556,16 @@
       "datePublished": "2026-05-01",
       "excerpt": "Despite widespread digitization, only 22.8 percent of plants report any AI use as of 2021; intensity-weighted adoption is far lower.",
       "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "fed-tito-ai-manufacturing-postings-2026",
+      "title": "AI on the Factory Floor: Evidence from Manufacturing Job Postings",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/ai-on-the-factory-floor-evidence-from-manufacturing-job-postings-20260930.html",
+      "publisher": "Federal Reserve Board FEDS Notes (Maria D. Tito)",
+      "evidenceTier": 1,
+      "datePublished": "2026-09-30",
+      "excerpt": "Second, generative AI skills remain rare overall (under 1 percent of postings), though they have inched up over the past year. Third, production workers show the same upward trends for broad AI and machine learning but at substantially lower levels, with generative AI skills essentially absent from production postings through the first half of this year.",
+      "dateAdded": "2026-10-02"
     }
   ]
 }

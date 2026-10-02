@@ -1,0 +1,16 @@
+{
+  "id": "nber-blumenfeld-hazell-ai-software-macro-2026",
+  "abstract": "Measures AI's macroeconomic effect through software-engineering productivity using financial markets: estimates each firm's stock-return sensitivity to an AI stock index and how it depends on the firm's payroll share in software engineering, then maps this into productivity and GDP with a model.",
+  "keyFindings": [
+    "From November 2022 to December 2025, AI raised the market's expected present value of software-engineering productivity by the equivalent of a permanent 32.6% productivity increase.",
+    "Implied effect on the level of GDP: 3.6% in the baseline, 6.5% when higher software-engineering productivity also raises R&D productivity.",
+    "By mid-2026, amid rapid progress in coding agents, the effect on productivity and GDP had more than doubled relative to end-2025."
+  ],
+  "methodology": "Cross-sectional asset-pricing estimates mapped through a structural model; forward-looking, real-time measure.",
+  "qualifiers": [
+    "Market-expectation measure of present value, not realized productivity or output.",
+    "Software-engineering channel only.",
+    "Abstract-level extraction; NBER full text was not accessible to scripts."
+  ],
+  "fetchedAt": "2026-10-02"
+}
