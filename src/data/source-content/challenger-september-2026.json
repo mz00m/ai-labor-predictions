@@ -1,0 +1,16 @@
+{
+  "abstract": "Challenger, Gray & Christmas's monthly US job-cut report for September 2026, released October 1, 2026. Employers announced 43,281 cuts in September, down 18% from 52,881 in August, bringing the year-to-date total to 573,195 - 39% below the 946,426 announced in the first nine months of 2025. Artificial Intelligence was named in 3,961 September cuts, about 9% of the month's total, making it the fifth-most cited reason for the month; year-to-date AI has been cited in 120,136 announcements, roughly 21% of all cuts, and it remains the leading reason for 2026 as a whole. Technology led all sectors in September with 10,799 cuts, up 77% from August's 6,103, and 165,925 year-to-date.",
+  "keyFindings": [
+    "43,281 US job cuts announced in September 2026, down 18% from 52,881 in August",
+    "AI cited in 3,961 September cuts, about 9% of the month's total - the fifth-most cited reason, up from a 6.5% share in August",
+    "120,136 AI-attributed cuts year-to-date 2026, approximately 21% of all cuts, still the leading reason for the year",
+    "573,195 total cuts announced through September, down 39% from 946,426 in the first nine months of 2025",
+    "Technology announced 10,799 cuts in September, up 77% from 6,103 in August; 165,925 year-to-date, leading all sectors",
+    "September's other leading sectors: Food (7,326), Non-Profit (4,742), Services (3,306), Transportation (2,151)",
+    "Hiring plans up 3% over 2025 on weak early seasonal hiring"
+  ],
+  "methodology": "Monthly census of publicly announced US job-cut plans, compiled from company announcements, WARN filings, press reports and Challenger's own outreach to employers. Each announcement is tagged with the employer's stated reason, including a distinct 'Artificial Intelligence' category. Reasons are self-reported by employers rather than independently verified, and announcements are plans rather than realized separations.",
+  "qualifiers": "Tier 2 - institutional analysis from a commercial outplacement firm, not peer-reviewed and not a government statistical series. The AI category records what employers say publicly, which can both overstate AI's role (AI as cover for ordinary cost-cutting) and understate it (cuts attributed to 'restructuring' or 'cost reduction' that are AI-driven). Announced cuts are not net job losses: they exclude attrition offsets, rehiring and hiring elsewhere, and the counts are absolute announcement volumes rather than a share of US employment, so they cannot be read directly as a displacement rate. Month-to-month AI shares are volatile - AI fell to fourth place in August and fifth in September after a five-month run as the top reason - so the year-to-date figure is the more stable read.",
+  "id": "challenger-september-2026",
+  "fetchedAt": "2026-10-05"
+}

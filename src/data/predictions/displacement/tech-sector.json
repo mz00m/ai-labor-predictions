@@ -988,6 +988,16 @@
       "evidenceTier": 1,
       "label": "Stanford DEL: junior share within computer and mathematical occupations falls 3.3pp at AI-adopting"
     }
+  ,
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "challenger-september-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: tech cuts 10,799 in Sep, up 77% from Aug; 165,925 YTD leads all sectors"
+    }
   ],
   "sources": [
     {
@@ -1873,6 +1883,17 @@
       "datePublished": "2026-06-01",
       "excerpt": "These gains, however, attenuate sharply across the production hierarchy: the 240% cumulative effect falls to 80% for the number of projects, and to 30% for actual releases.",
       "dateAdded": "2026-09-24"
+    }
+  ,
+    {
+      "id": "challenger-september-2026",
+      "title": "Job Cuts Fall in September; Hiring Plans Up 3% Over 2025 On Weak Early Seasonal Hiring",
+      "url": "https://www.challengergray.com/blog/job-cuts-fall-in-september-hiring-plans-up-3-over-2025-on-weak-early-seasonal-hiring/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-01",
+      "excerpt": "\"U.S.-based employers announced 43,281 job cuts in September, down 18% from the 52,881 announced in August.\" \"Artificial Intelligence was the fifth-most cited reason with 3,961 cuts in September, about 9% of the month's total.\" \"So far this year, AI has been cited in 120,136 job cut announcements, approximately 21% of all cuts\" - and it remains the leading reason year-to-date. \"Through September, employers have announced 573,195 job cuts,\" down 39% from the 946,426 announced in the first nine months of 2025. \"Technology companies announced 10,799 cuts in September, up 77% from 6,103 in August. The sector has announced 165,925 cuts this year.\"",
+      "dateAdded": "2026-10-05"
     }
   ],
   "marketIds": {

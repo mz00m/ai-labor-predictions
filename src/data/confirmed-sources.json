@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-10-02",
-  "totalSources": 784,
-  "verifiedCount": 774,
+  "lastUpdated": "2026-10-05",
+  "totalSources": 786,
+  "verifiedCount": 776,
   "sources": {
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
@@ -11116,6 +11116,40 @@
       "datePublished": "2026-09-01",
       "excerpt": "From November 2022 to December 2025, AI increased the market’s expected present value of software engineering productivity by the equivalent of a permanent 32.6% productivity increase. The corresponding effect on the level of GDP is 3.6% in the baseline and 6.5% when higher software engineering productivity also raises R&D productivity.",
       "usedIn": [],
+      "verified": true,
+      "synthetic": false
+    },
+    "challenger-september-2026": {
+      "id": "challenger-september-2026",
+      "title": "Job Cuts Fall in September; Hiring Plans Up 3% Over 2025 On Weak Early Seasonal Hiring",
+      "url": "https://www.challengergray.com/blog/job-cuts-fall-in-september-hiring-plans-up-3-over-2025-on-weak-early-seasonal-hiring/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-01",
+      "excerpt": "\"Artificial Intelligence was the fifth-most cited reason with 3,961 cuts in September, about 9% of the month's total.\" \"So far this year, AI has been cited in 120,136 job cut announcements, approximately 21% of all cuts\" - still the leading reason year-to-date. \"Through September, employers have announced 573,195 job cuts,\" down 39% from 946,426 in the first nine months of 2025. \"Technology companies announced 10,799 cuts in September, up 77% from 6,103 in August. The sector has announced 165,925 cuts this year.\"",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "revelio-ai-tracker-september-2026": {
+      "id": "revelio-ai-tracker-september-2026",
+      "title": "AI Labor Market Tracker: September 2026 (US)",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/september-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-01",
+      "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" New AI-adopting firms per month -17% \"compared with July,\" cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms senior employment is +32% versus +6% junior since November 2022.",
+      "usedIn": [
+        "ai-adoption-rate",
+        "early-career-employment-decline",
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "workforce-ai-exposure",
+        "workforce-ai-use"
+      ],
       "verified": true,
       "synthetic": false
     }

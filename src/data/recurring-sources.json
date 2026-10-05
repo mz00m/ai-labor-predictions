@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-09-28",
-  "lastSweep": "2026-09-28",
+  "asOf": "2026-10-05",
+  "lastSweep": "2026-10-05",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -70,11 +70,13 @@
       "whatItMeasures": "Job-cut announcements tracked from public sources, self-reported employer rationale, and Challenger's outreach. Uniquely tags cuts where AI is named as the driver.",
       "whyItMatters": "The most-cited source when the media reports 'AI-driven layoffs.' Signal is early but noisy — attribution reflects what employers say publicly, which may over- or under-state AI's actual role.",
       "lastIngested": {
-        "sourceId": "challenger-august-2026",
-        "date": "2026-09-02",
-        "value": "116,175 AI-attributed cuts YTD (22% of all cuts); AI fell to 4th-most-cited reason, ending its 5-month run"
+        "sourceId": "challenger-september-2026",
+        "date": "2026-10-01",
+        "value": "120,136 AI-attributed cuts YTD (21% of all cuts), still the leading reason for 2026; AI 5th-most-cited for September alone with 3,961 cuts (9% of 43,281)"
       },
-      "nextExpected": "October 1, 2026 (September data)"
+      "nextExpected": "November 5, 2026 (October data)",
+      "lastSweep": "2026-10-05",
+      "sweepNote": "Swept 2026-10-05: ingested the September report (published Oct 1). Mapped as overlays on overall-us-displacement and tech-sector-displacement, consistent with every prior Challenger ingest - announced-cut counts are not a share of US employment, so they fail the unit match for both charts."
     },
     {
       "id": "ramp-ai-velocity",
@@ -653,11 +655,13 @@
       "whatItMeasures": "Talent supply, labor demand, market equilibrium, work content, and matching efficiency, from online professional profiles, job postings, salary records, employee reviews, and WARN notices. Uses the Brynjolfsson/Chandar/Chen event-study design with occupation and month fixed effects.",
       "whyItMatters": "The only monthly-cadence replication of the Canaries early-career finding on data that is fully independent of ADP payroll records — profile-based rather than payroll-based. Its 13% early-career relative decline landing close to the ADP-derived estimate is the strongest cross-dataset corroboration on the site. Also the only source publishing a within-occupation activity-mix dissimilarity index, which speaks directly to the shifting-task-bundles question.",
       "lastIngested": {
-        "sourceId": "revelio-ai-labor-market-tracker-2026-09",
-        "date": "2026-09-02",
-        "value": "Early-career 22-25 most-exposed -19% vs least-exposed; all-occupation gap -6% since pre-ChatGPT; AI-exposed firms laying off fewer than least-exposed; new-firm adoption pace off its spring peak"
+        "sourceId": "revelio-ai-tracker-september-2026",
+        "date": "2026-10-01",
+        "value": "September 2026 edition: early-career 22-25 most-exposed -20% vs least-exposed (6% for older workers); posting gap narrowed to -29% from -40%; new AI-adopting firms -17% vs July; AI-skill share 7.2%, from 7.6%"
       },
-      "nextExpected": "Early October 2026"
+      "nextExpected": "November 5, 2026 (October edition)",
+      "lastSweep": "2026-10-05",
+      "sweepNote": "Swept 2026-10-05: ingested the September 2026 edition (released Oct 1, workforce data through August). The -20% early-career figure went in as a data point on early-career-employment-decline, dated 2026-09-30 for the edition's reference month. Note the registry's earlier 'revelio-ai-labor-market-tracker-2026-09' id is attached to the Sep 2 RPLS jobs report, not a tracker edition, and the August tracker edition (released Sep 3) was folded into that same ingest - edition ids on this series are not reliable, check the URL."
     },
     {
       "id": "nyfed-college-labor-market",

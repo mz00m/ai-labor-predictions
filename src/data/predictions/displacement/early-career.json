@@ -5,7 +5,7 @@
   "description": "Employment decline for workers aged 22-25 in the most AI-exposed occupations, measured relative to less-exposed occupations. The chart shows only estimates that make this comparison directly. Raw declines that are not adjusted for other causes measure something different, so they appear below the chart as directional signals.",
   "category": "displacement",
   "unit": "% employment decline, ages 22-25, vs least-exposed",
-  "currentValue": 12.3,
+  "currentValue": 13.2,
   "timeHorizon": "Current measure",
   "aggregationMethod": "weighted",
   "disclaimer": "Every point on the chart is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) sit below the chart as directional signals and are left out of the average, because labor markets differ enough between countries that averaging across them would mislead. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. The 2025 and 2026 points are the same Stanford/ADP study a year apart \u2014 not two studies independently reaching the same answer. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations). One point is a proxy conversion rather than a figure the source states. The Census CES study (Orr, Tucker and Warren) reports a 4.8 percentage-point fall in the probability of employment one quarter after graduation, which is not this chart's unit; dividing by the base share employed from that paper's own Figure 1 (axis .6 to .9, central 0.75) puts it at 6.4% [5.6-7.4]. It carries isProxy and a 0.5x weight discount. It sits roughly three standard deviations below the occupation-based estimates here, and that gap is the interesting part rather than a flaw: exposure in that study is assigned by college major, chosen years before anyone meets a hiring manager, while occupation-based measures may partly capture employers pulling back from roles they expect AI to take rather than work it already does.",
@@ -82,6 +82,17 @@
         "conversionHigh": 1.54,
         "rationale": "Divides the 4.8pp effect by the base share employed one quarter post-graduation to express it in this chart's unit, a relative percent decline. The denominator is the paper's own Figure 1 (\"Employment one quarter post-grad\"), whose axis runs .6 to .9 in share employed; central 0.75, bounded 0.65-0.85. The conversion is arithmetic and insensitive to the denominator across that range (5.6-7.4%). Sits about 3 standard deviations below the occupation-based estimates on this chart, which is signal rather than artifact: exposure here is assigned by college major, fixed years before labor market entry, whereas the occupation-based measures may partly capture employers pulling back from roles they expect AI to take."
       }
+    }
+  ,
+    {
+      "date": "2026-09-30",
+      "value": 20,
+      "sourceIds": [
+        "revelio-ai-tracker-september-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
     }
   ],
   "overlays": [
@@ -522,6 +533,16 @@
       "evidenceTier": 1,
       "label": "Dallas Fed: +10pp exposure → 1.7pp lower first-year employment, Texas grads"
     }
+  ,
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-ai-tracker-september-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: at AI adopters, senior employment +32% vs junior +6% since Nov 2022"
+    }
   ],
   "sources": [
     {
@@ -943,6 +964,17 @@
       "datePublished": "2026-05-08",
       "excerpt": "The overwhelming majority of Computer Science graduates work in Computer and Mathematics occupations, the share having fallen less than a percentage point from the pre-COVID average to the years 2023 and 2024.",
       "dateAdded": "2026-09-24"
+    }
+  ,
+    {
+      "id": "revelio-ai-tracker-september-2026",
+      "title": "AI Labor Market Tracker: September 2026 (US)",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/september-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-01",
+      "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
+      "dateAdded": "2026-10-05"
     }
   ]
 }

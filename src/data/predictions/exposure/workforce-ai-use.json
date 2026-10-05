@@ -88,6 +88,16 @@
       "evidenceTier": 1,
       "label": "NY Fed: 61% of service firms use AI but median adopter has only 17% of staff on it"
     }
+  ,
+    {
+      "date": "2026-09-30",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-tracker-september-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: 7.2% of US job positions held by a worker with an AI skill in Aug, from 7.6%"
+    }
   ],
   "sources": [
     {
@@ -156,6 +166,17 @@
       "datePublished": "2026-09-01",
       "excerpt": "Third annual AI module in the NY Fed's regional business surveys: \"61 percent of service firms reported using AI this year, up from 40 percent last year and 25 percent in 2024,\" while among manufacturers \"51 percent reported using AI as part of their business processes, roughly double the 26 percent from last year and triple the 16 percent in 2024.\" The bar is stricter than most adoption surveys \u2014 firms using AI \"exclusively as an information search tool but nothing else\" are coded as non-users. Adoption is wide but shallow: \"Three-quarters of service firms and more than 90 percent of manufacturers characterize their AI investments as minimal to modest,\" and among adopters \"the median share of workers using it was just 17 percent for service firms and 7 percent for manufacturers.\" On labor, \"only 4 percent of service firms reported laying off workers\" because of AI (up from 1 percent in 2025), \"about 15 percent of service firms said they had hired fewer workers than they would have if not for AI use,\" and \"about 13 percent of service firms said they had hired more workers due to AI\" \u2014 while \"just over a third of service firms and more than 20 percent of manufacturing firms report retraining workers.\" Recorded as overlays: the survey covers New York State and northern New Jersey only, so it is not comparable to the national Census BTOS series, and the workforce shares are of AI-adopting firms rather than of jobs or workers. The authors caution that \"AI technology and its applications are still evolving rapidly, and these patterns could shift as adoption matures.\"",
       "dateAdded": "2026-09-01"
+    }
+  ,
+    {
+      "id": "revelio-ai-tracker-september-2026",
+      "title": "AI Labor Market Tracker: September 2026 (US)",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/september-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-01",
+      "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
+      "dateAdded": "2026-10-05"
     }
   ]
 }

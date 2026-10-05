@@ -1001,6 +1001,26 @@
       "evidenceTier": 1,
       "label": "Census: BTOS to add 3 core AI questions (GenAI use, AI headcount effects) for AI users"
     }
+  ,
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "revelio-ai-tracker-september-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: cumulative firm AI adoption ~7% of eligible hiring firms, from 5.9% in July"
+    }
+  ,
+    {
+      "date": "2026-09-30",
+      "direction": "down",
+      "sourceIds": [
+        "revelio-ai-tracker-september-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Revelio: new AI-adopting firms per month down 17% from July (firm-level, not BTOS)"
+    }
   ],
   "sources": [
     {
@@ -1905,6 +1925,17 @@
       "datePublished": "2026-09-30",
       "excerpt": "AI-related requirements surged in the second half of last year, reaching 11 percent in manufacturing versus 8 percent economy-wide.",
       "dateAdded": "2026-10-02"
+    }
+  ,
+    {
+      "id": "revelio-ai-tracker-september-2026",
+      "title": "AI Labor Market Tracker: September 2026 (US)",
+      "url": "https://www.reveliolabs.com/ai-labor-market-tracker/us/september-2026",
+      "publisher": "Revelio Labs",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-01",
+      "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
+      "dateAdded": "2026-10-05"
     }
   ]
 }
