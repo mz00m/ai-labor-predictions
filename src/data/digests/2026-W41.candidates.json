@@ -1,0 +1,358 @@
+{
+  "week": "2026-W41",
+  "fetchedAt": "2026-10-08T19:14:34.928Z",
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 112,
+    "afterDedup": 103
+  },
+  "sourceHealth": [
+    {
+      "name": "ssrn",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing GOOGLE_CSE_KEY, GOOGLE_CSE_ID"
+    },
+    {
+      "name": "fred",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing FRED_API_KEY"
+    },
+    {
+      "name": "googleCse",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing GOOGLE_CSE_KEY, GOOGLE_CSE_ID"
+    },
+    {
+      "name": "semanticScholar",
+      "status": "error",
+      "items": 0,
+      "durationMs": 0,
+      "error": "Error: semanticScholar HTTP 429: {\"message\": \"Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form\", \"code\": \"429\"}"
+    },
+    {
+      "name": "arxiv",
+      "status": "ok",
+      "items": 50,
+      "durationMs": 2105
+    },
+    {
+      "name": "pubmed",
+      "status": "ok",
+      "items": 0,
+      "durationMs": 173
+    },
+    {
+      "name": "openAlex",
+      "status": "ok",
+      "items": 25,
+      "durationMs": 675
+    },
+    {
+      "name": "nber",
+      "status": "ok",
+      "items": 9,
+      "durationMs": 1474
+    },
+    {
+      "name": "bls",
+      "status": "ok",
+      "items": 5,
+      "durationMs": 1568
+    },
+    {
+      "name": "trackedInstitutions",
+      "status": "ok",
+      "items": 16,
+      "durationMs": 3370
+    },
+    {
+      "name": "recurringSeries",
+      "status": "ok",
+      "items": 7,
+      "durationMs": 2
+    }
+  ],
+  "items": [
+    {
+      "title": "SERIES DUE: Employment Situation (Jobs Report) — last ingested 2026-09-04 (34d ago, monthly cadence)",
+      "url": "https://www.bls.gov/news.release/empsit.toc.htm",
+      "source": "recurringSeries",
+      "publishedAt": "2026-09-04T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: GenAI Adoption Tracker / FRED RPS GenAI series (Bick, Blandin, Deming) — last ingested 2026-07-25 (75d ago, quarterly cadence)",
+      "url": "https://fred.stlouisfed.org/categories/8",
+      "source": "recurringSeries",
+      "publishedAt": "2026-07-25T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption) — last ingested 2026-08-13 (56d ago, quarterly cadence)",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index (Learning Curves, Cadences) — last ingested 2026-06-26 (104d ago, quarterly cadence)",
+      "url": "https://www.anthropic.com/economic-index",
+      "source": "recurringSeries",
+      "publishedAt": "2026-06-26T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data — last ingested 2026-08-27 (42d ago, quarterly cadence)",
+      "url": "https://www.stripeeconomics.com",
+      "source": "recurringSeries",
+      "publishedAt": "2026-08-27T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS) — last ingested 2026-05-15 (146d ago, annual cadence)",
+      "url": "https://www.bls.gov/oes/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-05-15T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "The addicted predator-prey model: How opioid use disorder shapes productivity and growth-cycle dynamics",
+      "url": "https://arxiv.org/abs/2610.10356v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-07T16:30:16.000Z",
+      "score": 0.565168141626726
+    },
+    {
+      "title": "The Handover Problem: Governing Autonomy Transitions in Human-AI Collaboration",
+      "url": "https://arxiv.org/abs/2610.10352v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-07T16:27:29.000Z",
+      "score": 0.5261968405940084
+    },
+    {
+      "title": "Why Software Engineering Is Indispensable in the Age of Coding Agents",
+      "url": "https://arxiv.org/abs/2610.10226v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-07T15:17:37.000Z",
+      "score": 0.48524669620104444
+    },
+    {
+      "title": "Which Workers Left the Labor Force Post-COVID Recession and Why?: Filing, Tax Credit Take-Up, and Labor Force Engagement by Occupation -- by Andrew C. Barr, Laura Kawano, Bruce Sacerdote, Michael Stevens",
+      "url": "https://www.nber.org/papers/w35856",
+      "source": "nber",
+      "publishedAt": "2026-10-08T19:14:36.446Z",
+      "score": 0.42777865625110245
+    },
+    {
+      "title": "Labor Supply and Wages over the Life Cycle: Human Capital and Disability Benefits -- by Richard Blundell, Monica Costa-Dias, Graham Mazeine, Costas Meghir, Tom Waters",
+      "url": "https://www.nber.org/papers/w35861",
+      "source": "nber",
+      "publishedAt": "2026-10-08T19:14:36.446Z",
+      "score": 0.42777865625110245
+    },
+    {
+      "title": "Chicago Fed Working Papers: Making Sense of Labor-Market Indicators Amid Data Imperfections - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-10",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-08T19:14:17.000Z",
+      "score": 0.4277674029315486
+    },
+    {
+      "title": "Chicago Fed Working Papers: The Chicago Fed Labor Market Indicators: Bridging the Gap with Alternative Labor Data - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-09",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-08T19:14:10.000Z",
+      "score": 0.42776335214914396
+    },
+    {
+      "title": "Chicago Fed Working Papers: The Impact of Non-Competes on Wages and Job Tenure: New Evidence from NLSY Data - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-03",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-08T19:14:10.000Z",
+      "score": 0.42776335214914396
+    },
+    {
+      "title": "Chicago Fed Working Papers: Measuring the Impact of Property Insurance Premiums on the Mortgage Market - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-01",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-08T19:14:10.000Z",
+      "score": 0.42776335214914396
+    },
+    {
+      "title": "SOTA: Stock Options Trading Agents Guided by Option-Implied Return Distributions",
+      "url": "https://arxiv.org/abs/2610.10407v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-07T16:55:05.000Z",
+      "score": 0.3770150600791065
+    },
+    {
+      "title": "Progress and Prospect of AI in ARPES Workflow",
+      "url": "https://arxiv.org/abs/2610.10140v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-07T14:18:50.000Z",
+      "score": 0.37241235078269275
+    },
+    {
+      "title": "Artificial intelligence and labor investment efficiency: evidence from U.S. firms",
+      "url": "https://doi.org/10.1016/j.jimonfin.2026.103684",
+      "source": "openAlex",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "score": 0.3662041343902316
+    },
+    {
+      "title": "ECONOMIC RISKS OF THE APPLICATION OF ARTIFICIAL INTELLIGENCE AND NEXT-GENERATION TECHNOLOGIES AND WAYS OF THEIR MANAGEMENT",
+      "url": "https://doi.org/10.32782/2523-4803/76-3-1",
+      "source": "openAlex",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "score": 0.3512185913186433
+    },
+    {
+      "title": "Robots and Women in Manufacturing",
+      "url": "https://doi.org/10.1080/13545701.2026.2691205",
+      "source": "openAlex",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "score": 0.3512185913186433
+    },
+    {
+      "title": "Adaptive Capacity in the Age of Artificial Intelligence: A Critical Extension of Workforce Resilience Frameworks to Human Resource Management Functions",
+      "url": "https://doi.org/10.70175/aistrategy.2026.1.1.1",
+      "source": "openAlex",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "score": 0.34260071622418387
+    },
+    {
+      "title": "Managing the AI Transition: Upskilling and Reskilling Asia’s Workforce in the Age of Automation",
+      "url": "https://doi.org/10.56506/dssf6074",
+      "source": "openAlex",
+      "publishedAt": "2026-10-05T00:00:00.000Z",
+      "score": 0.319994546491335
+    },
+    {
+      "title": "Impact of Automation on Workers in Informal Industrial Work in North India",
+      "url": "https://doi.org/10.47814/ijssrr.v9i10.3555",
+      "source": "openAlex",
+      "publishedAt": "2026-10-05T00:00:00.000Z",
+      "score": 0.28110565760244616
+    },
+    {
+      "title": "The Impact of Artificial Intelligence Technology Applications on the Employment Structure of the Labor Force",
+      "url": "https://doi.org/10.54254/2754-1169/2026.gt37387",
+      "source": "openAlex",
+      "publishedAt": "2026-09-29T00:00:00.000Z",
+      "score": 0.2807312754110999
+    },
+    {
+      "title": "Revelio Labs: RPLS Jobs Report — Workforce Research Newsroom",
+      "url": "https://www.reveliolabs.com/news/rpls",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-01T12:30:00.000Z",
+      "score": 0.279247732851992
+    },
+    {
+      "title": "Revelio Labs: RPLS US Jobs Report: The US economy adds 56.9k jobs in September",
+      "url": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-56-9k-jobs-in-september",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-01T12:30:00.000Z",
+      "score": 0.279247732851992
+    },
+    {
+      "title": "Indeed Hiring Lab: September 2026 Jobs Report: Steadiness Without a Spark",
+      "url": "https://hiringlab.indeed.com/2026/10/02/september-2026-jobs-report-steadiness-without-a-spark/",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-02T13:18:34.000Z",
+      "score": 0.26004277455567676
+    },
+    {
+      "title": "THE IMPACT OF ARTIFICIAL INTELLIGENCE ON THE LABOR MARKET: OPPORTUNITIES AND CHALLENGES FOR YOUTH DECENT WORK, QUALITY EDUCATION AND HUMAN CAPITAL IN THE CONTEXT OF DIGITAL TRANSFORMATION IN KAZAKHSTAN",
+      "url": "https://doi.org/10.46281/bjmsr.v11i6.2959",
+      "source": "openAlex",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "score": 0.2550930232791204
+    },
+    {
+      "title": "Artificial Intelligence and the Future of Employment Relations in Indonesia: Reformulating Labor Law to Protect Workers’ Rights",
+      "url": "https://journal.isnu-sumut.org/index.php/jcisnu/article/view/1957",
+      "source": "openAlex",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "score": 0.2550930232791204
+    },
+    {
+      "title": "Artificial intelligence and its socioeconomic impact: navigating the path between economic transformation and labor market disruption",
+      "url": "https://doi.org/10.1016/j.ssaho.2026.103702",
+      "source": "openAlex",
+      "publishedAt": "2026-09-25T00:00:00.000Z",
+      "score": 0.20428329269304615
+    },
+    {
+      "title": "DIGITAL TRANSFORMATION OF PUBLIC ADMINISTRATION IN LABOR MARKET REGULATION: DECENT WORK, INNOVATION AND STRONG INSTITUTIONS IN KAZAKHSTAN",
+      "url": "https://doi.org/10.46281/bjmsr.v11i6.2958",
+      "source": "openAlex",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "score": 0.17731524550134264
+    },
+    {
+      "title": "Do AI-Adopting IT Firms and GCCs Gain Market Share and Expand Faster Than Non-Adopters, And What Does That Imply for Sector-Wide Labor Demand?",
+      "url": "https://doi.org/10.47191/jefms/v9-i9-24",
+      "source": "openAlex",
+      "publishedAt": "2026-09-25T00:00:00.000Z",
+      "score": 0.16539440380415726
+    },
+    {
+      "title": "Enterprise AI at the Decision Point: A U.S.-Focused Systematic Review of Productivity, ROI, Workforce Change, and Governance",
+      "url": "https://doi.org/10.21203/rs.3.rs-11195857/v1",
+      "source": "openAlex",
+      "publishedAt": "2026-09-29T00:00:00.000Z",
+      "score": 0.16406460874443318
+    },
+    {
+      "title": "The Impact of Digital Technologies on Self-Employment Dynamics in Italy",
+      "url": "https://doi.org/10.1007/s40797-026-00412-2",
+      "source": "openAlex",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "score": 0.15257792458225095
+    },
+    {
+      "title": "Epistemological Friction: Embodied Expertise and the ‘Last Mile’ of Agricultural Automation in the US Tree‐Fruit Industry",
+      "url": "https://doi.org/10.1111/ntwe.70047",
+      "source": "openAlex",
+      "publishedAt": "2026-09-27T00:00:00.000Z",
+      "score": 0.14262037194064475
+    },
+    {
+      "title": "Economic Governance of Autonomous Agents and Robots: Factor-Origin Accounting and Social Automation Funds",
+      "url": "https://arxiv.org/abs/2609.32476",
+      "source": "openAlex",
+      "publishedAt": "2026-09-26T00:00:00.000Z",
+      "score": 0.13398838962003728
+    },
+    {
+      "title": "AI-driven Technological Progress, Finite Change and Wages",
+      "url": "https://doi.org/10.65864/y5arb09oj2",
+      "source": "openAlex",
+      "publishedAt": "2026-09-26T00:00:00.000Z",
+      "score": 0.13398838962003728
+    }
+  ]
+}

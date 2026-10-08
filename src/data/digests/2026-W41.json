@@ -1,0 +1,221 @@
+{
+  "week": "2026-W41",
+  "generatedAt": "2026-10-08T19:14:39.774Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Revelio Labs RPLS US Jobs Report: The US economy adds 56.9k jobs in September",
+      "summary": "The US economy added 56.9k jobs in September per Revelio Public Labor Statistics, while active job postings declined another 1.8%; the accompanying AI Labor Market Tracker documents continued GenAI tool adoption reshaping sectoral hiring patterns.",
+      "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-56-9k-jobs-in-september",
+      "publishedAt": "2026-10-01",
+      "score": 0.72,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Indeed Hiring Lab: September 2026 Jobs Report — Steadiness Without a Spark",
+      "summary": "Indeed Hiring Lab's September 2026 read finds the US labor market stable but lacking momentum, with inflation uncertainty constraining hiring demand; a complementary signal to the BLS headline and Revelio RPLS figures for the same reference month.",
+      "source": "https://hiringlab.indeed.com/2026/10/02/september-2026-jobs-report-steadiness-without-a-spark/",
+      "publishedAt": "2026-10-02",
+      "score": 0.62,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Artificial intelligence and labor investment efficiency: evidence from U.S. firms",
+      "summary": "Using U.S.-listed firm data from 2004–2020, the study finds a positive and statistically significant association between AI adoption and labor investment efficiency, with mechanism analyses pointing to reduced over- and under-investment in headcount as the operative channel.",
+      "source": "https://doi.org/10.1016/j.jimonfin.2026.103684",
+      "authors": [
+        "Kai Xing",
+        "Kepeng Xiong",
+        "Fulong Xiao",
+        "Hanxiong Zhang"
+      ],
+      "publishedAt": "2026-09-30",
+      "doi": "10.1016/j.jimonfin.2026.103684",
+      "score": 0.61,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Chicago Fed Working Paper: Making Sense of Labor-Market Indicators Amid Data Imperfections",
+      "summary": "Chicago Fed working paper addresses measurement challenges in current US labor-market indicators, offering methodological guidance relevant to interpreting AI-era employment signals; specific quantitative findings pending full-text review.",
+      "source": "https://www.chicagofed.org/publications/working-papers/2026/2026-10",
+      "publishedAt": "2026-10-08",
+      "score": 0.55,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Chicago Fed Working Paper: The Chicago Fed Labor Market Indicators — Bridging the Gap with Alternative Labor Data",
+      "summary": "Introduces a new Chicago Fed composite of alternative labor data sources designed to bridge gaps in official statistics; directly relevant to benchmarking AI-displacement signal quality against government measures.",
+      "source": "https://www.chicagofed.org/publications/working-papers/2026/2026-09",
+      "publishedAt": "2026-10-08",
+      "score": 0.53,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Robots and Women in Manufacturing",
+      "summary": "Peer-reviewed study finds industrial robots reshape the gender composition of manufacturing employment, with effects conditional on pre-existing female labor force participation levels; provides occupation- and gender-disaggregated automation displacement estimates.",
+      "source": "https://doi.org/10.1080/13545701.2026.2691205",
+      "authors": [
+        "Izaskun Zuazu"
+      ],
+      "publishedAt": "2026-10-06",
+      "doi": "10.1080/13545701.2026.2691205",
+      "score": 0.52,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "Which Workers Left the Labor Force Post-COVID Recession and Why? Filing, Tax Credit Take-Up, and Labor Force Engagement by Occupation",
+      "summary": "NBER working paper using IRS panel tax data documents persistent labor force exit concentrated among low-income and low-skill workers post-COVID, with occupation-level heterogeneity that maps directly to AI-exposure gradients for early-career and entry-level cohorts.",
+      "source": "https://www.nber.org/papers/w35856",
+      "authors": [
+        "Andrew C. Barr",
+        "Laura Kawano",
+        "Bruce Sacerdote",
+        "Michael Stevens"
+      ],
+      "publishedAt": "2026-10-08",
+      "score": 0.51,
+      "sourceAdapter": "nber",
+      "graphSlug": "early-career-employment-decline"
+    },
+    {
+      "title": "Do AI-Adopting IT Firms and GCCs Gain Market Share and Expand Faster Than Non-Adopters, and What Does That Imply for Sector-Wide Labor Demand?",
+      "summary": "Finds that AI-adopting IT services firms and global capability centres in India grow faster than non-adopters, but sector-wide labor demand implications are ambiguous; provides firm-level adoption-vs-headcount elasticity estimates relevant to tech-sector displacement tracking.",
+      "source": "https://doi.org/10.47191/jefms/v9-i9-24",
+      "authors": [
+        "Sanchi Singla",
+        "Chavi Behl"
+      ],
+      "publishedAt": "2026-09-25",
+      "doi": "10.47191/jefms/v9-i9-24",
+      "score": 0.44,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "tech-sector-displacement"
+    },
+    {
+      "title": "The Impact of Digital Technologies on Self-Employment Dynamics in Italy",
+      "summary": "Using Italian province-level data 2015–2019, finds advanced automation and big data adoption causally reshapes self-employment dynamics, with heterogeneous effects across macrosectors; offers a European causal benchmark for freelancer and self-employment rate trends.",
+      "source": "https://doi.org/10.1007/s40797-026-00412-2",
+      "authors": [
+        "Mauro Caselli",
+        "Enrico Cristofoletti",
+        "Andrea Fracasso"
+      ],
+      "publishedAt": "2026-09-28",
+      "doi": "10.1007/s40797-026-00412-2",
+      "score": 0.42,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "freelancer-rate-impact"
+    },
+    {
+      "title": "AI-driven Technological Progress, Finite Change and Wages",
+      "summary": "Theoretical paper shows that AI-driven productivity gains that uniformly raise all factor productivities within competitive industries tend to increase real wages in those industries, providing a formal mechanism for the high-skill wage premium under AI adoption.",
+      "source": "https://doi.org/10.65864/y5arb09oj2",
+      "authors": [
+        "Rajat Acharyya",
+        "Hamid Beladi",
+        "Gouranga G. Das",
+        "Shrimoyee Ganguly",
+        "Sugata Marjit"
+      ],
+      "publishedAt": "2026-09-26",
+      "doi": "10.65864/y5arb09oj2",
+      "score": 0.38,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    },
+    {
+      "title": "Enterprise AI at the Decision Point: A U.S.-Focused Systematic Review of Productivity, ROI, Workforce Change, and Governance",
+      "summary": "Systematic review of U.S. enterprise AI deployments synthesizes evidence on productivity gains, ROI, and workforce headcount changes; serves as an adoption-rate and workforce-exposure benchmark aggregating firm-level case evidence.",
+      "source": "https://doi.org/10.21203/rs.3.rs-11195857/v1",
+      "authors": [
+        "Audrey Rah",
+        "David W. Johnson"
+      ],
+      "publishedAt": "2026-09-29",
+      "doi": "10.21203/rs.3.rs-11195857/v1",
+      "score": 0.35,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Economic Governance of Autonomous Agents and Robots: Factor-Origin Accounting and Social Automation Funds",
+      "summary": "Proposes factor-origin accounting to track output attributable to autonomous agents versus human labor, documenting how rapid diffusion of AI and robotics decouples output growth from human employment income — a structural framing for long-run displacement trajectory modeling.",
+      "source": "https://arxiv.org/abs/2609.32476",
+      "authors": [
+        "Toqeer Ali Syed",
+        "Ali Akarma",
+        "Adeel Ahmad",
+        "Muhammad Umair Younus"
+      ],
+      "publishedAt": "2026-09-26",
+      "doi": "10.48550/arxiv.2609.32476",
+      "score": 0.33,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    }
+  ],
+  "themes": [
+    "September jobs data show subdued headline growth (~57k RPLS) with diverging AI-adoption effects across skill levels",
+    "Peer-reviewed evidence accumulating on robot/AI displacement heterogeneity by gender, occupation, and firm type",
+    "Persistent post-COVID low-skill labor force exit intersects with rising AI exposure among the same worker cohorts"
+  ],
+  "watching": [
+    {
+      "title": "SERIES DUE: Employment Situation (Jobs Report) — last ingested 2026-09-04",
+      "source": "https://www.bls.gov/news.release/empsit.toc.htm",
+      "reason": "BLS October 2026 release (reference month September) expected ~Oct 2 2026; overdue for ingest. Feeds overall-us-displacement and white-collar-professional-displacement."
+    },
+    {
+      "title": "SERIES DUE: GenAI Adoption Tracker / FRED RPS GenAI series (Bick, Blandin, Deming)",
+      "source": "https://fred.stlouisfed.org/categories/8",
+      "reason": "Quarterly FRED series overdue 75 days; definitive US worker GenAI adoption measure. Feeds genai-work-adoption."
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption)",
+      "source": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "reason": "Overdue 56 days; covers employment by age × AI exposure and macro takeoff signals. Feeds overall-us-displacement, workforce-ai-exposure, tech-sector-displacement."
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index (Learning Curves, Cadences)",
+      "source": "https://www.anthropic.com/economic-index",
+      "reason": "Overdue 104 days; largest AI usage dataset tracking how workers interact with GenAI. Feeds genai-work-adoption, workforce-ai-exposure, customer-service-automation."
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data",
+      "source": "https://www.stripeeconomics.com",
+      "reason": "Overdue 42 days; fastest-moving firm-formation signal including AI share of new startups. Feeds ai-business-formation."
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS)",
+      "source": "https://www.bls.gov/oes/",
+      "reason": "Annual release overdue 146 days; occupation × wage × geography backbone for displacement and wage maps."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 112,
+    "afterDedup": 103
+  }
+}
