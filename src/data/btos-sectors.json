@@ -36,7 +36,7 @@
         "downtimeRisk": 0.3,
         "securityOverhead": 0.15
       },
-      "employmentMillions": 2.4
+      "employmentMillions": 1.24
     },
     {
       "naics": "21",
@@ -61,7 +61,7 @@
         "downtimeRisk": 0.7,
         "securityOverhead": 0.2
       },
-      "employmentMillions": 0.6
+      "employmentMillions": 0.57
     },
     {
       "naics": "22",
@@ -86,7 +86,7 @@
         "downtimeRisk": 0.95,
         "securityOverhead": 0.55
       },
-      "employmentMillions": 0.6
+      "employmentMillions": 0.88
     },
     {
       "naics": "23",
@@ -111,7 +111,7 @@
         "downtimeRisk": 0.45,
         "securityOverhead": 0.2
       },
-      "employmentMillions": 8.0
+      "employmentMillions": 8.44
     },
     {
       "naics": "31-33",
@@ -136,7 +136,7 @@
         "downtimeRisk": 0.55,
         "securityOverhead": 0.3
       },
-      "employmentMillions": 13.0
+      "employmentMillions": 12.63
     },
     {
       "naics": "42",
@@ -161,7 +161,7 @@
         "downtimeRisk": 0.3,
         "securityOverhead": 0.25
       },
-      "employmentMillions": 6.0
+      "employmentMillions": 6.04
     },
     {
       "naics": "44-45",
@@ -186,7 +186,7 @@
         "downtimeRisk": 0.25,
         "securityOverhead": 0.3
       },
-      "employmentMillions": 15.6
+      "employmentMillions": 15.45
     },
     {
       "naics": "48-49",
@@ -211,7 +211,7 @@
         "downtimeRisk": 0.85,
         "securityOverhead": 0.35
       },
-      "employmentMillions": 6.7
+      "employmentMillions": 7.59
     },
     {
       "naics": "51",
@@ -236,7 +236,7 @@
         "downtimeRisk": 0.55,
         "securityOverhead": 0.55
       },
-      "employmentMillions": 3.1
+      "employmentMillions": 2.99
     },
     {
       "naics": "52",
@@ -261,7 +261,7 @@
         "downtimeRisk": 0.8,
         "securityOverhead": 0.85
       },
-      "employmentMillions": 6.6
+      "employmentMillions": 6.35
     },
     {
       "naics": "53",
@@ -286,7 +286,7 @@
         "downtimeRisk": 0.25,
         "securityOverhead": 0.25
       },
-      "employmentMillions": 2.4
+      "employmentMillions": 2.45
     },
     {
       "naics": "54",
@@ -311,7 +311,7 @@
         "downtimeRisk": 0.45,
         "securityOverhead": 0.45
       },
-      "employmentMillions": 11.0
+      "employmentMillions": 10.87
     },
     {
       "naics": "55",
@@ -336,7 +336,7 @@
         "downtimeRisk": 0.4,
         "securityOverhead": 0.35
       },
-      "employmentMillions": 2.4
+      "employmentMillions": 2.61
     },
     {
       "naics": "56",
@@ -361,7 +361,7 @@
         "downtimeRisk": 0.3,
         "securityOverhead": 0.3
       },
-      "employmentMillions": 8.6
+      "employmentMillions": 9.13
     },
     {
       "naics": "61",
@@ -386,7 +386,7 @@
         "downtimeRisk": 0.4,
         "securityOverhead": 0.4
       },
-      "employmentMillions": 13.6
+      "employmentMillions": 13.33
     },
     {
       "naics": "62",
@@ -411,7 +411,7 @@
         "downtimeRisk": 0.95,
         "securityOverhead": 0.85
       },
-      "employmentMillions": 22.7
+      "employmentMillions": 25.1
     },
     {
       "naics": "71",
@@ -436,7 +436,7 @@
         "downtimeRisk": 0.2,
         "securityOverhead": 0.2
       },
-      "employmentMillions": 2.5
+      "employmentMillions": 3.02
     },
     {
       "naics": "72",
@@ -461,7 +461,7 @@
         "downtimeRisk": 0.25,
         "securityOverhead": 0.2
       },
-      "employmentMillions": 13.0
+      "employmentMillions": 14.23
     },
     {
       "naics": "81",
@@ -486,7 +486,7 @@
         "downtimeRisk": 0.2,
         "securityOverhead": 0.2
       },
-      "employmentMillions": 5.7
+      "employmentMillions": 4.71
     }
   ]
 }

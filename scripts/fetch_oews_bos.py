@@ -5,7 +5,7 @@ aggregate to per-state non-metro totals so non-metro counties can borrow
 their state's non-metro distribution for the same MSA-imputation trick we
 use for metro counties.
 
-Source: oesm24ma.zip / BOS_M2024_dl.xlsx — 137 non-metro areas (one or
+Source: oesm25ma.zip / BOS_M2025_dl.xlsx — 137 non-metro areas (one or
 more per state). AREA_TYPE=6.
 
 Output: src/data/regional/nonmetro-by-state.json
@@ -43,9 +43,9 @@ except ImportError:
 
 REPO = Path(__file__).resolve().parent.parent
 CACHE = Path("/tmp/oews")
-ZIP_URL = "https://www.bls.gov/oes/special-requests/oesm24ma.zip"
-ZIP_PATH = CACHE / "oesm24ma.zip"
-XLSX_PATH = CACHE / "oesm24ma" / "BOS_M2024_dl.xlsx"
+ZIP_URL = "https://www.bls.gov/oes/special-requests/oesm25ma.zip"
+ZIP_PATH = CACHE / "oesm25ma.zip"
+XLSX_PATH = CACHE / "oesm25ma" / "BOS_M2025_dl.xlsx"
 ENRICHED_PATH = REPO / "src" / "data" / "enriched-occupations.json"
 OCC_RISK_PATH = REPO / "src" / "data" / "risk" / "occupation-risk.json"
 OUT_PATH = REPO / "src" / "data" / "regional" / "nonmetro-by-state.json"
@@ -188,8 +188,8 @@ def parse() -> dict:
 
     return {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "year": 2024,
-        "source": "BLS OEWS May 2024 BOS (oesm24ma/BOS_M2024_dl.xlsx)",
+        "year": 2025,
+        "source": "BLS OEWS May 2025 BOS (oesm25ma/BOS_M2025_dl.xlsx)",
         "sourceUrl": ZIP_URL,
         "stateCount": len(out_states),
         "states": out_states,

@@ -681,7 +681,7 @@ export default function KarpathyTreemap({
               </p>
             </div>
             <div>
-              <span className="text-white/30">Jobs (2024)</span>
+              <span className="text-white/30">Jobs (2025)</span>
               <p className="text-white/80 font-medium">
                 {tooltipInfo.occ.raw.jobs
                   ? tooltipInfo.occ.raw.jobs.toLocaleString()

@@ -278,7 +278,7 @@ export default function CompositeModelPage() {
         <SummaryStat
           label="Net US employment Δ"
           value={formatJobs(totalNetJobs, true)}
-          sub={`of 144.5M private-sector baseline (BLS QCEW)`}
+          sub={`of 147.6M baseline: all-ownership employment in 19 NAICS sectors (BLS QCEW 2025)`}
         />
       </div>
 
@@ -396,7 +396,7 @@ export default function CompositeModelPage() {
                   </tr>
                   <tr className="text-xs uppercase tracking-wider text-[var(--muted)] border-b border-divider">
                     <Th onClick={() => flipSort("name")} active={sortKey === "name"} dir={sortDir} tooltip="NAICS 2-digit industry sector. Hover any row to see its underlying parameters.">Sector</Th>
-                    <Th onClick={() => flipSort("employmentMillions")} active={sortKey === "employmentMillions"} dir={sortDir} right tooltip="US private-sector employment in this industry, in millions (BLS QCEW 2024). The base count that percentage changes get applied to.">Baseline (M)</Th>
+                    <Th onClick={() => flipSort("employmentMillions")} active={sortKey === "employmentMillions"} dir={sortDir} right tooltip="Employment in this industry, in millions: BLS QCEW 2025 annual average, all ownerships (private plus federal, state and local government, so public schools and hospitals are included). Public administration (NAICS 92) is not modelled. The base count that percentage changes get applied to.">Baseline (M)</Th>
                     <Th onClick={() => flipSort("btosCurrent")} active={sortKey === "btosCurrent"} dir={sortDir} right tooltip="Share of firms in this sector currently using AI in any business function (US Census BTOS AI Supplement, 2026). This is real survey data, not a model output.">BTOS now</Th>
                     <Th onClick={() => flipSort("realizedAdoption")} active={sortKey === "realizedAdoption"} dir={sortDir} right tooltip="What the model thinks the share of firms using AI will be at your chosen horizon. Starts from the BTOS current-use rate, ramps up based on trust, friction, and capability assumptions.">Model adoption</Th>
                     <Th onClick={() => flipSort("taskReplacement")} active={sortKey === "taskReplacement"} dir={sortDir} right tooltip="Share of total work hours in this sector that AI will replace (not augment). Adoption × task-share capability × (1 − complementarity).">Tasks replaced</Th>
@@ -756,7 +756,7 @@ function LiveAnchorBadgeInline() {
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3a8a4f] opacity-75" />
         <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#3a8a4f]" />
       </span>
-      <span>Live · {top?.name} (II {top?.intelligenceIndex}) from Artificial Analysis</span>
+      <span>Live · {top?.name} (II {top?.intelligenceIndex}, index {CAPABILITY_ANCHOR.indexVersion}) from Artificial Analysis</span>
     </div>
   );
 }

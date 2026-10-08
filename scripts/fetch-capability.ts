@@ -23,6 +23,10 @@ loadEnv(join(process.cwd(), ".env.local"));
 loadEnv(); // fall through to .env if .env.local missing the key
 
 const API_BASE = "https://artificialanalysis.ai/api/v2";
+// The API does not report the index version. Update this by hand from
+// artificialanalysis.ai when the index is rebased; scores from different
+// versions are not comparable.
+const INDEX_VERSION = "v4.3.2";
 const API_KEY = process.env.ARTIFICIAL_ANALYSIS_API_KEY;
 
 if (!API_KEY) {
@@ -171,6 +175,7 @@ function fitCostDecline(frontier: FrontierPoint[]): number {
     fetchedAt: new Date().toISOString(),
     source: "https://artificialanalysis.ai/",
     apiBase: API_BASE,
+    indexVersion: INDEX_VERSION,
     modelCount: models.length,
     frontierReleases: frontier.length,
     derived: {

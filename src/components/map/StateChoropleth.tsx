@@ -74,7 +74,7 @@ export default function StateChoropleth({ stateRisk, statePaths }: Props) {
           <h3 className="text-lg font-semibold text-heading">State-level risk</h3>
           <p className="text-2xs text-[var(--muted)] mt-0.5">
             Employment-weighted across {stateRisk.states[0]?.occupationCount ?? 0}+ matched
-            occupations per state · BLS OEWS May 2024
+            occupations per state · BLS OEWS May 2025
           </p>
         </div>
         <div className="flex items-center gap-1 text-2xs">

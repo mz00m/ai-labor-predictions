@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Fetch BLS OEWS metro/non-metro area occupation employment + wages (May 2024).
+Fetch BLS OEWS metro/non-metro area occupation employment + wages (May 2025).
 Emits two files:
   src/data/regional/msa-occupation-employment.json   (per-MSA top-30 occupations)
   src/data/regional/msa-summary.json                 (per-MSA roll-up metrics)
 
-Source: https://www.bls.gov/oes/special-requests/oesm24ma.zip
-        (MSA_M2024_dl.xlsx — ~150k rows, AREA_TYPE 4=metro, 6=non-metro)
+Source: https://www.bls.gov/oes/special-requests/oesm25ma.zip
+        (MSA_M2025_dl.xlsx — ~150k rows, AREA_TYPE 4=metro, 6=non-metro)
 
 Run: npm run build:oews-msa
 """
@@ -23,9 +23,9 @@ import openpyxl
 
 REPO = Path(__file__).resolve().parent.parent
 CACHE = Path("/tmp/oews")
-ZIP_URL = "https://www.bls.gov/oes/special-requests/oesm24ma.zip"
-ZIP_PATH = CACHE / "oesm24ma.zip"
-XLSX_PATH = CACHE / "oesm24ma" / "MSA_M2024_dl.xlsx"
+ZIP_URL = "https://www.bls.gov/oes/special-requests/oesm25ma.zip"
+ZIP_PATH = CACHE / "oesm25ma.zip"
+XLSX_PATH = CACHE / "oesm25ma" / "MSA_M2025_dl.xlsx"
 OUT_FULL = REPO / "src" / "data" / "regional" / "msa-occupation-employment.json"
 OUT_SUM = REPO / "src" / "data" / "regional" / "msa-summary.json"
 
@@ -404,16 +404,16 @@ def parse() -> dict:
     return {
         "summary": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
-            "year": 2024,
-            "source": "BLS OEWS May 2024 metro+nonmetro (oesm24ma)",
+            "year": 2025,
+            "source": "BLS OEWS May 2025 metro+nonmetro (oesm25ma)",
             "sourceUrl": ZIP_URL,
             "count": len(summary),
             "areas": summary,
         },
         "detail": {
             "generatedAt": datetime.now(timezone.utc).isoformat(),
-            "year": 2024,
-            "source": "BLS OEWS May 2024 metro+nonmetro (oesm24ma) — top 30 occupations per area by employment",
+            "year": 2025,
+            "source": "BLS OEWS May 2025 metro+nonmetro (oesm25ma) — top 30 occupations per area by employment",
             "areas": detail,
         },
     }

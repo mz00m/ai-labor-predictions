@@ -10,7 +10,7 @@
  * 5. Outputs enriched-occupations.json
  *
  * Prerequisites:
- *   Download O*NET 30.2 database from https://www.onetcenter.org/database.html
+ *   Download O*NET 31.0 database (Aug 2026) from https://www.onetcenter.org/database.html
  *   Extract these files to db/onet/:
  *     - Occupation Data.txt
  *     - Task Statements.txt
@@ -520,7 +520,7 @@ async function main() {
   if (!dryRun) {
     const output = {
       generatedAt: new Date().toISOString(),
-      onetVersion: "30.2",
+      onetVersion: "31.0",
       totalOccupations: enriched.length,
       matchedOccupations: enriched.filter((e) => e.onetCode).length,
       unmatchedOccupations: enriched.filter((e) => !e.onetCode).length,
