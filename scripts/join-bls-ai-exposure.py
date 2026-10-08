@@ -23,6 +23,23 @@ OCC_PATH = REPO / "src/data/enriched-occupations.json"
 CATEGORIES = {"low", "moderate", "high", "very high"}
 SOC_RE = re.compile(r"^\d{2}-\d{4}$")
 
+# O*NET splits some 2018 SOC codes more finely than the BLS table, which
+# publishes them as broad or aggregated codes. When the O*NET code has no row
+# of its own, fall back to the BLS code that contains it.
+ONET_TO_BLS_SOC = {
+    "13-2023": "13-2020",  # Appraisers and assessors of real estate
+    "21-1014": "21-1018",  # Mental health counselors
+    "25-9042": "25-9045",  # Teaching assistants, except postsecondary
+    "25-9043": "25-9045",
+    "29-2011": "29-2010",  # Clinical laboratory technologists and technicians
+    "29-2012": "29-2010",
+    "31-1121": "31-1120",  # Home health and personal care aides
+    "31-1122": "31-1120",
+    "39-7011": "39-7010",  # Tour and travel guides
+    "39-7012": "39-7010",
+    "51-2092": "51-2090",  # Miscellaneous assemblers and fabricators
+}
+
 
 def norm_soc(value):
     """O*NET 13-2011.00 and SOC 13-2011 both reduce to 13-2011."""
@@ -100,7 +117,7 @@ def main():
     matched = missed = 0
     for o in occs:
         soc = norm_soc(o.get("onetCode"))
-        cat = bls.get(soc)
+        cat = bls.get(soc) or bls.get(ONET_TO_BLS_SOC.get(soc))
         if cat:
             o["blsAiExposure"] = cat
             o["blsAiExposureSource"] = "bls-ai-exposure-categories-2026"
