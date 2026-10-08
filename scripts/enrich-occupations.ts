@@ -206,7 +206,6 @@ const MANUAL_CROSSWALK: Record<string, string> = {
   // Misc ambiguous
   "veterinary-technologists-and-technicians": "29-2056.00",
   "taxi-drivers-ride-hailing-drivers-and-chauffeurs": "53-3054.00",
-  "material-moving-machine-operators": "53-7063.00",
 
   // Unmatched by fuzzy matching (resolved manually)
   "adult-literacy-and-ged-teachers": "25-3011.00",       // Adult Basic Education Instructors
@@ -222,6 +221,41 @@ const MANUAL_CROSSWALK: Record<string, string> = {
   "oil-and-gas-workers": "47-5013.00",                   // Service Unit Operators, Oil and Gas
   "preschool-and-childcare-center-directors": "11-9031.00", // Education and Childcare Administrators, Preschool and Daycare
   "appraisers-and-assessors-of-real-estate": "13-2023.00", // Appraisers and Assessors of Real Estate
+
+  // Wrong fuzzy matches, audited against the SOC coverage in the BLS OOH XML
+  // (bls.gov/ooh/xml-compilation.xml). Rule: one O*NET code per profile, the
+  // largest-employment detailed SOC the profile covers that has O*NET task and
+  // work-activity data. "All Other" codes carry no O*NET data, so a match to
+  // one leaves the page with no tasks and a flat task composition.
+  "agricultural-workers": "45-2092.00",                  // Farmworkers and Laborers, Crop, Nursery, and Greenhouse (was All Other, no data)
+  "animal-care-and-service-workers": "39-2021.00",       // Animal Caretakers (was Personal Care and Service Workers, All Other)
+  "architects": "17-1011.00",                            // Architects, Except Landscape and Naval (was Computer Network Architects)
+  "assemblers-and-fabricators": "51-2092.00",            // Team Assemblers (was All Other, no data)
+  "brickmasons-blockmasons-and-stonemasons": "47-2021.00", // Brickmasons and Blockmasons (was Childcare Workers)
+  "cooks": "35-2014.00",                                 // Cooks, Restaurant (was Chefs and Head Cooks, a separate profile)
+  "diesel-service-technicians-and-mechanics": "49-3031.00", // Bus and Truck Mechanics and Diesel Engine Specialists (was Automotive)
+  "film-and-video-editors-and-camera-operators": "27-4032.00", // Film and Video Editors (was Editors, i.e. print)
+  "financial-clerks": "43-3021.00",                      // Billing and Posting Clerks (was All Other, no data)
+  "food-and-beverage-serving-and-related-workers": "35-3023.00", // Fast Food and Counter Workers (was All Other, no data)
+  "food-and-tobacco-processing-workers": "51-3092.00",   // Food Batchmakers (was All Other, no data)
+  "geological-and-petroleum-technicians": "19-4043.00",  // Geological Technicians (Hydrologic Technicians has no work-activity data)
+  "grounds-maintenance-workers": "37-3011.00",           // Landscaping and Groundskeeping Workers (was All Other, no data)
+  "heavy-vehicle-and-mobile-equipment-service-technicians": "49-3042.00", // Mobile Heavy Equipment Mechanics (was Recreational Vehicle)
+  "information-clerks": "43-4081.00",                    // Hotel, Motel, and Resort Desk Clerks (was Receptionists, a separate profile)
+  "kindergarten-and-elementary-school-teachers": "25-2021.00", // Elementary School Teachers (was Special Education)
+  "logging-workers": "45-4022.00",                       // Logging Equipment Operators (was All Other, no data)
+  "material-moving-machine-operators": "53-7051.00",     // Industrial Truck and Tractor Operators (was Machine Feeders and Offbearers)
+  "metal-and-plastic-machine-workers": "51-4031.00",     // Cutting, Punching, and Press Machine Operators (was All Other, no data)
+  "physicians-and-surgeons": "29-1215.00",               // Family Medicine Physicians (was Pediatric Surgeons, no work-activity data)
+  "police-and-detectives": "33-3051.00",                 // Police and Sheriff's Patrol Officers (was First-Line Supervisors)
+  "postsecondary-teachers": "25-1071.00",                // Health Specialties Teachers, Postsecondary (was All Other, no data)
+  "quality-control-inspectors": "51-9061.00",            // Inspectors, Testers, Sorters, Samplers, and Weighers (was Quality Control Analysts)
+  "railroad-occupations": "53-4031.00",                  // Railroad Conductors and Yardmasters (was Childcare Workers)
+  "retail-sales-workers": "41-2031.00",                  // Retail Salespersons (was First-Line Supervisors)
+  "teacher-assistants": "25-9042.00",                    // Teaching Assistants, Except Special Education; SOC 25-9045 (was Dental Assistants)
+  "telecommunications-equipment-installers-and-repairers-except-line-installers": "49-2022.00", // (was Bioinformatics Technicians)
+  "water-transportation-occupations": "53-5021.00",      // Captains, Mates, and Pilots of Water Vessels (was Rail Transportation, All Other)
+  "woodworkers": "51-7011.00",                           // Cabinetmakers and Bench Carpenters (was All Other, no data)
 };
 
 // ---------------------------------------------------------------------------

@@ -993,10 +993,10 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
             into four relative categories by combining five external measures
             &mdash; three theoretical (Felten/Raj/Seamans, Eloundou et al.,
             Eisfeldt et al.) and two built on observed AI usage (Anthropic&rsquo;s
-            Claude data, Microsoft&rsquo;s Copilot data). We matched it to 334 of
+            Claude data, Microsoft&rsquo;s Copilot data). We matched it to 341 of
             our 342 occupations. Our scores rise monotonically across their
-            categories: <Strong>Low 2.51</Strong>, <Strong>Moderate 3.45</Strong>,{" "}
-            <Strong>High 5.84</Strong>, <Strong>Very high 7.42</Strong>.
+            categories: <Strong>Low 2.52</Strong>, <Strong>Moderate 3.47</Strong>,{" "}
+            <Strong>High 5.78</Strong>, <Strong>Very high 7.48</Strong>.
           </p>
           <p className="mb-2">
             Where we disagree, the pattern is informative rather than random.

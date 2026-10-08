@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T17:50:03.323Z",
+  "generatedAt": "2026-10-08T18:39:53.204Z",
   "methodology": "Per-occupation risk uses the 5-dimension framework from src/lib/scoring-shared.ts. technicalExposure: Karpathy/GPT exposure score carried through. adoptionSpeed: taskComposition-weighted CATEGORY_ADOPTION_LAG mapped to 0-10. adaptability: pay percentile (within 342) + education tier, equal-weighted. demandElasticity: rule-based defaults by BLS major category (3/5/7). complementarity: estimateComplementarityFromTasks + dimensionality adjustment. Task riskScore = clamp(exposure*10 * adoptionFactor * declineFactor * importanceFactor, 0, 100). Bucket thresholds: low < 33, medium 33-66, high > 66. Time-share rollup is O*NET-importance-weighted.",
   "count": 342,
   "occupations": [
@@ -1566,24 +1566,132 @@
     {
       "slug": "agricultural-workers",
       "title": "Agricultural workers",
-      "onetCode": "45-2099.00",
+      "onetCode": "45-2092.00",
       "category": "farming-fishing-and-forestry",
       "jobs": 831900,
       "pay": 35890,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.0200000000000005,
       "adaptability": 1.161764705882353,
       "demandElasticity": 4,
-      "complementarity": 6.6,
-      "netRisk": 4.805735294117647,
-      "netRisk100": 48,
-      "tasks": [],
+      "complementarity": 5.681481481481482,
+      "netRisk": 4.993438997821351,
+      "netRisk100": 50,
+      "tasks": [
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 4.04,
+          "riskScore": 4.5248,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.86,
+          "riskScore": 4.3232,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 3.79,
+          "riskScore": 32.745599999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.75,
+          "riskScore": 32.4,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.67,
+          "riskScore": 25.8735,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.58,
+          "riskScore": 14.606399999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.57,
+          "riskScore": 30.844799999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 3.56,
+          "riskScore": 3.9871999999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 3.48,
+          "riskScore": 14.198399999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.47,
+          "riskScore": 9.230200000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 3.4,
+          "riskScore": 13.871999999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.32,
+          "riskScore": 8.8312,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.31,
+          "riskScore": 12.313200000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 3.31,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Training and Teaching Others",
+          "category": "interpersonal",
+          "importance": 3.31,
+          "riskScore": 0,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctLowRiskTime": 100,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 36.6,
+      "capabilityOverhang": -6.6
     },
     {
       "slug": "air-traffic-controllers",
@@ -1978,24 +2086,132 @@
     {
       "slug": "animal-care-and-service-workers",
       "title": "Animal care and service workers",
-      "onetCode": "39-9099.00",
+      "onetCode": "39-2021.00",
       "category": "personal-care-and-service",
       "jobs": 413000,
       "pay": 35530,
       "exposure": 2,
       "technicalExposure": 2,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.119999999999998,
       "adaptability": 1.0882352941176472,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.366764705882353,
-      "netRisk100": 44,
-      "tasks": [],
+      "complementarity": 5.283615819209039,
+      "netRisk": 4.654041542040545,
+      "netRisk100": 47,
+      "tasks": [
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.38,
+          "riskScore": 25.228799999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 4.22,
+          "riskScore": 19.834,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 4.19,
+          "riskScore": 3.1285333333333334,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.01,
+          "riskScore": 23.097599999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.85,
+          "riskScore": 2.8746666666666663,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.8,
+          "riskScore": 21.887999999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.71,
+          "riskScore": 6.579066666666669,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.6,
+          "riskScore": 8.927999999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.58,
+          "riskScore": 9.737599999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 3.57,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 3.55,
+          "riskScore": 9.655999999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.45,
+          "riskScore": 19.872,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.38,
+          "riskScore": 19.468799999999995,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 3.36,
+          "riskScore": 12.1856,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing for or Working Directly with the Public",
+          "category": "interpersonal",
+          "importance": 3.36,
+          "riskScore": 0,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctLowRiskTime": 100,
+      "effectiveDimensions": 6,
+      "archetype": "less-change",
+      "realizedExposure100": 73.2,
+      "capabilityOverhang": -53.2
     },
     {
       "slug": "announcers",
@@ -2390,132 +2606,132 @@
     {
       "slug": "architects",
       "title": "Architects",
-      "onetCode": "15-1241.00",
+      "onetCode": "17-1011.00",
       "category": "architecture-and-engineering",
       "jobs": 124600,
       "pay": 99280,
       "exposure": 7,
       "technicalExposure": 7,
-      "adoptionSpeed": 5.46212879546213,
+      "adoptionSpeed": 5.385000000000001,
       "adaptability": 7.294117647058823,
       "demandElasticity": 6,
-      "complementarity": 4.411130434782608,
-      "netRisk": 5.3160820250770815,
-      "netRisk100": 53,
+      "complementarity": 4.680071174377224,
+      "netRisk": 5.246868118065732,
+      "netRisk100": 52,
       "tasks": [
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.61,
+          "riskScore": 28.61273333333334,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 4.61,
+          "riskScore": 58.516266666666674,
+          "riskBucket": "medium"
+        },
         {
           "taskName": "Working with Computers",
           "category": "information-processing",
-          "importance": 4.75,
-          "riskScore": 95.75999999999999,
+          "importance": 4.52,
+          "riskScore": 91.12319999999998,
           "riskBucket": "high"
         },
         {
           "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 4.4,
-          "riskScore": 88.70400000000001,
+          "importance": 4.5,
+          "riskScore": 90.72,
           "riskBucket": "high"
         },
         {
-          "taskName": "Updating and Using Relevant Knowledge",
+          "taskName": "Drafting, Laying Out, and Specifying Technical Devices, Parts, and Equipment",
           "category": "information-processing",
-          "importance": 4.3,
-          "riskScore": 86.688,
+          "importance": 4.5,
+          "riskScore": 90.72,
           "riskBucket": "high"
         },
         {
-          "taskName": "Evaluating Information to Determine Compliance with Standards",
-          "category": "analysis-decision",
-          "importance": 4.15,
-          "riskScore": 25.757666666666672,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 4.05,
-          "riskScore": 25.137000000000004,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "taskName": "Communicating with People Outside the Organization",
           "category": "communication",
-          "importance": 4,
-          "riskScore": 65.8,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
-          "category": "information-processing",
-          "importance": 3.95,
-          "riskScore": 79.632,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 3.95,
-          "riskScore": 79.632,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Analyzing Data or Information",
-          "category": "analysis-decision",
-          "importance": 3.9,
-          "riskScore": 24.206000000000007,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 3.9,
-          "riskScore": 37.128,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Processing Information",
-          "category": "information-processing",
-          "importance": 3.85,
-          "riskScore": 77.616,
+          "importance": 4.43,
+          "riskScore": 72.87349999999999,
           "riskBucket": "high"
         },
         {
           "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 3.58,
-          "riskScore": 31.074399999999997,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Inspecting Equipment, Structures, or Materials",
-          "category": "technical-specialized",
-          "importance": 3.5,
-          "riskScore": 33.31999999999999,
+          "importance": 4.39,
+          "riskScore": 38.105199999999996,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Developing Objectives and Strategies",
-          "category": "coordination-management",
-          "importance": 3.5,
-          "riskScore": 30.379999999999995,
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 4.35,
+          "riskScore": 26.999000000000002,
           "riskBucket": "low"
         },
         {
-          "taskName": "Interpreting the Meaning of Information for Others",
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 3.5,
-          "riskScore": 57.574999999999996,
+          "importance": 4.3,
+          "riskScore": 70.735,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 4.13,
+          "riskScore": 83.26079999999999,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Coordinating the Work and Activities of Others",
+          "category": "coordination-management",
+          "importance": 4,
+          "riskScore": 34.72,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Developing and Building Teams",
+          "category": "coordination-management",
+          "importance": 3.87,
+          "riskScore": 33.5916,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Scheduling Work and Activities",
+          "category": "coordination-management",
+          "importance": 3.83,
+          "riskScore": 33.2444,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Guiding, Directing, and Motivating Subordinates",
+          "category": "coordination-management",
+          "importance": 3.83,
+          "riskScore": 33.2444,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Providing Consultation and Advice to Others",
+          "category": "communication",
+          "importance": 3.83,
+          "riskScore": 63.0035,
           "riskBucket": "medium"
         }
       ],
-      "pctHighRiskTime": 42.51012145748987,
-      "pctMediumRiskTime": 25.134952766531715,
-      "pctLowRiskTime": 32.3549257759784,
-      "effectiveDimensions": 6,
+      "pctHighRiskTime": 41.41287284144427,
+      "pctMediumRiskTime": 44.521193092621665,
+      "pctLowRiskTime": 14.06593406593407,
+      "effectiveDimensions": 5,
       "archetype": "automation-risk",
-      "realizedExposure100": 76.5,
-      "capabilityOverhang": -6.5
+      "realizedExposure100": 68.6,
+      "capabilityOverhang": 1.4
     },
     {
       "slug": "architectural-and-engineering-managers",
@@ -2910,24 +3126,132 @@
     {
       "slug": "assemblers-and-fabricators",
       "title": "Assemblers and fabricators",
-      "onetCode": "51-2099.00",
+      "onetCode": "51-2092.00",
       "category": "production",
       "jobs": 1799500,
       "pay": 45450,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.145,
       "adaptability": 1.6911764705882355,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.576323529411765,
-      "netRisk100": 46,
-      "tasks": [],
+      "complementarity": 5.15755258126195,
+      "netRisk": 4.893813013159375,
+      "netRisk100": 49,
+      "tasks": [
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.39,
+          "riskScore": 37.92959999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 4.38,
+          "riskScore": 4.9056,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 4.21,
+          "riskScore": 36.374399999999994,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.21,
+          "riskScore": 36.374399999999994,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.16,
+          "riskScore": 16.9728,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.76,
+          "riskScore": 15.3408,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.69,
+          "riskScore": 9.815400000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.6,
+          "riskScore": 25.38,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
+          "category": "analysis-decision",
+          "importance": 3.51,
+          "riskScore": 9.3366,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 3.5,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.49,
+          "riskScore": 3.9088000000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.43,
+          "riskScore": 12.759600000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 3.41,
+          "riskScore": 9.070600000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Training and Teaching Others",
+          "category": "interpersonal",
+          "importance": 3.4,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Coaching and Developing Others",
+          "category": "interpersonal",
+          "importance": 3.23,
+          "riskScore": 0,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctMediumRiskTime": 22.72485364555615,
+      "pctLowRiskTime": 77.27514635444386,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 42,
+      "capabilityOverhang": -12
     },
     {
       "slug": "athletes-and-sports-competitors",
@@ -9822,132 +10146,132 @@
     {
       "slug": "cooks",
       "title": "Cooks",
-      "onetCode": "35-1011.00",
+      "onetCode": "35-2014.00",
       "category": "food-preparation-and-serving",
       "jobs": 2705800,
       "pay": 36640,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 4.963333333333333,
+      "adoptionSpeed": 4.976643309976644,
       "adaptability": 1.1911764705882353,
       "demandElasticity": 6,
-      "complementarity": 6.05,
-      "netRisk": 4.603990196078431,
+      "complementarity": 5.850826446280992,
+      "netRisk": 4.646486902150895,
       "netRisk100": 46,
       "tasks": [
         {
-          "taskName": "Training and Teaching Others",
-          "category": "interpersonal",
-          "importance": 4.13,
-          "riskScore": 0,
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.5,
+          "riskScore": 3.9199999999999995,
           "riskBucket": "low"
         },
         {
-          "taskName": "Coordinating the Work and Activities of Others",
-          "category": "coordination-management",
-          "importance": 4.08,
-          "riskScore": 15.177600000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Developing and Building Teams",
-          "category": "coordination-management",
-          "importance": 4.04,
-          "riskScore": 15.028800000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Organizing, Planning, and Prioritizing Work",
-          "category": "coordination-management",
-          "importance": 3.92,
-          "riskScore": 14.582400000000002,
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.22,
+          "riskScore": 3.6064,
           "riskBucket": "low"
         },
         {
           "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 3.91,
-          "riskScore": 33.782399999999996,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Coaching and Developing Others",
-          "category": "interpersonal",
-          "importance": 3.91,
-          "riskScore": 0,
+          "importance": 3.03,
+          "riskScore": 26.179199999999998,
           "riskBucket": "low"
         },
         {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 3.88,
-          "riskScore": 10.320800000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Guiding, Directing, and Motivating Subordinates",
-          "category": "coordination-management",
-          "importance": 3.88,
-          "riskScore": 14.433600000000002,
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.02,
+          "riskScore": 26.092799999999997,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 3.79,
-          "riskScore": 26.7195,
+          "importance": 2.99,
+          "riskScore": 21.079500000000003,
           "riskBucket": "low"
         },
         {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 3.79,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Scheduling Work and Activities",
+          "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 3.78,
-          "riskScore": 14.0616,
+          "importance": 2.93,
+          "riskScore": 10.899600000000003,
           "riskBucket": "low"
         },
         {
           "taskName": "Identifying Objects, Actions, and Events",
           "category": "information-processing",
-          "importance": 3.71,
-          "riskScore": 32.054399999999994,
+          "importance": 2.86,
+          "riskScore": 24.710399999999996,
           "riskBucket": "low"
         },
         {
-          "taskName": "Thinking Creatively",
-          "category": "creative-generative",
-          "importance": 3.71,
-          "riskScore": 20.1824,
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 2.86,
+          "riskScore": 7.607600000000001,
           "riskBucket": "low"
         },
         {
-          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "taskName": "Training and Teaching Others",
           "category": "interpersonal",
-          "importance": 3.71,
+          "importance": 2.85,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
-          "taskName": "Monitoring and Controlling Resources",
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 2.84,
+          "riskScore": 24.537599999999994,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 2.83,
+          "riskScore": 7.527800000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 2.78,
+          "riskScore": 11.342399999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 2.65,
+          "riskScore": 7.049000000000001,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Coordinating the Work and Activities of Others",
           "category": "coordination-management",
-          "importance": 3.71,
-          "riskScore": 13.801200000000001,
+          "importance": 2.61,
+          "riskScore": 9.709200000000001,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 2.59,
+          "riskScore": 10.5672,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 6.7471958584987055,
-      "pctLowRiskTime": 93.2528041415013,
+      "pctMediumRiskTime": 0,
+      "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 51.9,
-      "capabilityOverhang": -21.9
+      "realizedExposure100": 39.7,
+      "capabilityOverhang": -9.7
     },
     {
       "slug": "correctional-officers",
@@ -12032,132 +12356,132 @@
     {
       "slug": "diesel-service-technicians-and-mechanics",
       "title": "Diesel service technicians and mechanics",
-      "onetCode": "49-3023.00",
+      "onetCode": "49-3031.00",
       "category": "installation-maintenance-and-repair",
       "jobs": 316000,
       "pay": 61770,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5.1483333333333325,
+      "adoptionSpeed": 5.27139527139527,
       "adaptability": 2.8970588235294112,
       "demandElasticity": 5,
-      "complementarity": 5.176744186046512,
-      "netRisk": 4.7097590059279515,
-      "netRisk100": 47,
+      "complementarity": 4.783240223463687,
+      "netRisk": 4.813072186056905,
+      "netRisk100": 48,
       "tasks": [
-        {
-          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
-          "category": "physical-manual",
-          "importance": 4.27,
-          "riskScore": 4.782399999999999,
-          "riskBucket": "low"
-        },
         {
           "taskName": "Repairing and Maintaining Mechanical Equipment",
           "category": "technical-specialized",
-          "importance": 4.14,
-          "riskScore": 16.891199999999998,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 4.12,
-          "riskScore": 10.959200000000003,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Performing General Physical Activities",
-          "category": "physical-manual",
-          "importance": 4.11,
-          "riskScore": 4.6032,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Updating and Using Relevant Knowledge",
-          "category": "information-processing",
-          "importance": 4.05,
-          "riskScore": 34.992,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 4,
-          "riskScore": 34.559999999999995,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Controlling Machines and Processes",
-          "category": "technical-specialized",
-          "importance": 3.94,
-          "riskScore": 16.0752,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Handling and Moving Objects",
-          "category": "physical-manual",
-          "importance": 3.93,
-          "riskScore": 4.4016,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 3.87,
-          "riskScore": 33.4368,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 3.79,
-          "riskScore": 26.7195,
+          "importance": 4.62,
+          "riskScore": 18.8496,
           "riskBucket": "low"
         },
         {
           "taskName": "Inspecting Equipment, Structures, or Materials",
           "category": "technical-specialized",
-          "importance": 3.77,
-          "riskScore": 15.381599999999999,
+          "importance": 4.39,
+          "riskScore": 17.911199999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.26,
+          "riskScore": 36.8064,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.26,
+          "riskScore": 36.8064,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 4.22,
+          "riskScore": 4.7264,
           "riskBucket": "low"
         },
         {
           "taskName": "Repairing and Maintaining Electronic Equipment",
           "category": "technical-specialized",
-          "importance": 3.67,
-          "riskScore": 14.9736,
+          "importance": 4.11,
+          "riskScore": 16.7688,
           "riskBucket": "low"
         },
         {
-          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 3.58,
-          "riskScore": 9.522800000000002,
+          "importance": 4.1,
+          "riskScore": 10.906,
           "riskBucket": "low"
         },
         {
-          "taskName": "Working with Computers",
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 4.04,
+          "riskScore": 16.4832,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 4.02,
+          "riskScore": 4.5024,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
           "category": "information-processing",
-          "importance": 3.58,
-          "riskScore": 30.931199999999997,
+          "importance": 4.01,
+          "riskScore": 34.64639999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.95,
+          "riskScore": 4.4239999999999995,
           "riskBucket": "low"
         },
         {
           "taskName": "Monitoring Processes, Materials, or Surroundings",
           "category": "information-processing",
-          "importance": 3.5,
-          "riskScore": 30.239999999999995,
+          "importance": 3.91,
+          "riskScore": 33.782399999999996,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 3.78,
+          "riskScore": 10.054800000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.7,
+          "riskScore": 26.085,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.69,
+          "riskScore": 15.0552,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 20.438957475994517,
-      "pctLowRiskTime": 79.56104252400549,
+      "pctMediumRiskTime": 26.924336717982307,
+      "pctLowRiskTime": 73.07566328201767,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 43.9,
-      "capabilityOverhang": -13.9
+      "realizedExposure100": 56.7,
+      "capabilityOverhang": -26.7
     },
     {
       "slug": "dietitians-and-nutritionists",
@@ -15282,132 +15606,132 @@
     {
       "slug": "film-and-video-editors-and-camera-operators",
       "title": "Film and video editors and camera operators",
-      "onetCode": "27-3041.00",
+      "onetCode": "27-4032.00",
       "category": "media-and-communication",
       "jobs": 72000,
       "pay": 75100,
       "exposure": 7,
       "technicalExposure": 7,
-      "adoptionSpeed": 5.31,
+      "adoptionSpeed": 5.356666666666667,
       "adaptability": 6.3088235294117645,
       "demandElasticity": 7,
-      "complementarity": 4.858076225045372,
-      "netRisk": 5.19406122557916,
+      "complementarity": 4.667863554757631,
+      "netRisk": 5.241437092970043,
       "netRisk100": 52,
       "tasks": [
         {
-          "taskName": "Getting Information",
+          "taskName": "Working with Computers",
           "category": "information-processing",
-          "importance": 4.85,
-          "riskScore": 97.776,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 4.8,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Communicating with People Outside the Organization",
-          "category": "communication",
-          "importance": 4.79,
-          "riskScore": 78.79549999999999,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Organizing, Planning, and Prioritizing Work",
-          "category": "coordination-management",
-          "importance": 4.72,
-          "riskScore": 40.9696,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Interpreting the Meaning of Information for Others",
-          "category": "communication",
-          "importance": 4.66,
-          "riskScore": 76.65700000000001,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 4.65,
-          "riskScore": 44.267999999999994,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 4.61,
-          "riskScore": 92.9376,
+          "importance": 4.87,
+          "riskScore": 98.1792,
           "riskBucket": "high"
         },
         {
           "taskName": "Thinking Creatively",
           "category": "creative-generative",
-          "importance": 4.58,
-          "riskScore": 58.13546666666667,
+          "importance": 4.73,
+          "riskScore": 60.03946666666667,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 4.54,
-          "riskScore": 74.683,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Performing for or Working Directly with the Public",
-          "category": "interpersonal",
-          "importance": 4.51,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Working with Computers",
+          "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 4.49,
-          "riskScore": 90.5184,
+          "importance": 4.58,
+          "riskScore": 92.3328,
           "riskBucket": "high"
         },
         {
           "taskName": "Updating and Using Relevant Knowledge",
           "category": "information-processing",
-          "importance": 4.45,
-          "riskScore": 89.712,
+          "importance": 4.47,
+          "riskScore": 90.11519999999999,
           "riskBucket": "high"
         },
         {
-          "taskName": "Analyzing Data or Information",
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.28,
+          "riskScore": 86.2848,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 4.11,
+          "riskScore": 67.60950000000001,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 4.07,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 4.06,
+          "riskScore": 38.651199999999996,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 4.04,
+          "riskScore": 35.0672,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 4.29,
-          "riskScore": 26.626600000000003,
+          "importance": 3.95,
+          "riskScore": 24.51633333333334,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.75,
+          "riskScore": 23.275000000000006,
           "riskBucket": "low"
         },
         {
           "taskName": "Processing Information",
           "category": "information-processing",
-          "importance": 4.26,
-          "riskScore": 85.88159999999999,
+          "importance": 3.67,
+          "riskScore": 73.9872,
           "riskBucket": "high"
         },
         {
-          "taskName": "Scheduling Work and Activities",
+          "taskName": "Developing Objectives and Strategies",
           "category": "coordination-management",
-          "importance": 4.17,
-          "riskScore": 36.1956,
+          "importance": 3.6,
+          "riskScore": 31.247999999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 3.58,
+          "riskScore": 22.219866666666668,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with People Outside the Organization",
+          "category": "communication",
+          "importance": 3.57,
+          "riskScore": 58.726499999999994,
           "riskBucket": "medium"
         }
       ],
-      "pctHighRiskTime": 53.60538247769489,
-      "pctMediumRiskTime": 26.50285212812637,
-      "pctLowRiskTime": 19.89176539417873,
-      "effectiveDimensions": 5,
+      "pctHighRiskTime": 42.36099788031957,
+      "pctMediumRiskTime": 26.74058372737648,
+      "pctLowRiskTime": 30.898418392303928,
+      "effectiveDimensions": 6,
       "archetype": "grow",
-      "realizedExposure100": 77.1,
-      "capabilityOverhang": -7.1
+      "realizedExposure100": 88.1,
+      "capabilityOverhang": -18.1
     },
     {
       "slug": "financial-analysts",
@@ -15434,24 +15758,132 @@
     {
       "slug": "financial-clerks",
       "title": "Financial clerks",
-      "onetCode": "43-3099.00",
+      "onetCode": "43-3021.00",
       "category": "office-and-administrative-support",
       "jobs": 1144900,
       "pay": 49990,
       "exposure": 9,
       "technicalExposure": 9,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.511666666666666,
       "adaptability": 2.1029411764705883,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 6.314558823529412,
-      "netRisk100": 63,
-      "tasks": [],
-      "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "automation-risk"
+      "complementarity": 4.1304747320061255,
+      "netRisk": 6.910797210461519,
+      "netRisk100": 69,
+      "tasks": [
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 4.54,
+          "riskScore": 100,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 4.18,
+          "riskScore": 88.407,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.15,
+          "riskScore": 100,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 4.06,
+          "riskScore": 100,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 3.97,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.57,
+          "riskScore": 43.696799999999996,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing Administrative Activities",
+          "category": "information-processing",
+          "importance": 3.52,
+          "riskScore": 91.23839999999998,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 3.45,
+          "riskScore": 27.531000000000006,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.39,
+          "riskScore": 87.86880000000001,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.37,
+          "riskScore": 26.892600000000005,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.33,
+          "riskScore": 37.1628,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.29,
+          "riskScore": 26.254200000000004,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.14,
+          "riskScore": 81.3888,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Communicating with People Outside the Organization",
+          "category": "communication",
+          "importance": 2.79,
+          "riskScore": 59.008500000000005,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "category": "interpersonal",
+          "importance": 2.64,
+          "riskScore": 0,
+          "riskBucket": "low"
+        }
+      ],
+      "pctHighRiskTime": 50.5338078291815,
+      "pctMediumRiskTime": 18.149466192170824,
+      "pctLowRiskTime": 31.316725978647685,
+      "effectiveDimensions": 5,
+      "archetype": "automation-risk",
+      "realizedExposure100": 73.2,
+      "capabilityOverhang": 16.8
     },
     {
       "slug": "financial-examiners",
@@ -16626,24 +17058,132 @@
     {
       "slug": "food-and-beverage-serving-and-related-workers",
       "title": "Food and beverage serving and related workers",
-      "onetCode": "35-9099.00",
+      "onetCode": "35-3023.00",
       "category": "food-preparation-and-serving",
       "jobs": 5143000,
       "pay": 31710,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 4.900000000000003,
       "adaptability": 0,
       "demandElasticity": 6,
-      "complementarity": 6.6,
-      "netRisk": 4.68,
-      "netRisk100": 47,
-      "tasks": [],
+      "complementarity": 5.851394422310758,
+      "netRisk": 4.809721115537849,
+      "netRisk100": 48,
+      "tasks": [
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 3.49,
+          "riskScore": 30.1536,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing for or Working Directly with the Public",
+          "category": "interpersonal",
+          "importance": 3.45,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "category": "interpersonal",
+          "importance": 3.37,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.33,
+          "riskScore": 23.4765,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Assisting and Caring for Others",
+          "category": "interpersonal",
+          "importance": 3.11,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Training and Teaching Others",
+          "category": "interpersonal",
+          "importance": 2.87,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Coordinating the Work and Activities of Others",
+          "category": "coordination-management",
+          "importance": 2.85,
+          "riskScore": 10.602000000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 2.81,
+          "riskScore": 3.1472,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 2.77,
+          "riskScore": 7.368200000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 2.77,
+          "riskScore": 23.9328,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 2.76,
+          "riskScore": 23.846399999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 2.7,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 2.68,
+          "riskScore": 3.0016,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 2.63,
+          "riskScore": 22.7232,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 2.61,
+          "riskScore": 22.5504,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctLowRiskTime": 100,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 44.2,
+      "capabilityOverhang": -14.2
     },
     {
       "slug": "food-preparation-workers",
@@ -16778,24 +17318,132 @@
     {
       "slug": "food-and-tobacco-processing-workers",
       "title": "Food processing equipment workers",
-      "onetCode": "51-3099.00",
+      "onetCode": "51-3092.00",
       "category": "production",
       "jobs": 297000,
       "pay": 41230,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.1466666666666665,
       "adaptability": 1.4705882352941178,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.609411764705882,
-      "netRisk100": 46,
-      "tasks": [],
+      "complementarity": 5.121637426900584,
+      "netRisk": 4.934417612659099,
+      "netRisk100": 49,
+      "tasks": [
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 4.44,
+          "riskScore": 38.3616,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 4.42,
+          "riskScore": 18.0336,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 4.33,
+          "riskScore": 17.6664,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 4.28,
+          "riskScore": 30.174000000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.16,
+          "riskScore": 16.9728,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.06,
+          "riskScore": 35.078399999999995,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.02,
+          "riskScore": 10.693200000000001,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.89,
+          "riskScore": 4.3568,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 3.83,
+          "riskScore": 33.0912,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.76,
+          "riskScore": 10.001600000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
+          "category": "analysis-decision",
+          "importance": 3.73,
+          "riskScore": 9.921800000000001,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 3.73,
+          "riskScore": 9.921800000000001,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.73,
+          "riskScore": 4.1776,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.56,
+          "riskScore": 30.758399999999995,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 3.48,
+          "riskScore": 30.067199999999996,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctMediumRiskTime": 20.750589027263555,
+      "pctLowRiskTime": 79.24941097273646,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 68.5,
+      "capabilityOverhang": -38.5
     },
     {
       "slug": "food-service-managers",
@@ -18100,24 +18748,132 @@
     {
       "slug": "geological-and-petroleum-technicians",
       "title": "Geological and hydrologic technicians",
-      "onetCode": "19-4044.00",
+      "onetCode": "19-4043.00",
       "category": "life-physical-and-social-science",
       "jobs": 10300,
       "pay": 57150,
       "exposure": 5,
       "technicalExposure": 5,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.384615384615384,
       "adaptability": 4.220588235294118,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.796911764705882,
-      "netRisk100": 48,
-      "tasks": [],
+      "complementarity": 4.559285714285714,
+      "netRisk": 5.281977698771816,
+      "netRisk100": 53,
+      "tasks": [
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 4.28,
+          "riskScore": 29.104000000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 4.14,
+          "riskScore": 59.616,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.12,
+          "riskScore": 59.328,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.85,
+          "riskScore": 45.237500000000004,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.77,
+          "riskScore": 54.288,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.63,
+          "riskScore": 22.506,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 3.62,
+          "riskScore": 16.048666666666666,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.6,
+          "riskScore": 51.839999999999996,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.59,
+          "riskScore": 51.696,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.54,
+          "riskScore": 50.976,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.48,
+          "riskScore": 23.663999999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
+          "category": "analysis-decision",
+          "importance": 3.38,
+          "riskScore": 14.984666666666666,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 3.25,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Interpreting the Meaning of Information for Others",
+          "category": "communication",
+          "importance": 3.18,
+          "riskScore": 37.365,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.13,
+          "riskScore": 13.876333333333335,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "automation-risk"
+      "pctMediumRiskTime": 54.60043988269795,
+      "pctLowRiskTime": 45.39956011730205,
+      "effectiveDimensions": 6,
+      "archetype": "automation-risk",
+      "realizedExposure100": 65.5,
+      "capabilityOverhang": -15.5
     },
     {
       "slug": "geoscientists",
@@ -18512,24 +19268,132 @@
     {
       "slug": "grounds-maintenance-workers",
       "title": "Grounds maintenance workers",
-      "onetCode": "37-3019.00",
+      "onetCode": "37-3011.00",
       "category": "building-and-grounds-cleaning",
       "jobs": 1299200,
       "pay": 40080,
       "exposure": 1,
       "technicalExposure": 1,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 4.953286619953286,
       "adaptability": 1.426470588235294,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.0160294117647055,
-      "netRisk100": 40,
-      "tasks": [],
+      "complementarity": 5.90063694267516,
+      "netRisk": 4.146559347220331,
+      "netRisk100": 41,
+      "tasks": [
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.84,
+          "riskScore": 5.2223999999999995,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.18,
+          "riskScore": 1.1871999999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.09,
+          "riskScore": 7.2615,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 3.03,
+          "riskScore": 1.1311999999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 2.72,
+          "riskScore": 7.8336,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 2.52,
+          "riskScore": 0.9407999999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 2.06,
+          "riskScore": 1.826533333333334,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 1.95,
+          "riskScore": 5.616,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 1.95,
+          "riskScore": 2.6519999999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "category": "interpersonal",
+          "importance": 1.92,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 1.81,
+          "riskScore": 2.4615999999999993,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 1.81,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 1.78,
+          "riskScore": 5.126399999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 1.75,
+          "riskScore": 5.039999999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 1.74,
+          "riskScore": 2.1576,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctLowRiskTime": 100,
+      "effectiveDimensions": 7,
+      "archetype": "less-change",
+      "realizedExposure100": 36.6,
+      "capabilityOverhang": -26.6
     },
     {
       "slug": "hand-laborers-and-material-movers",
@@ -19336,132 +20200,132 @@
     {
       "slug": "heavy-vehicle-and-mobile-equipment-service-technicians",
       "title": "Heavy vehicle and mobile equipment service technicians",
-      "onetCode": "49-3092.00",
+      "onetCode": "49-3042.00",
       "category": "installation-maintenance-and-repair",
       "jobs": 242400,
       "pay": 63850,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5.206460206460206,
+      "adoptionSpeed": 5.1466666666666665,
       "adaptability": 3.161764705882353,
       "demandElasticity": 5,
-      "complementarity": 4.938059701492537,
-      "netRisk": 4.729415395111181,
+      "complementarity": 5.233466135458167,
+      "netRisk": 4.658375400359347,
       "netRisk100": 47,
       "tasks": [
         {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 4.3,
-          "riskScore": 37.151999999999994,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 3.98,
-          "riskScore": 34.3872,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 3.79,
-          "riskScore": 10.081400000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Handling and Moving Objects",
-          "category": "physical-manual",
-          "importance": 3.75,
-          "riskScore": 4.199999999999999,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Updating and Using Relevant Knowledge",
-          "category": "information-processing",
-          "importance": 3.63,
-          "riskScore": 31.363199999999996,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Performing General Physical Activities",
-          "category": "physical-manual",
-          "importance": 3.63,
-          "riskScore": 4.0656,
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 4.64,
+          "riskScore": 18.931199999999997,
           "riskBucket": "low"
         },
         {
           "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
           "category": "physical-manual",
-          "importance": 3.6,
-          "riskScore": 4.032,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Repairing and Maintaining Mechanical Equipment",
-          "category": "technical-specialized",
-          "importance": 3.55,
-          "riskScore": 14.483999999999998,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Controlling Machines and Processes",
-          "category": "technical-specialized",
-          "importance": 3.54,
-          "riskScore": 14.443199999999997,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Repairing and Maintaining Electronic Equipment",
-          "category": "technical-specialized",
-          "importance": 3.52,
-          "riskScore": 14.361599999999997,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
-          "category": "information-processing",
-          "importance": 3.43,
-          "riskScore": 29.6352,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 3.41,
-          "riskScore": 24.0405,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 3.35,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Processing Information",
-          "category": "information-processing",
-          "importance": 3.26,
-          "riskScore": 28.166399999999992,
+          "importance": 4.46,
+          "riskScore": 4.9952,
           "riskBucket": "low"
         },
         {
           "taskName": "Inspecting Equipment, Structures, or Materials",
           "category": "technical-specialized",
-          "importance": 3.21,
-          "riskScore": 13.0968,
+          "importance": 4.41,
+          "riskScore": 17.9928,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.24,
+          "riskScore": 11.278400000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 4.22,
+          "riskScore": 4.7264,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 4.21,
+          "riskScore": 17.176799999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.16,
+          "riskScore": 35.9424,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 4.01,
+          "riskScore": 4.491199999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.98,
+          "riskScore": 16.2384,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.94,
+          "riskScore": 34.041599999999995,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.89,
+          "riskScore": 33.6096,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.85,
+          "riskScore": 27.142500000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Electronic Equipment",
+          "category": "technical-specialized",
+          "importance": 3.78,
+          "riskScore": 15.4224,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.76,
+          "riskScore": 32.486399999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.73,
+          "riskScore": 13.8756,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 15.347544022242813,
-      "pctLowRiskTime": 84.65245597775719,
+      "pctMediumRiskTime": 19.565926892950394,
+      "pctLowRiskTime": 80.43407310704961,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 37.6,
-      "capabilityOverhang": -7.6
+      "realizedExposure100": 56,
+      "capabilityOverhang": -26
     },
     {
       "slug": "high-school-teachers",
@@ -20896,132 +21760,132 @@
     {
       "slug": "information-clerks",
       "title": "Information clerks",
-      "onetCode": "43-4171.00",
+      "onetCode": "43-4081.00",
       "category": "office-and-administrative-support",
       "jobs": 1287600,
       "pay": 45430,
       "exposure": 7,
       "technicalExposure": 7,
-      "adoptionSpeed": 5.2299999999999995,
+      "adoptionSpeed": 5.11177844511178,
       "adaptability": 1.6764705882352944,
       "demandElasticity": 5,
-      "complementarity": 4.887279151943463,
-      "netRisk": 6.167073581376013,
-      "netRisk100": 62,
+      "complementarity": 5.155353901996371,
+      "netRisk": 6.089814320387788,
+      "netRisk100": 61,
       "tasks": [
         {
           "taskName": "Working with Computers",
           "category": "information-processing",
-          "importance": 4.57,
-          "riskScore": 92.1312,
+          "importance": 4.55,
+          "riskScore": 91.728,
           "riskBucket": "high"
         },
         {
           "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 4.37,
-          "riskScore": 88.0992,
+          "importance": 4.47,
+          "riskScore": 90.11519999999999,
           "riskBucket": "high"
         },
         {
           "taskName": "Performing for or Working Directly with the Public",
           "category": "interpersonal",
-          "importance": 4.29,
+          "importance": 4.41,
           "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.29,
+          "riskScore": 26.626600000000003,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 4.14,
-          "riskScore": 68.103,
+          "importance": 4.24,
+          "riskScore": 69.748,
           "riskBucket": "high"
-        },
-        {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 3.9,
-          "riskScore": 24.206000000000007,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Assisting and Caring for Others",
-          "category": "interpersonal",
-          "importance": 3.68,
-          "riskScore": 0,
-          "riskBucket": "low"
         },
         {
           "taskName": "Resolving Conflicts and Negotiating with Others",
           "category": "interpersonal",
-          "importance": 3.66,
+          "importance": 4.08,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
-          "taskName": "Communicating with People Outside the Organization",
-          "category": "communication",
-          "importance": 3.61,
-          "riskScore": 59.384499999999996,
-          "riskBucket": "medium"
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.94,
+          "riskScore": 79.4304,
+          "riskBucket": "high"
         },
         {
           "taskName": "Establishing and Maintaining Interpersonal Relationships",
           "category": "interpersonal",
-          "importance": 3.6,
+          "importance": 3.91,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
           "taskName": "Processing Information",
           "category": "information-processing",
-          "importance": 3.57,
-          "riskScore": 71.9712,
+          "importance": 3.75,
+          "riskScore": 75.6,
           "riskBucket": "high"
         },
         {
           "taskName": "Updating and Using Relevant Knowledge",
           "category": "information-processing",
-          "importance": 3.46,
-          "riskScore": 69.75359999999999,
+          "importance": 3.61,
+          "riskScore": 72.77759999999999,
           "riskBucket": "high"
         },
         {
           "taskName": "Documenting/Recording Information",
           "category": "technical-specialized",
-          "importance": 3.43,
-          "riskScore": 32.6536,
-          "riskBucket": "low"
+          "importance": 3.47,
+          "riskScore": 33.0344,
+          "riskBucket": "medium"
         },
         {
           "taskName": "Performing Administrative Activities",
           "category": "information-processing",
-          "importance": 3.37,
-          "riskScore": 67.9392,
+          "importance": 3.42,
+          "riskScore": 68.9472,
           "riskBucket": "high"
         },
         {
           "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 3.29,
-          "riskScore": 28.5572,
+          "importance": 3.37,
+          "riskScore": 29.2516,
           "riskBucket": "low"
         },
         {
-          "taskName": "Scheduling Work and Activities",
-          "category": "coordination-management",
-          "importance": 3.28,
-          "riskScore": 28.470399999999994,
+          "taskName": "Selling or Influencing Others",
+          "category": "interpersonal",
+          "importance": 3.31,
+          "riskScore": 0,
           "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with People Outside the Organization",
+          "category": "communication",
+          "importance": 3.3,
+          "riskScore": 54.285,
+          "riskBucket": "medium"
         }
       ],
-      "pctHighRiskTime": 41.76449662041979,
-      "pctMediumRiskTime": 6.4212024190679475,
-      "pctLowRiskTime": 51.81430096051227,
+      "pctHighRiskTime": 48.1417756366139,
+      "pctMediumRiskTime": 11.64831383344804,
+      "pctLowRiskTime": 40.20991052993806,
       "effectiveDimensions": 5,
       "archetype": "automation-risk",
-      "realizedExposure100": 70,
-      "capabilityOverhang": 0
+      "realizedExposure100": 69.6,
+      "capabilityOverhang": 0.4
     },
     {
       "slug": "information-security-analysts",
@@ -22456,132 +23320,132 @@
     {
       "slug": "kindergarten-and-elementary-school-teachers",
       "title": "Kindergarten and elementary school teachers",
-      "onetCode": "25-2056.00",
+      "onetCode": "25-2021.00",
       "category": "education-training-and-library",
       "jobs": 1530500,
       "pay": 63820,
       "exposure": 6,
       "technicalExposure": 6,
-      "adoptionSpeed": 5.2683333333333335,
+      "adoptionSpeed": 5.041666666666665,
       "adaptability": 5.647058823529411,
       "demandElasticity": 3,
-      "complementarity": 4.931407942238266,
-      "netRisk": 5.5703262546896015,
-      "netRisk100": 56,
+      "complementarity": 5.569942196531792,
+      "netRisk": 5.397286070497563,
+      "netRisk100": 54,
       "tasks": [
         {
-          "taskName": "Getting Information",
+          "taskName": "Training and Teaching Others",
+          "category": "interpersonal",
+          "importance": 4.48,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Assisting and Caring for Others",
+          "category": "interpersonal",
+          "importance": 4.14,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Working with Computers",
           "category": "information-processing",
-          "importance": 4.75,
-          "riskScore": 82.07999999999998,
+          "importance": 4.12,
+          "riskScore": 71.1936,
           "riskBucket": "high"
         },
         {
           "taskName": "Establishing and Maintaining Interpersonal Relationships",
           "category": "interpersonal",
-          "importance": 4.7,
+          "importance": 4.09,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Coaching and Developing Others",
+          "category": "interpersonal",
+          "importance": 4.09,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.98,
+          "riskScore": 68.7744,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.92,
+          "riskScore": 20.854400000000005,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 3.87,
+          "riskScore": 42.1056,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.86,
+          "riskScore": 54.426,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Scheduling Work and Activities",
+          "category": "coordination-management",
+          "importance": 3.78,
+          "riskScore": 28.1232,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Developing Objectives and Strategies",
+          "category": "coordination-management",
+          "importance": 3.76,
+          "riskScore": 27.974400000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "category": "interpersonal",
+          "importance": 3.72,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
           "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 4.56,
-          "riskScore": 33.9264,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 4.24,
-          "riskScore": 59.784000000000006,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Updating and Using Relevant Knowledge",
-          "category": "information-processing",
-          "importance": 4.17,
-          "riskScore": 72.0576,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Analyzing Data or Information",
-          "category": "analysis-decision",
-          "importance": 4.02,
-          "riskScore": 21.386400000000002,
+          "importance": 3.7,
+          "riskScore": 27.528000000000002,
           "riskBucket": "low"
         },
         {
-          "taskName": "Evaluating Information to Determine Compliance with Standards",
-          "category": "analysis-decision",
-          "importance": 3.93,
-          "riskScore": 20.907600000000006,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Processing Information",
-          "category": "information-processing",
-          "importance": 3.85,
-          "riskScore": 66.52799999999999,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 3.84,
-          "riskScore": 66.3552,
-          "riskBucket": "high"
-        },
-        {
-          "taskName": "Developing Objectives and Strategies",
+          "taskName": "Coordinating the Work and Activities of Others",
           "category": "coordination-management",
-          "importance": 3.83,
-          "riskScore": 28.495200000000004,
+          "importance": 3.7,
+          "riskScore": 27.528000000000002,
           "riskBucket": "low"
         },
         {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 3.81,
-          "riskScore": 20.269200000000005,
+          "taskName": "Developing and Building Teams",
+          "category": "coordination-management",
+          "importance": 3.62,
+          "riskScore": 26.9328,
           "riskBucket": "low"
-        },
-        {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
-          "category": "information-processing",
-          "importance": 3.79,
-          "riskScore": 65.49119999999999,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Communicating with People Outside the Organization",
-          "category": "communication",
-          "importance": 3.77,
-          "riskScore": 53.157000000000004,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 3.74,
-          "riskScore": 30.518399999999996,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Thinking Creatively",
-          "category": "creative-generative",
-          "importance": 3.73,
-          "riskScore": 40.58240000000001,
-          "riskBucket": "medium"
         }
       ],
-      "pctHighRiskTime": 27.350568088259507,
-      "pctMediumRiskTime": 33.08084966244031,
-      "pctLowRiskTime": 39.568582249300164,
+      "pctHighRiskTime": 13.768485466598673,
+      "pctMediumRiskTime": 13.139554648988613,
+      "pctLowRiskTime": 73.09195988441272,
       "effectiveDimensions": 5,
-      "archetype": "automation-risk",
-      "realizedExposure100": 77,
-      "capabilityOverhang": -17
+      "archetype": "reorganize",
+      "realizedExposure100": 49.7,
+      "capabilityOverhang": 10.3
     },
     {
       "slug": "labor-relations-specialists",
@@ -23626,24 +24490,132 @@
     {
       "slug": "logging-workers",
       "title": "Logging workers",
-      "onetCode": "45-4029.00",
+      "onetCode": "45-4022.00",
       "category": "farming-fishing-and-forestry",
       "jobs": 40400,
       "pay": 49660,
       "exposure": 2,
       "technicalExposure": 2,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 4.996666666666668,
       "adaptability": 2.0735294117647056,
       "demandElasticity": 4,
-      "complementarity": 6.6,
-      "netRisk": 4.368970588235294,
-      "netRisk100": 44,
-      "tasks": [],
+      "complementarity": 5.846854663774404,
+      "netRisk": 4.518932988813747,
+      "netRisk100": 45,
+      "tasks": [
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 4.67,
+          "riskScore": 3.4869333333333326,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 4.62,
+          "riskScore": 12.566399999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 4.35,
+          "riskScore": 11.831999999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.23,
+          "riskScore": 24.3648,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.02,
+          "riskScore": 10.934399999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.99,
+          "riskScore": 7.075600000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.9,
+          "riskScore": 18.330000000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.89,
+          "riskScore": 6.898266666666669,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
+          "category": "analysis-decision",
+          "importance": 3.81,
+          "riskScore": 6.756400000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 3.78,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.76,
+          "riskScore": 21.6576,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.76,
+          "riskScore": 2.8074666666666666,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.63,
+          "riskScore": 20.908799999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Developing and Building Teams",
+          "category": "coordination-management",
+          "importance": 3.52,
+          "riskScore": 8.7296,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Assisting and Caring for Others",
+          "category": "interpersonal",
+          "importance": 3.5,
+          "riskScore": 0,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctLowRiskTime": 100,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 36.4,
+      "capabilityOverhang": -16.4
     },
     {
       "slug": "logisticians",
@@ -24558,122 +25530,122 @@
     {
       "slug": "brickmasons-blockmasons-and-stonemasons",
       "title": "Masonry workers",
-      "onetCode": "39-9011.00",
+      "onetCode": "47-2021.00",
       "category": "construction-and-extraction",
       "jobs": 277700,
       "pay": 58270,
       "exposure": 2,
       "technicalExposure": 2,
-      "adoptionSpeed": 4.951666666666665,
+      "adoptionSpeed": 5.081666666666667,
       "adaptability": 2.514705882352941,
       "demandElasticity": 5,
-      "complementarity": 5.927234927234927,
-      "netRisk": 4.277680465533406,
-      "netRisk100": 43,
+      "complementarity": 5.652156057494866,
+      "netRisk": 4.358696239481419,
+      "netRisk100": 44,
       "tasks": [
         {
-          "taskName": "Assisting and Caring for Others",
-          "category": "interpersonal",
-          "importance": 4.19,
-          "riskScore": 0,
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 4.15,
+          "riskScore": 3.0986666666666665,
           "riskBucket": "low"
         },
         {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 3.86,
-          "riskScore": 6.845066666666669,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Thinking Creatively",
-          "category": "creative-generative",
-          "importance": 3.71,
-          "riskScore": 13.454933333333335,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 3.68,
-          "riskScore": 17.296,
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.13,
+          "riskScore": 11.233599999999997,
           "riskBucket": "low"
         },
         {
           "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 3.59,
-          "riskScore": 20.678399999999996,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Organizing, Planning, and Prioritizing Work",
-          "category": "coordination-management",
-          "importance": 3.42,
-          "riskScore": 8.4816,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Resolving Conflicts and Negotiating with Others",
-          "category": "interpersonal",
-          "importance": 3.42,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 3.4,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 3.31,
-          "riskScore": 19.0656,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Performing General Physical Activities",
-          "category": "physical-manual",
-          "importance": 3.28,
-          "riskScore": 2.449066666666666,
+          "importance": 4.09,
+          "riskScore": 23.558399999999995,
           "riskBucket": "low"
         },
         {
           "taskName": "Monitoring Processes, Materials, or Surroundings",
           "category": "information-processing",
-          "importance": 3.21,
-          "riskScore": 18.4896,
+          "importance": 4.04,
+          "riskScore": 23.2704,
           "riskBucket": "low"
         },
         {
-          "taskName": "Evaluating Information to Determine Compliance with Standards",
-          "category": "analysis-decision",
-          "importance": 3.18,
-          "riskScore": 5.6392000000000015,
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.91,
+          "riskScore": 18.377000000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.9,
+          "riskScore": 22.464,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Scheduling Work and Activities",
+          "category": "coordination-management",
+          "importance": 3.89,
+          "riskScore": 9.6472,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.88,
+          "riskScore": 2.8970666666666665,
           "riskBucket": "low"
         },
         {
           "taskName": "Coordinating the Work and Activities of Others",
           "category": "coordination-management",
-          "importance": 3.18,
-          "riskScore": 7.8864,
+          "importance": 3.86,
+          "riskScore": 9.5728,
           "riskBucket": "low"
         },
         {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 3.17,
-          "riskScore": 8.622399999999999,
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.84,
+          "riskScore": 6.809600000000001,
           "riskBucket": "low"
         },
         {
-          "taskName": "Developing Objectives and Strategies",
+          "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 3.15,
-          "riskScore": 7.812,
+          "importance": 3.8,
+          "riskScore": 9.424000000000001,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 3.74,
+          "riskScore": 2.792533333333333,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.58,
+          "riskScore": 6.348533333333335,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
+          "category": "analysis-decision",
+          "importance": 3.47,
+          "riskScore": 6.153466666666668,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.42,
+          "riskScore": 19.699199999999998,
           "riskBucket": "low"
         }
       ],
@@ -24682,8 +25654,8 @@
       "pctLowRiskTime": 100,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 75.9,
-      "capabilityOverhang": -55.9
+      "realizedExposure100": 38.3,
+      "capabilityOverhang": -18.3
     },
     {
       "slug": "massage-therapists",
@@ -24818,132 +25790,132 @@
     {
       "slug": "material-moving-machine-operators",
       "title": "Material moving machine operators",
-      "onetCode": "53-7063.00",
+      "onetCode": "53-7051.00",
       "category": "transportation-and-material-moving",
       "jobs": 841500,
       "pay": 46670,
       "exposure": 4,
       "technicalExposure": 4,
-      "adoptionSpeed": 5.076666666666667,
+      "adoptionSpeed": 5.001665001665,
       "adaptability": 1.75,
       "demandElasticity": 5,
-      "complementarity": 5.359840954274354,
-      "netRisk": 5.130865142478463,
-      "netRisk100": 51,
+      "complementarity": 5.762655601659752,
+      "netRisk": 5.035301880001049,
+      "netRisk100": 50,
       "tasks": [
         {
-          "taskName": "Handling and Moving Objects",
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
           "category": "physical-manual",
-          "importance": 4.03,
-          "riskScore": 6.018133333333333,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Controlling Machines and Processes",
-          "category": "technical-specialized",
-          "importance": 3.87,
-          "riskScore": 21.052799999999998,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 3.48,
-          "riskScore": 40.08959999999999,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Performing General Physical Activities",
-          "category": "physical-manual",
-          "importance": 3.43,
-          "riskScore": 5.122133333333333,
+          "importance": 4.53,
+          "riskScore": 6.764799999999999,
           "riskBucket": "low"
         },
         {
           "taskName": "Inspecting Equipment, Structures, or Materials",
           "category": "technical-specialized",
-          "importance": 3.34,
-          "riskScore": 18.169599999999996,
+          "importance": 4.44,
+          "riskScore": 24.1536,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 4.4,
+          "riskScore": 6.570666666666667,
           "riskBucket": "low"
         },
         {
           "taskName": "Identifying Objects, Actions, and Events",
           "category": "information-processing",
-          "importance": 3.3,
-          "riskScore": 38.01599999999999,
+          "importance": 4.19,
+          "riskScore": 48.2688,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 3.26,
-          "riskScore": 30.643999999999995,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
-          "category": "information-processing",
-          "importance": 3.22,
-          "riskScore": 37.0944,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 2.99,
-          "riskScore": 16.2656,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Evaluating Information to Determine Compliance with Standards",
-          "category": "analysis-decision",
-          "importance": 2.96,
-          "riskScore": 10.498133333333335,
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 4.14,
+          "riskScore": 6.1823999999999995,
           "riskBucket": "low"
         },
         {
           "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 2.91,
-          "riskScore": 10.320800000000004,
+          "importance": 4.05,
+          "riskScore": 14.364000000000003,
           "riskBucket": "low"
         },
         {
-          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
-          "category": "analysis-decision",
-          "importance": 2.9,
-          "riskScore": 10.285333333333336,
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.99,
+          "riskScore": 19.7904,
           "riskBucket": "low"
         },
         {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 2.9,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Processing Information",
+          "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 2.73,
-          "riskScore": 31.4496,
+          "importance": 3.83,
+          "riskScore": 44.121599999999994,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.77,
+          "riskScore": 43.4304,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.75,
+          "riskScore": 35.25,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.71,
+          "riskScore": 13.158133333333337,
           "riskBucket": "low"
         },
         {
-          "taskName": "Judging the Qualities of Objects, Services, or People",
-          "category": "analysis-decision",
-          "importance": 2.71,
-          "riskScore": 9.61146666666667,
+          "taskName": "Scheduling Work and Activities",
+          "category": "coordination-management",
+          "importance": 3.7,
+          "riskScore": 18.352,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.64,
+          "riskScore": 19.801599999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.53,
+          "riskScore": 19.203199999999995,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Coaching and Developing Others",
+          "category": "interpersonal",
+          "importance": 3.46,
+          "riskScore": 0,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 20.820320632937747,
-      "pctLowRiskTime": 79.17967936706225,
+      "pctMediumRiskTime": 26.28107559614408,
+      "pctLowRiskTime": 73.71892440385591,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 58.9,
-      "capabilityOverhang": -18.9
+      "realizedExposure100": 55.4,
+      "capabilityOverhang": -15.4
     },
     {
       "slug": "material-recording-clerks",
@@ -26638,24 +27610,132 @@
     {
       "slug": "metal-and-plastic-machine-workers",
       "title": "Metal and plastic machine workers",
-      "onetCode": "51-4199.00",
+      "onetCode": "51-4031.00",
       "category": "production",
       "jobs": 963000,
       "pay": 47700,
       "exposure": 4,
       "technicalExposure": 4,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.126666666666667,
       "adaptability": 1.9117647058823528,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.8432352941176475,
-      "netRisk100": 48,
-      "tasks": [],
+      "complementarity": 5.154207436399217,
+      "netRisk": 5.157727140171137,
+      "netRisk100": 52,
+      "tasks": [
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.85,
+          "riskScore": 13.654666666666671,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.85,
+          "riskScore": 5.7493333333333325,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.82,
+          "riskScore": 44.0064,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.78,
+          "riskScore": 20.5632,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 3.64,
+          "riskScore": 19.801599999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.55,
+          "riskScore": 40.895999999999994,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 3.5,
+          "riskScore": 40.31999999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.47,
+          "riskScore": 5.181866666666666,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.37,
+          "riskScore": 18.3328,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 3.33,
+          "riskScore": 18.115199999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.32,
+          "riskScore": 31.207999999999995,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 3.26,
+          "riskScore": 11.562133333333335,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 2.98,
+          "riskScore": 34.32959999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 2.98,
+          "riskScore": 10.56906666666667,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 2.86,
+          "riskScore": 10.143466666666669,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctMediumRiskTime": 26.861908456167576,
+      "pctLowRiskTime": 73.13809154383243,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 63.3,
+      "capabilityOverhang": -23.3
     },
     {
       "slug": "microbiologists",
@@ -31232,24 +32312,132 @@
     {
       "slug": "physicians-and-surgeons",
       "title": "Physicians and surgeons",
-      "onetCode": "29-1243.00",
+      "onetCode": "29-1215.00",
       "category": "healthcare",
       "jobs": 862800,
       "pay": 275930,
       "exposure": 5,
       "technicalExposure": 5,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.318333333333336,
       "adaptability": 9.985294117647058,
       "demandElasticity": 1,
-      "complementarity": 6.6,
-      "netRisk": 4.532205882352941,
-      "netRisk100": 45,
-      "tasks": [],
-      "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "reorganize"
+      "complementarity": 4.491819699499165,
+      "netRisk": 5.017508609119776,
+      "netRisk100": 50,
+      "tasks": [
+        {
+          "taskName": "Assisting and Caring for Others",
+          "category": "interpersonal",
+          "importance": 4.99,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 4.96,
+          "riskScore": 33.728,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 4.87,
+          "riskScore": 70.128,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.59,
+          "riskScore": 66.09599999999999,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 4.55,
+          "riskScore": 65.52,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Interpreting the Meaning of Information for Others",
+          "category": "communication",
+          "importance": 4.47,
+          "riskScore": 52.522499999999994,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.35,
+          "riskScore": 19.285,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 4.33,
+          "riskScore": 19.196333333333335,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 4.3,
+          "riskScore": 50.525,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 4.29,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 4.25,
+          "riskScore": 18.84166666666667,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.2,
+          "riskScore": 60.480000000000004,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing for or Working Directly with the Public",
+          "category": "interpersonal",
+          "importance": 4.2,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.93,
+          "riskScore": 56.592,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with People Outside the Organization",
+          "category": "communication",
+          "importance": 3.8,
+          "riskScore": 44.65,
+          "riskBucket": "medium"
+        }
+      ],
+      "pctHighRiskTime": 14.315980629539954,
+      "pctMediumRiskTime": 45.71731234866828,
+      "pctLowRiskTime": 39.96670702179177,
+      "effectiveDimensions": 5,
+      "archetype": "automation-risk",
+      "realizedExposure100": 78.4,
+      "capabilityOverhang": -28.4
     },
     {
       "slug": "physicists-and-astronomers",
@@ -31644,132 +32832,132 @@
     {
       "slug": "police-and-detectives",
       "title": "Police and detectives",
-      "onetCode": "33-1012.00",
+      "onetCode": "33-3051.00",
       "category": "protective-service",
       "jobs": 824200,
       "pay": 77310,
       "exposure": 4,
       "technicalExposure": 4,
-      "adoptionSpeed": 5.058391725058393,
+      "adoptionSpeed": 5.034999999999998,
       "adaptability": 3.985294117647059,
       "demandElasticity": 1,
-      "complementarity": 5.541846758349704,
-      "netRisk": 5.355514875694679,
+      "complementarity": 5.438623326959847,
+      "netRisk": 5.371481216960971,
       "netRisk100": 54,
       "tasks": [
         {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 4.7,
-          "riskScore": 54.144,
-          "riskBucket": "medium"
-        },
-        {
           "taskName": "Documenting/Recording Information",
           "category": "technical-specialized",
-          "importance": 4.48,
-          "riskScore": 24.371199999999998,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
-          "category": "communication",
-          "importance": 4.41,
-          "riskScore": 41.454,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 4.34,
-          "riskScore": 15.392533333333336,
+          "importance": 4.9,
+          "riskScore": 26.656,
           "riskBucket": "low"
         },
         {
           "taskName": "Performing for or Working Directly with the Public",
           "category": "interpersonal",
-          "importance": 4.32,
+          "importance": 4.9,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.86,
+          "riskScore": 17.236800000000006,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 4.76,
+          "riskScore": 44.744,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with People Outside the Organization",
+          "category": "communication",
+          "importance": 4.71,
+          "riskScore": 44.274,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 4.69,
+          "riskScore": 7.003733333333333,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.63,
+          "riskScore": 53.33759999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.52,
+          "riskScore": 52.07039999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "category": "interpersonal",
+          "importance": 4.52,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
           "taskName": "Establishing and Maintaining Interpersonal Relationships",
           "category": "interpersonal",
-          "importance": 4.23,
+          "importance": 4.48,
           "riskScore": 0,
           "riskBucket": "low"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 4.2,
-          "riskScore": 48.384,
-          "riskBucket": "medium"
         },
         {
           "taskName": "Assisting and Caring for Others",
           "category": "interpersonal",
-          "importance": 4.2,
+          "importance": 4.44,
           "riskScore": 0,
           "riskBucket": "low"
-        },
-        {
-          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
-          "category": "physical-manual",
-          "importance": 4.19,
-          "riskScore": 6.257066666666667,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Guiding, Directing, and Motivating Subordinates",
-          "category": "coordination-management",
-          "importance": 4.19,
-          "riskScore": 20.782400000000003,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Communicating with People Outside the Organization",
-          "category": "communication",
-          "importance": 4.18,
-          "riskScore": 39.292,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Resolving Conflicts and Negotiating with Others",
-          "category": "interpersonal",
-          "importance": 4.14,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Updating and Using Relevant Knowledge",
-          "category": "information-processing",
-          "importance": 4.13,
-          "riskScore": 47.57759999999999,
-          "riskBucket": "medium"
         },
         {
           "taskName": "Working with Computers",
           "category": "information-processing",
-          "importance": 4.08,
-          "riskScore": 47.001599999999996,
+          "importance": 4.41,
+          "riskScore": 50.8032,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Performing Administrative Activities",
+          "taskName": "Processing Information",
           "category": "information-processing",
-          "importance": 4.05,
-          "riskScore": 46.65599999999999,
+          "importance": 4.34,
+          "riskScore": 49.99679999999999,
           "riskBucket": "medium"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 4.28,
+          "riskScore": 49.3056,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 4.28,
+          "riskScore": 6.391466666666667,
+          "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 46.60087719298245,
-      "pctLowRiskTime": 53.39912280701755,
-      "effectiveDimensions": 6,
+      "pctMediumRiskTime": 46.056461001164145,
+      "pctLowRiskTime": 53.94353899883586,
+      "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 68.2,
-      "capabilityOverhang": -28.2
+      "realizedExposure100": 67.8,
+      "capabilityOverhang": -27.8
     },
     {
       "slug": "political-scientists",
@@ -32164,24 +33352,132 @@
     {
       "slug": "postsecondary-teachers",
       "title": "Postsecondary teachers",
-      "onetCode": "25-1199.00",
+      "onetCode": "25-1071.00",
       "category": "education-training-and-library",
       "jobs": 1378200,
       "pay": 85330,
       "exposure": 7,
       "technicalExposure": 7,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.221666666666667,
       "adaptability": 4.4411764705882355,
       "demandElasticity": 3,
-      "complementarity": 6.6,
-      "netRisk": 5.663823529411765,
-      "netRisk100": 57,
-      "tasks": [],
-      "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "reorganize"
+      "complementarity": 5.005586592178771,
+      "netRisk": 6.0270395443093445,
+      "netRisk100": 60,
+      "tasks": [
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 4.56,
+          "riskScore": 91.9296,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Training and Teaching Others",
+          "category": "interpersonal",
+          "importance": 4.56,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.47,
+          "riskScore": 90.11519999999999,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 4.44,
+          "riskScore": 89.5104,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 4.3,
+          "riskScore": 54.58133333333333,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 4.24,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 4.17,
+          "riskScore": 36.1956,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Interpreting the Meaning of Information for Others",
+          "category": "communication",
+          "importance": 4.11,
+          "riskScore": 67.60950000000001,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.04,
+          "riskScore": 81.4464,
+          "riskBucket": "high"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.04,
+          "riskScore": 25.074933333333338,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.95,
+          "riskScore": 64.9775,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 3.94,
+          "riskScore": 24.454266666666673,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.91,
+          "riskScore": 37.2232,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with People Outside the Organization",
+          "category": "communication",
+          "importance": 3.91,
+          "riskScore": 64.3195,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.83,
+          "riskScore": 77.2128,
+          "riskBucket": "high"
+        }
+      ],
+      "pctHighRiskTime": 40.739554986393465,
+      "pctMediumRiskTime": 32.399551784856726,
+      "pctLowRiskTime": 26.860893228749806,
+      "effectiveDimensions": 6,
+      "archetype": "reorganize",
+      "realizedExposure100": 91.6,
+      "capabilityOverhang": -21.6
     },
     {
       "slug": "power-plant-operators-distributors-and-dispatchers",
@@ -34136,132 +35432,132 @@
     {
       "slug": "quality-control-inspectors",
       "title": "Quality control inspectors",
-      "onetCode": "19-4099.01",
+      "onetCode": "51-9061.00",
       "category": "production",
       "jobs": 602000,
       "pay": 48570,
       "exposure": 5,
       "technicalExposure": 5,
-      "adoptionSpeed": 5.4300000000000015,
+      "adoptionSpeed": 5.241666666666667,
       "adaptability": 2,
       "demandElasticity": 5,
-      "complementarity": 4.312041884816755,
-      "netRisk": 5.673591623036649,
-      "netRisk100": 57,
+      "complementarity": 4.813893967093236,
+      "netRisk": 5.535554539914687,
+      "netRisk100": 55,
       "tasks": [
-        {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 4.44,
-          "riskScore": 30.192000000000004,
-          "riskBucket": "low"
-        },
         {
           "taskName": "Monitoring Processes, Materials, or Surroundings",
           "category": "information-processing",
-          "importance": 4.17,
-          "riskScore": 60.047999999999995,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Evaluating Information to Determine Compliance with Standards",
-          "category": "analysis-decision",
-          "importance": 4.16,
-          "riskScore": 18.442666666666668,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Analyzing Data or Information",
-          "category": "analysis-decision",
-          "importance": 4.09,
-          "riskScore": 18.13233333333333,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Working with Computers",
-          "category": "information-processing",
-          "importance": 3.96,
-          "riskScore": 57.024,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 3.94,
-          "riskScore": 56.736000000000004,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 3.93,
-          "riskScore": 56.592,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Processing Information",
-          "category": "information-processing",
-          "importance": 3.89,
-          "riskScore": 56.016000000000005,
+          "importance": 4.37,
+          "riskScore": 62.928,
           "riskBucket": "medium"
         },
         {
           "taskName": "Inspecting Equipment, Structures, or Materials",
           "category": "technical-specialized",
-          "importance": 3.87,
-          "riskScore": 26.316000000000003,
+          "importance": 4.33,
+          "riskScore": 29.444,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.28,
+          "riskScore": 61.632000000000005,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 4.25,
+          "riskScore": 28.9,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 3.85,
-          "riskScore": 45.237500000000004,
+          "importance": 4.25,
+          "riskScore": 49.9375,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Updating and Using Relevant Knowledge",
+          "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 3.57,
-          "riskScore": 51.408,
+          "importance": 4.09,
+          "riskScore": 58.895999999999994,
           "riskBucket": "medium"
-        },
-        {
-          "taskName": "Organizing, Planning, and Prioritizing Work",
-          "category": "coordination-management",
-          "importance": 3.46,
-          "riskScore": 21.451999999999998,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Training and Teaching Others",
-          "category": "interpersonal",
-          "importance": 3.27,
-          "riskScore": 0,
-          "riskBucket": "low"
         },
         {
           "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 3.21,
-          "riskScore": 14.231000000000002,
+          "importance": 3.99,
+          "riskScore": 17.689000000000004,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.9,
+          "riskScore": 17.290000000000003,
           "riskBucket": "low"
         },
         {
           "taskName": "Judging the Qualities of Objects, Services, or People",
           "category": "analysis-decision",
-          "importance": 3.08,
-          "riskScore": 13.654666666666667,
+          "importance": 3.77,
+          "riskScore": 16.71366666666667,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.7,
+          "riskScore": 53.28,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.7,
+          "riskScore": 6.906666666666665,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.61,
+          "riskScore": 51.983999999999995,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.55,
+          "riskScore": 6.626666666666665,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Analyzing Data or Information",
+          "category": "analysis-decision",
+          "importance": 3.38,
+          "riskScore": 14.984666666666666,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 3.38,
+          "riskScore": 20.956,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 48.0049217788715,
-      "pctLowRiskTime": 51.9950782211285,
+      "pctMediumRiskTime": 41.502988898377446,
+      "pctLowRiskTime": 58.49701110162253,
       "effectiveDimensions": 5,
       "archetype": "automation-risk",
-      "realizedExposure100": 72.5,
-      "capabilityOverhang": -22.5
+      "realizedExposure100": 66.9,
+      "capabilityOverhang": -16.9
     },
     {
       "slug": "radiation-therapists",
@@ -34526,49 +35822,77 @@
     {
       "slug": "railroad-occupations",
       "title": "Railroad workers",
-      "onetCode": "39-9011.00",
+      "onetCode": "53-4031.00",
       "category": "transportation-and-material-moving",
       "jobs": 80500,
       "pay": 78820,
       "exposure": 4,
       "technicalExposure": 4,
-      "adoptionSpeed": 4.951666666666665,
+      "adoptionSpeed": 5.214999999999999,
       "adaptability": 4.13235294117647,
       "demandElasticity": 5,
-      "complementarity": 5.927234927234927,
-      "netRisk": 4.635033406709877,
-      "netRisk100": 46,
+      "complementarity": 4.99520295202952,
+      "netRisk": 4.874106468417626,
+      "netRisk100": 49,
       "tasks": [
         {
-          "taskName": "Assisting and Caring for Others",
-          "category": "interpersonal",
-          "importance": 4.19,
-          "riskScore": 0,
-          "riskBucket": "low"
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.37,
+          "riskScore": 50.3424,
+          "riskBucket": "medium"
         },
         {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 3.86,
-          "riskScore": 13.690133333333337,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Thinking Creatively",
-          "category": "creative-generative",
-          "importance": 3.71,
-          "riskScore": 26.90986666666667,
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.18,
+          "riskScore": 22.739199999999997,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 3.68,
-          "riskScore": 34.592,
+          "importance": 3.98,
+          "riskScore": 37.412,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Getting Information",
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.97,
+          "riskScore": 45.7344,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.9,
+          "riskScore": 5.824,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Documenting/Recording Information",
+          "category": "technical-specialized",
+          "importance": 3.85,
+          "riskScore": 20.943999999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.72,
+          "riskScore": 13.193600000000004,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.64,
+          "riskScore": 5.435733333333332,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
           "category": "information-processing",
           "importance": 3.59,
           "riskScore": 41.35679999999999,
@@ -34577,81 +35901,53 @@
         {
           "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 3.42,
-          "riskScore": 16.9632,
+          "importance": 3.53,
+          "riskScore": 17.5088,
           "riskBucket": "low"
         },
         {
-          "taskName": "Resolving Conflicts and Negotiating with Others",
-          "category": "interpersonal",
-          "importance": 3.42,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 3.4,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
+          "taskName": "Updating and Using Relevant Knowledge",
           "category": "information-processing",
-          "importance": 3.31,
-          "riskScore": 38.1312,
+          "importance": 3.51,
+          "riskScore": 40.435199999999995,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Performing General Physical Activities",
-          "category": "physical-manual",
-          "importance": 3.28,
-          "riskScore": 4.898133333333332,
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.34,
+          "riskScore": 18.169599999999996,
           "riskBucket": "low"
         },
         {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
-          "category": "information-processing",
-          "importance": 3.21,
-          "riskScore": 36.9792,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 3.18,
-          "riskScore": 11.278400000000003,
+          "importance": 3.22,
+          "riskScore": 11.42026666666667,
           "riskBucket": "low"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 3.2,
+          "riskScore": 36.864,
+          "riskBucket": "medium"
         },
         {
           "taskName": "Coordinating the Work and Activities of Others",
           "category": "coordination-management",
-          "importance": 3.18,
-          "riskScore": 15.7728,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Documenting/Recording Information",
-          "category": "technical-specialized",
-          "importance": 3.17,
-          "riskScore": 17.244799999999998,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Developing Objectives and Strategies",
-          "category": "coordination-management",
-          "importance": 3.15,
-          "riskScore": 15.624,
+          "importance": 3.12,
+          "riskScore": 15.475200000000001,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 26.647342995169076,
-      "pctLowRiskTime": 73.35265700483092,
+      "pctMediumRiskTime": 41.0377358490566,
+      "pctLowRiskTime": 58.9622641509434,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 75.9,
-      "capabilityOverhang": -35.9
+      "realizedExposure100": 63.6,
+      "capabilityOverhang": -23.6
     },
     {
       "slug": "real-estate-brokers-and-sales-agents",
@@ -35566,132 +36862,132 @@
     {
       "slug": "retail-sales-workers",
       "title": "Retail sales workers",
-      "onetCode": "41-1011.00",
+      "onetCode": "41-2031.00",
       "category": "sales",
       "jobs": 4271400,
       "pay": 35560,
       "exposure": 4,
       "technicalExposure": 4,
-      "adoptionSpeed": 4.918333333333334,
+      "adoptionSpeed": 4.933333333333333,
       "adaptability": 0.10294117647058823,
       "demandElasticity": 7,
-      "complementarity": 5.955193482688391,
-      "netRisk": 4.9271867936584,
-      "netRisk100": 49,
+      "complementarity": 5.636257309941521,
+      "netRisk": 4.993974028207774,
+      "netRisk100": 50,
       "tasks": [
         {
-          "taskName": "Training and Teaching Others",
+          "taskName": "Performing for or Working Directly with the Public",
           "category": "interpersonal",
-          "importance": 4.09,
+          "importance": 4.71,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
-          "taskName": "Performing for or Working Directly with the Public",
+          "taskName": "Selling or Influencing Others",
           "category": "interpersonal",
-          "importance": 4.08,
+          "importance": 4.4,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.09,
+          "riskScore": 47.11679999999999,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 4.01,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
           "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 3.93,
-          "riskScore": 13.938400000000003,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Resolving Conflicts and Negotiating with Others",
-          "category": "interpersonal",
-          "importance": 3.89,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Coaching and Developing Others",
-          "category": "interpersonal",
-          "importance": 3.89,
-          "riskScore": 0,
+          "importance": 3.88,
+          "riskScore": 13.76106666666667,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 3.82,
-          "riskScore": 35.908,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 3.81,
-          "riskScore": 0,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Coordinating the Work and Activities of Others",
-          "category": "coordination-management",
-          "importance": 3.81,
-          "riskScore": 18.8976,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 3.8,
-          "riskScore": 43.775999999999996,
+          "importance": 3.65,
+          "riskScore": 34.31,
           "riskBucket": "medium"
         },
         {
           "taskName": "Identifying Objects, Actions, and Events",
           "category": "information-processing",
-          "importance": 3.73,
-          "riskScore": 42.96959999999999,
+          "importance": 3.6,
+          "riskScore": 41.471999999999994,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Communicating with People Outside the Organization",
-          "category": "communication",
-          "importance": 3.67,
-          "riskScore": 34.498,
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.55,
+          "riskScore": 40.895999999999994,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Guiding, Directing, and Motivating Subordinates",
-          "category": "coordination-management",
-          "importance": 3.67,
-          "riskScore": 18.2032,
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 3.46,
+          "riskScore": 39.859199999999994,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Resolving Conflicts and Negotiating with Others",
+          "category": "interpersonal",
+          "importance": 3.45,
+          "riskScore": 0,
           "riskBucket": "low"
         },
         {
-          "taskName": "Developing and Building Teams",
-          "category": "coordination-management",
-          "importance": 3.59,
-          "riskScore": 17.8064,
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.44,
+          "riskScore": 5.137066666666666,
           "riskBucket": "low"
+        },
+        {
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 3.37,
+          "riskScore": 11.95226666666667,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.33,
+          "riskScore": 38.361599999999996,
+          "riskBucket": "medium"
         },
         {
           "taskName": "Organizing, Planning, and Prioritizing Work",
           "category": "coordination-management",
-          "importance": 3.56,
-          "riskScore": 17.6576,
+          "importance": 3.14,
+          "riskScore": 15.5744,
           "riskBucket": "low"
         },
         {
-          "taskName": "Scheduling Work and Activities",
-          "category": "coordination-management",
-          "importance": 3.44,
-          "riskScore": 17.0624,
-          "riskBucket": "low"
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.1,
+          "riskScore": 35.711999999999996,
+          "riskBucket": "medium"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 26.452976400140894,
-      "pctLowRiskTime": 73.54702359985909,
+      "pctMediumRiskTime": 44.90757520840884,
+      "pctLowRiskTime": 55.092424791591164,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 39,
-      "capabilityOverhang": 1
+      "realizedExposure100": 48.4,
+      "capabilityOverhang": -8.4
     },
     {
       "slug": "roofers",
@@ -39466,132 +40762,132 @@
     {
       "slug": "teacher-assistants",
       "title": "Teacher assistants",
-      "onetCode": "31-9091.00",
+      "onetCode": "25-9042.00",
       "category": "education-training-and-library",
       "jobs": 1463000,
       "pay": 36780,
       "exposure": 4,
       "technicalExposure": 4,
-      "adoptionSpeed": 5.088333333333333,
+      "adoptionSpeed": 5.038371705038372,
       "adaptability": 2.2058823529411766,
       "demandElasticity": 3,
-      "complementarity": 5.316538461538461,
-      "netRisk": 5.373476621417798,
-      "netRisk100": 54,
+      "complementarity": 5.523715415019762,
+      "netRisk": 5.3220489050625455,
+      "netRisk100": 53,
       "tasks": [
-        {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 4.55,
-          "riskScore": 52.41599999999999,
-          "riskBucket": "medium"
-        },
         {
           "taskName": "Assisting and Caring for Others",
           "category": "interpersonal",
-          "importance": 4.49,
+          "importance": 4.5,
           "riskScore": 0,
           "riskBucket": "low"
         },
         {
-          "taskName": "Working with Computers",
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 4.46,
+          "riskScore": 32.34986666666667,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
           "category": "information-processing",
           "importance": 4.45,
           "riskScore": 51.263999999999996,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
           "importance": 4.37,
-          "riskScore": 50.3424,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Inspecting Equipment, Structures, or Materials",
-          "category": "technical-specialized",
-          "importance": 4.18,
-          "riskScore": 22.739199999999997,
+          "riskScore": 15.498933333333337,
           "riskBucket": "low"
         },
         {
-          "taskName": "Performing for or Working Directly with the Public",
+          "taskName": "Resolving Conflicts and Negotiating with Others",
           "category": "interpersonal",
-          "importance": 4.17,
+          "importance": 4.31,
           "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Developing Objectives and Strategies",
+          "category": "coordination-management",
+          "importance": 4.16,
+          "riskScore": 20.6336,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 4.1,
-          "riskScore": 38.54,
+          "importance": 4.15,
+          "riskScore": 39.010000000000005,
           "riskBucket": "medium"
         },
         {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
-          "category": "information-processing",
-          "importance": 4.02,
-          "riskScore": 46.310399999999994,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Making Decisions and Solving Problems",
-          "category": "analysis-decision",
-          "importance": 4.02,
-          "riskScore": 14.257600000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Scheduling Work and Activities",
-          "category": "coordination-management",
-          "importance": 4,
-          "riskScore": 19.840000000000003,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Organizing, Planning, and Prioritizing Work",
-          "category": "coordination-management",
-          "importance": 3.92,
-          "riskScore": 19.4432,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Judging the Qualities of Objects, Services, or People",
-          "category": "analysis-decision",
-          "importance": 3.91,
-          "riskScore": 13.86746666666667,
+          "taskName": "Establishing and Maintaining Interpersonal Relationships",
+          "category": "interpersonal",
+          "importance": 4.14,
+          "riskScore": 0,
           "riskBucket": "low"
         },
         {
           "taskName": "Updating and Using Relevant Knowledge",
           "category": "information-processing",
-          "importance": 3.85,
-          "riskScore": 44.352,
+          "importance": 4.11,
+          "riskScore": 47.3472,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Scheduling Work and Activities",
+          "category": "coordination-management",
+          "importance": 4.1,
+          "riskScore": 20.336,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Organizing, Planning, and Prioritizing Work",
+          "category": "coordination-management",
+          "importance": 4.04,
+          "riskScore": 20.038400000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 4.03,
+          "riskScore": 46.425599999999996,
           "riskBucket": "medium"
         },
         {
           "taskName": "Documenting/Recording Information",
           "category": "technical-specialized",
-          "importance": 3.81,
-          "riskScore": 20.726399999999998,
+          "importance": 4.01,
+          "riskScore": 21.814399999999996,
           "riskBucket": "low"
         },
         {
-          "taskName": "Establishing and Maintaining Interpersonal Relationships",
-          "category": "interpersonal",
-          "importance": 3.75,
-          "riskScore": 0,
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 3.91,
+          "riskScore": 21.2704,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Coordinating the Work and Activities of Others",
+          "category": "coordination-management",
+          "importance": 3.78,
+          "riskScore": 18.7488,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 41.1430427017373,
-      "pctLowRiskTime": 58.856957298262714,
+      "pctMediumRiskTime": 26.77543186180423,
+      "pctLowRiskTime": 73.22456813819579,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 67.5,
-      "capabilityOverhang": -27.5
+      "realizedExposure100": 76.6,
+      "capabilityOverhang": -36.6
     },
     {
       "slug": "technical-writers",
@@ -39726,132 +41022,132 @@
     {
       "slug": "telecommunications-equipment-installers-and-repairers-except-line-installers",
       "title": "Telecommunications technicians",
-      "onetCode": "15-2099.01",
+      "onetCode": "49-2022.00",
       "category": "installation-maintenance-and-repair",
       "jobs": 257800,
       "pay": 66200,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5.675,
+      "adoptionSpeed": 5.16,
       "adaptability": 3.3382352941176476,
       "demandElasticity": 5,
-      "complementarity": 3.873385826771653,
-      "netRisk": 5.009587540528022,
-      "netRisk100": 50,
+      "complementarity": 5.211764705882352,
+      "netRisk": 4.638911764705883,
+      "netRisk100": 46,
       "tasks": [
         {
-          "taskName": "Working with Computers",
-          "category": "information-processing",
-          "importance": 4.91,
-          "riskScore": 42.422399999999996,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Processing Information",
-          "category": "information-processing",
-          "importance": 4.76,
-          "riskScore": 41.1264,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Analyzing Data or Information",
-          "category": "analysis-decision",
-          "importance": 4.76,
-          "riskScore": 12.661600000000002,
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 4.23,
+          "riskScore": 4.7376000000000005,
           "riskBucket": "low"
         },
         {
-          "taskName": "Getting Information",
-          "category": "information-processing",
-          "importance": 4.61,
-          "riskScore": 39.8304,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Updating and Using Relevant Knowledge",
-          "category": "information-processing",
-          "importance": 4.33,
-          "riskScore": 37.411199999999994,
-          "riskBucket": "medium"
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.12,
+          "riskScore": 16.8096,
+          "riskBucket": "low"
         },
         {
           "taskName": "Making Decisions and Solving Problems",
           "category": "analysis-decision",
-          "importance": 4.29,
-          "riskScore": 11.411400000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Identifying Objects, Actions, and Events",
-          "category": "information-processing",
-          "importance": 4.15,
-          "riskScore": 35.856,
-          "riskBucket": "medium"
-        },
-        {
-          "taskName": "Thinking Creatively",
-          "category": "creative-generative",
-          "importance": 4.13,
-          "riskScore": 22.467200000000002,
+          "importance": 3.95,
+          "riskScore": 10.507000000000003,
           "riskBucket": "low"
         },
         {
           "taskName": "Communicating with Supervisors, Peers, or Subordinates",
           "category": "communication",
-          "importance": 4.13,
-          "riskScore": 29.1165,
+          "importance": 3.93,
+          "riskScore": 27.706500000000002,
           "riskBucket": "low"
         },
         {
-          "taskName": "Interpreting the Meaning of Information for Others",
-          "category": "communication",
-          "importance": 4.04,
-          "riskScore": 28.482000000000003,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "taskName": "Getting Information",
           "category": "information-processing",
-          "importance": 3.95,
-          "riskScore": 34.128,
+          "importance": 3.83,
+          "riskScore": 33.0912,
           "riskBucket": "medium"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 3.8,
+          "riskScore": 15.504,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.77,
+          "riskScore": 32.572799999999994,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.75,
+          "riskScore": 4.199999999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Working with Computers",
+          "category": "information-processing",
+          "importance": 3.74,
+          "riskScore": 32.313599999999994,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.71,
+          "riskScore": 4.1552,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Processing Information",
+          "category": "information-processing",
+          "importance": 3.63,
+          "riskScore": 31.363199999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 3.62,
+          "riskScore": 19.692800000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.57,
+          "riskScore": 30.844799999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 3.55,
+          "riskScore": 14.483999999999998,
+          "riskBucket": "low"
         },
         {
           "taskName": "Documenting/Recording Information",
           "category": "technical-specialized",
-          "importance": 3.86,
-          "riskScore": 15.7488,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Organizing, Planning, and Prioritizing Work",
-          "category": "coordination-management",
-          "importance": 3.72,
-          "riskScore": 13.838400000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Judging the Qualities of Objects, Services, or People",
-          "category": "analysis-decision",
-          "importance": 3.48,
-          "riskScore": 9.256800000000002,
-          "riskBucket": "low"
-        },
-        {
-          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
-          "category": "analysis-decision",
-          "importance": 3.3,
-          "riskScore": 8.778,
+          "importance": 3.53,
+          "riskScore": 14.402399999999998,
           "riskBucket": "low"
         }
       ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 42.79077218840116,
-      "pctLowRiskTime": 57.209227811598836,
+      "pctMediumRiskTime": 6.751277983430283,
+      "pctLowRiskTime": 93.2487220165697,
       "effectiveDimensions": 5,
       "archetype": "less-change",
-      "realizedExposure100": 95.3,
-      "capabilityOverhang": -65.3
+      "realizedExposure100": 76.5,
+      "capabilityOverhang": -46.5
     },
     {
       "slug": "tellers",
@@ -41806,24 +43102,132 @@
     {
       "slug": "water-transportation-occupations",
       "title": "Water transportation workers",
-      "onetCode": "53-4099.00",
+      "onetCode": "53-5021.00",
       "category": "transportation-and-material-moving",
       "jobs": 85900,
       "pay": 71860,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.058333333333334,
       "adaptability": 3.6029411764705888,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.289558823529411,
-      "netRisk100": 43,
-      "tasks": [],
+      "complementarity": 5.5,
+      "netRisk": 4.521225490196079,
+      "netRisk100": 45,
+      "tasks": [
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 4.55,
+          "riskScore": 5.095999999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 4.4,
+          "riskScore": 17.952,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 4.24,
+          "riskScore": 36.6336,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 4.2,
+          "riskScore": 11.172000000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 4.11,
+          "riskScore": 35.5104,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 4.11,
+          "riskScore": 16.7688,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 4,
+          "riskScore": 34.559999999999995,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.85,
+          "riskScore": 33.263999999999996,
+          "riskBucket": "medium"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.83,
+          "riskScore": 27.0015,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Evaluating Information to Determine Compliance with Standards",
+          "category": "analysis-decision",
+          "importance": 3.71,
+          "riskScore": 9.868600000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.7,
+          "riskScore": 4.144,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 3.65,
+          "riskScore": 4.088,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Training and Teaching Others",
+          "category": "interpersonal",
+          "importance": 3.65,
+          "riskScore": 0,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 3.63,
+          "riskScore": 14.810399999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 3.56,
+          "riskScore": 9.469600000000002,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
-      "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctMediumRiskTime": 27.369488089204257,
+      "pctLowRiskTime": 72.63051191079573,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 39.6,
+      "capabilityOverhang": -9.6
     },
     {
       "slug": "web-developers",
@@ -42348,24 +43752,132 @@
     {
       "slug": "woodworkers",
       "title": "Woodworkers",
-      "onetCode": "51-7099.00",
+      "onetCode": "51-7011.00",
       "category": "production",
       "jobs": 199900,
       "pay": 45310,
       "exposure": 3,
       "technicalExposure": 3,
-      "adoptionSpeed": 5,
+      "adoptionSpeed": 5.088333333333333,
       "adaptability": 1.6470588235294121,
       "demandElasticity": 5,
-      "complementarity": 6.6,
-      "netRisk": 4.582941176470587,
-      "netRisk100": 46,
-      "tasks": [],
+      "complementarity": 5.484081632653062,
+      "netRisk": 4.823791516606642,
+      "netRisk100": 48,
+      "tasks": [
+        {
+          "taskName": "Controlling Machines and Processes",
+          "category": "technical-specialized",
+          "importance": 4.23,
+          "riskScore": 17.2584,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Handling and Moving Objects",
+          "category": "physical-manual",
+          "importance": 4.22,
+          "riskScore": 4.7264,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Communicating with Supervisors, Peers, or Subordinates",
+          "category": "communication",
+          "importance": 3.97,
+          "riskScore": 27.988500000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Inspecting Equipment, Structures, or Materials",
+          "category": "technical-specialized",
+          "importance": 3.79,
+          "riskScore": 15.463199999999999,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Getting Information",
+          "category": "information-processing",
+          "importance": 3.68,
+          "riskScore": 31.795199999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Performing General Physical Activities",
+          "category": "physical-manual",
+          "importance": 3.56,
+          "riskScore": 3.9871999999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Monitoring Processes, Materials, or Surroundings",
+          "category": "information-processing",
+          "importance": 3.51,
+          "riskScore": 30.326399999999996,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Making Decisions and Solving Problems",
+          "category": "analysis-decision",
+          "importance": 3.36,
+          "riskScore": 8.937600000000002,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Identifying Objects, Actions, and Events",
+          "category": "information-processing",
+          "importance": 3.34,
+          "riskScore": 28.857599999999994,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Repairing and Maintaining Mechanical Equipment",
+          "category": "technical-specialized",
+          "importance": 3.34,
+          "riskScore": 13.627199999999998,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Updating and Using Relevant Knowledge",
+          "category": "information-processing",
+          "importance": 3.25,
+          "riskScore": 28.08,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Judging the Qualities of Objects, Services, or People",
+          "category": "analysis-decision",
+          "importance": 3.22,
+          "riskScore": 8.565200000000003,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Operating Vehicles, Mechanized Devices, or Equipment",
+          "category": "physical-manual",
+          "importance": 3.21,
+          "riskScore": 3.5951999999999997,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Thinking Creatively",
+          "category": "creative-generative",
+          "importance": 3.19,
+          "riskScore": 17.353600000000004,
+          "riskBucket": "low"
+        },
+        {
+          "taskName": "Estimating the Quantifiable Characteristics of Products, Events, or Information",
+          "category": "analysis-decision",
+          "importance": 3.17,
+          "riskScore": 8.432200000000002,
+          "riskBucket": "low"
+        }
+      ],
       "pctHighRiskTime": 0,
       "pctMediumRiskTime": 0,
-      "pctLowRiskTime": 0,
-      "effectiveDimensions": 8,
-      "archetype": "less-change"
+      "pctLowRiskTime": 100,
+      "effectiveDimensions": 5,
+      "archetype": "less-change",
+      "realizedExposure100": 53.2,
+      "capabilityOverhang": -23.2
     },
     {
       "slug": "writers-and-authors",

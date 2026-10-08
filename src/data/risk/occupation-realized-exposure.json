@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-08T17:49:58.172836+00:00",
+  "generatedAt": "2026-10-08T18:39:53.018211+00:00",
   "source": "OpenAI Signals (CC BY 4.0) usa_share_of_work_related_messages_by_onet_iwa_month",
   "version": "1.1",
   "monthUsed": "2026-03-01",
   "method": "IWA shares rolled up to 41 O*NET Generalized Work Activities by stripping the IWA suffix from each code. Per-occupation realized exposure is the importance-weighted average of GWA shares across the occupation's tasks, normalized 0-100 across the 342-occupation set. Capability overhang = theoretical exposure (0-100) minus realized exposure (0-100), in the spirit of OpenAI Jobs Transition Framework Fig. 5.",
-  "occupationCount": 325,
+  "occupationCount": 339,
   "occupations": [
     {
       "slug": "accountants-and-auditors",
@@ -91,6 +91,13 @@
       "capabilityOverhang": -26.3
     },
     {
+      "slug": "agricultural-workers",
+      "title": "Agricultural workers",
+      "realizedExposure100": 36.6,
+      "theoreticalExposure100": 30.0,
+      "capabilityOverhang": -6.6
+    },
+    {
       "slug": "air-traffic-controllers",
       "title": "Air traffic controllers",
       "realizedExposure100": 64.8,
@@ -110,6 +117,13 @@
       "realizedExposure100": 59.4,
       "theoreticalExposure100": 50.0,
       "capabilityOverhang": -9.4
+    },
+    {
+      "slug": "animal-care-and-service-workers",
+      "title": "Animal care and service workers",
+      "realizedExposure100": 73.2,
+      "theoreticalExposure100": 20.0,
+      "capabilityOverhang": -53.2
     },
     {
       "slug": "announcers",
@@ -135,9 +149,9 @@
     {
       "slug": "architects",
       "title": "Architects",
-      "realizedExposure100": 76.5,
+      "realizedExposure100": 68.6,
       "theoreticalExposure100": 70.0,
-      "capabilityOverhang": -6.5
+      "capabilityOverhang": 1.4
     },
     {
       "slug": "architectural-and-engineering-managers",
@@ -159,6 +173,13 @@
       "realizedExposure100": 82.7,
       "theoreticalExposure100": 80.0,
       "capabilityOverhang": -2.7
+    },
+    {
+      "slug": "assemblers-and-fabricators",
+      "title": "Assemblers and fabricators",
+      "realizedExposure100": 42.0,
+      "theoreticalExposure100": 30.0,
+      "capabilityOverhang": -12.0
     },
     {
       "slug": "athletes-and-sports-competitors",
@@ -534,9 +555,9 @@
     {
       "slug": "cooks",
       "title": "Cooks",
-      "realizedExposure100": 51.9,
+      "realizedExposure100": 39.7,
       "theoreticalExposure100": 30.0,
-      "capabilityOverhang": -21.9
+      "capabilityOverhang": -9.7
     },
     {
       "slug": "correctional-officers",
@@ -653,9 +674,9 @@
     {
       "slug": "diesel-service-technicians-and-mechanics",
       "title": "Diesel service technicians and mechanics",
-      "realizedExposure100": 43.9,
+      "realizedExposure100": 56.7,
       "theoreticalExposure100": 30.0,
-      "capabilityOverhang": -13.9
+      "capabilityOverhang": -26.7
     },
     {
       "slug": "dietitians-and-nutritionists",
@@ -828,9 +849,16 @@
     {
       "slug": "film-and-video-editors-and-camera-operators",
       "title": "Film and video editors and camera operators",
-      "realizedExposure100": 77.1,
+      "realizedExposure100": 88.1,
       "theoreticalExposure100": 70.0,
-      "capabilityOverhang": -7.1
+      "capabilityOverhang": -18.1
+    },
+    {
+      "slug": "financial-clerks",
+      "title": "Financial clerks",
+      "realizedExposure100": 73.2,
+      "theoreticalExposure100": 90.0,
+      "capabilityOverhang": 16.8
     },
     {
       "slug": "financial-examiners",
@@ -896,11 +924,25 @@
       "capabilityOverhang": -31.4
     },
     {
+      "slug": "food-and-beverage-serving-and-related-workers",
+      "title": "Food and beverage serving and related workers",
+      "realizedExposure100": 44.2,
+      "theoreticalExposure100": 30.0,
+      "capabilityOverhang": -14.2
+    },
+    {
       "slug": "food-preparation-workers",
       "title": "Food preparation workers",
       "realizedExposure100": 41.3,
       "theoreticalExposure100": 20.0,
       "capabilityOverhang": -21.3
+    },
+    {
+      "slug": "food-and-tobacco-processing-workers",
+      "title": "Food processing equipment workers",
+      "realizedExposure100": 68.5,
+      "theoreticalExposure100": 30.0,
+      "capabilityOverhang": -38.5
     },
     {
       "slug": "food-service-managers",
@@ -973,6 +1015,13 @@
       "capabilityOverhang": -12.2
     },
     {
+      "slug": "geological-and-petroleum-technicians",
+      "title": "Geological and hydrologic technicians",
+      "realizedExposure100": 65.5,
+      "theoreticalExposure100": 50.0,
+      "capabilityOverhang": -15.5
+    },
+    {
       "slug": "geoscientists",
       "title": "Geoscientists",
       "realizedExposure100": 92.9,
@@ -992,6 +1041,13 @@
       "realizedExposure100": 80.0,
       "theoreticalExposure100": 90.0,
       "capabilityOverhang": 10.0
+    },
+    {
+      "slug": "grounds-maintenance-workers",
+      "title": "Grounds maintenance workers",
+      "realizedExposure100": 36.6,
+      "theoreticalExposure100": 10.0,
+      "capabilityOverhang": -26.6
     },
     {
       "slug": "hand-laborers-and-material-movers",
@@ -1038,9 +1094,9 @@
     {
       "slug": "heavy-vehicle-and-mobile-equipment-service-technicians",
       "title": "Heavy vehicle and mobile equipment service technicians",
-      "realizedExposure100": 37.6,
+      "realizedExposure100": 56.0,
       "theoreticalExposure100": 30.0,
-      "capabilityOverhang": -7.6
+      "capabilityOverhang": -26.0
     },
     {
       "slug": "high-school-teachers",
@@ -1122,9 +1178,9 @@
     {
       "slug": "information-clerks",
       "title": "Information clerks",
-      "realizedExposure100": 70.0,
+      "realizedExposure100": 69.6,
       "theoreticalExposure100": 70.0,
-      "capabilityOverhang": 0.0
+      "capabilityOverhang": 0.4
     },
     {
       "slug": "information-security-analysts",
@@ -1206,9 +1262,9 @@
     {
       "slug": "kindergarten-and-elementary-school-teachers",
       "title": "Kindergarten and elementary school teachers",
-      "realizedExposure100": 77.0,
+      "realizedExposure100": 49.7,
       "theoreticalExposure100": 60.0,
-      "capabilityOverhang": -17.0
+      "capabilityOverhang": 10.3
     },
     {
       "slug": "labor-relations-specialists",
@@ -1267,6 +1323,13 @@
       "capabilityOverhang": -11.1
     },
     {
+      "slug": "logging-workers",
+      "title": "Logging workers",
+      "realizedExposure100": 36.4,
+      "theoreticalExposure100": 20.0,
+      "capabilityOverhang": -16.4
+    },
+    {
       "slug": "logisticians",
       "title": "Logisticians",
       "realizedExposure100": 77.0,
@@ -1318,9 +1381,9 @@
     {
       "slug": "brickmasons-blockmasons-and-stonemasons",
       "title": "Masonry workers",
-      "realizedExposure100": 75.9,
+      "realizedExposure100": 38.3,
       "theoreticalExposure100": 20.0,
-      "capabilityOverhang": -55.9
+      "capabilityOverhang": -18.3
     },
     {
       "slug": "massage-therapists",
@@ -1332,9 +1395,9 @@
     {
       "slug": "material-moving-machine-operators",
       "title": "Material moving machine operators",
-      "realizedExposure100": 58.9,
+      "realizedExposure100": 55.4,
       "theoreticalExposure100": 40.0,
-      "capabilityOverhang": -18.9
+      "capabilityOverhang": -15.4
     },
     {
       "slug": "material-recording-clerks",
@@ -1426,6 +1489,13 @@
       "realizedExposure100": 49.7,
       "theoreticalExposure100": 60.0,
       "capabilityOverhang": 10.3
+    },
+    {
+      "slug": "metal-and-plastic-machine-workers",
+      "title": "Metal and plastic machine workers",
+      "realizedExposure100": 63.3,
+      "theoreticalExposure100": 40.0,
+      "capabilityOverhang": -23.3
     },
     {
       "slug": "microbiologists",
@@ -1673,6 +1743,13 @@
       "capabilityOverhang": -34.0
     },
     {
+      "slug": "physicians-and-surgeons",
+      "title": "Physicians and surgeons",
+      "realizedExposure100": 78.4,
+      "theoreticalExposure100": 50.0,
+      "capabilityOverhang": -28.4
+    },
+    {
       "slug": "physicists-and-astronomers",
       "title": "Physicists and astronomers",
       "realizedExposure100": 94.5,
@@ -1696,9 +1773,9 @@
     {
       "slug": "police-and-detectives",
       "title": "Police and detectives",
-      "realizedExposure100": 68.2,
+      "realizedExposure100": 67.8,
       "theoreticalExposure100": 40.0,
-      "capabilityOverhang": -28.2
+      "capabilityOverhang": -27.8
     },
     {
       "slug": "political-scientists",
@@ -1720,6 +1797,13 @@
       "realizedExposure100": 70.1,
       "theoreticalExposure100": 70.0,
       "capabilityOverhang": -0.1
+    },
+    {
+      "slug": "postsecondary-teachers",
+      "title": "Postsecondary teachers",
+      "realizedExposure100": 91.6,
+      "theoreticalExposure100": 70.0,
+      "capabilityOverhang": -21.6
     },
     {
       "slug": "power-plant-operators-distributors-and-dispatchers",
@@ -1829,9 +1913,9 @@
     {
       "slug": "quality-control-inspectors",
       "title": "Quality control inspectors",
-      "realizedExposure100": 72.5,
+      "realizedExposure100": 66.9,
       "theoreticalExposure100": 50.0,
-      "capabilityOverhang": -22.5
+      "capabilityOverhang": -16.9
     },
     {
       "slug": "radiation-therapists",
@@ -1850,9 +1934,9 @@
     {
       "slug": "railroad-occupations",
       "title": "Railroad workers",
-      "realizedExposure100": 75.9,
+      "realizedExposure100": 63.6,
       "theoreticalExposure100": 40.0,
-      "capabilityOverhang": -35.9
+      "capabilityOverhang": -23.6
     },
     {
       "slug": "real-estate-brokers-and-sales-agents",
@@ -1906,9 +1990,9 @@
     {
       "slug": "retail-sales-workers",
       "title": "Retail sales workers",
-      "realizedExposure100": 39.0,
+      "realizedExposure100": 48.4,
       "theoreticalExposure100": 40.0,
-      "capabilityOverhang": 1.0
+      "capabilityOverhang": -8.4
     },
     {
       "slug": "roofers",
@@ -2116,9 +2200,9 @@
     {
       "slug": "teacher-assistants",
       "title": "Teacher assistants",
-      "realizedExposure100": 67.5,
+      "realizedExposure100": 76.6,
       "theoreticalExposure100": 40.0,
-      "capabilityOverhang": -27.5
+      "capabilityOverhang": -36.6
     },
     {
       "slug": "technical-writers",
@@ -2130,9 +2214,9 @@
     {
       "slug": "telecommunications-equipment-installers-and-repairers-except-line-installers",
       "title": "Telecommunications technicians",
-      "realizedExposure100": 95.3,
+      "realizedExposure100": 76.5,
       "theoreticalExposure100": 30.0,
-      "capabilityOverhang": -65.3
+      "capabilityOverhang": -46.5
     },
     {
       "slug": "tellers",
@@ -2240,6 +2324,13 @@
       "capabilityOverhang": -11.6
     },
     {
+      "slug": "water-transportation-occupations",
+      "title": "Water transportation workers",
+      "realizedExposure100": 39.6,
+      "theoreticalExposure100": 30.0,
+      "capabilityOverhang": -9.6
+    },
+    {
       "slug": "web-developers",
       "title": "Web developers and digital designers",
       "realizedExposure100": 88.4,
@@ -2266,6 +2357,13 @@
       "realizedExposure100": 34.8,
       "theoreticalExposure100": 20.0,
       "capabilityOverhang": -14.8
+    },
+    {
+      "slug": "woodworkers",
+      "title": "Woodworkers",
+      "realizedExposure100": 53.2,
+      "theoreticalExposure100": 30.0,
+      "capabilityOverhang": -23.2
     },
     {
       "slug": "writers-and-authors",
