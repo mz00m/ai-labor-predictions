@@ -58,4 +58,15 @@ jobs:
         run: npm run lint
 
       - name: Production build
-        run: npm run build
+        # next/font fetches Google Fonts at build time; the runner occasionally
+        # gets a null response ("Cannot read properties of null (reading '1')").
+        # Retry once only on that failure so real build errors still fail fast.
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee build.log && exit 0
+          if grep -q "An error occurred in \`next/font\`" build.log; then
+            echo "::warning::next/font fetch failed; retrying build once"
+            npm run build
+          else
+            exit 1
+          fi
