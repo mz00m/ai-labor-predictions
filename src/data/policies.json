@@ -121,7 +121,7 @@
       "name": "Wage Insurance (Statewide)",
       "category": "Income Support",
       "tagline": "Displaced workers receive 50% of wage loss for up to 24 months when re-employed at lower pay",
-      "description": "Modeled on Trade Adjustment Assistance wage insurance. Reduces the personal cost of taking a lower-wage adjacent role, softening the transition for displaced workers and increasing re-employment speed.",
+      "description": "Modeled on Trade Adjustment Assistance wage insurance (federal RTAA, which lapsed with TAA on July 1, 2022 and has not been reauthorized). Reduces the personal cost of taking a lower-wage adjacent role, softening the transition for displaced workers and increasing re-employment speed.",
       "typicalCostMillions": 25,
       "durationYears": 5,
       "targetSectors": null,

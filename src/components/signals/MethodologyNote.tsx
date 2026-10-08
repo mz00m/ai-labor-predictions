@@ -1,5 +1,14 @@
 "use client";
 
+import { getLastFetchDate } from "@/lib/signal-data-loader";
+
+const lastRefreshed = new Date(getLastFetchDate()).toLocaleDateString("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
 export default function MethodologyNote() {
   return (
     <section className="border-t border-card pt-8">
@@ -144,7 +153,8 @@ export default function MethodologyNote() {
           >
             Stack Exchange API
           </a>{" "}
-          (question volume). Updated monthly.
+          (question volume). Last refreshed {lastRefreshed}; refreshes are paused
+          while the pipeline is repaired.
         </p>
       </div>
     </section>

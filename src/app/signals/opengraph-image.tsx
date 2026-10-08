@@ -263,7 +263,7 @@ export default function OGImage() {
                 fontWeight: 500,
               }}
             >
-              6 industries &middot; npm download trends &middot; BLS employment
+              10 industries &middot; npm download trends &middot; BLS employment
               data
             </span>
             <span

@@ -120,7 +120,7 @@ export default function MethodologySection() {
                       rel="noopener noreferrer"
                       className="underline hover:text-[var(--foreground)]"
                     >
-                      Current Population Survey (CPS) 2024 annual averages
+                      Current Population Survey (CPS) 2025 annual averages
                     </a>{" "}
                     (Table 11), which reports employed persons by detailed occupation and sex.
                   </p>
@@ -610,7 +610,7 @@ export default function MethodologySection() {
             </li>
             <li>
               <a href="https://www.bls.gov/cps/cpsaat11.htm" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Bureau of Labor Statistics. Current Population Survey 2024 (Table 11, gender by occupation)
+                Bureau of Labor Statistics. Current Population Survey 2025 (Table 11, gender by occupation)
               </a>
             </li>
             <li>

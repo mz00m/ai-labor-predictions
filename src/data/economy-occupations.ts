@@ -57,7 +57,7 @@ export interface OccupationGroup {
   avgComputeCostPerHr: number;
   /** Annual cost decline rate for the blended task mix */
   blendedCostDeclineRate: number;
-  /** Percentage of workers who are women (BLS CPS 2024 annual averages) */
+  /** Percentage of workers who are women (BLS CPS 2025 annual averages, Table 11) */
   womenPercent: number;
   /** Adaptive capacity index (0-1) from Manning/Aguirre NBER w34705 */
   adaptiveCapacity: number;
@@ -127,7 +127,7 @@ function makeGroup(
 
 /**
  * Gender data: Women's share of employment by SOC major group.
- * Source: BLS Current Population Survey (CPS) 2024 annual averages, Table 11:
+ * Source: BLS Current Population Survey (CPS) 2025 annual averages, Table 11:
  * "Employed persons by detailed occupation, sex, race, and Hispanic or Latino ethnicity"
  * https://www.bls.gov/cps/cpsaat11.htm
  *
@@ -147,35 +147,35 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     10967, 58.70, 122090, "high",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.20,
       "creative-generative": 0.05, "coordination-management": 0.25, "physical-manual": 0.00,
-      "interpersonal": 0.20, "technical-specialized": 0.05 }, 47,
+      "interpersonal": 0.20, "technical-specialized": 0.05 }, 41.8,
     0.734, { netLiquidWealth: 0.85, skillTransferability: 0.72, geographicDensity: 0.70, ageFraction55Plus: 0.58 }, 0.400),
 
   makeGroup("business-financial", "13-0000", "Business and Financial Operations", "Business & Finance",
     10351, 38.90, 80910, "high",
     { "information-processing": 0.25, "communication": 0.15, "analysis-decision": 0.25,
       "creative-generative": 0.03, "coordination-management": 0.10, "physical-manual": 0.00,
-      "interpersonal": 0.12, "technical-specialized": 0.10 }, 35,
+      "interpersonal": 0.12, "technical-specialized": 0.10 }, 53.2,
     0.734, { netLiquidWealth: 0.78, skillTransferability: 0.74, geographicDensity: 0.72, ageFraction55Plus: 0.62 }, 0.400),
 
   makeGroup("computer-math", "15-0000", "Computer and Mathematical Occupations", "Tech & Computing",
     5193, 50.89, 105850, "high",
     { "information-processing": 0.15, "communication": 0.10, "analysis-decision": 0.15,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.00,
-      "interpersonal": 0.10, "technical-specialized": 0.35 }, 26,
+      "interpersonal": 0.10, "technical-specialized": 0.35 }, 27.5,
     0.800, { netLiquidWealth: 0.82, skillTransferability: 0.80, geographicDensity: 0.78, ageFraction55Plus: 0.68 }, 0.400),
 
   makeGroup("architecture-engineering", "17-0000", "Architecture and Engineering", "Architecture & Engineering",
     2567, 45.37, 94370, "high",
     { "information-processing": 0.10, "communication": 0.10, "analysis-decision": 0.20,
       "creative-generative": 0.15, "coordination-management": 0.10, "physical-manual": 0.05,
-      "interpersonal": 0.05, "technical-specialized": 0.25 }, 16,
+      "interpersonal": 0.05, "technical-specialized": 0.25 }, 19.3,
     0.734, { netLiquidWealth: 0.76, skillTransferability: 0.70, geographicDensity: 0.68, ageFraction55Plus: 0.60 }, 0.400),
 
   makeGroup("life-physical-social-science", "19-0000", "Life, Physical, and Social Science", "Sciences",
     1447, 39.35, 81860, "high",
     { "information-processing": 0.20, "communication": 0.10, "analysis-decision": 0.30,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.10,
-      "interpersonal": 0.05, "technical-specialized": 0.10 }, 48,
+      "interpersonal": 0.05, "technical-specialized": 0.10 }, 49.4,
     0.734, { netLiquidWealth: 0.70, skillTransferability: 0.78, geographicDensity: 0.74, ageFraction55Plus: 0.60 }, 0.400),
 
   // Service Occupations - AC=0.454, exposure=0.161 (Table 5)
@@ -183,7 +183,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     2570, 27.66, 57530, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.10,
       "creative-generative": 0.02, "coordination-management": 0.10, "physical-manual": 0.05,
-      "interpersonal": 0.40, "technical-specialized": 0.08 }, 67,
+      "interpersonal": 0.40, "technical-specialized": 0.08 }, 69.0,
     0.454, { netLiquidWealth: 0.35, skillTransferability: 0.55, geographicDensity: 0.52, ageFraction55Plus: 0.48 }, 0.161),
 
   // Professional, Managerial, and Technical
@@ -191,7 +191,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     1273, 48.07, 99990, "high",
     { "information-processing": 0.25, "communication": 0.20, "analysis-decision": 0.20,
       "creative-generative": 0.05, "coordination-management": 0.05, "physical-manual": 0.00,
-      "interpersonal": 0.15, "technical-specialized": 0.10 }, 53,
+      "interpersonal": 0.15, "technical-specialized": 0.10 }, 56.0,
     0.734, { netLiquidWealth: 0.88, skillTransferability: 0.68, geographicDensity: 0.76, ageFraction55Plus: 0.56 }, 0.400),
 
   // Education - interpolated: AC=0.600, exposure=0.350
@@ -199,7 +199,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     8948, 28.47, 59220, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.10,
       "creative-generative": 0.10, "coordination-management": 0.05, "physical-manual": 0.05,
-      "interpersonal": 0.40, "technical-specialized": 0.05 }, 73,
+      "interpersonal": 0.40, "technical-specialized": 0.05 }, 74.4,
     0.600, { netLiquidWealth: 0.42, skillTransferability: 0.68, geographicDensity: 0.65, ageFraction55Plus: 0.50 }, 0.350),
 
   // Professional, Managerial, and Technical
@@ -207,7 +207,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     2099, 28.91, 60130, "middle",
     { "information-processing": 0.10, "communication": 0.15, "analysis-decision": 0.05,
       "creative-generative": 0.40, "coordination-management": 0.05, "physical-manual": 0.10,
-      "interpersonal": 0.10, "technical-specialized": 0.05 }, 52,
+      "interpersonal": 0.10, "technical-specialized": 0.05 }, 50.4,
     0.734, { netLiquidWealth: 0.55, skillTransferability: 0.76, geographicDensity: 0.80, ageFraction55Plus: 0.65 }, 0.400),
 
   // Healthcare Practitioners - interpolated: AC=0.550, exposure=0.200
@@ -215,7 +215,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     9593, 42.28, 87930, "high",
     { "information-processing": 0.15, "communication": 0.05, "analysis-decision": 0.15,
       "creative-generative": 0.02, "coordination-management": 0.05, "physical-manual": 0.30,
-      "interpersonal": 0.15, "technical-specialized": 0.13 }, 76,
+      "interpersonal": 0.15, "technical-specialized": 0.13 }, 75.3,
     0.550, { netLiquidWealth: 0.60, skillTransferability: 0.52, geographicDensity: 0.58, ageFraction55Plus: 0.52 }, 0.200),
 
   // Service Occupations - AC=0.454, exposure=0.161
@@ -223,35 +223,35 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     7448, 17.13, 35620, "low",
     { "information-processing": 0.10, "communication": 0.05, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.45,
-      "interpersonal": 0.25, "technical-specialized": 0.05 }, 87,
+      "interpersonal": 0.25, "technical-specialized": 0.05 }, 83.4,
     0.454, { netLiquidWealth: 0.22, skillTransferability: 0.48, geographicDensity: 0.58, ageFraction55Plus: 0.52 }, 0.161),
 
   makeGroup("protective-service", "33-0000", "Protective Service Occupations", "Protective Services",
     3655, 24.42, 50800, "middle",
     { "information-processing": 0.10, "communication": 0.10, "analysis-decision": 0.10,
       "creative-generative": 0.00, "coordination-management": 0.10, "physical-manual": 0.35,
-      "interpersonal": 0.20, "technical-specialized": 0.05 }, 22,
+      "interpersonal": 0.20, "technical-specialized": 0.05 }, 23.3,
     0.454, { netLiquidWealth: 0.45, skillTransferability: 0.42, geographicDensity: 0.50, ageFraction55Plus: 0.42 }, 0.161),
 
   makeGroup("food-serving", "35-0000", "Food Preparation and Serving Related", "Food & Serving",
     13613, 14.69, 30550, "low",
     { "information-processing": 0.05, "communication": 0.05, "analysis-decision": 0.02,
       "creative-generative": 0.03, "coordination-management": 0.05, "physical-manual": 0.60,
-      "interpersonal": 0.15, "technical-specialized": 0.05 }, 62,
+      "interpersonal": 0.15, "technical-specialized": 0.05 }, 55.7,
     0.454, { netLiquidWealth: 0.18, skillTransferability: 0.52, geographicDensity: 0.55, ageFraction55Plus: 0.62 }, 0.161),
 
   makeGroup("building-grounds", "37-0000", "Building and Grounds Cleaning and Maintenance", "Building & Grounds",
     4496, 16.18, 33650, "low",
     { "information-processing": 0.03, "communication": 0.02, "analysis-decision": 0.02,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.80,
-      "interpersonal": 0.03, "technical-specialized": 0.05 }, 37,
+      "interpersonal": 0.03, "technical-specialized": 0.05 }, 41.3,
     0.454, { netLiquidWealth: 0.20, skillTransferability: 0.45, geographicDensity: 0.52, ageFraction55Plus: 0.50 }, 0.161),
 
   makeGroup("personal-care", "39-0000", "Personal Care and Service Occupations", "Personal Care",
     3160, 16.22, 33740, "low",
     { "information-processing": 0.05, "communication": 0.05, "analysis-decision": 0.03,
       "creative-generative": 0.05, "coordination-management": 0.02, "physical-manual": 0.40,
-      "interpersonal": 0.35, "technical-specialized": 0.05 }, 76,
+      "interpersonal": 0.35, "technical-specialized": 0.05 }, 76.8,
     0.454, { netLiquidWealth: 0.20, skillTransferability: 0.50, geographicDensity: 0.55, ageFraction55Plus: 0.52 }, 0.161),
 
   // Sales and Related - AC=0.487, exposure=0.348 (Table 5)
@@ -259,7 +259,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     13352, 18.01, 37460, "middle",
     { "information-processing": 0.15, "communication": 0.20, "analysis-decision": 0.05,
       "creative-generative": 0.03, "coordination-management": 0.02, "physical-manual": 0.15,
-      "interpersonal": 0.35, "technical-specialized": 0.05 }, 49,
+      "interpersonal": 0.35, "technical-specialized": 0.05 }, 47.4,
     0.487, { netLiquidWealth: 0.38, skillTransferability: 0.55, geographicDensity: 0.52, ageFraction55Plus: 0.50 }, 0.348),
 
   // Administrative Support - AC=0.360, exposure=0.525 (Table 5, highest exposure + lowest AC of white-collar)
@@ -267,7 +267,7 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     18200, 20.82, 43310, "middle",
     { "information-processing": 0.40, "communication": 0.20, "analysis-decision": 0.05,
       "creative-generative": 0.02, "coordination-management": 0.10, "physical-manual": 0.05,
-      "interpersonal": 0.10, "technical-specialized": 0.08 }, 42,
+      "interpersonal": 0.10, "technical-specialized": 0.08 }, 70.5,
     0.360, { netLiquidWealth: 0.25, skillTransferability: 0.40, geographicDensity: 0.45, ageFraction55Plus: 0.42 }, 0.525),
 
   // Natural Resources, Construction, Maintenance - AC=0.449, exposure=0.041 (Table 5)
@@ -275,21 +275,21 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     470, 17.35, 36090, "low",
     { "information-processing": 0.03, "communication": 0.02, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.75,
-      "interpersonal": 0.02, "technical-specialized": 0.08 }, 24,
+      "interpersonal": 0.02, "technical-specialized": 0.08 }, 26.8,
     0.449, { netLiquidWealth: 0.35, skillTransferability: 0.38, geographicDensity: 0.25, ageFraction55Plus: 0.42 }, 0.041),
 
   makeGroup("construction", "47-0000", "Construction and Extraction Occupations", "Construction",
     7000, 25.54, 53120, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.65,
-      "interpersonal": 0.02, "technical-specialized": 0.15 }, 11,
+      "interpersonal": 0.02, "technical-specialized": 0.15 }, 4.3,
     0.449, { netLiquidWealth: 0.42, skillTransferability: 0.40, geographicDensity: 0.48, ageFraction55Plus: 0.48 }, 0.041),
 
   makeGroup("installation-repair", "49-0000", "Installation, Maintenance, and Repair", "Installation & Repair",
     5950, 25.76, 53580, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.10,
       "creative-generative": 0.00, "coordination-management": 0.05, "physical-manual": 0.55,
-      "interpersonal": 0.02, "technical-specialized": 0.20 }, 4,
+      "interpersonal": 0.02, "technical-specialized": 0.20 }, 4.7,
     0.449, { netLiquidWealth: 0.40, skillTransferability: 0.45, geographicDensity: 0.50, ageFraction55Plus: 0.45 }, 0.041),
 
   // Production, Transportation, Material Moving - AC=0.401, exposure=0.131 (Table 5)
@@ -297,14 +297,14 @@ export const OCCUPATION_GROUPS: OccupationGroup[] = [
     8700, 19.53, 40630, "middle",
     { "information-processing": 0.05, "communication": 0.03, "analysis-decision": 0.05,
       "creative-generative": 0.00, "coordination-management": 0.02, "physical-manual": 0.70,
-      "interpersonal": 0.02, "technical-specialized": 0.13 }, 29,
+      "interpersonal": 0.02, "technical-specialized": 0.13 }, 28.4,
     0.401, { netLiquidWealth: 0.30, skillTransferability: 0.38, geographicDensity: 0.42, ageFraction55Plus: 0.45 }, 0.131),
 
   makeGroup("transportation", "53-0000", "Transportation and Material Moving", "Transportation",
     13100, 18.61, 38710, "middle",
     { "information-processing": 0.10, "communication": 0.03, "analysis-decision": 0.03,
       "creative-generative": 0.00, "coordination-management": 0.02, "physical-manual": 0.70,
-      "interpersonal": 0.02, "technical-specialized": 0.10 }, 20,
+      "interpersonal": 0.02, "technical-specialized": 0.10 }, 21.5,
     0.401, { netLiquidWealth: 0.28, skillTransferability: 0.40, geographicDensity: 0.44, ageFraction55Plus: 0.45 }, 0.131),
 ];
 

@@ -1,6 +1,6 @@
 {
   "source": "BLS QCEW 2024 \u2014 approximate MSA sector shares | Expanded to all US MSAs (\u226525K jobs) from msa-occupation-employment.json with national-average sector shares for non-curated entries.",
-  "note": "v0.1 uses 8 reference MSAs with rounded sector employment shares. Phase 2 will load full BLS QCEW MSA tables.",
+  "note": "v0.1 uses 9 reference MSAs with rounded sector employment shares. Phase 2 will load full BLS QCEW MSA tables.",
   "regions": [
     {
       "id": "arizona-statewide",

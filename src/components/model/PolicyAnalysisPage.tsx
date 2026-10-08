@@ -171,8 +171,10 @@ export default function PolicyAnalysisPage() {
           workforce needs — and where the gaps are.
         </p>
         <p className="text-sm text-[var(--muted)] leading-[1.6] italic">
-          v0.1 prototype. 9 reference MSAs (BLS QCEW), 14 policy archetypes
-          (incl. Windfall Trust Policy Atlas), regional rollup of the{" "}
+          v0.1 prototype. 397 US metro areas (9 with curated BLS QCEW sector
+          shares, the rest at national-average shares), 13 policy archetypes
+          (incl. Windfall Trust Policy Atlas) plus each state&apos;s WIOA
+          program, regional rollup of the{" "}
           <Link href="/model" className="text-[var(--accent-text)] hover:underline">
             composite model
           </Link>

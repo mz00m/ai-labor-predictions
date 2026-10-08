@@ -582,38 +582,32 @@ export default function MethodologyPage({ sourceCount }: { sourceCount: number }
                 <th className="pb-2 font-semibold text-[var(--foreground)]">Projected</th>
               </tr>
             </thead>
+            {/* Recomputed 2026-10-08 with computeAggregate (src/lib/prediction-stats.ts),
+                all tiers, history split by dataType observed vs projected.
+                Healthcare admin (projected points only) and entry-level wages
+                (observed points only) have no split to show, so they are omitted. */}
             <tbody className="text-[var(--muted)]">
               <tr className="border-b border-divider">
                 <td className="py-2 pr-3">US workforce AI exposure</td>
                 <td className="py-2 pr-3 font-mono">19%</td>
-                <td className="py-2 font-mono">45%</td>
-              </tr>
-              <tr className="border-b border-divider">
-                <td className="py-2 pr-3">Overall US displacement</td>
-                <td className="py-2 pr-3 font-mono">0.4%</td>
-                <td className="py-2 font-mono">3.8%</td>
-              </tr>
-              <tr className="border-b border-divider">
-                <td className="py-2 pr-3">Healthcare admin displacement</td>
-                <td className="py-2 pr-3 font-mono">6.7%</td>
-                <td className="py-2 font-mono">20.4%</td>
+                <td className="py-2 font-mono">43.3%</td>
               </tr>
               <tr>
-                <td className="py-2 pr-3">Entry-level wage impact</td>
-                <td className="py-2 pr-3 font-mono">&minus;5.0%</td>
-                <td className="py-2 font-mono">+2.0%</td>
+                <td className="py-2 pr-3">Overall US displacement</td>
+                <td className="py-2 pr-3 font-mono">0.2%</td>
+                <td className="py-2 font-mono">3.2%</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <P>
-          The last row is the sharpest case: the measured evidence and the
-          forecast evidence point in <em>opposite directions</em>, and the
-          headline number lands between them. That is not a flaw in the data. It
-          is a real, unresolved disagreement about whether the early wage
-          declines showing up in junior roles are the start of a trend or a
-          transitional dip that productivity gains will reverse.
+          Overall displacement is the sharpest case: the projections run about
+          sixteen times the measured figure, and the headline number lands
+          between them. That is not a flaw in the data. It is a real, unresolved
+          disagreement about whether the early losses showing up among young
+          workers in exposed jobs are the start of a trend or a transitional
+          dip that productivity gains will reverse.
         </P>
 
         <DeepDive title="Why we blend them at all">

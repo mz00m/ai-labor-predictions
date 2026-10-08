@@ -37,20 +37,21 @@ export interface TokenProfile {
 /**
  * Model tier pricing - 2026 blended rates based on leading providers.
  *
- * Small:    Haiku 4.5 ($0.80/$4), GPT-4o-mini ($0.15/$0.60), Gemini Flash ($0.075/$0.30).
+ * Anthropic list prices, $/1M input/output (October 2026):
+ * Small:    Haiku 4.5 ($1/$5).
  *           Blended average for classification/extraction workloads.
- * Mid:      Sonnet 4.6 ($3/$15), GPT-4o ($2.50/$10), Gemini Pro ($1.25/$5).
+ * Mid:      Sonnet 5 ($2/$10), Sonnet 4.6 ($3/$15).
  *           Blended for drafting, chat, summarization.
- * Frontier: Opus 4.6 ($15/$75), o3 ($10/$40), Gemini Ultra ($5/$20).
+ * Frontier: Opus 5.5 ($4/$20), Opus 5 / 4.8 / 4.7 / 4.6 ($5/$25), Fable 5.1 ($10/$50).
  *           Used for complex reasoning, coding, expert analysis.
  *
- * These represent mid-2026 published API rates. Actual costs are declining
+ * Tier rates below are blended across providers, not set from this list. Actual costs are declining
  * ~40-60% annually. The cost decline rate in each task captures this trend.
  */
 export const MODEL_PRICING: Record<string, { inputPer1M: number; outputPer1M: number; label: string; examples: string }> = {
-  small:    { inputPer1M: 0.25, outputPer1M: 1.00, label: "Small (classification, extraction)", examples: "Haiku 4.5, GPT-4o-mini, Gemini Flash" },
-  mid:      { inputPer1M: 2.00, outputPer1M: 10.00, label: "Mid-tier (chat, drafting)", examples: "Sonnet 4.6, GPT-4o, Gemini Pro" },
-  frontier: { inputPer1M: 10.00, outputPer1M: 50.00, label: "Frontier (reasoning, coding)", examples: "Opus 4.6, o3, Gemini Ultra" },
+  small:    { inputPer1M: 0.25, outputPer1M: 1.00, label: "Small (classification, extraction)", examples: "Haiku 4.5 and other small models" },
+  mid:      { inputPer1M: 2.00, outputPer1M: 10.00, label: "Mid-tier (chat, drafting)", examples: "Sonnet 5 and peer mid-tier models" },
+  frontier: { inputPer1M: 10.00, outputPer1M: 50.00, label: "Frontier (reasoning, coding)", examples: "Fable 5.1 and peer frontier models" },
 };
 
 /** Calculate $/hr from token profile */

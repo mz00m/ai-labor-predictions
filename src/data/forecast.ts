@@ -145,10 +145,10 @@ export const FORECAST_PREDICTIONS: ForecastPrediction[] = [
     currentObserved: -1.6,
     conviction: "moderate",
     rationale:
-      "K-shaped: BLS programmers -27.5% (routine coding) while software developers +17.9%. Entry-level tech hiring collapsed but experienced roles growing. Net effect near zero depends entirely on age/experience composition.",
+      "K-shaped: BLS programmers -27.5% (routine coding) while software developers are projected to grow +10% (BLS 2025-35). Entry-level tech hiring collapsed but experienced roles growing. Net effect near zero depends entirely on age/experience composition.",
     keyCitations: [
       "BLS OEWS: computer programmers -27.5% (2-year observed)",
-      "BLS projections: software developers +17.9% (2024-2034)",
+      "BLS projections: software developers +10% (2025-2035)",
       "Chen & Stratton: 0% firm-level employment effect from Copilot",
       "Brynjolfsson: ages 35-49 grew +9% in AI-exposed tech",
     ],
@@ -298,13 +298,13 @@ export const FORECAST_PREDICTIONS: ForecastPrediction[] = [
     prediction: 35,
     confidenceLow: 25,
     confidenceHigh: 50,
-    currentObserved: 17.5,
+    currentObserved: 23.8, // Census BTOS Q7, cycle 202619 (two weeks ending Sep 6 2026)
     conviction: "high",
     rationale:
-      "Census BTOS is the gold standard -- 17.5% as of Feb 2026, up from 3.8% in Aug 2023. S-curve dynamics suggest doubling in 3-4 years. But OECD warns 50% of SMEs lack workforce skills for AI adoption, limiting upside.",
+      "Census BTOS is the gold standard -- 23.8% as of early Sep 2026, up from 3.8% in Aug 2023. S-curve dynamics suggest doubling in 3-4 years. But OECD warns 50% of SMEs lack workforce skills for AI adoption, limiting upside.",
     keyCitations: [
-      "Census BTOS: 3.8% (Aug 2023) to 17.5% (Feb 2026)",
-      "Fed RPS: ~41% of workforce uses GenAI at work (Nov 2025)",
+      "Census BTOS: 3.8% (Aug 2023) to 23.8% (Sep 2026)",
+      "St. Louis Fed RPS: 45.2% of adults 18-64 used GenAI for work (May 2026)",
       "OECD: 50% of SMEs say employees lack AI skills",
       "Kolko: adoption pace similar to computer/internet eras",
     ],
@@ -324,12 +324,12 @@ export const FORECAST_PREDICTIONS: ForecastPrediction[] = [
     prediction: 65,
     confidenceLow: 50,
     confidenceHigh: 80,
-    currentObserved: 43,
+    currentObserved: 45.2, // St. Louis Fed RPS, May 2026 wave (FRED RPSGENAIUSAGESHAREWORK, Q2 2026)
     conviction: "moderate",
     rationale:
-      "Currently 43% per Bick & Deming (NBER, 2026). But only 5.2% of actual work hours involve AI. Headline adoption will grow; effective depth will lag. College grads at 58.7% vs non-college 22.9% (NY Fed) -- adoption is bifurcated.",
+      "Currently 45.2% per the St. Louis Fed RPS (Bick, Blandin & Deming, May 2026). But only 6.3% of actual work hours involve AI. Headline adoption will grow; effective depth will lag. College grads at 58.7% vs non-college 22.9% (NY Fed) -- adoption is bifurcated.",
     keyCitations: [
-      "Bick & Deming (NBER): 43% of workers, 5.2% of work hours",
+      "St. Louis Fed RPS (Bick, Blandin & Deming): 45.2% of workers, 6.3% of work hours (May 2026)",
       "NY Fed SCE: 58.7% college grads vs 22.9% non-college",
       "FRI economists: 10.1% of work hours GenAI-assisted by 2030",
       "MIT/CCI: AI apps grew 6x but activity coverage only 1.2x",
@@ -353,11 +353,11 @@ export const FORECAST_PREDICTIONS: ForecastPrediction[] = [
     currentObserved: null,
     conviction: "moderate",
     rationale:
-      "Between Acemoglu's conservative bound (5%) and Brynjolfsson's J-curve optimism (15-20%). Current 2.7% annual productivity growth is above trend but unclear how much is AI. The J-curve may be starting to inflect upward.",
+      "Between Acemoglu's conservative bound (5%) and Brynjolfsson's J-curve optimism (15-20%). Productivity grew 2.2% y/y in Q2 2026 (BLS, revised), above the 2010s trend, but it is unclear how much is AI. The J-curve may be starting to inflect upward.",
     keyCitations: [
       "Acemoglu: 0.53-0.66% TFP/decade (Hulten's theorem bound)",
       "Merali (Yale RCT): 8%/yr task time reduction",
-      "Furman/BLS: 2.8% annual productivity, 2.2% above CBO forecast",
+      "BLS: nonfarm business productivity +2.2% y/y (Q2 2026, revised)",
       "Jones & Tonetti: only 4% above trend by 2040",
     ],
     sourceCount: 35,

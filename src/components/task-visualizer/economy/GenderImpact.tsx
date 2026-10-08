@@ -86,7 +86,7 @@ function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
         <div className="flex justify-between gap-4">
           <span className="text-[var(--muted)]">Men</span>
           <span className="font-medium" style={{ color: GENDER_COLORS.men }}>
-            {100 - d.womenPercent}% ({(d.menCount / 1000).toFixed(1)}M)
+            {Math.round((100 - d.womenPercent) * 10) / 10}% ({(d.menCount / 1000).toFixed(1)}M)
           </span>
         </div>
         <div className="flex justify-between gap-4 mt-1 pt-1 border-t border-card">
@@ -196,7 +196,7 @@ export default function GenderImpact() {
         id: g.id,
         shortTitle: g.shortTitle,
         womenPercent: g.womenPercent,
-        menPercent: 100 - g.womenPercent,
+        menPercent: Math.round((100 - g.womenPercent) * 10) / 10,
         womenCount: Math.round(g.employment * g.womenPercent / 100),
         menCount: g.employment - Math.round(g.employment * g.womenPercent / 100),
         employment: g.employment,
@@ -212,10 +212,10 @@ export default function GenderImpact() {
       {/* Manning/Aguirre vulnerability callout */}
       <div className="callout-card bg-[#EC4899]/[0.06] border border-[#EC4899]/20 rounded-xl p-4 mb-6">
         <p className="text-base font-semibold text-[#EC4899] mb-1">
-          Research highlight: Women are 81% of the most vulnerable workers
+          Research highlight: Women are 86% of the most vulnerable workers
         </p>
         <p className="text-sm text-[var(--muted)] leading-relaxed">
-          Manning &amp; Aguirre (NBER, 2026) find that women make up approximately 81.3% of workers
+          Manning &amp; Aguirre (NBER/Brookings, 2026) find that women make up 86% of the 6.1 million workers
           in occupations with both high AI exposure and low adaptive capacity (ability to transition
           to other jobs). These are concentrated in clerical and administrative roles. Only 4.9% of
           high-vulnerability workers hold a bachelor&apos;s degree or higher.
@@ -447,7 +447,7 @@ export default function GenderImpact() {
       </div>
 
       <p className="text-xs text-[var(--muted)] mt-6">
-        Gender composition from BLS Current Population Survey 2024 annual averages (Table 11).
+        Gender composition from BLS Current Population Survey 2025 annual averages (Table 11).
         Automation projections use the same compute-cost crossover model as other sections.
         The automation gap reflects occupational segregation. Women are concentrated in clerical,
         administrative, healthcare support, and education roles with high information-processing

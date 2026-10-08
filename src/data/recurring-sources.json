@@ -1,6 +1,6 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-10-05",
+  "asOf": "2026-10-08",
   "lastSweep": "2026-10-05",
   "series": [
     {
@@ -618,7 +618,7 @@
       "cadence": "quarterly",
       "cadenceLabel": "Ongoing initiative; iterations expected ~quarterly",
       "releasePattern": "v1.0 July 2026; future iterations promised with expanded scope (enterprise API, Workspace)",
-      "url": "https://deepmind.google/research/publications/ai-economy-atlas",
+      "url": "https://ai.google/economy/atlas/",
       "targetGraphs": [
         "workforce-ai-exposure",
         "genai-work-adoption",
@@ -729,6 +729,253 @@
         "value": "Global 18.8% of working-age population (June 2026); US 33.0% (21st), up 1.7pp from Q1"
       },
       "nextExpected": "~November–December 2026 (Q3 2026). Microsoft says the next report will expand the measure to newer AI tools and expects that to raise user share in almost every economy, so treat Q3 as a likely series break."
+    },
+    {
+      "id": "bls-oews",
+      "name": "BLS Occupational Employment and Wage Statistics (OEWS)",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual, each spring",
+      "releasePattern": "May reference-period estimates for the nation, states, metros and balance-of-state areas, published each spring. May 2024 came out April 2, 2025; May 2025 came out May 15, 2026, later than usual.",
+      "url": "https://www.bls.gov/oes/",
+      "targetGraphs": [],
+      "topicLine": "Employment and wages by detailed occupation and geography. Feeds /map state and metro scores and the /task-visualizer economy groups.",
+      "whatItMeasures": "Employment and wage estimates for about 830 detailed occupations from a semiannual survey of roughly 1.1 million establishments, published nationally and for every state, metro area and nonmetropolitan balance-of-state area.",
+      "whyItMatters": "Every state and metro exposure score on /map is weighted by OEWS employment, and the /task-visualizer economy view uses its national occupation-group totals and median wages. A missed vintage shifts every regional score.",
+      "lastIngested": {
+        "sourceId": "bls-oews-may-2024",
+        "date": "2025-04-02",
+        "value": "May 2024 estimates (state, MSA and balance-of-state files; national Table 1 for the economy groups)"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): May 2025 estimates released May 15, 2026; not yet ingested. Next: May 2026 estimates, ~spring 2027",
+      "sweepNote": "bls.gov blocks automated fetches (403). To refresh, change oesm24 to oesm25 and the year strings in scripts/fetch_oews_state.py, fetch_oews_msa.py and fetch_oews_bos.py, then run build:oews-state, build:state-risk, build:oews-msa and build:oews-bos."
+    },
+    {
+      "id": "census-acs-5yr",
+      "name": "American Community Survey 5-Year Estimates",
+      "publisher": "US Census Bureau",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual, usually December",
+      "releasePattern": "Five-year estimates for every county and metro area, usually released in December. The 2019-2023 release came December 12, 2024; the 2020-2024 release slipped to January 29, 2026.",
+      "url": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "targetGraphs": [],
+      "topicLine": "County and metro occupation mix (table S2401). Feeds the /map county and CBSA layers.",
+      "whatItMeasures": "Occupation of the civilian employed population 16 and over by sex, pooled over five survey years so that every county has a usable estimate.",
+      "whyItMatters": "The only source with occupation detail for every US county. County and CBSA exposure scores on /map are built from these shares.",
+      "lastIngested": {
+        "sourceId": "census-acs-5yr-2019-2023",
+        "date": "2024-12-12",
+        "value": "2019-2023 5-year estimates (S2401), county and CBSA occupation shares"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): 2020-2024 5-year estimates released January 29, 2026; not yet ingested. Next: 2021-2025 5-year estimates, ~December 2026",
+      "sweepNote": "The Census API now requires a key. scripts/fetch_acs_county.py reads CENSUS_API_KEY, which is not yet set in .env.local. Rerun after any OEWS refresh, since the county imputation uses the OEWS MSA and balance-of-state files."
+    },
+    {
+      "id": "bls-ooh",
+      "name": "BLS Occupational Outlook Handbook (occupation pay, jobs and outlook)",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual, late August",
+      "releasePattern": "Updated with each Employment Projections round in late August: 2024-34 on August 28, 2025; 2025-35 on August 28, 2026. The AI exposure categories from the same round are tracked separately under bls-employment-projections.",
+      "url": "https://www.bls.gov/ooh/",
+      "targetGraphs": [],
+      "topicLine": "Median pay, employment and ten-year outlook for 342 occupations. Feeds every /occupation-exposure and /scorecard page and the /map occupation table.",
+      "whatItMeasures": "For each occupation profile: May median pay (from OEWS), base-year employment including the self-employed, and the projected ten-year employment change.",
+      "whyItMatters": "The pay and job counts shown on all 342 occupation and scorecard pages come from here, by way of karpathy-jobs.json. They go stale together when a new projections round lands.",
+      "lastIngested": {
+        "sourceId": "bls-ooh-2024-34",
+        "date": "2025-08-28",
+        "value": "2024-34 edition (May 2024 pay, 2024 employment, 2024-34 outlook), via karpathy-jobs.json"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): 2025-35 edition released August 28, 2026; not yet ingested. Next: 2026-36 edition, ~late August 2027",
+      "sweepNote": "bls.gov blocks automated fetches. Refresh from the EP occupation matrix (https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx) joined on SOC, rather than re-scraping OOH pages."
+    },
+    {
+      "id": "onet-database",
+      "name": "O*NET Database",
+      "publisher": "National Center for O*NET Development (US Department of Labor)",
+      "tier": 1,
+      "cadence": "quarterly",
+      "cadenceLabel": "Quarterly (February, May, August, November)",
+      "releasePattern": "Database releases each quarter: 30.2 February 2026, 30.3 May 2026, 31.0 August 2026.",
+      "url": "https://www.onetcenter.org/database.html",
+      "targetGraphs": [],
+      "topicLine": "Task statements and work activities by occupation. Feeds the task mix behind /task-visualizer, /occupation-exposure and /scorecard.",
+      "whatItMeasures": "Task statements, generalized work activities and their importance ratings for about 900 occupations, refreshed on a rolling basis each quarter.",
+      "whyItMatters": "The task composition of all 342 scored occupations comes from O*NET. Each release updates a subset of occupations, so skipped releases compound.",
+      "lastIngested": {
+        "sourceId": "onet-30-2",
+        "date": "2026-03-31",
+        "value": "O*NET 30.2 (February 2026), task data for the 342-occupation layer (enriched-occupations.json)"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): O*NET 31.0 released August 2026 (30.3 from May 2026 was also skipped); not yet ingested. Next: 31.1, ~November 2026"
+    },
+    {
+      "id": "bls-cps-table11",
+      "name": "CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual averages, early in the year",
+      "releasePattern": "Annual-average tables, usually posted in late January. The 2025 averages were posted February 20, 2026, and exclude October 2025, which was not collected during the shutdown.",
+      "url": "https://www.bls.gov/cps/cpsaat11.htm",
+      "targetGraphs": [],
+      "topicLine": "Women's share of employment by occupation. Feeds the gender view on /task-visualizer/economy.",
+      "whatItMeasures": "Annual-average employment by detailed occupation from the Current Population Survey, with the percent who are women, Black, Asian and Hispanic.",
+      "whyItMatters": "The gender analysis on /task-visualizer/economy ranks occupation groups by women's share; the women-majority list depends on these values.",
+      "lastIngested": {
+        "sourceId": "bls-cps-aat11-2024",
+        "date": "2026-03-14",
+        "value": "2024 annual averages, women's share by occupation group"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): 2025 annual averages posted February 20, 2026; not yet ingested. Next: 2026 annual averages, ~late January 2027"
+    },
+    {
+      "id": "bls-qcew",
+      "name": "Quarterly Census of Employment and Wages (QCEW), annual averages",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "annual",
+      "cadenceLabel": "Annual averages, late summer",
+      "releasePattern": "Annual-average files by industry and area, published in late summer: 2024 annual file dated September 2, 2025; 2025 annual file dated August 21, 2026. Quarterly files also exist but the site uses annual averages.",
+      "url": "https://www.bls.gov/cew/",
+      "targetGraphs": [],
+      "topicLine": "Employment by industry and area from unemployment-insurance records. Feeds the /model sector baseline and regional presets.",
+      "whatItMeasures": "A near-census of employment and wages covering more than 95% of US jobs, by NAICS industry, ownership and county.",
+      "whyItMatters": "The /model employment baseline and its MSA sector shares are labelled QCEW. Sector counts set the scale of every modeled displacement number.",
+      "lastIngested": {
+        "sourceId": "bls-qcew-2024-annual",
+        "date": "2025-09-02",
+        "value": "2024 annual averages, /model sector baseline (labelled 'QCEW 2024') and regions.json MSA shares"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): 2025 annual averages released August 21, 2026; not yet ingested. Next: 2026 annual averages, ~late August 2027",
+      "sweepNote": "The annual files are fetchable without a key at https://data.bls.gov/cew/data/api/<year>/a/area/US000.csv (and per-area FIPS). Pick one ownership code (5 = private, 0 = all) for every sector."
+    },
+    {
+      "id": "artificial-analysis-index",
+      "name": "Artificial Analysis Intelligence Index",
+      "publisher": "Artificial Analysis",
+      "tier": 2,
+      "cadence": "continuous",
+      "cadenceLabel": "Continuous leaderboard; refresh monthly",
+      "releasePattern": "Leaderboard updates as new models are benchmarked. The index is versioned and occasionally rebased (now v4.3.2), so scores from different versions are not comparable.",
+      "url": "https://artificialanalysis.ai/",
+      "targetGraphs": [],
+      "topicLine": "Frontier model capability and price over time. Feeds the capability module on /model.",
+      "whatItMeasures": "A composite intelligence score across a battery of benchmark evaluations for each model, with per-token prices, pulled through the Artificial Analysis API.",
+      "whyItMatters": "The /model capability doubling time and cost-decline rate are derived from this frontier path. New frontier releases or a rebased index move both.",
+      "lastIngested": {
+        "sourceId": "artificial-analysis-2026-05-19",
+        "date": "2026-05-19",
+        "value": "API snapshot of 517 models (capability-anchor.json): capability doubling 14.7 months, cost decline 0.40"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): Index v4.3.2 is live with a rebased scale and newer frontier models; not yet ingested. Refresh with npm run capability:refresh",
+      "sweepNote": "npm run capability:refresh needs ARTIFICIAL_ANALYSIS_API_KEY. Record the index version in capability-anchor.json, since rebased scores cannot be mixed with older ones."
+    },
+    {
+      "id": "openai-signals",
+      "name": "OpenAI Signals (ChatGPT usage data)",
+      "publisher": "OpenAI",
+      "tier": 1,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly data; release timing irregular",
+      "releasePattern": "Downloadable CSVs of ChatGPT message shares by month, topic, O*NET work activity and US state. Release timing is not announced.",
+      "url": "https://openai.com/signals",
+      "targetGraphs": [],
+      "topicLine": "Realized ChatGPT use by state and by O*NET work activity. Feeds the /map realized-use and capability-overhang layers.",
+      "whatItMeasures": "Shares of ChatGPT messages by topic, work relatedness, O*NET intermediate work activity and US state, from de-identified consumer usage.",
+      "whyItMatters": "The site's measure of where AI is actually being used, set against where it could be. Pairs with the Anthropic Economic Index and Google ATLAS.",
+      "lastIngested": {
+        "sourceId": "openai-signals-2026-03",
+        "date": "2026-05-11",
+        "value": "Monthly data through March 2026; 2025 state ranks"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): newer months unverified because openai.com/signals returns 403 to fetchers. Check by browser, then run npm run build:openai-signals and build:realized-exposure"
+    },
+    {
+      "id": "signals-pypi-downloads",
+      "name": "PyPI package downloads (/signals)",
+      "publisher": "pypistats.org (Python Package Index)",
+      "tier": 2,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly; pypistats keeps a rolling 180 days",
+      "releasePattern": "Daily download counts available continuously; the site aggregates complete calendar months. Fetched by scripts/signals/fetch_pypistats.py in the update-signals workflow.",
+      "url": "https://pypistats.org/",
+      "targetGraphs": [],
+      "topicLine": "Monthly downloads for 52 AI Python packages. Feeds the /signals acceleration index, industry tool growth and package table.",
+      "whatItMeasures": "Monthly downloads, excluding mirrors, for 52 AI infrastructure and industry-specific Python packages mapped to 10 industries.",
+      "whyItMatters": "The leading-indicator half of /signals: growth in industry-specific tools relative to general infrastructure drives the acceleration index.",
+      "lastIngested": {
+        "sourceId": "signals-pypi-2026-04-21",
+        "date": "2026-04-21",
+        "value": "52 packages, monthly downloads through March 2026"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
+      "sweepNote": "Do not refresh blind. PyPI-wide counts dropped about 31% from roughly August 25, 2026 (the control package requests fell too), and the first month of the 180-day window is partial. Normalize or drop affected months before publishing."
+    },
+    {
+      "id": "signals-npm-downloads",
+      "name": "npm package downloads (/signals)",
+      "publisher": "npm (api.npmjs.org)",
+      "tier": 2,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly",
+      "releasePattern": "Daily download counts available continuously; the site aggregates calendar months. Fetched by scripts/signals/fetch_npm.py in the update-signals workflow.",
+      "url": "https://api.npmjs.org/downloads/",
+      "targetGraphs": [],
+      "topicLine": "Monthly downloads for 15 AI JavaScript packages. Feeds the /signals acceleration index and package table.",
+      "whatItMeasures": "Monthly downloads for 15 AI SDK and agent-framework packages on the npm registry, mapped to industries in the /signals taxonomy.",
+      "whyItMatters": "The JavaScript half of the /signals download series, and a check on PyPI counting changes.",
+      "lastIngested": {
+        "sourceId": "signals-npm-2026-04-21",
+        "date": "2026-04-21",
+        "value": "15 packages, monthly downloads through March 2026"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026"
+    },
+    {
+      "id": "signals-huggingface-downloads",
+      "name": "Hugging Face model downloads (/signals)",
+      "publisher": "Hugging Face",
+      "tier": 2,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly refresh of a live trailing-30-day count",
+      "releasePattern": "The Hugging Face models API reports trailing-30-day downloads continuously. Fetched by scripts/signals/fetch_huggingface.py.",
+      "url": "https://huggingface.co/models",
+      "targetGraphs": [],
+      "topicLine": "Downloads of the top models in five task categories. Feeds the expanded /signals industry cards.",
+      "whatItMeasures": "Trailing-30-day downloads for the top 10 models in each of five pipeline categories (speech-to-text, code generation, image generation, document QA, biomedical).",
+      "whyItMatters": "Shows which task-specific models are being pulled into production work, alongside the package download series.",
+      "lastIngested": {
+        "sourceId": "signals-huggingface-2026-04-18",
+        "date": "2026-04-18",
+        "value": "5 categories, top-10 models' trailing-30-day downloads"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): live counts are available; not yet ingested. The update-signals workflow has failed every run since March 2026"
+    },
+    {
+      "id": "signals-bls-ces-industry",
+      "name": "BLS Current Employment Statistics by industry (/signals)",
+      "publisher": "US Bureau of Labor Statistics",
+      "tier": 1,
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly, with the Employment Situation",
+      "releasePattern": "Released with the Employment Situation, usually the first Friday of the month; the latest two months are preliminary. Fetched by scripts/signals/fetch_bls.py through the BLS API v2.",
+      "url": "https://www.bls.gov/ces/",
+      "targetGraphs": [],
+      "topicLine": "Employment in 20 detailed industries. Feeds the 'vs late 2022' employment change on every /signals industry card.",
+      "whatItMeasures": "Not-seasonally-adjusted payroll employment for 20 CES series mapped to the 10 /signals industries, compared with an October-December 2022 baseline and year over year.",
+      "whyItMatters": "The outcome half of /signals: whether employment in each industry is moving with tool adoption.",
+      "lastIngested": {
+        "sourceId": "signals-bls-ces-2026-04-21",
+        "date": "2026-04-21",
+        "value": "20 series through March 2026 (3 end February 2026)"
+      },
+      "nextExpected": "Overdue (checked 2026-10-06): September 2026 preliminary data released October 2, 2026; not yet ingested. Next: November 6, 2026 (October data)",
+      "sweepNote": "The update-signals workflow fails because the BLS_API_KEY repo secret does not exist; its PR step also needs a 'signals' label. Locally, fetch_bls.py reads .env, but the key is in .env.local."
     }
   ]
 }

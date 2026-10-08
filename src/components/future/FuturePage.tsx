@@ -92,20 +92,21 @@ export default function FuturePage() {
               staff, they stop backfilling junior roles.
             </p>
             <p>
-              This is already visible in the data. Software developers
-              aged 22&ndash;25 saw a ~20% employment decline from their
-              late-2022 peak, while those aged 35&ndash;49 grew +9%.
-              The mechanism isn&rsquo;t mass layoffs &mdash; it&rsquo;s
-              evaporated entry points. Senior developers absorb junior
-              work with AI tools. The career ladder loses its bottom
+              This is already visible in the data. Employment of
+              workers aged 22&ndash;25 in AI-exposed occupations now
+              stands 19% below where it would be had it kept pace with
+              less-exposed peers (data through June 2026); experienced
+              workers show no comparable gap. The mechanism isn&rsquo;t
+              mass layoffs &mdash; it&rsquo;s evaporated entry points.
+              Senior workers absorb junior work with AI tools. The career ladder loses its bottom
               rungs.
             </p>
           </div>
 
           <EvidenceCard
-            stat="~20%"
-            label="employment decline for software developers aged 22-25 since late 2022"
-            source="Brynjolfsson, Chandar & Chen (2025) — ADP data, 3.5M+ workers"
+            stat="19%"
+            label="employment shortfall for workers aged 22-25 in AI-exposed occupations, vs. less-exposed peers"
+            source="Brynjolfsson, Chandar & Chen (Aug 2026 revision, data through June 2026) — ADP payroll data, 3.5-5M workers/month"
             tier={1}
           />
 
@@ -265,7 +266,7 @@ export default function FuturePage() {
               shortages: education and healthcare. The US has
               approximately 411,500 teaching positions that are either
               unfilled or filled by uncertified teachers. The nursing
-              profession faces 197,200 annual openings, with over 1
+              profession faces 180,800 annual openings, with over 1
               million nurses expected to retire by 2030.
             </p>
           </div>
@@ -278,9 +279,9 @@ export default function FuturePage() {
               color="#5C61F6"
             />
             <StatCard
-              value="197K"
+              value="181K"
               label="Nursing openings"
-              sublabel="Per year through 2033 (BLS)"
+              sublabel="Per year, 2025–35 (BLS)"
               color="#5C61F6"
             />
             <StatCard
@@ -704,8 +705,8 @@ export default function FuturePage() {
               This scenario draws on: Acemoglu &amp; Restrepo&rsquo;s
               task-based automation framework; Brynjolfsson, Chandar &amp;
               Chen&rsquo;s &ldquo;Canaries&rdquo; paper on entry-level displacement;
-              Kinder &amp; Gimbel&rsquo;s adaptive capacity analysis
-              (Brookings/Yale Budget Lab); Bessen&rsquo;s demand
+              Manning &amp; Aguirre&rsquo;s adaptive capacity analysis
+              (NBER/Brookings); Bessen&rsquo;s demand
               elasticity model; Baumol&rsquo;s cost disease (1966);
               Bloom&rsquo;s 2-sigma tutoring finding (1984); BLS and
               Census Bureau labor statistics. All data points are cited
