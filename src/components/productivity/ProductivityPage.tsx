@@ -73,7 +73,8 @@ export default function ProductivityPage() {
               tools are producing some of the largest productivity gains ever
               measured in economics experiments. Second: at the economy level,
               productivity growth has genuinely accelerated &mdash; from about
-              1.5% a year through the 2010s to about 2.2% since mid-2022 &mdash;
+              1.5% a year through the 2010s to about 2.2% since mid-2022, by Chad
+              Syverson&rsquo;s August 2026 reckoning &mdash;
               but nobody has yet shown that AI caused it. Third: despite
               widespread predictions of AI-driven job loss, macro employment
               data shows essentially none.
@@ -97,7 +98,7 @@ export default function ProductivityPage() {
           <StatHighlight
             value="2.2%"
             label="Annual productivity growth"
-            detail="Since mid-2022, vs ~1.5% through the 2010s"
+            detail="Since mid-2022, vs ~1.5% through the 2010s (Syverson, Aug 2026)"
             color="#5C61F6"
           />
           <StatHighlight
@@ -184,7 +185,7 @@ export default function ProductivityPage() {
               <ReasonRow
                 number="1"
                 title="Adoption is still early"
-                text="Census BTOS puts AI use at about 22% of US firms, and adoption is heavily skewed to large employers and to information, finance, and professional services. Even where individual gains are large, the aggregate effect is diluted by the roughly four in five firms still outside."
+                text="Census BTOS puts AI use at about 24% of US firms (two weeks ending Sep 6 2026), and adoption is heavily skewed to large employers and to information, finance, and professional services. Even where individual gains are large, the aggregate effect is diluted by the roughly three in four firms still outside."
               />
               <ReasonRow
                 number="2"

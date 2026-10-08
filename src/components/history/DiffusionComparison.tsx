@@ -18,7 +18,7 @@ const ROWS = [
   {
     comparison: "vs. Enterprise adoption",
     historical: "10–25 yrs historically",
-    ai: "33% \u2192 88% in 2 yrs (McKinsey); but Census BTOS shows only 17.5% of firms actively using AI (Feb 2026)",
+    ai: "33% \u2192 88% in 2 yrs (McKinsey); but Census BTOS shows only 23.8% of firms actively using AI (Sep 2026)",
     ratio: "5\u201312\u00d7",
     source: "McKinsey AI Survey (2023\u20132025); Census BTOS (2026)",
   },
@@ -124,8 +124,8 @@ export default function DiffusionComparison() {
 
       {/* Caveat */}
       <p className="text-xs text-[var(--muted)] leading-[1.6] mt-4 italic">
-        Note: Census Bureau&rsquo;s rigorous sampling shows only 17.5% of US
-        firms actively using AI (Feb 2026), a 5&times; gap with
+        Note: Census Bureau&rsquo;s rigorous sampling shows only 23.8% of US
+        firms actively using AI (two weeks ending Sep 6 2026), a ~3.7&times; gap with
         McKinsey&rsquo;s 88%. The range reflects this measurement uncertainty.
         Adoption speed also does not guarantee proportional impact speed.
       </p>

@@ -170,7 +170,7 @@ export default function AdaptiveCapacity() {
         </div>
         <div className="stat-card-enter rounded-xl bg-black/[0.02] border border-card p-4" style={{ animationDelay: "0.24s" }}>
           <p className="text-4xl font-bold tracking-tight text-[#EC4899]">
-            81%
+            86%
           </p>
           <p className="text-xs text-[var(--muted)]">
             of high-vulnerability workers are women

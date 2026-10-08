@@ -31,7 +31,7 @@ const INDUSTRY_GRAPH_MAP: Record<string, string[]> = {
     "median-wage-impact",
     "ai-adoption-rate",
     "workforce-ai-exposure",
-    "robots-physical-automation",
+    "robots-physical-automation-displacement",
   ],
   "healthcare": [
     "healthcare-admin-displacement",
@@ -81,7 +81,7 @@ const INDUSTRY_GRAPH_MAP: Record<string, string[]> = {
     "median-wage-impact",
     "ai-adoption-rate",
     "entry-level-wage-impact",
-    "robots-physical-automation",
+    "robots-physical-automation-displacement",
   ],
   "real-estate": [
     "overall-us-displacement",
@@ -110,13 +110,13 @@ const INDUSTRY_GRAPH_MAP: Record<string, string[]> = {
     "median-wage-impact",
     "ai-adoption-rate",
     "workforce-ai-exposure",
-    "robots-physical-automation",
+    "robots-physical-automation-displacement",
   ],
   "agriculture": [
     "overall-us-displacement",
     "median-wage-impact",
     "ai-adoption-rate",
-    "robots-physical-automation",
+    "robots-physical-automation-displacement",
   ],
   "government": [
     "overall-us-displacement",

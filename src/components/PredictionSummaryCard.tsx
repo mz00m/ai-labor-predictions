@@ -32,7 +32,7 @@ function getBestEstimate(prediction: Prediction, selectedTiers: EvidenceTier[]) 
 function getContextLine(prediction: Prediction, aggregateValue: number): string {
   const v = aggregateValue;
   if (prediction.slug === "overall-us-displacement")
-    return `Projected ${v}% net displacement blends observed near-zero job loss (Yale, Dallas Fed) with economist projections of 5\u201312% by 2030.`;
+    return `${v}% blends observed near-zero job loss (Yale, Dallas Fed) with projections: net forecasts center near 1% by 2030 (0.6\u20133%); gross displacement estimates run higher.`;
   if (prediction.slug === "customer-service-automation")
     return `${v}% of CS interactions (not jobs) projected to be fully handled by AI without human involvement.`;
   if (prediction.slug === "tech-sector-displacement")
@@ -56,9 +56,9 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
   if (prediction.slug === "entry-level-wage-impact")
     return `Entry-level wages in knowledge work are projected to ${v < 0 ? "decline" : "increase"} ${Math.abs(v)}% as AI handles tasks traditionally done by juniors.`;
   if (prediction.slug === "ai-adoption-rate")
-    return `${v}% of US companies with 50+ employees have deployed AI in production, up from under 4% in 2023.`;
+    return `${v}% of US employer firms used AI in the past two weeks (Census BTOS), up from under 4% in 2023.`;
   if (prediction.slug === "genai-work-adoption")
-    return `${v}% of U.S. working-age adults now use generative AI at work. Overall adoption (55.9%) outpaces the PC and internet at comparable points post-launch.`;
+    return `${v}% of U.S. working-age adults now use generative AI at work. Overall adoption (61.8%, May 2026) outpaces the PC and internet at comparable points post-launch.`;
   if (prediction.slug === "earnings-call-ai-mentions")
     return `${v}% of S&P 500 companies now mention AI + workforce on earnings calls, up from 8% pre-ChatGPT.`;
   if (prediction.slug === "robots-physical-automation-displacement")

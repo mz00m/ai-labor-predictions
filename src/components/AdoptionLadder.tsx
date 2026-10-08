@@ -3,39 +3,39 @@
 /**
  * Adoption Ladder - a horizontal stacked bar showing the AI adoption spectrum.
  *
- * The key insight: Census says 10% of firms use AI "in production," while
- * McKinsey/Bloom surveys say 78–88%. Both are correct - they measure
- * different thresholds. This visualization reconciles them.
+ * The key insight: Census BTOS says about 24% of firms used AI in the past two
+ * weeks, while McKinsey's State of AI says 88%. Both are correct - they measure
+ * different units and thresholds. This visualization reconciles them.
  */
 
 const RUNGS = [
   {
-    label: "In production",
-    value: 10,
-    source: "Census BTOS",
+    label: "Firms using AI now",
+    value: 23.8,
+    source: "Census BTOS, two weeks ending Sep 6 2026",
     color: "#5C61F6",
-    description: "Firms with AI deployed in production workflows",
+    description: "Firms that used AI in any business function in the past two weeks (BTOS Q7, cycle 202619)",
   },
   {
-    label: "Piloting / testing",
-    value: 15,
-    source: "Census BTOS",
+    label: "Firms expecting to use AI within 6 months",
+    value: 27.6,
+    source: "Census BTOS, two weeks ending Sep 6 2026",
     color: "#818CF8",
-    description: "Firms actively testing or piloting AI tools",
+    description: "Firms that expect to use AI in the next six months (BTOS Q24, cycle 202619)",
   },
   {
-    label: "Workers using weekly",
-    value: 37,
-    source: "NBER (Bick et al.)",
+    label: "Workers: used for work (any)",
+    value: 45.2,
+    source: "St. Louis Fed RPS (Bick, Blandin & Deming), May 2026",
     color: "#A5B4FC",
-    description: "Workers who used AI on the job in the past week",
+    description: "Adults 18-64 who used generative AI for work at all (RPS, May 2026 wave)",
   },
   {
     label: "Any corporate use",
-    value: 78,
-    source: "NBER (Bloom et al.)",
+    value: 88,
+    source: "McKinsey State of AI, Nov 2025",
     color: "#C7D2FE",
-    description: "Firms reporting any AI use across functions",
+    description: "Firms reporting AI use in at least one business function",
   },
 ];
 
@@ -83,10 +83,10 @@ export default function AdoptionLadder() {
       </div>
 
       <p className="text-xs text-[var(--muted)] mt-3 leading-relaxed opacity-70">
-        The gap between 10% and 78% is definitional, not contradictory.
-        Strict &ldquo;in production&rdquo; measures capture at-scale deployment;
-        survey-based measures capture any experimentation.
-        Both are valid. The adoption ladder shows where firms actually are.
+        The gap between 24% and 88% is definitional, not contradictory.
+        Census samples all US employer firms and asks about the past two weeks;
+        McKinsey surveys self-selected respondents about any use in any
+        business function. The worker rung counts people, not firms.
       </p>
     </div>
   );

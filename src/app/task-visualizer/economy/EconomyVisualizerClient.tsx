@@ -176,7 +176,7 @@ export default function EconomyVisualizerClient() {
             disagreement (e.g., computer/math, legal).
           </p>
           <p>
-            Gender composition from BLS Current Population Survey 2024 annual averages (Table 11).
+            Gender composition from BLS Current Population Survey 2025 annual averages (Table 11).
           </p>
           <p>
             <strong className="text-[var(--foreground)]">Critical caveat:</strong> Task automation

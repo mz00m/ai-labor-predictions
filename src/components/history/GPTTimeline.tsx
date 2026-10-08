@@ -27,7 +27,7 @@ const PHASES = [
     example:
       "By 1900, electric motors were spreading across US factories but most still used shaft-and-belt power. Early adopters saw enormous gains.",
     aiNote:
-      "For AI: ChatGPT hit 100M users in 2 months; 54.6% of US adults used gen AI by 2025 (St. Louis Fed). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Anthropic's 2026 analysis of first-party API traffic found ~70% of US workers already have observed AI task coverage, and AI-exposed workers earn 47% more than unexposed workers, the classic early-adopter premium. A phase that took electricity 25 years effectively completed in under 3 for AI.",
+      "For AI: ChatGPT hit 100M users in 2 months; 61.8% of US adults used gen AI by May 2026 (St. Louis Fed RPS). Enterprise adoption surged from 33% to 88% in ~2 years (McKinsey). Anthropic's 2026 analysis of first-party API traffic found ~70% of US workers already have observed AI task coverage, and AI-exposed workers earn 47% more than unexposed workers, the classic early-adopter premium. A phase that took electricity 25 years effectively completed in under 3 for AI.",
     workerEffect: "Spreads across sectors; high-skill workers benefit most",
   },
   {

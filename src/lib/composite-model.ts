@@ -908,7 +908,7 @@ export function generateStateWioaPolicy(region: Region): ModelPolicy {
     workforceImpacts: [
       `Funds career pathways and registered apprenticeships in ${stateName}'s in-demand sectors`,
       "Rapid Response services when major employers announce layoffs — direct outreach, retraining vouchers, job-search support",
-      "Trade Adjustment Assistance for workers displaced by trade and (increasingly) AI-driven offshoring",
+      "Dislocated Worker services for people laid off, including by automation (federal Trade Adjustment Assistance lapsed in July 2022 and has not been reauthorized)",
       "Youth services bridge school-to-work gap for disadvantaged populations",
       "Wagner-Peyser employment services and Individual Training Accounts available to any unemployed worker",
     ],

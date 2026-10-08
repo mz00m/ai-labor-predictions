@@ -144,17 +144,18 @@ const PATHS: PathConfig[] = [
       <>
         <p>
           Employment for 22&ndash;25 year olds in AI-exposed occupations
-          declined ~16% since late 2022, while experienced workers remained
-          stable or grew.
+          stands 19% below where it would be had it kept pace with
+          less-exposed peers (data through June 2026), while experienced
+          workers show no comparable gap.
         </p>
         <p className="mt-2">
           <a
-            href="https://digitaleconomy.stanford.edu/wp-content/uploads/2025/08/Canaries_BrynjolfssonChandarChen.pdf"
+            href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--accent)] hover:underline"
           >
-            Brynjolfsson, Chandar &amp; Chen (2025)
+            Brynjolfsson, Chandar &amp; Chen (Aug 2026 revision)
           </a>{" "}
           &mdash; Stanford Digital Economy Lab
         </p>
