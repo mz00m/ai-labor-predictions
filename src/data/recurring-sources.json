@@ -748,7 +748,7 @@
         "date": "2026-05-15",
         "value": "May 2025 estimates (state, MSA and balance-of-state files, rebuilt 2026-10-08). The /task-visualizer economy groups in economy-occupations.ts are hand-edited from national Table 1 and refreshed separately."
       },
-      "nextExpected": "May 2026 estimates, ~spring 2027",
+      "nextExpected": "~April 2027 (May 2026 estimates)",
       "sweepNote": "bls.gov blocks browser user agents (403); the scripts' jobsdata-ai-bot user agent works. To refresh, change oesm25 to oesm26, M2025 to M2026 and the year strings in scripts/fetch_oews_state.py, fetch_oews_msa.py and fetch_oews_bos.py, then run build:oews-state, build:state-risk, build:oews-msa and build:oews-bos."
     },
     {
