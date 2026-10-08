@@ -744,12 +744,12 @@
       "whatItMeasures": "Employment and wage estimates for about 830 detailed occupations from a semiannual survey of roughly 1.1 million establishments, published nationally and for every state, metro area and nonmetropolitan balance-of-state area.",
       "whyItMatters": "Every state and metro exposure score on /map is weighted by OEWS employment, and the /task-visualizer economy view uses its national occupation-group totals and median wages. A missed vintage shifts every regional score.",
       "lastIngested": {
-        "sourceId": "bls-oews-may-2024",
-        "date": "2025-04-02",
-        "value": "May 2024 estimates (state, MSA and balance-of-state files; national Table 1 for the economy groups)"
+        "sourceId": "bls-oews-may-2025",
+        "date": "2026-05-15",
+        "value": "May 2025 estimates (state, MSA and balance-of-state files, rebuilt 2026-10-08). The /task-visualizer economy groups in economy-occupations.ts are hand-edited from national Table 1 and refreshed separately."
       },
-      "nextExpected": "Overdue (checked 2026-10-06): May 2025 estimates released May 15, 2026; not yet ingested. Next: May 2026 estimates, ~spring 2027",
-      "sweepNote": "bls.gov blocks automated fetches (403). To refresh, change oesm24 to oesm25 and the year strings in scripts/fetch_oews_state.py, fetch_oews_msa.py and fetch_oews_bos.py, then run build:oews-state, build:state-risk, build:oews-msa and build:oews-bos."
+      "nextExpected": "May 2026 estimates, ~spring 2027",
+      "sweepNote": "bls.gov blocks browser user agents (403); the scripts' jobsdata-ai-bot user agent works. To refresh, change oesm25 to oesm26, M2025 to M2026 and the year strings in scripts/fetch_oews_state.py, fetch_oews_msa.py and fetch_oews_bos.py, then run build:oews-state, build:state-risk, build:oews-msa and build:oews-bos."
     },
     {
       "id": "census-acs-5yr",
@@ -786,12 +786,12 @@
       "whatItMeasures": "For each occupation profile: May median pay (from OEWS), base-year employment including the self-employed, and the projected ten-year employment change.",
       "whyItMatters": "The pay and job counts shown on all 342 occupation and scorecard pages come from here, by way of karpathy-jobs.json. They go stale together when a new projections round lands.",
       "lastIngested": {
-        "sourceId": "bls-ooh-2024-34",
-        "date": "2025-08-28",
-        "value": "2024-34 edition (May 2024 pay, 2024 employment, 2024-34 outlook), via karpathy-jobs.json"
+        "sourceId": "bls-ooh-2025-35",
+        "date": "2026-08-28",
+        "value": "2025-35 edition (May 2025 pay, 2025 employment, 2025-35 outlook) for 341 of 342 profiles, ingested into karpathy-jobs.json 2026-10-08. Military careers has no EP data and keeps null values."
       },
-      "nextExpected": "Overdue (checked 2026-10-06): 2025-35 edition released August 28, 2026; not yet ingested. Next: 2026-36 edition, ~late August 2027",
-      "sweepNote": "bls.gov blocks automated fetches. Refresh from the EP occupation matrix (https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx) joined on SOC, rather than re-scraping OOH pages."
+      "nextExpected": "2026-36 edition, ~late August 2027",
+      "sweepNote": "bls.gov blocks browser user agents (403); the jobsdata-ai-bot user agent works for both occupation.xlsx and OOH pages. Values come from each OOH profile's Quick Facts table, cross-checked against the EP occupation matrix (https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx, Table 1.2) joined on the OOH link column. The EP join alone cannot reproduce pay for the ~98 multi-SOC profiles, and rounds jobs and outlook slightly differently. Edit pay, jobs, outlook and outlook_desc in place as text, then run enrich-occupations.ts, join-bls-ai-exposure.py --apply, build:realized-exposure and build:risk."
     },
     {
       "id": "onet-database",
@@ -807,11 +807,12 @@
       "whatItMeasures": "Task statements, generalized work activities and their importance ratings for about 900 occupations, refreshed on a rolling basis each quarter.",
       "whyItMatters": "The task composition of all 342 scored occupations comes from O*NET. Each release updates a subset of occupations, so skipped releases compound.",
       "lastIngested": {
-        "sourceId": "onet-30-2",
-        "date": "2026-03-31",
-        "value": "O*NET 30.2 (February 2026), task data for the 342-occupation layer (enriched-occupations.json)"
+        "sourceId": "onet-31-0",
+        "date": "2026-10-08",
+        "value": "O*NET 31.0 (August 2026), task data for the 342-occupation layer (enriched-occupations.json). 30.3 was skipped; 31.0 supersedes it."
       },
-      "nextExpected": "Overdue (checked 2026-10-06): O*NET 31.0 released August 2026 (30.3 from May 2026 was also skipped); not yet ingested. Next: 31.1, ~November 2026"
+      "nextExpected": "31.1, ~November 2026",
+      "sweepNote": "Download db_XX_X_text.zip from onetcenter.org/database.html and copy Occupation Data.txt, Task Statements.txt and Work Activities.txt into db/onet/ (gitignored). Bump onetVersion in scripts/enrich-occupations.ts, run it, then re-run scripts/join-bls-ai-exposure.py --apply (enrich drops blsAiExposure), build:realized-exposure and build:risk."
     },
     {
       "id": "bls-cps-table11",
@@ -847,11 +848,11 @@
       "whatItMeasures": "A near-census of employment and wages covering more than 95% of US jobs, by NAICS industry, ownership and county.",
       "whyItMatters": "The /model employment baseline and its MSA sector shares are labelled QCEW. Sector counts set the scale of every modeled displacement number.",
       "lastIngested": {
-        "sourceId": "bls-qcew-2024-annual",
-        "date": "2025-09-02",
-        "value": "2024 annual averages, /model sector baseline (labelled 'QCEW 2024') and regions.json MSA shares"
+        "sourceId": "bls-qcew-2025-annual",
+        "date": "2026-10-08",
+        "value": "2025 annual averages, all ownerships (155.7M; 147.6M in the 19 modelled NAICS sectors): national sector shares for the 388 non-curated regions in regions.json; also the /model sector baseline (employmentMillions in btos-sectors.json)"
       },
-      "nextExpected": "Overdue (checked 2026-10-06): 2025 annual averages released August 21, 2026; not yet ingested. Next: 2026 annual averages, ~late August 2027",
+      "nextExpected": "2026 annual averages, ~late August 2027",
       "sweepNote": "The annual files are fetchable without a key at https://data.bls.gov/cew/data/api/<year>/a/area/US000.csv (and per-area FIPS). Pick one ownership code (5 = private, 0 = all) for every sector."
     },
     {
@@ -868,11 +869,11 @@
       "whatItMeasures": "A composite intelligence score across a battery of benchmark evaluations for each model, with per-token prices, pulled through the Artificial Analysis API.",
       "whyItMatters": "The /model capability doubling time and cost-decline rate are derived from this frontier path. New frontier releases or a rebased index move both.",
       "lastIngested": {
-        "sourceId": "artificial-analysis-2026-05-19",
-        "date": "2026-05-19",
-        "value": "API snapshot of 517 models (capability-anchor.json): capability doubling 14.7 months, cost decline 0.40"
+        "sourceId": "artificial-analysis-2026-10-08",
+        "date": "2026-10-08",
+        "value": "API snapshot of 696 models, index v4.3.2 (capability-anchor.json): capability doubling 12.9 months, cost decline 0.48"
       },
-      "nextExpected": "Overdue (checked 2026-10-06): Index v4.3.2 is live with a rebased scale and newer frontier models; not yet ingested. Refresh with npm run capability:refresh",
+      "nextExpected": "Monthly refresh, ~early November 2026 (npm run capability:refresh)",
       "sweepNote": "npm run capability:refresh needs ARTIFICIAL_ANALYSIS_API_KEY. Record the index version in capability-anchor.json, since rebased scores cannot be mixed with older ones."
     },
     {

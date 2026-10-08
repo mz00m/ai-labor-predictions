@@ -112,7 +112,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "accountant",
     title: "Accountant",
-    medianWagePerHr: 38,
+    medianWagePerHr: 40,
     category: "Business & Finance",
     tasks: [
       {
@@ -190,7 +190,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "software-developer",
     title: "Software Developer",
-    medianWagePerHr: 62,
+    medianWagePerHr: 65,
     category: "Technology",
     tasks: [
       {
@@ -278,7 +278,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "marketing-manager",
     title: "Marketing Manager",
-    medianWagePerHr: 47,
+    medianWagePerHr: 80,
     category: "Business & Finance",
     tasks: [
       {
@@ -356,7 +356,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "registered-nurse",
     title: "Registered Nurse",
-    medianWagePerHr: 42,
+    medianWagePerHr: 47,
     category: "Healthcare",
     tasks: [
       {
@@ -424,7 +424,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "customer-service-rep",
     title: "Customer Service Representative",
-    medianWagePerHr: 19,
+    medianWagePerHr: 22,
     category: "Office & Admin",
     tasks: [
       {
@@ -492,7 +492,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "lawyer",
     title: "Lawyer",
-    medianWagePerHr: 72,
+    medianWagePerHr: 77,
     category: "Legal",
     tasks: [
       {
@@ -648,7 +648,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "financial-analyst",
     title: "Financial Analyst",
-    medianWagePerHr: 46,
+    medianWagePerHr: 49,
     category: "Business & Finance",
     tasks: [
       {
@@ -726,7 +726,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "graphic-designer",
     title: "Graphic Designer",
-    medianWagePerHr: 28,
+    medianWagePerHr: 30,
     category: "Arts & Design",
     tasks: [
       {
@@ -804,7 +804,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "project-manager",
     title: "Project Manager",
-    medianWagePerHr: 48,
+    medianWagePerHr: 49,
     category: "Management",
     tasks: [
       {
@@ -882,7 +882,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "hr-specialist",
     title: "Human Resources Specialist",
-    medianWagePerHr: 33,
+    medianWagePerHr: 37,
     category: "Business & Finance",
     tasks: [
       {
@@ -1048,7 +1048,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "sales-representative",
     title: "Sales Representative",
-    medianWagePerHr: 30,
+    medianWagePerHr: 38,
     category: "Sales",
     tasks: [
       {
@@ -1126,7 +1126,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "executive-assistant",
     title: "Executive Assistant",
-    medianWagePerHr: 30,
+    medianWagePerHr: 37,
     category: "Office & Admin",
     tasks: [
       {
@@ -1204,7 +1204,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "pharmacist",
     title: "Pharmacist",
-    medianWagePerHr: 62,
+    medianWagePerHr: 68,
     category: "Healthcare",
     tasks: [
       {
@@ -1282,7 +1282,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "real-estate-agent",
     title: "Real Estate Agent",
-    medianWagePerHr: 26,
+    medianWagePerHr: 25,
     category: "Sales",
     tasks: [
       {
@@ -1360,7 +1360,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "journalist",
     title: "Journalist",
-    medianWagePerHr: 26,
+    medianWagePerHr: 30,
     category: "Media & Communications",
     tasks: [
       {
@@ -1516,7 +1516,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "paralegal",
     title: "Paralegal",
-    medianWagePerHr: 29,
+    medianWagePerHr: 30,
     category: "Legal",
     tasks: [
       {
@@ -1594,7 +1594,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "physician",
     title: "Physician (Primary Care)",
-    medianWagePerHr: 115,
+    medianWagePerHr: 120,
     category: "Healthcare",
     tasks: [
       {
@@ -1672,7 +1672,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "social-worker",
     title: "Social Worker",
-    medianWagePerHr: 28,
+    medianWagePerHr: 30,
     category: "Community & Social Services",
     tasks: [
       {
@@ -1750,7 +1750,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "plumber",
     title: "Plumber",
-    medianWagePerHr: 30,
+    medianWagePerHr: 31,
     category: "Construction & Trades",
     tasks: [
       {
@@ -1828,7 +1828,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "restaurant-manager",
     title: "Restaurant Manager",
-    medianWagePerHr: 30,
+    medianWagePerHr: 33,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -1984,7 +1984,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "construction-manager",
     title: "Construction Manager",
-    medianWagePerHr: 50,
+    medianWagePerHr: 55,
     category: "Construction & Trades",
     tasks: [
       {
@@ -2072,7 +2072,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "ux-designer",
     title: "UX Designer",
-    medianWagePerHr: 48,
+    medianWagePerHr: 50,
     category: "Technology",
     tasks: [
       {
@@ -2150,7 +2150,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "dental-hygienist",
     title: "Dental Hygienist",
-    medianWagePerHr: 40,
+    medianWagePerHr: 47,
     category: "Healthcare",
     tasks: [
       {
@@ -2228,7 +2228,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "truck-driver",
     title: "Truck Driver (Long-Haul)",
-    medianWagePerHr: 25,
+    medianWagePerHr: 28,
     category: "Transportation",
     tasks: [
       {
@@ -2384,7 +2384,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "retail-store-manager",
     title: "Retail Store Manager",
-    medianWagePerHr: 24,
+    medianWagePerHr: 23,
     category: "Retail",
     tasks: [
       {
@@ -2462,7 +2462,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "supply-chain-analyst",
     title: "Supply Chain Analyst",
-    medianWagePerHr: 38,
+    medianWagePerHr: 40,
     category: "Business & Finance",
     tasks: [
       {
@@ -2551,7 +2551,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "copywriter",
     title: "Copywriter",
-    medianWagePerHr: 33,
+    medianWagePerHr: 37,
     category: "Arts & Design",
     tasks: [
       {
@@ -2619,7 +2619,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "video-editor",
     title: "Video Editor",
-    medianWagePerHr: 30,
+    medianWagePerHr: 36,
     category: "Arts & Design",
     tasks: [
       {
@@ -2698,7 +2698,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "college-professor",
     title: "College Professor",
-    medianWagePerHr: 42,
+    medianWagePerHr: 40,
     category: "Education",
     tasks: [
       {
@@ -2766,7 +2766,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "school-counselor",
     title: "School Counselor",
-    medianWagePerHr: 30,
+    medianWagePerHr: 31,
     category: "Education",
     tasks: [
       {
@@ -2913,7 +2913,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "hotel-front-desk",
     title: "Hotel Front Desk Agent",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -3060,7 +3060,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "it-manager",
     title: "IT Manager",
-    medianWagePerHr: 76,
+    medianWagePerHr: 84,
     category: "Management",
     tasks: [
       {
@@ -3139,7 +3139,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "pr-specialist",
     title: "Public Relations Specialist",
-    medianWagePerHr: 32,
+    medianWagePerHr: 36,
     category: "Media & Communications",
     tasks: [
       {
@@ -3217,7 +3217,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "technical-writer",
     title: "Technical Writer",
-    medianWagePerHr: 39,
+    medianWagePerHr: 43,
     category: "Media & Communications",
     tasks: [
       {
@@ -3286,7 +3286,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "cashier",
     title: "Cashier",
-    medianWagePerHr: 14,
+    medianWagePerHr: 16,
     category: "Retail",
     tasks: [
       {
@@ -3354,7 +3354,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "merch-buyer",
     title: "Merchandise Buyer",
-    medianWagePerHr: 32,
+    medianWagePerHr: 37,
     category: "Retail",
     tasks: [
       {
@@ -3423,7 +3423,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "delivery-driver",
     title: "Delivery Driver",
-    medianWagePerHr: 18,
+    medianWagePerHr: 22,
     category: "Transportation",
     tasks: [
       {
@@ -3580,7 +3580,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "retail-salesperson",
     title: "Retail Salesperson",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Retail",
     onetCode: "41-2031.00",
     tasks: [
@@ -3649,7 +3649,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "home-health-aide",
     title: "Home Health Aide / Personal Care Aide",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Healthcare",
     onetCode: "31-1011.00",
     tasks: [
@@ -3728,7 +3728,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "janitor-custodian",
     title: "Janitor / Custodian",
-    medianWagePerHr: 15,
+    medianWagePerHr: 18,
     category: "Building & Grounds",
     onetCode: "37-2011.00",
     tasks: [
@@ -3797,7 +3797,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "laborer-material-mover",
     title: "Laborer / Material Mover",
-    medianWagePerHr: 16,
+    medianWagePerHr: 19,
     category: "Transportation",
     onetCode: "53-7062.00",
     tasks: [
@@ -3866,7 +3866,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "security-guard",
     title: "Security Guard",
-    medianWagePerHr: 16,
+    medianWagePerHr: 18,
     category: "Protective Services",
     onetCode: "33-9032.00",
     tasks: [
@@ -3945,7 +3945,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "receptionist",
     title: "Receptionist / Front Desk",
-    medianWagePerHr: 16,
+    medianWagePerHr: 18,
     category: "Office & Admin",
     onetCode: "43-4171.00",
     tasks: [
@@ -4015,7 +4015,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "general-operations-manager",
     title: "General & Operations Manager",
-    medianWagePerHr: 50,
+    medianWagePerHr: 51,
     category: "Management",
     onetCode: "11-1021.00",
     tasks: [
@@ -4163,7 +4163,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "loan-officer",
     title: "Loan Officer",
-    medianWagePerHr: 33,
+    medianWagePerHr: 37,
     category: "Business & Finance",
     onetCode: "13-2072.00",
     tasks: [
@@ -4232,7 +4232,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "insurance-agent",
     title: "Insurance Sales Agent",
-    medianWagePerHr: 27,
+    medianWagePerHr: 30,
     category: "Business & Finance",
     onetCode: "41-3021.00",
     tasks: [
@@ -4312,7 +4312,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "nursing-assistant",
     title: "Nursing Assistant / CNA",
-    medianWagePerHr: 17,
+    medianWagePerHr: 20,
     category: "Healthcare",
     onetCode: "31-1131.00",
     tasks: [
@@ -4391,7 +4391,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "medical-assistant",
     title: "Medical Assistant",
-    medianWagePerHr: 19,
+    medianWagePerHr: 22,
     category: "Healthcare",
     onetCode: "31-9092.00",
     tasks: [
@@ -4471,7 +4471,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "automotive-mechanic",
     title: "Automotive Mechanic",
-    medianWagePerHr: 23,
+    medianWagePerHr: 24,
     category: "Construction & Trades",
     onetCode: "49-3023.00",
     tasks: [
@@ -4540,7 +4540,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "hvac-technician",
     title: "HVAC Technician",
-    medianWagePerHr: 26,
+    medianWagePerHr: 29,
     category: "Construction & Trades",
     onetCode: "49-9021.00",
     tasks: [
@@ -4609,7 +4609,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "maintenance-repair-worker",
     title: "Maintenance & Repair Worker, General",
-    medianWagePerHr: 22,
+    medianWagePerHr: 24,
     category: "Construction & Trades",
     onetCode: "49-9071.00",
     tasks: [
@@ -4689,7 +4689,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "translator-interpreter",
     title: "Translator / Interpreter",
-    medianWagePerHr: 25,
+    medianWagePerHr: 29,
     category: "Creative & Media",
     onetCode: "27-3091",
     tasks: [
@@ -4758,7 +4758,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "radiologist",
     title: "Radiologist",
-    medianWagePerHr: 130,
+    medianWagePerHr: 202,
     category: "Healthcare",
     onetCode: "29-1224",
     tasks: [
@@ -4827,7 +4827,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "compliance-officer",
     title: "Compliance Officer",
-    medianWagePerHr: 37,
+    medianWagePerHr: 39,
     category: "Business & Finance",
     onetCode: "13-1041",
     tasks: [
@@ -4896,7 +4896,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "claims-adjuster",
     title: "Claims Adjuster",
-    medianWagePerHr: 35,
+    medianWagePerHr: 38,
     category: "Business & Finance",
     onetCode: "13-1031",
     tasks: [
@@ -4965,7 +4965,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "architect",
     title: "Architect",
-    medianWagePerHr: 42,
+    medianWagePerHr: 48,
     category: "Creative & Media",
     onetCode: "17-1011",
     tasks: [
@@ -5034,7 +5034,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "bookkeeper",
     title: "Bookkeeper",
-    medianWagePerHr: 22,
+    medianWagePerHr: 24,
     category: "Office & Admin",
     onetCode: "43-3031",
     tasks: [
@@ -5103,7 +5103,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "tax-preparer",
     title: "Tax Preparer",
-    medianWagePerHr: 23,
+    medianWagePerHr: 26,
     category: "Business & Finance",
     onetCode: "13-2082",
     tasks: [
@@ -5172,7 +5172,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "research-scientist",
     title: "Research Scientist",
-    medianWagePerHr: 48,
+    medianWagePerHr: 50,
     category: "Technology",
     onetCode: "19-1042",
     tasks: [
@@ -5251,7 +5251,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "photographer",
     title: "Photographer",
-    medianWagePerHr: 19,
+    medianWagePerHr: 21,
     category: "Creative & Media",
     onetCode: "27-4021",
     tasks: [
@@ -5320,7 +5320,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "civil-engineer",
     title: "Civil Engineer",
-    medianWagePerHr: 45,
+    medianWagePerHr: 48,
     category: "Technology",
     onetCode: "17-2051",
     tasks: [
@@ -5389,7 +5389,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "fast-food-worker",
     title: "Fast Food Worker",
-    medianWagePerHr: 14,
+    medianWagePerHr: 15,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -5457,7 +5457,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "waiter-waitress",
     title: "Waiter / Waitress",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -5525,7 +5525,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "construction-laborer",
     title: "Construction Laborer",
-    medianWagePerHr: 21,
+    medianWagePerHr: 23,
     category: "Construction & Trades",
     tasks: [
       {
@@ -5593,7 +5593,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "police-officer",
     title: "Police Officer",
-    medianWagePerHr: 34,
+    medianWagePerHr: 37,
     category: "Public Safety",
     tasks: [
       {
@@ -5671,7 +5671,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "dentist",
     title: "Dentist",
-    medianWagePerHr: 80,
+    medianWagePerHr: 82,
     category: "Healthcare",
     tasks: [
       {
@@ -5749,7 +5749,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "office-clerk",
     title: "Office Clerk (General)",
-    medianWagePerHr: 19,
+    medianWagePerHr: 22,
     category: "Administrative",
     tasks: [
       {
@@ -5827,7 +5827,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "stocker-order-filler",
     title: "Stocker / Order Filler",
-    medianWagePerHr: 16,
+    medianWagePerHr: 18,
     category: "Retail",
     tasks: [
       {
@@ -5905,7 +5905,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "maid-housekeeper",
     title: "Maid / Housekeeping Cleaner",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Building & Grounds",
     tasks: [
       {
@@ -5983,7 +5983,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "teaching-assistant",
     title: "Teaching Assistant",
-    medianWagePerHr: 16,
+    medianWagePerHr: 18,
     category: "Education",
     tasks: [
       {
@@ -6061,7 +6061,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "landscaping-worker",
     title: "Landscaping / Groundskeeping Worker",
-    medianWagePerHr: 17,
+    medianWagePerHr: 19,
     category: "Building & Grounds",
     tasks: [
       {
@@ -6139,7 +6139,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "carpenter",
     title: "Carpenter",
-    medianWagePerHr: 26,
+    medianWagePerHr: 29,
     category: "Construction & Trades",
     tasks: [
       {
@@ -6217,7 +6217,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "childcare-worker",
     title: "Childcare Worker",
-    medianWagePerHr: 14,
+    medianWagePerHr: 17,
     category: "Personal Care & Service",
     tasks: [
       {
@@ -6295,7 +6295,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "hairdresser-barber",
     title: "Hairdresser / Barber",
-    medianWagePerHr: 16,
+    medianWagePerHr: 17,
     category: "Personal Care & Service",
     tasks: [
       {
@@ -6373,7 +6373,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "bus-driver",
     title: "Bus Driver",
-    medianWagePerHr: 22,
+    medianWagePerHr: 25,
     category: "Transportation",
     tasks: [
       {
@@ -6451,7 +6451,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "bank-teller",
     title: "Bank Teller",
-    medianWagePerHr: 17,
+    medianWagePerHr: 21,
     category: "Business & Finance",
     tasks: [
       {
@@ -6607,7 +6607,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "administrative-assistant",
     title: "Administrative Assistant / Secretary",
-    medianWagePerHr: 20,
+    medianWagePerHr: 23,
     category: "Administrative",
     tasks: [
       {
@@ -6685,7 +6685,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "personal-care-aide",
     title: "Personal Care Aide",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Healthcare",
     tasks: [
       {
@@ -6763,7 +6763,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "assembler-fabricator",
     title: "Assembler / Fabricator",
-    medianWagePerHr: 18,
+    medianWagePerHr: 21,
     category: "Production & Manufacturing",
     tasks: [
       {
@@ -6919,7 +6919,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "food-service-supervisor",
     title: "First-Line Supervisor, Food Service",
-    medianWagePerHr: 20,
+    medianWagePerHr: 21,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -6997,7 +6997,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "licensed-practical-nurse",
     title: "Licensed Practical Nurse (LPN)",
-    medianWagePerHr: 27,
+    medianWagePerHr: 31,
     category: "Healthcare",
     tasks: [
       {
@@ -7075,7 +7075,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "industrial-machinery-mechanic",
     title: "Industrial Machinery Mechanic",
-    medianWagePerHr: 28,
+    medianWagePerHr: 31,
     category: "Installation & Maintenance",
     tasks: [
       {
@@ -7153,7 +7153,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "pharmacy-technician",
     title: "Pharmacy Technician",
-    medianWagePerHr: 19,
+    medianWagePerHr: 22,
     category: "Healthcare",
     tasks: [
       {
@@ -7231,7 +7231,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "welder",
     title: "Welder",
-    medianWagePerHr: 23,
+    medianWagePerHr: 26,
     category: "Production & Manufacturing",
     tasks: [
       {
@@ -7309,7 +7309,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "preschool-teacher",
     title: "Preschool Teacher",
-    medianWagePerHr: 17,
+    medianWagePerHr: 18,
     category: "Education",
     tasks: [
       {
@@ -7387,7 +7387,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "substance-abuse-counselor",
     title: "Substance Abuse / Mental Health Counselor",
-    medianWagePerHr: 24,
+    medianWagePerHr: 29,
     category: "Healthcare",
     tasks: [
       {
@@ -7465,7 +7465,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "firefighter",
     title: "Firefighter",
-    medianWagePerHr: 27,
+    medianWagePerHr: 28,
     category: "Protective Services",
     tasks: [
       {
@@ -7543,7 +7543,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "emt-paramedic",
     title: "EMT / Paramedic",
-    medianWagePerHr: 19,
+    medianWagePerHr: 23,
     category: "Healthcare",
     tasks: [
       {
@@ -7621,7 +7621,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "veterinary-technician",
     title: "Veterinary Technician",
-    medianWagePerHr: 20,
+    medianWagePerHr: 23,
     category: "Healthcare",
     tasks: [
       {
@@ -7777,7 +7777,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "cook-restaurant",
     title: "Cook (Restaurant / Non-Fast-Food)",
-    medianWagePerHr: 16,
+    medianWagePerHr: 18,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -7835,7 +7835,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "food-prep-worker",
     title: "Food Preparation Worker",
-    medianWagePerHr: 14,
+    medianWagePerHr: 17,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -7883,7 +7883,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "production-supervisor",
     title: "First-Line Supervisor of Production Workers",
-    medianWagePerHr: 32,
+    medianWagePerHr: 36,
     category: "Manufacturing",
     tasks: [
       {
@@ -7951,7 +7951,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "packer-packager",
     title: "Packer / Packager (Hand)",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Manufacturing",
     tasks: [
       {
@@ -8009,7 +8009,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "bartender",
     title: "Bartender",
-    medianWagePerHr: 15,
+    medianWagePerHr: 17,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -8077,7 +8077,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "forklift-operator",
     title: "Industrial Truck / Forklift Operator",
-    medianWagePerHr: 20,
+    medianWagePerHr: 22,
     category: "Transportation & Logistics",
     tasks: [
       {
@@ -8135,7 +8135,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "inspector-tester-sorter",
     title: "Inspector / Tester / Sorter",
-    medianWagePerHr: 20,
+    medianWagePerHr: 23,
     category: "Manufacturing",
     tasks: [
       {
@@ -8251,7 +8251,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "dining-attendant",
     title: "Dining Room / Cafeteria Attendant",
-    medianWagePerHr: 14,
+    medianWagePerHr: 16,
     category: "Food & Hospitality",
     tasks: [
       {
@@ -8299,7 +8299,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "shipping-receiving-clerk",
     title: "Shipping / Receiving Clerk",
-    medianWagePerHr: 18,
+    medianWagePerHr: 22,
     category: "Transportation & Logistics",
     tasks: [
       {
@@ -8357,7 +8357,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "systems-analyst",
     title: "Computer Systems Analyst",
-    medianWagePerHr: 50,
+    medianWagePerHr: 51,
     category: "Technology",
     tasks: [
       {
@@ -8425,7 +8425,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "billing-clerk",
     title: "Billing & Posting Clerk",
-    medianWagePerHr: 20,
+    medianWagePerHr: 23,
     category: "Business & Finance",
     tasks: [
       {
@@ -8483,7 +8483,7 @@ export const JOB_PROFILES: JobProfile[] = [
   {
     id: "dishwasher",
     title: "Dishwasher",
-    medianWagePerHr: 14,
+    medianWagePerHr: 17,
     category: "Food & Hospitality",
     tasks: [
       {

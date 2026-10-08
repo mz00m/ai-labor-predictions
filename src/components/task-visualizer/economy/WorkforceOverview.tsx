@@ -294,7 +294,7 @@ export default function WorkforceOverview() {
       </div>
 
       <p className="text-xs text-[var(--muted)] mt-3">
-        Source: Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS), May 2024.
+        Source: Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS), May 2025.
         Income tiers based on median annual wage for the occupation group.
         Exposure metric agreement from Yale Budget Lab (Gimbel et al., 2026), comparing 6 AI exposure measures across 778 occupations.
         CFO replace/enhance ratio from Baslandze et al. (2026), Federal Reserve Bank of Atlanta/Duke University survey of ~750 executives.

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Fetch BLS OEWS state-level occupation employment + wages (May 2024) and emit
+Fetch BLS OEWS state-level occupation employment + wages (May 2025) and emit
 src/data/regional/state-occupation-employment.json.
 
-Source: https://www.bls.gov/oes/special-requests/oesm24st.zip
-        (state_M2024_dl.xlsx — single sheet, ~37k rows, cross-industry detail)
+Source: https://www.bls.gov/oes/special-requests/oesm25st.zip
+        (state_M2025_dl.xlsx — single sheet, ~37k rows, cross-industry detail)
 
 The output is filtered to:
   * AREA_TYPE == 2          (state-level rows)
@@ -15,8 +15,8 @@ The output is filtered to:
 Output shape:
   {
     "generatedAt": "...",
-    "year": 2024,
-    "source": "BLS OEWS May 2024 state-level",
+    "year": 2025,
+    "source": "BLS OEWS May 2025 state-level",
     "states": [
       {
         "fips": "01", "abbr": "AL", "title": "Alabama",
@@ -45,9 +45,9 @@ import openpyxl
 
 REPO = Path(__file__).resolve().parent.parent
 CACHE = Path("/tmp/oews")
-ZIP_URL = "https://www.bls.gov/oes/special-requests/oesm24st.zip"
-ZIP_PATH = CACHE / "oesm24st.zip"
-XLSX_PATH = CACHE / "oesm24st" / "state_M2024_dl.xlsx"
+ZIP_URL = "https://www.bls.gov/oes/special-requests/oesm25st.zip"
+ZIP_PATH = CACHE / "oesm25st.zip"
+XLSX_PATH = CACHE / "oesm25st" / "state_M2025_dl.xlsx"
 OUT_PATH = REPO / "src" / "data" / "regional" / "state-occupation-employment.json"
 
 ENRICHED_PATH = REPO / "src" / "data" / "enriched-occupations.json"
@@ -191,8 +191,8 @@ def parse() -> dict:
 
     return {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "year": 2024,
-        "source": "BLS OEWS May 2024 state-level (oesm24st)",
+        "year": 2025,
+        "source": "BLS OEWS May 2025 state-level (oesm25st)",
         "sourceUrl": ZIP_URL,
         "soc_codes_matched": len(seen_socs),
         "soc_codes_total": len(soc_to_slug),

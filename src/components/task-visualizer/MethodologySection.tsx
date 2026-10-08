@@ -108,8 +108,8 @@ export default function MethodologySection() {
                     >
                       Occupational Employment and Wage Statistics (OEWS)
                     </a>{" "}
-                    (May 2024 release) provides median hourly wages and employment counts for all 22 SOC
-                    major occupation groups, covering 154 million workers. This is the human labor cost that
+                    (May 2025 release) provides median hourly wages and employment counts for all 22 SOC
+                    major occupation groups, covering 155.5 million workers. This is the human labor cost that
                     AI compute must undercut to create economic incentive for automation.
                   </p>
                   <p className="text-[var(--muted)]">
@@ -605,7 +605,7 @@ export default function MethodologySection() {
             </li>
             <li>
               <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--foreground)]">
-                Bureau of Labor Statistics. Occupational Employment and Wage Statistics, May 2024
+                Bureau of Labor Statistics. Occupational Employment and Wage Statistics, May 2025
               </a>
             </li>
             <li>

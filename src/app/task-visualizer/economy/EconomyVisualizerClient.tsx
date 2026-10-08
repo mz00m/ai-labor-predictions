@@ -16,7 +16,7 @@ const SECTIONS: { id: Section; label: string; question: string; description: str
   {
     id: "overview",
     label: "The Workforce",
-    question: "The US workforce: 154M workers by occupation and income",
+    question: "The US workforce: 155.5M workers by occupation and income",
     description: "Each bar is an occupation group sized by number of workers. Color shows income tier. Click any bar to see a task-by-task automation breakdown for that job.",
   },
   {
@@ -136,8 +136,8 @@ export default function EconomyVisualizerClient() {
         <div className="text-sm text-[var(--muted)] space-y-2 max-w-2xl">
           <p>
             Employment data from the Bureau of Labor Statistics Occupational Employment and Wage
-            Statistics (OEWS), May 2024. Income tiers based on median annual wage: lower income
-            (under $35K), middle income ($35K-$75K), higher income (over $75K).
+            Statistics (OEWS), May 2025. Income tiers based on median annual wage: lower income
+            (under $38.5K), middle income ($38.5K-$75K), higher income (over $75K).
           </p>
           <p>
             Task composition for each occupation group is estimated from O*NET Generalized Work

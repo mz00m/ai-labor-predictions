@@ -798,7 +798,7 @@ export default function RegionalExplorer({
           sectors: toAggregates(s.sectors),
           totalJobs: s.totalEmployment,
           title: `${s.title} — sector makeup`,
-          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(s.totalEmployment)} state jobs, employment-weighted from BLS OEWS May 2024.`,
+          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(s.totalEmployment)} state jobs, employment-weighted from BLS OEWS May 2025.`,
         };
       }
     }
@@ -810,7 +810,7 @@ export default function RegionalExplorer({
           sectors: toAggregates(summ.sectors),
           totalJobs: summ.totalEmployment,
           title: `${summ.title} — sector makeup`,
-          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(summ.totalEmployment)} metro jobs, employment-weighted from BLS OEWS May 2024.`,
+          subtitle: `Per-BLS-major-group breakdown of ${formatJobs(summ.totalEmployment)} metro jobs, employment-weighted from BLS OEWS May 2025.`,
         };
       }
     }
@@ -1386,7 +1386,7 @@ export default function RegionalExplorer({
 
         {/* Caveat strip */}
         <div className="border-t border-card px-4 sm:px-5 py-2.5 text-2xs text-[var(--muted)] bg-[#FAFAFA]">
-          State and metro scores: BLS OEWS May 2024. County scores:
+          State and metro scores: BLS OEWS May 2025. County scores:
           Census ACS 2019–2023 at SOC major-group granularity. Color binning
           adapts to the current view.
         </div>

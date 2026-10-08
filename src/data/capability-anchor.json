@@ -1,269 +1,276 @@
 {
-  "fetchedAt": "2026-05-19T16:04:26.474Z",
+  "fetchedAt": "2026-10-08T17:49:04.343Z",
   "source": "https://artificialanalysis.ai/",
   "apiBase": "https://artificialanalysis.ai/api/v2",
-  "modelCount": 517,
-  "frontierReleases": 24,
+  "indexVersion": "v4.3.2",
+  "modelCount": 696,
+  "frontierReleases": 25,
   "derived": {
-    "capabilityDoublingMonths": 14.7,
-    "computeCostDeclineRate": 0.4
+    "capabilityDoublingMonths": 12.9,
+    "computeCostDeclineRate": 0.48
   },
   "currentFrontier": [
     {
-      "name": "GPT-5.5 (xhigh)",
-      "vendor": "OpenAI",
-      "released": "2026-04-23",
-      "intelligenceIndex": 60.2,
-      "codingIndex": 59.1,
-      "mathIndex": null,
-      "blendedPricePerMtok": 11.25,
-      "outputTokPerSec": 65.144,
-      "timeToFirstTokenSec": 50.034
-    },
-    {
-      "name": "GPT-5.5 (high)",
-      "vendor": "OpenAI",
-      "released": "2026-04-23",
-      "intelligenceIndex": 58.9,
-      "codingIndex": 58.5,
-      "mathIndex": null,
-      "blendedPricePerMtok": 11.25,
-      "outputTokPerSec": 61.771,
-      "timeToFirstTokenSec": 17.154
-    },
-    {
-      "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+      "name": "Claude Opus 5.5 (Max, Default Fallback)",
       "vendor": "Anthropic",
-      "released": "2026-04-16",
-      "intelligenceIndex": 57.3,
-      "codingIndex": 52.5,
+      "released": "2026-09-22",
+      "intelligenceIndex": 57.6,
+      "codingIndex": null,
       "mathIndex": null,
-      "blendedPricePerMtok": 10.938,
-      "outputTokPerSec": 48.002,
-      "timeToFirstTokenSec": 23.963
+      "blendedPricePerMtok": 8,
+      "outputTokPerSec": 97.777,
+      "timeToFirstTokenSec": 560.787
     },
     {
-      "name": "Gemini 3.1 Pro Preview",
-      "vendor": "Google",
-      "released": "2026-02-19",
-      "intelligenceIndex": 57.2,
-      "codingIndex": 55.5,
+      "name": "Claude Sonnet 5.5 (Max, Default Fallback)",
+      "vendor": "Anthropic",
+      "released": "2026-09-28",
+      "intelligenceIndex": 56,
+      "codingIndex": null,
       "mathIndex": null,
-      "blendedPricePerMtok": 4.5,
-      "outputTokPerSec": 121.396,
-      "timeToFirstTokenSec": 21.672
+      "blendedPricePerMtok": 4,
+      "outputTokPerSec": 133.893,
+      "timeToFirstTokenSec": 270.896
     },
     {
-      "name": "GPT-5.4 (xhigh)",
-      "vendor": "OpenAI",
-      "released": "2026-03-05",
-      "intelligenceIndex": 56.8,
-      "codingIndex": 57.2,
+      "name": "Claude Opus 5.5 (Xhigh, Default Fallback)",
+      "vendor": "Anthropic",
+      "released": "2026-09-22",
+      "intelligenceIndex": 56,
+      "codingIndex": null,
       "mathIndex": null,
-      "blendedPricePerMtok": 5.625,
-      "outputTokPerSec": 80.497,
-      "timeToFirstTokenSec": 150.606
+      "blendedPricePerMtok": 8,
+      "outputTokPerSec": 76.076,
+      "timeToFirstTokenSec": 77.743
     },
     {
-      "name": "GPT-5.5 (medium)",
-      "vendor": "OpenAI",
-      "released": "2026-04-23",
-      "intelligenceIndex": 56.7,
-      "codingIndex": 56.2,
-      "mathIndex": null,
-      "blendedPricePerMtok": 11.25,
-      "outputTokPerSec": 61.284,
-      "timeToFirstTokenSec": 4.215
-    },
-    {
-      "name": "Kimi K2.6",
-      "vendor": "Kimi",
-      "released": "2026-04-20",
-      "intelligenceIndex": 53.9,
-      "codingIndex": 47.1,
-      "mathIndex": null,
-      "blendedPricePerMtok": 1.712,
-      "outputTokPerSec": 95.126,
-      "timeToFirstTokenSec": 1.234
-    },
-    {
-      "name": "MiMo-V2.5-Pro",
-      "vendor": "Xiaomi",
-      "released": "2026-04-22",
-      "intelligenceIndex": 53.8,
-      "codingIndex": 45.5,
-      "mathIndex": null,
-      "blendedPricePerMtok": 1.5,
-      "outputTokPerSec": 54.844,
-      "timeToFirstTokenSec": 2.249
-    },
-    {
-      "name": "GPT-5.3 Codex (xhigh)",
-      "vendor": "OpenAI",
-      "released": "2026-02-05",
+      "name": "Claude Opus 5.5 (High, Default Fallback)",
+      "vendor": "Anthropic",
+      "released": "2026-09-22",
       "intelligenceIndex": 53.6,
-      "codingIndex": 53.1,
+      "codingIndex": null,
       "mathIndex": null,
-      "blendedPricePerMtok": 4.813,
-      "outputTokPerSec": 80.775,
-      "timeToFirstTokenSec": 54.28
+      "blendedPricePerMtok": 8,
+      "outputTokPerSec": 74.51,
+      "timeToFirstTokenSec": 17.587
     },
     {
-      "name": "Grok 4.3 (high)",
-      "vendor": "xAI",
-      "released": "2026-04-30",
-      "intelligenceIndex": 53.2,
-      "codingIndex": 41,
+      "name": "Claude Fable 5.1 (Max, Default Fallback)",
+      "vendor": "Anthropic",
+      "released": "2026-09-01",
+      "intelligenceIndex": 53.4,
+      "codingIndex": 81.6,
       "mathIndex": null,
-      "blendedPricePerMtok": 1.563,
-      "outputTokPerSec": 107.753,
-      "timeToFirstTokenSec": 7.372
+      "blendedPricePerMtok": 20,
+      "outputTokPerSec": 67.925,
+      "timeToFirstTokenSec": 149.813
+    },
+    {
+      "name": "Claude Fable 5.1 (Xhigh, Default Fallback)",
+      "vendor": "Anthropic",
+      "released": "2026-09-01",
+      "intelligenceIndex": 53.2,
+      "codingIndex": 80.7,
+      "mathIndex": null,
+      "blendedPricePerMtok": 20,
+      "outputTokPerSec": 52.542,
+      "timeToFirstTokenSec": 52.401
+    },
+    {
+      "name": "GPT-6 Astra (Max)",
+      "vendor": "OpenAI",
+      "released": "2026-09-03",
+      "intelligenceIndex": 52.7,
+      "codingIndex": 76.9,
+      "mathIndex": null,
+      "blendedPricePerMtok": 20,
+      "outputTokPerSec": 47.45,
+      "timeToFirstTokenSec": 235.739
+    },
+    {
+      "name": "Gemini 4 Argon (High)",
+      "vendor": "Google",
+      "released": "2026-09-30",
+      "intelligenceIndex": 52.6,
+      "codingIndex": null,
+      "mathIndex": null,
+      "blendedPricePerMtok": 4,
+      "outputTokPerSec": 0,
+      "timeToFirstTokenSec": 0
+    },
+    {
+      "name": "GPT-6 Astra (Xhigh)",
+      "vendor": "OpenAI",
+      "released": "2026-09-03",
+      "intelligenceIndex": 52.4,
+      "codingIndex": 75.9,
+      "mathIndex": null,
+      "blendedPricePerMtok": 20,
+      "outputTokPerSec": 48.067,
+      "timeToFirstTokenSec": 90.907
+    },
+    {
+      "name": "Claude Sonnet 5.5 (Xhigh, Default Fallback)",
+      "vendor": "Anthropic",
+      "released": "2026-09-28",
+      "intelligenceIndex": 51.9,
+      "codingIndex": null,
+      "mathIndex": null,
+      "blendedPricePerMtok": 4,
+      "outputTokPerSec": 96.19,
+      "timeToFirstTokenSec": 14.622
     }
   ],
   "frontierPath": [
     {
       "modelName": "GPT-3.5 Turbo",
       "monthsSince2023": -1.1,
-      "intelligenceIndex": 9,
+      "intelligenceIndex": 5.5,
       "blendedPricePerMtok": 0.75
     },
     {
       "modelName": "GPT-4",
       "monthsSince2023": 2.4,
-      "intelligenceIndex": 12.8,
+      "intelligenceIndex": 6.7,
       "blendedPricePerMtok": 37.5
     },
     {
       "modelName": "GPT-4 Turbo",
       "monthsSince2023": 10.2,
-      "intelligenceIndex": 13.7,
+      "intelligenceIndex": 7,
       "blendedPricePerMtok": 15
     },
     {
       "modelName": "Claude 3 Opus",
       "monthsSince2023": 14.1,
-      "intelligenceIndex": 18,
-      "blendedPricePerMtok": 32.813
-    },
-    {
-      "modelName": "GPT-4o (Aug '24)",
-      "monthsSince2023": 19.2,
-      "intelligenceIndex": 18.6,
-      "blendedPricePerMtok": 4.375
+      "intelligenceIndex": 8.7,
+      "blendedPricePerMtok": 30
     },
     {
       "modelName": "o1-preview",
       "monthsSince2023": 20.4,
-      "intelligenceIndex": 23.7,
+      "intelligenceIndex": 11.4,
       "blendedPricePerMtok": 28.875
     },
     {
       "modelName": "o1",
       "monthsSince2023": 23.1,
-      "intelligenceIndex": 30.7,
+      "intelligenceIndex": 15.2,
       "blendedPricePerMtok": 26.25
-    },
-    {
-      "modelName": "Grok 3 mini Reasoning (high)",
-      "monthsSince2023": 25.6,
-      "intelligenceIndex": 32.1,
-      "blendedPricePerMtok": 0.35
     },
     {
       "modelName": "Claude 3.7 Sonnet (Reasoning)",
       "monthsSince2023": 25.8,
-      "intelligenceIndex": 34.7,
+      "intelligenceIndex": 17.7,
       "blendedPricePerMtok": 0
     },
     {
       "modelName": "o3",
       "monthsSince2023": 27.5,
-      "intelligenceIndex": 38.4,
+      "intelligenceIndex": 20.2,
       "blendedPricePerMtok": 3.5
-    },
-    {
-      "modelName": "Claude 4 Sonnet (Reasoning)",
-      "monthsSince2023": 28.6,
-      "intelligenceIndex": 38.7,
-      "blendedPricePerMtok": 6.563
     },
     {
       "modelName": "Claude 4 Opus (Reasoning)",
       "monthsSince2023": 28.6,
-      "intelligenceIndex": 39,
-      "blendedPricePerMtok": 32.813
+      "intelligenceIndex": 20.6,
+      "blendedPricePerMtok": 30
     },
     {
       "modelName": "o3-pro",
       "monthsSince2023": 29.3,
-      "intelligenceIndex": 40.7,
+      "intelligenceIndex": 21.9,
       "blendedPricePerMtok": 35
     },
     {
       "modelName": "Grok 4",
       "monthsSince2023": 30.3,
-      "intelligenceIndex": 41.5,
-      "blendedPricePerMtok": 11
+      "intelligenceIndex": 22.5,
+      "blendedPricePerMtok": 6
     },
     {
       "modelName": "Claude 4.1 Opus (Reasoning)",
       "monthsSince2023": 31.1,
-      "intelligenceIndex": 42,
-      "blendedPricePerMtok": 32.813
+      "intelligenceIndex": 22.8,
+      "blendedPricePerMtok": 30
     },
     {
-      "modelName": "GPT-5 (high)",
+      "modelName": "GPT-5 (High)",
       "monthsSince2023": 31.2,
-      "intelligenceIndex": 44.6,
+      "intelligenceIndex": 23,
       "blendedPricePerMtok": 3.438
     },
     {
-      "modelName": "GPT-5.1 (high)",
-      "monthsSince2023": 34.4,
-      "intelligenceIndex": 47.7,
+      "modelName": "GPT-5 Codex (High)",
+      "monthsSince2023": 32.7,
+      "intelligenceIndex": 24.9,
       "blendedPricePerMtok": 3.438
     },
     {
-      "modelName": "Gemini 3 Pro Preview (high)",
+      "modelName": "Gemini 3 Pro Preview (High)",
       "monthsSince2023": 34.6,
-      "intelligenceIndex": 48.4,
+      "intelligenceIndex": 28,
       "blendedPricePerMtok": 4.5
     },
     {
       "modelName": "Claude Opus 4.5 (Reasoning)",
       "monthsSince2023": 34.8,
-      "intelligenceIndex": 49.7,
-      "blendedPricePerMtok": 10.938
+      "intelligenceIndex": 29.1,
+      "blendedPricePerMtok": 10
     },
     {
-      "modelName": "GPT-5.2 (xhigh)",
+      "modelName": "GPT-5.2 (Xhigh)",
       "monthsSince2023": 35.3,
-      "intelligenceIndex": 51.3,
+      "intelligenceIndex": 30.4,
       "blendedPricePerMtok": 4.813
     },
     {
-      "modelName": "GPT-5.3 Codex (xhigh)",
+      "modelName": "GPT-5.3 Codex (Xhigh)",
       "monthsSince2023": 37.2,
-      "intelligenceIndex": 53.6,
+      "intelligenceIndex": 32.5,
       "blendedPricePerMtok": 4.813
     },
     {
-      "modelName": "Gemini 3.1 Pro Preview",
-      "monthsSince2023": 37.6,
-      "intelligenceIndex": 57.2,
-      "blendedPricePerMtok": 4.5
+      "modelName": "GPT-5.4 (Xhigh)",
+      "monthsSince2023": 38.1,
+      "intelligenceIndex": 39,
+      "blendedPricePerMtok": 5.625
     },
     {
-      "modelName": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+      "modelName": "Claude Opus 4.7 (Max)",
       "monthsSince2023": 39.5,
-      "intelligenceIndex": 57.3,
-      "blendedPricePerMtok": 10.938
+      "intelligenceIndex": 40.7,
+      "blendedPricePerMtok": 10
     },
     {
-      "modelName": "GPT-5.5 (xhigh)",
-      "monthsSince2023": 39.7,
-      "intelligenceIndex": 60.2,
-      "blendedPricePerMtok": 11.25
+      "modelName": "Claude Opus 4.8 (Max)",
+      "monthsSince2023": 40.8,
+      "intelligenceIndex": 41.8,
+      "blendedPricePerMtok": 10
+    },
+    {
+      "modelName": "Claude Fable 5 (Max, Opus 4.8 Fallback)",
+      "monthsSince2023": 41.2,
+      "intelligenceIndex": 49.6,
+      "blendedPricePerMtok": 20
+    },
+    {
+      "modelName": "Claude Opus 5 (Max)",
+      "monthsSince2023": 42.7,
+      "intelligenceIndex": 50.8,
+      "blendedPricePerMtok": 10
+    },
+    {
+      "modelName": "Claude Fable 5.1 (Max, Default Fallback)",
+      "monthsSince2023": 44,
+      "intelligenceIndex": 53.4,
+      "blendedPricePerMtok": 20
+    },
+    {
+      "modelName": "Claude Opus 5.5 (Max, Default Fallback)",
+      "monthsSince2023": 44.7,
+      "intelligenceIndex": 57.6,
+      "blendedPricePerMtok": 8
     }
   ]
 }

@@ -1,145 +1,201 @@
 {
-  "generatedAt": "2026-05-11T22:59:03.465Z",
+  "generatedAt": "2026-10-08T17:50:03.323Z",
   "methodology": "Employment-weighted aggregation of per-occupation netRisk by BLS major category. topRisk lists the 3 highest-netRisk occupations within each category.",
   "count": 25,
   "sectors": [
     {
       "category": "office-and-administrative-support",
-      "totalJobs": 16488600,
+      "totalJobs": 16065600,
       "occupationCount": 13,
-      "weightedNetRisk": 6.487189705277781,
+      "weightedNetRisk": 6.487768678598717,
       "weightedNetRisk100": 65,
-      "meanNetRisk": 6.3090322422181675,
+      "meanNetRisk": 6.308353509186493,
       "topRisk": [
         {
           "slug": "general-office-clerks",
           "title": "General office clerks",
-          "netRisk": 6.863209935880117,
-          "jobs": 2646000
+          "netRisk": 6.869827582938941,
+          "jobs": 2600000
         },
         {
           "slug": "customer-service-representatives",
           "title": "Customer service representatives",
-          "netRisk": 6.803746057863704,
-          "jobs": 2814000
+          "netRisk": 6.805951940216646,
+          "jobs": 2666000
         },
         {
           "slug": "bill-and-account-collectors",
           "title": "Bill and account collectors",
           "netRisk": 6.772652871768177,
-          "jobs": 166900
+          "jobs": 160200
         }
       ]
     },
     {
       "category": "legal",
-      "totalJobs": 1312600,
+      "totalJobs": 1341700,
       "occupationCount": 5,
-      "weightedNetRisk": 6.155834735594053,
+      "weightedNetRisk": 6.173361542559682,
       "weightedNetRisk100": 62,
-      "meanNetRisk": 6.285784590011785,
+      "meanNetRisk": 6.283156554806579,
       "topRisk": [
         {
           "slug": "paralegals-and-legal-assistants",
           "title": "Paralegals and legal assistants",
-          "netRisk": 6.965308032890576,
-          "jobs": 376200
+          "netRisk": 6.95648450347881,
+          "jobs": 404900
         },
         {
           "slug": "court-reporters",
           "title": "Court reporters and simultaneous captioners",
-          "netRisk": 6.940784542816331,
-          "jobs": 17700
+          "netRisk": 6.923806128239077,
+          "jobs": 19900
         },
         {
           "slug": "arbitrators-mediators-and-conciliators",
           "title": "Arbitrators, mediators, and conciliators",
-          "netRisk": 6.014272114044925,
-          "jobs": 9100
+          "netRisk": 5.9900074081625725,
+          "jobs": 10500
+        }
+      ]
+    },
+    {
+      "category": "math",
+      "totalJobs": 453400,
+      "occupationCount": 4,
+      "weightedNetRisk": 5.9312889944425224,
+      "weightedNetRisk100": 59,
+      "meanNetRisk": 5.850630811488526,
+      "topRisk": [
+        {
+          "slug": "operations-research-analysts",
+          "title": "Operations research analysts",
+          "netRisk": 5.9829520752463425,
+          "jobs": 113100
+        },
+        {
+          "slug": "data-scientists",
+          "title": "Data scientists",
+          "netRisk": 5.95713796533106,
+          "jobs": 275600
+        },
+        {
+          "slug": "actuaries",
+          "title": "Actuaries",
+          "netRisk": 5.740950111078915,
+          "jobs": 31200
         }
       ]
     },
     {
       "category": "computer-and-information-technology",
-      "totalJobs": 4513700,
+      "totalJobs": 4565200,
       "occupationCount": 10,
-      "weightedNetRisk": 5.680285085767589,
+      "weightedNetRisk": 5.684884482574064,
       "weightedNetRisk100": 57,
-      "meanNetRisk": 5.670022689182179,
+      "meanNetRisk": 5.6768427275491335,
       "topRisk": [
         {
           "slug": "computer-support-specialists",
           "title": "Computer support specialists",
           "netRisk": 6.0921069906223355,
-          "jobs": 882300
+          "jobs": 903100
         },
         {
           "slug": "computer-programmers",
           "title": "Computer programmers",
-          "netRisk": 5.828281395501344,
-          "jobs": 121200
+          "netRisk": 5.830487277854285,
+          "jobs": 110800
         },
         {
           "slug": "web-developers",
           "title": "Web developers and digital designers",
-          "netRisk": 5.8099704051399845,
-          "jobs": 214900
+          "netRisk": 5.80114687572822,
+          "jobs": 220100
         }
       ]
     },
     {
       "category": "media-and-communication",
-      "totalJobs": 1164800,
+      "totalJobs": 1119500,
       "occupationCount": 10,
-      "weightedNetRisk": 5.635711775637234,
-      "weightedNetRisk100": 56,
-      "meanNetRisk": 5.684887810974943,
+      "weightedNetRisk": 5.658264135345392,
+      "weightedNetRisk100": 57,
+      "meanNetRisk": 5.69982754507323,
       "topRisk": [
         {
-          "slug": "editors",
-          "title": "Editors",
-          "netRisk": 6.013334087481146,
-          "jobs": 115800
-        },
-        {
-          "slug": "announcers",
-          "title": "Announcers and DJs",
-          "netRisk": 5.923663688260114,
-          "jobs": 39500
+          "slug": "writers-and-authors",
+          "title": "Writers and authors",
+          "netRisk": 5.974957318442925,
+          "jobs": 140300
         },
         {
           "slug": "interpreters-and-translators",
           "title": "Interpreters and translators",
-          "netRisk": 5.919986786018756,
-          "jobs": 75300
+          "netRisk": 5.9266044330775784,
+          "jobs": 73900
+        },
+        {
+          "slug": "announcers",
+          "title": "Announcers and DJs",
+          "netRisk": 5.91704604120129,
+          "jobs": 38700
         }
       ]
     },
     {
       "category": "protective-service",
-      "totalJobs": 2911800,
+      "totalJobs": 2956400,
       "occupationCount": 6,
-      "weightedNetRisk": 5.605324628541549,
+      "weightedNetRisk": 5.631152458266675,
       "weightedNetRisk100": 56,
-      "meanNetRisk": 5.578841809742482,
+      "meanNetRisk": 5.61561022672348,
       "topRisk": [
         {
           "slug": "private-detectives-and-investigators",
           "title": "Private detectives and investigators",
-          "netRisk": 6.443169201875891,
-          "jobs": 43600
+          "netRisk": 6.47846331952295,
+          "jobs": 39500
         },
         {
           "slug": "security-guards",
           "title": "Security guards and gambling surveillance officers",
-          "netRisk": 6.039845307292878,
-          "jobs": 1272400
+          "netRisk": 6.055286483763466,
+          "jobs": 1304000
         },
         {
           "slug": "fire-inspectors-and-investigators",
           "title": "Fire inspectors",
-          "netRisk": 5.438439393939394,
+          "netRisk": 5.4869688057041,
           "jobs": 17600
+        }
+      ]
+    },
+    {
+      "category": "business-and-financial",
+      "totalJobs": 9972100,
+      "occupationCount": 24,
+      "weightedNetRisk": 5.621417681392695,
+      "weightedNetRisk100": 56,
+      "meanNetRisk": 5.63968682030104,
+      "topRisk": [
+        {
+          "slug": "market-research-analysts",
+          "title": "Market research analysts",
+          "netRisk": 6.240245503159942,
+          "jobs": 952700
+        },
+        {
+          "slug": "insurance-underwriters",
+          "title": "Insurance underwriters",
+          "netRisk": 6.110387392740334,
+          "jobs": 125600
+        },
+        {
+          "slug": "tax-examiners-and-collectors-and-revenue-agents",
+          "title": "Tax examiners and collectors, and revenue agents",
+          "netRisk": 5.972820512820512,
+          "jobs": 60100
         }
       ]
     },
@@ -160,534 +216,478 @@
       ]
     },
     {
-      "category": "business-and-financial",
-      "totalJobs": 9819000,
-      "occupationCount": 24,
-      "weightedNetRisk": 5.551348439424683,
-      "weightedNetRisk100": 56,
-      "meanNetRisk": 5.617092762877988,
-      "topRisk": [
-        {
-          "slug": "market-research-analysts",
-          "title": "Market research analysts",
-          "netRisk": 6.1693248816768085,
-          "jobs": 941700
-        },
-        {
-          "slug": "insurance-underwriters",
-          "title": "Insurance underwriters",
-          "netRisk": 6.099357980975628,
-          "jobs": 127000
-        },
-        {
-          "slug": "tax-examiners-and-collectors-and-revenue-agents",
-          "title": "Tax examiners and collectors, and revenue agents",
-          "netRisk": 5.999291101055807,
-          "jobs": 57600
-        }
-      ]
-    },
-    {
-      "category": "math",
-      "totalJobs": 426200,
-      "occupationCount": 4,
-      "weightedNetRisk": 5.537712486177508,
-      "weightedNetRisk100": 55,
-      "meanNetRisk": 5.668516627420873,
-      "topRisk": [
-        {
-          "slug": "operations-research-analysts",
-          "title": "Operations research analysts",
-          "netRisk": 5.96089325171693,
-          "jobs": 112100
-        },
-        {
-          "slug": "actuaries",
-          "title": "Actuaries",
-          "netRisk": 5.711690163668774,
-          "jobs": 33600
-        },
-        {
-          "slug": "mathematicians-and-statisticians",
-          "title": "Mathematicians and statisticians",
-          "netRisk": 5.703836035474261,
-          "jobs": 34600
-        }
-      ]
-    },
-    {
       "category": "education-training-and-library",
-      "totalJobs": 8295000,
+      "totalJobs": 8348100,
       "occupationCount": 14,
-      "weightedNetRisk": 5.497528684660405,
+      "weightedNetRisk": 5.476722311540701,
       "weightedNetRisk100": 55,
-      "meanNetRisk": 5.59785717367722,
+      "meanNetRisk": 5.585721925674008,
       "topRisk": [
         {
           "slug": "library-technicians-and-assistants",
           "title": "Library technicians and assistants",
-          "netRisk": 6.522826486150016,
-          "jobs": 163100
+          "netRisk": 6.520620603797075,
+          "jobs": 162300
         },
         {
           "slug": "tutors",
           "title": "Tutors",
           "netRisk": 6.234498237497246,
-          "jobs": 215500
+          "jobs": 208400
         },
         {
           "slug": "curators-museum-technicians-and-conservators",
           "title": "Archivists, curators, and museum workers",
-          "netRisk": 6.029023236919077,
-          "jobs": 40200
+          "netRisk": 5.9981408839779,
+          "jobs": 38500
         }
       ]
     },
     {
       "category": "sales",
-      "totalJobs": 10828000,
+      "totalJobs": 10799900,
       "occupationCount": 10,
-      "weightedNetRisk": 5.421988665058503,
+      "weightedNetRisk": 5.417689001653059,
       "weightedNetRisk100": 54,
-      "meanNetRisk": 5.553911022261356,
+      "meanNetRisk": 5.59218751626395,
       "topRisk": [
         {
           "slug": "travel-agents",
           "title": "Travel agents",
-          "netRisk": 6.453671568627452,
-          "jobs": 65700
+          "netRisk": 6.440436274509804,
+          "jobs": 61500
         },
         {
           "slug": "cashiers",
           "title": "Cashiers",
           "netRisk": 6.010891976974277,
-          "jobs": 3157200
+          "jobs": 3106300
         },
         {
-          "slug": "insurance-sales-agents",
-          "title": "Insurance sales agents",
-          "netRisk": 5.666050304850115,
-          "jobs": 568800
+          "slug": "models",
+          "title": "Models",
+          "netRisk": 5.964326330532213,
+          "jobs": 4200
         }
       ]
     },
     {
       "category": "community-and-social-service",
-      "totalJobs": 2519200,
+      "totalJobs": 2604400,
       "occupationCount": 9,
-      "weightedNetRisk": 5.376127828025579,
+      "weightedNetRisk": 5.397811811945246,
       "weightedNetRisk100": 54,
-      "meanNetRisk": 5.330652147855371,
+      "meanNetRisk": 5.368585483333567,
       "topRisk": [
         {
           "slug": "social-and-human-service-assistants",
           "title": "Social and human service assistants",
-          "netRisk": 5.781181536555143,
-          "jobs": 449600
+          "netRisk": 5.783387418908084,
+          "jobs": 463400
         },
         {
           "slug": "probation-officers-and-correctional-treatment-specialists",
           "title": "Probation officers and correctional treatment specialists",
-          "netRisk": 5.486840437099054,
-          "jobs": 92300
+          "netRisk": 5.4934580841578775,
+          "jobs": 93700
         },
         {
-          "slug": "health-educators",
-          "title": "Health education specialists",
-          "netRisk": 5.450909523809523,
-          "jobs": 71800
+          "slug": "school-and-career-counselors",
+          "title": "School and career counselors and advisors",
+          "netRisk": 5.482873527694791,
+          "jobs": 389500
         }
       ]
     },
     {
       "category": "arts-and-design",
-      "totalJobs": 728500,
+      "totalJobs": 740600,
       "occupationCount": 9,
-      "weightedNetRisk": 5.358097248830359,
-      "weightedNetRisk100": 54,
-      "meanNetRisk": 5.215995789252186,
+      "weightedNetRisk": 5.324196955932882,
+      "weightedNetRisk100": 53,
+      "meanNetRisk": 5.192653348433723,
       "topRisk": [
         {
           "slug": "graphic-designers",
           "title": "Graphic designers",
-          "netRisk": 5.685118466898954,
-          "jobs": 265900
+          "netRisk": 5.671883172781307,
+          "jobs": 253100
         },
         {
           "slug": "multimedia-artists-and-animators",
           "title": "Special effects artists and animators",
           "netRisk": 5.600136384929398,
-          "jobs": 57100
+          "jobs": 51900
         },
         {
           "slug": "industrial-designers",
           "title": "Industrial designers",
-          "netRisk": 5.438366105510424,
-          "jobs": 30600
+          "netRisk": 5.4163072819810125,
+          "jobs": 35400
         }
       ]
     },
     {
       "category": "architecture-and-engineering",
-      "totalJobs": 2406700,
+      "totalJobs": 2444000,
       "occupationCount": 29,
-      "weightedNetRisk": 5.275292251846066,
+      "weightedNetRisk": 5.269534422848744,
       "weightedNetRisk100": 53,
-      "meanNetRisk": 5.166401684346569,
+      "meanNetRisk": 5.168095947285935,
       "topRisk": [
         {
           "slug": "drafters",
           "title": "Drafters",
-          "netRisk": 6.317041062801932,
-          "jobs": 192100
+          "netRisk": 6.219014328808447,
+          "jobs": 180200
         },
         {
           "slug": "cartographers-and-photogrammetrists",
           "title": "Cartographers and photogrammetrists",
-          "netRisk": 5.7462324929971995,
-          "jobs": 13400
+          "netRisk": 5.730791316526611,
+          "jobs": 14700
         },
         {
           "slug": "computer-hardware-engineers",
           "title": "Computer hardware engineers",
           "netRisk": 5.654242731575389,
-          "jobs": 76800
+          "jobs": 76100
         }
       ]
     },
     {
       "category": "life-physical-and-social-science",
-      "totalJobs": 1143800,
+      "totalJobs": 1158000,
       "occupationCount": 29,
-      "weightedNetRisk": 5.210120225589665,
+      "weightedNetRisk": 5.196250068283522,
       "weightedNetRisk100": 52,
-      "meanNetRisk": 5.224226260178638,
+      "meanNetRisk": 5.208427950008117,
       "topRisk": [
         {
           "slug": "survey-researchers",
           "title": "Survey researchers",
-          "netRisk": 6.128651260504202,
-          "jobs": 8800
+          "netRisk": 6.086739495798319,
+          "jobs": 9800
         },
         {
           "slug": "economists",
           "title": "Economists",
           "netRisk": 5.898379685096074,
-          "jobs": 17600
+          "jobs": 18600
         },
         {
           "slug": "atmospheric-scientists-including-meteorologists",
           "title": "Atmospheric scientists, including meteorologists",
-          "netRisk": 5.7706258338386895,
-          "jobs": 9400
+          "netRisk": 5.786067010309278,
+          "jobs": 10700
         }
       ]
     },
     {
       "category": "management",
-      "totalJobs": 12027300,
+      "totalJobs": 12101600,
       "occupationCount": 26,
-      "weightedNetRisk": 5.118581781862521,
+      "weightedNetRisk": 5.119634314650288,
       "weightedNetRisk100": 51,
-      "meanNetRisk": 5.205116314526399,
+      "meanNetRisk": 5.20271741577658,
       "topRisk": [
         {
           "slug": "advertising-promotions-and-marketing-managers",
           "title": "Advertising, promotions, and marketing managers",
-          "netRisk": 5.769948864437861,
-          "jobs": 434000
+          "netRisk": 5.669348179271708,
+          "jobs": 454800
         },
         {
           "slug": "property-real-estate-and-community-association-managers",
           "title": "Property, real estate, and community association managers",
-          "netRisk": 5.618636493432325,
-          "jobs": 466100
+          "netRisk": 5.63347902461574,
+          "jobs": 460400
         },
         {
           "slug": "architectural-and-engineering-managers",
           "title": "Architectural and engineering managers",
           "netRisk": 5.538487671089751,
-          "jobs": 212500
+          "jobs": 220900
         }
       ]
     },
     {
       "category": "healthcare",
-      "totalJobs": 17533300,
+      "totalJobs": 18144500,
       "occupationCount": 49,
-      "weightedNetRisk": 4.949790777656151,
-      "weightedNetRisk100": 49,
-      "meanNetRisk": 5.038628352636326,
+      "weightedNetRisk": 4.953416882258316,
+      "weightedNetRisk100": 50,
+      "meanNetRisk": 5.048700253007474,
       "topRisk": [
         {
           "slug": "medical-transcriptionists",
           "title": "Medical transcriptionists",
-          "netRisk": 7.507548017289983,
-          "jobs": 43900
+          "netRisk": 7.498724487878219,
+          "jobs": 42000
         },
         {
           "slug": "medical-records-and-health-information-technicians",
           "title": "Medical records specialists",
-          "netRisk": 6.524117647058823,
-          "jobs": 194800
+          "netRisk": 6.980378972278566,
+          "jobs": 200700
         },
         {
           "slug": "medical-dosimetrists",
           "title": "Medical dosimetrists",
-          "netRisk": 6.256497971602434,
-          "jobs": 4800
+          "netRisk": 6.252086206896552,
+          "jobs": 3500
         }
       ]
     },
     {
       "category": "production",
-      "totalJobs": 5706000,
+      "totalJobs": 5772900,
       "occupationCount": 16,
-      "weightedNetRisk": 4.82551901586602,
+      "weightedNetRisk": 4.81379452586205,
       "weightedNetRisk100": 48,
-      "meanNetRisk": 4.922389699188557,
+      "meanNetRisk": 4.916842460803878,
       "topRisk": [
         {
           "slug": "quality-control-inspectors",
           "title": "Quality control inspectors",
-          "netRisk": 5.678003387742532,
-          "jobs": 598000
+          "netRisk": 5.673591623036649,
+          "jobs": 602000
         },
         {
           "slug": "dental-and-ophthalmic-laboratory-technicians-and-medical-appliance-technicians",
           "title": "Dental and ophthalmic laboratory technicians and medical appliance technicians",
-          "netRisk": 5.463838672102504,
-          "jobs": 66800
+          "netRisk": 5.417534869216077,
+          "jobs": 64300
         },
         {
           "slug": "water-and-wastewater-treatment-plant-and-system-operators",
           "title": "Water and wastewater treatment plant and system operators",
-          "netRisk": 5.348709047398486,
-          "jobs": 132400
+          "netRisk": 5.342091400339664,
+          "jobs": 131000
         }
       ]
     },
     {
       "category": "farming-fishing-and-forestry",
-      "totalJobs": 889600,
+      "totalJobs": 915200,
       "occupationCount": 4,
-      "weightedNetRisk": 4.7728441425381405,
+      "weightedNetRisk": 4.7863113822443,
       "weightedNetRisk100": 48,
-      "meanNetRisk": 4.673740148426234,
+      "meanNetRisk": 4.685321030779175,
       "topRisk": [
         {
           "slug": "fishers-and-related-fishing-workers",
           "title": "Fishing and hunting workers",
           "netRisk": 4.844879551820728,
-          "jobs": 21900
+          "jobs": 28200
         },
         {
           "slug": "agricultural-workers",
           "title": "Agricultural workers",
-          "netRisk": 4.794705882352941,
-          "jobs": 812600
+          "netRisk": 4.805735294117647,
+          "jobs": 831900
         },
         {
           "slug": "forest-and-conservation-workers",
           "title": "Forest and conservation workers",
-          "netRisk": 4.701845747766562,
-          "jobs": 10800
+          "netRisk": 4.721698688943032,
+          "jobs": 14700
         }
       ]
     },
     {
       "category": "transportation-and-material-moving",
-      "totalJobs": 13050600,
+      "totalJobs": 12989800,
       "occupationCount": 11,
-      "weightedNetRisk": 4.756760673116877,
+      "weightedNetRisk": 4.762396845727753,
       "weightedNetRisk100": 48,
-      "meanNetRisk": 4.932968715744747,
+      "meanNetRisk": 4.941359119843518,
       "topRisk": [
         {
           "slug": "taxi-drivers-and-chauffeurs",
           "title": "Taxi drivers, shuttle drivers, and chauffeurs",
-          "netRisk": 5.61925457452136,
-          "jobs": 447900
+          "netRisk": 5.616696078431373,
+          "jobs": 455700
         },
         {
           "slug": "air-traffic-controllers",
           "title": "Air traffic controllers",
-          "netRisk": 5.5246764705882345,
-          "jobs": 24100
+          "netRisk": 5.531294117647059,
+          "jobs": 24000
         },
         {
           "slug": "heavy-and-tractor-trailer-truck-drivers",
           "title": "Heavy and tractor-trailer truck drivers",
-          "netRisk": 5.136876918572752,
-          "jobs": 2235100
+          "netRisk": 5.139082800925694,
+          "jobs": 2221200
         }
       ]
     },
     {
       "category": "entertainment-and-sports",
-      "totalJobs": 803000,
+      "totalJobs": 828500,
       "occupationCount": 8,
-      "weightedNetRisk": 4.731642481347041,
+      "weightedNetRisk": 4.726195542179231,
       "weightedNetRisk100": 47,
-      "meanNetRisk": 4.709448400160625,
+      "meanNetRisk": 4.692933231088871,
       "topRisk": [
         {
           "slug": "actors",
           "title": "Actors",
-          "netRisk": 5.346139329590757,
-          "jobs": 57000
+          "netRisk": 5.370635624075549,
+          "jobs": 67500
         },
         {
           "slug": "umpires-referees-and-other-sports-officials",
           "title": "Umpires, referees, and other sports officials",
-          "netRisk": 5.235276911495859,
-          "jobs": 19300
+          "netRisk": 5.233071029142918,
+          "jobs": 18200
         },
         {
           "slug": "producers-and-directors",
           "title": "Producers and directors",
-          "netRisk": 5.118779145769733,
-          "jobs": 167000
+          "netRisk": 5.103337969299145,
+          "jobs": 181000
         }
       ]
     },
     {
       "category": "food-preparation-and-serving",
-      "totalJobs": 12022100,
+      "totalJobs": 12024600,
       "occupationCount": 6,
-      "weightedNetRisk": 4.641811016437139,
+      "weightedNetRisk": 4.641824447330518,
       "weightedNetRisk100": 46,
-      "meanNetRisk": 4.541462056761442,
+      "meanNetRisk": 4.54146205676144,
       "topRisk": [
         {
           "slug": "waiters-and-waitresses",
           "title": "Waiters and waitresses",
           "netRisk": 4.789659436520099,
-          "jobs": 2329700
+          "jobs": 2284400
         },
         {
           "slug": "food-and-beverage-serving-and-related-workers",
           "title": "Food and beverage serving and related workers",
           "netRisk": 4.68,
-          "jobs": 5030600
+          "jobs": 5143000
         },
         {
           "slug": "cooks",
           "title": "Cooks",
-          "netRisk": 4.60178431372549,
-          "jobs": 2805100
+          "netRisk": 4.603990196078431,
+          "jobs": 2705800
         }
       ]
     },
     {
       "category": "installation-maintenance-and-repair",
-      "totalJobs": 5008200,
+      "totalJobs": 5025300,
       "occupationCount": 15,
-      "weightedNetRisk": 4.546244751643147,
-      "weightedNetRisk100": 45,
-      "meanNetRisk": 4.483719654380411,
+      "weightedNetRisk": 4.563134803382258,
+      "weightedNetRisk100": 46,
+      "meanNetRisk": 4.532222575967999,
       "topRisk": [
         {
           "slug": "telecommunications-equipment-installers-and-repairers-except-line-installers",
           "title": "Telecommunications technicians",
-          "netRisk": 5.00517577582214,
-          "jobs": 268500
+          "netRisk": 5.009587540528022,
+          "jobs": 257800
+        },
+        {
+          "slug": "calibration-technologists-and-technicians",
+          "title": "Calibration technologists and technicians",
+          "netRisk": 4.85618189403421,
+          "jobs": 17000
         },
         {
           "slug": "industrial-machinery-mechanics-and-maintenance-workers-and-millwrights",
           "title": "Industrial machinery mechanics, machinery maintenance workers, and millwrights",
-          "netRisk": 4.747349642660803,
-          "jobs": 538300
-        },
-        {
-          "slug": "heavy-vehicle-and-mobile-equipment-service-technicians",
-          "title": "Heavy vehicle and mobile equipment service technicians",
-          "netRisk": 4.725003630405299,
-          "jobs": 245600
+          "netRisk": 4.762790819131391,
+          "jobs": 547300
         }
       ]
     },
     {
       "category": "personal-care-and-service",
-      "totalJobs": 3399100,
+      "totalJobs": 3455800,
       "occupationCount": 11,
-      "weightedNetRisk": 4.510667355159057,
+      "weightedNetRisk": 4.525105357232697,
       "weightedNetRisk100": 45,
-      "meanNetRisk": 4.684195393666223,
+      "meanNetRisk": 4.683906290290545,
       "topRisk": [
         {
           "slug": "concierges",
           "title": "Concierges",
-          "netRisk": 5.498883753501401,
-          "jobs": 45600
+          "netRisk": 5.490060224089636,
+          "jobs": 50200
         },
         {
           "slug": "gaming-services-occupations",
           "title": "Gambling services workers",
-          "netRisk": 5.161037071078431,
-          "jobs": 150600
+          "netRisk": 5.150007659313725,
+          "jobs": 146500
         },
         {
           "slug": "tour-and-travel-guides",
           "title": "Tour and travel guides",
-          "netRisk": 5.138232592249498,
-          "jobs": 55800
+          "netRisk": 5.131614945190675,
+          "jobs": 62200
         }
       ]
     },
     {
       "category": "construction-and-extraction",
-      "totalJobs": 6222900,
+      "totalJobs": 6148600,
       "occupationCount": 20,
-      "weightedNetRisk": 4.330102621974721,
+      "weightedNetRisk": 4.337971687575298,
       "weightedNetRisk100": 43,
-      "meanNetRisk": 4.381568702039597,
+      "meanNetRisk": 4.394026859146121,
       "topRisk": [
         {
           "slug": "construction-and-building-inspectors",
           "title": "Construction and building inspectors",
-          "netRisk": 5.2148366677539775,
-          "jobs": 147600
+          "netRisk": 5.21924843245986,
+          "jobs": 153900
         },
         {
           "slug": "oil-and-gas-workers",
           "title": "Oil and gas workers",
-          "netRisk": 4.8125230502878775,
-          "jobs": 115900
+          "netRisk": 4.843405403229053,
+          "jobs": 112700
         },
         {
           "slug": "construction-equipment-operators",
           "title": "Construction equipment operators",
-          "netRisk": 4.653286987522281,
-          "jobs": 539500
+          "netRisk": 4.659904634581105,
+          "jobs": 534100
         }
       ]
     },
     {
       "category": "building-and-grounds-cleaning",
-      "totalJobs": 3846500,
+      "totalJobs": 3840500,
       "occupationCount": 3,
-      "weightedNetRisk": 4.250268674441297,
+      "weightedNetRisk": 4.250412351769369,
       "weightedNetRisk100": 43,
-      "meanNetRisk": 4.289215731114426,
+      "meanNetRisk": 4.293627495820309,
       "topRisk": [
         {
           "slug": "pest-control-workers",
           "title": "Pest control workers",
-          "netRisk": 4.487198617295524,
-          "jobs": 102400
+          "netRisk": 4.500433911413171,
+          "jobs": 108700
         },
         {
           "slug": "janitors-and-building-cleaners",
           "title": "Janitors and building cleaners",
           "netRisk": 4.364419164283049,
-          "jobs": 2447700
+          "jobs": 2432600
         },
         {
           "slug": "grounds-maintenance-workers",
           "title": "Grounds maintenance workers",
           "netRisk": 4.0160294117647055,
-          "jobs": 1296400
+          "jobs": 1299200
         }
       ]
     }

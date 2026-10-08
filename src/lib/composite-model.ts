@@ -11,6 +11,7 @@ import capabilityAnchor from "@/data/capability-anchor.json";
 export const CAPABILITY_ANCHOR = capabilityAnchor as {
   fetchedAt: string;
   source: string;
+  indexVersion?: string;
   modelCount: number;
   frontierReleases: number;
   derived: {
@@ -57,7 +58,7 @@ export interface Sector {
   name: string;
   btos: BtosData;
   params: SectorParams;
-  employmentMillions: number;  // US private employment (BLS QCEW)
+  employmentMillions: number;  // BLS QCEW 2025 annual avg, all ownerships, by NAICS sector
 }
 
 export interface Knobs {

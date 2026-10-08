@@ -75,53 +75,60 @@ interface JobTaskVisualizerProps {
 const HIDDEN_CATEGORIES: string[] = [];
 
 /**
- * BLS May 2024 employment estimates (thousands) for each profiled occupation.
- * Total US nonfarm employment: ~158.4M (BLS CES, 2024 annual average).
+ * BLS OEWS May 2025 national employment (thousands) for each profiled occupation,
+ * summed across the SOC codes each profile maps to. OEWS excludes the self-employed.
+ * Not remapped (no clean SOC match, values kept): data-analyst, therapist,
+ * product-manager, chef-line-cook, operations-manager, warehouse-worker,
+ * chief-of-staff, hotel-housekeeper. Where two profiles share one SOC code, the
+ * count sits on one profile and the other is 0, so coverage counts it once:
+ * 31-1120 on home-health-aide (personal-care-aide = 0); 41-1011 on
+ * retail-supervisor (retail-store-manager = 0).
+ * Denominator: OEWS May 2025 all-occupations total, 155.5M.
  */
 const EMPLOYMENT_THOUSANDS: Record<string, number> = {
-  "retail-salesperson": 4300, "fast-food-worker": 3800, "home-health-aide": 3200,
-  "cashier": 3300, "general-operations-manager": 3000, "registered-nurse": 3200,
-  "office-clerk": 2700, "customer-service-rep": 2800, "waiter-waitress": 2300,
-  "laborer-material-mover": 2600, "stocker-order-filler": 2000,
-  "administrative-assistant": 2000, "janitor-custodian": 2100,
-  "truck-driver": 2000, "software-developer": 1800, "bookkeeper": 1500,
-  "accountant": 1500, "assembler-fabricator": 1500, "teacher-k12": 1500,
-  "nursing-assistant": 1300, "construction-laborer": 1300, "maid-housekeeper": 1400,
-  "teaching-assistant": 1400, "landscaping-worker": 1300, "retail-store-manager": 1400,
-  "restaurant-manager": 1100, "food-service-supervisor": 1100,
-  "warehouse-worker": 1200, "security-guard": 1100, "delivery-driver": 1100,
-  "carpenter": 1000, "childcare-worker": 1000, "personal-care-aide": 1800,
-  "medical-assistant": 800, "hairdresser-barber": 800, "bus-driver": 700,
-  "electrician": 800, "plumber": 500, "hvac-technician": 400,
-  "automotive-mechanic": 800, "maintenance-repair-worker": 1400,
-  "dental-hygienist": 230, "receptionist": 1000, "sales-representative": 1700,
-  "lawyer": 800, "physician": 730, "pharmacist": 330, "dentist": 160,
-  "financial-analyst": 330, "marketing-manager": 400, "hr-specialist": 800,
-  "project-manager": 900, "data-analyst": 500, "executive-assistant": 600,
-  "graphic-designer": 270, "operations-manager": 400, "it-manager": 520,
-  "product-manager": 400, "management-analyst": 900,
-  "loan-officer": 350, "insurance-agent": 530, "real-estate-agent": 500,
-  "paralegal": 350, "social-worker": 730, "therapist": 350,
-  "college-professor": 1300, "school-counselor": 350,
-  "hotel-front-desk": 300, "chef-line-cook": 1300, "police-officer": 700,
-  "supply-chain-analyst": 200, "copywriter": 130, "video-editor": 60,
-  "pr-specialist": 280, "technical-writer": 55, "merch-buyer": 200,
-  "journalist": 45, "ux-designer": 110, "construction-manager": 500,
-  "translator-interpreter": 60, "radiologist": 35, "compliance-officer": 350,
-  "claims-adjuster": 300, "architect": 130, "tax-preparer": 90,
-  "research-scientist": 180, "photographer": 60, "civil-engineer": 330,
-  "bank-teller": 400, "retail-supervisor": 1400,
-  "licensed-practical-nurse": 630, "industrial-machinery-mechanic": 500,
-  "pharmacy-technician": 450, "welder": 430, "preschool-teacher": 400,
-  "substance-abuse-counselor": 350, "firefighter": 330, "emt-paramedic": 270,
-  "genetic-counselor": 5, "veterinary-technician": 120, "chief-of-staff": 50,
-  "cook-restaurant": 1400, "food-prep-worker": 900, "production-supervisor": 700,
-  "packer-packager": 650, "bartender": 650, "forklift-operator": 600,
-  "inspector-tester-sorter": 600, "hotel-housekeeper": 600, "dining-attendant": 550,
-  "shipping-receiving-clerk": 550, "systems-analyst": 500, "billing-clerk": 500,
-  "dishwasher": 500,
+  "retail-salesperson": 3898, "fast-food-worker": 3854, "home-health-aide": 4306,
+  "cashier": 3089, "general-operations-manager": 3503, "registered-nurse": 3380,
+  "office-clerk": 2465, "customer-service-rep": 2596, "waiter-waitress": 2271,
+  "laborer-material-mover": 2950, "stocker-order-filler": 2834,
+  "administrative-assistant": 1707, "janitor-custodian": 2210,
+  "truck-driver": 2062, "software-developer": 1688, "bookkeeper": 1374,
+  "accountant": 1450, "assembler-fabricator": 1405, "teacher-k12": 3074,
+  "nursing-assistant": 1449, "construction-laborer": 1097, "maid-housekeeper": 861,
+  "teaching-assistant": 1420, "landscaping-worker": 953, "retail-store-manager": 0,
+  "restaurant-manager": 238, "food-service-supervisor": 1223,
+  "warehouse-worker": 1200, "security-guard": 1283, "delivery-driver": 983,
+  "carpenter": 670, "childcare-worker": 519, "personal-care-aide": 0,
+  "medical-assistant": 818, "hairdresser-barber": 321, "bus-driver": 562,
+  "electrician": 757, "plumber": 466, "hvac-technician": 410,
+  "automotive-mechanic": 705, "maintenance-repair-worker": 1530,
+  "dental-hygienist": 223, "receptionist": 910, "sales-representative": 1523,
+  "lawyer": 754, "physician": 175, "pharmacist": 322, "dentist": 124,
+  "financial-analyst": 362, "marketing-manager": 395, "hr-specialist": 912,
+  "project-manager": 1067, "data-analyst": 500, "executive-assistant": 460,
+  "graphic-designer": 198, "operations-manager": 400, "it-manager": 671,
+  "product-manager": 400, "management-analyst": 898,
+  "loan-officer": 274, "insurance-agent": 479, "real-estate-agent": 193,
+  "paralegal": 393, "social-worker": 776, "therapist": 350,
+  "college-professor": 1371, "school-counselor": 353,
+  "hotel-front-desk": 261, "chef-line-cook": 1300, "police-officer": 671,
+  "supply-chain-analyst": 251, "copywriter": 48, "video-editor": 26,
+  "pr-specialist": 283, "technical-writer": 46, "merch-buyer": 491,
+  "journalist": 39, "ux-designer": 113, "construction-manager": 380,
+  "translator-interpreter": 52, "radiologist": 27, "compliance-officer": 417,
+  "claims-adjuster": 324, "architect": 107, "tax-preparer": 76,
+  "research-scientist": 172, "photographer": 52, "civil-engineer": 368,
+  "bank-teller": 329, "retail-supervisor": 1122,
+  "licensed-practical-nurse": 648, "industrial-machinery-mechanic": 440,
+  "pharmacy-technician": 472, "welder": 416, "preschool-teacher": 479,
+  "substance-abuse-counselor": 492, "firefighter": 346, "emt-paramedic": 281,
+  "genetic-counselor": 4, "veterinary-technician": 129, "chief-of-staff": 50,
+  "cook-restaurant": 1410, "food-prep-worker": 894, "production-supervisor": 673,
+  "packer-packager": 560, "bartender": 756, "forklift-operator": 774,
+  "inspector-tester-sorter": 597, "hotel-housekeeper": 600, "dining-attendant": 543,
+  "shipping-receiving-clerk": 817, "systems-analyst": 520, "billing-clerk": 404,
+  "dishwasher": 477,
 };
-const TOTAL_US_EMPLOYMENT = 158400; // thousands
+const TOTAL_US_EMPLOYMENT = 155496; // thousands, OEWS May 2025 all occupations
 const coveredEmployment = JOB_PROFILES.reduce(
   (sum, job) => sum + (EMPLOYMENT_THOUSANDS[job.id] ?? 0), 0
 );
@@ -301,7 +308,7 @@ export default function JobTaskVisualizer({ initialJobId, dimensionScores }: Job
               </a>
             </p>
             <p className="text-xs text-[var(--muted)] mt-2 opacity-70">
-              {JOB_PROFILES.length}+ occupations covering ~{coveragePct}% of US employment (BLS 2024)
+              {JOB_PROFILES.length}+ occupations covering ~{coveragePct}% of US employment (BLS OEWS May 2025)
             </p>
           </div>
         )}
