@@ -1,0 +1,15 @@
+{
+  "id": "thompson-ai-economy-26-facts-2026",
+  "abstract": "Derek Thompson's October 2026 newsletter assembles 26 charts into a story of what AI is doing to the economy: high adoption with shallow work use, a near-$1 trillion annual buildout that dominates stock returns, fast but concentrated revenue growth showing early signs of plateau, and sections on youth unemployment and the bubble case. A synthesis of others' data rather than original research.",
+  "keyFindings": [
+    "AI took about three years to reach 50 percent adoption in the US, against roughly a decade for television and less than a decade for the internet.",
+    "Daily use of AI for work is between 10 and 25 percent depending on the survey; Andreessen Horowitz data finds less than 3 percent of US households report paid AI subscriptions.",
+    "Users are roughly six times more likely to say chatbots help their productivity than hurt it, while a large plurality tell Pew AI has a mostly negative effect on society.",
+    "AI capital spending is approaching $1 trillion a year, the most expensive infrastructure project relative to the economy since the 19th-century railroads; of each $100, about $50 goes to chips, $20 to power, $15 to networking and $7.50 each to cooling and construction (a16z).",
+    "Nineteen of the 25 best-performing US stocks in 2026 are tied to the AI buildout; excluding them, the S&P 500 is down for the year.",
+    "External AI revenue is about $280 billion annualized as of September (Azeem Azhar's team); Ramp's top 1 percent of businesses cut AI spending per employee 10 percent in August; per Apollo the top 10 percent of AI customers account for more than 90 percent of spending; average token prices at OpenAI and Anthropic have fallen since July."
+  ],
+  "methodology": "Newsletter synthesis of third-party charts and datasets: the GenAI adoption tracker, Pew, Andreessen Horowitz, Jason Furman, Ramp (Ara Kharazian), Apollo, and Azeem Azhar's revenue tracking. No original data.",
+  "qualifiers": "Secondary source; every figure should be traced to its primary publisher before plotting. Partly paywalled: the youth-unemployment and bubble sections were not reviewed for this record. Revenue figures for individual AI labs are described by the author as tentative.",
+  "fetchedAt": "2026-10-09"
+}

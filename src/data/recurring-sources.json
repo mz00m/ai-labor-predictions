@@ -20,11 +20,11 @@
       "whatItMeasures": "Net change in nonfarm payroll employment and the unemployment rate, from two Census-run surveys (~119K businesses and ~60K households). Broken out by industry, age, race, and education.",
       "whyItMatters": "The single most-cited labor market signal. AI's aggregate effect (or lack thereof) shows up here first if it's happening at scale. Prior-month revisions often reveal that early estimates over- or under-stated the trend.",
       "lastIngested": {
-        "sourceId": "bls-employment-situation-aug-2026",
-        "date": "2026-09-04",
-        "value": "+162K nonfarm vs +31K 12-month average; U-rate 4.1%; information -23K; July revised -23K to +21K"
+        "sourceId": "bls-employment-situation-sep-2026",
+        "date": "2026-10-02",
+        "value": "+29K nonfarm vs +45K 12-month average; U-rate 4.2%; information -10K (-120K y/y); financial activities -129K since May 2025; July revised to -10K, August to +133K"
       },
-      "nextExpected": "October 2, 2026 (September data)"
+      "nextExpected": "November 6, 2026 (October data)"
     },
     {
       "id": "bls-employment-projections",
