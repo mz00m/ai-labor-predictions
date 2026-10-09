@@ -2,6 +2,16 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "The 26 Most Important Facts About AI and the Economy",
+      "author": "Derek Thompson",
+      "publisher": "Derek Thompson (Substack)",
+      "date": "2026-10-08",
+      "url": "https://www.derekthompson.org/p/the-state-of-ai-in-2026in-26-charts",
+      "takeaway": "Thompson's chart-by-chart story is the best single orientation to why AI looks enormous in the capital accounts and modest in the labor data. The useful frame is that the construction of AI is moving the economy faster than its use. On the use side: adoption hit 50 percent in about three years, the fastest of any technology on record, but daily use for work runs between 10 and 25 percent depending on the survey, and fewer than 3 percent of US households pay for an AI subscription (Andreessen Horowitz). Users say chatbots help their own productivity roughly six times as often as they hurt it, while a plurality tell Pew AI is bad for society. On the build side, spending is approaching $1 trillion a year, the largest infrastructure outlay relative to the economy since the 19th-century railroads, and 19 of the 25 best-performing stocks of 2026 are buildout plays; strip out AI and the S&P 500 is down for the year. Revenue is real but concentrated and wobbling: external AI revenue is about $280 billion annualized as of September (Azeem Azhar's team), the top 1 percent of businesses Ramp tracks cut AI spending per employee by 10 percent in August, and per Apollo the top 10 percent of customers account for over 90 percent of spending, while falling token prices compress margins. Read it as context for the site's headline: a shallow, concentrated pattern of work use is what you would expect to see before, not during, measurable displacement. It also covers youth unemployment and the bubble case. Synthesis of others' data; check the underlying sources before citing a figure.",
+      "weekFeatured": "2026-10-09",
+      "tier": 3
+    },
+    {
       "title": "Has AI impacted the labor market yet?",
       "author": "Alex Imas and Jacob Schaal",
       "publisher": "Ghosts of Electricity (Substack)",

@@ -1,0 +1,14 @@
+{
+  "id": "bls-employment-situation-sep-2026",
+  "abstract": "The BLS Employment Situation for September 2026, released October 2, 2026. Nonfarm payrolls rose 29,000 and the unemployment rate was 4.2 percent, with no major industry changing much over the month. Downward revisions turned July back into a loss and cut August by 29,000. For jobsdata.ai it is the aggregate check on AI displacement claims, and it carries two AI-relevant industry lines: information, down 120,000 over the year, and financial activities, down 129,000 since May 2025 with most of the loss in insurance carriers.",
+  "keyFindings": [
+    "Total nonfarm payroll employment changed little in September (+29,000), following an average monthly gain of 45,000 over the prior 12 months; the unemployment rate was 4.2 percent and has stayed between 4.1 and 4.3 percent since March.",
+    "Employment in financial activities is down 129,000 since a recent peak in May 2025, with most of the loss in insurance carriers and related activities (-90,000).",
+    "Information employment was 2,739,000 in September (preliminary, table B-1): -10,000 over the month and -120,000 (-4.2%) from September 2025.",
+    "July was revised down 31,000 to -10,000 and August down 29,000 to +133,000, so July and August combined are 60,000 lower than previously reported.",
+    "Health care added 17,000, below its +33,000 prior-12-month average; average hourly earnings rose 0.1 percent to $37.81, up 3.0 percent over the year."
+  ],
+  "methodology": "Two monthly surveys run for BLS by the Census Bureau: the establishment survey of roughly 119,000 businesses and agencies (payroll employment, hours, earnings) and the household survey of about 60,000 households (unemployment rate, labor force participation). Seasonally adjusted. Payroll estimates are revised in each of the two following releases.",
+  "qualifiers": "An aggregate measure with no AI attribution. The information and insurance declines are consistent with AI displacement but equally consistent with interest rates, sector restructuring and post-pandemic normalization; the release cannot separate them. Monthly payroll changes carry sampling error of roughly plus or minus 130,000 at the 90 percent confidence level, and this month's revisions reversed the August reading recorded in the previous ingest.",
+  "fetchedAt": "2026-10-09"
+}

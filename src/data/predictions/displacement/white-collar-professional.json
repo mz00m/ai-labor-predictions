@@ -1299,6 +1299,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: over-25s in most-exposed occupations -6% vs least-exposed; -20% for ages 22-25"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "bls-employment-situation-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Sep 2026: information -10K; down 120K (-4.2%) from September 2025"
     }
   ],
   "sources": [
@@ -2368,6 +2377,16 @@
       "datePublished": "2026-10-01",
       "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
       "dateAdded": "2026-10-05"
+    },
+    {
+      "id": "bls-employment-situation-sep-2026",
+      "title": "BLS Employment Situation: September 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-02",
+      "excerpt": "\"Both nonfarm payroll employment (+29,000) and the unemployment rate (4.2 percent) changed little in September.\" \"Total nonfarm payroll employment changed little in September (+29,000), following an average monthly gain of 45,000 over the prior 12 months.\" \"Employment in financial activities is down by 129,000 since a recent peak in May 2025, with most of the job loss in insurance carriers and related activities (-90,000).\" \"The change in total nonfarm payroll employment for July was revised down by 31,000, from +21,000 to -10,000, and the change for August was revised down by 29,000, from +162,000 to +133,000.\" Table B-1: information employment 2,739,000 in September (preliminary), -10,000 over the month and -120,000 from September 2025.",
+      "dateAdded": "2026-10-09"
     }
   ]
 }
