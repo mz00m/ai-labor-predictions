@@ -1,0 +1,212 @@
+{
+  "week": "2026-W42",
+  "generatedAt": "2026-10-12T17:24:00.739Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Generative AI and Firm Values",
+      "summary": "Eisfeldt et al. construct the first workforce-level GenAI exposure measure and find an 'Artificial-Minus-Human' portfolio earned 5% in the two weeks following ChatGPT's release, directly linking labor exposure to GenAI to equity valuation signals.",
+      "source": "https://doi.org/10.1111/jofi.70089",
+      "authors": [
+        "Andrea L. Eisfeldt",
+        "Gregor Schubert",
+        "Miao Ben Zhang",
+        "Bledi Taska"
+      ],
+      "publishedAt": "2026-10-08",
+      "doi": "10.1111/jofi.70089",
+      "score": 0.88,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Revelio Labs RPLS US Jobs Report: The US economy adds 56.9k jobs in September",
+      "summary": "Revelio's RPLS tracker shows the US economy added only 56.9k jobs in September while active job postings fell another 1.8%, with the accompanying AI Labor Market Tracker documenting continued labor-market restructuring as GenAI adoption expands.",
+      "source": "https://www.reveliolabs.com/news/rpls/rpls-us-jobs-report-the-us-economy-adds-56-9k-jobs-in-september",
+      "publishedAt": "2026-10-01",
+      "score": 0.72,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Artificial intelligence technologies, skills demand and employment: Evidence from linked job ads",
+      "summary": "Using establishment-level vacancy data from 2015–2022, Peede and Stops find AI-related job postings remain a low share overall but are associated with significant shifts in skill demand at the establishment level, with differential effects on employment growth by AI intensity.",
+      "source": "https://doi.org/10.1016/j.labeco.2026.102974",
+      "authors": [
+        "Lennert Peede",
+        "Michael Stops"
+      ],
+      "publishedAt": "2026-10-01",
+      "doi": "10.1016/j.labeco.2026.102974",
+      "score": 0.7,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Indeed Hiring Lab: September 2026 Jobs Report — Steadiness Without a Spark",
+      "summary": "Indeed's Hiring Lab characterizes the September 2026 labor market as stable but lacking momentum, with job postings data suggesting hiring demand has plateaued as macroeconomic uncertainty persists.",
+      "source": "https://hiringlab.indeed.com/2026/10/02/september-2026-jobs-report-steadiness-without-a-spark/",
+      "publishedAt": "2026-10-02",
+      "score": 0.62,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Artificial intelligence and labor investment efficiency: evidence from U.S. firms",
+      "summary": "Analyzing U.S.-listed firms from 2004–2020, Xing et al. find a positive and statistically significant association between AI adoption and labor investment efficiency, with mechanism analysis suggesting AI reduces over- and under-investment in labor headcount.",
+      "source": "https://doi.org/10.1016/j.jimonfin.2026.103684",
+      "authors": [
+        "Kai Xing",
+        "Kepeng Xiong",
+        "Fulong Xiao",
+        "Hanxiong Zhang"
+      ],
+      "publishedAt": "2026-09-30",
+      "doi": "10.1016/j.jimonfin.2026.103684",
+      "score": 0.58,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Robots and Women in Manufacturing",
+      "summary": "Zuazu finds that industrial robot adoption reshapes gender composition in manufacturing employment, with the direction of the effect on women's employment share depending on baseline levels of female labor force participation across countries.",
+      "source": "https://doi.org/10.1080/13545701.2026.2691205",
+      "authors": [
+        "Izaskun Zuazu"
+      ],
+      "publishedAt": "2026-10-06",
+      "doi": "10.1080/13545701.2026.2691205",
+      "score": 0.55,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "From Repetition to Maintenance: How Digital Transformation in Chinese Manufacturing Reshapes Workers' Skill Requirements",
+      "summary": "Liu documents that digital transformation in Chinese manufacturing is systematically shifting demand away from repetitive-task workers toward maintenance and smart-manufacturing competencies, with educational requirements for factory positions rising measurably.",
+      "source": "https://doi.org/10.54254/2754-1169/2026.37556",
+      "authors": [
+        "YuTung Liu"
+      ],
+      "publishedAt": "2026-10-08",
+      "doi": "10.54254/2754-1169/2026.37556",
+      "score": 0.48,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "Enterprise AI at the Decision Point: A U.S.-Focused Systematic Review of Productivity, ROI, Workforce Change, and Governance",
+      "summary": "Rah and Johnson's systematic review of U.S. enterprise AI deployments synthesizes evidence on productivity gains, ROI, and workforce headcount changes, providing a meta-level quantitative baseline for AI adoption outcomes across sectors.",
+      "source": "https://doi.org/10.21203/rs.3.rs-11195857/v1",
+      "authors": [
+        "Audrey Rah",
+        "David W. Johnson"
+      ],
+      "publishedAt": "2026-09-29",
+      "doi": "10.21203/rs.3.rs-11195857/v1",
+      "score": 0.45,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "When Do AI Gains Become Broadly Shareable? A Policy Threshold for AI-Driven Automation",
+      "summary": "Nayebi extends a standard task-automation growth model with an AI capability parameter to identify the policy thresholds at which automation productivity gains become broadly distributed rather than captured by capital, offering quantitative boundary conditions for displacement predictions.",
+      "source": "https://doi.org/10.1609/aies.v9i3.43275",
+      "authors": [
+        "Aran Nayebi"
+      ],
+      "publishedAt": "2026-10-11",
+      "doi": "10.1609/aies.v9i3.43275",
+      "score": 0.42,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "The Impact of Digital Technologies on Self-Employment Dynamics in Italy",
+      "summary": "Caselli, Cristofoletti, and Fracazza use province-level panel data (2015–2019) to show that advanced automation and big data adoption causally reduced self-employment in Italian manufacturing macrosectors, with heterogeneous effects across skill levels.",
+      "source": "https://doi.org/10.1007/s40797-026-00412-2",
+      "authors": [
+        "Mauro Caselli",
+        "Enrico Cristofoletti",
+        "Andrea Fracasse"
+      ],
+      "publishedAt": "2026-09-28",
+      "doi": "10.1007/s40797-026-00412-2",
+      "score": 0.4,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "freelancer-rate-impact"
+    }
+  ],
+  "themes": [
+    "GenAI workforce exposure measures are reaching peer-reviewed finance and economics journals, providing new firm-level and equity-market quantification",
+    "US labor market shows low job-growth and declining postings in September 2026, with AI labor trackers flagging ongoing structural shifts beneath aggregate stability",
+    "Physical and digital automation continue to reshape manufacturing skill demands and gender composition globally, while policy research on distributional thresholds lags deployment"
+  ],
+  "watching": [
+    {
+      "title": "SERIES DUE: PyPI package downloads (/signals)",
+      "source": "https://pypistats.org/",
+      "reason": "Monthly AI Python package download data overdue 174 days; feeds /signals acceleration index and industry tool growth table."
+    },
+    {
+      "title": "SERIES DUE: BLS Current Employment Statistics by industry (/signals)",
+      "source": "https://www.bls.gov/ces/",
+      "reason": "Monthly BLS CES industry employment overdue 174 days; feeds 'vs late 2022' employment change on every /signals industry card. September release expected."
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates",
+      "source": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "reason": "ACS 5-year occupation mix (S2401) overdue 669 days; 2020-2024 estimates released Jan 2026 need ingestion for /map county and CBSA layers."
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index",
+      "source": "https://www.anthropic.com/economic-index",
+      "reason": "Quarterly Claude.ai usage dataset overdue 108 days; largest real-world GenAI work-pattern dataset. Feeds genai-work-adoption and workforce-ai-exposure."
+    },
+    {
+      "title": "SERIES DUE: GenAI Adoption Tracker / FRED RPS GenAI series (Bick, Blandin, Deming)",
+      "source": "https://fred.stlouisfed.org/categories/8",
+      "reason": "Definitive quarterly US worker GenAI adoption measure (official FRED) overdue 79 days; Q3 2026 wave expected August 2026. Feeds genai-work-adoption."
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators",
+      "source": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "reason": "Brynjolfsson lab quarterly dashboards (employment × AI exposure, macro takeoff, worker adoption) overdue 60 days. Feeds overall-us-displacement and workforce-ai-exposure."
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data",
+      "source": "https://www.stripeeconomics.com",
+      "reason": "Quarterly startup incorporation and AI-share of new formations overdue 46 days; fastest firm-formation signal outside Census BFS. Feeds ai-business-formation."
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS)",
+      "source": "https://www.bls.gov/oes/",
+      "reason": "Annual OEWS employment and wages by detailed occupation overdue 150 days; May 2026 estimates expected. Feeds /map state/metro scores and /task-visualizer."
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity",
+      "source": "https://www.bls.gov/cps/cpsaat11.htm",
+      "reason": "Annual CPS occupation-by-gender table overdue 212 days; 2025 annual averages needed for gender view on /task-visualizer/economy."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 114,
+    "afterDedup": 106
+  }
+}
