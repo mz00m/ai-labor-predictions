@@ -143,6 +143,17 @@
       "dataType": "observed",
       "metricType": "survey"
     }
+  ,
+    {
+      "date": "2026-09-20",
+      "value": 23.8,
+      "sourceIds": [
+        "census-btos-ai-cycle-202620"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    }
   ],
   "overlays": [
     {
@@ -1936,6 +1947,17 @@
       "datePublished": "2026-10-01",
       "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
       "dateAdded": "2026-10-05"
+    }
+  ,
+    {
+      "id": "census-btos-ai-cycle-202620",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202620)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-08",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" National share answering yes: 23.8% (SE 0.41%) for the two weeks ending 2026-09-20, unchanged from 23.8% (SE 0.26%) for the cycle ending 2026-09-06 and up from 23.2% for the cycle ending 2026-08-23 - the first flat reading after four consecutive increases. Q24, the six-month expectation of AI use, was 27.7% (SE 0.36%), up from 27.6%. Collection for cycle 202620 ran 2026-09-21 to 2026-10-04; published 2026-10-08. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-10-12"
     }
   ]
 }

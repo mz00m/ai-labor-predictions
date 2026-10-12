@@ -1,0 +1,13 @@
+{
+  "id": "census-btos-ai-cycle-202620",
+  "abstract": "Census Bureau Business Trends and Outlook Survey, biweekly cycle 202620, published October 8, 2026. Question 7 asks whether a business used artificial intelligence in any of its business functions in the last two weeks; Question 24 asks whether it expects to within six months. This is the highest-frequency firm-side AI adoption measure in the US and the series jobsdata.ai plots on ai-adoption-rate. Values are dated to reference-period end, which for BTOS falls six to seven weeks before publication.",
+  "keyFindings": [
+    "National AI use was 23.8 percent of firms (SE 0.41 percent) for the two weeks ending 2026-09-20, unchanged from 23.8 percent for the cycle ending 2026-09-06 - the first flat reading after four consecutive increases.",
+    "The six-month expectation of AI use (Q24) was 27.7 percent (SE 0.36 percent), up 0.1 points from 27.6 percent, so the gap between current and expected use held near 3.9 points.",
+    "The standard error widened from 0.26 to 0.41 percent between the two cycles, so this cycle's estimate is less precise than the one before it and a 0.0-point change is well inside sampling noise either way.",
+    "One flat cycle does not break the trend: AI use has risen from 21.5 percent for the cycle ending 2026-07-12 to 23.8 percent, and the level remains the highest in the series."
+  ],
+  "methodology": "Biweekly establishment survey across a large national sample of about 1.2 million US businesses, published as an experimental data product. Each estimate is collected over a two-week window covering a two-week reference period ending six to seven weeks before publication; cycle 202620 was collected 2026-09-21 to 2026-10-04 for the reference period 2026-09-07 to 2026-09-20. The November 2025 rewording from AI use 'in producing goods or services' to 'in any business function' is a same-construct instrument change, and Census publishes one continuous series.",
+  "qualifiers": "A firm-level adoption share, not a measure of how much work AI performs. It counts any use in the prior two weeks, so it sets a low bar per firm and says nothing about intensity - other surveys find that adopters apply AI to a minority of tasks. Not directly comparable to posting-based measures or to payment-based measures such as the Ramp AI Index, which read far higher on narrower or self-selected footprints. The biannual AI Supplement is a separate instrument with an 11-week reference window and should not be treated as the latest point in this series. The AI questions appear in every cycle; the press releases are boilerplate and never mention AI, so the National.xlsx workbook is the only reliable read.",
+  "fetchedAt": "2026-10-12"
+}
