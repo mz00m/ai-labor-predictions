@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-10-12",
-  "lastSweep": "2026-10-12",
+  "asOf": "2026-10-19",
+  "lastSweep": "2026-10-19",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -97,13 +97,13 @@
       "whatItMeasures": "Aggregated spend and hiring patterns across 70,000+ businesses using Ramp's expense/card platform. Provides one of the fastest reads on firm AI-tool adoption and its correlation with hiring behavior.",
       "whyItMatters": "Fills the gap between quarterly earnings and monthly BLS — private data with a real-time cadence. Ramp's finding that AI-intensive firms are adding jobs faster than laggards is a key counter to the displacement narrative.",
       "lastIngested": {
-        "sourceId": "ramp-ai-index-sep-2026",
-        "date": "2026-09-09",
-        "value": "Anthropic 43.8% of US businesses, OpenAI 39.8%; top-1% per-employee spend -9.7%; token prices -41%"
+        "sourceId": "ramp-ai-index-oct-2026",
+        "date": "2026-10-14",
+        "value": "Overall AI adoption 55.9% of US businesses (+0.62pp); OpenAI 40.6%, Anthropic 43.8%; top-1% spend $9,568/employee"
       },
-      "nextExpected": "October 14, 2026 (per the FRED release calendar for the RAMPAI* series)",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: no new monthly AI Index post. The FRED mirror of the index (RAMPAIALL and 15 sibling series, added Oct 5) was last updated 2026-09-29 with data through August 2026 and lists the next release as 2026-10-14, so this sweep landed two days early rather than finding the publisher late. ramp.com/data/ai-index is a client-rendered page that returns no post list to a fetcher; FRED is the reliable staleness check for this series. A separate Oct 6 Ramp post reports AI provider switching at a record 8% of firms in September - not ingested, as provider churn maps to neither of this series' target graphs."
+      "nextExpected": "November 11, 2026 (per the FRED release calendar for the RAMPAI* series)",
+      "lastSweep": "2026-10-19",
+      "sweepNote": "Swept 2026-10-19: ingested the October 14 post (September data) as ramp-ai-index-oct-2026, an overlay on ai-adoption-rate. Last sweep's finding held up - FRED is the reliable staleness check, and the index posted on the Oct 14 date FRED listed. The post list at ramp.com/data/ai-index is client-rendered and returns nothing to a fetcher, but the monthly post itself fetches fine at the guessable slug ramp.com/data/ai-index-<mon>-2026 (oct-2026 and sept-2026 both 200; october-2026 404s), so probe the slug rather than the index. Nothing in this edition touches overall-us-displacement or freelancer-rate-impact, the two graphs in targetGraphs - it is adoption and spend only, which is why the monthly index lands on ai-adoption-rate. Note that Ramp revised top-1% per-employee spend up across all prior periods after adding vendors, so the $9,568 here is not comparable with the $7,205 recorded one edition ago."
     },
     {
       "id": "fed-ai-adoption-monitoring",
@@ -271,9 +271,9 @@
         "date": "2026-06-26",
         "value": "50% say Claude handles 50%+ of tasks; 4% say entire job"
       },
-      "nextExpected": "~September 2026 (Q3 report)",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: still no Q3 report, third consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 108 days against a quarterly cadence. As flagged last sweep, the expectation is what looks wrong: the published cadence has been roughly four to five months in practice, not three. Recadence both entries to semiannual (183d) unless the Q3 report lands, and stop counting these as staleness."
+      "nextExpected": "~September 2026 (Q3 report); on the observed four-to-five-month cadence, ~November 2026",
+      "lastSweep": "2026-10-19",
+      "sweepNote": "Swept 2026-10-19: still no Q3 report, fourth consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 115 days against a quarterly cadence. The expectation is what looks wrong, not the feed: the published cadence has run roughly four to five months in practice, not three. This sweep deliberately did not change the cadence. Recadencing both to semiannual (183d) is the right fix and has been the standing recommendation for three sweeps, but it lowers the audit's own staleness bar on a live series, so it is a human call rather than something a scheduled run should do to itself."
     },
     {
       "id": "pwc-ai-jobs-barometer",
@@ -434,13 +434,13 @@
       "whatItMeasures": "New business applications (any) and high-propensity applications (likely to become employer businesses), by state, industry, and month.",
       "whyItMatters": "The universe-scale ground truth on US business formation. AI's role is inferred from sectoral patterns (professional services growing 4x faster than construction since ChatGPT) rather than directly tagged.",
       "lastIngested": {
-        "sourceId": "census-bfs-aug-2026",
-        "date": "2026-09-11",
-        "value": "531,728 business applications (-7.8% MoM); 28,501 projected formations (-4.6%)"
+        "sourceId": "census-bfs-sep-2026",
+        "date": "2026-10-14",
+        "value": "534,947 business applications (+0.5% MoM); 29,022 projected formations (+1.4%)"
       },
-      "nextExpected": "October 14, 2026 (September data)",
-      "lastSweep": "2026-09-28",
-      "sweepNote": "The figures are not in the press release, which is a tip sheet only, and not in the API, which now requires a registered key. Read https://www.census.gov/econ/bfs/current/index.html, which carries the seasonally adjusted applications and projected-formations sentences verbatim."
+      "nextExpected": "November 12, 2026 (October data, carrying the annual NAICS and seasonal-factor update, which revises the seasonally adjusted series for the prior five years)",
+      "lastSweep": "2026-10-19",
+      "sweepNote": "The figures are not in the API, which now requires a registered key. Two readable routes: https://www.census.gov/econ/bfs/current/index.html carries the applications and projected-formations sentences verbatim, and https://www.census.gov/econ/bfs/pdf/bfs_current.pdf adds the component and regional tables (high-propensity, planned wages, corporations, 8-quarter formations); pdftotext -layout reads it cleanly. Cite the dated press-release URL (.../press-releases/2026/business-formation-statistics-oct14.html) rather than either rotating path. Swept 2026-10-19: ingested September 2026 (CB26-163, published Oct 14) as an overlay - raw application counts are not the percentage increase over a pre-ChatGPT baseline that this graph plots."
     },
     {
       "id": "wef-future-of-jobs",
@@ -488,8 +488,8 @@
         "value": "Employment Outlook 2026 Ch. 1 ingested: LLM diffusion is not the main cause of the youth unemployment gap in AU/CA/EU/US; no posting break at end-2023, including for junior-flagged postings (Box 1.6)"
       },
       "nextExpected": "Rolling; next Employment Outlook ~July 2027",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: nothing new. oecd.ai/en/work-innovation-productivity-skills lists no publication, policy brief or data update after July 2026. The 92-day quarterly threshold is the wrong expectation for this series - its own nextExpected says the next Employment Outlook is ~July 2027, so it will read overdue on every sweep for the next nine months. Consider recadencing it to annual, which is what it actually publishes on."
+      "lastSweep": "2026-10-19",
+      "sweepNote": "Swept 2026-10-19: nothing new, second consecutive empty sweep. oecd.ai/en/work-innovation-productivity-skills still lists no publication, policy brief or data update after July 2026; its newest dated item of any kind is the AI-WIPS 2026 conference in April 2026. The 92-day quarterly threshold is the wrong expectation for this series - its own nextExpected says the next Employment Outlook is ~July 2027, so it will read overdue on every sweep for the next nine months. Recadence to annual, which is what it actually publishes on; left for a human to approve alongside the two Anthropic Economic Index entries, since a sweep lowering its own staleness bar is not a change a scheduled run should make unreviewed."
     },
     {
       "id": "nber-ai-labor-wp",
@@ -589,9 +589,9 @@
         "date": "2026-06-26",
         "value": "Dashboard updated with each themed report; latest: Cadences (June 2026)"
       },
-      "nextExpected": "~September 2026 (with Q3 themed report)",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: still no Q3 report, third consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 108 days against a quarterly cadence. As flagged last sweep, the expectation is what looks wrong: the published cadence has been roughly four to five months in practice, not three. Recadence both entries to semiannual (183d) unless the Q3 report lands, and stop counting these as staleness."
+      "nextExpected": "~September 2026 (with Q3 themed report); on the observed four-to-five-month cadence, ~November 2026",
+      "lastSweep": "2026-10-19",
+      "sweepNote": "Swept 2026-10-19: still no Q3 report, fourth consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 115 days against a quarterly cadence. The expectation is what looks wrong, not the feed: the published cadence has run roughly four to five months in practice, not three. This sweep deliberately did not change the cadence. Recadencing both to semiannual (183d) is the right fix and has been the standing recommendation for three sweeps, but it lowers the audit's own staleness bar on a live series, so it is a human call rather than something a scheduled run should do to itself."
     },
     {
       "id": "stripe-atlas",
@@ -777,7 +777,7 @@
         "value": "2019-2023 5-year estimates (S2401), county and CBSA occupation shares"
       },
       "nextExpected": "Overdue (checked 2026-10-06): 2020-2024 5-year estimates released January 29, 2026; not yet ingested. Next: 2021-2025 5-year estimates, ~December 2026",
-      "sweepNote": "The Census API now requires a key. scripts/fetch_acs_county.py reads CENSUS_API_KEY, which is not yet set in .env.local. Rerun after any OEWS refresh, since the county imputation uses the OEWS MSA and balance-of-state files. Swept 2026-10-12: still blocked on that key, which the cloud sweep environment does not carry either - no API key of any kind is present there. At 669 days this is the oldest pointer on the registry and the 2020-2024 release has been available since January 2026, but it is a credentials problem, not a publisher problem, and no sweep can clear it. targetGraphs is empty, so nothing on a prediction chart is affected; the /map county and CBSA layers are. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "The Census API now requires a key. scripts/fetch_acs_county.py reads CENSUS_API_KEY, which is not yet set in .env.local. Rerun after any OEWS refresh, since the county imputation uses the OEWS MSA and balance-of-state files. Swept 2026-10-19: still blocked on that key, which the cloud sweep environment does not carry either - no API key of any kind is present there. At 676 days this is the oldest pointer on the registry and the 2020-2024 release has been available since January 2026, but it is a credentials problem, not a publisher problem, and no sweep can clear it. targetGraphs is empty, so nothing on a prediction chart is affected; the /map county and CBSA layers are. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "bls-ooh",
@@ -901,8 +901,8 @@
         "date": "2026-05-11",
         "value": "Monthly data through March 2026; 2025 state ranks"
       },
-      "nextExpected": "Overdue (checked 2026-10-12): newer months unverified because openai.com/signals returns 403 to fetchers. Check by browser, then run npm run build:openai-signals and build:realized-exposure",
-      "sweepNote": "Swept 2026-10-12: still blocked, not stale. openai.com/signals returns HTTP 403 to every automated fetcher tried, so whether months after March 2026 exist cannot be established from this environment at all. This needs one manual browser visit and a CSV download; no scheduled sweep can clear it. 154 days and counting - if nobody is going to make that visit, the honest fix is to mark the series manual-only rather than let it accrue staleness forever. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "nextExpected": "Overdue (checked 2026-10-19): newer months unverified because openai.com/signals returns 403 to fetchers. Check by browser, then run npm run build:openai-signals and build:realized-exposure",
+      "sweepNote": "Swept 2026-10-19: still blocked, not stale. openai.com/signals returns HTTP 403 to every automated fetcher tried, so whether months after March 2026 exist cannot be established from this environment at all. This needs one manual browser visit and a CSV download; no scheduled sweep can clear it. 161 days and counting - if nobody is going to make that visit, the honest fix is to mark the series manual-only rather than let it accrue staleness forever. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-pypi-downloads",
@@ -922,8 +922,8 @@
         "date": "2026-04-21",
         "value": "52 packages, monthly downloads through March 2026"
       },
-      "nextExpected": "Overdue (checked 2026-10-06): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
-      "sweepNote": "Do not refresh blind. PyPI-wide counts dropped about 31% from roughly August 25, 2026 (the control package requests fell too), and the first month of the 180-day window is partial. Normalize or drop affected months before publishing. Swept 2026-10-12: deliberately not refreshed. The update-signals workflow has now failed 28 consecutive scheduled runs, most recently 2026-10-05 (run 37323572473). The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Note that PyPI is the one of the four where a green CI run would still not be enough - the August counting break needs a human normalization decision before any new month is published. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "nextExpected": "Overdue (checked 2026-10-19): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
+      "sweepNote": "Do not refresh blind. PyPI-wide counts dropped about 31% from roughly August 25, 2026 (the control package requests fell too), and the first month of the 180-day window is partial. Normalize or drop affected months before publishing. Swept 2026-10-19: deliberately not refreshed. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Note that PyPI is the one of the four where a green CI run would still not be enough - the August counting break needs a human normalization decision before any new month is published. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-npm-downloads",
@@ -943,8 +943,8 @@
         "date": "2026-04-21",
         "value": "15 packages, monthly downloads through March 2026"
       },
-      "nextExpected": "Overdue (checked 2026-10-12): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
-      "sweepNote": "Swept 2026-10-12: not refreshed. The update-signals workflow has now failed 28 consecutive scheduled runs, most recently 2026-10-05 (run 37323572473). The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Refreshing npm alone would publish an acceleration index mixing September npm counts against March PyPI and BLS counts, which is worse than leaving the whole panel on one vintage, so all four wait on the secret. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "nextExpected": "Overdue (checked 2026-10-19): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
+      "sweepNote": "Swept 2026-10-19: not refreshed. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Refreshing npm alone would publish an acceleration index mixing September npm counts against March PyPI and BLS counts, which is worse than leaving the whole panel on one vintage, so all four wait on the secret. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-huggingface-downloads",
@@ -964,8 +964,8 @@
         "date": "2026-04-18",
         "value": "5 categories, top-10 models' trailing-30-day downloads"
       },
-      "nextExpected": "Overdue (checked 2026-10-12): live counts are available; not yet ingested. The update-signals workflow has failed every run since March 2026",
-      "sweepNote": "Swept 2026-10-12: not refreshed. The update-signals workflow has now failed 28 consecutive scheduled runs, most recently 2026-10-05 (run 37323572473). The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. This series is also the one that loses most to the delay: the Hugging Face API reports only a live trailing-30-day count, so the months missed since April 2026 are not recoverable later. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "nextExpected": "Overdue (checked 2026-10-19): live counts are available; not yet ingested. The update-signals workflow has failed every run since March 2026",
+      "sweepNote": "Swept 2026-10-19: not refreshed. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. This series is also the one that loses most to the delay: the Hugging Face API reports only a live trailing-30-day count, so the months missed since April 2026 are not recoverable later. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-bls-ces-industry",
@@ -985,8 +985,8 @@
         "date": "2026-04-21",
         "value": "20 series through March 2026 (3 end February 2026)"
       },
-      "nextExpected": "Overdue (checked 2026-10-06): September 2026 preliminary data released October 2, 2026; not yet ingested. Next: November 6, 2026 (October data)",
-      "sweepNote": "The update-signals workflow fails because the BLS_API_KEY repo secret does not exist; its PR step also needs a 'signals' label. Locally, fetch_bls.py reads .env, but the key is in .env.local. Swept 2026-10-12: confirmed as the single root cause for all four /signals series. The update-signals workflow has now failed 28 consecutive scheduled runs, most recently 2026-10-05 (run 37323572473). The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "nextExpected": "Overdue (checked 2026-10-19): September 2026 preliminary data released October 2, 2026; not yet ingested. Next: November 6, 2026 (October data)",
+      "sweepNote": "The update-signals workflow fails because the BLS_API_KEY repo secret does not exist; its PR step also needs a 'signals' label. Locally, fetch_bls.py reads .env, but the key is in .env.local. Swept 2026-10-19: confirmed again as the single root cause for all four /signals series, now across five consecutive sweeps. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     }
   ]
 }

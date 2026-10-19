@@ -1,0 +1,14 @@
+{
+  "id": "census-bfs-sep-2026",
+  "abstract": "US Census Bureau Business Formation Statistics for September 2026, released October 14, 2026 as CB26-163. The series counts business applications, from IRS Form SS-4 filings for an Employer Identification Number, and projects how many of those applications will become employer businesses with payroll tax liabilities within four and eight quarters. It is the universe-scale monthly read on US business formation and the series jobsdata.ai tracks behind ai-business-formation, where AI's role is inferred from sectoral composition rather than tagged directly.",
+  "keyFindings": [
+    "Business applications for September 2026, seasonally adjusted, were 534,947, up 0.5 percent from August 2026.",
+    "Projected business formations within four quarters were 29,022, up 1.4 percent; within eight quarters 39,703, up 1.0 percent.",
+    "Component detail: high-propensity applications 147,331 (+1.3 percent), applications with planned wages 35,786 (+4.3 percent), applications from corporations 40,951 (-0.2 percent).",
+    "The month is a modest recovery from August's 7.8 percent drop rather than a return to July's spike of about 579,000 applications; the series has now spent four months oscillating around 530,000.",
+    "Applications with planned wages, the component closest to intended payroll employment, grew fastest of the four at 4.3 percent, and rose in every census region."
+  ],
+  "methodology": "Administrative universe data, not a survey: every application for an Employer Identification Number through IRS Form SS-4 is counted, and formations are identified by the first instance of payroll tax liabilities for the corresponding application. Projected formations are model-based forward projections from the application cohort of a given month, not counts of businesses that appeared in that month. Figures are seasonally adjusted and statistical significance is not applicable. Actual formations lag badly - administrative payroll data currently identifies employer startup activity only through the fourth quarter of 2023.",
+  "qualifiers": "A count of applications and projected formations, not a percentage increase over a pre-ChatGPT baseline, which is what ai-business-formation plots; it is carried as an overlay for that reason. The release attributes nothing to AI and the AI signal in this series is compositional, read from professional-services applications growing faster than other sectors. The November 12, 2026 release applies the annual update, which revises NAICS codes for the previous five years, refreshes formations from the Business Dynamics Statistics program and recomputes seasonal factors, so the seasonally adjusted levels quoted here will move. Month-to-month changes in projected formations are small relative to the revision history.",
+  "fetchedAt": "2026-10-19"
+}

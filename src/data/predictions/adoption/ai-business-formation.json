@@ -350,6 +350,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census CES: self-employment among top-decile grads +0.48pp vs +0.06pp for the least exposed"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "census-bfs-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BFS Sep 2026: 535K business applications (+0.5% MoM); 29.0K projected formations (+1.4%)"
     }
   ],
   "sources": [
@@ -659,6 +668,16 @@
       "datePublished": "2026-05-11",
       "excerpt": "Entrepreneurial entry increased sharply following the release of ChatGPT-3.5, rising by 40% from 29,326 in 2022 to 41,169 in 2023, and continued to grow toward twice its pre-release level by 2025 ... By 2025, solo entry grew nearly 90% more than team entry (β = 0.621, p < 0.001).",
       "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "census-bfs-sep-2026",
+      "title": "Business Formation Statistics, September 2026 (CB26-163)",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/business-formation-statistics-oct14.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-14",
+      "excerpt": "\"Business Applications for September 2026, adjusted for seasonal variation, were 534,947, an increase of 0.5 percent compared to August 2026.\" \"Projected Business Formations (within 4 quarters) for September 2026, adjusted for seasonal variation, were 29,022, an increase of 1.4 percent compared to August 2026.\" Seasonally adjusted September components: High-Propensity Business Applications 147,331 (+1.3% MoM); Business Applications with Planned Wages 35,786 (+4.3%); Business Applications from Corporations 40,951 (-0.2%); Projected Business Formations within 8 quarters 39,703 (+1.0%). Applications and formations both recovered modestly from August's decline without regaining July's level of about 579,000 applications. Next scheduled release November 12, 2026, which carries the annual NAICS and seasonal-factor update and will revise the seasonally adjusted series.",
+      "dateAdded": "2026-10-19"
     }
   ]
 }

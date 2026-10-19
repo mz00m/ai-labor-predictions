@@ -1,0 +1,16 @@
+{
+  "id": "ramp-ai-index-oct-2026",
+  "abstract": "Ramp AI Index for September 2026, published October 14, 2026 by Ramp lead economist Ara Kharazian as the third installment of his 'Cracks in the AI Thesis' series. The index tracks AI adoption and spend among Ramp's US business customers using corporate card and bill-pay transactions, which makes it a payment-based rather than self-reported measure of firm AI use. This edition argues that customer growth is flattening at the top of the S-curve while spend intensity has stalled.",
+  "keyFindings": [
+    "Overall AI adoption among Ramp businesses reached 55.9 percent in September 2026, up 0.62 percentage points, slightly faster than August's 0.40-point gain.",
+    "OpenAI narrowed Anthropic's lead: OpenAI rose 1.12 points to 40.6 percent of businesses, outpacing overall AI adoption, while Anthropic rose 0.25 points to 43.8 percent.",
+    "xAI gained 0.6 points on Grok Bot demand; Mistral AI remains below 1 percent adoption among US firms, including multinationals with a European presence.",
+    "The top 1 percent of firms spent $9,568 per employee per month on AI in September, up 11.7 percent month over month but 3.1 percent below the July high of $9,873.",
+    "Token spend recorded two straight months of virtually no growth, which Kharazian attributes to frontier price declines and efficiency gains rather than falling usage - token volumes rose over the same period.",
+    "Total AI spend hit a new peak in early October, 1.5 percent above the August peak, but with growth still markedly slower than earlier in 2026.",
+    "On enterprise lock-in: contracts reported to Kharazian rarely assume above-normal spend, and where they do the labs concede discounts, so contracts may cut prices without driving volume."
+  ],
+  "methodology": "Aggregated corporate card and bill-pay transaction data from Ramp's US business customers, reported monthly as vendor-level adoption shares and per-employee spend cohorts. Adoption is defined as paying for a vendor's subscriptions or tokens in the month. The top-1 percent spend cohort is a small group of firms and its estimate is volatile; Ramp revised top-1 percent spending up across cohorts in all prior periods after adding new AI vendors to the estimate. The index is mirrored on FRED as RAMPAIALL and 15 sibling series, which reported 55.86 percent for September 2026 and is the reliable staleness check for this series.",
+  "qualifiers": "Not comparable with Census BTOS, which jobsdata.ai plots on ai-adoption-rate: BTOS asks a probability sample of about 1.2 million US businesses whether they used AI in any business function in the last two weeks, while this counts paid vendor subscriptions among Ramp's self-selected customer base, which skews toward startups and technology firms and reads far higher. Carried as a directional overlay for that reason. The September per-employee figures are not comparable with the $7,205 reported one edition earlier because of the vendor-coverage revision. Kharazian's own caveat on the headline adoption metric is worth keeping: with more than half of businesses paying for AI and many paying several vendors, vendor share says less about adoption than it did in 2023.",
+  "fetchedAt": "2026-10-19"
+}

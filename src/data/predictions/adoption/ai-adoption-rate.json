@@ -1031,6 +1031,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: new AI-adopting firms per month down 17% from July (firm-level, not BTOS)"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "ramp-ai-index-oct-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ramp: 55.9% of US businesses pay for AI (+0.62pp); OpenAI 40.6% narrows Anthropic's 43.8%"
     }
   ],
   "sources": [
@@ -1958,6 +1967,17 @@
       "datePublished": "2026-10-08",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Artificial Intelligence (AI) in any of its business functions? (Examples of AI: machine learning, natural language processing, virtual agents, voice recognition, etc.)\" National share answering yes: 23.8% (SE 0.41%) for the two weeks ending 2026-09-20, unchanged from 23.8% (SE 0.26%) for the cycle ending 2026-09-06 and up from 23.2% for the cycle ending 2026-08-23 - the first flat reading after four consecutive increases. Q24, the six-month expectation of AI use, was 27.7% (SE 0.36%), up from 27.6%. Collection for cycle 202620 ran 2026-09-21 to 2026-10-04; published 2026-10-08. Values are dated to reference-period end rather than publication date.",
       "dateAdded": "2026-10-12"
+    }
+  ,
+    {
+      "id": "ramp-ai-index-oct-2026",
+      "title": "Cracks in the AI Thesis, Part 3 (Ramp AI Index, October 2026)",
+      "url": "https://ramp.com/data/ai-index-oct-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-14",
+      "excerpt": "Ramp AI Index for September 2026, from corporate card and bill-pay transactions across Ramp's US business customers. \"Overall adoption reached 55.9%, increasing 0.62 percentage points, slightly faster than August's 0.40 point gain.\" Vendor shares: \"43.8% paid Anthropic, up 0.25 percentage points from last month\"; \"OpenAI adoption rose 1.12 percentage points to 40.6%, outpacing overall AI adoption\"; xAI \"up 0.6 percentage points on the popularity of Grok Bot\"; Mistral AI at \"less than 1% adoption by U.S. firms.\" Kharazian reads the slowdown in new customers as \"the top of the S-curve, where the growth in the market will have to come from more intense adoption rather than more customers.\" On intensity: the top 1% of firms spent \"$9,568 per employee per month in September,\" up 11.7% month over month but \"down 3.1% from its July high of $9,873,\" with \"two straight months of virtually no growth in token spend\" and total AI spend hitting a new peak in early October, 1.5% above the August peak. Top-1% per-employee spend was revised up across all periods after new AI vendors were added to the estimate, so it is not comparable with the $7,205 reported in the September edition. Measures paid vendor subscriptions among Ramp's own customers rather than self-reported use across a probability sample of US firms, so it sits below the chart as a directional overlay.",
+      "dateAdded": "2026-10-19"
     }
   ]
 }
