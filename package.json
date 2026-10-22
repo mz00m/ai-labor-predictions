@@ -2,6 +2,9 @@
   "name": "ai-labor-dashboard",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "capability:refresh": "tsx scripts/fetch-capability.ts",
