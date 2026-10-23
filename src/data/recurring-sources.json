@@ -835,11 +835,11 @@
       "whatItMeasures": "Annual-average employment by detailed occupation from the Current Population Survey, with the percent who are women, Black, Asian and Hispanic.",
       "whyItMatters": "The gender analysis on /task-visualizer/economy ranks occupation groups by women's share; the women-majority list depends on these values.",
       "lastIngested": {
-        "sourceId": "bls-cps-aat11-2024",
-        "date": "2026-03-14",
-        "value": "2024 annual averages, women's share by occupation group"
+        "sourceId": "bls-cps-aat11-2025",
+        "date": "2026-02-20",
+        "value": "2025 annual averages, women's share by occupation group (applied to /task-visualizer/economy 2026-10-08, #748)"
       },
-      "nextExpected": "Overdue (checked 2026-10-06): 2025 annual averages posted February 20, 2026; not yet ingested. Next: 2026 annual averages, ~late January 2027"
+      "nextExpected": "~late January 2027 (2026 annual averages)"
     },
     {
       "id": "bls-qcew",
