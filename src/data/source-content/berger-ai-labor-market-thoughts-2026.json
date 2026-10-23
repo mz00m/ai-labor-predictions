@@ -1,0 +1,15 @@
+{
+  "id": "berger-ai-labor-market-thoughts-2026",
+  "abstract": "Guy Berger (Access/Macro, Guild, Burning Glass Institute) sets out a periodically updated list of his views on AI and the US labor market as of October 2026: no persistent mass unemployment, significant gross disruption, a very small average impact so far, and caution about reading aggregate data or confident forecasts.",
+  "keyFindings": [
+    "Reasonably confident AI will not cause persistent mass unemployment, defined as something on the scale of 2009-13 or worse for a longer span.",
+    "Reasonably confident AI will cause significant gross labor-market disruption: rapid changes in the role and industry composition of employment, with declining wages and costly transitions for affected workers even if net effects are small.",
+    "Recessions and the business cycle remain the primary driver of aggregate unemployment; more disruption will happen within roles than across them.",
+    "AI's labor-market impact has on average been very small so far; larger in software development, yet software developers' share of US employment increased over the past year.",
+    "Aggregate indicators such as broad-industry employment counts are poor barometers of AI's impact; non-automation channels include uncertainty and a shift toward capital-intensive sectors.",
+    "AI is probably playing some role in higher unemployment for young college graduates but cannot explain the entire increase."
+  ],
+  "methodology": "Expert judgment in a bulleted essay; no new data or estimates.",
+  "qualifiers": "Opinion from a labor-market economist, explicitly not an AI specialist; claims are directional and unquantified. The author advises against trusting high-confidence predictions, including his own.",
+  "fetchedAt": "2026-10-23"
+}

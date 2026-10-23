@@ -2,6 +2,36 @@
   "description": "Rolling roster of must-read articles on AI and labor markets. Updated weekly.",
   "articles": [
     {
+      "title": "For Clues About How A.I. Will Change Work, Look to the Past",
+      "author": "Ben Casselman",
+      "publisher": "The New York Times",
+      "date": "2026-10-22",
+      "url": "https://www.nytimes.com/2026/10/22/business/economy/ai-economy-jobs-history.html",
+      "takeaway": "Casselman goes back to the American Economic Association's 1931 meeting, where economists debated dial telephones, 'talkies' and motor trucks, to ask why some technological upheavals went tolerably for workers and others badly. The answers economic historians give him are conditions, not technologies. The macro backdrop decides most of it: before 1929 the dial telephone displaced tens of thousands of operators with little lasting unemployment, but in the Depression they had nowhere to go, and English threshing machines adopted during the Napoleonic wars set off the Swing Riots once soldiers came home to no winter work. Place matters, with protests most violent in remote areas. Speed matters most: operators switched over at midnight on a Saturday were less likely to be working at all a decade later and earned less if they were, while the slow fade of horse teamsters let young men choose other trades and raised wages for those who stayed. Jobs also change more than they vanish: English boot makers numbered about 220,000 in 1851 and 207,000 in 1911, but artisans had become factory workers, and roughly 60 percent of 2018 US jobs were in occupations that did not exist in 1940. The warning is that transitions can still crush wages for decades, as in Engels' pause, and that AI is reaching white-collar and offshore back-office work that once looked safe. Read it with Berger and with Shukla and Imas: three ways of saying gross disruption is the near-term question, not net job loss.",
+      "weekFeatured": "2026-10-23",
+      "tier": 3
+    },
+    {
+      "title": "Thoughts on AI's Impact on the Labor Market, as of October 2026",
+      "author": "Guy Berger",
+      "publisher": "MacroMostly (Substack)",
+      "date": "2026-10-19",
+      "url": "https://macromostly.substack.com/p/thoughts-on-ais-impact-on-the-labor",
+      "takeaway": "A labor-market economist's ledger of where he stands, short enough to read in two minutes and calibrated enough to cite. Berger separates two claims that usually get blurred: he is reasonably confident AI will not cause persistent mass unemployment (on the scale of 2009-13 or worse, for longer), and equally confident it will cause significant gross disruption, with rapid shifts in the role and industry mix of employment, falling wages and costly transitions for the workers hit, even if the net effect on unemployment is small. Recessions stay the main driver of aggregate unemployment, and more change will happen within roles than across them. On the evidence so far: the average impact has been very small, larger in software development, yet software developers' share of US employment has risen over the past year; elsewhere adoption has been shallow, and large parts of the economy are untouched. He warns against reading broad-industry employment counts as an AI barometer, flags non-automation channels (uncertainty, and a shift of activity toward capital-intensive sectors), and says AI is probably playing some role in higher unemployment for young college graduates but cannot explain all of it. The useful discipline for this site: treat gross churn and net job loss as separate questions, and distrust any confident forecast of rapid near-term change.",
+      "weekFeatured": "2026-10-23",
+      "tier": 3
+    },
+    {
+      "title": "Technological Progress and the Meaning of Work",
+      "author": "Soumitra Shukla and Alex Imas",
+      "publisher": "Ghosts of Electricity (Substack)",
+      "date": "2026-10-22",
+      "url": "https://aleximas.substack.com/p/technological-progress-and-the-meaning",
+      "takeaway": "A history, not a forecast: Shukla and Imas trace 250 years of reactions to technological change, from the spinning jenny and the Luddites through assembly lines, telephone and elevator operators, automated sportswriting, AlphaGo and the 2023 writers' strike, and argue that the recurring fear was never only lost wages but the loss of an identity built on hard-won expertise. The essay ends in the present, with mathematicians. After a run of AI results on famous open problems, 28 Fields medallists signed 'A Severe Misalignment of AI in Mathematics' in September 2026, and OpenAI's October release of more than 700 manuscripts drew Hugo Duminil-Copin's line that 'They have annihilated my field of research.' The point for this site is the dimension the charts cannot show: displacement of meaning can arrive well before displacement of jobs, and it is now reaching the cognitive elite rather than only workers once dismissed as Luddites. No new labor-market data. Imas is Director of AGI Economics at Google DeepMind.",
+      "weekFeatured": "2026-10-23",
+      "tier": 3
+    },
+    {
       "title": "The 26 Most Important Facts About AI and the Economy",
       "author": "Derek Thompson",
       "publisher": "Derek Thompson (Substack)",
