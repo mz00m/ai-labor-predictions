@@ -9,6 +9,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Derek Thompson",
+    title: "The 26 Most Important Facts About AI and the Economy",
+    summary:
+      "Why AI looks enormous in the capital accounts and modest in the labor data. Adoption hit 50% in about three years, the fastest on record, but daily work use runs 10–25% depending on the survey and under 3% of households pay for AI. Spending meanwhile approaches $1 trillion a year, the biggest buildout relative to GDP since the railroads, against roughly $280 billion in annualized external revenue that is concentrated and, in Ramp's August data, starting to wobble. A synthesis of others' charts, so trace figures to their sources before citing.",
+    date: "Oct 8",
+    url: "https://www.derekthompson.org/p/the-state-of-ai-in-2026in-26-charts",
+  },
+  {
     author: "Imas & Schaal (Ghosts of Electricity)",
     title: "Has AI impacted the labor market yet?",
     summary:
@@ -39,14 +47,6 @@ const articles: Article[] = [
       "The first study here to identify AI exposure by field of study rather than occupation, and that choice is the reason to take it seriously: a major is picked years before anyone meets a hiring manager, which sidesteps the anticipation problem in occupation-based measures, where employers may be pulling back from roles they expect AI to take rather than work it already does. Census PSEO and LEHD administrative records, 6,665,500 bachelor's graduates, about 29% of all US bachelor's degrees conferred 2016-2024. Graduates in the most AI-exposed decile of majors — largely computer science, information systems and software-adjacent fields — became 5 percentage points less likely to be employed in the quarter after graduation and earned about 13% less, both against the least exposed fields and both starting immediately after ChatGPT. The recession literature puts initial earnings losses from graduating into a downturn at 9-10%, so this is worse, though concentrated in a few fields rather than economy-wide. The decomposition is the most useful part: roughly half the decline is lower pay inside the same industries and half is graduates moving into worse-paying ones. The share entering Professional, Scientific and Technical services fell almost 6 points and Information over 3, while Accommodation and Food Services and Retail each gained more than 2. Counting that shift, top-decile earnings fell 15%, to levels last seen before 2016. Two honest limits: the effect attenuates to about 5% after two years, and the sampled institutions skew large, public and research-heavy.",
     date: "Sep 10",
     url: "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
-  },
-  {
-    author: "Korinek, Jones, Sacher, Cotter & McCrory (Anthropic Institute)",
-    title: "Economic Scenarios for Transformative AI",
-    summary:
-      "Converts the AI-and-jobs argument into disagreement about five measurable parameters — what share of tasks AI can do, how widely it is used, the productivity gain per task, how much of that use automates rather than augments, and how fast displaced workers find new work — then returns GDP, the labor share, wages, reallocation and unemployment to 2030. Three illustrations bracket the range. Modest: GDP 1.6% above the no-AI path, unemployment up a tenth of a point. Extreme: GDP 32% above it, growth at 15% a year, the labor share down from 60% to 45%, and nearly one in five cognitive workers unemployed. Read the wage result carefully. The average wage rises in every scenario, but in the extreme case that average is 9.7% up while the cognitive wage is 11.5% down, with the gain landing on construction, care and the trades. The discipline is the reason to trust it. The authors attach no probabilities and say so repeatedly; the scenarios exist to make assumptions comparable, not to forecast. They argue against themselves at length — the innovation channel turns out small, and the model has no robotics, no aggregate demand, no policy response, and workers who differ only by which of two occupation groups they sit in. Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson reviewed it, were not asked to endorse it, and their criticisms are printed rather than buried. The distributional arithmetic is what will get quoted: in the extreme case the economy gains roughly three times what cognitive workers lose, so a transfer of about 9% of GDP would hold them whole — Social Security and Medicare combined.",
-    date: "Sep 1",
-    url: "https://www.anthropic.com/institute/econ-scenarios",
   },
 ];
 

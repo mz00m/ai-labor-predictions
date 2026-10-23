@@ -1,6 +1,6 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-10-19",
+  "lastUpdated": "2026-10-23",
   "totalSources": 790,
   "verifiedCount": 780,
   "sources": {
@@ -11179,7 +11179,8 @@
       "dateAdded": "2026-10-12",
       "usedIn": [
         "overall-us-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "financial-services-displacement"
       ],
       "verified": true,
       "synthetic": false

@@ -1309,6 +1309,15 @@
       ],
       "evidenceTier": 1,
       "label": "BLS Sep 2026: information and professional and business services both little changed"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "bls-employment-situation-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS table B-1: information employment down 120K (-4.2%) from September 2025"
     }
   ],
   "sources": [
