@@ -9,7 +9,7 @@ import SharedReportView from "@/components/assessment/SharedReportView";
 export const dynamic = "force-dynamic";
 
 interface Props {
-  params: { token: string };
+  params: Promise<{ token: string }>;
 }
 
 const TOKEN_RE = /^[a-f0-9]{32}$/;
@@ -21,7 +21,8 @@ async function load(token: string) {
   return toPublicReport(assessment);
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const data = await load(params.token);
   if (!data) return { title: "Report not found | jobsdata.ai", robots: { index: false } };
 
@@ -47,7 +48,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function SharedReportPage({ params }: Props) {
+export default async function SharedReportPage(props: Props) {
+  const params = await props.params;
   const data = await load(params.token);
   if (!data) notFound();
 

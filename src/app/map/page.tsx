@@ -25,11 +25,12 @@ import {
 /** Per-share-URL metadata. When a share URL carries ?view=metro&id=12420,
  *  the OG image route renders a per-region card so Twitter/LinkedIn/etc.
  *  show the specific selection rather than the generic site card. */
-export async function generateMetadata({
-  searchParams,
-}: {
-  searchParams: { view?: string; id?: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    searchParams: Promise<{ view?: string; id?: string }>;
+  }
+): Promise<Metadata> {
+  const searchParams = await props.searchParams;
   const view =
     searchParams.view === "country" ||
     searchParams.view === "metro" ||

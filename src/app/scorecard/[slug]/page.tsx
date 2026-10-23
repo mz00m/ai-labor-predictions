@@ -8,14 +8,15 @@ import ScorecardView from "@/components/scorecard/ScorecardView";
 export const revalidate = 3600;
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return getAllOccupationSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const scorecard = getScorecard(params.slug);
 
   if (!scorecard) {
@@ -46,7 +47,8 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function ScorecardPage({ params }: Props) {
+export default async function ScorecardPage(props: Props) {
+  const params = await props.params;
   const scorecard = getScorecard(params.slug);
 
   if (!scorecard) {

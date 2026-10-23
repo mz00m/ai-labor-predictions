@@ -45,7 +45,7 @@ export default function SearchCombobox({ mobile }: SearchComboboxProps) {
 
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   /* ---- Reset on route change ---- */
   useEffect(() => {

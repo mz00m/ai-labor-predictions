@@ -6,7 +6,7 @@ import OccupationSlugPage from "@/components/occupation-exposure/OccupationSlugP
 export const revalidate = 3600;
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 // Build all scored occupations at module level (server only, not shipped to client)
@@ -34,7 +34,8 @@ export function generateStaticParams() {
   return enrichedData.occupations.map((o) => ({ slug: o.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const occ = enrichedBySlug.get(params.slug);
 
   if (!occ) {
@@ -64,7 +65,8 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const scored = scoredBySlug.get(params.slug);
   const enriched = enrichedBySlug.get(params.slug);
 

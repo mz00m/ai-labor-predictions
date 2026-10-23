@@ -24,9 +24,9 @@ export default function HeroStatWobble({
   const [wobbling, setWobbling] = useState(false);
   const [displayValue, setDisplayValue] = useState<string | null>("0");
   const [countUpDone, setCountUpDone] = useState(false);
-  const dwellTimer = useRef<ReturnType<typeof setTimeout>>();
-  const rafRef = useRef<number>();
-  const countUpRaf = useRef<number>();
+  const dwellTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const rafRef = useRef<number | undefined>(undefined);
+  const countUpRaf = useRef<number | undefined>(undefined);
   const startTimeRef = useRef(0);
   const reducedMotionRef = useRef(false);
 

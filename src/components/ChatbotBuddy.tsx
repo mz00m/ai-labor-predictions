@@ -160,8 +160,8 @@ export default function ChatbotBuddy({ sourceCount }: { sourceCount?: number }) 
   const [entered, setEntered] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [entrance, setEntrance] = useState<EntranceMode>("side");
-  const blinkRef = useRef<ReturnType<typeof setTimeout>>();
-  const bubbleRef = useRef<ReturnType<typeof setTimeout>>();
+  const blinkRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const bubbleRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const promptIdx = useRef(0);
   const navCountRef = useRef(0);
 
