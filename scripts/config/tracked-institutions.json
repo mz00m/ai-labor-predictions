@@ -5,7 +5,8 @@
     "2026-06-30: initial scaffold. Discovered that many institutions abandoned RSS (Yale BL, Stanford DEL, Brookings, IMF Blog all return 200 but with empty/redirect bodies). Pivoted to sitemap-based polling for those, RSS for ones that still publish proper feeds (Hamilton Project verified working).",
     "2026-07-02: added Economic Innovation Group (EIG), Ramp Economics Lab (via /leading-indicators sub-sitemap), Revelio Labs, and Ara Kharazian's Econ Lab substack. Prompted by the Casselman NYT July 2 piece which named EIG/Goldschlag and Ramp/Revelio as the three most notable non-academic institutional voices on AI labor measurement.",
     "2026-07-23: added 8 verified feeds surfaced by July 2026 ingest sessions: Stripe Economics, Fed FEDS Notes, NY Fed Liberty Street, FactSet Insight, Census Newsroom, Challenger Gray, OpenAI News, Guy Lichtinger substack. All RSS-verified with curl before adding. Skipped: Gusto (403 bot-block on all paths — rely on Google CSE), St. Louis Fed On the Economy (connection timeouts — content reachable via FRED adapter + FEDS Notes).",
-    "2026-09-29: added Richmond Fed, Chicago Fed, SF Fed, Indeed Hiring Lab, EPI, Pew, Microsoft On the Issues, MIT FutureTech after a gap scan found ~70 missed sources, most from publishers not on this list. Tested but not added: Dallas/Atlanta Fed (no RSS; sitemaps empty), St. Louis Fed (timeouts), BLS TED (403 to scripts), NY Fed research RSS (empty)."
+    "2026-09-29: added Richmond Fed, Chicago Fed, SF Fed, Indeed Hiring Lab, EPI, Pew, Microsoft On the Issues, MIT FutureTech after a gap scan found ~70 missed sources, most from publishers not on this list. Tested but not added: Dallas/Atlanta Fed (no RSS; sitemaps empty), St. Louis Fed (timeouts), BLS TED (403 to scripts), NY Fed research RSS (empty).",
+    "2026-10-23: added Guy Berger's MacroMostly substack, which the digest missed for his Oct 19 AI-and-labor-market post. RSS verified locally; Substack feeds currently 403 from GitHub Actions runners (Econ Lab, Lichtinger), so this one may too until that is fixed."
   ],
   "institutions": [
     {
@@ -232,6 +233,14 @@
       "tier": 1,
       "pathInclude": "/publication/",
       "notes": "Thompson group: S&P 500 AI adoption, AI and Scale, computer-vision automation. Verified 2026-09-29 with the adapter UA (jobsdata-digest/1.0)."
+    },
+    {
+      "publisher": "MacroMostly (Guy Berger)",
+      "domain": "macromostly.substack.com",
+      "feedUrl": "https://macromostly.substack.com/feed",
+      "feedType": "rss",
+      "tier": 3,
+      "notes": "Guy Berger (Access/Macro, Guild, Burning Glass Institute): weekly high-frequency labor indicators, BLS jobs recaps, and periodic AI-and-labor-market syntheses. RSS verified 200 locally 2026-10-23; note other Substack feeds return 403 from GitHub Actions runners since early Oct 2026."
     }
   ],
   "_planned_but_not_yet_working": [
