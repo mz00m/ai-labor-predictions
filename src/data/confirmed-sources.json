@@ -1,9 +1,25 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-10-19",
-  "totalSources": 790,
-  "verifiedCount": 780,
+  "lastUpdated": "2026-10-23",
+  "totalSources": 791,
+  "verifiedCount": 781,
   "sources": {
+    "berger-ai-labor-market-thoughts-2026": {
+      "id": "berger-ai-labor-market-thoughts-2026",
+      "title": "Thoughts on AI's Impact on the Labor Market, as of October 2026",
+      "url": "https://macromostly.substack.com/p/thoughts-on-ais-impact-on-the-labor",
+      "publisher": "MacroMostly (Guy Berger, Substack)",
+      "evidenceTier": 4,
+      "datePublished": "2026-10-19",
+      "excerpt": "In a few sectors (software development in particular), the impact has been larger, with significant changes in how work is done.  Nevertheless, it is noteworthy that software developers’ share of overall US employment has increased over the past year. AI is probably playing some role in higher unemployment for young people with college degrees.  But it can’t explain the entirety of the increase in that unemployment.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "tech-sector-displacement",
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "oecd-employment-outlook-2026": {
       "id": "oecd-employment-outlook-2026",
       "title": "OECD Employment Outlook 2026 - From Resilience to Risk: Employment and Wages Under Pressure (Ch. 1)",
@@ -11179,7 +11195,8 @@
       "dateAdded": "2026-10-12",
       "usedIn": [
         "overall-us-displacement",
-        "white-collar-professional-displacement"
+        "white-collar-professional-displacement",
+        "financial-services-displacement"
       ],
       "verified": true,
       "synthetic": false

@@ -1,0 +1,15 @@
+{
+  "id": "casselman-nyt-ai-work-history-2026",
+  "abstract": "New York Times reporting by Ben Casselman (Oct 22, 2026) on what economists and historians draw from past technological disruptions, from the Industrial Revolution through the 1931 AEA debates on technological unemployment, as a guide to AI's labor-market effects.",
+  "keyFindings": [
+    "At the December 1931 AEA meeting, Ewan Clague (later BLS commissioner) warned technology could leave all factors of production simultaneously unemployed and floated taxing machinery to slow its development.",
+    "A 1932 BLS report found that before 1929 'technological displacement led directly to relatively little unemployment'; in the Depression, displaced telephone operators had little hope of finding other work.",
+    "Telephone operators displaced by overnight switchovers were less likely to be working at all a decade later and earned lower wages if they were (2024 study); horse teamsters rose 1900-1910 and declined gradually before falling sharply in the 1920s-30s, and wages rose for the older drivers who stayed.",
+    "English boot makers numbered about 220,000 in 1851 and about 207,000 in 1911 while the work moved from artisans to factories; by one estimate roughly 60 percent of US jobs in 2018 were in occupations that did not exist in 1940.",
+    "Threshing machines adopted during the Napoleonic wars removed up to half of rural laborers' winter income and preceded the 1830s Swing Riots, which were most violent in remote areas with fewer alternatives.",
+    "Economists quoted say AI's disruptions could dwarf past episodes and reach poorer countries' call-center and back-office industries, though most do not credit end-of-work predictions."
+  ],
+  "methodology": "Journalism drawing on interviews with economists and historians (Schneider, Caprettini, Lang, Bix, Vipond) and archival sources.",
+  "qualifiers": "Historical analogy, not evidence about current AI effects. The 60 percent new-occupations figure is a cited estimate (Autor et al.), not new data.",
+  "fetchedAt": "2026-10-23"
+}

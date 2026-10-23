@@ -401,6 +401,15 @@
       ],
       "evidenceTier": 3,
       "label": "NYT: financial services down ~100,000 jobs since January"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "bls-employment-situation-sep-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS: financial activities down 129K since May 2025 peak; insurance carriers -90K"
     }
   ],
   "sources": [
@@ -768,6 +777,16 @@
       "evidenceTier": 3,
       "datePublished": "2026-09-16",
       "excerpt": "And financial services, another sector highly exposed to A.I., is experiencing an outright contraction in employment levels, with 100,000 jobs lost since the start of the year. The share of U.S. adults employed by financial firms, a long reliable vault into the upper middle class, or higher, has fallen to the lowest level since 1981."
+    },
+    {
+      "id": "bls-employment-situation-sep-2026",
+      "title": "BLS Employment Situation: September 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-02",
+      "excerpt": "\"Employment in financial activities is down by 129,000 since a recent peak in May 2025, with most of the job loss in insurance carriers and related activities (-90,000).\" \"In September, financial activities employment was little changed (-7,000).\"",
+      "dateAdded": "2026-10-12"
     }
   ]
 }

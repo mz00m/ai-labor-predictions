@@ -9,44 +9,44 @@ interface Article {
 
 const articles: Article[] = [
   {
+    author: "Shukla & Imas (Ghosts of Electricity)",
+    title: "Technological Progress and the Meaning of Work",
+    summary:
+      "A history, not a forecast: 250 years of reactions to technology, from the spinning jenny and the Luddites to switchboard operators, AlphaGo and the 2023 writers' strike. The recurring fear was never only lost wages but the loss of an identity built on hard-won expertise. It ends with mathematicians: 28 Fields medallists warning of a 'severe misalignment' after AI solved famous open problems. Displacement of meaning can arrive before displacement of jobs.",
+    date: "Oct 22",
+    url: "https://aleximas.substack.com/p/technological-progress-and-the-meaning",
+  },
+  {
+    author: "Ben Casselman (New York Times)",
+    title: "For Clues About How A.I. Will Change Work, Look to the Past",
+    summary:
+      "Why some technological upheavals went tolerably for workers and others badly. The historians' answer is conditions: a strong economy absorbed displaced phone operators before 1929 but not in the Depression, overnight switchovers scarred careers while the slow fade of horse teamsters let young workers move on, and English boot-making kept its headcount while the work itself changed completely. The warning: AI is reaching white-collar and back-office work that once looked safe.",
+    date: "Oct 22",
+    url: "https://www.nytimes.com/2026/10/22/business/economy/ai-economy-jobs-history.html",
+  },
+  {
+    author: "Guy Berger (MacroMostly)",
+    title: "Thoughts on AI's Impact on the Labor Market, as of October 2026",
+    summary:
+      "A labor economist's two-minute ledger that keeps two claims apart: AI probably won't cause persistent mass unemployment, but it will cause significant gross disruption, with falling wages and costly transitions for the workers hit. So far the average impact is very small; software has changed most, yet developers' share of US jobs rose this year. Don't read broad industry counts as an AI barometer, and distrust confident forecasts of rapid change.",
+    date: "Oct 19",
+    url: "https://macromostly.substack.com/p/thoughts-on-ais-impact-on-the-labor",
+  },
+  {
+    author: "Derek Thompson",
+    title: "The 26 Most Important Facts About AI and the Economy",
+    summary:
+      "Why AI looks enormous in the capital accounts and modest in the labor data. Adoption hit 50% in about three years, the fastest on record, but daily work use runs 10–25% depending on the survey and under 3% of households pay for AI. Spending meanwhile approaches $1 trillion a year, the biggest buildout relative to GDP since the railroads, against roughly $280 billion in annualized external revenue that is concentrated and, in Ramp's August data, starting to wobble. A synthesis of others' charts, so trace figures to their sources before citing.",
+    date: "Oct 8",
+    url: "https://www.derekthompson.org/p/the-state-of-ai-in-2026in-26-charts",
+  },
+  {
     author: "Imas & Schaal (Ghosts of Electricity)",
     title: "Has AI impacted the labor market yet?",
     summary:
       "The best current map of the junior-hiring debate, and its verdict is narrower than the headlines: AI may already be cutting hiring into the most exposed junior white-collar roles, but the attribution is contested and aggregate disruption has not appeared. The Canaries gap for 22-25-year-olds in exposed jobs reached 19% by June 2026 — but roughly halves once occupational education is controlled for, and the within-firm estimates attenuated with a cleaner data pipeline. The replication is uneven: the UK, Switzerland and Sweden show junior declines, while population-wide Nordic data does not — in Norway, employment in the most exposed occupations grew 0.1% against 0.3% in the least exposed, an insignificant gap. The sharpest dispute is remote work: in postings from four countries the AI coefficient drops to zero once work-from-home exposure is added, yet on ADP payroll data the same specification leaves AI standing and shrinks remote work. Adoption evidence cuts the other way too — Danish workers show precise nulls on earnings, and the heaviest AI spenders in Ramp data grew entry-level employment 12%. Only 1% of laid-off workers attribute their layoff to AI.",
     date: "Sep 29",
     url: "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market",
-  },
-  {
-    author: "Chandar & Klein Teeselink (Stanford DEL)",
-    title: "How Does AI Change Labor Demand? Evidence from 41 Countries",
-    summary:
-      "The firm-side counterpart to Canaries, by one of its authors, and it complicates the entry-level story. Chandar and Klein Teeselink instrument AI adoption off job ads involving generative AI, then trace what happens inside the foreign affiliates of adopting companies against matched controls — 1.25 billion job postings and 154 million employment records across 41 countries. The junior share of employment at adopters falls 1.9 percentage points by March 2026, about 3.3% of a 57.1% baseline. The mechanism is the finding: that decline comes mostly from senior employment rising 6.7%, not from junior employment falling — the junior change is −2.5% and not statistically significant, and total employment is up 3.3%. Juniors are being diluted rather than displaced, at least at this horizon. Occupation mix barely moves — under half a point in 21 of 22 groups — and the exception is the one that matters: computer and mathematical occupations, the most exposed group, where the employment share grows 0.8 points while the junior share inside it falls 3.3. The authors read that as AI being labor expanding rather than labor saving for software, with the cost landing on who gets hired rather than on how many are employed. Among technology affiliates it is sharper: junior share −3.9 points, senior employment +14.6%, total +7.8%. Two things to hold. This is a firm-level cross-border design, so it answers what happens inside adopting companies, not to a national labor market. And junior here means seniority, not age 22-25, so it is not the same quantity as the Canaries series even though it points the same way.",
-    date: "Sep 20",
-    url: "https://digitaleconomy.stanford.edu/publication/how-does-ai-change-labor-demand/",
-  },
-  {
-    author: "Jacobs & Imas (DeepMind Institute)",
-    title: "Economic Policy for AGI",
-    summary:
-      "The first serious attempt to compare the policy options for an AI transition on a common rubric rather than argue for one. Jacobs and Imas rate eleven interventions — retraining, wage insurance, EITC, a jobs guarantee, UI, negative income tax, UBI, a sovereign AI dividend, universal basic capital, universal basic services and industrial policy — across welfare, agency, feasibility and durability under three scenarios. The central argument is against picking one: since nobody can say which scenario arrives, policies should be designed now and sequenced against observable triggers. Expanded UI, EITC and employer-led retraining for mild disruption; EITC converting to a negative income tax if unemployment spells lengthen and median wages fall faster than jobs are reinstated; universal basic capital held in reserve for a sustained decline in labor's share of GDP. The useful output is the tension between dimensions. EITC tops feasibility at 79.8 and sits near the bottom on durability under full transformation at 31.9. UBC inverts it: first on agency at 76.3 and 93.5 on durability under transformation, but second-last on feasibility at 33.1. The case against UBI is made on efficiency rather than ideology — blunt, expensive, and it leaves recipients no stake in the automated economy. One caveat to hold firmly: the scores come from 51 AI agent personas built on survey data from 51 real economists, not from 51 economists, and that distinction gets lost fast in summary. The real survey numbers are separate and worth more — 85% of Americans back publicly funded retraining, 72% UI, 54% UBC.",
-    date: "Jul 9",
-    url: "https://institute.deepmind.com/essays/economic-policy-for-agi/",
-  },
-  {
-    author: "Orr, Tucker & Warren (Census CES)",
-    title: "Graduating into Disruption: Labor Market Outcomes for AI-Exposed College Majors",
-    summary:
-      "The first study here to identify AI exposure by field of study rather than occupation, and that choice is the reason to take it seriously: a major is picked years before anyone meets a hiring manager, which sidesteps the anticipation problem in occupation-based measures, where employers may be pulling back from roles they expect AI to take rather than work it already does. Census PSEO and LEHD administrative records, 6,665,500 bachelor's graduates, about 29% of all US bachelor's degrees conferred 2016-2024. Graduates in the most AI-exposed decile of majors — largely computer science, information systems and software-adjacent fields — became 5 percentage points less likely to be employed in the quarter after graduation and earned about 13% less, both against the least exposed fields and both starting immediately after ChatGPT. The recession literature puts initial earnings losses from graduating into a downturn at 9-10%, so this is worse, though concentrated in a few fields rather than economy-wide. The decomposition is the most useful part: roughly half the decline is lower pay inside the same industries and half is graduates moving into worse-paying ones. The share entering Professional, Scientific and Technical services fell almost 6 points and Information over 3, while Accommodation and Food Services and Retail each gained more than 2. Counting that shift, top-decile earnings fell 15%, to levels last seen before 2016. Two honest limits: the effect attenuates to about 5% after two years, and the sampled institutions skew large, public and research-heavy.",
-    date: "Sep 10",
-    url: "https://www.census.gov/library/working-papers/2026/adrm/CES-WP-26-56.html",
-  },
-  {
-    author: "Korinek, Jones, Sacher, Cotter & McCrory (Anthropic Institute)",
-    title: "Economic Scenarios for Transformative AI",
-    summary:
-      "Converts the AI-and-jobs argument into disagreement about five measurable parameters — what share of tasks AI can do, how widely it is used, the productivity gain per task, how much of that use automates rather than augments, and how fast displaced workers find new work — then returns GDP, the labor share, wages, reallocation and unemployment to 2030. Three illustrations bracket the range. Modest: GDP 1.6% above the no-AI path, unemployment up a tenth of a point. Extreme: GDP 32% above it, growth at 15% a year, the labor share down from 60% to 45%, and nearly one in five cognitive workers unemployed. Read the wage result carefully. The average wage rises in every scenario, but in the extreme case that average is 9.7% up while the cognitive wage is 11.5% down, with the gain landing on construction, care and the trades. The discipline is the reason to trust it. The authors attach no probabilities and say so repeatedly; the scenarios exist to make assumptions comparable, not to forecast. They argue against themselves at length — the innovation channel turns out small, and the model has no robotics, no aggregate demand, no policy response, and workers who differ only by which of two occupation groups they sit in. Acemoglu, Autor, Moll, Nakamura, Restrepo, Romer and Steinsson reviewed it, were not asked to endorse it, and their criticisms are printed rather than buried. The distributional arithmetic is what will get quoted: in the extreme case the economy gains roughly three times what cognitive workers lose, so a transfer of about 9% of GDP would hold them whole — Social Security and Medicare combined.",
-    date: "Sep 1",
-    url: "https://www.anthropic.com/institute/econ-scenarios",
   },
 ];
 
