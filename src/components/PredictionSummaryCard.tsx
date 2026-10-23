@@ -58,7 +58,7 @@ function getContextLine(prediction: Prediction, aggregateValue: number): string 
   if (prediction.slug === "ai-adoption-rate")
     return `${v}% of US employer firms used AI in the past two weeks (Census BTOS), up from under 4% in 2023.`;
   if (prediction.slug === "genai-work-adoption")
-    return `${v}% of U.S. working-age adults now use generative AI at work. Overall adoption (61.8%, May 2026) outpaces the PC and internet at comparable points post-launch.`;
+    return `${v}% of U.S. working-age adults now use generative AI at work. Overall adoption (60.8%, Aug 2026) outpaces the PC and internet at comparable points post-launch.`;
   if (prediction.slug === "earnings-call-ai-mentions")
     return `${v}% of S&P 500 companies now mention AI + workforce on earnings calls, up from 8% pre-ChatGPT.`;
   if (prediction.slug === "robots-physical-automation-displacement")

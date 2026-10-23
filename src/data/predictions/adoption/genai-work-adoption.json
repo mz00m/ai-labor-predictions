@@ -2,10 +2,10 @@
   "id": "genai-work-adoption",
   "slug": "genai-work-adoption",
   "title": "Generative AI Adoption",
-  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey, published as 137 official FRED series since July 2026). Work adoption (45.2%, May 2026) lags overall use (57.9%, Q1 2026), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
+  "description": "Share of U.S. working-age adults (18\u201364) using generative AI at work, from a nationally representative quarterly survey (Real-Time Population Survey, published as 137 official FRED series since July 2026). Work adoption (40.5%, August 2026, down from 45.2% in May) lags overall use (60.8%, August 2026), consistent with workers adopting ahead of their employers. Overall adoption has outpaced both the PC and internet at comparable points post-launch.",
   "category": "adoption",
   "unit": "% of employed adults 18\u201364 who have used genAI for work",
-  "currentValue": 45.2,
+  "currentValue": 40.5,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "history": [
@@ -135,6 +135,16 @@
       "value": 45.2,
       "sourceIds": [
         "genai-adoption-tracker-may-2026"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
+    {
+      "date": "2026-08-31",
+      "value": 40.5,
+      "sourceIds": [
+        "genai-adoption-tracker-aug-2026"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -1196,6 +1206,16 @@
       "datePublished": "2026-04-13",
       "excerpt": "Almost half of all respondents (48.6%) report using generative AI for work, while 1 in 4 has access to a paid subscription.",
       "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "genai-adoption-tracker-aug-2026",
+      "title": "Generative AI Adoption Tracker - August 2026 Update",
+      "url": "https://www.genaiadoptiontracker.com/",
+      "publisher": "Bick, Blandin, Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-16",
+      "excerpt": "Generative AI Adoption Tracker, August 2026 wave: \"40.5% of the employed respondents used genAI for work\"; \"60.8% of the U.S. population aged 18-64 uses genAI\"; \"5.3% of total work hours spent using genAI\"; \"2.1% time saved out of total work hours due to the genAI adoption.\" FRED (updated Oct 20, 2026) reports RPSGENAIUSAGESHAREWORK \"Q3 2026: 40.54550\", down from 45.19932 in Q2 2026; daily use for work fell to 11.47% from 13.69%. The same release revised Q1 2026 work adoption from 43.41 to 42.84 and Q4 2025 from 40.73 to 40.65; the plotted earlier points keep the values their sources published. The first wave-on-wave decline in work adoption since November 2024; the publishers have not commented on it. Real-Time Population Survey, nationally representative online survey of US adults 18-64; tracker combines 9 surveys and over 40,000 respondents.",
+      "dateAdded": "2026-10-23"
     }
   ]
 }

@@ -354,6 +354,15 @@
       ],
       "evidenceTier": 4,
       "label": "Gates: robots to compete for construction and hospitality work by 2030"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "neutral",
+      "sourceIds": [
+        "anthropic-robot-exposure-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic: robots can do 74% of physical tasks but are cost-competitive for 0.3%"
     }
   ],
   "sources": [
@@ -566,6 +575,16 @@
       "datePublished": "2026-09-30",
       "excerpt": "Second, generative AI skills remain rare overall (under 1 percent of postings), though they have inched up over the past year. Third, production workers show the same upward trends for broad AI and machine learning but at substantially lower levels, with generative AI skills essentially absent from production postings through the first half of this year.",
       "dateAdded": "2026-10-02"
+    },
+    {
+      "id": "anthropic-robot-exposure-2026",
+      "title": "What work can robots do?",
+      "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+      "publisher": "Anthropic Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-30",
+      "excerpt": "Robot exposure index rating 7,594 physical O*NET job tasks by whether currently available robots can perform them, and in what environment. \"We find that robots can already perform 74% of physical tasks in the US, making up 34% of working hours. Robots and LLMs together expose all but one-fifth of employment.\" But \"Robots are cost-competitive for just 0.3% of job tasks. If robot price declines follow past trends, it will take 40 years for that share to reach 10%.\" A 1977-to-today backtest finds \"each year, robots have become able to do about 2% of the physical work they previously couldn't,\" and that jobs more exposed to robots saw greater later declines in wages and employment. Most exposure is to robots in specially built environments; robots do only 2% of physical tasks in unstructured settings.",
+      "dateAdded": "2026-10-23"
     }
   ]
 }

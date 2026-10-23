@@ -5,7 +5,7 @@
   "description": "Employment decline for workers aged 22-25 in the most AI-exposed occupations, measured relative to less-exposed occupations. The chart shows only estimates that make this comparison directly. Raw declines that are not adjusted for other causes measure something different, so they appear below the chart as directional signals.",
   "category": "displacement",
   "unit": "% employment decline, ages 22-25, vs least-exposed",
-  "currentValue": 13.2,
+  "currentValue": 13.1,
   "timeHorizon": "Current measure",
   "aggregationMethod": "weighted",
   "disclaimer": "Every point on the chart is a relative estimate \u2014 the employment gap between early-career workers in most-exposed versus least-exposed occupations \u2014 not an absolute headcount drop. Aggregate employment in exposed occupations has continued to grow across all ages; this effect is specific to the 22-25 cohort. Non-US estimates (Sweden, Netherlands) sit below the chart as directional signals and are left out of the average, because labor markets differ enough between countries that averaging across them would mislead. One caveat about mechanism: these are exposure-based estimates, and exposure may capture what employers expect AI to do rather than what it already does. Only about 5.9% of eligible hiring firms show measurable AI adoption, and firms that have adopted are growing headcount faster than those that have not \u2014 so the early-career gap is unlikely to be driven mainly by AI already performing these jobs. Hiring appears to pull back in occupations where employers anticipate AI becoming capable. The profile records behind the Revelio series are also revised after the fact: 19.7% of established US LinkedIn users retroactively edit the title or description of a job they have already left. The 2025 and 2026 points are the same Stanford/ADP study a year apart \u2014 not two studies independently reaching the same answer. See [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker), [Bloom et al. (NBER, 2026)](https://www.nber.org/papers/w35546) and [Known Limitations](/methodology#limitations). One point is a proxy conversion rather than a figure the source states. The Census CES study (Orr, Tucker and Warren) reports a 4.8 percentage-point fall in the probability of employment one quarter after graduation, which is not this chart's unit; dividing by the base share employed from that paper's own Figure 1 (axis .6 to .9, central 0.75) puts it at 6.4% [5.6-7.4]. It carries isProxy and a 0.5x weight discount. It sits roughly three standard deviations below the occupation-based estimates here, and that gap is the interesting part rather than a flaw: exposure in that study is assigned by college major, chosen years before anyone meets a hiring manager, while occupation-based measures may partly capture employers pulling back from roles they expect AI to take rather than work it already does.",
@@ -39,9 +39,10 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
-    },
+    }
+  ,
     {
-      "date": "2026-08-12",
+      "date": "2026-06-30",
       "value": 19,
       "sourceIds": [
         "brynjolfsson-chandar-chen-2026-08"
@@ -49,8 +50,17 @@
       "evidenceTier": 1,
       "dataType": "observed",
       "metricType": "employment"
-    }
-  ,
+    },
+    {
+      "date": "2026-08-31",
+      "value": 20,
+      "sourceIds": [
+        "revelio-ai-tracker-september-2026"
+      ],
+      "evidenceTier": 2,
+      "dataType": "observed",
+      "metricType": "employment"
+    },
     {
       "date": "2026-09-02",
       "value": 19,
@@ -83,17 +93,7 @@
         "rationale": "Divides the 4.8pp effect by the base share employed one quarter post-graduation to express it in this chart's unit, a relative percent decline. The denominator is the paper's own Figure 1 (\"Employment one quarter post-grad\"), whose axis runs .6 to .9 in share employed; central 0.75, bounded 0.65-0.85. The conversion is arithmetic and insensitive to the denominator across that range (5.6-7.4%). Sits about 3 standard deviations below the occupation-based estimates on this chart, which is signal rather than artifact: exposure here is assigned by college major, fixed years before labor market entry, whereas the occupation-based measures may partly capture employers pulling back from roles they expect AI to take."
       }
     }
-  ,
-    {
-      "date": "2026-09-30",
-      "value": 20,
-      "sourceIds": [
-        "revelio-ai-tracker-september-2026"
-      ],
-      "evidenceTier": 2,
-      "dataType": "observed",
-      "metricType": "employment"
-    }
+  
   ],
   "overlays": [
     {
@@ -466,6 +466,15 @@
       "evidenceTier": 1,
       "label": "NBER Fairlie & Wu: no summer-2026 unemployment spike for 22-25 grads vs older grads or non-grads"
     },
+    {
+      "date": "2026-08-31",
+      "direction": "up",
+      "sourceIds": [
+        "anthropic-employment-at-anthropic-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Anthropic internal: junior share of technical hires fell from 27% to 9%"
+    },
 {
       "date": "2026-09-04",
       "direction": "down",
@@ -542,6 +551,24 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: at AI adopters, senior employment +32% vs junior +6% since Nov 2022"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-canaries-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries (Sep 2026 data): ages 22-25 index 87.66 most-exposed vs 108.4 least"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-canaries-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Canaries: ages 22-25 most-exposed -3.4%/yr vs least-exposed +2.1%/yr (Sep 2026)"
     },
     {
       "date": "2026-10-19",
@@ -993,6 +1020,26 @@
       "evidenceTier": 4,
       "datePublished": "2026-10-19",
       "excerpt": "AI is probably playing some role in higher unemployment for young people with college degrees.  But it can’t explain the entirety of the increase in that unemployment.",
+      "dateAdded": "2026-10-23"
+    },
+    {
+      "id": "stanford-del-canaries-oct-2026",
+      "title": "Stanford DEL Canaries Dashboard: October 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-21",
+      "excerpt": "October 21, 2026 monthly refresh of the Canaries Dashboard (ADP five-year balanced payroll sample), data vintage 2026-10-16 with observations through September 2026. Published captions: \"Among early-career workers (ages 22-25), the least AI-exposed occupations are growing at 2.1% per year; in contrast, the most AI-exposed occupations are contracting at 3.4% per year.\" \"Among early-career workers (ages 22-25), the least AI-exposed occupations grew 0.2% YoY; in contrast, the most AI-exposed occupations contracted 3.7% YoY.\" \"Across workers of all ages, the most AI-exposed occupations contracted 0.5% YoY, compared to the least exposed, which grew 1.0% YoY.\" Ages 22-25 employment index (Nov 2022 = 100), September 2026: least-exposed quintile 108.4, Q2 110.1, Q3 106.7, Q4 92.33, most-exposed quintile 87.66. The balanced window rolls forward monthly, so each release restates earlier months (August 2026 most-exposed reads 87.23 in the September release and 87.67 in this one). The dashboard publishes no relative shortfall; the latest published figure remains the 19% kept-pace gap from the August 2026 paper (June 2026 data).",
+      "dateAdded": "2026-10-23"
+    },
+    {
+      "id": "anthropic-employment-at-anthropic-2026",
+      "title": "How employment is changing at Anthropic",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "publisher": "Anthropic Economic Research (Wilmers, Catipon, Massenkoff, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-16",
+      "excerpt": "Internal Anthropic data on employment, AI agent use, output, surveys and hiring records, with 17 employee interviews. \"The share of junior-level employees in technical departments at Anthropic slipped from 21% to 14% since early 2025. The proportion of junior technical hires fell even faster, from 27% to 9%. Postings for juniors have fallen particularly sharply since December 2025.\" \"Around a third of ML and a fifth of SWE managers reported hiring less due to AI.\" \"By August interactive AI agent hours outnumbered employees' six to one.\" Technical departments' share of employment fell from 61% to 56% over the year as business functions grew faster. One firm at the frontier of AI adoption, so a directional signal rather than an economy-wide estimate.",
       "dateAdded": "2026-10-23"
     }
   ]

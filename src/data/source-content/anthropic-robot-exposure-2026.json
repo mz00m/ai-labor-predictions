@@ -1,0 +1,17 @@
+{
+  "id": "anthropic-robot-exposure-2026",
+  "abstract": "Anthropic's Economic Research team introduces a robot exposure index that rates how well currently available robots - autonomous physical machines that sense and act - can perform each physical task in O*NET, and in what kind of environment. Robots can already perform 74% of physical tasks in the US, or 34% of all working hours, but mostly in specially built or structured settings; combined with LLM exposure, about 80% of job tasks by working time are exposed to one or the other. Cost is the binding constraint: robots are cost-competitive with human labor for just 0.3% of job tasks, and at the historical pace of robot price declines it would take about 40 years to reach 10%. A backtest from 1977 shows robots gaining the ability to do about 2% of previously undoable physical work each year, and that more-exposed jobs saw larger subsequent declines in wages and employment.",
+  "keyFindings": [
+    "Robots can perform 74% of physical tasks in the US, making up 34% of working hours",
+    "About 80% of job tasks by working time are exposed to either robots or LLMs",
+    "By environment, as a share of all tasks: 12% no robot can do today, 23% doable only in specially built environments, 10% in structured human workplaces, 1% in unstructured environments",
+    "Robots are cost-competitive for just 0.3% of job tasks; at a ~3% annual price decline, reaching 10% would take about 40 years",
+    "A 20% cost decline would make robots cost-competitive for the physical work of 2.8 million workers, 0.8% of all working time",
+    "Each year robots have become able to do about 2% of physical work they previously could not (62% of 1977 physical tasks undoable then, 24% now)",
+    "Highly robot-exposed workers are 55 points less likely to hold a bachelor's degree and earn about $30 less per hour (ACS 2020-2024)",
+    "Packers and packagers employment has fallen 22% since 2015"
+  ],
+  "methodology": "Claude rates exposure for 7,594 O*NET tasks classified as physical on a scale from E0 (no current robot can do it) to E3 (robots can do it in unstructured environments), using a prompt that requires evidence of an existing robot. Task shares are weighted by Claude-estimated time shares within occupations and BLS 2025 employment. Cost-competitiveness compares estimated robot costs with wages for exposed work. Validation rates 1977-era tasks with 1977 and current robot capabilities and links exposure to later wage and employment changes. LLM exposure draws on Eloundou et al. (2024) and Massenkoff and McCrory (2026). Data published on Hugging Face under robot_exposure.",
+  "qualifiers": "Tier 2 - corporate research from an AI developer, not peer-reviewed. Exposure ratings are produced by a language model rather than by engineers or field observation, and 'can perform in some circumstances' is a capability ceiling, not adoption or displacement. Cost estimates are approximate and ignore regulatory and financing frictions, which the authors flag (robotaxis are close to cost parity yet face regulatory hurdles). The 40-year horizon assumes past price declines continue and excludes possible discontinuities from humanoids or new manufacturing processes.",
+  "fetchedAt": "2026-10-23"
+}

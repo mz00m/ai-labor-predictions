@@ -298,13 +298,13 @@ export const FORECAST_PREDICTIONS: ForecastPrediction[] = [
     prediction: 35,
     confidenceLow: 25,
     confidenceHigh: 50,
-    currentObserved: 23.8, // Census BTOS Q7, cycle 202619 (two weeks ending Sep 6 2026)
+    currentObserved: 24.6, // Census BTOS Q7, cycle 202621 (two weeks ending Oct 4 2026)
     conviction: "high",
     rationale:
-      "Census BTOS is the gold standard -- 23.8% as of early Sep 2026, up from 3.8% in Aug 2023. S-curve dynamics suggest doubling in 3-4 years. But OECD warns 50% of SMEs lack workforce skills for AI adoption, limiting upside.",
+      "Census BTOS is the gold standard -- 24.6% as of early Oct 2026, up from 3.8% in Aug 2023. S-curve dynamics suggest doubling in 3-4 years. But OECD warns 50% of SMEs lack workforce skills for AI adoption, limiting upside.",
     keyCitations: [
-      "Census BTOS: 3.8% (Aug 2023) to 23.8% (Sep 2026)",
-      "St. Louis Fed RPS: 45.2% of adults 18-64 used GenAI for work (May 2026)",
+      "Census BTOS: 3.8% (Aug 2023) to 24.6% (Oct 2026)",
+      "St. Louis Fed RPS: 40.5% of adults 18-64 used GenAI for work (Aug 2026)",
       "OECD: 50% of SMEs say employees lack AI skills",
       "Kolko: adoption pace similar to computer/internet eras",
     ],
@@ -324,12 +324,12 @@ export const FORECAST_PREDICTIONS: ForecastPrediction[] = [
     prediction: 65,
     confidenceLow: 50,
     confidenceHigh: 80,
-    currentObserved: 45.2, // St. Louis Fed RPS, May 2026 wave (FRED RPSGENAIUSAGESHAREWORK, Q2 2026)
+    currentObserved: 40.5, // St. Louis Fed RPS, Aug 2026 wave (FRED RPSGENAIUSAGESHAREWORK, Q3 2026)
     conviction: "moderate",
     rationale:
-      "Currently 45.2% per the St. Louis Fed RPS (Bick, Blandin & Deming, May 2026). But only 6.3% of actual work hours involve AI. Headline adoption will grow; effective depth will lag. College grads at 58.7% vs non-college 22.9% (NY Fed) -- adoption is bifurcated.",
+      "Currently 40.5% per the St. Louis Fed RPS (Bick, Blandin & Deming, Aug 2026). But only 5.3% of actual work hours involve AI. Headline adoption will grow; effective depth will lag. College grads at 58.7% vs non-college 22.9% (NY Fed) -- adoption is bifurcated.",
     keyCitations: [
-      "St. Louis Fed RPS (Bick, Blandin & Deming): 45.2% of workers, 6.3% of work hours (May 2026)",
+      "St. Louis Fed RPS (Bick, Blandin & Deming): 40.5% of workers, 5.3% of work hours (Aug 2026)",
       "NY Fed SCE: 58.7% college grads vs 22.9% non-college",
       "FRI economists: 10.1% of work hours GenAI-assisted by 2030",
       "MIT/CCI: AI apps grew 6x but activity coverage only 1.2x",

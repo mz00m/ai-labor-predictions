@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-10-19",
-  "lastSweep": "2026-10-19",
+  "asOf": "2026-10-23",
+  "lastSweep": "2026-10-23",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -146,13 +146,13 @@
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
       "lastIngested": {
-        "sourceId": "census-btos-ai-cycle-202620",
-        "date": "2026-10-08",
-        "value": "23.8% national AI use, two weeks ending Sep 20 2026 (cycle 202620); flat after four consecutive increases"
+        "sourceId": "census-btos-ai-cycle-202621",
+        "date": "2026-10-22",
+        "value": "24.6% national AI use, two weeks ending Oct 4 2026 (cycle 202621); series high, first release labelled 'Super Intelligence' under EO 14434"
       },
-      "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: ingested cycle 202620 (published Oct 8), 23.8% for the reference period ending 2026-09-20. Flat against cycle 202619's 23.8%, and the standard error widened from 0.26% to 0.41%, so the level holds but this cycle adds no movement. ai-adoption-rate uses aggregationMethod \"latest\", so currentValue stays 23.8. The National.xlsx procedure in nextExpected worked exactly as written - the dates sheet is a forward calendar, so read the latest cycle column from 'Response Estimates' rather than the bottom of 'Collection and Reference Dates'."
+      "nextExpected": "November 5, 2026 (cycle 202622, reference period ending Oct 18) — the first cycle fielded with 'Super Intelligence' wording and the SI supplement (current-use question moves to Q24 for cycles 202622-202701; new core Q8-Q10 on Generative SI, headcount and new hires from 202702). Watch 202622 for a level shift and read any jump as an instrument effect on the same construct. The AI/SI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle; the press releases are boilerplate and never mention them. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — publication follows reference-period end by about 18 days (4 days after collection closes). The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” and the Oct 22, 2026 SI relabel are both same-construct instrument changes; Census and we publish one continuous series. The biannual SI (formerly AI) Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
+      "lastSweep": "2026-10-23",
+      "sweepNote": "Swept 2026-10-23: ingested cycle 202621 (published Oct 22), 24.6% (SE 0.27%) for the reference period ending 2026-10-04, a series high, +0.8 pp (~1.6 SE, suggestive rather than significant). Census relabelled Q7 and Q24 'Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)' across all cycles under Executive Order 14434, whose §3(a) defines SI as the statutory definition of AI; no value was revised. 202621 was collected with the AI-worded V4 questionnaire; SI wording reaches respondents from 202622. The Data Dictionary's questionnaire link points to hfp.dev.econ.census.gov, which does not resolve publicly — use the www2.census.gov questionnaire PDFs. Watch EO 14434 §3(b): proposed legislation on an SI definition is due ~Nov 28, 2026 and could change the construct. The earlier note that reference end and publication differ by six to seven weeks was wrong; the lag is ~18 days."
     },
     {
       "id": "factset-earnings-ai-mentions",
@@ -193,20 +193,22 @@
       "whatItMeasures": "Share of US adults 18-64 using generative AI (a) overall and (b) at work, fielded quarterly via the Real-Time Population Survey (RPS) since August 2024. The FRED release (137 series, added Jul 2026) adds machine-readable vintages for usage rates (overall/work/nonwork), time savings, GenAI-assisted work hours, and PC/internet adoption comparisons, with industry and occupation breakdowns. Key series: RPSGENAIUSAGESHAREWORK, RPSGENAIUSAGESHAREALL, RPSGENAITSALL, RPSGENAIASSISTWRKHRSALL.",
       "whyItMatters": "The single cleanest time series on worker-side GenAI adoption in the US, cited by every major synthesis (Stanford DEL, IMF, Fed, OECD). Nationally representative and cadence-consistent. FRED hosting makes it citable and API-accessible alongside official government statistics.",
       "lastIngested": {
-        "sourceId": "fred-rps-genai-2026",
-        "date": "2026-07-25",
-        "value": "FRED hosting added (137 series); assisted work hours 6.3% Q2 2026; work adoption 43.4% Q1 2026 (tracker: 45.2% May 2026)"
+        "sourceId": "genai-adoption-tracker-aug-2026",
+        "date": "2026-10-16",
+        "value": "August 2026 wave: work adoption 40.5% (FRED Q3 2026: 40.55), down from 45.2% in May; assisted work hours 5.3%"
       },
-      "nextExpected": "~August 2026 (Q2 2026 usage wave on FRED; next survey wave in the fall)"
+      "nextExpected": "Late January 2027 (November 2026 wave; FRED lists 'Next Release Date: Not Available'. May wave posted Aug 4, August wave Oct 16)",
+      "lastSweep": "2026-10-23",
+      "sweepNote": "Swept 2026-10-23: the August 2026 wave posted to FRED on 2026-10-16 (ALFRED vintages 2026-10-16 and 2026-10-20) and to genaiadoptiontracker.com. Work adoption fell 4.7 points to 40.5%, the first wave-on-wave decline since November 2024, with no explanation from the authors; the release also revised Q4 2025 and Q1 2026 down slightly in every series (recorded in the source excerpt; existing plotted points left as published). Plotted at 2026-08-31 (fieldwork month end) and added to rps-tracker.json. Check ALFRED (alfred.stlouisfed.org/graph/alfredgraph.csv?id=<SERIES>&vintage_date=YYYY-MM-DD) to separate new quarters from revisions. Task-level WP 2026-017 is the same paper as NBER w35677 (bick-blandin-deming-task-level-genai-2026)."
     },
     {
       "id": "yale-budgetlab-cps-tracker",
       "name": "Yale Budget Lab — Tracking AI's Impact on the Labor Market",
       "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
       "tier": 1,
-      "cadence": "quarterly",
-      "cadenceLabel": "Rolling quarterly (with CPS updates)",
-      "releasePattern": "Each new CPS release; typically monthly commentary, quarterly deep-dives",
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly (with each CPS release); SDID comparisons quarterly",
+      "releasePattern": "Monthly with each CPS release (Sep 15, Oct 14, 2026); the SDID comparisons tab updates quarterly. Data served via the interactive manifest and per-figure CSVs",
       "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
       "targetGraphs": [
         "overall-us-displacement",
@@ -216,38 +218,41 @@
       "whatItMeasures": "Uses the Current Population Survey to test whether AI-exposed occupations are seeing employment declines. Complements the ADP-based Canaries with a different dataset and a different unit of analysis.",
       "whyItMatters": "The Yale team's 'no effect yet' reading disciplines the field — anyone claiming AI-driven displacement has to reconcile with CPS data that doesn't show it. Their published disagreements with Stanford DEL are among the most important debates in the field.",
       "lastIngested": {
-        "sourceId": "yale-budgetlab-tracker-sep-2026",
-        "date": "2026-09-15",
-        "value": "Tracker extended to August 2026 CPS; still no clear AI labor-market disruption"
+        "sourceId": "yale-budgetlab-tracker-oct-2026",
+        "date": "2026-10-14",
+        "value": "Tracker extended to September 2026 CPS; no large-scale disruption, but AI-exposed unemployment elevated vs synthetic control in Q3 2026 (1.14, CI -0.19 to 2.48)"
       },
-      "nextExpected": "~October 2026 (with September CPS)",
-      "lastSweep": "2026-09-28",
-      "sweepNote": "Swept 2026-09-28: the Sep 15, 2026 update is the first to carry the tracker past Q1 2026 - it now runs through August 2026 CPS microdata. The page body is an embedded interactive; the substance is in the 'Current Update' panel and the printable PDF at /sites/default/files/page_to_pdf/1419/publication_1419.pdf, not in the prose. Read the PDF rather than the page."
+      "nextExpected": "Mid-November 2026 (with October CPS); next quarterly SDID estimates (2026Q4) ~mid-January 2027",
+      "lastSweep": "2026-10-23",
+      "sweepNote": "Swept 2026-10-23: ingested the Oct 14 update (September 2026 CPS) as overlays — two on overall-us-displacement (no large-scale disruption, down; elevated-but-volatile exposed unemployment, neutral) and one on workforce-ai-exposure (top-exposure group 18.3%, neutral). No data point: the SDID estimates are per-occupation averages, not a share of US jobs. The printable PDF at /sites/default/files/page_to_pdf/1419/publication_1419.pdf is NOT regenerated — it still renders the Sep 15 version. Read https://interactives.budgetlab.yale.edu/tools/ai-labor-market-tracker/data/manifest.json (Current Update text in tabs[0].body_html, release date in release.updated) and the per-figure CSVs it lists under ./data/. Cadence changed from quarterly to monthly."
     },
     {
       "id": "stanford-del-aiei",
       "name": "Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption)",
       "publisher": "Stanford Digital Economy Lab (Brynjolfsson)",
       "tier": 1,
-      "cadence": "quarterly",
-      "cadenceLabel": "Quarterly Research Notes; monthly dashboard",
+      "cadence": "monthly",
+      "cadenceLabel": "Monthly dashboards; research notes ad hoc",
       "releasePattern": "Research notes ~quarterly; dashboards update monthly at digitaleconomy.stanford.edu",
       "url": "https://digitaleconomy.stanford.edu/project/indicators/",
       "targetGraphs": [
         "overall-us-displacement",
         "workforce-ai-exposure",
         "tech-sector-displacement",
-        "entry-level-wage-impact"
+        "entry-level-wage-impact",
+        "early-career-employment-decline"
       ],
       "topicLine": "Three linked dashboards: employment by age × AI exposure, macro takeoff signals, and worker adoption.",
       "whatItMeasures": "Canaries Dashboard tracks employment across 5-year balanced ADP payroll sample (25K firms, 4.6M workers). Takeoff Tracker follows 12 macro indicators for AI-driven growth. Adoption Monitor synthesizes surveys.",
       "whyItMatters": "The Canaries finding — early-career workers 22-25 in most-exposed occupations contracting -3.5%/yr as of June 2026 data — is the most-cited AI-displacement evidence in the field. Takeoff Tracker's 7-no / 3-mild / 2-strong reading is the field's best macro summary.",
       "lastIngested": {
-        "sourceId": "brynjolfsson-chandar-chen-2026-08",
-        "date": "2026-08-13",
-        "value": "Canaries paper (Aug 2026 revision, data through June 2026): ages 22-25 kept-pace shortfall 19%, up from 15% at the July 2025 vintage"
+        "sourceId": "stanford-del-canaries-oct-2026",
+        "date": "2026-10-21",
+        "value": "Canaries data through Sep 2026: ages 22-25 most-exposed -3.4%/yr vs least-exposed +2.1%/yr; all-ages most-exposed -0.5% YoY"
       },
-      "nextExpected": "Dashboard refreshes monthly (next ~September 2026); next research note ~November 2026"
+      "nextExpected": "Mid-November 2026 (monthly dashboard refresh, ~third week, October 2026 data); next research note unscheduled",
+      "lastSweep": "2026-10-23",
+      "sweepNote": "Swept 2026-10-23: ingested the October 21 dashboard release (vintage 2026-10-16, data through September 2026) as overlays on early-career-employment-decline (index levels and annualized growth captions) and a Transformation Tracker overlay on overall-us-displacement (3 strong, 2 mild, 7 neutral). The Canaries proxy point on overall-us-displacement was deliberately not refreshed. Both dashboards update together, about the third week of each month. Read the numbers from the public bucket: https://storage.googleapis.com/storage/v1/b/aviary-del-public/o?prefix=release_memos/ lists one folder per release, and each downloads/*.zip holds CSVs with published captions and a vintage column. The five-year balanced window rolls forward monthly, so every release restates prior months: never splice index levels across releases. The dashboard publishes no relative shortfall; 19% (Aug 2026 paper, June data) remains the latest published gap."
     },
     {
       "id": "anthropic-economic-index",
@@ -271,7 +276,7 @@
         "date": "2026-06-26",
         "value": "50% say Claude handles 50%+ of tasks; 4% say entire job"
       },
-      "nextExpected": "~September 2026 (Q3 report); on the observed four-to-five-month cadence, ~November 2026",
+      "nextExpected": "Late November 2026 (Q3 themed report, on the observed four-to-five-month cadence; none as of the Oct 23, 2026 sweep)",
       "lastSweep": "2026-10-19",
       "sweepNote": "Swept 2026-10-19: still no Q3 report, fourth consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 115 days against a quarterly cadence. The expectation is what looks wrong, not the feed: the published cadence has run roughly four to five months in practice, not three. This sweep deliberately did not change the cadence. Recadencing both to semiannual (183d) is the right fix and has been the standing recommendation for three sweeps, but it lowers the audit's own staleness bar on a live series, so it is a human call rather than something a scheduled run should do to itself."
     },
@@ -514,7 +519,7 @@
         "date": "2026-09-28",
         "value": "Fairlie & Wu (WP 35796): no summer-2026 unemployment spike for recent college graduates"
       },
-      "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly",
+      "nextExpected": "Late November 2026 (monthly check of the weekly NBER batches, next batch Oct 26; use the listing API at nber.org/api/v1/working_page_listing)",
       "lastSweep": "2026-09-28",
       "sweepNote": "The nber.org topic-facet page renders its paper list client-side and reads as empty to a fetcher. Use the RSS feed at https://back.nber.org/rss/new.xml instead. Swept 2026-09-28: ingested Fairlie & Wu (WP 35796); left Blumenfeld/Hazell/Lian/Schaab (WP 35793, software-engineering productivity and GDP) unmapped - no graph on the site carries that unit."
     },
@@ -589,7 +594,7 @@
         "date": "2026-06-26",
         "value": "Dashboard updated with each themed report; latest: Cadences (June 2026)"
       },
-      "nextExpected": "~September 2026 (with Q3 themed report); on the observed four-to-five-month cadence, ~November 2026",
+      "nextExpected": "Late November 2026 (Q3 themed report, on the observed four-to-five-month cadence; none as of the Oct 23, 2026 sweep)",
       "lastSweep": "2026-10-19",
       "sweepNote": "Swept 2026-10-19: still no Q3 report, fourth consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 115 days against a quarterly cadence. The expectation is what looks wrong, not the feed: the published cadence has run roughly four to five months in practice, not three. This sweep deliberately did not change the cadence. Recadencing both to semiannual (183d) is the right fix and has been the standing recommendation for three sweeps, but it lowers the audit's own staleness bar on a live series, so it is a human call rather than something a scheduled run should do to itself."
     },
@@ -613,7 +618,7 @@
         "date": "2026-08-27",
         "value": "~40% of new businesses in metros under 1M people, up 10% relative to four years ago; ~80% of frontier AI labs still in San Francisco"
       },
-      "nextExpected": "~September 2026 (Q3 2026 data / Atlas blog cadence)",
+      "nextExpected": "Late December 2026 (Atlas year-in-review); no quarterly incorporation post since 'The age of the solopreneur' (Jun 22, 2026)",
       "lastSweep": "2026-08-27",
       "sweepNote": "Swept 2026-08-27 via the Substack RSS feed, which the 2026-08-20 sweep missed by reading the rendered page. Still no Q2/Q3 2026 Atlas incorporation post, so the incorporation-volume series itself is current at 'The age of the solopreneur' (Jun 22, 2026), ingested as stripe-economics-solopreneur-2026. Both previously pending Tedeschi posts are now ingested: 'AI and productivity' (Jul 23, 2026) as an overlay on ai-adoption-rate, and 'AI and the city' (Aug 27, 2026) as an overlay on ai-business-formation. Sweep this feed at /feed, not the homepage."
     },

@@ -1,0 +1,17 @@
+{
+  "id": "anthropic-employment-at-anthropic-2026",
+  "abstract": "Anthropic's Economic Research team studies how AI has restructured work and hiring inside Anthropic, using internal employment, agent-telemetry, output, survey, calendar and hiring-decision data plus 17 interviews. As agent use expanded - agent work hours passed human hours in March 2026 and interactive agent hours outnumbered employees six to one by August - the company hired a smaller share of junior technical staff: juniors fell from 21% to 14% of technical-department employees since early 2025, and from 27% to 9% of technical hires. Output per person rose in engineering, sales and contracts, and rose for the same employee as they adopted coding agents. Hiring managers increasingly prioritize autonomy and judgment over technical domain expertise, and internal mobility rose.",
+  "keyFindings": [
+    "Junior share of technical-department employees fell from 21% to 14% since early 2025",
+    "Junior share of technical hires fell from 27% to 9%; junior postings fell sharply from December 2025",
+    "About a third of ML managers and a fifth of SWE managers reported hiring less due to AI (April 2026 survey)",
+    "Technical departments' share of employment fell from 61% to 56% over the year as sales, finance and recruiting grew faster",
+    "Agent work hours passed human work hours in March 2026; interactive agent hours outnumbered employees six to one by August 2026",
+    "Coding-agent sessions by non-technical employees rose from 2 per month in August 2025 to 90 in May 2026",
+    "Employees with at least a year's tenure were 50% more likely to move across departments each month in 2026 than in 2025",
+    "Anthropic takes in 2-4 times as much revenue per employee as Meta and Google did at a comparable growth stage"
+  ],
+  "methodology": "Descriptive analysis of comprehensive internal Anthropic administrative data - employment by level and department, job postings and hires, agent session telemetry, code commits, sales and contract output, employee surveys, calendars and hiring-decision records - with within-employee comparisons around coding-agent adoption and 17 semi-structured employee interviews.",
+  "qualifiers": "Tier 2 - corporate self-study by an AI developer about itself, not peer-reviewed. A single, fast-growing frontier AI firm is an extreme case of adoption and not representative of US employers; the authors frame it as a possible leading indicator. Junior-share declines are compositional (technical hiring still grew in absolute terms) and coincide with rapid company growth and changing business mix. Productivity measures such as code per person are acknowledged to be imperfect. Exact end dates for the junior-share series are not stated in the web version. The site dates its overlay to 2026-08-31, the latest month the report cites (agent hours 'by August').",
+  "fetchedAt": "2026-10-23"
+}
