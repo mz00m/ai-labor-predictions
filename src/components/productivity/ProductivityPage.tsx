@@ -185,7 +185,7 @@ export default function ProductivityPage() {
               <ReasonRow
                 number="1"
                 title="Adoption is still early"
-                text="Census BTOS puts AI use at about 24% of US firms (two weeks ending Sep 6 2026), and adoption is heavily skewed to large employers and to information, finance, and professional services. Even where individual gains are large, the aggregate effect is diluted by the roughly three in four firms still outside."
+                text="Census BTOS puts AI use at about 25% of US firms (two weeks ending Oct 4 2026), and adoption is heavily skewed to large employers and to information, finance, and professional services. Even where individual gains are large, the aggregate effect is diluted by the roughly three in four firms still outside."
               />
               <ReasonRow
                 number="2"

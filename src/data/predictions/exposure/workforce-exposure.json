@@ -824,6 +824,15 @@
       "label": "Connecticut: employers must disclose AI use in WARN Act layoffs (Oct 2026) and hiring decisions"
     },
     {
+      "date": "2026-05-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "bick-blandin-deming-task-level-genai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Bick et al.: exposure scores explain 5-53% of occupation adoption variation"
+    },
+    {
       "date": "2026-06-01",
       "direction": "neutral",
       "sourceIds": [
@@ -1040,6 +1049,15 @@
       ],
       "evidenceTier": 2,
       "label": "Revelio: 90% of year-over-year activity change happens within occupations, up from 89%"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-tracker-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale: top-exposure group 18.3% of workers in Sep 2026 vs 18.2% at ChatGPT launch"
     }
   ],
   "sources": [
@@ -1907,6 +1925,16 @@
       "datePublished": "2026-10-01",
       "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
       "dateAdded": "2026-10-05"
+    },
+    {
+      "id": "yale-budgetlab-tracker-oct-2026",
+      "title": "Tracking the Impact of AI on the Labor Market (October 2026 update)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-14",
+      "excerpt": "\"The Budget Lab's labor market analysis, updated to incorporate September 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations and comparisons of employment and wages between AI-exposed and comparable unexposed workers are not consistent with any large-scale disruption to date.\" New this update: \"However, the growth in unemployment of AI-exposed workers has tended to be elevated relative to growth for comparable unexposed workers since late 2022, and this is the case in the third quarter of 2026. These estimates are volatile and should be interpreted cautiously.\" From the tracker's published data: SDID unemployment-rate estimate 1.14 for 2026Q3 (95% CI -0.19 to 2.48); employment-share estimate 0.0015 (CI -0.0059 to 0.0089); real-wage estimate -0.0050 (CI -0.047 to 0.036). Occupational dissimilarity from the Nov 2022 baseline 5.56 points at month 46, against 4.49 (computers, 1984), 4.75 (internet, 1996) and 4.97 (2016 control) at the same horizon. Highest-exposure group 18.3% of workers in Sep 2026 vs 18.2% in Nov 2022.",
+      "dateAdded": "2026-10-23"
     }
   ]
 }

@@ -1,9 +1,115 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
   "lastUpdated": "2026-10-23",
-  "totalSources": 791,
-  "verifiedCount": 781,
+  "totalSources": 798,
+  "verifiedCount": 788,
   "sources": {
+    "census-btos-ai-cycle-202621": {
+      "id": "census-btos-ai-cycle-202621",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202621)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-22",
+      "excerpt": "BTOS Q7, now published as \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.6% (SE 0.27%) for the two weeks ending 2026-10-04, up from 23.8% (SE 0.41%) for the cycle ending 2026-09-20 and the highest in the series; the 0.8-point rise is about 1.6 standard errors. Q24, the six-month expectation, was 28.6% (SE 0.21%), up from 27.7%. Collection for cycle 202621 ran 2026-10-05 to 2026-10-18; published 2026-10-22. The workbook's Data Dictionary states: \"As of October 22, 2026, data is published in compliance with Executive Order 14434.\" The relabel applies to every cycle's label and revised no values; 202621 respondents were asked the AI-worded V4 question. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "yale-budgetlab-tracker-oct-2026": {
+      "id": "yale-budgetlab-tracker-oct-2026",
+      "title": "Tracking the Impact of AI on the Labor Market (October 2026 update)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-14",
+      "excerpt": "\"The Budget Lab's labor market analysis, updated to incorporate September 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations and comparisons of employment and wages between AI-exposed and comparable unexposed workers are not consistent with any large-scale disruption to date.\" New this update: \"However, the growth in unemployment of AI-exposed workers has tended to be elevated relative to growth for comparable unexposed workers since late 2022, and this is the case in the third quarter of 2026. These estimates are volatile and should be interpreted cautiously.\" From the tracker's published data: SDID unemployment-rate estimate 1.14 for 2026Q3 (95% CI -0.19 to 2.48); employment-share estimate 0.0015 (CI -0.0059 to 0.0089); real-wage estimate -0.0050 (CI -0.047 to 0.036). Occupational dissimilarity from the Nov 2022 baseline 5.56 points at month 46, against 4.49 (computers, 1984), 4.75 (internet, 1996) and 4.97 (2016 control) at the same horizon. Highest-exposure group 18.3% of workers in Sep 2026 vs 18.2% in Nov 2022.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "overall-us-displacement",
+        "workforce-ai-exposure"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "genai-adoption-tracker-aug-2026": {
+      "id": "genai-adoption-tracker-aug-2026",
+      "title": "Generative AI Adoption Tracker - August 2026 Update",
+      "url": "https://www.genaiadoptiontracker.com/",
+      "publisher": "Bick, Blandin, Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-16",
+      "excerpt": "Generative AI Adoption Tracker, August 2026 wave: \"40.5% of the employed respondents used genAI for work\"; \"60.8% of the U.S. population aged 18-64 uses genAI\"; \"5.3% of total work hours spent using genAI\"; \"2.1% time saved out of total work hours due to the genAI adoption.\" FRED (updated Oct 20, 2026) reports RPSGENAIUSAGESHAREWORK \"Q3 2026: 40.54550\", down from 45.19932 in Q2 2026; daily use for work fell to 11.47% from 13.69%. The same release revised Q1 2026 work adoption from 43.41 to 42.84 and Q4 2025 from 40.73 to 40.65; the plotted earlier points keep the values their sources published. The first wave-on-wave decline in work adoption since November 2024; the publishers have not commented on it. Real-Time Population Survey, nationally representative online survey of US adults 18-64; tracker combines 9 surveys and over 40,000 respondents.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-canaries-oct-2026": {
+      "id": "stanford-del-canaries-oct-2026",
+      "title": "Stanford DEL Canaries Dashboard: October 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-21",
+      "excerpt": "October 21, 2026 monthly refresh of the Canaries Dashboard (ADP five-year balanced payroll sample), data vintage 2026-10-16 with observations through September 2026. Published captions: \"Among early-career workers (ages 22-25), the least AI-exposed occupations are growing at 2.1% per year; in contrast, the most AI-exposed occupations are contracting at 3.4% per year.\" \"Among early-career workers (ages 22-25), the least AI-exposed occupations grew 0.2% YoY; in contrast, the most AI-exposed occupations contracted 3.7% YoY.\" \"Across workers of all ages, the most AI-exposed occupations contracted 0.5% YoY, compared to the least exposed, which grew 1.0% YoY.\" Ages 22-25 employment index (Nov 2022 = 100), September 2026: least-exposed quintile 108.4, Q2 110.1, Q3 106.7, Q4 92.33, most-exposed quintile 87.66. The balanced window rolls forward monthly, so each release restates earlier months (August 2026 most-exposed reads 87.23 in the September release and 87.67 in this one). The dashboard publishes no relative shortfall; the latest published figure remains the 19% kept-pace gap from the August 2026 paper (June 2026 data).",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-transformation-tracker-oct-2026": {
+      "id": "stanford-del-transformation-tracker-oct-2026",
+      "title": "Stanford DEL Transformation Tracker: October 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/transformation-tracker/",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-21",
+      "excerpt": "Twelve aggregate US indicators of AI-driven economic transformation, each classified as contradictory, neutral, mild or strong evidence against a 2010-2019 trend distribution. \"We see no decisive evidence of transformation at present.\" As of October 21, 2026: strong evidence for the capital share, the software and R&D share of private nonresidential fixed assets, and the information-processing equipment share of nonresidential equipment (\"recently recovered to levels last achieved in the early 2000s\"); mild evidence for ten-year real interest rates and electricity generation; neutral for output, TFP and labor productivity growth, both network-adjusted private capital share measures, the software share of software and R&D, and primary energy consumption. \"In aggregate, we still see no strong indication of transformation.\" Formerly the Takeoff Tracker, which read 7 neutral, 3 mild and 2 strong in its July 1, 2026 version.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-robot-exposure-2026": {
+      "id": "anthropic-robot-exposure-2026",
+      "title": "What work can robots do?",
+      "url": "https://www.anthropic.com/research/what-work-can-robots-do",
+      "publisher": "Anthropic Economic Research",
+      "evidenceTier": 2,
+      "datePublished": "2026-09-30",
+      "excerpt": "Robot exposure index rating 7,594 physical O*NET job tasks by whether currently available robots can perform them, and in what environment. \"We find that robots can already perform 74% of physical tasks in the US, making up 34% of working hours. Robots and LLMs together expose all but one-fifth of employment.\" But \"Robots are cost-competitive for just 0.3% of job tasks. If robot price declines follow past trends, it will take 40 years for that share to reach 10%.\" A 1977-to-today backtest finds \"each year, robots have become able to do about 2% of the physical work they previously couldn't,\" and that jobs more exposed to robots saw greater later declines in wages and employment. Most exposure is to robots in specially built environments; robots do only 2% of physical tasks in unstructured settings.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "robots-physical-automation-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "anthropic-employment-at-anthropic-2026": {
+      "id": "anthropic-employment-at-anthropic-2026",
+      "title": "How employment is changing at Anthropic",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic",
+      "publisher": "Anthropic Economic Research (Wilmers, Catipon, Massenkoff, McCrory)",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-16",
+      "excerpt": "Internal Anthropic data on employment, AI agent use, output, surveys and hiring records, with 17 employee interviews. \"The share of junior-level employees in technical departments at Anthropic slipped from 21% to 14% since early 2025. The proportion of junior technical hires fell even faster, from 27% to 9%. Postings for juniors have fallen particularly sharply since December 2025.\" \"Around a third of ML and a fifth of SWE managers reported hiring less due to AI.\" \"By August interactive AI agent hours outnumbered employees' six to one.\" Technical departments' share of employment fell from 61% to 56% over the year as business functions grew faster. One firm at the frontier of AI adoption, so a directional signal rather than an economy-wide estimate.",
+      "dateAdded": "2026-10-23",
+      "usedIn": [
+        "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
     "berger-ai-labor-market-thoughts-2026": {
       "id": "berger-ai-labor-market-thoughts-2026",
       "title": "Thoughts on AI's Impact on the Labor Market, as of October 2026",
@@ -9962,7 +10068,8 @@
       "excerpt": "current adoption is widespread but shallow: genAI is used across many occupations and tasks, yet within most of them, fewer than half of workers adopt",
       "usedIn": [
         "genai-work-adoption",
-        "workforce-ai-exposure"
+        "workforce-ai-exposure",
+        "workforce-ai-use"
       ],
       "verified": true,
       "synthetic": false

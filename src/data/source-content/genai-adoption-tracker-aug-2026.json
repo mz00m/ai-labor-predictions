@@ -1,0 +1,16 @@
+{
+  "id": "genai-adoption-tracker-aug-2026",
+  "abstract": "The August 2026 wave of the Generative AI Adoption Tracker from Alexander Bick (St. Louis Fed), Adam Blandin (Vanderbilt) and David Deming (Harvard), drawn from the Real-Time Population Survey and published on genaiadoptiontracker.com and as FRED series around October 16, 2026. Work adoption fell to 40.5% of employed adults aged 18-64, from 45.2% in May 2026, the first wave-on-wave decline since November 2024. Overall use among working-age adults edged down to 60.8% from 61.8%. Intensity fell more sharply: genAI-assisted work hours dropped to 5.3% of total work hours from 6.3%, and daily use for work to 11.5% from 13.7%. Reported time savings slipped to 2.1% of work hours. The release also revised the Q4 2025 and Q1 2026 estimates down slightly across all series. The authors have not published an explanation for the decline.",
+  "keyFindings": [
+    "40.5% of employed adults aged 18-64 used genAI for work in August 2026 (FRED Q3 2026: 40.5455), down from 45.2% in May 2026",
+    "60.8% of US adults aged 18-64 use genAI for any purpose, down from 61.8%",
+    "GenAI-assisted work hours: 5.3% of total work hours, down from 6.3% in Q2 2026",
+    "Daily genAI use for work: 11.47%, down from 13.69%",
+    "Time savings: 2.1% of total work hours (2.08), from 2.17%",
+    "Revisions in the same release: Q1 2026 work adoption 43.41 to 42.84; Q4 2025 40.73 to 40.65; Q2 2026 unchanged at 45.20",
+    "First wave-on-wave fall in work adoption since the November 2024 wave"
+  ],
+  "methodology": "Real-Time Population Survey, an online labor-market survey of US adults aged 18-64 fielded by Qualtrics since 2020 and quarterly since August 2024, designed to mirror the CPS and weighted to be nationally representative. Employed respondents are asked 'Do you use Generative AI for your job?'; work-hours and time-savings measures are self-reported shares of the respondent's own hours. The tracker combines 9 surveys and over 40,000 respondents. FRED publishes 137 quarterly series (category 8), dated to the first day of the quarter in which the wave was fielded.",
+  "qualifiers": "Tier 1 - academic survey published through FRED. The RPS is an online panel weighted to population benchmarks rather than a probability sample, and all measures are self-reported. A 4.7-point single-wave drop is large relative to the series' history and to plausible sampling error; the publishers give no explanation, so it may reflect a real pullback, a seasonal or sample-composition effect, or a change in fielding that has not been disclosed. Treat as one observation until the November 2026 wave confirms or reverses it. The release revised prior quarters, so figures cited from earlier vintages (43.4% for Q1 2026) no longer match FRED. The site keeps the earlier plotted RPS points at the values their sources first published (Nov 2025 40.7, Feb 2026 43) rather than re-plotting FRED's revised figures.",
+  "fetchedAt": "2026-10-23"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "stanford-del-transformation-tracker-oct-2026",
+  "abstract": "The October 21, 2026 update of the Stanford Digital Economy Lab's Transformation Tracker, formerly the Takeoff Tracker, which follows 12 aggregate US indicators that should move if AI drives an economic transformation comparable to the Industrial Revolution on a compressed timescale. DEL concludes: 'We see no decisive evidence of transformation at present.' Three indicators show strong evidence, all capital-composition measures with long-running upward trends: the capital share, the software and R&D share of fixed assets, and the information-processing equipment share of equipment. Two show mild evidence: ten-year real interest rates and electricity generation growth. The seven growth, productivity, network-capital-share and energy-consumption indicators read neutral. None reads contradictory.",
+  "keyFindings": [
+    "No decisive evidence of transformation: 3 strong, 2 mild, 7 neutral, 0 contradictory of 12 indicators",
+    "Output growth, TFP growth and labor productivity growth all neutral - no break from recent levels",
+    "Capital share and software & R&D share of fixed assets: strong evidence, continuing historical upward trends 'without signs of abatement'",
+    "Information-processing equipment share of nonresidential equipment upgraded to strong evidence, having recovered to early-2000s levels (mild in the July 1, 2026 version)",
+    "Software share of software & R&D moved to neutral (mild in July); electricity generation moved to mild (neutral in July)",
+    "Ten-year real interest rates (TIPS) remain elevated and in the mild evidence category"
+  ],
+  "methodology": "Each indicator is transformed so that increases point toward transformation (shares are logit-transformed). Realizations are compared against a distribution centered on the 2010 fitted value of a 2010-2019 trend: at or below the 20th percentile is contradictory evidence, 80th-95th percentile mild, 95th and above strong, otherwise neutral. Sources include BEA fixed-asset and national-accounts data, TIPS yields, and energy statistics. A working paper describing the method is forthcoming.",
+  "qualifiers": "Tier 2 - a research dashboard classification, not peer-reviewed. It measures macro growth and capital composition, not labor displacement. The three strong readings are long-running trends that predate generative AI, which DEL's own evidence notes acknowledge ('continues its historical upward trend'). Classifications can flip between monthly updates as data are revised, and DEL's summary text was not updated to describe the October rating changes.",
+  "fetchedAt": "2026-10-23"
+}

@@ -2449,6 +2449,33 @@
       ],
       "evidenceTier": 1,
       "label": "BLS: July revised +21K to -10K and August +162K to +133K, 60K below first reports"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-tracker-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: through Sep 2026 CPS, no large-scale AI hit to jobs or wages"
+    },
+    {
+      "date": "2026-09-30",
+      "direction": "neutral",
+      "sourceIds": [
+        "yale-budgetlab-tracker-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale: AI-exposed unemployment above synthetic control in Q3 2026; CI spans zero"
+    },
+    {
+      "date": "2026-10-21",
+      "direction": "neutral",
+      "sourceIds": [
+        "stanford-del-transformation-tracker-oct-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "DEL Transformation Tracker (Oct 2026): 3 strong, 2 mild, 7 neutral of 12"
     }
   ],
   "sources": [
@@ -4341,6 +4368,26 @@
       "datePublished": "2026-10-02",
       "excerpt": "\"Total nonfarm payroll employment changed little in September (+29,000), following an average monthly gain of 45,000 over the prior 12 months.\" \"Both the unemployment rate, at 4.2 percent, and the number of unemployed people, at 7.1 million, changed little in September.\" \"Health care employment continued its upward trend in September (+17,000), but at a slower pace than the average monthly gain over the prior 12 months (+33,000).\" Employment changed little over the month in \"transportation and warehousing; information; professional and business services; social assistance\" among other major industries. \"The change in total nonfarm payroll employment for July was revised down by 31,000, from +21,000 to -10,000, and the change for August was revised down by 29,000, from +162,000 to +133,000.\" \"With these revisions, employment in July and August combined is 60,000 lower than previously reported.\" \"In September, average hourly earnings for all employees on private nonfarm payrolls edged up by 5 cents, or 0.1 percent, to $37.81.\" \"Over the past 12 months, average hourly earnings have increased by 3.0 percent.\"",
       "dateAdded": "2026-10-12"
+    },
+    {
+      "id": "yale-budgetlab-tracker-oct-2026",
+      "title": "Tracking the Impact of AI on the Labor Market (October 2026 update)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "publisher": "Yale Budget Lab (Gimbel, Kendall, Nunn)",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-14",
+      "excerpt": "\"The Budget Lab's labor market analysis, updated to incorporate September 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations and comparisons of employment and wages between AI-exposed and comparable unexposed workers are not consistent with any large-scale disruption to date.\" New this update: \"However, the growth in unemployment of AI-exposed workers has tended to be elevated relative to growth for comparable unexposed workers since late 2022, and this is the case in the third quarter of 2026. These estimates are volatile and should be interpreted cautiously.\" From the tracker's published data: SDID unemployment-rate estimate 1.14 for 2026Q3 (95% CI -0.19 to 2.48); employment-share estimate 0.0015 (CI -0.0059 to 0.0089); real-wage estimate -0.0050 (CI -0.047 to 0.036). Occupational dissimilarity from the Nov 2022 baseline 5.56 points at month 46, against 4.49 (computers, 1984), 4.75 (internet, 1996) and 4.97 (2016 control) at the same horizon. Highest-exposure group 18.3% of workers in Sep 2026 vs 18.2% in Nov 2022.",
+      "dateAdded": "2026-10-23"
+    },
+    {
+      "id": "stanford-del-transformation-tracker-oct-2026",
+      "title": "Stanford DEL Transformation Tracker: October 2026 Update",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/transformation-tracker/",
+      "publisher": "Stanford Digital Economy Lab",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-21",
+      "excerpt": "Twelve aggregate US indicators of AI-driven economic transformation, each classified as contradictory, neutral, mild or strong evidence against a 2010-2019 trend distribution. \"We see no decisive evidence of transformation at present.\" As of October 21, 2026: strong evidence for the capital share, the software and R&D share of private nonresidential fixed assets, and the information-processing equipment share of nonresidential equipment (\"recently recovered to levels last achieved in the early 2000s\"); mild evidence for ten-year real interest rates and electricity generation; neutral for output, TFP and labor productivity growth, both network-adjusted private capital share measures, the software share of software and R&D, and primary energy consumption. \"In aggregate, we still see no strong indication of transformation.\" Formerly the Takeoff Tracker, which read 7 neutral, 3 mild and 2 strong in its July 1, 2026 version.",
+      "dateAdded": "2026-10-23"
     }
   ]
 }

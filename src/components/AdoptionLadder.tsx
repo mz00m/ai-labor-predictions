@@ -3,7 +3,7 @@
 /**
  * Adoption Ladder - a horizontal stacked bar showing the AI adoption spectrum.
  *
- * The key insight: Census BTOS says about 24% of firms used AI in the past two
+ * The key insight: Census BTOS says about 25% of firms used AI in the past two
  * weeks, while McKinsey's State of AI says 88%. Both are correct - they measure
  * different units and thresholds. This visualization reconciles them.
  */
@@ -11,24 +11,24 @@
 const RUNGS = [
   {
     label: "Firms using AI now",
-    value: 23.8,
-    source: "Census BTOS, two weeks ending Sep 6 2026",
+    value: 24.6,
+    source: "Census BTOS, two weeks ending Oct 4 2026",
     color: "#5C61F6",
-    description: "Firms that used AI in any business function in the past two weeks (BTOS Q7, cycle 202619)",
+    description: "Firms that used AI in any business function in the past two weeks (BTOS Q7, cycle 202621)",
   },
   {
     label: "Firms expecting to use AI within 6 months",
-    value: 27.6,
-    source: "Census BTOS, two weeks ending Sep 6 2026",
+    value: 28.6,
+    source: "Census BTOS, two weeks ending Oct 4 2026",
     color: "#818CF8",
-    description: "Firms that expect to use AI in the next six months (BTOS Q24, cycle 202619)",
+    description: "Firms that expect to use AI in the next six months (BTOS Q24, cycle 202621)",
   },
   {
     label: "Workers: used for work (any)",
-    value: 45.2,
-    source: "St. Louis Fed RPS (Bick, Blandin & Deming), May 2026",
+    value: 40.5,
+    source: "St. Louis Fed RPS (Bick, Blandin & Deming), Aug 2026",
     color: "#A5B4FC",
-    description: "Adults 18-64 who used generative AI for work at all (RPS, May 2026 wave)",
+    description: "Adults 18-64 who used generative AI for work at all (RPS, Aug 2026 wave)",
   },
   {
     label: "Any corporate use",
@@ -83,7 +83,7 @@ export default function AdoptionLadder() {
       </div>
 
       <p className="text-xs text-[var(--muted)] mt-3 leading-relaxed opacity-70">
-        The gap between 24% and 88% is definitional, not contradictory.
+        The gap between 25% and 88% is definitional, not contradictory.
         Census samples all US employer firms and asks about the past two weeks;
         McKinsey surveys self-selected respondents about any use in any
         business function. The worker rung counts people, not firms.

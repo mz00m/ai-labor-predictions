@@ -62,6 +62,15 @@
       "label": "OpenAI: 66pp capability overhang \u2014 90% theoretical vs 23.8% realized exposure in high-risk jobs"
     },
     {
+      "date": "2026-05-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "bick-blandin-deming-task-level-genai-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Bick et al.: 20%+ of workers use AI in 80%+ of jobs, but half do in only 40%"
+    },
+    {
       "date": "2026-07-23",
       "direction": "up",
       "sourceIds": [
@@ -177,6 +186,15 @@
       "datePublished": "2026-10-01",
       "excerpt": "Monthly edition of Revelio's five-lens AI labor tracker (profiles, postings, salaries, reviews, WARN notices), released October 1, 2026 with most workforce data through August 2026. \"Employment for younger workers in the most AI-exposed occupations is down by 20% relative to the least exposed occupations, since pre-ChatGPT - compared with just 6% for older workers.\" \"7.2% of U.S. job positions were held by workers with at least one reported AI skill in August 2026\" (7.6% in July). Gap in job postings between the most and least AI-exposed occupations \"-29%, narrowing from -40% in July.\" \"Decline in the number of new AI-adopting firms per month, compared with July\" of -17%, with cumulative adoption near 7% of eligible hiring firms. \"90% of year-over-year activity change occurs within occupations - up from 89% in July.\" At adopting firms, senior employment is +32% versus +6% for junior roles since November 2022.",
       "dateAdded": "2026-10-05"
+    },
+    {
+      "id": "bick-blandin-deming-task-level-genai-2026",
+      "title": "What Work Does Generative AI Do?",
+      "url": "https://www.nber.org/papers/w35677",
+      "publisher": "nber.org",
+      "evidenceTier": 1,
+      "datePublished": "2026-08-01",
+      "excerpt": "Exposure scores explain some, but far from all, of the variation in adoption across occupations and tasks"
     }
   ]
 }
