@@ -1004,7 +1004,7 @@ function CountUp({
   suffix: string;
 }) {
   const [current, setCurrent] = useState(0);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     if (

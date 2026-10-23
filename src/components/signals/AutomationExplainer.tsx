@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment, type JSX } from "react";
 import type { SignalMetrics } from "@/lib/signal-types";
 
 /* ------------------------------------------------------------------ */

@@ -76,7 +76,7 @@ export default function AiScorePreview({
   const [loading, setLoading] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const animatedScore = useCountUp(selected?.exposure ?? 0, 600);
 
   const search = useCallback(async (q: string, sector: string | undefined) => {

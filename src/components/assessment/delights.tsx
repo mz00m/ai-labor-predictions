@@ -95,7 +95,7 @@ const BURST_COLORS = ["#5C61F6", "#a78bfa", "#7c3aed", "#818cf8", "#c4b5fd"];
 
 export function useParticleBurst() {
   const [particles, setParticles] = useState<Particle[]>([]);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number | undefined>(undefined);
   const idCounter = useRef(0);
 
   const burst = useCallback(
