@@ -6,7 +6,7 @@
   "disclaimer": "Three points dated September 2026 are scenarios from the Anthropic Institute's model, not forecasts, and the authors attach no probabilities to them. They are plotted as the increase in the economy-wide unemployment rate above the model's no-AI baseline of 3.8% \u2014 0.1, 0.8 and 8.1 points in the modest, substantial and extreme scenarios. In that model the labor force is fixed and displaced cognitive workers reallocate into other occupations, so this excess unemployment is the net job loss; the gross number of workers changing occupation is far larger.",
   "category": "displacement",
   "unit": "% of US jobs",
-  "currentValue": 1.4,
+  "currentValue": 1.9,
   "timeHorizon": "By 2030",
   "aggregationMethod": "weighted",
   "history": [
@@ -89,18 +89,6 @@
         "conversionHigh": 1,
         "rationale": "Conditional model outcome in the 'some-AI' steady state, not a central forecast; the other equilibria imply little or no loss"
       }
-    },
-    {
-      "date": "2025-10-15",
-      "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "yale-budget-lab-2025"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
     },
     {
       "date": "2025-12-31",
@@ -253,18 +241,6 @@
       "metricType": "projection"
     },
     {
-      "date": "2026-03-19",
-      "value": 0,
-      "confidenceLow": 0,
-      "confidenceHigh": 1,
-      "sourceIds": [
-        "yale-budgetlab-cps-update-2026"
-      ],
-      "evidenceTier": 1,
-      "metricType": "employment",
-      "dataType": "observed"
-    },
-    {
       "date": "2026-03-25",
       "value": 6,
       "sourceIds": [
@@ -324,18 +300,6 @@
       }
     },
     {
-      "date": "2026-06-15",
-      "value": 0,
-      "confidenceLow": -0.5,
-      "confidenceHigh": 0.5,
-      "sourceIds": [
-        "yale-budgetlab-not-yet-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment"
-    },
-    {
       "date": "2026-07-02",
       "value": 3,
       "confidenceLow": 2,
@@ -346,26 +310,6 @@
       "evidenceTier": 2,
       "dataType": "projected",
       "metricType": "employment"
-    },
-    {
-      "date": "2026-07-22",
-      "value": 0.2,
-      "confidenceLow": 0.1,
-      "confidenceHigh": 0.3,
-      "sourceIds": [
-        "stanford-del-canaries-july-2026"
-      ],
-      "evidenceTier": 1,
-      "dataType": "observed",
-      "metricType": "employment",
-      "isProxy": true,
-      "proxyContext": {
-        "actualUnit": "YoY % decline in most-AI-exposed occupations (June 2026 ADP data, vintage 2026-07-16)",
-        "conversionFactor": 1,
-        "conversionLow": 0.5,
-        "conversionHigh": 1.5,
-        "rationale": "Current annual employment change in the most AI-exposed occupations, not a count of jobs lost to AI; used as a leading indicator of displacement; treated 1:1 with downward range to acknowledge that current pace may not extrapolate linearly. Monthly refresh of the same Canaries dashboard series last ingested 2026-06-10."
-      }
     },
     {
       "date": "2026-07-25",
@@ -812,6 +756,15 @@
       ],
       "evidenceTier": 1,
       "label": "Brookings: labor market shows more continuity than disruption since ChatGPT"
+    },
+    {
+      "date": "2025-10-15",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budget-lab-2025"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab (Oct 2025): no significant macro-level job displacement from AI"
     },
     {
       "date": "2025-10-30",
@@ -1426,6 +1379,15 @@
       "label": "Yale Budget Lab: Anthropic 'Observed Exposure' metric shows stability, not disruption"
     },
     {
+      "date": "2026-03-19",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-cps-update-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: occupation, industry, exposure metrics flat through Feb 2026"
+    },
+    {
       "date": "2026-03-20",
       "direction": "up",
       "sourceIds": [
@@ -1939,6 +1901,15 @@
       "label": "Stanford DEL Canaries (Apr 2026): most-exposed occupations -0.2% YoY; superseded by Jul"
     },
     {
+      "date": "2026-06-15",
+      "direction": "down",
+      "sourceIds": [
+        "yale-budgetlab-not-yet-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Yale Budget Lab: no strong evidence of AI impact on employment 33 months on"
+    },
+    {
       "date": "2026-06-25",
       "direction": "neutral",
       "label": "WSJ: RAISE US bipartisan coalition raises $500M+ for workforce transition",
@@ -1973,6 +1944,15 @@
       ],
       "evidenceTier": 1,
       "label": "St. Louis Fed: falling job openings, not AI, drive most young-worker weakness"
+    },
+    {
+      "date": "2026-06-30",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-canaries-july-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL Canaries (Jun 2026): most-exposed occupations -0.2% YoY vs +0.6%"
     },
     {
       "date": "2026-07-01",
