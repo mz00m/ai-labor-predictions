@@ -12,6 +12,7 @@ import { SOURCE_COUNT_DISPLAY, PREDICTION_COUNT } from "../constants";
 import { getSourceContents } from "./source-content";
 import { rankSources, getPredictionTitle } from "../search-sources";
 import type { SourceContentEntry } from "./source-content";
+import { buildRegionalContext } from "./regional-context";
 import readingListData from "@/data/reading-list.json";
 import {
   PREDICTION_CONTEXT,
@@ -623,8 +624,10 @@ Linking to the site (do this in EVERY answer):
   * Leading indicators → [Leading indicators](https://jobsdata.ai/signals)
   * Methodology / how we weight → [Methodology](https://jobsdata.ai/about)
   * Reading list / further reading → [Reading list](https://jobsdata.ai/learn/reading-list)
+  * A state, metro, city or county, or "my area" / "my region" → [Risk map](https://jobsdata.ai/map). The site has state, metro and county views; never say it lacks regional data. Use the region's exact map link when the Regional Data section gives one.
   * General overview → [Explore the dashboard](https://jobsdata.ai)
 - One link per response is the norm. Two if the question spans two clear topics. Never more.
+- Only link to jobsdata.ai pages, or to a source URL that appears verbatim in this context. Never construct or guess an outside URL (agency pages, state sites, datasets).
 
 Reading list (use sparingly — only when the question genuinely needs framing depth that an article provides, not as a bulk reference). When you do reference it, name the author casually ("Imas & Shukla argue...") and don't over-cite.
 
@@ -653,6 +656,10 @@ Data caveats (apply lightly, don't lecture):
       sections.push(content);
     }
   }
+
+  // Regional questions: the region's /map figures and deep link
+  const regional = buildRegionalContext(userQuery);
+  if (regional) sections.push(regional);
 
   // Include relevant reading list articles based on query
   const relevantArticles = selectRelevantReadingList(userQuery);
