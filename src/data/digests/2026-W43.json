@@ -1,0 +1,252 @@
+{
+  "week": "2026-W43",
+  "generatedAt": "2026-10-25T20:20:29.422Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Indeed Hiring Lab: US Labor Market Snapshot — October 2026",
+      "summary": "Monthly snapshot of US job postings, wages, unemployment, and openings as of October 2026, providing the most current real-time labor demand indicators available for tracking AI-era hiring trends.",
+      "source": "https://hiringlab.indeed.com/2026/10/22/us-labor-market-snapshot-october-2026/",
+      "publishedAt": "2026-10-22",
+      "score": 0.62,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "The hidden costs of technological change: investigating pathways through which highly automatable jobs undermine workers' health in Germany",
+      "summary": "Peer-reviewed study identifying causal pathways by which high automation-exposure jobs harm worker well-being in Germany, quantifying displacement-adjacent stress and skills-pressure mechanisms relevant to displacement risk modeling.",
+      "source": "https://doi.org/10.1186/s12651-026-00444-2",
+      "authors": [
+        "Mariia Vasiakina",
+        "Christian Dudel"
+      ],
+      "publishedAt": "2026-10-16",
+      "doi": "10.1186/s12651-026-00444-2",
+      "score": 0.52,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Artificial Intelligence Policy and Wage Gaps: Evidence from China",
+      "summary": "Using panel data for 280 Chinese cities from 2011–2023, exploits AI pilot zone designations as a natural experiment to estimate AI policy's effect on urban wage gaps, providing quasi-experimental wage evidence mappable to skill-premium dynamics.",
+      "source": "https://doi.org/10.62177/apemr.v3i5.1737",
+      "authors": [
+        "Jinghai Li",
+        "Jingshan Huang",
+        "欢欢 杨"
+      ],
+      "publishedAt": "2026-10-14",
+      "doi": "10.62177/apemr.v3i5.1737",
+      "score": 0.45,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    },
+    {
+      "title": "When AI Enters the Workplace, Who Faces Greater Risk? A Gendered Analysis",
+      "summary": "AAAI/AIES peer-reviewed paper quantifying differential AI displacement risk by gender using occupational exposure assessments, finding women face structurally higher risk due to concentration in AI-vulnerable roles.",
+      "source": "https://doi.org/10.1609/aies.v9i2.43195",
+      "authors": [
+        "Miriam Fernandez",
+        "Ángel Pavón Pérez",
+        "Damiano Giallongo",
+        "Davide Ghia",
+        "Maryam Yaqub",
+        "Daniele Quercia",
+        "Tania Cerquitelli"
+      ],
+      "publishedAt": "2026-10-11",
+      "doi": "10.1609/aies.v9i2.43195",
+      "score": 0.44,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "The Economic Implications of Artificial Intelligence for Employment and Labour Productivity: A Descriptive Evidence Synthesis (2020–2025)",
+      "summary": "Synthesizes enterprise AI-adoption statistics, occupational-exposure assessments, and empirical workplace studies from 2020–2025 to distinguish technological augmentation from substitution effects on employment and productivity.",
+      "source": "https://doi.org/10.63544/ijss.v5i5.339",
+      "authors": [
+        "Seerat Ali",
+        "Abdul Majeed",
+        "Surayya Mukhtar",
+        "Salwa Ashraf",
+        "Md. Shahidur Rahman Khan"
+      ],
+      "publishedAt": "2026-10-11",
+      "doi": "10.63544/ijss.v5i5.339",
+      "score": 0.38,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "AI-driven 'new migrants': skill-spatial mismatch and out-migration intention",
+      "summary": "Using China Migrant Population Dynamic Monitoring Survey and patent data across 250 cities (2014–2018), quantifies how AI-induced skill-spatial mismatch drives internal out-migration, linking automation exposure to geographic labor reallocation.",
+      "source": "https://doi.org/10.1080/15140326.2026.2748048",
+      "authors": [
+        "Di Wang",
+        "Boran Zhang",
+        "Junlong Chen"
+      ],
+      "publishedAt": "2026-10-16",
+      "doi": "10.1080/15140326.2026.2748048",
+      "score": 0.36,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "When Do AI Gains Become Broadly Shareable? A Policy Threshold for AI-Driven Automation",
+      "summary": "Extends a standard task-automation growth model with an AI capability parameter to derive policy thresholds at which automation productivity gains become broadly distributable, providing a quantitative framework for wage-impact timing.",
+      "source": "https://doi.org/10.1609/aies.v9i3.43275",
+      "authors": [
+        "Aran Nayebi"
+      ],
+      "publishedAt": "2026-10-11",
+      "doi": "10.1609/aies.v9i3.43275",
+      "score": 0.34,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Supporting or Replacing Students' Reasoning? Cognitive Offloading in AI-Assisted Proof Learning",
+      "summary": "RCT with 153 undergraduates using staggered AI chatbot access finds measurable differences in learning outcomes between early- and late-access groups, providing causal evidence on AI's role in education-sector skill formation.",
+      "source": "https://arxiv.org/abs/2610.31481v1",
+      "authors": [
+        "Eason Chen",
+        "Sophia Judicke",
+        "Kayla Beigh",
+        "Xinyi Tang",
+        "Isabel Wang",
+        "Nina Yuan",
+        "Zimo Xiao",
+        "Chuangji Li",
+        "Shizhuo Li",
+        "Reed Luttmer",
+        "Shreya Singh",
+        "Maria Yampolsky",
+        "Naman Parikh",
+        "Yvonne Zhao",
+        "Meiyi Chen",
+        "Scarlett Huang",
+        "Anishka Mohanty",
+        "Gregory Johnson",
+        "John Mackey",
+        "Jionghao Lin",
+        "Ken Koedinger"
+      ],
+      "publishedAt": "2026-10-22",
+      "doi": "10.48550/arxiv.2610.31481",
+      "score": 0.33,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "education-sector-displacement"
+    },
+    {
+      "title": "Artificial Intelligence, Automation, and the Sustainability of Social Security Systems: The Technological Unemployment Premium Proposal",
+      "summary": "Qualitative synthesis examining how AI-driven labor displacement threatens contribution-based social security funding, proposing a 'technological unemployment premium' levy on automation beneficiaries as a fiscal stabilizer.",
+      "source": "https://doi.org/10.54752/ct.1968160",
+      "authors": [
+        "Semih ERDOĞDU"
+      ],
+      "publishedAt": "2026-10-23",
+      "doi": "10.54752/ct.1968160",
+      "score": 0.3,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "WORKFORCE TRANSFORMATION IN MANUFACTURING INDUSTRIES: THE ROLE OF ARTIFICIAL INTELLIGENCE, AUTOMATION, RESKILLING, UPSKILLING AND SOFT SKILLS",
+      "summary": "Empirical study of AI and robotics adoption in manufacturing industries assessing displacement, reskilling demand, and skill-mix shifts, with quantitative evidence on workforce capability gaps in physical automation contexts.",
+      "source": "https://doi.org/10.62441/actainnovations.vi.1999",
+      "authors": [
+        "Rupali Gupta",
+        "Madhavi Deshpande"
+      ],
+      "publishedAt": "2026-10-18",
+      "doi": "10.62441/actainnovations.vi.1999",
+      "score": 0.28,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "robots-physical-automation-displacement"
+    }
+  ],
+  "themes": [
+    "Overdue series backlog creates critical data gaps across displacement, adoption, and wage graphs — immediate ingest priority",
+    "Distributional AI labor-market effects (gender, geography, skill-level) increasingly the focus of new peer-reviewed empirical work",
+    "Real-time postings and wage data (Indeed) remain the only fresh US-labor-market signal this week amid sparse institutional releases"
+  ],
+  "watching": [
+    {
+      "title": "SERIES DUE: OpenAI Signals (ChatGPT usage data)",
+      "source": "https://openai.com/signals",
+      "reason": "167d overdue (monthly). Realized ChatGPT use by state and O*NET activity — primary feed for workforce-ai-use and genai-work-adoption graphs."
+    },
+    {
+      "title": "SERIES DUE: BLS Current Employment Statistics by industry",
+      "source": "https://www.bls.gov/ces/",
+      "reason": "187d overdue (monthly). September employment by 20 detailed industries — essential for every /signals industry card displacement baseline."
+    },
+    {
+      "title": "SERIES DUE: GenAI Adoption Tracker / FRED RPS GenAI series (Bick, Blandin, Deming)",
+      "source": "https://fred.stlouisfed.org/categories/8",
+      "reason": "92d overdue (quarterly). Definitive US worker GenAI adoption rate — primary feed for genai-work-adoption graph."
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption)",
+      "source": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "reason": "73d overdue (quarterly). Employment by age × AI exposure and macro takeoff signals — feeds overall-us-displacement and workforce-ai-exposure."
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index (Learning Curves, Cadences)",
+      "source": "https://www.anthropic.com/economic-index",
+      "reason": "121d overdue (quarterly). Largest Claude usage dataset; feeds genai-work-adoption, workforce-ai-exposure, customer-service-automation."
+    },
+    {
+      "title": "SERIES DUE: PyPI package downloads (/signals)",
+      "source": "https://pypistats.org/",
+      "reason": "187d overdue (monthly). Monthly downloads for 52 AI packages — feeds /signals acceleration index and industry tool growth cards."
+    },
+    {
+      "title": "SERIES DUE: Hugging Face model downloads (/signals)",
+      "source": "https://huggingface.co/models",
+      "reason": "190d overdue (monthly). Top model download counts by task category — feeds /signals industry cards; live counts available."
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS)",
+      "source": "https://www.bls.gov/oes/",
+      "reason": "163d overdue (annual). Employment and wages by detailed occupation/geography — feeds /map state and metro scores."
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates",
+      "source": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "reason": "682d overdue (annual). 2020-2024 5-year estimates released Jan 2026; county/CBSA occupation mix feeds /map county and CBSA layers."
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data",
+      "source": "https://www.stripeeconomics.com",
+      "reason": "59d overdue (quarterly). AI share of new startup incorporations and solo-founder share — primary feed for ai-business-formation graph."
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity",
+      "source": "https://www.bls.gov/cps/cpsaat11.htm",
+      "reason": "225d overdue (annual). Women's share by occupation — feeds gender view on /task-visualizer; 2025 annual averages expected."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 104,
+    "afterDedup": 101
+  }
+}
