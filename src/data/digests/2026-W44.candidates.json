@@ -1,0 +1,328 @@
+{
+  "week": "2026-W44",
+  "fetchedAt": "2026-10-26T14:51:51.654Z",
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 104,
+    "afterDedup": 101
+  },
+  "sourceHealth": [
+    {
+      "name": "ssrn",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing GOOGLE_CSE_KEY, GOOGLE_CSE_ID"
+    },
+    {
+      "name": "fred",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing FRED_API_KEY"
+    },
+    {
+      "name": "googleCse",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing GOOGLE_CSE_KEY, GOOGLE_CSE_ID"
+    },
+    {
+      "name": "semanticScholar",
+      "status": "ok",
+      "items": 0,
+      "durationMs": 3670
+    },
+    {
+      "name": "arxiv",
+      "status": "ok",
+      "items": 50,
+      "durationMs": 2370
+    },
+    {
+      "name": "pubmed",
+      "status": "ok",
+      "items": 0,
+      "durationMs": 369
+    },
+    {
+      "name": "openAlex",
+      "status": "ok",
+      "items": 18,
+      "durationMs": 1149
+    },
+    {
+      "name": "nber",
+      "status": "ok",
+      "items": 12,
+      "durationMs": 1195
+    },
+    {
+      "name": "bls",
+      "status": "ok",
+      "items": 5,
+      "durationMs": 1221
+    },
+    {
+      "name": "trackedInstitutions",
+      "status": "ok",
+      "items": 7,
+      "durationMs": 26287
+    },
+    {
+      "name": "recurringSeries",
+      "status": "ok",
+      "items": 12,
+      "durationMs": 3
+    }
+  ],
+  "items": [
+    {
+      "title": "SERIES DUE: OpenAI Signals (ChatGPT usage data) — last ingested 2026-05-11 (168d ago, monthly cadence)",
+      "url": "https://openai.com/signals",
+      "source": "recurringSeries",
+      "publishedAt": "2026-05-11T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: PyPI package downloads (/signals) — last ingested 2026-04-21 (188d ago, monthly cadence)",
+      "url": "https://pypistats.org/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-04-21T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: Hugging Face model downloads (/signals) — last ingested 2026-04-18 (191d ago, monthly cadence)",
+      "url": "https://huggingface.co/models",
+      "source": "recurringSeries",
+      "publishedAt": "2026-04-18T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: BLS Current Employment Statistics by industry (/signals) — last ingested 2026-04-21 (188d ago, monthly cadence)",
+      "url": "https://www.bls.gov/ces/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-04-21T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates — last ingested 2024-12-12 (683d ago, annual cadence)",
+      "url": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "source": "recurringSeries",
+      "publishedAt": "2024-12-12T00:00:00.000Z",
+      "score": 0.9845886159959143
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index (Learning Curves, Cadences) — last ingested 2026-06-26 (122d ago, quarterly cadence)",
+      "url": "https://www.anthropic.com/economic-index",
+      "source": "recurringSeries",
+      "publishedAt": "2026-06-26T00:00:00.000Z",
+      "score": 0.9216491819896764
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption) — last ingested 2026-08-13 (74d ago, quarterly cadence)",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data — last ingested 2026-08-27 (60d ago, quarterly cadence)",
+      "url": "https://www.stripeeconomics.com",
+      "source": "recurringSeries",
+      "publishedAt": "2026-08-27T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS) — last ingested 2026-05-15 (164d ago, annual cadence)",
+      "url": "https://www.bls.gov/oes/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-05-15T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity — last ingested 2026-03-14 (226d ago, annual cadence)",
+      "url": "https://www.bls.gov/cps/cpsaat11.htm",
+      "source": "recurringSeries",
+      "publishedAt": "2026-03-14T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "The Occupational Ladder: Implications for Life-Cycle Wage Dynamics -- by Henry E. Siu, Kelly Foley, Matias Cortes",
+      "url": "https://www.nber.org/papers/w35929",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.5388896006951682
+    },
+    {
+      "title": "Gender Gaps: International Evidence on the Role of Family Policy -- by Francine D. Blau, Lawrence Kahn, Freddy Bachmann, Helen Burkhardt, Leonardo Peñaloza-Pacheco, David Titus",
+      "url": "https://www.nber.org/papers/w35939",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.5055562673618349
+    },
+    {
+      "title": "Training Your Replacement: Worker Incentives and the Pace of Automation -- by Joshua S. Gans, Peter Landry",
+      "url": "https://www.nber.org/papers/w35950",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.5055562673618349
+    },
+    {
+      "title": "Implications of Policy Interventions on Eliminating Gender Gaps -- by Carla Varona Cervantes, Russell Cooper",
+      "url": "https://www.nber.org/papers/w35935",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.46666737847294604
+    },
+    {
+      "title": "Chicago Fed Working Papers: Making Sense of Labor-Market Indicators Amid Data Imperfections - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-10",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-26T14:52:17.000Z",
+      "score": 0.4277924459092062
+    },
+    {
+      "title": "Chicago Fed Working Papers: The Chicago Fed Labor Market Indicators: Bridging the Gap with Alternative Labor Data - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-09",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-26T14:52:09.000Z",
+      "score": 0.42778781611617406
+    },
+    {
+      "title": "Chicago Fed Working Papers: The Impact of Non-Competes on Wages and Job Tenure: New Evidence from NLSY Data - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-03",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-26T14:52:09.000Z",
+      "score": 0.42778781611617406
+    },
+    {
+      "title": "Generative AI, Managerial Expectations, and Economic Activity -- by Manish Jha, Jialin Qian, Michael Weber, Baozhong Yang",
+      "url": "https://www.nber.org/papers/w35949",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.4277784895840572
+    },
+    {
+      "title": "Competition in Generative AI: Evidence from Consumer Demand -- by Mark L. Egan, Dominic Russel, Claire Shi, Vincent Yao",
+      "url": "https://www.nber.org/papers/w35953",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.4277784895840572
+    },
+    {
+      "title": "When Cash Wakes Up: Inertia in Institutional Money Market Funds and the Potential Effects of AI Disruption -- by Ali Hortaçsu, Younggeun Yoo",
+      "url": "https://www.nber.org/papers/w35954",
+      "source": "nber",
+      "publishedAt": "2026-10-26T14:51:52.884Z",
+      "score": 0.4277784895840572
+    },
+    {
+      "title": "When Should I Trust This? Designing and Evaluating Factuality Indicators for LLM-based Chatbots",
+      "url": "https://arxiv.org/abs/2610.32883v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-23T16:49:14.000Z",
+      "score": 0.41956297150912747
+    },
+    {
+      "title": "OpenDraco: A Platform for Engineering and Experimenting with Configurable Multi-Agent Architectures for Software Engineering",
+      "url": "https://arxiv.org/abs/2610.32686v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-23T14:17:18.000Z",
+      "score": 0.37722326155200947
+    },
+    {
+      "title": "The hidden costs of technological change: investigating pathways through which highly automatable jobs undermine workers’ health in Germany",
+      "url": "https://doi.org/10.1186/s12651-026-00444-2",
+      "source": "openAlex",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "score": 0.34344200414698844
+    },
+    {
+      "title": "Artificial Intelligence, Automation, and the Sustainability Of Social Security Systems: The Technological Unemployment Premium Proposal",
+      "url": "https://doi.org/10.54752/ct.1968160",
+      "source": "openAlex",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "score": 0.32536367141323597
+    },
+    {
+      "title": "The Twin Transition and Labor Market Transformation: A Conceptual Framework for AI-Enabled Green Growth",
+      "url": "https://doi.org/10.54752/ct.1973941",
+      "source": "openAlex",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "score": 0.32536367141323597
+    },
+    {
+      "title": "Indeed Hiring Lab: US Labor Market Snapshot — October 2026",
+      "url": "https://hiringlab.indeed.com/2026/10/22/us-labor-market-snapshot-october-2026/",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-22T11:00:00.000Z",
+      "score": 0.30982350826318245
+    },
+    {
+      "title": "Embodied Emissions of 2.5D and 3D Scaling in Chipletized GPUs for Low-Carbon AI",
+      "url": "https://arxiv.org/abs/2610.32830v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-23T16:03:19.000Z",
+      "score": 0.3074034777028212
+    },
+    {
+      "title": "Semantic Representation for Agentic Self-Play in Automated Laboratories",
+      "url": "https://arxiv.org/abs/2610.32755v1",
+      "source": "arxiv",
+      "publishedAt": "2026-10-23T15:00:16.000Z",
+      "score": 0.3059716607094195
+    },
+    {
+      "title": "AI-driven “new migrants”: skill-spatial mismatch and out-migration intention",
+      "url": "https://doi.org/10.1080/15140326.2026.2748048",
+      "source": "openAlex",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "score": 0.23233089303587728
+    },
+    {
+      "title": "WORKFORCE TRANSFORMATION IN MANUFACTURING INDUSTRIES: THE ROLE OF ARTIFICIAL INTELLIGENCE, AUTOMATION, RESKILLING, UPSKILLING AND SOFT SKILLS",
+      "url": "https://doi.org/10.62441/actainnovations.vi.1999",
+      "source": "openAlex",
+      "publishedAt": "2026-10-18T00:00:00.000Z",
+      "score": 0.21883254471486752
+    },
+    {
+      "title": "Artificial Intelligence and Job Design: A Dynamic Framework",
+      "url": "https://arxiv.org/abs/2610.28830",
+      "source": "openAlex",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "score": 0.21373115785943708
+    },
+    {
+      "title": "Artificial Intelligence Policy and Wage Gaps: Evidence from China",
+      "url": "https://doi.org/10.62177/apemr.v3i5.1737",
+      "source": "openAlex",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "score": 0.21325047834020927
+    },
+    {
+      "title": "The Spillover Effect of Services Offshoring on Local Labour Markets",
+      "url": "https://doi.org/10.65864/jochq5qfxv",
+      "source": "openAlex",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "score": 0.1354727005624315
+    }
+  ]
+}

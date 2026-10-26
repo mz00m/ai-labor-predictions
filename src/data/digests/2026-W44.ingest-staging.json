@@ -1,0 +1,287 @@
+{
+  "week": "2026-W44",
+  "generatedAt": "2026-10-26T14:53:49.916Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Generative AI, Managerial Expectations, and Economic Activity",
+        "summary": "Using GenAI to extract economic expectations from 120,000+ corporate conference call transcripts, the AI Economy Score predicts GDP growth, employment, and wages 5+ quarters ahead, outperforming survey forecasts; industry-level variation reveals heterogeneous labor market impacts.",
+        "source": "https://www.nber.org/papers/w35949",
+        "authors": [
+          "Manish Jha",
+          "Jialin Qian",
+          "Michael Weber",
+          "Baozhong Yang"
+        ],
+        "publishedAt": "2026-10-26",
+        "score": 0.82,
+        "sourceAdapter": "nber",
+        "graphSlug": "earnings-call-ai-mentions"
+      },
+      "sourceId": "nber-generative-ai-managerial-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "earnings-call-ai-mentions",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI Economy Score extracted from 120,000+ corporate conference call transcripts",
+          "quote": "Using generative AI, we extract managers' economic expectations from over 120,000 corporate conference call transcripts."
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI Economy Score predicts wages 5+ quarters ahead beyond survey forecasts",
+          "quote": "The resulting AI Economy Score predicts GDP growth, production, employment, and wages five or more quarters ahead, beyond survey forecasts and other existing measures."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Artificial Intelligence Policy and Wage Gaps: Evidence from China",
+        "summary": "Using panel data for 280 Chinese cities from 2011 to 2023, the study finds that AI pilot zone designation significantly widens wage gaps, with differential effects across skill levels and regions, providing causal evidence on AI's distributional wage impact.",
+        "source": "https://doi.org/10.62177/apemr.v3i5.1737",
+        "authors": [
+          "Jinghai Li",
+          "Jingshan Huang",
+          "欢欢 杨"
+        ],
+        "publishedAt": "2026-10-14",
+        "doi": "10.62177/apemr.v3i5.1737",
+        "score": 0.72,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-artificial-intelligence-policy-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Competition in Generative AI: Evidence from Consumer Demand",
+        "summary": "Using transaction-level card data covering 174 million consumers and 114 billion transactions, the study documents paid GenAI service adoption patterns through April 2026, providing direct demand-side measurement of consumer GenAI adoption at scale.",
+        "source": "https://www.nber.org/papers/w35953",
+        "authors": [
+          "Mark L. Egan",
+          "Dominic Russel",
+          "Claire Shi",
+          "Vincent Yao"
+        ],
+        "publishedAt": "2026-10-26",
+        "score": 0.7,
+        "sourceAdapter": "nber",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "nber-competition-in-generative-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "data_point",
+          "value": 2.9,
+          "confidenceLow": 2.9,
+          "confidenceHigh": 2.9,
+          "quote": "As of April 2026, approximately 2.9% of U.S. consumers pay for at least one major generative AI service, with adoption highest among younger and higher-income consumers."
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Paid GenAI adoption highest among younger, higher-income consumers (Apr 2026)",
+          "quote": "adoption highest among younger and higher-income consumers"
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Nearly all paid GenAI users on basic plans ≤$30/month as of Apr 2026",
+          "quote": "Nearly all of these paid users subscribe to basic plans that cost $30 or less per month."
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "GenAI multihoming common but declining as provider capabilities expand",
+          "quote": "although multihoming is common, it has declined as providers' capabilities have expanded"
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Annual GenAI customer retention 20–45% across major providers, below avg subs",
+          "quote": "annual customer retention rates range from 20% to 45% across major AI providers, lower than those for many other subscription products"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Training Your Replacement: Worker Incentives and the Pace of Automation",
+        "summary": "This NBER working paper models the strategic dynamic in which firms ask workers to train AI systems that will displace them, finding that workers' ability to shirk or obstruct slows automation pace and that dismissal threats lose effectiveness when training completion ends the job.",
+        "source": "https://www.nber.org/papers/w35950",
+        "authors": [
+          "Joshua S. Gans",
+          "Peter Landry"
+        ],
+        "publishedAt": "2026-10-26",
+        "score": 0.68,
+        "sourceAdapter": "nber",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "nber-training-your-replacement-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "The hidden costs of technological change: investigating pathways through which highly automatable jobs undermine workers' health in Germany",
+        "summary": "Peer-reviewed study links high job-automation exposure to measurable health deterioration in German workers, identifying job insecurity and reskilling pressure as mediating pathways, with displacement risk quantified across automation-exposure quintiles.",
+        "source": "https://doi.org/10.1186/s12651-026-00444-2",
+        "authors": [
+          "Mariia Vasiakina",
+          "Christian Dudel"
+        ],
+        "publishedAt": "2026-10-16",
+        "doi": "10.1186/s12651-026-00444-2",
+        "score": 0.63,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "robots-physical-automation-displacement"
+      },
+      "sourceId": "doi-the-hidden-costs-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: US Labor Market Snapshot — October 2026",
+        "summary": "Indeed's October 2026 monthly snapshot tracks US job postings, wages, unemployment, and openings, providing near-real-time labor demand indicators including any AI-related occupational posting trends through mid-October 2026.",
+        "source": "https://hiringlab.indeed.com/2026/10/22/us-labor-market-snapshot-october-2026/",
+        "publishedAt": "2026-10-22",
+        "score": 0.62,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Posted wage growth 2.4% YoY, below CPI inflation of 3.7% (Oct 2026)",
+          "quote": "Posted wage growth is 2.4% year-over-year, against CPI inflation of 3.7%."
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-related postings 7.3% of all postings, above prior 3.3% peak in 2022",
+          "quote": "AI-related postings make up 7.3% of all postings, past their previous peak of 3.3% in 2022."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "The Occupational Ladder: Implications for Life-Cycle Wage Dynamics",
+        "summary": "NBER working paper decomposes how occupational ladder rungs drive average wage growth and the fanning-out of wages over workers' life cycles, providing structural estimates of occupation-level wage premia relevant to modeling AI-driven occupational resorting.",
+        "source": "https://www.nber.org/papers/w35929",
+        "authors": [
+          "Henry E. Siu",
+          "Kelly Foley",
+          "Matias Cortes"
+        ],
+        "publishedAt": "2026-10-26",
+        "score": 0.58,
+        "sourceAdapter": "nber",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "nber-the-occupational-ladder-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI-driven 'new migrants': skill-spatial mismatch and out-migration intention",
+        "summary": "Using China Migrant Population Dynamic Monitoring Survey and patent data across 250 cities (2014–2018), the study quantifies how local AI intensity drives skill-spatial mismatch and increases out-migration intentions among displaced workers, linking automation exposure to geographic labor reallocation.",
+        "source": "https://doi.org/10.1080/15140326.2026.2748048",
+        "authors": [
+          "Di Wang",
+          "Boran Zhang",
+          "Junlong Chen"
+        ],
+        "publishedAt": "2026-10-16",
+        "doi": "10.1080/15140326.2026.2748048",
+        "score": 0.55,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-aidriven-new-migrants-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Artificial Intelligence, Automation, and the Sustainability of Social Security Systems: The Technological Unemployment Premium Proposal",
+        "summary": "Integrative literature review quantifies projected contribution shortfalls in social-security systems under varying technological unemployment scenarios driven by AI and automation, synthesizing displacement rate estimates from the existing literature.",
+        "source": "https://doi.org/10.54752/ct.1968160",
+        "authors": [
+          "Semih ERDOĞDU"
+        ],
+        "publishedAt": "2026-10-23",
+        "doi": "10.54752/ct.1968160",
+        "score": 0.48,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "doi-artificial-intelligence-automation-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "The Twin Transition and Labor Market Transformation: A Conceptual Framework for AI-Enabled Green Growth",
+        "summary": "Conceptual framework distinguishes green structural reallocation from AI-driven within-workplace task reorganization, arguing both transitions interact to reshape occupational demand and authority structures in ways standard labor models miss.",
+        "source": "https://doi.org/10.54752/ct.1973941",
+        "authors": [
+          "Suad Muvakit"
+        ],
+        "publishedAt": "2026-10-23",
+        "doi": "10.54752/ct.1973941",
+        "score": 0.42,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "doi-the-twin-transition-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Chicago Fed Working Papers: Making Sense of Labor-Market Indicators Amid Data Imperfections",
+        "summary": "Chicago Fed working paper addresses measurement challenges in current US labor-market indicators, relevant to benchmarking AI-displacement signals against imperfect official data.",
+        "source": "https://www.chicagofed.org/publications/working-papers/2026/2026-10",
+        "publishedAt": "2026-10-26",
+        "score": 0.4,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "chicagofed-chicago-fed-working-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Chicago Fed Working Papers: The Chicago Fed Labor Market Indicators — Bridging the Gap with Alternative Labor Data",
+        "summary": "Chicago Fed working paper introduces alternative data sources to supplement official BLS labor market indicators, providing a methodological bridge for incorporating non-traditional employment signals relevant to AI impact tracking.",
+        "source": "https://www.chicagofed.org/publications/working-papers/2026/2026-09",
+        "publishedAt": "2026-10-26",
+        "score": 0.38,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "chicagofed-chicago-fed-working-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    }
+  ]
+}
