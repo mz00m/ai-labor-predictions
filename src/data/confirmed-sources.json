@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-10-23",
-  "totalSources": 791,
-  "verifiedCount": 781,
+  "lastUpdated": "2026-10-26",
+  "totalSources": 794,
+  "verifiedCount": 784,
   "sources": {
     "berger-ai-labor-market-thoughts-2026": {
       "id": "berger-ai-labor-market-thoughts-2026",
@@ -11227,6 +11227,51 @@
       "dateAdded": "2026-10-19",
       "usedIn": [
         "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-btos-ai-cycle-202621": {
+      "id": "census-btos-ai-cycle-202621",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202621)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-22",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions? (Examples of SI use include: SI-powered data analysis; generative SI for marketing, product design, or coding; virtual SI agents for customer service; SI-powered forecasting or pricing; SI-driven computer vision for quality control, etc.)\" National share answering yes: 24.6% (SE 0.27%) for the two weeks ending 2026-10-04, up from 23.8% (SE 0.41%) for the cycle ending 2026-09-20 and 23.8% (SE 0.26%) for the cycle ending 2026-09-06 - the series resumes rising after one flat cycle, and 24.6% is its highest reading. Q24, the six-month expectation of SI/AI use, was 28.6% (SE 0.21%), up from 27.7%. Collection for cycle 202621 ran 2026-10-05 to 2026-10-18; published 2026-10-22. Values are dated to reference-period end rather than publication date. This vintage of National.xlsx relabels the question from \"Artificial Intelligence (AI)\" to \"Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)\" across every cycle in the workbook, and census.gov now links a \"Questionnaire with SI Supplement\" in place of the AI supplement; the estimates for cycles 202614 through 202620 are unchanged from the prior vintage, so this is a terminology relabel in the published instrument, not a re-survey or a change of construct.",
+      "dateAdded": "2026-10-26",
+      "usedIn": [
+        "ai-adoption-rate"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "fred-rps-genai-q3-2026": {
+      "id": "fred-rps-genai-q3-2026",
+      "title": "Generative Artificial Intelligence, Adoption Rate for Work: Employed Adults (RPSGENAIUSAGESHAREWORK), Q3 2026",
+      "url": "https://fred.stlouisfed.org/series/RPSGENAIUSAGESHAREWORK",
+      "publisher": "Federal Reserve Bank of St. Louis (FRED) / Bick, Blandin & Deming (Real-Time Population Survey)",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-20",
+      "excerpt": "FRED series RPSGENAIUSAGESHAREWORK, \"Generative Artificial Intelligence, Adoption Rate for Work: Employed Adults\", the share of employed adults aged 18-64 who use generative AI for work (\"Do you use Generative AI for your job?\"). Q3 2026 reads 40.5% (40.5455), down 4.65 points from 45.2% in Q2 2026, against 42.8% in Q1 2026 and 40.6% in Q4 2025. That is the first quarterly decline since Q4 2024 (31.0% from 33.3%) and the largest in the series, which begins in Q3 2024. Series updated Oct 20, 2026. The Real-Time Population Survey tracker publishes the same wave as August 2026: 60.8% of adults 18-64 using genAI overall, down from 61.8%; 40.5% of employed respondents using it for work; 5.3% of total work hours spent using genAI (RPSGENAIASSISTWRKHRSALL, from 6.3%); and 2.1% of work hours saved (RPSGENAITSALL, from 2.2%). Neither FRED nor the tracker publishes a note explaining the decline, and the overall rate fell only 1.0 point against the work rate’s 4.65, so the fall is concentrated in the work question. The Q1 2026 readings have also been revised down from the July 2026 vintage recorded in fred-rps-genai-2026 (work 43.4% to 42.8%, overall 57.9% to 57.6%).",
+      "dateAdded": "2026-10-26",
+      "usedIn": [
+        "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "gallup-ai-benefits-uneven-oct-2026": {
+      "id": "gallup-ai-benefits-uneven-oct-2026",
+      "title": "AI Benefits at Work Unevenly Distributed",
+      "url": "https://news.gallup.com/poll/714602/benefits-work-unevenly-distributed.aspx",
+      "publisher": "Gallup",
+      "evidenceTier": 2,
+      "datePublished": "2026-10-06",
+      "excerpt": "Gallup, October 6, 2026, reporting on 15,482 US employees drawn from a January 26 to March 24, 2026 survey of 17,874 adults aged 18 to 75 who had worked for pay in the prior seven days (margin of error +/-1 point). \"28% of employees reported using AI at least weekly, while 54% said they had not used AI in their role.\" Daily or weekly use runs 40% among four-year college graduates against 17% among non-graduates, and 37% among managers against 25% among individual contributors; about one in five 18- to 24-year-olds use AI weekly or more. Roughly half of workers in professional and business services, financial activities and information/media use AI regularly, while 70% to more than 80% never use it in healthcare support, manufacturing production and retail sales. Among the 7,845 AI users, 63% say it makes them work faster, 56% that it helps them find more creative solutions, 47% that they spend more time on the interesting parts of the job and 46% that their work is higher quality; 31% say their employer has asked them to take on more responsibilities. \"These work benefits of AI use are not evenly distributed across the workforce\": 52% of weekly-or-more users hold a quality job, against 46% of infrequent users and 32% of never-users. Also 52% of all employees say they have less influence over new technology adoption than they would like.",
+      "dateAdded": "2026-10-26",
+      "usedIn": [
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false

@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 23.8,
+  "currentValue": 24.6,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (23.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
@@ -149,6 +149,16 @@
       "value": 23.8,
       "sourceIds": [
         "census-btos-ai-cycle-202620"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-10-04",
+      "value": 24.6,
+      "sourceIds": [
+        "census-btos-ai-cycle-202621"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -1978,6 +1988,16 @@
       "datePublished": "2026-10-14",
       "excerpt": "Ramp AI Index for September 2026, from corporate card and bill-pay transactions across Ramp's US business customers. \"Overall adoption reached 55.9%, increasing 0.62 percentage points, slightly faster than August's 0.40 point gain.\" Vendor shares: \"43.8% paid Anthropic, up 0.25 percentage points from last month\"; \"OpenAI adoption rose 1.12 percentage points to 40.6%, outpacing overall AI adoption\"; xAI \"up 0.6 percentage points on the popularity of Grok Bot\"; Mistral AI at \"less than 1% adoption by U.S. firms.\" Kharazian reads the slowdown in new customers as \"the top of the S-curve, where the growth in the market will have to come from more intense adoption rather than more customers.\" On intensity: the top 1% of firms spent \"$9,568 per employee per month in September,\" up 11.7% month over month but \"down 3.1% from its July high of $9,873,\" with \"two straight months of virtually no growth in token spend\" and total AI spend hitting a new peak in early October, 1.5% above the August peak. Top-1% per-employee spend was revised up across all periods after new AI vendors were added to the estimate, so it is not comparable with the $7,205 reported in the September edition. Measures paid vendor subscriptions among Ramp's own customers rather than self-reported use across a probability sample of US firms, so it sits below the chart as a directional overlay.",
       "dateAdded": "2026-10-19"
+    },
+    {
+      "id": "census-btos-ai-cycle-202621",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202621)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-10-22",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions? (Examples of SI use include: SI-powered data analysis; generative SI for marketing, product design, or coding; virtual SI agents for customer service; SI-powered forecasting or pricing; SI-driven computer vision for quality control, etc.)\" National share answering yes: 24.6% (SE 0.27%) for the two weeks ending 2026-10-04, up from 23.8% (SE 0.41%) for the cycle ending 2026-09-20 and 23.8% (SE 0.26%) for the cycle ending 2026-09-06 - the series resumes rising after one flat cycle, and 24.6% is its highest reading. Q24, the six-month expectation of SI/AI use, was 28.6% (SE 0.21%), up from 27.7%. Collection for cycle 202621 ran 2026-10-05 to 2026-10-18; published 2026-10-22. Values are dated to reference-period end rather than publication date. This vintage of National.xlsx relabels the question from \"Artificial Intelligence (AI)\" to \"Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)\" across every cycle in the workbook, and census.gov now links a \"Questionnaire with SI Supplement\" in place of the AI supplement; the estimates for cycles 202614 through 202620 are unchanged from the prior vintage, so this is a terminology relabel in the published instrument, not a re-survey or a change of construct.",
+      "dateAdded": "2026-10-26"
     }
   ]
 }
