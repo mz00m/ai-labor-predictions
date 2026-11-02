@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-10-26",
-  "totalSources": 794,
-  "verifiedCount": 784,
+  "lastUpdated": "2026-11-02",
+  "totalSources": 795,
+  "verifiedCount": 785,
   "sources": {
     "berger-ai-labor-market-thoughts-2026": {
       "id": "berger-ai-labor-market-thoughts-2026",
@@ -11272,6 +11272,21 @@
       "dateAdded": "2026-10-26",
       "usedIn": [
         "genai-work-adoption"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "nyfed-college-labor-market-q3-2026": {
+      "id": "nyfed-college-labor-market-q3-2026",
+      "title": "The Labor Market for Recent College Graduates (2026:Q3 update)",
+      "url": "https://www.newyorkfed.org/research/college-labor-market",
+      "publisher": "Federal Reserve Bank of New York",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-01",
+      "excerpt": "Labor market conditions improved for recent college graduates in the third quarter of 2026 but remained challenging. The unemployment rate fell to 5.2 percent, its lowest level in more than a year, though the underemployment rate ticked up to 42.5 percent.",
+      "dateAdded": "2026-11-02",
+      "usedIn": [
+        "early-career-employment-decline"
       ],
       "verified": true,
       "synthetic": false
