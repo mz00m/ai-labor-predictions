@@ -4,6 +4,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 // the transitive deps `authz.ts` reaches through `./auth` and `./db`.
 vi.mock("@/lib/assessment/auth", () => ({
   getVerifiedEmail: vi.fn(),
+  getScopedAssessmentIds: vi.fn(async () => []),
 }));
 vi.mock("@/lib/assessment/db", () => ({
   getAssessment: vi.fn(),
@@ -16,7 +17,7 @@ vi.mock("@/lib/assessment/analyze", () => ({
 }));
 
 import { requireAssessmentOwner } from "@/lib/assessment/authz";
-import { getVerifiedEmail } from "@/lib/assessment/auth";
+import { getScopedAssessmentIds, getVerifiedEmail } from "@/lib/assessment/auth";
 import {
   getAssessment,
   getUserByEmail,
@@ -29,6 +30,7 @@ import { POST as addonPOST } from "@/app/api/assessment/addon/route";
 import type { NextRequest } from "next/server";
 
 const mockEmail = vi.mocked(getVerifiedEmail);
+const mockScoped = vi.mocked(getScopedAssessmentIds);
 const mockAssessment = vi.mocked(getAssessment);
 const mockUser = vi.mocked(getUserByEmail);
 const mockSaveFeedback = vi.mocked(saveFeedback);
@@ -61,6 +63,32 @@ const jsonReq = (body: unknown) =>
 describe("requireAssessmentOwner", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    mockScoped.mockResolvedValue([]);
+  });
+
+  it("grants the submitter's own assessment via the scoped cookie, no email session", async () => {
+    mockEmail.mockResolvedValue(null);
+    mockScoped.mockResolvedValue(["asmt_1"]);
+    mockAssessment.mockResolvedValue(fakeAssessment());
+    const r = await requireAssessmentOwner({} as NextRequest, "asmt_1");
+    expect(r).toMatchObject({ ok: true, userId: "user_owner" });
+    expect(mockUser).not.toHaveBeenCalled();
+  });
+
+  it("does not let a scoped cookie reach a different assessment", async () => {
+    mockEmail.mockResolvedValue(null);
+    mockScoped.mockResolvedValue(["asmt_mine"]);
+    const r = await requireAssessmentOwner({} as NextRequest, "asmt_victim");
+    expect(r).toEqual({ ok: false, status: 401, error: "Verification required" });
+    expect(mockAssessment).not.toHaveBeenCalled();
+  });
+
+  it("returns 404 for a scoped grant whose row is gone", async () => {
+    mockEmail.mockResolvedValue(null);
+    mockScoped.mockResolvedValue(["asmt_1"]);
+    mockAssessment.mockResolvedValue(null);
+    const r = await requireAssessmentOwner({} as NextRequest, "asmt_1");
+    expect(r).toEqual({ ok: false, status: 404, error: "Assessment not found" });
   });
 
   it("returns 401 when no verified session", async () => {

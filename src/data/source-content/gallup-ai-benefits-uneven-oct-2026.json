@@ -1,0 +1,17 @@
+{
+  "id": "gallup-ai-benefits-uneven-oct-2026",
+  "abstract": "Gallup report published October 6, 2026 on how the benefits of workplace AI use are distributed across the US workforce. Based on 15,482 US employees drawn from a January 26 to March 24, 2026 survey of 17,874 adults aged 18 to 75 who had worked for pay in the prior seven days, with an AI-user subsample of 7,845. The finding is distributional rather than a new level reading: regular AI use, and the benefits that come with it, concentrate among workers who already hold better jobs.",
+  "keyFindings": [
+    "28 percent of employees reported using AI at least weekly, while 54 percent said they had not used AI in their role at all.",
+    "Daily or weekly use runs 40 percent among four-year college graduates against 17 percent among non-graduates, and 37 percent among managers against 25 percent among individual contributors. About one in five 18- to 24-year-olds use AI weekly or more.",
+    "Roughly half of workers in professional and business services, financial activities and information/media use AI regularly, while 70 to more than 80 percent never use it in healthcare support, manufacturing production and retail sales.",
+    "Among AI users, 63 percent say it makes them work faster, 56 percent that it helps them find more creative solutions, 47 percent that they spend more time on the interesting parts of the job and 46 percent that their work is higher quality.",
+    "31 percent of AI users say their employer has asked them to take on more responsibilities, rising to 37 percent among those who say AI makes them faster.",
+    "Benefits scale steeply with frequency: 79 percent of regular users say AI makes them faster against 38 percent of irregular users, and 59 percent against 26 percent report higher-quality work.",
+    "52 percent of weekly-or-more users hold what Gallup classifies as a quality job, against 46 percent of infrequent users and 32 percent of never-users.",
+    "52 percent of all employees say they have less influence over new technology adoption than they would like."
+  ],
+  "methodology": "Gallup Panel plus address-based probability sample, fielded January 26 to March 24, 2026 among 17,874 US adults aged 18 to 75 who worked for pay in the prior seven days. Analysis population 15,482 employees, margin of error +/-1 point at 95 percent confidence; AI-user subsample 7,845 employees who used AI in their job at least a few times in the past year, margin of error +/-2 points.",
+  "qualifiers": "Carried on jobsdata.ai as an overlay on genai-work-adoption rather than a plotted point, for two reasons that are construct mismatches rather than doubts about the source. First, the population is employed adults aged 18 to 75, against the chart's 18-64 - a population gate. Second, the only figure comparable to the chart's 'have used genAI for work' construct is the complement of the 54 percent who never used AI in their role, about 46 percent, which Gallup does not publish as an estimate; the published 28 percent is a weekly-frequency threshold, a different measure from the chart's. The reference period also ends March 24, 2026, earlier than points the chart already holds, so even as a data point it would not move currentValue under the 'latest' aggregation method. The 'at least a few times in the past year' user definition is looser than the quarterly RPS question charted alongside it.",
+  "fetchedAt": "2026-10-26"
+}

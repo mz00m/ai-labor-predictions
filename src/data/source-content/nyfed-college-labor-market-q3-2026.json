@@ -1,0 +1,12 @@
+{
+  "id": "nyfed-college-labor-market-q3-2026",
+  "abstract": "The New York Fed's quarterly tracker of recent college graduates (ages 22–27 with a bachelor's degree or higher) reports that labor market conditions improved in 2026:Q3 but remained challenging: the unemployment rate fell to 5.2% — its lowest level in more than a year, down from about 5.6% in Q2 — while the underemployment rate ticked up to 42.5% from 42%. The feature makes no AI attribution.",
+  "keyFindings": [
+    "Recent-graduate unemployment rate fell to 5.2% in 2026:Q3, its lowest level in more than a year (about 5.6% in 2026:Q2).",
+    "Recent-graduate underemployment rate ticked up to 42.5% in 2026:Q3, from 42% in 2026:Q2.",
+    "The NY Fed characterizes conditions as improved but still challenging; it attributes neither movement to AI."
+  ],
+  "methodology": "NY Fed web feature using national microdata (CPS for unemployment/underemployment, ACS for wages and outcomes by major); recent graduates are ages 22–27 with at least a bachelor's degree; underemployment defined via O*NET education requirements. Unemployment and underemployment updated quarterly (Feb/May/Aug/Nov); wages and majors annually (Feb).",
+  "qualifiers": "Tier 1: Federal Reserve data product, though the page notes it does not represent official NY Fed estimates. Levels only; no comparison by AI exposure and no causal claim, so this is an overlay on early-career-employment-decline rather than a data point — that graph plots most-exposed-versus-least-exposed relative declines for ages 22-25, a different construct and a different age band. The Q3 update date is inferred from the stated November release cadence (published date set to 2026-11-01). Wage and major data were not refreshed in this update (annual, February).",
+  "fetchedAt": "2026-11-02"
+}

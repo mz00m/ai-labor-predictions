@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { createHash } from "crypto";
-import { getVerifiedEmail } from "./auth";
+import { getScopedAssessmentIds, getVerifiedEmail } from "./auth";
 import { getAssessment, getUserByEmail } from "./db";
 import type { Assessment } from "./types";
 
@@ -51,24 +51,32 @@ export async function requireAssessmentOwner(
   const aShort = shortId(assessmentId);
 
   const email = await getVerifiedEmail(req);
-  if (!email) {
+  const scoped = (await getScopedAssessmentIds(req)).includes(assessmentId);
+  if (!email && !scoped) {
     console.warn(
-      `[authz] 401 verification_required  assessment=${aShort}  reason=no-session-email`,
+      `[authz] 401 verification_required  assessment=${aShort}  reason=no-session`,
     );
     return { ok: false, status: 401, error: "Verification required" };
   }
 
-  const eHash = emailHash(email);
-
   const assessment = await getAssessment(assessmentId);
   if (!assessment) {
     console.warn(
-      `[authz] 404 assessment_not_found  assessment=${aShort}  session_email=${eHash}`,
+      `[authz] 404 assessment_not_found  assessment=${aShort}` +
+        (email ? `  session_email=${emailHash(email)}` : "  session=scoped"),
     );
     return { ok: false, status: 404, error: "Assessment not found" };
   }
 
-  const user = await getUserByEmail(email);
+  // The submitter's own assessment, granted at creation time.
+  if (scoped) {
+    return { ok: true, assessment, userId: assessment.userId };
+  }
+
+  // Reached only with a verified email session.
+  const eHash = emailHash(email!);
+
+  const user = await getUserByEmail(email!);
   if (!user) {
     // Session email points at no user row. Almost certainly stale-cookie
     // territory (account deleted, email canonicalization mismatch on legacy

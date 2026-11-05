@@ -1,7 +1,7 @@
 {
   "description": "Registry of the recurring research releases jobsdata.ai tracks. Powers /data-sources and future auto-ingest workflows.",
-  "asOf": "2026-10-19",
-  "lastSweep": "2026-10-19",
+  "asOf": "2026-11-02",
+  "lastSweep": "2026-11-02",
   "series": [
     {
       "id": "bls-employment-situation",
@@ -25,8 +25,8 @@
         "value": "+29K nonfarm vs +45K 12-month average; U-rate 4.2%; July revised +21K to -10K and August +162K to +133K, 60K lower combined"
       },
       "nextExpected": "November 6, 2026 (October data)",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: ingested the September report (published Oct 2). Two overlays on overall-us-displacement and one on white-collar-professional-displacement - payroll levels and counts are not a share of roles displaced, the same call as every prior Employment Situation ingest. The headline overlay is 'neutral' rather than directional because BLS itself describes both payrolls and the U-rate as little changed; the revision overlay is 'up'. Note for future sweeps: www.bls.gov blocks automated fetchers (403, 'bot activity ... is prohibited') and the unregistered public API quota is shared and routinely exhausted, so read the archived release page (news.release/archives/empsit_MMDDYYYY.htm) through a renderer rather than curl."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: no October report yet. The BLS release schedule puts October data at November 6, 2026 08:30, and November data at December 4, so the series reads overdue purely because the 31-day threshold lands before the next scheduled release. September (published Oct 2) is ingested. Nothing to ingest. The bls.gov/schedule pages answer a plain fetch, unlike the release pages themselves, which serve 403 to automated fetchers."
     },
     {
       "id": "bls-employment-projections",
@@ -77,8 +77,8 @@
         "value": "120,136 AI-attributed cuts YTD (21% of all cuts), still the leading reason for 2026; AI 5th-most-cited for September alone with 3,961 cuts (9% of 43,281)"
       },
       "nextExpected": "November 5, 2026 (October data)",
-      "lastSweep": "2026-10-05",
-      "sweepNote": "Swept 2026-10-05: ingested the September report (published Oct 1). Mapped as overlays on overall-us-displacement and tech-sector-displacement, consistent with every prior Challenger ingest - announced-cut counts are not a share of US employment, so they fail the unit match for both charts."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: no October report yet. challengergray.com/blog still leads with the Oct 1 post on September cuts (43,281 announced, -18% MoM), already ingested; the only newer post is an undated HR-leadership piece, not a Challenger Report. October data is due November 5, so the monthly threshold fires four days early. Nothing to ingest."
     },
     {
       "id": "ramp-ai-velocity",
@@ -146,13 +146,13 @@
       "whatItMeasures": "The share of ~1.2M US businesses that report using AI in the past two weeks. Broken out by sector, state, and the 25 largest MSAs. Question wording revised in Nov 2025 to include 'any business function' (up from the narrower 'production of goods and services' framing), roughly doubling the measured rate.",
       "whyItMatters": "Highest-frequency US firm-level adoption signal. Because it's biweekly, it reveals turn-of-quarter shifts that quarterly surveys miss. Adoption still concentrated in Information (39.7%) and Finance (33.9%).",
       "lastIngested": {
-        "sourceId": "census-btos-ai-cycle-202620",
-        "date": "2026-10-08",
-        "value": "23.8% national AI use, two weeks ending Sep 20 2026 (cycle 202620); flat after four consecutive increases"
+        "sourceId": "census-btos-ai-cycle-202621",
+        "date": "2026-10-22",
+        "value": "24.6% national AI use, two weeks ending Oct 4 2026 (cycle 202621); rising again after one flat cycle, highest reading in the series"
       },
-      "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point.",
-      "lastSweep": "2026-10-12",
-      "sweepNote": "Swept 2026-10-12: ingested cycle 202620 (published Oct 8), 23.8% for the reference period ending 2026-09-20. Flat against cycle 202619's 23.8%, and the standard error widened from 0.26% to 0.41%, so the level holds but this cycle adds no movement. ai-adoption-rate uses aggregationMethod \"latest\", so currentValue stays 23.8. The National.xlsx procedure in nextExpected worked exactly as written - the dates sheet is a forward calendar, so read the latest cycle column from 'Response Estimates' rather than the bottom of 'Collection and Reference Dates'."
+      "nextExpected": "Biweekly, roughly every two weeks. The AI questions (Q7 current use, Q24 six-month expectation) run in EVERY cycle — an earlier note here claiming the July 30, 2026 wave carried no AI content was wrong, inferred from the press releases, which are boilerplate and never mention AI. Always read https://www.census.gov/hfp/btos/downloads/National.xlsx (and Sector.xlsx) rather than the release text. Date each value to its reference-period end (see the 'Collection and Reference Dates' sheet), not the publication date — they differ by six to seven weeks. The Nov 17, 2025 rewording from AI use “in producing goods or services” to “in any business function” is a same-construct instrument change; Census and we both publish one continuous series. The biannual AI Supplement is a separate instrument with an 11-week reference window — do not let its release date make it the latest point. From the vintage published Oct 22, 2026 the workbook relabels Q7 and Q24 from \"Artificial Intelligence (AI)\" to \"Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)\", with new SI-worded examples, and census.gov links a \"Questionnaire with SI Supplement\" in place of the AI supplement. Estimates for earlier cycles are unchanged in that vintage, so it is a terminology relabel, not a re-survey; keep one continuous series, as with the Nov 2025 rewording.",
+      "lastSweep": "2026-10-26",
+      "sweepNote": "Swept 2026-10-26: ingested cycle 202621 (published Oct 22), 24.6% (SE 0.27%) for the reference period ending 2026-10-04, up 0.8 points from cycle 202620's 23.8%. The standard error narrowed back from 0.41% to 0.27%, so the rise sits outside the sampling error of either cycle. ai-adoption-rate uses aggregationMethod \"latest\", so currentValue moves 23.8 -> 24.6. Q24 six-month expectation 28.6%, from 27.7%. The one thing to flag: this vintage relabels the AI questions as 'Super Intelligence or SI', retroactively across the whole workbook, while leaving every earlier estimate unchanged - treated as a same-construct instrument relabel, the same call as the Nov 2025 rewording. The National.xlsx procedure in nextExpected worked exactly as written."
     },
     {
       "id": "factset-earnings-ai-mentions",
@@ -193,11 +193,13 @@
       "whatItMeasures": "Share of US adults 18-64 using generative AI (a) overall and (b) at work, fielded quarterly via the Real-Time Population Survey (RPS) since August 2024. The FRED release (137 series, added Jul 2026) adds machine-readable vintages for usage rates (overall/work/nonwork), time savings, GenAI-assisted work hours, and PC/internet adoption comparisons, with industry and occupation breakdowns. Key series: RPSGENAIUSAGESHAREWORK, RPSGENAIUSAGESHAREALL, RPSGENAITSALL, RPSGENAIASSISTWRKHRSALL.",
       "whyItMatters": "The single cleanest time series on worker-side GenAI adoption in the US, cited by every major synthesis (Stanford DEL, IMF, Fed, OECD). Nationally representative and cadence-consistent. FRED hosting makes it citable and API-accessible alongside official government statistics.",
       "lastIngested": {
-        "sourceId": "fred-rps-genai-2026",
-        "date": "2026-07-25",
-        "value": "FRED hosting added (137 series); assisted work hours 6.3% Q2 2026; work adoption 43.4% Q1 2026 (tracker: 45.2% May 2026)"
+        "sourceId": "fred-rps-genai-q3-2026",
+        "date": "2026-10-20",
+        "value": "Q3 2026 wave (fielded Aug 2026): work adoption 40.5%, down 4.65 points from 45.2% in Q2; overall 60.8%; assisted work hours 5.3%"
       },
-      "nextExpected": "~August 2026 (Q2 2026 usage wave on FRED; next survey wave in the fall)"
+      "nextExpected": "~January 2026 for the Q4 2026 wave; FRED updated the Q3 series on Oct 20, 2026, roughly 11 weeks after the Q2 update. Read the four key series straight off FRED without a key: https://fred.stlouisfed.org/graph/fredgraph.csv?id=RPSGENAIUSAGESHAREWORK (also RPSGENAIUSAGESHAREALL, RPSGENAITSALL, RPSGENAIASSISTWRKHRSALL). FRED dates each observation to the quarter start; the authors' tracker labels the same wave by field month, and the chart dates points to the field month (FRED quarter start plus one month). Check genaiadoptiontracker.com for the headline wording, and expect FRED to revise the prior quarter.",
+      "lastSweep": "2026-10-26",
+      "sweepNote": "Swept 2026-10-26: ingested the Q3 2026 wave as a data point on genai-work-adoption, 40.5% of employed adults 18-64 using genAI for work, dated 2026-08-01 (the field month, consistent with the six prior waves in the chart). aggregationMethod is \"latest\", so currentValue moves 45.2 -> 40.5. This is the series' first quarterly decline since Q4 2024 and the largest in it, and it is the judgment call in this sweep worth a second opinion: no publisher note explains it, the overall rate fell only 1.0 point against the work rate's 4.65, and both intensity measures fell alongside (assisted work hours 6.3% -> 5.3%, time saved 2.2% -> 2.1%). Ingested faithfully rather than held back - it is the publisher's own number on the cleanest worker-side series we carry - but one wave does not establish a turn. Also noted: FRED revised Q1 2026 down from the July vintage (work 43.4% -> 42.8%, overall 57.9% -> 57.6%)."
     },
     {
       "id": "yale-budgetlab-cps-tracker",
@@ -272,8 +274,8 @@
         "value": "50% say Claude handles 50%+ of tasks; 4% say entire job"
       },
       "nextExpected": "~September 2026 (Q3 report); on the observed four-to-five-month cadence, ~November 2026",
-      "lastSweep": "2026-10-19",
-      "sweepNote": "Swept 2026-10-19: still no Q3 report, fourth consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 115 days against a quarterly cadence. The expectation is what looks wrong, not the feed: the published cadence has run roughly four to five months in practice, not three. This sweep deliberately did not change the cadence. Recadencing both to semiannual (183d) is the right fix and has been the standing recommendation for three sweeps, but it lowers the audit's own staleness bar on a live series, so it is a human call rather than something a scheduled run should do to itself."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: still no Q3 report, sixth consecutive empty sweep. anthropic.com/economic-index still reads \"Last updated: June 26, 2026\" and the dashboard renders only \"Loading data\", so neither entry has moved. Now 129 days against a 92-day quarterly cadence. Recadencing both entries to semiannual (183d) has been the standing recommendation for five sweeps and is still the right fix; it stays a human call, because a scheduled run should not lower its own staleness bar on a live series. Flagging this explicitly as a repeat finding rather than news."
     },
     {
       "id": "pwc-ai-jobs-barometer",
@@ -341,11 +343,13 @@
       "whatItMeasures": "Surveys of 20K+ US employees on AI use frequency, workplace attitudes, productivity perceptions, and industry-specific reports (arts/creative most recently).",
       "whyItMatters": "The largest single-survey read of US worker AI adoption (Feb 2026 sample: 23,717). Frequency breakdown (13% daily / 28% weekly+ / 50% at-least-annually) is more granular than most trackers.",
       "lastIngested": {
-        "sourceId": "gallup-org-ai-adoption-jul-2026",
-        "date": "2026-07-20",
-        "value": "52% of workers use AI in their role; 47% say org has integrated AI (n=22,573)"
+        "sourceId": "gallup-ai-benefits-uneven-oct-2026",
+        "date": "2026-10-06",
+        "value": "54% of employees have never used AI in their role; 28% weekly+ (n=15,482, fielded Jan 26 - Mar 24 2026)"
       },
-      "nextExpected": "~October 2026 (next Gallup workplace AI report)"
+      "nextExpected": "~January 2027 (next Gallup workplace AI report). Gallup publishes themed workplace AI pieces whose field dates can sit months behind the publication date, so check the methodology box before dating anything: the Oct 6, 2026 report runs on a Jan-Mar 2026 field period, earlier than readings already plotted.",
+      "lastSweep": "2026-10-26",
+      "sweepNote": "Swept 2026-10-26: ingested \"AI Benefits at Work Unevenly Distributed\" (Oct 6) as an overlay on genai-work-adoption, not a data point. Two named gates, not caution: the population is employed adults 18-75 against the chart's 18-64, and the only figure matching the chart's construct is the complement of the 54% never-used share (about 46%), which Gallup does not publish as an estimate - the published 28% is a weekly-frequency threshold, a different measure. Its Jan 26 - Mar 24, 2026 reference period is also earlier than points the chart already holds, so it would not have moved currentValue either way. The content is distributional: regular AI use and its benefits concentrate among workers who already hold better jobs (52% of weekly users in a quality job vs 32% of never-users; 70-80% never-use in healthcare support, manufacturing production and retail)."
     },
     {
       "id": "ellucian-highered-ai",
@@ -488,8 +492,8 @@
         "value": "Employment Outlook 2026 Ch. 1 ingested: LLM diffusion is not the main cause of the youth unemployment gap in AU/CA/EU/US; no posting break at end-2023, including for junior-flagged postings (Box 1.6)"
       },
       "nextExpected": "Rolling; next Employment Outlook ~July 2027",
-      "lastSweep": "2026-10-19",
-      "sweepNote": "Swept 2026-10-19: nothing new, second consecutive empty sweep. oecd.ai/en/work-innovation-productivity-skills still lists no publication, policy brief or data update after July 2026; its newest dated item of any kind is the AI-WIPS 2026 conference in April 2026. The 92-day quarterly threshold is the wrong expectation for this series - its own nextExpected says the next Employment Outlook is ~July 2027, so it will read overdue on every sweep for the next nine months. Recadence to annual, which is what it actually publishes on; left for a human to approve alongside the two Anthropic Economic Index entries, since a sweep lowering its own staleness bar is not a change a scheduled run should make unreviewed."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: nothing new, fourth consecutive empty sweep. No OECD AI-labour publication after the July 2026 Employment Outlook, which is ingested; a search surfaces only coverage of that report and of older 2023-2026 work. The 92-day quarterly threshold remains the wrong expectation: this entry's own nextExpected puts the next Employment Outlook at ~July 2027, so it will read overdue on every sweep until then. Recadence to annual, still left for a human alongside the two Anthropic Economic Index entries."
     },
     {
       "id": "nber-ai-labor-wp",
@@ -515,8 +519,8 @@
         "value": "Fairlie & Wu (WP 35796): no summer-2026 unemployment spike for recent college graduates"
       },
       "nextExpected": "Continuous — NBER releases new AI-labor WPs nearly weekly; check for new titles at least monthly",
-      "lastSweep": "2026-09-28",
-      "sweepNote": "The nber.org topic-facet page renders its paper list client-side and reads as empty to a fetcher. Use the RSS feed at https://back.nber.org/rss/new.xml instead. Swept 2026-09-28: ingested Fairlie & Wu (WP 35796); left Blumenfeld/Hazell/Lian/Schaab (WP 35793, software-engineering productivity and GDP) unmapped - no graph on the site carries that unit."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: nothing ingestable from the October and November 2026 issues. Of 100 papers in that window, the AI-and-labor titles are Gans & Landry \"Training Your Replacement\" (WP 35950, a pure incentive model with no empirical estimates), Jha et al. \"Generative AI, Managerial Expectations, and Economic Activity\" (WP 35949, which uses an LLM as a measurement instrument on earnings calls to forecast GDP - AI as method, not AI as labor shock), Egan et al. \"Competition in Generative AI\" (WP 35953, paid consumer genAI adoption across 174M cardholders - a consumer-purchase population that matches neither ai-adoption-rate's firms nor genai-work-adoption's adults at work), and Baldwin \"The Global Office\" (WP 35975, services-trade framing, no AI labor estimates). None yields a value in any graph's unit. Fairlie & Wu (WP 35796) remains the pointer. Better fetch method than the RSS feed noted previously: the JSON listing at https://www.nber.org/api/v1/working_page_listing/contentType/working_paper/_/_/search?page=1&perPage=100&sortBy=public_date&sortDirection=desc returns titles, authors, dates and truncated abstracts for 100 papers in one call. The HTML topic-facet page still renders client-side and reads as empty."
     },
     {
       "id": "ilo-ai-future-of-work",
@@ -590,8 +594,8 @@
         "value": "Dashboard updated with each themed report; latest: Cadences (June 2026)"
       },
       "nextExpected": "~September 2026 (with Q3 themed report); on the observed four-to-five-month cadence, ~November 2026",
-      "lastSweep": "2026-10-19",
-      "sweepNote": "Swept 2026-10-19: still no Q3 report, fourth consecutive empty sweep. anthropic.com/economic-index continues to read 'Last updated: Jun 26, 2026', so the dashboard has not been refreshed either - the two entries move together and will always go stale together. Now 115 days against a quarterly cadence. The expectation is what looks wrong, not the feed: the published cadence has run roughly four to five months in practice, not three. This sweep deliberately did not change the cadence. Recadencing both to semiannual (183d) is the right fix and has been the standing recommendation for three sweeps, but it lowers the audit's own staleness bar on a live series, so it is a human call rather than something a scheduled run should do to itself."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: still no Q3 report, sixth consecutive empty sweep. anthropic.com/economic-index still reads \"Last updated: June 26, 2026\" and the dashboard renders only \"Loading data\". The dashboard refreshes with each themed report, so this entry and anthropic-economic-index will always go stale and clear together. Same standing recommendation: recadence both to semiannual, left for a human."
     },
     {
       "id": "stripe-atlas",
@@ -640,7 +644,9 @@
         "date": "2026-07-23",
         "value": "v1.0: 88% employment coverage, 21% median task saturation, <10% NR-cognitive automation"
       },
-      "nextExpected": "~Q4 2026 (v1.1 with enterprise/API scope per report roadmap)"
+      "nextExpected": "~Q4 2026 (v1.1 with enterprise/API scope per report roadmap)",
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: nothing new, second consecutive empty sweep. ai.google/economy/atlas still serves only v1.0 (GoogleATLASv1.pdf, July 23, 2026) with no version label or dated update, and a search turns up no ATLAS publication after July 2026 - only launch coverage and the Sep 18, 2026 expansion of the AI & Economy Research Program (Aghion and three others), which is a hiring announcement, not a data release. Overdue because the promised iteration has not shipped. Watch the versioned PDF filename at https://ai.google/static/documents/GoogleATLASv1.pdf for a v2."
     },
     {
       "id": "revelio-ai-labor-tracker",
@@ -667,8 +673,8 @@
         "value": "September 2026 edition: early-career 22-25 most-exposed -20% vs least-exposed (6% for older workers); posting gap narrowed to -29% from -40%; new AI-adopting firms -17% vs July; AI-skill share 7.2%, from 7.6%"
       },
       "nextExpected": "November 5, 2026 (October edition)",
-      "lastSweep": "2026-10-05",
-      "sweepNote": "Swept 2026-10-05: ingested the September 2026 edition (released Oct 1, workforce data through August). The -20% early-career figure went in as a data point on early-career-employment-decline, dated 2026-09-30 for the edition's reference month. Note the registry's earlier 'revelio-ai-labor-market-tracker-2026-09' id is attached to the Sep 2 RPLS jobs report, not a tracker edition, and the August tracker edition (released Sep 3) was folded into that same ingest - edition ids on this series are not reliable, check the URL."
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: no new release, and the series is not actually late. reveliolabs.com/ai-labor-market-tracker still serves the September 2026 edition and states the next release is Thursday, November 5, 2026, so the 31-day monthly threshold flags it four days before the publisher is due. The page metrics are unchanged from what was ingested on Oct 5 (AI-skill share 7.2%, posting gap -29%, new AI-adopting firms -17%). Nothing to ingest."
     },
     {
       "id": "nyfed-college-labor-market",
@@ -687,11 +693,13 @@
       "whatItMeasures": "Unemployment and underemployment rates for recent graduates versus other groups, early-career wages vs high-school graduates, and outcomes by major.",
       "whyItMatters": "The most-cited official read on the new-graduate labor market that AI-exposure studies are benchmarked against.",
       "lastIngested": {
-        "sourceId": "nyfed-college-labor-market-q2-2026",
-        "date": "2026-08-01",
-        "value": "Recent-grad unemployment ~5.6%; underemployment 42% (2026:Q2)"
+        "sourceId": "nyfed-college-labor-market-q3-2026",
+        "date": "2026-11-02",
+        "value": "Recent-grad unemployment 5.2%, lowest in more than a year; underemployment 42.5% (2026:Q3)"
       },
-      "nextExpected": "November 2026 (2026:Q3 update)"
+      "nextExpected": "February 2027 (2026:Q4 update, plus the annual wages and outcomes-by-major refresh)",
+      "lastSweep": "2026-11-02",
+      "sweepNote": "Swept 2026-11-02: ingested the 2026:Q3 update, which landed on the stated November cadence. Unemployment fell to 5.2% from about 5.6%, its lowest in more than a year, while underemployment ticked up to 42.5% from 42%. One overlay on early-career-employment-decline, the same call as the Q2 ingest: the NY Fed publishes an unemployment-rate level for ages 22-27, and that graph plots a most-exposed-versus-least-exposed relative employment decline for ages 22-25, so both the construct and the age band differ. Dated 2026-09-30, the reference-period end of 2026:Q3, per the runbook; note the Q2 entry is dated 2026-08-01 on its publication month, so the two are on different conventions and the Q2 date is the one that is wrong. No entry-level-wage-impact update: wages and outcomes by major refresh annually in February. The page carries no AI attribution. Future sweeps: the page shows no release date, so the only freshness signal is the quarter label in the commentary text itself."
     },
     {
       "id": "bls-productivity-costs",
@@ -777,7 +785,7 @@
         "value": "2019-2023 5-year estimates (S2401), county and CBSA occupation shares"
       },
       "nextExpected": "Overdue (checked 2026-10-06): 2020-2024 5-year estimates released January 29, 2026; not yet ingested. Next: 2021-2025 5-year estimates, ~December 2026",
-      "sweepNote": "The Census API now requires a key. scripts/fetch_acs_county.py reads CENSUS_API_KEY, which is not yet set in .env.local. Rerun after any OEWS refresh, since the county imputation uses the OEWS MSA and balance-of-state files. Swept 2026-10-19: still blocked on that key, which the cloud sweep environment does not carry either - no API key of any kind is present there. At 676 days this is the oldest pointer on the registry and the 2020-2024 release has been available since January 2026, but it is a credentials problem, not a publisher problem, and no sweep can clear it. targetGraphs is empty, so nothing on a prediction chart is affected; the /map county and CBSA layers are. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "The Census API now requires a key. scripts/fetch_acs_county.py reads CENSUS_API_KEY, which is not set in the sweep environment (no .env.local exists there at all). Rechecked 2026-11-02: still blocked on that key. At 690 days this is the oldest pointer on the registry; the 2020-2024 5-year estimates have been available since January 29, 2026, and the 2021-2025 vintage is due around December 2026, which would put the pointer two releases behind. The ACS data-releases page currently advertises only the 2025 1-year estimates and links a 2025 release schedule without inline dates, so the 5-year vintage cannot be confirmed from that page either. targetGraphs is empty, so no prediction chart is affected; the /map county and CBSA layers are. Worth a human decision on whether this entry should stay on the registry at all, since nothing on a prediction graph consumes it and it has never had a successful sweep. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "bls-ooh",
@@ -902,7 +910,7 @@
         "value": "Monthly data through March 2026; 2025 state ranks"
       },
       "nextExpected": "Overdue (checked 2026-10-19): newer months unverified because openai.com/signals returns 403 to fetchers. Check by browser, then run npm run build:openai-signals and build:realized-exposure",
-      "sweepNote": "Swept 2026-10-19: still blocked, not stale. openai.com/signals returns HTTP 403 to every automated fetcher tried, so whether months after March 2026 exist cannot be established from this environment at all. This needs one manual browser visit and a CSV download; no scheduled sweep can clear it. 161 days and counting - if nobody is going to make that visit, the honest fix is to mark the series manual-only rather than let it accrue staleness forever. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "Rechecked 2026-11-02: still blocked, not stale. openai.com/signals returns HTTP 403 to automated fetchers, and working around that bot check is not something a sweep should do, so whether editions after the Q1 2026 update exist cannot be established from this environment. What a search does show: the most recent Signals research post is the Q1 2026 update of 2026-05-11 (openai.com/signals/research/2026q1-update/), which is exactly the edition already ingested, and no Q2 or Q3 post surfaces. That is weak evidence of no new release, and it also suggests the registry's \"monthly\" cadence is wrong - the post itself is named by quarter. Recadencing to quarterly would be the honest expectation, left for a human. Still needs one manual browser visit and a CSV download; no scheduled sweep can clear it. 175 days and counting. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-pypi-downloads",
@@ -923,7 +931,7 @@
         "value": "52 packages, monthly downloads through March 2026"
       },
       "nextExpected": "Overdue (checked 2026-10-19): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
-      "sweepNote": "Do not refresh blind. PyPI-wide counts dropped about 31% from roughly August 25, 2026 (the control package requests fell too), and the first month of the 180-day window is partial. Normalize or drop affected months before publishing. Swept 2026-10-19: deliberately not refreshed. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Note that PyPI is the one of the four where a green CI run would still not be enough - the August counting break needs a human normalization decision before any new month is published. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "Do not refresh blind. PyPI-wide counts dropped about 31% from roughly August 25, 2026 (the control package requests fell too), and the first month of the 180-day window is partial. Normalize or drop affected months before publishing. Rechecked 2026-11-02: not refreshed, seventh consecutive sweep with the same single root cause. update-signals.yml has now failed all 31 of its scheduled runs, most recently 2026-10-26 (run 40324518414), with an identical step pattern every time: \"Fetch PyPI stats\" and \"Fetch npm stats\" succeed, then \"Fetch BLS employment data\" fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. All four /signals series go stale together on that one missing secret. Adding BLS_API_KEY (free at https://data.bls.gov/registrationEngine/), plus a \"signals\" label for the PR step, should clear all four at once. PyPI is the one of the four where a green CI run still would not be enough - that August counting break needs a human normalization decision before any new month is published. Checked again this sweep whether a partial refresh is worth it, and it is not: MethodologyNote.tsx renders the page's \"last refreshed\" date from monthly_downloads.fetchedAt alone, so refreshing PyPI and npm while BLS employment stays on its March 2026 vintage would restamp the whole panel November while every industry card still showed March employment. Mixed vintage behind one fresh-looking date is worse than one honest stale date. The cloud sweep environment has no .env.local and no BLS_API_KEY, so this run could not have done the full refresh either way. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-npm-downloads",
@@ -944,7 +952,7 @@
         "value": "15 packages, monthly downloads through March 2026"
       },
       "nextExpected": "Overdue (checked 2026-10-19): data through September 2026 is available; not yet ingested. The update-signals workflow has failed every run since March 2026",
-      "sweepNote": "Swept 2026-10-19: not refreshed. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Refreshing npm alone would publish an acceleration index mixing September npm counts against March PyPI and BLS counts, which is worse than leaving the whole panel on one vintage, so all four wait on the secret. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "Rechecked 2026-11-02: not refreshed, seventh consecutive sweep with the same single root cause. update-signals.yml has now failed all 31 of its scheduled runs, most recently 2026-10-26 (run 40324518414), with an identical step pattern every time: \"Fetch PyPI stats\" and \"Fetch npm stats\" succeed, then \"Fetch BLS employment data\" fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. All four /signals series go stale together on that one missing secret. Adding BLS_API_KEY (free at https://data.bls.gov/registrationEngine/), plus a \"signals\" label for the PR step, should clear all four at once. Checked again this sweep whether a partial refresh is worth it, and it is not: MethodologyNote.tsx renders the page's \"last refreshed\" date from monthly_downloads.fetchedAt alone, so refreshing PyPI and npm while BLS employment stays on its March 2026 vintage would restamp the whole panel November while every industry card still showed March employment. Mixed vintage behind one fresh-looking date is worse than one honest stale date. The cloud sweep environment has no .env.local and no BLS_API_KEY, so this run could not have done the full refresh either way. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-huggingface-downloads",
@@ -965,7 +973,7 @@
         "value": "5 categories, top-10 models' trailing-30-day downloads"
       },
       "nextExpected": "Overdue (checked 2026-10-19): live counts are available; not yet ingested. The update-signals workflow has failed every run since March 2026",
-      "sweepNote": "Swept 2026-10-19: not refreshed. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. This series is also the one that loses most to the delay: the Hugging Face API reports only a live trailing-30-day count, so the months missed since April 2026 are not recoverable later. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "Rechecked 2026-11-02: not refreshed, seventh consecutive sweep with the same single root cause. update-signals.yml has now failed all 31 of its scheduled runs, most recently 2026-10-26 (run 40324518414), with an identical step pattern every time: \"Fetch PyPI stats\" and \"Fetch npm stats\" succeed, then \"Fetch BLS employment data\" fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. All four /signals series go stale together on that one missing secret. Adding BLS_API_KEY (free at https://data.bls.gov/registrationEngine/), plus a \"signals\" label for the PR step, should clear all four at once. This series loses most to the delay: the Hugging Face API reports only a live trailing-30-day count, so the months missed since April 2026 are not recoverable later. Checked again this sweep whether a partial refresh is worth it, and it is not: MethodologyNote.tsx renders the page's \"last refreshed\" date from monthly_downloads.fetchedAt alone, so refreshing PyPI and npm while BLS employment stays on its March 2026 vintage would restamp the whole panel November while every industry card still showed March employment. Mixed vintage behind one fresh-looking date is worse than one honest stale date. The cloud sweep environment has no .env.local and no BLS_API_KEY, so this run could not have done the full refresh either way. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     },
     {
       "id": "signals-bls-ces-industry",
@@ -986,7 +994,7 @@
         "value": "20 series through March 2026 (3 end February 2026)"
       },
       "nextExpected": "Overdue (checked 2026-10-19): September 2026 preliminary data released October 2, 2026; not yet ingested. Next: November 6, 2026 (October data)",
-      "sweepNote": "The update-signals workflow fails because the BLS_API_KEY repo secret does not exist; its PR step also needs a 'signals' label. Locally, fetch_bls.py reads .env, but the key is in .env.local. Swept 2026-10-19: confirmed again as the single root cause for all four /signals series, now across five consecutive sweeps. The update-signals workflow has now failed 30 consecutive scheduled runs, most recently 2026-10-19 (run 39255006787), with an identical step pattern every time. The job logs localize it precisely: 'Fetch PyPI stats' and 'Fetch npm stats' both succeed, then 'Fetch BLS employment data' fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. So all four /signals series go stale together on one missing secret, not four separate publisher problems. Adding BLS_API_KEY (and a 'signals' label for the PR step) should clear all four at once; a continue-on-error on the BLS step would at least let PyPI and npm through. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
+      "sweepNote": "The update-signals workflow fails because the BLS_API_KEY repo secret does not exist; its PR step also needs a \"signals\" label. Locally, fetch_bls.py reads .env, but the key is in .env.local. Rechecked 2026-11-02: not refreshed, seventh consecutive sweep with the same single root cause. update-signals.yml has now failed all 31 of its scheduled runs, most recently 2026-10-26 (run 40324518414), with an identical step pattern every time: \"Fetch PyPI stats\" and \"Fetch npm stats\" succeed, then \"Fetch BLS employment data\" fails in under a second because the BLS_API_KEY repo secret does not exist, and every later step - HuggingFace, Calculate metrics, Check for changes, Create PR - is skipped. All four /signals series go stale together on that one missing secret. Adding BLS_API_KEY (free at https://data.bls.gov/registrationEngine/), plus a \"signals\" label for the PR step, should clear all four at once. This is the blocking series of the four: its own next release is November 6, 2026 (October data), and September 2026 preliminary data has been available since October 2. Checked again this sweep whether a partial refresh is worth it, and it is not: MethodologyNote.tsx renders the page's \"last refreshed\" date from monthly_downloads.fetchedAt alone, so refreshing PyPI and npm while BLS employment stays on its March 2026 vintage would restamp the whole panel November while every industry card still showed March employment. Mixed vintage behind one fresh-looking date is worse than one honest stale date. The cloud sweep environment has no .env.local and no BLS_API_KEY, so this run could not have done the full refresh either way. Deliberately NOT recording a lastSweep on this entry: auto-audit skips any series swept within 30 days, and this series is blocked on credentials rather than waiting on a publisher, so the data really is available and coverage really is falling behind. Letting the audit keep flagging it is the point - a lastSweep here would hide a live gap for a month."
     }
   ]
 }

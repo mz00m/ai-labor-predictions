@@ -544,6 +544,15 @@
       "label": "Revelio: at AI adopters, senior employment +32% vs junior +6% since Nov 2022"
     },
     {
+      "date": "2026-09-30",
+      "direction": "down",
+      "sourceIds": [
+        "nyfed-college-labor-market-q3-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "NY Fed: recent-grad unemployment 5.2% in 2026:Q3, a 1-year low; underemployment 42.5%"
+    },
+    {
       "date": "2026-10-19",
       "direction": "neutral",
       "sourceIds": [
@@ -994,6 +1003,16 @@
       "datePublished": "2026-10-19",
       "excerpt": "AI is probably playing some role in higher unemployment for young people with college degrees.  But it can’t explain the entirety of the increase in that unemployment.",
       "dateAdded": "2026-10-23"
+    },
+    {
+      "id": "nyfed-college-labor-market-q3-2026",
+      "title": "The Labor Market for Recent College Graduates (2026:Q3 update)",
+      "url": "https://www.newyorkfed.org/research/college-labor-market",
+      "publisher": "Federal Reserve Bank of New York",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-01",
+      "excerpt": "Labor market conditions improved for recent college graduates in the third quarter of 2026 but remained challenging. The unemployment rate fell to 5.2 percent, its lowest level in more than a year, though the underemployment rate ticked up to 42.5 percent.",
+      "dateAdded": "2026-11-02"
     }
   ]
 }
