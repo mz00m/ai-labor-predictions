@@ -22,7 +22,7 @@ import {
   isDbAvailable,
 } from "@/lib/assessment/db";
 import { sendReportReadyEmail } from "@/lib/assessment/send-report-email";
-import { signToken, makeSessionCookie } from "@/lib/assessment/auth";
+import { signAccessToken, makeAccessCookie, getScopedAssessmentIds } from "@/lib/assessment/auth";
 import { requireAssessmentOwner } from "@/lib/assessment/authz";
 import { checkRateLimit, getClientIp } from "@/lib/security/rate-limit";
 import { safeFetchText } from "@/lib/security/safe-fetch";
@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
     let fileContents: { name: string; category: string; text: string }[] = [];
     let websiteContent: string | null = null;
     let assessmentId: string | null = assessmentIdParam;
-    let sessionEmail: string | null = null; // Set when we need to issue a session cookie
+    let grantNewAssessment = false; // Set when we need to issue the scoped access cookie
 
     // Any request that targets an existing assessment (continuation OR step-1
     // rerun) must prove ownership via the session cookie. New submissions skip
@@ -274,9 +274,10 @@ export async function POST(req: NextRequest) {
           );
         }
         await updateAssessmentStatus(assessmentId, "analyzing");
-        // Mark that we need to set the session cookie so the progress/report
-        // pages can authenticate without requiring a separate login step
-        sessionEmail = email.toLowerCase().trim();
+        // Grant access to this assessment only, so the progress/report pages
+        // work without a login step. The form email is unverified, so it must
+        // never become an email-wide session.
+        grantNewAssessment = true;
       }
     }
 
@@ -428,10 +429,11 @@ export async function POST(req: NextRequest) {
         ...stepResult,
       });
 
-      // Set session cookie on initial submission so progress/report pages work
-      if (sessionEmail) {
-        const token = await signToken(sessionEmail);
-        response.cookies.set(makeSessionCookie(token));
+      // Scoped access cookie on initial submission so progress/report pages work
+      if (grantNewAssessment && assessmentId) {
+        const granted = await getScopedAssessmentIds(req);
+        const token = await signAccessToken([...granted.filter((id) => id !== assessmentId), assessmentId]);
+        response.cookies.set(makeAccessCookie(token));
       }
 
       return response;
