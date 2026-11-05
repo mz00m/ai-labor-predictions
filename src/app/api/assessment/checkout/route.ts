@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { markAssessmentPaid, markPolicyAddon } from "@/lib/assessment/db";
+import { requireAssessmentOwner } from "@/lib/assessment/authz";
 
 function getStripe() {
   if (!process.env.STRIPE_SECRET_KEY) throw new Error("STRIPE_SECRET_KEY not configured");
@@ -15,6 +16,11 @@ export async function POST(req: NextRequest) {
 
     if (!assessmentId || !email) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
+    const authz = await requireAssessmentOwner(req, assessmentId);
+    if (!authz.ok) {
+      return NextResponse.json({ error: authz.error }, { status: authz.status });
     }
 
     const isAddOn = addOn === "policy-prompts";

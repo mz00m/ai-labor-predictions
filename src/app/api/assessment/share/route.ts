@@ -1,11 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  getAssessment,
-  getUserByEmail,
-  getOrCreateShareToken,
-  revokeShareToken,
-} from "@/lib/assessment/db";
-import { getVerifiedEmail } from "@/lib/assessment/auth";
+import { getOrCreateShareToken, revokeShareToken } from "@/lib/assessment/db";
+import { requireAssessmentOwner } from "@/lib/assessment/authz";
 
 /** Resolve the caller to an owned assessment, or return the error response. */
 async function requireOwnedAssessment(req: NextRequest, id: string | null) {
@@ -13,22 +8,12 @@ async function requireOwnedAssessment(req: NextRequest, id: string | null) {
     return { error: NextResponse.json({ error: "Missing assessment ID" }, { status: 400 }) };
   }
 
-  const email = await getVerifiedEmail(req);
-  if (!email) {
-    return { error: NextResponse.json({ error: "Verification required" }, { status: 401 }) };
+  const authz = await requireAssessmentOwner(req, id);
+  if (!authz.ok) {
+    return { error: NextResponse.json({ error: authz.error }, { status: authz.status }) };
   }
 
-  const assessment = await getAssessment(id);
-  if (!assessment) {
-    return { error: NextResponse.json({ error: "Assessment not found" }, { status: 404 }) };
-  }
-
-  const user = await getUserByEmail(email);
-  if (!user || user.id !== assessment.userId) {
-    return { error: NextResponse.json({ error: "Access denied" }, { status: 403 }) };
-  }
-
-  return { assessment };
+  return { assessment: authz.assessment };
 }
 
 /** Mint (or return) the public share token for an assessment the caller owns. */

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAssessment, getUserByEmail, updateIntakeMaturity } from "@/lib/assessment/db";
-import { getVerifiedEmail } from "@/lib/assessment/auth";
+import { updateIntakeMaturity } from "@/lib/assessment/db";
+import { requireAssessmentOwner } from "@/lib/assessment/authz";
 
 const VALID_MATURITY = ["none", "exploring", "piloting", "some-adoption", "widespread"] as const;
 type Maturity = (typeof VALID_MATURITY)[number];
@@ -38,19 +38,9 @@ export async function PATCH(req: NextRequest) {
     );
   }
 
-  const email = await getVerifiedEmail(req);
-  if (!email) {
-    return NextResponse.json({ error: "Verification required" }, { status: 401 });
-  }
-
-  const assessment = await getAssessment(assessmentId);
-  if (!assessment) {
-    return NextResponse.json({ error: "Assessment not found" }, { status: 404 });
-  }
-
-  const user = await getUserByEmail(email);
-  if (!user || user.id !== assessment.userId) {
-    return NextResponse.json({ error: "Access denied" }, { status: 403 });
+  const authz = await requireAssessmentOwner(req, assessmentId);
+  if (!authz.ok) {
+    return NextResponse.json({ error: authz.error }, { status: authz.status });
   }
 
   const updated = await updateIntakeMaturity(assessmentId, currentAiUsage as Maturity);
