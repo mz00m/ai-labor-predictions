@@ -30,11 +30,9 @@ const noFrameRoutes = ["/assessment/:path*", "/kb/:path*", "/api/:path*"];
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
-  experimental: {
-    outputFileTracingIncludes: {
-      "/api/research/digest": ["./src/data/digests/**/*.json"],
-      "/api/kb/query": ["./wiki/**/*.md"],
-    },
+  outputFileTracingIncludes: {
+    "/api/research/digest": ["./src/data/digests/**/*.json"],
+    "/api/kb/query": ["./wiki/**/*.md"],
   },
   async headers() {
     return [

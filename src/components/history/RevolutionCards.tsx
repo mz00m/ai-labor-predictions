@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type JSX } from "react";
 
 /** Inline SVG icons for each revolution - precise, geometric */
 function RevolutionIcon({ id, color, size = 16 }: { id: string; color: string; size?: number }) {

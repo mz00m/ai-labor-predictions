@@ -539,7 +539,7 @@ function StatCard({
 
 function CountUpValue({ target, prefix, suffix }: { target: number; prefix: string; suffix: string }) {
   const [current, setCurrent] = useState(0);
-  const rafRef = useRef<number>();
+  const rafRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

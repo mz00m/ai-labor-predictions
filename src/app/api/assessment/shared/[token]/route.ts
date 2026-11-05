@@ -9,10 +9,8 @@ export const dynamic = "force-dynamic";
  * is the authorization. Serves the allowlisted projection only, never the
  * raw assessment row.
  */
-export async function GET(
-  _req: NextRequest,
-  { params }: { params: { token: string } }
-) {
+export async function GET(_req: NextRequest, props: { params: Promise<{ token: string }> }) {
+  const params = await props.params;
   const { token } = params;
 
   if (!token || !/^[a-f0-9]{32}$/.test(token)) {

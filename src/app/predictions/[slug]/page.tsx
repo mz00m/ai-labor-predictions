@@ -7,14 +7,15 @@ import PredictionDetailPage from "./PredictionDetailClient";
 export const revalidate = 3600;
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return getAllPredictions().map((p) => ({ slug: p.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const prediction = getPredictionBySlug(params.slug);
 
   if (!prediction) {
@@ -58,7 +59,8 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const prediction = getPredictionBySlug(params.slug);
   const lastUpdated = getLastUpdated();
 
