@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDb } from "@/lib/db";
-import { initAssessmentTables, getAdminPasswordHash, setAdminPasswordHash } from "@/lib/assessment/db";
+import { initAssessmentTables, setAdminPasswordHash } from "@/lib/assessment/db";
+import { checkAdminToken } from "@/lib/admin-auth";
 
 type Row = Record<string, unknown>;
 
@@ -14,20 +15,8 @@ async function hashToken(token: string): Promise<string> {
 }
 
 async function checkAuth(req: NextRequest): Promise<boolean> {
-  const token = req.headers.get("x-admin-token");
-  if (!token) return false;
-
-  // Check DB password first
-  const dbHash = await getAdminPasswordHash();
-  if (dbHash) {
-    const tokenHash = await hashToken(token);
-    return tokenHash === dbHash;
-  }
-
-  // Fall back to env var
-  const secret = process.env.ADMIN_SECRET;
-  if (!secret) return false;
-  return token === secret;
+  // Shared helper: DB password hash first, ADMIN_SECRET fallback, constant-time compare
+  return checkAdminToken(req.headers.get("x-admin-token"));
 }
 
 export async function GET(req: NextRequest) {
