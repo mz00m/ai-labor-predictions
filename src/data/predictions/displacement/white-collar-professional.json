@@ -1319,6 +1319,26 @@
       "evidenceTier": 1,
       "label": "BLS table B-1: information employment down 120K (-4.2%) from September 2025"
     }
+  ,
+    {
+      "date": "2026-10-31",
+      "direction": "down",
+      "sourceIds": [
+        "bls-employment-situation-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Oct 2026: professional and business services +70K, +269K since its October 2025 low"
+    }
+  ,
+    {
+      "date": "2026-10-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "bls-employment-situation-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Oct 2026: information employment little changed on the month at -1K"
+    }
   ],
   "sources": [
     {
@@ -2398,6 +2418,17 @@
       "datePublished": "2026-10-02",
       "excerpt": "\"Total nonfarm payroll employment changed little in September (+29,000), following an average monthly gain of 45,000 over the prior 12 months.\" \"Both the unemployment rate, at 4.2 percent, and the number of unemployed people, at 7.1 million, changed little in September.\" \"Health care employment continued its upward trend in September (+17,000), but at a slower pace than the average monthly gain over the prior 12 months (+33,000).\" Employment changed little over the month in \"transportation and warehousing; information; professional and business services; social assistance\" among other major industries. \"The change in total nonfarm payroll employment for July was revised down by 31,000, from +21,000 to -10,000, and the change for August was revised down by 29,000, from +162,000 to +133,000.\" \"With these revisions, employment in July and August combined is 60,000 lower than previously reported.\" \"In September, average hourly earnings for all employees on private nonfarm payrolls edged up by 5 cents, or 0.1 percent, to $37.81.\" \"Over the past 12 months, average hourly earnings have increased by 3.0 percent.\"",
       "dateAdded": "2026-10-12"
+    }
+  ,
+    {
+      "id": "bls-employment-situation-oct-2026",
+      "title": "BLS Employment Situation: October 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-06",
+      "excerpt": "\"Total nonfarm payroll employment rose by 165,000 in October, and the unemployment rate changed little at 4.1 percent.\" The October gain was \"higher than the average monthly gain of 48,000 over the prior 12 months.\" \"Both the unemployment rate, at 4.1 percent, and the number of unemployed people, at 7.1 million, changed little in October.\" \"Employment in professional and business services increased by 70,000 in October,\" and \"Professional and business services has added 269,000 jobs since a recent low in October 2025.\" Within it, professional, scientific and technical services rose 33,000 and administrative and support 28,000. Health care added 42,000 and transportation and warehousing 25,000; manufacturing rose 19,000. Employment showed little change over the month in \"information; financial activities; social assistance\" among other major industries, with information down 1,000 and financial activities up 7,000. \"The change in total nonfarm payroll employment for August was revised up by 53,000,\" from +133,000 to +186,000, \"and the change for September was revised up by 31,000, from +29,000 to +60,000\" - 84,000 higher combined than previously reported, reversing the 60,000 downward revision carried in the September release. \"In October, average hourly earnings for all employees on private nonfarm payrolls increased by 14 cents,\" or 0.4 percent, to $38.00, up 3.1 percent over the year.",
+      "dateAdded": "2026-11-09"
     }
   ]
 }

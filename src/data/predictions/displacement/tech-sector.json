@@ -1007,6 +1007,16 @@
       "evidenceTier": 4,
       "label": "Guy Berger: software developers' share of US employment rose over the past year"
     }
+  ,
+    {
+      "date": "2026-10-31",
+      "direction": "down",
+      "sourceIds": [
+        "challenger-october-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Challenger: Technology 5,576 October cuts, its lowest month of 2026; 171,501 YTD (28%)"
+    }
   ],
   "sources": [
     {
@@ -1913,6 +1923,17 @@
       "datePublished": "2026-10-19",
       "excerpt": "In a few sectors (software development in particular), the impact has been larger, with significant changes in how work is done.  Nevertheless, it is noteworthy that software developers’ share of overall US employment has increased over the past year.",
       "dateAdded": "2026-10-23"
+    }
+  ,
+    {
+      "id": "challenger-october-2026",
+      "title": "October Layoffs at Three-Year Low; Seasonal Hiring Plans Up 26%",
+      "url": "https://www.challengergray.com/blog/october-layoffs-at-three-year-low-seasonal-hiring-plans-up-26/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-05",
+      "excerpt": "\"U.S.-based employers announced 43,994 job cuts in October, up 2% from the 43,281 cuts announced in September. It is down 71% from the 153,074 job cuts announced in October 2025.\" \"October's total is the lowest for the month since 2023, when 36,836 cuts were announced.\" \"Through October, employers have announced 617,189 job cuts, down 44% from the 1,099,500 cuts announced in the first 10 months of 2025.\" \"AI was cited for 1,265 cuts in October, its lowest monthly total this year. AI has been cited in 121,401 job cut announcements so far in 2026, approximately 20% of all cuts.\" \"Since 2023, when Challenger began tracking AI as a distinct reason, it has been cited in 193,226 job cuts.\" \"With 130,531 cuts so far this year, Market/Economic Conditions has overtaken Artificial Intelligence (AI) as the leading reason for job cuts in 2026.\" \"The reasons employers give have shifted from technology to the economy. AI dominated layoff announcements through the spring and summer, but this fall companies are pointing to demand and economic conditions. That is a more cautious signal, though the overall pace of cutting remains low,\" said Challenger. \"Technology announced 5,576 cuts in October, its lowest monthly total of the year,\" and \"Technology leads all industries with 171,501 cuts announced through October,\" 28% of all 2026 cuts. Hiring plans were 444,692 in October, up 57% year over year; Amazon's 300,000 seasonal hires \"account for nearly all of the 300,252 Technology hiring plans announced in October.\"",
+      "dateAdded": "2026-11-09"
     }
   ],
   "marketIds": {

@@ -411,6 +411,16 @@
       "evidenceTier": 1,
       "label": "BLS: financial activities down 129K since May 2025 peak; insurance carriers -90K"
     }
+  ,
+    {
+      "date": "2026-10-31",
+      "direction": "neutral",
+      "sourceIds": [
+        "bls-employment-situation-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "BLS Oct 2026: financial activities +7K, among industries with little change"
+    }
   ],
   "sources": [
     {
@@ -787,6 +797,17 @@
       "datePublished": "2026-10-02",
       "excerpt": "\"Employment in financial activities is down by 129,000 since a recent peak in May 2025, with most of the job loss in insurance carriers and related activities (-90,000).\" \"In September, financial activities employment was little changed (-7,000).\"",
       "dateAdded": "2026-10-12"
+    }
+  ,
+    {
+      "id": "bls-employment-situation-oct-2026",
+      "title": "BLS Employment Situation: October 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-06",
+      "excerpt": "\"Total nonfarm payroll employment rose by 165,000 in October, and the unemployment rate changed little at 4.1 percent.\" The October gain was \"higher than the average monthly gain of 48,000 over the prior 12 months.\" \"Both the unemployment rate, at 4.1 percent, and the number of unemployed people, at 7.1 million, changed little in October.\" \"Employment in professional and business services increased by 70,000 in October,\" and \"Professional and business services has added 269,000 jobs since a recent low in October 2025.\" Within it, professional, scientific and technical services rose 33,000 and administrative and support 28,000. Health care added 42,000 and transportation and warehousing 25,000; manufacturing rose 19,000. Employment showed little change over the month in \"information; financial activities; social assistance\" among other major industries, with information down 1,000 and financial activities up 7,000. \"The change in total nonfarm payroll employment for August was revised up by 53,000,\" from +133,000 to +186,000, \"and the change for September was revised up by 31,000, from +29,000 to +60,000\" - 84,000 higher combined than previously reported, reversing the 60,000 downward revision carried in the September release. \"In October, average hourly earnings for all employees on private nonfarm payrolls increased by 14 cents,\" or 0.4 percent, to $38.00, up 3.1 percent over the year.",
+      "dateAdded": "2026-11-09"
     }
   ]
 }

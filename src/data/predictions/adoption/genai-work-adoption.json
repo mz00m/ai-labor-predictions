@@ -666,6 +666,16 @@
       "evidenceTier": 2,
       "label": "Gallup: 54% of employees have never used AI in their role; 28% weekly+ (n=15,482)"
     }
+  ,
+    {
+      "date": "2026-10-18",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-btos-ai-cycle-202622"
+      ],
+      "evidenceTier": 1,
+      "label": "BTOS: 26.8% of AI-using firms report employees used generative SI for work tasks"
+    }
   ],
   "sources": [
     {
@@ -1235,6 +1245,17 @@
       "datePublished": "2026-10-06",
       "excerpt": "Gallup, October 6, 2026, reporting on 15,482 US employees drawn from a January 26 to March 24, 2026 survey of 17,874 adults aged 18 to 75 who had worked for pay in the prior seven days (margin of error +/-1 point). \"28% of employees reported using AI at least weekly, while 54% said they had not used AI in their role.\" Daily or weekly use runs 40% among four-year college graduates against 17% among non-graduates, and 37% among managers against 25% among individual contributors; about one in five 18- to 24-year-olds use AI weekly or more. Roughly half of workers in professional and business services, financial activities and information/media use AI regularly, while 70% to more than 80% never use it in healthcare support, manufacturing production and retail sales. Among the 7,845 AI users, 63% say it makes them work faster, 56% that it helps them find more creative solutions, 47% that they spend more time on the interesting parts of the job and 46% that their work is higher quality; 31% say their employer has asked them to take on more responsibilities. \"These work benefits of AI use are not evenly distributed across the workforce\": 52% of weekly-or-more users hold a quality job, against 46% of infrequent users and 32% of never-users. Also 52% of all employees say they have less influence over new technology adoption than they would like.",
       "dateAdded": "2026-10-26"
+    }
+  ,
+    {
+      "id": "census-btos-ai-cycle-202622",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202622)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-05",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.2% (SE 0.61%) for the two weeks ending 2026-10-18, down from 24.6% (SE 0.27%) for the cycle ending 2026-10-04 - a 0.4pp move well inside the sampling error of either cycle, so the series reads flat rather than falling, and 24.6% remains the series high. \"Do not know\" rose to 13.9% from 9.6% and \"No\" fell to 61.9% from 65.8%, while the standard error on the yes share more than doubled; this is the first cycle in which three new core AI questions were fielded behind Q7. Q28, the six-month expectation of SI/AI use, was 27.6% (SE 0.49%), down from 28.6%. The three AI questions pre-announced in FR Doc. 2026-18304 appear for the first time in this cycle and are asked only of businesses that report AI use: Q8, whether employees used generative SI to assist in work-related tasks - 26.8% yes (SE 0.56%), 58.6% no, 14.7% do not know; Q9, AI's effect on total headcount over the last six months - 6.6% increased, 2.5% decreased, 87.3% no change, 3.6% do not know; Q10, AI's effect on the number of new employees hired - 2.5% increased, 3.3% decreased, 90.2% no change, 4.1% do not know. Because of the skip logic, Q8-Q10 denominators are AI-using businesses, not all businesses; Q8's 26.8% exceeding Q7's 24.2% confirms the subpopulation denominator arithmetically. Collection for cycle 202622 ran 2026-10-19 to 2026-11-01, reference period 2026-10-05 to 2026-10-18; published 2026-11-05. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-11-09"
     }
   ]
 }

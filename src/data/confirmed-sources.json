@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-11-02",
-  "totalSources": 795,
-  "verifiedCount": 785,
+  "lastUpdated": "2026-11-09",
+  "totalSources": 798,
+  "verifiedCount": 788,
   "sources": {
     "berger-ai-labor-market-thoughts-2026": {
       "id": "berger-ai-labor-market-thoughts-2026",
@@ -11287,6 +11287,56 @@
       "dateAdded": "2026-11-02",
       "usedIn": [
         "early-career-employment-decline"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-btos-ai-cycle-202622": {
+      "id": "census-btos-ai-cycle-202622",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202622)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-05",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.2% (SE 0.61%) for the two weeks ending 2026-10-18, down from 24.6% (SE 0.27%) for the cycle ending 2026-10-04 - a 0.4pp move well inside the sampling error of either cycle, so the series reads flat rather than falling, and 24.6% remains the series high. \"Do not know\" rose to 13.9% from 9.6% and \"No\" fell to 61.9% from 65.8%, while the standard error on the yes share more than doubled; this is the first cycle in which three new core AI questions were fielded behind Q7. Q28, the six-month expectation of SI/AI use, was 27.6% (SE 0.49%), down from 28.6%. The three AI questions pre-announced in FR Doc. 2026-18304 appear for the first time in this cycle and are asked only of businesses that report AI use: Q8, whether employees used generative SI to assist in work-related tasks - 26.8% yes (SE 0.56%), 58.6% no, 14.7% do not know; Q9, AI's effect on total headcount over the last six months - 6.6% increased, 2.5% decreased, 87.3% no change, 3.6% do not know; Q10, AI's effect on the number of new employees hired - 2.5% increased, 3.3% decreased, 90.2% no change, 4.1% do not know. Because of the skip logic, Q8-Q10 denominators are AI-using businesses, not all businesses; Q8's 26.8% exceeding Q7's 24.2% confirms the subpopulation denominator arithmetically. Collection for cycle 202622 ran 2026-10-19 to 2026-11-01, reference period 2026-10-05 to 2026-10-18; published 2026-11-05. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-11-09",
+      "usedIn": [
+        "ai-adoption-rate",
+        "genai-work-adoption",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "bls-employment-situation-oct-2026": {
+      "id": "bls-employment-situation-oct-2026",
+      "title": "BLS Employment Situation: October 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_11062026.htm",
+      "publisher": "US Bureau of Labor Statistics",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-06",
+      "excerpt": "\"Total nonfarm payroll employment rose by 165,000 in October, and the unemployment rate changed little at 4.1 percent.\" The October gain was \"higher than the average monthly gain of 48,000 over the prior 12 months.\" \"Both the unemployment rate, at 4.1 percent, and the number of unemployed people, at 7.1 million, changed little in October.\" \"Employment in professional and business services increased by 70,000 in October,\" and \"Professional and business services has added 269,000 jobs since a recent low in October 2025.\" Within it, professional, scientific and technical services rose 33,000 and administrative and support 28,000. Health care added 42,000 and transportation and warehousing 25,000; manufacturing rose 19,000. Employment showed little change over the month in \"information; financial activities; social assistance\" among other major industries, with information down 1,000 and financial activities up 7,000. \"The change in total nonfarm payroll employment for August was revised up by 53,000,\" from +133,000 to +186,000, \"and the change for September was revised up by 31,000, from +29,000 to +60,000\" - 84,000 higher combined than previously reported, reversing the 60,000 downward revision carried in the September release. \"In October, average hourly earnings for all employees on private nonfarm payrolls increased by 14 cents,\" or 0.4 percent, to $38.00, up 3.1 percent over the year.",
+      "dateAdded": "2026-11-09",
+      "usedIn": [
+        "overall-us-displacement",
+        "white-collar-professional-displacement",
+        "financial-services-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "challenger-october-2026": {
+      "id": "challenger-october-2026",
+      "title": "October Layoffs at Three-Year Low; Seasonal Hiring Plans Up 26%",
+      "url": "https://www.challengergray.com/blog/october-layoffs-at-three-year-low-seasonal-hiring-plans-up-26/",
+      "publisher": "Challenger, Gray & Christmas",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-05",
+      "excerpt": "\"U.S.-based employers announced 43,994 job cuts in October, up 2% from the 43,281 cuts announced in September. It is down 71% from the 153,074 job cuts announced in October 2025.\" \"October's total is the lowest for the month since 2023, when 36,836 cuts were announced.\" \"Through October, employers have announced 617,189 job cuts, down 44% from the 1,099,500 cuts announced in the first 10 months of 2025.\" \"AI was cited for 1,265 cuts in October, its lowest monthly total this year. AI has been cited in 121,401 job cut announcements so far in 2026, approximately 20% of all cuts.\" \"Since 2023, when Challenger began tracking AI as a distinct reason, it has been cited in 193,226 job cuts.\" \"With 130,531 cuts so far this year, Market/Economic Conditions has overtaken Artificial Intelligence (AI) as the leading reason for job cuts in 2026.\" \"The reasons employers give have shifted from technology to the economy. AI dominated layoff announcements through the spring and summer, but this fall companies are pointing to demand and economic conditions. That is a more cautious signal, though the overall pace of cutting remains low,\" said Challenger. \"Technology announced 5,576 cuts in October, its lowest monthly total of the year,\" and \"Technology leads all industries with 171,501 cuts announced through October,\" 28% of all 2026 cuts. Hiring plans were 444,692 in October, up 57% year over year; Amazon's 300,000 seasonal hires \"account for nearly all of the 300,252 Technology hiring plans announced in October.\"",
+      "dateAdded": "2026-11-09",
+      "usedIn": [
+        "overall-us-displacement",
+        "tech-sector-displacement"
       ],
       "verified": true,
       "synthetic": false

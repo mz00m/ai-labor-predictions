@@ -5,7 +5,7 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 24.6,
+  "currentValue": 24.2,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
   "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (23.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
@@ -159,6 +159,16 @@
       "value": 24.6,
       "sourceIds": [
         "census-btos-ai-cycle-202621"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-10-18",
+      "value": 24.2,
+      "sourceIds": [
+        "census-btos-ai-cycle-202622"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -1050,6 +1060,16 @@
       ],
       "evidenceTier": 2,
       "label": "Ramp: 55.9% of US businesses pay for AI (+0.62pp); OpenAI 40.6% narrows Anthropic's 43.8%"
+    }
+  ,
+    {
+      "date": "2026-10-18",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-btos-ai-cycle-202622"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 'do not know' on AI use rose to 13.9% from 9.6% as 3 new AI questions landed"
     }
   ],
   "sources": [
@@ -1998,6 +2018,17 @@
       "datePublished": "2026-10-22",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions? (Examples of SI use include: SI-powered data analysis; generative SI for marketing, product design, or coding; virtual SI agents for customer service; SI-powered forecasting or pricing; SI-driven computer vision for quality control, etc.)\" National share answering yes: 24.6% (SE 0.27%) for the two weeks ending 2026-10-04, up from 23.8% (SE 0.41%) for the cycle ending 2026-09-20 and 23.8% (SE 0.26%) for the cycle ending 2026-09-06 - the series resumes rising after one flat cycle, and 24.6% is its highest reading. Q24, the six-month expectation of SI/AI use, was 28.6% (SE 0.21%), up from 27.7%. Collection for cycle 202621 ran 2026-10-05 to 2026-10-18; published 2026-10-22. Values are dated to reference-period end rather than publication date. This vintage of National.xlsx relabels the question from \"Artificial Intelligence (AI)\" to \"Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)\" across every cycle in the workbook, and census.gov now links a \"Questionnaire with SI Supplement\" in place of the AI supplement; the estimates for cycles 202614 through 202620 are unchanged from the prior vintage, so this is a terminology relabel in the published instrument, not a re-survey or a change of construct.",
       "dateAdded": "2026-10-26"
+    }
+  ,
+    {
+      "id": "census-btos-ai-cycle-202622",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202622)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-05",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.2% (SE 0.61%) for the two weeks ending 2026-10-18, down from 24.6% (SE 0.27%) for the cycle ending 2026-10-04 - a 0.4pp move well inside the sampling error of either cycle, so the series reads flat rather than falling, and 24.6% remains the series high. \"Do not know\" rose to 13.9% from 9.6% and \"No\" fell to 61.9% from 65.8%, while the standard error on the yes share more than doubled; this is the first cycle in which three new core AI questions were fielded behind Q7. Q28, the six-month expectation of SI/AI use, was 27.6% (SE 0.49%), down from 28.6%. The three AI questions pre-announced in FR Doc. 2026-18304 appear for the first time in this cycle and are asked only of businesses that report AI use: Q8, whether employees used generative SI to assist in work-related tasks - 26.8% yes (SE 0.56%), 58.6% no, 14.7% do not know; Q9, AI's effect on total headcount over the last six months - 6.6% increased, 2.5% decreased, 87.3% no change, 3.6% do not know; Q10, AI's effect on the number of new employees hired - 2.5% increased, 3.3% decreased, 90.2% no change, 4.1% do not know. Because of the skip logic, Q8-Q10 denominators are AI-using businesses, not all businesses; Q8's 26.8% exceeding Q7's 24.2% confirms the subpopulation denominator arithmetically. Collection for cycle 202622 ran 2026-10-19 to 2026-11-01, reference period 2026-10-05 to 2026-10-18; published 2026-11-05. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-11-09"
     }
   ]
 }
