@@ -1,0 +1,253 @@
+{
+  "week": "2026-W46",
+  "generatedAt": "2026-11-09T18:21:40.110Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "TaskNet: Building Occupational Task Inventories from Worker Interviews at Scale",
+      "summary": "Brynjolfsson et al. present TaskNet, an NBER working paper that constructs fine-grained occupational task inventories from worker interviews at scale, providing a new empirical foundation for mapping AI exposure to actual task content across O*NET occupations. The approach captures emerging task changes before they appear in formal job descriptions, directly feeding AI-exposure scoring models.",
+      "source": "https://www.nber.org/papers/w35987",
+      "authors": [
+        "Jennifer Wang",
+        "Andreas Haupt",
+        "Isaac Robinson",
+        "Phil Lewis",
+        "Erik Brynjolfsson",
+        "Diyi Yang"
+      ],
+      "publishedAt": "2026-11-09",
+      "score": 0.82,
+      "sourceAdapter": "nber",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "AI Exposure and the Changing Responsibilities in Job Postings",
+      "summary": "Using activity-level AI exposure measures applied to online job postings, this paper finds that high-AI-exposure work activities are shifting in prevalence and content in employer demand signals, providing direct quantitative evidence of how advertised job responsibilities are being restructured. The analysis links posting-level changes to occupational AI exposure scores across a large sample of US job ads.",
+      "source": "https://arxiv.org/abs/2611.09870v1",
+      "authors": [
+        "Dora Zhao",
+        "Lin Ai",
+        "Pranav Khadpe",
+        "Siddharth Suri",
+        "Scott Counts"
+      ],
+      "publishedAt": "2026-11-06",
+      "score": 0.76,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+      "summary": "Examining 21 O*NET items across 754 US occupations, this paper finds that higher AI exposure under LLM-based measures is associated with better working conditions rather than dull or dangerous work, undermining the assumption that automation targets the worst jobs. The result recalibrates which occupations and wage bands face displacement risk and which do not.",
+      "source": "https://arxiv.org/abs/2611.06888",
+      "authors": [
+        "Siyi Yu"
+      ],
+      "publishedAt": "2026-11-04",
+      "doi": "10.48550/arxiv.2611.06888",
+      "score": 0.72,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Revelio Labs: Monopsony in the US Labor Market — Is Worker Power Back?",
+      "summary": "Using Revelio's proprietary workforce data, this analysis estimates that average earnings markdowns fell from roughly 30% before 2022 to about 20% in 2023–2025, meaning workers now keep approximately 80 cents of each marginal dollar of value produced. Markdowns are highest in the public sector and professional services, with an AI breakdown included.",
+      "source": "https://www.reveliolabs.com/news/macro/is-worker-power-coming-back-monopsony-in-the-us-labor-market",
+      "publishedAt": "2026-11-02",
+      "score": 0.65,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Indeed Hiring Lab: October 2026 Jobs Report — Some Tarnish Beneath the Headline Shine",
+      "summary": "Indeed Hiring Lab's analysis of the October 2026 BLS jobs report finds the labor market moving in the right direction at the headline level but highlights persistent challenges for unemployed workers seeking re-entry, with specific sector-level hiring trends flagged. Provides near-real-time demand-side context for AI-exposed occupation hiring patterns.",
+      "source": "https://hiringlab.indeed.com/2026/11/06/october-2026-jobs-report/",
+      "publishedAt": "2026-11-06",
+      "score": 0.58,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Indeed Hiring Lab: September 2026 JOLTS Report — Eerily Quiet",
+      "summary": "Indeed's read of September 2026 JOLTS data characterizes labor market flows as unusually subdued, with job openings, quits, and hires all muted despite broader economic activity. Low quit rates are relevant to wage-pressure and displacement-signal models for AI-exposed occupations.",
+      "source": "https://hiringlab.indeed.com/2026/11/03/september-2026-jolts-report-eerily-quiet/",
+      "publishedAt": "2026-11-03",
+      "score": 0.54,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "Strategic AI Underuse: Effort Incentives, Displacement Risk, and Organizational Responses",
+      "summary": "This peer-reviewed theory paper (Metroeconomica) models how workers' fear of displacement leads them to strategically under-use AI tools, trading current earnings for job security. The model generates testable predictions about adoption gaps between high- and low-displacement-risk workers that map to observed AI adoption rate data.",
+      "source": "https://doi.org/10.1111/meca.70039",
+      "authors": [
+        "Stefano Staffolani"
+      ],
+      "publishedAt": "2026-11-02",
+      "doi": "10.1111/meca.70039",
+      "score": 0.52,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "What to Delegate, What to Preserve: Human Preferences for Agentic AI Across Everyday Life and Work",
+      "summary": "A scenario-based survey of 289 US adults with prior AI experience covering 45 use cases across nine life domains finds systematic variation in which work tasks people are willing to delegate to AI agents versus preserve for human judgment. The work-domain delegation preferences provide direct evidence on realized AI adoption ceilings by task type.",
+      "source": "https://arxiv.org/abs/2611.09730v1",
+      "authors": [
+        "Sarah Wheeler",
+        "Veronica Rammouz",
+        "Yaoyao Qian",
+        "Zexuan Liu",
+        "Mengyi Wei",
+        "Anthony Rios",
+        "Tianzhi He",
+        "Kyrie Zhou"
+      ],
+      "publishedAt": "2026-11-06",
+      "score": 0.5,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "workforce-ai-use"
+    },
+    {
+      "title": "Beyond the Laggard Myth: Time-Series Analysis of AI Job Market Dynamics in Construction",
+      "summary": "One of the first cross-industry time-series analyses of AI job postings finds that construction AI hiring does not follow a simple linear diffusion curve, with burst patterns more similar to digital industries than assumed. The benchmarking across digital and traditional sectors provides quantitative evidence on sectoral AI adoption timing relevant to physical-automation displacement forecasts.",
+      "source": "https://doi.org/10.1108/sasbe-03-2026-0225",
+      "authors": [
+        "M. Reza Hosseini",
+        "Masoud Gheisari",
+        "Roger Vergés",
+        "Faris Elghaish",
+        "Mehrdad Arashpour",
+        "Prof. Farzad Rahimian"
+      ],
+      "publishedAt": "2026-10-31",
+      "doi": "10.1108/sasbe-03-2026-0225",
+      "score": 0.47,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "AI & Cognitive Work (Cambridge Element)",
+      "summary": "This Cambridge University Press element argues that AI's encroachment on credentialed cognitive work will structurally erode the wage premium historically associated with high-skill credentials, defending the claim with a synthesis of capability evidence across professional domains. It provides a qualitative-theoretical anchor for the high-skill wage premium prediction graph.",
+      "source": "https://doi.org/10.1017/9781009766081",
+      "authors": [
+        "Nathaniel Sharadin"
+      ],
+      "publishedAt": "2026-11-07",
+      "doi": "10.1017/9781009766081",
+      "score": 0.44,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    },
+    {
+      "title": "NY Fed Liberty Street Economics: Evaluating New LinkedIn Labor Market Tightness Indicators",
+      "summary": "NY Fed researchers evaluate LinkedIn-derived labor market tightness indicators against traditional JOLTS measures, finding LinkedIn data provides faster and more granular signals of employer-worker competition, particularly useful for tracking tightening or loosening in AI-exposed occupational segments. The validation study underpins alternative data use for wage-pressure monitoring.",
+      "source": "https://libertystreeteconomics.newyorkfed.org/2026/10/evaluating-new-linkedin-labor-market-tightness-indicators/",
+      "publishedAt": "2026-10-30",
+      "score": 0.43,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "What is Work For? Labor, Politics, and Meaning in the Age of AI (Cross-National Survey)",
+      "summary": "An original cross-national survey of 8,234 working-age adults across the UK, US, Denmark, and India quantifies the non-monetary motivations for work (meaning, community, purpose) and their variation by country, sector, and AI exposure. The dataset provides a rare cross-national benchmark on worker attitudes relevant to voluntary AI adoption and displacement tolerance.",
+      "source": "https://arxiv.org/abs/2610.39375",
+      "authors": [
+        "Julian Jacobs"
+      ],
+      "publishedAt": "2026-10-29",
+      "doi": "10.48550/arxiv.2610.39375",
+      "score": 0.4,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-use"
+    }
+  ],
+  "themes": [
+    "Occupational task measurement is maturing: new interview-based and posting-based tools (TaskNet, Zhao et al.) are replacing static O*NET scores as the empirical backbone of AI-exposure models",
+    "Labor market flows remain unusually subdued (JOLTS) even as headline payrolls hold, compressing re-entry for displaced workers in AI-exposed roles",
+    "Working-condition heterogeneity is complicating displacement narratives: AI is concentrating on white-collar, comfortable jobs rather than dull/dirty work, shifting the equity story"
+  ],
+  "watching": [
+    {
+      "title": "SERIES DUE: OpenAI Signals (ChatGPT usage data)",
+      "source": "https://openai.com/signals",
+      "reason": "182d overdue (monthly). Realized ChatGPT use by state and O*NET activity feeds realized-use and capability-overhang layers; most direct genai-work-adoption input."
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index (Learning Curves, Cadences)",
+      "source": "https://www.anthropic.com/economic-index",
+      "reason": "136d overdue (quarterly). Largest Claude usage dataset; feeds genai-work-adoption, workforce-ai-exposure, customer-service-automation."
+    },
+    {
+      "title": "SERIES DUE: Google AI & Economy ATLAS",
+      "source": "https://ai.google/economy/atlas/",
+      "reason": "109d overdue (quarterly). 15M Gemini interactions mapped to O*NET/ATUS; feeds workforce-ai-exposure, genai-work-adoption, high-skill-wage-premium."
+    },
+    {
+      "title": "SERIES DUE: Yale Budget Lab — Tracking AI's Impact on the Labor Market",
+      "source": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "reason": "55d overdue (quarterly). Key CPS-based counter-evidence to displacement findings; feeds overall-us-displacement and workforce-ai-exposure."
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption)",
+      "source": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "reason": "88d overdue (quarterly). Employment by age×AI exposure, macro takeoff signals, worker adoption; feeds overall-us-displacement, workforce-ai-exposure."
+    },
+    {
+      "title": "SERIES DUE: NBER Working Papers — AI & Labor",
+      "source": "https://www.nber.org/papers?facet=topics%3AArtificial+Intelligence",
+      "reason": "42d overdue (monthly). Primary causal-identification AI-labor paper feed; covers displacement, wages, and adoption slugs broadly."
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS)",
+      "source": "https://www.bls.gov/oes/",
+      "reason": "178d overdue (annual). Employment and wages by detailed occupation and geography; feeds map state/metro scores and task-visualizer economy groups."
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates",
+      "source": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "reason": "697d overdue (annual). County/metro occupation mix (S2401); feeds /map county and CBSA layers. 2020-2024 5-year estimates reportedly released Jan 2026."
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data",
+      "source": "https://www.stripeeconomics.com",
+      "reason": "74d overdue (quarterly). AI share of new startup incorporations and solo-founder share; fastest-moving ai-business-formation signal outside Census BFS."
+    },
+    {
+      "title": "SERIES DUE: PyPI package downloads (/signals)",
+      "source": "https://pypistats.org/",
+      "reason": "202d overdue (monthly). Monthly downloads for 52 AI Python packages; feeds /signals acceleration index and industry tool growth table."
+    },
+    {
+      "title": "SERIES DUE: Hugging Face model downloads (/signals)",
+      "source": "https://huggingface.co/models",
+      "reason": "205d overdue (monthly). Top model downloads across five task categories; feeds /signals industry cards. Live counts available but not yet ingested."
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity",
+      "source": "https://www.bls.gov/cps/cpsaat11.htm",
+      "reason": "240d overdue (annual). Women's share of employment by occupation; feeds gender view on /task-visualizer/economy. 2025 annual averages possibly available."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 114,
+    "afterDedup": 106
+  }
+}

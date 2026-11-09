@@ -1,0 +1,320 @@
+{
+  "week": "2026-W46",
+  "generatedAt": "2026-11-09T18:23:26.160Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "TaskNet: Building Occupational Task Inventories from Worker Interviews at Scale",
+        "summary": "Brynjolfsson et al. present TaskNet, an NBER working paper that constructs fine-grained occupational task inventories from worker interviews at scale, providing a new empirical foundation for mapping AI exposure to actual task content across O*NET occupations. The approach captures emerging task changes before they appear in formal job descriptions, directly feeding AI-exposure scoring models.",
+        "source": "https://www.nber.org/papers/w35987",
+        "authors": [
+          "Jennifer Wang",
+          "Andreas Haupt",
+          "Isaac Robinson",
+          "Phil Lewis",
+          "Erik Brynjolfsson",
+          "Diyi Yang"
+        ],
+        "publishedAt": "2026-11-09",
+        "score": 0.82,
+        "sourceAdapter": "nber",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "nber-tasknet-building-occupational-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "TaskNet raises AI exposure estimates for Software Developers and Lawyers",
+          "quote": "TaskNet changes AI exposure estimates in both directions, raising them for Software Developers and Lawyers, two occupations where AI's effects are widely debated."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "AI Exposure and the Changing Responsibilities in Job Postings",
+        "summary": "Using activity-level AI exposure measures applied to online job postings, this paper finds that high-AI-exposure work activities are shifting in prevalence and content in employer demand signals, providing direct quantitative evidence of how advertised job responsibilities are being restructured. The analysis links posting-level changes to occupational AI exposure scores across a large sample of US job ads.",
+        "source": "https://arxiv.org/abs/2611.09870v1",
+        "authors": [
+          "Dora Zhao",
+          "Lin Ai",
+          "Pranav Khadpe",
+          "Siddharth Suri",
+          "Scott Counts"
+        ],
+        "publishedAt": "2026-11-06",
+        "score": 0.76,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "arxiv-ai-exposure-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Explicit AI mentions in job postings rose 66% (2023–2025, 33 firms)",
+          "quote": "explicit mentions of AI increased by 66%, although much of this growth occurs outside descriptions of the actual work activities associated with a job"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Higher AI-exposed activities mildly decline as share of advertised responsibilities",
+          "quote": "activities with greater AI exposure tend to decline in advertised prevalence, but only mildly as a share of the total number of responsibilities"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-exposed activities increasingly linked to explicit AI-related responsibilities in postings",
+          "quote": "more AI-exposed work activities increasingly are associated with explicitly AI-related responsibilities, suggesting that employers are looking to hire people who can perform these responsibilities with AI"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+        "summary": "Examining 21 O*NET items across 754 US occupations, this paper finds that higher AI exposure under LLM-based measures is associated with better working conditions rather than dull or dangerous work, undermining the assumption that automation targets the worst jobs. The result recalibrates which occupations and wage bands face displacement risk and which do not.",
+        "source": "https://arxiv.org/abs/2611.06888",
+        "authors": [
+          "Siyi Yu"
+        ],
+        "publishedAt": "2026-11-04",
+        "doi": "10.48550/arxiv.2611.06888",
+        "score": 0.72,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "arxiv-dull-dirty-dangerous-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "AI exposure analyzed across 754 US occupations using 21 O*NET items",
+          "quote": "I examine how these conditions relate to occupational AI exposure using 21 O*NET items across 754 US occupations."
+        },
+        {
+          "graphSlug": "white-collar-professional-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Higher AI exposure linked to lower dull/dirty/dangerous condition scores",
+          "quote": "Higher exposure is associated with lower condition scores under a large language model (LLM) measure and AI Occupational Exposure (AIOE), with equal occupation weights and employment weights."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Adjusted CI includes zero for LLM exposure; remains below zero for AIOE",
+          "quote": "The adjusted confidence intervals include zero for LLM exposure and remain below zero for AIOE."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Revelio Labs: Monopsony in the US Labor Market — Is Worker Power Back?",
+        "summary": "Using Revelio's proprietary workforce data, this analysis estimates that average earnings markdowns fell from roughly 30% before 2022 to about 20% in 2023–2025, meaning workers now keep approximately 80 cents of each marginal dollar of value produced. Markdowns are highest in the public sector and professional services, with an AI breakdown included.",
+        "source": "https://www.reveliolabs.com/news/macro/is-worker-power-coming-back-monopsony-in-the-us-labor-market",
+        "publishedAt": "2026-11-02",
+        "score": 0.65,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "reveliolabs-revelio-labs-monopsony-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-exposed occupations saw faster markdown declines post-2023",
+          "quote": "markdowns are smaller in more unionized occupations and have fallen faster in occupations more exposed to AI"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Avg earnings markdowns fell from ~30% pre-2022 to ~20% in 2023-2025",
+          "quote": "average earnings markdowns fell from about 30% before 2022 to about 20% in 2023-2025"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Higher AI exposure linked to larger decline in employer wage-setting power",
+          "quote": "Scatter plot of within-occupation change in markdowns between pre-AI (2016-2022) and post-AI (2023-2025) periods against AI exposure score among occupations."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: October 2026 Jobs Report — Some Tarnish Beneath the Headline Shine",
+        "summary": "Indeed Hiring Lab's analysis of the October 2026 BLS jobs report finds the labor market moving in the right direction at the headline level but highlights persistent challenges for unemployed workers seeking re-entry, with specific sector-level hiring trends flagged. Provides near-real-time demand-side context for AI-exposed occupation hiring patterns.",
+        "source": "https://hiringlab.indeed.com/2026/11/06/october-2026-jobs-report/",
+        "publishedAt": "2026-11-06",
+        "score": 0.58,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: September 2026 JOLTS Report — Eerily Quiet",
+        "summary": "Indeed's read of September 2026 JOLTS data characterizes labor market flows as unusually subdued, with job openings, quits, and hires all muted despite broader economic activity. Low quit rates are relevant to wage-pressure and displacement-signal models for AI-exposed occupations.",
+        "source": "https://hiringlab.indeed.com/2026/11/03/september-2026-jolts-report-eerily-quiet/",
+        "publishedAt": "2026-11-03",
+        "score": 0.54,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Strategic AI Underuse: Effort Incentives, Displacement Risk, and Organizational Responses",
+        "summary": "This peer-reviewed theory paper (Metroeconomica) models how workers' fear of displacement leads them to strategically under-use AI tools, trading current earnings for job security. The model generates testable predictions about adoption gaps between high- and low-displacement-risk workers that map to observed AI adoption rate data.",
+        "source": "https://doi.org/10.1111/meca.70039",
+        "authors": [
+          "Stefano Staffolani"
+        ],
+        "publishedAt": "2026-11-02",
+        "doi": "10.1111/meca.70039",
+        "score": 0.52,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "doi-strategic-ai-underuse-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "What to Delegate, What to Preserve: Human Preferences for Agentic AI Across Everyday Life and Work",
+        "summary": "A scenario-based survey of 289 US adults with prior AI experience covering 45 use cases across nine life domains finds systematic variation in which work tasks people are willing to delegate to AI agents versus preserve for human judgment. The work-domain delegation preferences provide direct evidence on realized AI adoption ceilings by task type.",
+        "source": "https://arxiv.org/abs/2611.09730v1",
+        "authors": [
+          "Sarah Wheeler",
+          "Veronica Rammouz",
+          "Yaoyao Qian",
+          "Zexuan Liu",
+          "Mengyi Wei",
+          "Anthony Rios",
+          "Tianzhi He",
+          "Kyrie Zhou"
+        ],
+        "publishedAt": "2026-11-06",
+        "score": 0.5,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "workforce-ai-use"
+      },
+      "sourceId": "arxiv-what-to-delegate-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Beyond the Laggard Myth: Time-Series Analysis of AI Job Market Dynamics in Construction",
+        "summary": "One of the first cross-industry time-series analyses of AI job postings finds that construction AI hiring does not follow a simple linear diffusion curve, with burst patterns more similar to digital industries than assumed. The benchmarking across digital and traditional sectors provides quantitative evidence on sectoral AI adoption timing relevant to physical-automation displacement forecasts.",
+        "source": "https://doi.org/10.1108/sasbe-03-2026-0225",
+        "authors": [
+          "M. Reza Hosseini",
+          "Masoud Gheisari",
+          "Roger Vergés",
+          "Faris Elghaish",
+          "Mehrdad Arashpour",
+          "Prof. Farzad Rahimian"
+        ],
+        "publishedAt": "2026-10-31",
+        "doi": "10.1108/sasbe-03-2026-0225",
+        "score": 0.47,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "robots-physical-automation-displacement"
+      },
+      "sourceId": "doi-beyond-the-laggard-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI & Cognitive Work (Cambridge Element)",
+        "summary": "This Cambridge University Press element argues that AI's encroachment on credentialed cognitive work will structurally erode the wage premium historically associated with high-skill credentials, defending the claim with a synthesis of capability evidence across professional domains. It provides a qualitative-theoretical anchor for the high-skill wage premium prediction graph.",
+        "source": "https://doi.org/10.1017/9781009766081",
+        "authors": [
+          "Nathaniel Sharadin"
+        ],
+        "publishedAt": "2026-11-07",
+        "doi": "10.1017/9781009766081",
+        "score": 0.44,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-ai-cognitive-work-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "NY Fed Liberty Street Economics: Evaluating New LinkedIn Labor Market Tightness Indicators",
+        "summary": "NY Fed researchers evaluate LinkedIn-derived labor market tightness indicators against traditional JOLTS measures, finding LinkedIn data provides faster and more granular signals of employer-worker competition, particularly useful for tracking tightening or loosening in AI-exposed occupational segments. The validation study underpins alternative data use for wage-pressure monitoring.",
+        "source": "https://libertystreeteconomics.newyorkfed.org/2026/10/evaluating-new-linkedin-labor-market-tightness-indicators/",
+        "publishedAt": "2026-10-30",
+        "score": 0.43,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "libertystreeteconomics-ny-fed-liberty-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "What is Work For? Labor, Politics, and Meaning in the Age of AI (Cross-National Survey)",
+        "summary": "An original cross-national survey of 8,234 working-age adults across the UK, US, Denmark, and India quantifies the non-monetary motivations for work (meaning, community, purpose) and their variation by country, sector, and AI exposure. The dataset provides a rare cross-national benchmark on worker attitudes relevant to voluntary AI adoption and displacement tolerance.",
+        "source": "https://arxiv.org/abs/2610.39375",
+        "authors": [
+          "Julian Jacobs"
+        ],
+        "publishedAt": "2026-10-29",
+        "doi": "10.48550/arxiv.2610.39375",
+        "score": 0.4,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-use"
+      },
+      "sourceId": "arxiv-what-is-work-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "81% of 8,234 cross-national survey respondents satisfied with their job",
+          "quote": "I find that 81% of respondents report being satisfied with their job, and a majority across all four countries are strongly motivated by the non-monetary components of their employment."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "1/3 of workers intrinsically motivated; majority would leave for salary guarantee",
+          "quote": "I show that one third of working respondents are motivated intrinsically by their job--valuing their role for its own sake. Nearly one quarter are driven by social and community-related aspects of their employment, 17% by social status, and just over one quarter by the transactional financial benefits of their job."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "1/5 of workers would stay in role even if offered 120% salary as basic income",
+          "quote": "Although a majority of people would leave their role if offered their current salary as a guaranteed income, one fifth of workers would stay even if offered up to 120% of their salary."
+        }
+      ]
+    }
+  ]
+}

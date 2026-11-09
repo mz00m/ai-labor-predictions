@@ -1,0 +1,379 @@
+{
+  "week": "2026-W46",
+  "fetchedAt": "2026-11-09T18:21:10.308Z",
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 114,
+    "afterDedup": 106
+  },
+  "sourceHealth": [
+    {
+      "name": "ssrn",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing GOOGLE_CSE_KEY, GOOGLE_CSE_ID"
+    },
+    {
+      "name": "fred",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing FRED_API_KEY"
+    },
+    {
+      "name": "googleCse",
+      "status": "skipped",
+      "items": 0,
+      "durationMs": 0,
+      "error": "missing GOOGLE_CSE_KEY, GOOGLE_CSE_ID"
+    },
+    {
+      "name": "semanticScholar",
+      "status": "error",
+      "items": 0,
+      "durationMs": 0,
+      "error": "Error: semanticScholar HTTP 429: {\"message\": \"Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form\", \"code\": \"429\"}"
+    },
+    {
+      "name": "arxiv",
+      "status": "ok",
+      "items": 50,
+      "durationMs": 2293
+    },
+    {
+      "name": "pubmed",
+      "status": "ok",
+      "items": 0,
+      "durationMs": 433
+    },
+    {
+      "name": "openAlex",
+      "status": "ok",
+      "items": 24,
+      "durationMs": 1232
+    },
+    {
+      "name": "nber",
+      "status": "ok",
+      "items": 6,
+      "durationMs": 1643
+    },
+    {
+      "name": "bls",
+      "status": "ok",
+      "items": 5,
+      "durationMs": 1683
+    },
+    {
+      "name": "trackedInstitutions",
+      "status": "ok",
+      "items": 15,
+      "durationMs": 28229
+    },
+    {
+      "name": "recurringSeries",
+      "status": "ok",
+      "items": 14,
+      "durationMs": 3
+    }
+  ],
+  "items": [
+    {
+      "title": "SERIES DUE: OpenAI Signals (ChatGPT usage data) — last ingested 2026-05-11 (182d ago, monthly cadence)",
+      "url": "https://openai.com/signals",
+      "source": "recurringSeries",
+      "publishedAt": "2026-05-11T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: PyPI package downloads (/signals) — last ingested 2026-04-21 (202d ago, monthly cadence)",
+      "url": "https://pypistats.org/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-04-21T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: Hugging Face model downloads (/signals) — last ingested 2026-04-18 (205d ago, monthly cadence)",
+      "url": "https://huggingface.co/models",
+      "source": "recurringSeries",
+      "publishedAt": "2026-04-18T00:00:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates — last ingested 2024-12-12 (697d ago, annual cadence)",
+      "url": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "source": "recurringSeries",
+      "publishedAt": "2024-12-12T00:00:00.000Z",
+      "score": 0.9875159237537475
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index (Learning Curves, Cadences) — last ingested 2026-06-26 (136d ago, quarterly cadence)",
+      "url": "https://www.anthropic.com/economic-index",
+      "source": "recurringSeries",
+      "publishedAt": "2026-06-26T00:00:00.000Z",
+      "score": 0.9373217323584218
+    },
+    {
+      "title": "SERIES DUE: Google AI & Economy ATLAS — last ingested 2026-07-23 (109d ago, quarterly cadence)",
+      "url": "https://ai.google/economy/atlas/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-07-23T00:00:00.000Z",
+      "score": 0.9053938807110804
+    },
+    {
+      "title": "SERIES DUE: Yale Budget Lab — Tracking AI's Impact on the Labor Market — last ingested 2026-09-15 (55d ago, quarterly cadence)",
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "source": "recurringSeries",
+      "publishedAt": "2026-09-15T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL — AI Economic Indicators (Canaries + Takeoff + Adoption) — last ingested 2026-08-13 (88d ago, quarterly cadence)",
+      "url": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: NBER Working Papers — AI & Labor — last ingested 2026-09-28 (42d ago, monthly cadence)",
+      "url": "https://www.nber.org/papers?facet=topics%3AArtificial+Intelligence",
+      "source": "recurringSeries",
+      "publishedAt": "2026-09-28T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data — last ingested 2026-08-27 (74d ago, quarterly cadence)",
+      "url": "https://www.stripeeconomics.com",
+      "source": "recurringSeries",
+      "publishedAt": "2026-08-27T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS) — last ingested 2026-05-15 (178d ago, annual cadence)",
+      "url": "https://www.bls.gov/oes/",
+      "source": "recurringSeries",
+      "publishedAt": "2026-05-15T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity — last ingested 2026-03-14 (240d ago, annual cadence)",
+      "url": "https://www.bls.gov/cps/cpsaat11.htm",
+      "source": "recurringSeries",
+      "publishedAt": "2026-03-14T00:00:00.000Z",
+      "score": 0.9
+    },
+    {
+      "title": "Revelio Labs: Watch: Is Worker Power Coming Back? Monopsony in the US Labor Market",
+      "url": "https://www.reveliolabs.com/news/macro/is-worker-power-coming-back-monopsony-in-the-us-labor-market/video/nlAg01FoofsUeYsO74jfqZItuvMQQJUiuIKRMsho8lhU",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-02T14:13:02.126Z",
+      "score": 0.43118246163138185
+    },
+    {
+      "title": "Chicago Fed Working Papers: Making Sense of Labor-Market Indicators Amid Data Imperfections - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-10",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-09T18:21:37.000Z",
+      "score": 0.42779322487790256
+    },
+    {
+      "title": "Chicago Fed Working Papers: The Chicago Fed Labor Market Indicators: Bridging the Gap with Alternative Labor Data - Federal Reserve Bank of Chicago",
+      "url": "https://www.chicagofed.org/publications/working-papers/2026/2026-09",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-09T18:21:30.000Z",
+      "score": 0.42778917379663456
+    },
+    {
+      "title": "TaskNet: Building Occupational Task Inventories from Worker Interviews at Scale -- by Jennifer Wang, Andreas Haupt, Isaac Robinson, Phil Lewis, Erik Brynjolfsson, Diyi Yang",
+      "url": "https://www.nber.org/papers/w35987",
+      "source": "nber",
+      "publishedAt": "2026-11-09T18:21:11.988Z",
+      "score": 0.4277787500013503
+    },
+    {
+      "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+      "url": "https://arxiv.org/abs/2611.06888",
+      "source": "openAlex",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "score": 0.42027471326829113
+    },
+    {
+      "title": "AI Exposure and the Changing Responsibilities in Job Postings",
+      "url": "https://arxiv.org/abs/2611.09870v1",
+      "source": "arxiv",
+      "publishedAt": "2026-11-06T18:48:36.000Z",
+      "score": 0.4175138136228769
+    },
+    {
+      "title": "Path-dependent triage: Early judgments lead conversational AI chatbots to miss mental-health emergencies",
+      "url": "https://arxiv.org/abs/2611.09647v1",
+      "source": "arxiv",
+      "publishedAt": "2026-11-06T15:58:24.000Z",
+      "score": 0.41368590780098324
+    },
+    {
+      "title": "AI & Cognitive Work",
+      "url": "https://doi.org/10.1017/9781009766081",
+      "source": "openAlex",
+      "publishedAt": "2026-11-07T00:00:00.000Z",
+      "score": 0.3524646969287708
+    },
+    {
+      "title": "Revelio Labs: RPLS Jobs Report — Workforce Research Newsroom",
+      "url": "https://www.reveliolabs.com/news/rpls",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-05T13:30:00.000Z",
+      "score": 0.3475791960042237
+    },
+    {
+      "title": "AI AND EMPLOYMENT IN BUSINESS: OPPORTUNITIES AND CHALLENGES",
+      "url": "https://ajeee.co.in/index.php/ajeee/article/view/6796",
+      "source": "openAlex",
+      "publishedAt": "2026-11-02T00:00:00.000Z",
+      "score": 0.3432107368325489
+    },
+    {
+      "title": "Indeed Hiring Lab: October 2026 Jobs Report: Some Tarnish Beneath the Headline Shine",
+      "url": "https://hiringlab.indeed.com/2026/11/06/october-2026-jobs-report/",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-06T14:38:44.000Z",
+      "score": 0.33969401845787006
+    },
+    {
+      "title": "The right to work in the age of artificial intelligence: Examining the right to development under the African Charter as a framework for protecting workers from job displacement",
+      "url": "https://doi.org/10.29053/978-1-0672374-3-1_34",
+      "source": "openAlex",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "score": 0.32784405888512647
+    },
+    {
+      "title": "Knowing When to Intervene: Causal Evaluation of AI Agents",
+      "url": "https://arxiv.org/abs/2611.09792v1",
+      "source": "arxiv",
+      "publishedAt": "2026-11-06T17:46:53.000Z",
+      "score": 0.3050071806023166
+    },
+    {
+      "title": "What to Delegate, What to Preserve: Human Preferences for Agentic AI Across Everyday Life and Work",
+      "url": "https://arxiv.org/abs/2611.09730v1",
+      "source": "arxiv",
+      "publishedAt": "2026-11-06T17:06:41.000Z",
+      "score": 0.30410277273402286
+    },
+    {
+      "title": "CID: Measuring Cognitive Work Through Semantic State Change",
+      "url": "https://arxiv.org/abs/2611.09542v1",
+      "source": "arxiv",
+      "publishedAt": "2026-11-06T14:52:22.000Z",
+      "score": 0.30110698109545264
+    },
+    {
+      "title": "SmartBloch-Agent: An Agentic Framework for Automated MRI Sequence Design and Optimization",
+      "url": "https://arxiv.org/abs/2611.09413v1",
+      "source": "arxiv",
+      "publishedAt": "2026-11-06T12:44:55.000Z",
+      "score": 0.2983010168016745
+    },
+    {
+      "title": "Artificial Intelligence (AI) and The Moral Economy: Social Choice, Exclusion and Sustainable Development in the Reckless AI Age",
+      "url": "https://doi.org/10.64388/ire1724870",
+      "source": "openAlex",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "score": 0.28218587901662034
+    },
+    {
+      "title": "Robonomics",
+      "url": "https://doi.org/10.1201/9781042012381",
+      "source": "openAlex",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "score": 0.2702747132682911
+    },
+    {
+      "title": "ARTIFICIAL INTELLIGENCE AND THE STRUCTURAL TRANSFORMATION OF THE ECONOMY: OPPORTUNITIES AND CHALLENGES",
+      "url": "https://doi.org/10.62441/actainnovations.vi.3004",
+      "source": "openAlex",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "score": 0.24982608748941088
+    },
+    {
+      "title": "Revelio Labs: Monopsony in the US labor market: Is worker power back?",
+      "url": "https://www.reveliolabs.com/news/macro/is-worker-power-coming-back-monopsony-in-the-us-labor-market",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-02T14:13:02.126Z",
+      "score": 0.24229357274249297
+    },
+    {
+      "title": "Indeed Hiring Lab: September 2026 JOLTS Report: Eerily Quiet",
+      "url": "https://hiringlab.indeed.com/2026/11/03/september-2026-jolts-report-eerily-quiet/",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-11-03T15:29:07.000Z",
+      "score": 0.22379452698128333
+    },
+    {
+      "title": "Emerging Technologies and the Future of Trafficking in Persons: The New Architecture of Exploitation",
+      "url": "https://doi.org/10.1080/23322705.2026.2756427",
+      "source": "openAlex",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "score": 0.210937198600522
+    },
+    {
+      "title": "Beyond the laggard myth: time-series analysis of AI job market dynamics in construction",
+      "url": "https://doi.org/10.1108/sasbe-03-2026-0225",
+      "source": "openAlex",
+      "publishedAt": "2026-10-31T00:00:00.000Z",
+      "score": 0.20341191426881639
+    },
+    {
+      "title": "Strategic AI Underuse: Effort Incentives, Displacement Risk, and Organizational Responses",
+      "url": "https://doi.org/10.1111/meca.70039",
+      "source": "openAlex",
+      "publishedAt": "2026-11-02T00:00:00.000Z",
+      "score": 0.19321073683254886
+    },
+    {
+      "title": "AI Readiness, Green Innovation and Workforce Upskilling Role in the Renewable Energy Transition in GCC Economies",
+      "url": "https://doi.org/10.1016/j.indic.2026.101621",
+      "source": "openAlex",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "score": 0.1778440588851265
+    },
+    {
+      "title": "Opportunity, not risk: How Chinese credit markets price generative AI",
+      "url": "https://doi.org/10.1016/j.iref.2026.106013",
+      "source": "openAlex",
+      "publishedAt": "2026-10-31T00:00:00.000Z",
+      "score": 0.16452302537992747
+    },
+    {
+      "title": "NY Fed Liberty Street Economics: Evaluating New LinkedIn Labor Market Tightness Indicators",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/10/evaluating-new-linkedin-labor-market-tightness-indicators/",
+      "source": "trackedInstitutions",
+      "publishedAt": "2026-10-30T14:00:00.000Z",
+      "score": 0.15951028640341555
+    },
+    {
+      "title": "What is Work For? Labor, Politics, and Meaning in the Age of AI",
+      "url": "https://arxiv.org/abs/2610.39375",
+      "source": "openAlex",
+      "publishedAt": "2026-10-29T00:00:00.000Z",
+      "score": 0.1429648616329867
+    }
+  ]
+}
