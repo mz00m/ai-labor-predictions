@@ -1070,6 +1070,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census BTOS: 'do not know' on AI use rose to 13.9% from 9.6% as 3 new AI questions landed"
+    },
+    {
+      "date": "2026-10-31",
+      "direction": "up",
+      "sourceIds": [
+        "ramp-ai-index-nov-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "Ramp: 56.8% of US businesses pay for AI (+1.0pp); Anthropic 44.8%, OpenAI flat at 40.6%"
     }
   ],
   "sources": [
@@ -2029,6 +2038,16 @@
       "datePublished": "2026-11-05",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.2% (SE 0.61%) for the two weeks ending 2026-10-18, down from 24.6% (SE 0.27%) for the cycle ending 2026-10-04 - a 0.4pp move well inside the sampling error of either cycle, so the series reads flat rather than falling, and 24.6% remains the series high. \"Do not know\" rose to 13.9% from 9.6% and \"No\" fell to 61.9% from 65.8%, while the standard error on the yes share more than doubled; this is the first cycle in which three new core AI questions were fielded behind Q7. Q28, the six-month expectation of SI/AI use, was 27.6% (SE 0.49%), down from 28.6%. The three AI questions pre-announced in FR Doc. 2026-18304 appear for the first time in this cycle and are asked only of businesses that report AI use: Q8, whether employees used generative SI to assist in work-related tasks - 26.8% yes (SE 0.56%), 58.6% no, 14.7% do not know; Q9, AI's effect on total headcount over the last six months - 6.6% increased, 2.5% decreased, 87.3% no change, 3.6% do not know; Q10, AI's effect on the number of new employees hired - 2.5% increased, 3.3% decreased, 90.2% no change, 4.1% do not know. Because of the skip logic, Q8-Q10 denominators are AI-using businesses, not all businesses; Q8's 26.8% exceeding Q7's 24.2% confirms the subpopulation denominator arithmetically. Collection for cycle 202622 ran 2026-10-19 to 2026-11-01, reference period 2026-10-05 to 2026-10-18; published 2026-11-05. Values are dated to reference-period end rather than publication date.",
       "dateAdded": "2026-11-09"
+    },
+    {
+      "id": "ramp-ai-index-nov-2026",
+      "title": "New Fronts in the AI Trade (Ramp AI Index, November 2026)",
+      "url": "https://ramp.com/data/ai-index-nov-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-11",
+      "excerpt": "Ramp AI Index for October 2026, from corporate card and bill-pay transactions across more than 85,000 US businesses on Ramp's platform. \"Overall adoption reached 56.8%, increasing 1 percentage point, slightly faster than September's 0.66 point gain.\" Vendor shares: \"Anthropic adoption rose 1.1 percentage points to 44.8%, while OpenAI adoption held flat at 40.6%\"; \"Among Ramp businesses, 6.3% paid SpaceXAI, up 2.2 percentage points from last month\" - the post uses SpaceXAI where the dashboard table still reads xAI. On intensity: \"The top 1% of firms now spend a median $10.2K per employee per month on AI, up 9%. Firms in the top 10% spent $801, roughly flat. The median firm spends $16.32, up $0.93.\" Concentration: \"1% of businesses drive 80% of the revenues to OpenAI and Anthropic,\" and that top 1% is \"largely made up of VC-backed companies in tech, finance, and technical services.\" This edition introduces department-level AI spend: \"In October, Engineering teams drove 72% of all classified spend, but spend has fallen from highs we observed earlier this summer,\" while customer success and support operations are \"now driving 13.3% of all classified spend, up from 0.8% in June.\" Prices: \"The average price per million tokens fell 21% over the last month.\" Kharazian's September gain is restated here as 0.66pp against the 0.62pp published in the October edition. Measures paid vendor subscriptions among Ramp's own customers rather than self-reported use across a probability sample of US firms, so it sits below the chart as a directional overlay.",
+      "dateAdded": "2026-11-16"
     }
   ]
 }

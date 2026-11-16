@@ -359,6 +359,15 @@
       ],
       "evidenceTier": 1,
       "label": "Census BFS Sep 2026: 535K business applications (+0.5% MoM); 29.0K projected formations (+1.4%)"
+    },
+    {
+      "date": "2026-10-31",
+      "direction": "down",
+      "sourceIds": [
+        "census-bfs-oct-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BFS Oct 2026: 502K business applications (-6.0% MoM); 27.9K projected formations (-1.8%)"
     }
   ],
   "sources": [
@@ -678,6 +687,16 @@
       "datePublished": "2026-10-14",
       "excerpt": "\"Business Applications for September 2026, adjusted for seasonal variation, were 534,947, an increase of 0.5 percent compared to August 2026.\" \"Projected Business Formations (within 4 quarters) for September 2026, adjusted for seasonal variation, were 29,022, an increase of 1.4 percent compared to August 2026.\" Seasonally adjusted September components: High-Propensity Business Applications 147,331 (+1.3% MoM); Business Applications with Planned Wages 35,786 (+4.3%); Business Applications from Corporations 40,951 (-0.2%); Projected Business Formations within 8 quarters 39,703 (+1.0%). Applications and formations both recovered modestly from August's decline without regaining July's level of about 579,000 applications. Next scheduled release November 12, 2026, which carries the annual NAICS and seasonal-factor update and will revise the seasonally adjusted series.",
       "dateAdded": "2026-10-19"
+    },
+    {
+      "id": "census-bfs-oct-2026",
+      "title": "Business Formation Statistics, October 2026 (CB26-184)",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/business-formation-statistics-nov12.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-12",
+      "excerpt": "\"Business Applications for October 2026, adjusted for seasonal variation, were 501,609, a decrease of 6.0 percent compared to September 2026.\" \"Projected Business Formations (within 4 quarters) for October 2026, adjusted for seasonal variation, were 27,867, a decrease of 1.8 percent compared to September 2026.\" Seasonally adjusted October components: High-Propensity Business Applications 144,314 (-2.0% MoM); Business Applications with Planned Wages 34,131 (-4.5%); Business Applications from Corporations 41,137 (+0.4%); Projected Business Formations within 8 quarters 37,283 (-2.4%). Applications fell to their lowest level since at least June 2026, giving back the modest September recovery. This release carries the annual update: \"underlying NAICS codes are revised each year for the previous five years\" and \"seasonal factors are recomputed and applied during the annual update, resulting in revisions to our seasonally adjusted series,\" so the month-over-month changes are computed against a revised September figure rather than the 534,947 published in October. Next scheduled release December 11, 2026.",
+      "dateAdded": "2026-11-16"
     }
   ]
 }

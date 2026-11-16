@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-11-09",
-  "totalSources": 798,
-  "verifiedCount": 788,
+  "lastUpdated": "2026-11-16",
+  "totalSources": 800,
+  "verifiedCount": 790,
   "sources": {
     "berger-ai-labor-market-thoughts-2026": {
       "id": "berger-ai-labor-market-thoughts-2026",
@@ -11212,6 +11212,37 @@
       "dateAdded": "2026-10-19",
       "usedIn": [
         "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-bfs-oct-2026": {
+      "id": "census-bfs-oct-2026",
+      "title": "Business Formation Statistics, October 2026 (CB26-184)",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/business-formation-statistics-nov12.html",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-12",
+      "excerpt": "\"Business Applications for October 2026, adjusted for seasonal variation, were 501,609, a decrease of 6.0 percent compared to September 2026.\" \"Projected Business Formations (within 4 quarters) for October 2026, adjusted for seasonal variation, were 27,867, a decrease of 1.8 percent compared to September 2026.\" Seasonally adjusted October components: High-Propensity Business Applications 144,314 (-2.0% MoM); Business Applications with Planned Wages 34,131 (-4.5%); Business Applications from Corporations 41,137 (+0.4%); Projected Business Formations within 8 quarters 37,283 (-2.4%). Applications fell to their lowest level since at least June 2026, giving back the modest September recovery. This release carries the annual update: \"underlying NAICS codes are revised each year for the previous five years\" and \"seasonal factors are recomputed and applied during the annual update, resulting in revisions to our seasonally adjusted series,\" so the month-over-month changes are computed against a revised September figure rather than the 534,947 published in October. Next scheduled release December 11, 2026.",
+      "dateAdded": "2026-11-16",
+      "usedIn": [
+        "ai-business-formation"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "ramp-ai-index-nov-2026": {
+      "id": "ramp-ai-index-nov-2026",
+      "title": "New Fronts in the AI Trade (Ramp AI Index, November 2026)",
+      "url": "https://ramp.com/data/ai-index-nov-2026",
+      "publisher": "Ramp Economics Lab (Ara Kharazian)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-11",
+      "excerpt": "Ramp AI Index for October 2026, from corporate card and bill-pay transactions across more than 85,000 US businesses on Ramp's platform. \"Overall adoption reached 56.8%, increasing 1 percentage point, slightly faster than September's 0.66 point gain.\" Vendor shares: \"Anthropic adoption rose 1.1 percentage points to 44.8%, while OpenAI adoption held flat at 40.6%\"; \"Among Ramp businesses, 6.3% paid SpaceXAI, up 2.2 percentage points from last month\" - the post uses SpaceXAI where the dashboard table still reads xAI. On intensity: \"The top 1% of firms now spend a median $10.2K per employee per month on AI, up 9%. Firms in the top 10% spent $801, roughly flat. The median firm spends $16.32, up $0.93.\" Concentration: \"1% of businesses drive 80% of the revenues to OpenAI and Anthropic,\" and that top 1% is \"largely made up of VC-backed companies in tech, finance, and technical services.\" This edition introduces department-level AI spend: \"In October, Engineering teams drove 72% of all classified spend, but spend has fallen from highs we observed earlier this summer,\" while customer success and support operations are \"now driving 13.3% of all classified spend, up from 0.8% in June.\" Prices: \"The average price per million tokens fell 21% over the last month.\" Kharazian's September gain is restated here as 0.66pp against the 0.62pp published in the October edition. Measures paid vendor subscriptions among Ramp's own customers rather than self-reported use across a probability sample of US firms, so it sits below the chart as a directional overlay.",
+      "dateAdded": "2026-11-16",
+      "usedIn": [
+        "ai-adoption-rate",
+        "customer-service-automation"
       ],
       "verified": true,
       "synthetic": false

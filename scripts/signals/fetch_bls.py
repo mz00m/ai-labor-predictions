@@ -156,6 +156,16 @@ def main():
             print("  WARNING: Request may have partially failed")
 
     results = parse_bls_response(api_response, series_info)
+
+    # Never overwrite a good snapshot with an empty one. A failed or throttled
+    # request parses to zero series, and writing that through silently emptied
+    # bls_employment.json while still exiting 0 -- the /signals employment
+    # charts would go blank with nothing in CI to show why.
+    if not results:
+        print("\nERROR: parsed 0 series - leaving the existing snapshot in place.")
+        print(f"  {OUTPUT_PATH} not modified.")
+        sys.exit(1)
+
     print(f"\nParsed {len(results)} series:")
     for r in results:
         months = len(r["data"])
