@@ -1,0 +1,319 @@
+{
+  "week": "2026-W47",
+  "generatedAt": "2026-11-16T18:00:26.196Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: 2026 Q3 US Tech Labor Market Update",
+        "summary": "Tech job postings showed recent strength with wage growth in Q3 2026, but quit rates remain persistently low, suggesting workers are reluctant to change jobs despite improving conditions. Provides sector-level headcount and wage signal for tech workers.",
+        "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-tech-labor-market-update/",
+        "publishedAt": "2026-11-12",
+        "score": 0.72,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Who Counts as Exposed? Measurement Choices in an Open, Re-estimable Index of Occupational AI Exposure",
+        "summary": "An open, re-estimable task-level AI exposure index shows that varying two key design choices — context and calibration — produces materially different counts of which workers are classified as exposed, with important implications for workforce planning and policy.",
+        "source": "https://arxiv.org/abs/2611.18168v1",
+        "authors": [
+          "Luca Mouchel",
+          "Pierre Bouquet",
+          "Yossi Sheffi"
+        ],
+        "publishedAt": "2026-11-13",
+        "score": 0.65,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "arxiv-who-counts-as-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Calibrated index counts fewer exposed workers than 2023 benchmark",
+          "quote": "At the benchmark's own weight, the calibrated index counts fewer exposed workers than the benchmark, and when only direct exposure counts it counts more."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "When only direct exposure counts, index counts more exposed workers than benchmark",
+          "quote": "At the benchmark's own weight, the calibrated index counts fewer exposed workers than the benchmark, and when only direct exposure counts it counts more."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Context and calibration both relocate exposure toward higher-wage occupations",
+          "quote": "Context and calibration both relocate exposure toward higher-wage occupations, and calibration, which anchors the index to one platform's users, does more of it."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Index built on 18,796 occupation-task pairs from O*NET rated by 7 LLMs",
+          "quote": "For each of the 18,796 occupation--task pairs in \\onet, seven open-weight reasoning models rate exposure under a common rubric."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+        "summary": "Across 754 US occupations, higher AI exposure is associated with lower 'dull, dirty, dangerous' condition scores under LLM-based measures, challenging the assumption that AI automation primarily relieves workers of undesirable tasks.",
+        "source": "https://arxiv.org/abs/2611.06888",
+        "authors": [
+          "Siyi Yu"
+        ],
+        "publishedAt": "2026-11-04",
+        "doi": "10.48550/arxiv.2611.06888",
+        "score": 0.6,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "arxiv-dull-dirty-dangerous-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "data_point",
+          "value": 754,
+          "confidenceLow": null,
+          "confidenceHigh": null,
+          "direction": null,
+          "overlayLabel": null,
+          "quote": "I examine how these conditions relate to occupational AI exposure using 21 O*NET items across 754 US occupations."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Higher AI exposure linked to lower dull/dirty/dangerous condition scores",
+          "quote": "Higher exposure is associated with lower condition scores under a large language model (LLM) measure and AI Occupational Exposure (AIOE), with equal occupation weights and employment weights."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Adjusted LLM exposure CI includes zero; AIOE CI remains below zero",
+          "quote": "The adjusted confidence intervals include zero for LLM exposure and remain below zero for AIOE."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Strategic AI Underuse: Effort Incentives, Displacement Risk, and Organizational Responses",
+        "summary": "A formal model shows workers who fear AI-driven displacement may rationally underuse AI tools, trading current earnings for job security — implying observed AI adoption rates in enterprises may systematically understate available productivity gains.",
+        "source": "https://doi.org/10.1111/meca.70039",
+        "authors": [
+          "Stefano Staffolani"
+        ],
+        "publishedAt": "2026-11-02",
+        "doi": "10.1111/meca.70039",
+        "score": 0.58,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "doi-strategic-ai-underuse-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "The Expanding Elite Premium: Task-Biased Technological Change and Higher Education Stratification in China",
+        "summary": "Using three waves of Chinese household data (2013–2023), the paper finds that elite-university wage premia widened during early generative AI diffusion, consistent with task-biased technological change increasing returns to top-tier credentials.",
+        "source": "https://doi.org/10.1111/manc.70080",
+        "authors": [
+          "Chen Sun",
+          "Juan Yang"
+        ],
+        "publishedAt": "2026-11-13",
+        "doi": "10.1111/manc.70080",
+        "score": 0.55,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-the-expanding-elite-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Artificial Intelligence and Work: Evidence from the Portuguese Labor Market",
+        "summary": "Thesis-level empirical study of the Portuguese labor market examines AI's realized effects on job replacement and productivity, providing European comparative evidence on displacement versus augmentation outcomes.",
+        "source": "https://hdl.handle.net/10216/177567",
+        "authors": [
+          "João Ricardo Oliveira Reis"
+        ],
+        "publishedAt": "2026-11-09",
+        "score": 0.5,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "hdl-artificial-intelligence-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Artificial Intelligence Diffusion, Adaptive Human-Capital Transformation, and Unequal Development: Evidence from a 50-Country Panel",
+        "summary": "A 229 country-year panel (50 countries) finds that AI capacity, human-capital transformation, and labor-market structure jointly predict unequal development outcomes, with high-skill labor markets capturing most AI-related gains.",
+        "source": "https://doi.org/10.3389/frai.2026.1901423",
+        "authors": [
+          "Gustavo Pessoa",
+          "Svetlana Nikolaevna Tolstikova",
+          "Kaldibayev Nurlan Alimjanovich",
+          "Zhanneta I. Gerzelieva",
+          "Vadim Vitalievich Ponkratov",
+          "Andrey Masterov",
+          "Nikolay Vladimirovich Kuznetsov",
+          "Andrey Sergeevich Pozdnyaev",
+          "Elena Mikhina",
+          "Anna Viktorovna Shkalenko"
+        ],
+        "publishedAt": "2026-11-11",
+        "doi": "10.3389/frai.2026.1901423",
+        "score": 0.48,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "doi-artificial-intelligence-diffusion-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Technology Budgets, Innovations and Labor Market Dynamics: Evidence from OECD Countries",
+        "summary": "Using Dynamic Common Correlated Effects on 24 OECD countries (2007–2024), R&D-proxied technology budgets are linked to unemployment dynamics, providing multi-country evidence on how technology investment reshapes labor demand.",
+        "source": "https://doi.org/10.69671/socialprism.3.9.2026.320",
+        "authors": [
+          "Reema Jamal",
+          "Raima Nazar"
+        ],
+        "publishedAt": "2026-11-04",
+        "doi": "10.69671/socialprism.3.9.2026.320",
+        "score": 0.44,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "doi-technology-budgets-innovations-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: October 2026 Jobs Report: Some Tarnish Beneath the Headline Shine",
+        "summary": "Indeed Hiring Lab's read of the October 2026 BLS jobs report finds headline gains masking real difficulty for unemployed workers seeking re-entry, with job-finding conditions described as challenging for those outside current employment.",
+        "source": "https://hiringlab.indeed.com/2026/11/06/october-2026-jobs-report/",
+        "publishedAt": "2026-11-06",
+        "score": 0.42,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "early-career-employment-decline"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: September 2026 JOLTS Report: Eerily Quiet",
+        "summary": "September 2026 JOLTS data show unusually low labor market churn — quits, hires, and layoffs all subdued — signaling a 'wait and see' labor market with limited worker mobility.",
+        "source": "https://hiringlab.indeed.com/2026/11/03/september-2026-jolts-report-eerily-quiet/",
+        "publishedAt": "2026-11-03",
+        "score": 0.4,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: 2026 Q3 US Business-to-Business Labor Market Update",
+        "summary": "B2B sector job postings were up year-over-year in most categories in Q3 2026, suggesting relative resilience in professional services and enterprise-facing roles despite broader automation headwinds.",
+        "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-business-to-business-labor-market-update/",
+        "publishedAt": "2026-11-12",
+        "score": 0.38,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Beyond AI Productivity: Enterprise AI Systems, Human–AI Responsibility, and the Future of Work",
+        "summary": "A U.S.-focused review finds enterprise AI assistants have task-dependent productivity effects but that public evidence does not identify an independent financial return or a complete chain from AI cost to verified workforce outcomes.",
+        "source": "https://doi.org/10.21203/rs.3.rs-11670337/v1",
+        "authors": [
+          "Audrey Rah",
+          "David W. Johnson"
+        ],
+        "publishedAt": "2026-11-10",
+        "doi": "10.21203/rs.3.rs-11670337/v1",
+        "score": 0.37,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "doi-beyond-ai-productivity-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Will AI Growth Reach the Developing World?",
+        "summary": "A growth model of developed and developing economies finds that whether AI services substitute for or complement different labor inputs determines whether AI-driven growth in rich countries widens or narrows global wage and income gaps.",
+        "source": "https://www.nber.org/papers/w36035",
+        "authors": [
+          "Daniel Björkegren",
+          "David Lagakos",
+          "Mitchell VanVuren"
+        ],
+        "publishedAt": "2026-11-16",
+        "score": 0.36,
+        "sourceAdapter": "nber",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "nber-will-ai-growth-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: 2026 Q3 US Transportation Labor Market Update",
+        "summary": "Three of four transportation sub-categories posted year-over-year job posting gains in Q3 2026, providing sector-level evidence relevant to physical automation displacement forecasts.",
+        "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-transportation-labor-market-update/",
+        "publishedAt": "2026-11-12",
+        "score": 0.34,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "robots-physical-automation-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Revelio Labs: RPLS Jobs Report — Workforce Research Newsroom",
+        "summary": "Revelio Labs' November RPLS monthly release covers realized workforce transitions using linked employer-employee data, offering timely private-sector job flow evidence to complement BLS official series.",
+        "source": "https://www.reveliolabs.com/news/rpls",
+        "publishedAt": "2026-11-05",
+        "score": 0.32,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "reveliolabs-revelio-labs-rpls-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    }
+  ]
+}

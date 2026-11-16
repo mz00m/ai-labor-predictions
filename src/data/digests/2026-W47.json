@@ -1,0 +1,288 @@
+{
+  "week": "2026-W47",
+  "generatedAt": "2026-11-16T17:58:36.902Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Indeed Hiring Lab: 2026 Q3 US Tech Labor Market Update",
+      "summary": "Tech job postings showed recent strength with wage growth in Q3 2026, but quit rates remain persistently low, suggesting workers are reluctant to change jobs despite improving conditions. Provides sector-level headcount and wage signal for tech workers.",
+      "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-tech-labor-market-update/",
+      "publishedAt": "2026-11-12",
+      "score": 0.72,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "tech-sector-displacement"
+    },
+    {
+      "title": "Who Counts as Exposed? Measurement Choices in an Open, Re-estimable Index of Occupational AI Exposure",
+      "summary": "An open, re-estimable task-level AI exposure index shows that varying two key design choices — context and calibration — produces materially different counts of which workers are classified as exposed, with important implications for workforce planning and policy.",
+      "source": "https://arxiv.org/abs/2611.18168v1",
+      "authors": [
+        "Luca Mouchel",
+        "Pierre Bouquet",
+        "Yossi Sheffi"
+      ],
+      "publishedAt": "2026-11-13",
+      "score": 0.65,
+      "sourceAdapter": "arxiv",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+      "summary": "Across 754 US occupations, higher AI exposure is associated with lower 'dull, dirty, dangerous' condition scores under LLM-based measures, challenging the assumption that AI automation primarily relieves workers of undesirable tasks.",
+      "source": "https://arxiv.org/abs/2611.06888",
+      "authors": [
+        "Siyi Yu"
+      ],
+      "publishedAt": "2026-11-04",
+      "doi": "10.48550/arxiv.2611.06888",
+      "score": 0.6,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Strategic AI Underuse: Effort Incentives, Displacement Risk, and Organizational Responses",
+      "summary": "A formal model shows workers who fear AI-driven displacement may rationally underuse AI tools, trading current earnings for job security — implying observed AI adoption rates in enterprises may systematically understate available productivity gains.",
+      "source": "https://doi.org/10.1111/meca.70039",
+      "authors": [
+        "Stefano Staffolani"
+      ],
+      "publishedAt": "2026-11-02",
+      "doi": "10.1111/meca.70039",
+      "score": 0.58,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    },
+    {
+      "title": "The Expanding Elite Premium: Task-Biased Technological Change and Higher Education Stratification in China",
+      "summary": "Using three waves of Chinese household data (2013–2023), the paper finds that elite-university wage premia widened during early generative AI diffusion, consistent with task-biased technological change increasing returns to top-tier credentials.",
+      "source": "https://doi.org/10.1111/manc.70080",
+      "authors": [
+        "Chen Sun",
+        "Juan Yang"
+      ],
+      "publishedAt": "2026-11-13",
+      "doi": "10.1111/manc.70080",
+      "score": 0.55,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "high-skill-wage-premium"
+    },
+    {
+      "title": "Artificial Intelligence and Work: Evidence from the Portuguese Labor Market",
+      "summary": "Thesis-level empirical study of the Portuguese labor market examines AI's realized effects on job replacement and productivity, providing European comparative evidence on displacement versus augmentation outcomes.",
+      "source": "https://hdl.handle.net/10216/177567",
+      "authors": [
+        "João Ricardo Oliveira Reis"
+      ],
+      "publishedAt": "2026-11-09",
+      "score": 0.5,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Artificial Intelligence Diffusion, Adaptive Human-Capital Transformation, and Unequal Development: Evidence from a 50-Country Panel",
+      "summary": "A 229 country-year panel (50 countries) finds that AI capacity, human-capital transformation, and labor-market structure jointly predict unequal development outcomes, with high-skill labor markets capturing most AI-related gains.",
+      "source": "https://doi.org/10.3389/frai.2026.1901423",
+      "authors": [
+        "Gustavo Pessoa",
+        "Svetlana Nikolaevna Tolstikova",
+        "Kaldibayev Nurlan Alimjanovich",
+        "Zhanneta I. Gerzelieva",
+        "Vadim Vitalievich Ponkratov",
+        "Andrey Masterov",
+        "Nikolay Vladimirovich Kuznetsov",
+        "Andrey Sergeevich Pozdnyaev",
+        "Elena Mikhina",
+        "Anna Viktorovna Shkalenko"
+      ],
+      "publishedAt": "2026-11-11",
+      "doi": "10.3389/frai.2026.1901423",
+      "score": 0.48,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Technology Budgets, Innovations and Labor Market Dynamics: Evidence from OECD Countries",
+      "summary": "Using Dynamic Common Correlated Effects on 24 OECD countries (2007–2024), R&D-proxied technology budgets are linked to unemployment dynamics, providing multi-country evidence on how technology investment reshapes labor demand.",
+      "source": "https://doi.org/10.69671/socialprism.3.9.2026.320",
+      "authors": [
+        "Reema Jamal",
+        "Raima Nazar"
+      ],
+      "publishedAt": "2026-11-04",
+      "doi": "10.69671/socialprism.3.9.2026.320",
+      "score": 0.44,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "Indeed Hiring Lab: October 2026 Jobs Report: Some Tarnish Beneath the Headline Shine",
+      "summary": "Indeed Hiring Lab's read of the October 2026 BLS jobs report finds headline gains masking real difficulty for unemployed workers seeking re-entry, with job-finding conditions described as challenging for those outside current employment.",
+      "source": "https://hiringlab.indeed.com/2026/11/06/october-2026-jobs-report/",
+      "publishedAt": "2026-11-06",
+      "score": 0.42,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "early-career-employment-decline"
+    },
+    {
+      "title": "Indeed Hiring Lab: September 2026 JOLTS Report: Eerily Quiet",
+      "summary": "September 2026 JOLTS data show unusually low labor market churn — quits, hires, and layoffs all subdued — signaling a 'wait and see' labor market with limited worker mobility.",
+      "source": "https://hiringlab.indeed.com/2026/11/03/september-2026-jolts-report-eerily-quiet/",
+      "publishedAt": "2026-11-03",
+      "score": 0.4,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Indeed Hiring Lab: 2026 Q3 US Business-to-Business Labor Market Update",
+      "summary": "B2B sector job postings were up year-over-year in most categories in Q3 2026, suggesting relative resilience in professional services and enterprise-facing roles despite broader automation headwinds.",
+      "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-business-to-business-labor-market-update/",
+      "publishedAt": "2026-11-12",
+      "score": 0.38,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "white-collar-professional-displacement"
+    },
+    {
+      "title": "Beyond AI Productivity: Enterprise AI Systems, Human–AI Responsibility, and the Future of Work",
+      "summary": "A U.S.-focused review finds enterprise AI assistants have task-dependent productivity effects but that public evidence does not identify an independent financial return or a complete chain from AI cost to verified workforce outcomes.",
+      "source": "https://doi.org/10.21203/rs.3.rs-11670337/v1",
+      "authors": [
+        "Audrey Rah",
+        "David W. Johnson"
+      ],
+      "publishedAt": "2026-11-10",
+      "doi": "10.21203/rs.3.rs-11670337/v1",
+      "score": 0.37,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "Will AI Growth Reach the Developing World?",
+      "summary": "A growth model of developed and developing economies finds that whether AI services substitute for or complement different labor inputs determines whether AI-driven growth in rich countries widens or narrows global wage and income gaps.",
+      "source": "https://www.nber.org/papers/w36035",
+      "authors": [
+        "Daniel Björkegren",
+        "David Lagakos",
+        "Mitchell VanVuren"
+      ],
+      "publishedAt": "2026-11-16",
+      "score": 0.36,
+      "sourceAdapter": "nber",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Indeed Hiring Lab: 2026 Q3 US Transportation Labor Market Update",
+      "summary": "Three of four transportation sub-categories posted year-over-year job posting gains in Q3 2026, providing sector-level evidence relevant to physical automation displacement forecasts.",
+      "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-transportation-labor-market-update/",
+      "publishedAt": "2026-11-12",
+      "score": 0.34,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "Revelio Labs: RPLS Jobs Report — Workforce Research Newsroom",
+      "summary": "Revelio Labs' November RPLS monthly release covers realized workforce transitions using linked employer-employee data, offering timely private-sector job flow evidence to complement BLS official series.",
+      "source": "https://www.reveliolabs.com/news/rpls",
+      "publishedAt": "2026-11-05",
+      "score": 0.32,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "overall-us-displacement"
+    }
+  ],
+  "themes": [
+    "Tech labor market stabilizing but workers staying put — low quits and subdued churn dominate Q3 2026 readings",
+    "AI exposure measurement under scrutiny — new methodological work shows index design choices materially change which workers count as at risk",
+    "Strategic AI underuse and elite skill premiums emerging as supply-side responses to displacement anxiety"
+  ],
+  "watching": [
+    {
+      "title": "SERIES DUE: OpenAI Signals (ChatGPT usage data)",
+      "source": "https://openai.com/signals",
+      "reason": "189d overdue (monthly). Realized ChatGPT use by state and O*NET activity feeds /map realized-use and capability-overhang layers. Last ingested 2026-05-11."
+    },
+    {
+      "title": "SERIES DUE: BLS Current Employment Statistics by industry",
+      "source": "https://www.bls.gov/ces/",
+      "reason": "209d overdue (monthly). Employment in 20 industries feeds 'vs late 2022' change on every /signals industry card. September data unconfirmed as of 2026-11-09."
+    },
+    {
+      "title": "SERIES DUE: Productivity and Costs (Nonfarm Business Labor Productivity)",
+      "source": "https://www.bls.gov/news.release/prod2.toc.htm",
+      "reason": "74d overdue (quarterly). Official US output-per-hour measure where an AI productivity boom would first appear in aggregate. Expected early November 2026."
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index",
+      "source": "https://www.anthropic.com/economic-index",
+      "reason": "143d overdue (quarterly). Largest Claude usage dataset mapping real work tasks; feeds genai-work-adoption, workforce-ai-exposure, customer-service-automation."
+    },
+    {
+      "title": "SERIES DUE: Yale Budget Lab — Tracking AI's Impact on the Labor Market",
+      "source": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "reason": "62d overdue (quarterly). Key counter-evidence to ADP Canaries finding; CPS-based check on aggregate AI-labor effects. Feeds overall-us-displacement."
+    },
+    {
+      "title": "SERIES DUE: Google AI & Economy ATLAS",
+      "source": "https://ai.google/economy/atlas/",
+      "reason": "116d overdue (quarterly). 15M Gemini interactions mapped to O*NET/ATUS; feeds workforce-ai-exposure, genai-work-adoption, high-skill-wage-premium."
+    },
+    {
+      "title": "SERIES DUE: NBER Working Papers — AI & Labor",
+      "source": "https://www.nber.org/papers?facet=topics%3AArtificial+Intelligence",
+      "reason": "49d overdue (monthly). Primary feed for causal-identification AI-labor papers; feeds overall-us-displacement, workforce-ai-exposure, median-wage-impact."
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data",
+      "source": "https://www.stripeeconomics.com",
+      "reason": "81d overdue (quarterly). AI share of new startup formations and solo-founder share; fastest-moving firm-formation signal outside Census BFS. Feeds ai-business-formation."
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates",
+      "source": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "reason": "704d overdue (annual). 2020-2024 5-year estimates reportedly released January 2026; county/metro occupation mix feeds /map county and CBSA layers."
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS)",
+      "source": "https://www.bls.gov/oes/",
+      "reason": "185d overdue (annual). Employment and wages by detailed occupation and geography; feeds /map state and metro scores and /task-visualizer economy groups."
+    },
+    {
+      "title": "SERIES DUE: PyPI package downloads",
+      "source": "https://pypistats.org/",
+      "reason": "209d overdue (monthly). Monthly downloads for 52 AI Python packages feeds /signals acceleration index and industry tool growth table."
+    },
+    {
+      "title": "SERIES DUE: Hugging Face model downloads",
+      "source": "https://huggingface.co/models",
+      "reason": "212d overdue (monthly). Top model downloads across five task categories feeds /signals industry cards. Live counts available but not yet ingested."
+    },
+    {
+      "title": "SERIES DUE: Artificial Analysis Intelligence Index",
+      "source": "https://artificialanalysis.ai/",
+      "reason": "39d overdue (continuous). Frontier model capability and price over time feeds capability module on /model. Monthly refresh expected early November 2026."
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11: Employed persons by detailed occupation, sex, race and ethnicity",
+      "source": "https://www.bls.gov/cps/cpsaat11.htm",
+      "reason": "247d overdue (annual). Women's share of employment by occupation feeds gender view on /task-visualizer/economy. 2025 annual averages possibly available."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "semanticScholar",
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 122,
+    "afterDedup": 117
+  }
+}
