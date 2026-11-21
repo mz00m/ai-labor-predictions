@@ -1,0 +1,183 @@
+{
+  "week": "2026-W45",
+  "generatedAt": "2026-11-02T17:51:07.899Z",
+  "lookbackDays": 14,
+  "highlights": [
+    {
+      "title": "Revelio Labs: Monopsony in the US Labor Market — Is Worker Power Back?",
+      "summary": "US workers now retain ~80 cents of each marginal dollar earned, up from ~70 cents pre-2022, with variation by industry, union status, and AI exposure — providing a direct wage-share signal linked to AI adoption.",
+      "source": "https://www.reveliolabs.com/news/macro/is-worker-power-coming-back-monopsony-in-the-us-labor-market",
+      "publishedAt": "2026-11-02",
+      "score": 0.72,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "Beyond the Laggard Myth: Time-Series Analysis of AI Job Market Dynamics in Construction",
+      "summary": "One of the first cross-industry time-series analyses of AI job postings in construction, benchmarking AI hiring growth against digital and traditional sectors to challenge linear diffusion assumptions.",
+      "source": "https://doi.org/10.1108/sasbe-03-2026-0225",
+      "authors": [
+        "M. Reza Hosseini",
+        "Masoud Gheisari",
+        "Roger Vergés",
+        "Faris Elghaish",
+        "Mehrdad Arashpour",
+        "Prof. Farzad Rahimian"
+      ],
+      "publishedAt": "2026-10-31",
+      "doi": "10.1108/sasbe-03-2026-0225",
+      "score": 0.55,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "ai-adoption-rate"
+    },
+    {
+      "title": "NY Fed Liberty Street Economics: Evaluating New LinkedIn Labor Market Tightness Indicators",
+      "summary": "The NY Fed evaluates LinkedIn-derived labor market tightness measures as real-time alternatives to JOLTS, providing new high-frequency job-seeker-to-opening ratios with implications for wage pressure forecasts.",
+      "source": "https://libertystreeteconomics.newyorkfed.org/2026/10/evaluating-new-linkedin-labor-market-tightness-indicators/",
+      "publishedAt": "2026-10-30",
+      "score": 0.52,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "median-wage-impact"
+    },
+    {
+      "title": "NBER: Saving for the Machines — Task Models, Capital Accumulation, and Automation Growth",
+      "summary": "In a standard task model, capital supply governs the magnitude of automation-driven growth; the paper argues task-structure shifts alter returns to machine accumulation, with implications for labor's share as automation expands.",
+      "source": "https://www.nber.org/papers/w35964",
+      "authors": [
+        "Jesús Fernández-Villaverde"
+      ],
+      "publishedAt": "2026-11-02",
+      "score": 0.5,
+      "sourceAdapter": "nber",
+      "graphSlug": "overall-us-displacement"
+    },
+    {
+      "title": "NBER: Public R&D and the Automation of Manufacturing — Evidence from the Space Race",
+      "summary": "Space Race–era public R&D measurably shifted US manufacturing toward automation, providing historical causal evidence that government-funded technology investment accelerates physical-task displacement.",
+      "source": "https://www.nber.org/papers/w35966",
+      "authors": [
+        "Apoorva Babbar",
+        "Shawn Kantor",
+        "Alexander Whalley",
+        "Jingyuan Zeng"
+      ],
+      "publishedAt": "2026-11-02",
+      "score": 0.48,
+      "sourceAdapter": "nber",
+      "graphSlug": "robots-physical-automation-displacement"
+    },
+    {
+      "title": "The Global AI Divide: Cross-National Analysis of AI Integration and Labor Market Inequality",
+      "summary": "Cross-national analysis finds AI adoption generates productivity gains while intensifying structural labor-market inequalities, with differential impacts across income groups and geographies.",
+      "source": "https://doi.org/10.68283/jess.v1.i2.a23",
+      "authors": [
+        "Kaveesha H.P.B."
+      ],
+      "publishedAt": "2026-10-23",
+      "doi": "10.68283/jess.v1.i2.a23",
+      "score": 0.38,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "workforce-ai-exposure"
+    },
+    {
+      "title": "Indeed Hiring Lab: US Labor Market Snapshot — October 2026",
+      "summary": "Monthly snapshot covering US job postings, wages, unemployment, and openings as of October 2026, flagging current directional trends across key labor-market indicators.",
+      "source": "https://hiringlab.indeed.com/2026/10/22/us-labor-market-snapshot-october-2026/",
+      "publishedAt": "2026-10-22",
+      "score": 0.36,
+      "sourceAdapter": "trackedInstitutions",
+      "graphSlug": "entry-level-wage-impact"
+    },
+    {
+      "title": "What is Work For? Labor, Politics, and Meaning in the Age of AI — Cross-National Survey",
+      "summary": "Original survey of 8,234 working-age adults across UK, US, Denmark, and India quantifies non-monetary motivations for work and attitudes toward AI-driven job change, with cross-national breakdowns.",
+      "source": "https://arxiv.org/abs/2610.39375",
+      "authors": [
+        "Julian Jacobs"
+      ],
+      "publishedAt": "2026-10-29",
+      "doi": "10.48550/arxiv.2610.39375",
+      "score": 0.33,
+      "sourceAdapter": "openAlex",
+      "graphSlug": "genai-work-adoption"
+    }
+  ],
+  "themes": [
+    "Wage-share recovery and monopsony easing as AI adoption accelerates across industries",
+    "Historical and theoretical models deepening understanding of automation's displacement and capital-accumulation dynamics",
+    "High-frequency alternative labor-market indicators (LinkedIn, Indeed) gaining institutional validation alongside lagging official series"
+  ],
+  "watching": [
+    {
+      "title": "SERIES DUE: OpenAI Signals (ChatGPT usage data) — last ingested 2026-05-11",
+      "source": "https://openai.com/signals",
+      "reason": "175 days overdue (monthly cadence); feeds realized-use and capability-overhang layers by state and O*NET work activity — highest-priority missing adoption signal."
+    },
+    {
+      "title": "SERIES DUE: BLS Current Employment Statistics by industry — last ingested 2026-04-21",
+      "source": "https://www.bls.gov/ces/",
+      "reason": "195 days overdue (monthly cadence); September 2026 data likely available; feeds employment-change baseline on all industry signal cards."
+    },
+    {
+      "title": "SERIES DUE: Anthropic Economic Index — last ingested 2026-06-26",
+      "source": "https://www.anthropic.com/economic-index",
+      "reason": "129 days overdue (quarterly cadence); largest real-usage dataset in field; feeds genai-work-adoption, workforce-ai-exposure, customer-service-automation."
+    },
+    {
+      "title": "SERIES DUE: Stanford DEL AI Economic Indicators — last ingested 2026-08-13",
+      "source": "https://digitaleconomy.stanford.edu/project/indicators/",
+      "reason": "81 days overdue (quarterly cadence); Brynjolfsson canaries + takeoff + adoption dashboards feed overall-us-displacement and workforce-ai-exposure."
+    },
+    {
+      "title": "SERIES DUE: PyPI package downloads — last ingested 2026-04-21",
+      "source": "https://pypistats.org/",
+      "reason": "195 days overdue (monthly cadence); 52 AI package download counts feed the signals acceleration index and industry tool-growth table."
+    },
+    {
+      "title": "SERIES DUE: Hugging Face model downloads — last ingested 2026-04-18",
+      "source": "https://huggingface.co/models",
+      "reason": "198 days overdue (monthly cadence); top-model download counts by task category feed expanded industry signal cards."
+    },
+    {
+      "title": "SERIES DUE: American Community Survey 5-Year Estimates — last ingested 2024-12-12",
+      "source": "https://www.census.gov/programs-surveys/acs/news/data-releases.html",
+      "reason": "690 days overdue (annual cadence); 2020-2024 estimates reportedly released January 2026; feeds county and CBSA occupation-mix layers on /map."
+    },
+    {
+      "title": "SERIES DUE: Stripe Atlas / Stripe Economics formation data — last ingested 2026-08-27",
+      "source": "https://www.stripeeconomics.com",
+      "reason": "67 days overdue (quarterly cadence); AI share of new incorporations and solo-founder share feed ai-business-formation graph."
+    },
+    {
+      "title": "SERIES DUE: BLS Occupational Employment and Wage Statistics (OEWS) — last ingested 2026-05-15",
+      "source": "https://www.bls.gov/oes/",
+      "reason": "171 days overdue (annual cadence); detailed occupation-level employment and wages feed /map state and metro scores and task-visualizer economy groups."
+    },
+    {
+      "title": "SERIES DUE: CPS Table 11 — Employed persons by detailed occupation, sex, race and ethnicity — last ingested 2026-03-14",
+      "source": "https://www.bls.gov/cps/cpsaat11.htm",
+      "reason": "233 days overdue (annual cadence); 2025 annual averages likely available; feeds gender view on task-visualizer/economy."
+    }
+  ],
+  "sources": {
+    "succeeded": [
+      "arxiv",
+      "pubmed",
+      "openAlex",
+      "nber",
+      "bls",
+      "trackedInstitutions",
+      "recurringSeries"
+    ],
+    "failed": [
+      "semanticScholar"
+    ],
+    "skipped": [
+      "ssrn",
+      "fred",
+      "googleCse"
+    ],
+    "totalCandidates": 94,
+    "afterDedup": 91
+  }
+}

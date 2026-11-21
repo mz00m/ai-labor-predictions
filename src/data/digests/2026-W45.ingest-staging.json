@@ -1,0 +1,246 @@
+{
+  "week": "2026-W45",
+  "generatedAt": "2026-11-02T17:52:52.432Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "Revelio Labs: Monopsony in the US Labor Market — Is Worker Power Back?",
+        "summary": "US workers now retain ~80 cents of each marginal dollar earned, up from ~70 cents pre-2022, with variation by industry, union status, and AI exposure — providing a direct wage-share signal linked to AI adoption.",
+        "source": "https://www.reveliolabs.com/news/macro/is-worker-power-coming-back-monopsony-in-the-us-labor-market",
+        "publishedAt": "2026-11-02",
+        "score": 0.72,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "reveliolabs-revelio-labs-monopsony-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-exposed occupations saw faster markdown declines post-2023",
+          "quote": "markdowns are smaller in more unionized occupations and have fallen faster in occupations more exposed to AI"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Avg earnings markdowns fell from ~30% pre-2022 to ~20% in 2023-2025",
+          "quote": "average earnings markdowns fell from about 30% before 2022 to about 20% in 2023-2025"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Higher AI exposure correlates with larger markdown reductions post-2022",
+          "quote": "Scatter plot of within-occupation change in markdowns between pre-AI (2016-2022) and post-AI (2023-2025) periods against AI exposure score among occupations."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Beyond the Laggard Myth: Time-Series Analysis of AI Job Market Dynamics in Construction",
+        "summary": "One of the first cross-industry time-series analyses of AI job postings in construction, benchmarking AI hiring growth against digital and traditional sectors to challenge linear diffusion assumptions.",
+        "source": "https://doi.org/10.1108/sasbe-03-2026-0225",
+        "authors": [
+          "M. Reza Hosseini",
+          "Masoud Gheisari",
+          "Roger Vergés",
+          "Faris Elghaish",
+          "Mehrdad Arashpour",
+          "Prof. Farzad Rahimian"
+        ],
+        "publishedAt": "2026-10-31",
+        "doi": "10.1108/sasbe-03-2026-0225",
+        "score": 0.55,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "ai-adoption-rate"
+      },
+      "sourceId": "doi-beyond-the-laggard-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "NY Fed Liberty Street Economics: Evaluating New LinkedIn Labor Market Tightness Indicators",
+        "summary": "The NY Fed evaluates LinkedIn-derived labor market tightness measures as real-time alternatives to JOLTS, providing new high-frequency job-seeker-to-opening ratios with implications for wage pressure forecasts.",
+        "source": "https://libertystreeteconomics.newyorkfed.org/2026/10/evaluating-new-linkedin-labor-market-tightness-indicators/",
+        "publishedAt": "2026-10-30",
+        "score": 0.52,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "libertystreeteconomics-ny-fed-liberty-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "NBER: Saving for the Machines — Task Models, Capital Accumulation, and Automation Growth",
+        "summary": "In a standard task model, capital supply governs the magnitude of automation-driven growth; the paper argues task-structure shifts alter returns to machine accumulation, with implications for labor's share as automation expands.",
+        "source": "https://www.nber.org/papers/w35964",
+        "authors": [
+          "Jesús Fernández-Villaverde"
+        ],
+        "publishedAt": "2026-11-02",
+        "score": 0.5,
+        "sourceAdapter": "nber",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "nber-nber-saving-for-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Automation growth boom: 11.7% annual growth under optimal saving vs 2.2% fixed rate",
+          "quote": "the same technology path that generates 11.7% annual growth when households choose their saving rate optimally delivers only 2.2% when the saving rate is fixed at the calibrated U.S. 2025 level of 23%"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Hand-to-mouth households lose 40–67% of consumption equivalent from automation",
+          "quote": "hand-to-mouth households lose the equivalent of two-fifths to two-thirds of their consumption, while keeping them on trend temporarily costs at most a fifth of GDP"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Machines perform growing share of tasks; task structure sets wage evolution path",
+          "quote": "When machines can perform a growing share of tasks, growth depends on two margins: how the task structure affects the returns to accumulating machines, and how strongly capital accumulation responds to those returns"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Task structure governs duration of automation growth boom and wage evolution",
+          "quote": "the task structure sets the duration of this growth boom and the evolution of wages"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "NBER: Public R&D and the Automation of Manufacturing — Evidence from the Space Race",
+        "summary": "Space Race–era public R&D measurably shifted US manufacturing toward automation, providing historical causal evidence that government-funded technology investment accelerates physical-task displacement.",
+        "source": "https://www.nber.org/papers/w35966",
+        "authors": [
+          "Apoorva Babbar",
+          "Shawn Kantor",
+          "Alexander Whalley",
+          "Jingyuan Zeng"
+        ],
+        "publishedAt": "2026-11-02",
+        "score": 0.48,
+        "sourceAdapter": "nber",
+        "graphSlug": "robots-physical-automation-displacement"
+      },
+      "sourceId": "nber-nber-public-rd-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "The Global AI Divide: Cross-National Analysis of AI Integration and Labor Market Inequality",
+        "summary": "Cross-national analysis finds AI adoption generates productivity gains while intensifying structural labor-market inequalities, with differential impacts across income groups and geographies.",
+        "source": "https://doi.org/10.68283/jess.v1.i2.a23",
+        "authors": [
+          "Kaveesha H.P.B."
+        ],
+        "publishedAt": "2026-10-23",
+        "doi": "10.68283/jess.v1.i2.a23",
+        "score": 0.38,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "doi-the-global-ai-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: US Labor Market Snapshot — October 2026",
+        "summary": "Monthly snapshot covering US job postings, wages, unemployment, and openings as of October 2026, flagging current directional trends across key labor-market indicators.",
+        "source": "https://hiringlab.indeed.com/2026/10/22/us-labor-market-snapshot-october-2026/",
+        "publishedAt": "2026-10-22",
+        "score": 0.36,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "entry-level-wage-impact"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Posted wage growth 2.4% YoY, below CPI inflation of 3.7% (real wage decline)",
+          "quote": "Posted wage growth is 2.4% year-over-year, against CPI inflation of 3.7%."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI-related postings at 7.3% of all postings, up from 3.3% peak in 2022",
+          "quote": "AI-related postings make up 7.3% of all postings, past their previous peak of 3.3% in 2022."
+        },
+        {
+          "graphSlug": "tech-sector-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Software Development sector JPI lowest among tracked sectors at ~79",
+          "quote": "Software Development lowest at about 79."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "What is Work For? Labor, Politics, and Meaning in the Age of AI — Cross-National Survey",
+        "summary": "Original survey of 8,234 working-age adults across UK, US, Denmark, and India quantifies non-monetary motivations for work and attitudes toward AI-driven job change, with cross-national breakdowns.",
+        "source": "https://arxiv.org/abs/2610.39375",
+        "authors": [
+          "Julian Jacobs"
+        ],
+        "publishedAt": "2026-10-29",
+        "doi": "10.48550/arxiv.2610.39375",
+        "score": 0.33,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "arxiv-what-is-work-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "81% of 8,234 surveyed workers report job satisfaction across UK/US/Denmark/India",
+          "quote": "I find that 81% of respondents report being satisfied with their job, and a majority across all four countries are strongly motivated by the non-monetary components of their employment."
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "1/3 of workers intrinsically motivated by job role itself; ~25% by social/community aspects",
+          "quote": "one third of working respondents are motivated intrinsically by their job--valuing their role for its own sake. Nearly one quarter are driven by social and community-related aspects of their employment, 17% by social status, and just over one quarter by the transactional financial benefits of their job."
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "1/5 of workers would stay in role even if offered 120% salary as guaranteed income",
+          "quote": "one fifth of workers would stay even if offered up to 120% of their salary."
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Non-monetary work motivations evenly distributed across income and collar lines",
+          "quote": "these non-monetary work motivations are evenly distributed across the income distribution and between white- and blue-collar workers."
+        }
+      ]
+    }
+  ]
+}
