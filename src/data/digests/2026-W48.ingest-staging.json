@@ -1,0 +1,439 @@
+{
+  "week": "2026-W48",
+  "generatedAt": "2026-11-23T19:55:01.107Z",
+  "candidates": [
+    {
+      "highlight": {
+        "title": "How GenAI Adoption Affects Job Demand: Evidence from India",
+        "summary": "Using job-postings data from a leading Indian platform and ChatGPT's November 2022 launch as a quasi-natural experiment, the study measures how GenAI adoption shifts labor demand across occupations in a large emerging economy.",
+        "source": "https://aisel.aisnet.org/icis2026/society/society/18",
+        "authors": [
+          "Derek Tran",
+          "Probal Mojumder",
+          "Sunil Mithas",
+          "Samadrita Bhattacharyya"
+        ],
+        "publishedAt": "2026-12-14",
+        "score": 0.88,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "genai-work-adoption"
+      },
+      "sourceId": "aisel-how-genai-adoption-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Past Automation and Future AI: How Weak Links Tame the Growth Explosion",
+        "summary": "Task-based growth accounting shows capital task productivity has grown ~5 percentage points per year faster than labor task productivity in the US economy, quantifying automation's historical displacement of labor tasks and its implications for AI-driven futures.",
+        "source": "https://www.nber.org/papers/w36050",
+        "authors": [
+          "Charles I. Jones",
+          "Christopher Tonetti"
+        ],
+        "publishedAt": "2026-11-23",
+        "score": 0.82,
+        "sourceAdapter": "nber",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "nber-past-automation-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Capital task productivity grew ~5pp/yr faster than labor task productivity in US",
+          "quote": "capital task productivity has grown about 5 percentage points per year faster than labor task productivity in the U.S. economy"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Who Counts as Exposed? Measurement Choices in an Open, Re-estimable Index of Occupational AI Exposure",
+        "summary": "An open task-level occupational AI exposure index shows that design choices around context and calibration can produce widely varying estimates of which workers are exposed, with measurement decisions materially affecting policy-relevant headcounts of at-risk workers.",
+        "source": "https://arxiv.org/abs/2611.18168",
+        "authors": [
+          "Luca Mouchel",
+          "Pierre Bouquet",
+          "Yossi Sheffi"
+        ],
+        "publishedAt": "2026-11-13",
+        "doi": "10.48550/arxiv.2611.18168",
+        "score": 0.76,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "workforce-ai-exposure"
+      },
+      "sourceId": "arxiv-who-counts-as-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Calibrated index counts fewer exposed workers than 2023 benchmark",
+          "quote": "At the benchmark's own weight, the calibrated index counts fewer exposed workers than the benchmark, and when only direct exposure counts it counts more."
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Direct-exposure-only count exceeds benchmark estimate of exposed workers",
+          "quote": "when only direct exposure counts it counts more"
+        },
+        {
+          "graphSlug": "workforce-ai-exposure",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "18,796 occupation-task pairs rated for AI exposure across 7 open-weight models",
+          "quote": "For each of the 18,796 occupation--task pairs in \\onet, seven open-weight reasoning models rate exposure under a common rubric."
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Context and calibration both relocate AI exposure toward higher-wage occupations",
+          "quote": "Context and calibration both relocate exposure toward higher-wage occupations, and calibration, which anchors the index to one platform's users, does more of it"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: There is no AI Jobpocalypse, but plenty of AI-nxiety",
+        "summary": "Indeed Hiring Lab's 2026 outlook review finds no aggregate 'jobpocalypse' in US posting data while documenting widespread worker anxiety about AI displacement, providing a current qualitative-quantitative snapshot from the largest job-postings database.",
+        "source": "https://hiringlab.indeed.com/2026/11/18/there-is-no-ai-jobpocalypse/",
+        "publishedAt": "2026-11-18",
+        "score": 0.68,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "AI and the Two Margins of Work: Why Job Losses Show Up Before Job Creation",
+        "summary": "Combining historical computing-era firm data with a theoretical model, the paper shows AI-driven job losses are recorded in payroll statistics promptly while compensating job creation by new entrants lags by years; firms entering after 1978 held 42% of employment by the measurement period.",
+        "source": "https://arxiv.org/abs/2611.17530",
+        "authors": [
+          "Mark Esposito",
+          "Liu Zhang"
+        ],
+        "publishedAt": "2026-11-12",
+        "doi": "10.48550/arxiv.2611.17530",
+        "score": 0.66,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "overall-us-displacement"
+      },
+      "sourceId": "arxiv-ai-and-the-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "No LLM exposure gradient on job flows through Q1 2026 on either margin",
+          "quote": "Establishment job flows through the first quarter of 2026 show no gradient on language-model exposure on either margin"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Founding-task AI exposure linked to 10–20% rise in new firm entry",
+          "quote": "studies with founding-task exposure find entry rising 10 to 20 percent"
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "Computing-era entrants held 42% of payroll by 1998; cohorts kept ~80% after 5 yrs",
+          "quote": "firms that entered in 1978 or later held 42 percent of payroll by 1998 and entering cohorts kept about 80 percent of their payroll after five years"
+        },
+        {
+          "graphSlug": "overall-us-displacement",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Incumbents contracted before entrants accumulated in high-automation industries",
+          "quote": "in the industries most exposed to automation, incumbents contracted before entrants accumulated, a sequence that is precise early in the period and suggestive by its end"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "AI-Driven Transformation of Digital Platform Work: A Task-Based Model for Measuring Labour Disruption and Vulnerability, with Early Evidence from Online Freelancing in Kenya",
+        "summary": "A task-based disruption model applied to Kenyan online freelance data finds that AI vulnerability varies sharply within occupational categories depending on work arrangement, with early evidence suggesting platform freelancers face higher intra-occupation displacement risk than conventional measures imply.",
+        "source": "https://arxiv.org/abs/2611.25585",
+        "authors": [
+          "Farhan Latif"
+        ],
+        "publishedAt": "2026-11-19",
+        "doi": "10.48550/arxiv.2611.25585",
+        "score": 0.63,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "freelancer-rate-impact"
+      },
+      "sourceId": "arxiv-aidriven-transformation-of-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "freelancer-rate-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "High disruption across writing, VA, transcription, web dev; wage impact partly offset by unpaid task efficiency gains",
+          "quote": "The model estimates high disruption across all four categories, while livelihood vulnerability scores are lower and vary by occupation. Potential efficiency gains on unpaid tasks partly offset potential wage impact associated with paid work in the model."
+        },
+        {
+          "graphSlug": "freelancer-rate-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Kenyan freelancers report intensifying competition and changes in task performance amid AI adoption",
+          "quote": "Workers report changes in how they perform tasks and intensifying competition, while their accounts show how adapting their skills and using AI strategically shape their concerns about job loss."
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Productivity Without Prosperity? Who Captures the Economic Gains from Workplace Artificial Intelligence?",
+        "summary": "A capture-accounting framework linking published field experiments (14–40% productivity gains on specific tasks) through adoption curves to economy-wide wage effects finds that productivity benefits accrue disproportionately to capital owners and high-skill workers rather than median wage earners.",
+        "source": "https://doi.org/10.21203/rs.3.rs-11745769/v1",
+        "authors": [
+          "Sarfaraz Abdullah"
+        ],
+        "publishedAt": "2026-11-17",
+        "doi": "10.21203/rs.3.rs-11745769/v1",
+        "score": 0.6,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "doi-productivity-without-prosperity-2026",
+      "evidenceTier": 1,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "51.7% of productivity gains reached workers as higher compensation 2024-2026",
+          "quote": "Between the first quarter of 2024 and the third quarter of 2026, output per hour rose by 6.35 log points; 3.28 points (51.7 percent; rounding interval 50.3 to 53.1) reached workers as higher compensation relative to output prices"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Labor capture fell from 84% (2024) to 70% (2025) to -16% in 2026 Q3",
+          "quote": "Labor's capture fell from 84 percent in 2024 to 70 percent in 2025 and turned negative (-16 percent) in the four quarters to 2026 Q3"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Danish data: only 3–7% of AI productivity gains reach worker earnings",
+          "quote": "Danish administrative data show only 3 to 7 percent of productivity gains reaching earnings"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "neutral",
+          "overlayLabel": "AI explains median 23% (8–38%) of rise in nonlabor capture of productivity",
+          "quote": "AI explains a minority of the rise in nonlabor capture (median 23 percent; 5th to 95th percentile 8 to 38 percent) and cannot be the whole story"
+        },
+        {
+          "graphSlug": "ai-adoption-rate",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI use concentrated in large firms, information and finance sectors",
+          "quote": "AI use is concentrated in large firms and in information and finance"
+        },
+        {
+          "graphSlug": "genai-work-adoption",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "Generative AI raises productivity on specific tasks by 14–40%",
+          "quote": "Experiments show that generative AI raises productivity on specific tasks by 14 to 40 percent"
+        },
+        {
+          "graphSlug": "entry-level-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Young entrants in AI-exposed occupations face distinct employment risk",
+          "quote": "young entrants in exposed occupations face distinct employment risk"
+        },
+        {
+          "graphSlug": "financial-services-displacement",
+          "type": "overlay",
+          "direction": "up",
+          "overlayLabel": "AI adoption concentrated in information and finance sectors",
+          "quote": "AI use is concentrated in large firms and in information and finance"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Jobs and Technology: An Integrated View",
+        "summary": "A World Bank Research Observer paper integrating evidence on industrial robots and AI across developing economies identifies two key adoption drivers and estimates heterogeneous displacement effects, with new empirical analysis of diffusion speeds across income groups.",
+        "source": "https://doi.org/10.1093/wbro/lkag004",
+        "authors": [
+          "Omar S. Arias",
+          "Daisuke Fukuzawa",
+          "Duong Trung Le",
+          "Aaditya Mattoo"
+        ],
+        "publishedAt": "2026-11-14",
+        "doi": "10.1093/wbro/lkag004",
+        "score": 0.58,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "robots-physical-automation-displacement"
+      },
+      "sourceId": "doi-jobs-and-technology-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Revelio Labs: Average Earnings Markdowns Fell from ~30% Pre-2022 to ~20% in 2023–2025",
+        "summary": "Using linked workforce and wage data, Revelio Labs estimates that employer wage-setting power (monopsony markdown) fell from approximately 30% before 2022 to roughly 20% in 2023–2025, with markdowns remaining highest in the public sector and professional services.",
+        "source": "https://www.reveliolabs.com/news/business/prediction-markets-vs-sports-betting-talent/video/Q3a01hWgWyZ004W3loDRMneNvqgSFD023kYEAvqHQqKkcg",
+        "publishedAt": "2026-11-17",
+        "score": 0.55,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "median-wage-impact"
+      },
+      "sourceId": "reveliolabs-revelio-labs-average-2026",
+      "evidenceTier": 3,
+      "extractedStats": [
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Avg earnings markdowns fell from ~30% pre-2022 to ~20% in 2023–2025",
+          "quote": "average earnings markdowns fell from about 30% before 2022 to about 20% in 2023-2025"
+        },
+        {
+          "graphSlug": "median-wage-impact",
+          "type": "overlay",
+          "direction": "down",
+          "overlayLabel": "Markdowns fell faster in occupations more exposed to AI",
+          "quote": "markdowns are smaller in more unionized occupations and have fallen faster in occupations more exposed to AI"
+        }
+      ]
+    },
+    {
+      "highlight": {
+        "title": "Perceived Differences in Activity and Experience Between Developing Software With and Without AI",
+        "summary": "A comparative study of software engineers working with and without generative AI tools documents shifts in task composition and required skill sets, providing early behavioral evidence on how AI is reshaping software engineering roles and career trajectories.",
+        "source": "https://arxiv.org/abs/2611.27947v1",
+        "authors": [
+          "Rubash Mali",
+          "Juho Leinonen",
+          "John Edwards"
+        ],
+        "publishedAt": "2026-11-20",
+        "score": 0.53,
+        "sourceAdapter": "arxiv",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "arxiv-perceived-differences-in-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Artificial intelligence diffusion, adaptive Human-Capital Transformation, and unequal development: evidence from a 50-country panel",
+        "summary": "A 229-observation, 50-country panel finds that AI capacity, human capital, and institutional quality jointly predict unequal development outcomes, with AI diffusion widening skill-wage gaps in lower-institutional-quality settings.",
+        "source": "https://doi.org/10.3389/frai.2026.1901423",
+        "authors": [
+          "Gustavo Pessoa",
+          "Svetlana Nikolaevna Tolstikova",
+          "Kaldibayev Nurlan Alimjanovich",
+          "Zhanneta I. Gerzelieva",
+          "Vadim Vitalievich Ponkratov",
+          "Andrey Masterov",
+          "Nikolay Vladimirovich Kuznetsov",
+          "Andrey Sergeevich Pozdnyaev",
+          "Elena Mikhina",
+          "Anna Viktorovna Shkalenko"
+        ],
+        "publishedAt": "2026-11-11",
+        "doi": "10.3389/frai.2026.1901423",
+        "score": 0.5,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-artificial-intelligence-diffusion-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Impact of Artificial Intelligence on IT Jobs: Opportunities, Displacement Risks, and Skill Transformation",
+        "summary": "A review of AI's impact on IT employment finds evidence of task redistribution, productivity shifts, and changing recruitment expectations, with displacement risks concentrated in routine coding and testing roles and growth in AI-augmentation skill demand.",
+        "source": "https://doi.org/10.17148/imrjr.2026.031105",
+        "authors": [
+          "Zaid Kamboo",
+          "Muaz Shaikh",
+          "Shinde Mayur",
+          "Vishwas Khamkar",
+          "Pranita Manjare"
+        ],
+        "publishedAt": "2026-11-17",
+        "doi": "10.17148/imrjr.2026.031105",
+        "score": 0.46,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "tech-sector-displacement"
+      },
+      "sourceId": "doi-impact-of-artificial-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "The Expanding Elite Premium: Task-Biased Technological Change and Higher Education Stratification in China",
+        "summary": "Using three waves of the China Household Income Survey (2013–2023), the paper finds that the wage premium for graduates of elite-tier institutions expanded significantly over the period, consistent with task-biased technological change and early GenAI diffusion widening returns to elite credentials.",
+        "source": "https://doi.org/10.1111/manc.70080",
+        "authors": [
+          "Chen Sun",
+          "Juan Yang"
+        ],
+        "publishedAt": "2026-11-13",
+        "doi": "10.1111/manc.70080",
+        "score": 0.44,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "high-skill-wage-premium"
+      },
+      "sourceId": "doi-the-expanding-elite-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Artificial Intelligence and Work: Evidence from the Portuguese Labor Market",
+        "summary": "A thesis-level empirical study using Portuguese matched employer-employee data examines AI's effects on job replacement and productivity, finding occupation-level displacement evidence differentiated from prior automation waves.",
+        "source": "https://hdl.handle.net/10216/177567",
+        "authors": [
+          "João Ricardo Oliveira Reis"
+        ],
+        "publishedAt": "2026-11-09",
+        "score": 0.42,
+        "sourceAdapter": "openAlex",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "hdl-artificial-intelligence-and-2026",
+      "evidenceTier": 1,
+      "extractedStats": []
+    },
+    {
+      "highlight": {
+        "title": "Indeed Hiring Lab: 2026 Q3 US Business-to-Business Labor Market Update",
+        "summary": "Indeed's Q3 2026 B2B sector update shows job postings up year-over-year in most B2B categories, providing a current sectoral benchmark for white-collar and professional hiring trends against which AI displacement signals can be calibrated.",
+        "source": "https://hiringlab.indeed.com/2026/11/12/2026-q3-us-business-to-business-labor-market-update/",
+        "publishedAt": "2026-11-12",
+        "score": 0.38,
+        "sourceAdapter": "trackedInstitutions",
+        "graphSlug": "white-collar-professional-displacement"
+      },
+      "sourceId": "hiringlab-indeed-hiring-lab-2026",
+      "evidenceTier": 3,
+      "extractedStats": []
+    }
+  ]
+}
