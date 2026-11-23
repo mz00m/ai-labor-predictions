@@ -560,6 +560,24 @@
       ],
       "evidenceTier": 4,
       "label": "Guy Berger: AI plays some role in young-graduate unemployment, not all of it"
+    },
+    {
+      "date": "2026-10-31",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-indicators-november-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL/ADP: ages 22-25 in most-exposed jobs -4.2% YoY in Oct 2026, from -3.5% a month on"
+    },
+    {
+      "date": "2026-10-31",
+      "direction": "up",
+      "sourceIds": [
+        "stanford-del-indicators-november-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL/ADP: employment -2.2% YoY for ages 22-34 and +0.4% for 35+, October 2026"
     }
   ],
   "sources": [
@@ -1013,6 +1031,16 @@
       "datePublished": "2026-11-01",
       "excerpt": "Labor market conditions improved for recent college graduates in the third quarter of 2026 but remained challenging. The unemployment rate fell to 5.2 percent, its lowest level in more than a year, though the underemployment rate ticked up to 42.5 percent.",
       "dateAdded": "2026-11-02"
+    },
+    {
+      "id": "stanford-del-indicators-november-2026",
+      "title": "The AI Economic Indicators - Monthly Update, November 2026",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/11/AIEI_MU_Nov26.pdf",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-18",
+      "excerpt": "Canaries Dashboard key figure, data through October 2026: \"-4.2% Employment change from a year earlier, ages 22-25, most AI-exposed jobs. October 2026. 1 mo ago -3.5% - 6 mo ago -3.3%\", the steepest reading of the three. Across the wider age band, \"Employment fell 2.2% from a year earlier for ages 22-34 and rose 0.4% for ages 35+\", and \"Employment fell for every age group under 35 and rose slightly for those 35 and older in a sample of firms using ADP services.\" The brief adds that in the most AI-exposed jobs, employment of 22- to 25-year-olds \"has been below its year-earlier level every month since October 2023\". These are raw year-over-year changes in the level of employment among ADP client firms, not the most-exposed-versus-least-exposed differential this graph plots, and the brief says so itself: \"This pattern alone does not show AI caused these declines\" and \"AI exposure measures how much AI could apply to a job's tasks, which may differ from actual AI adoption.\" They are therefore recorded as directional signals rather than as data points. The brief also reports the Adoption Monitor at 45% of employed US adults using generative AI for their job as of a May 2026 survey, which is the Bick/Blandin/Deming Real-Time Population Survey series tracked separately and an older vintage than the reading already plotted on genai-work-adoption.",
+      "dateAdded": "2026-11-23"
     }
   ]
 }

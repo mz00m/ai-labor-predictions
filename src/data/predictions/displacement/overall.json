@@ -2452,6 +2452,15 @@
     }
   ,
     {
+      "date": "2026-09-30",
+      "direction": "down",
+      "sourceIds": [
+        "stanford-del-indicators-november-2026"
+      ],
+      "evidenceTier": 1,
+      "label": "Stanford DEL: only 3 of 12 transformation indicators clearly above pre-2020 trend, all capital"
+    },
+    {
       "date": "2026-10-18",
       "direction": "down",
       "sourceIds": [
@@ -2519,6 +2528,24 @@
       ],
       "evidenceTier": 2,
       "label": "Challenger: market/economic conditions (130,531 YTD) overtake AI (121,401) as top 2026 reason"
+    },
+    {
+      "date": "2026-11-01",
+      "direction": "down",
+      "sourceIds": [
+        "census-btos-ai-cycle-202623"
+      ],
+      "evidenceTier": 1,
+      "label": "BTOS: 7.3% of AI-using firms say AI raised headcount over 6 months, 2.4% cut it (2nd cycle)"
+    },
+    {
+      "date": "2026-11-01",
+      "direction": "up",
+      "sourceIds": [
+        "census-btos-ai-cycle-202623"
+      ],
+      "evidenceTier": 1,
+      "label": "BTOS: on new hires 2.3% of AI-using firms report an AI-driven rise, 3.0% a fall (2nd cycle)"
     }
   ],
   "sources": [
@@ -4444,6 +4471,26 @@
       "datePublished": "2026-11-05",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.2% (SE 0.61%) for the two weeks ending 2026-10-18, down from 24.6% (SE 0.27%) for the cycle ending 2026-10-04 - a 0.4pp move well inside the sampling error of either cycle, so the series reads flat rather than falling, and 24.6% remains the series high. \"Do not know\" rose to 13.9% from 9.6% and \"No\" fell to 61.9% from 65.8%, while the standard error on the yes share more than doubled; this is the first cycle in which three new core AI questions were fielded behind Q7. Q28, the six-month expectation of SI/AI use, was 27.6% (SE 0.49%), down from 28.6%. The three AI questions pre-announced in FR Doc. 2026-18304 appear for the first time in this cycle and are asked only of businesses that report AI use: Q8, whether employees used generative SI to assist in work-related tasks - 26.8% yes (SE 0.56%), 58.6% no, 14.7% do not know; Q9, AI's effect on total headcount over the last six months - 6.6% increased, 2.5% decreased, 87.3% no change, 3.6% do not know; Q10, AI's effect on the number of new employees hired - 2.5% increased, 3.3% decreased, 90.2% no change, 4.1% do not know. Because of the skip logic, Q8-Q10 denominators are AI-using businesses, not all businesses; Q8's 26.8% exceeding Q7's 24.2% confirms the subpopulation denominator arithmetically. Collection for cycle 202622 ran 2026-10-19 to 2026-11-01, reference period 2026-10-05 to 2026-10-18; published 2026-11-05. Values are dated to reference-period end rather than publication date.",
       "dateAdded": "2026-11-09"
+    },
+    {
+      "id": "census-btos-ai-cycle-202623",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202623)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-19",
+      "excerpt": "Second cycle for BTOS Q9 and Q10, the two questions on AI's effect on employment, for the two weeks ending 2026-11-01. Q9, \"In the last six months, how did this business's use of Super Intelligence (formerly referred to as Artificial Intelligence or AI) affect the number of employees (total headcount) at this business?\" - 7.3% increased (SE 0.52%), 2.4% decreased, 87.4% no change, 2.9% do not know, against 6.6% / 2.5% / 87.3% / 3.6% the cycle before. Q10, the same question for \"the number of new employees hired\" - 2.3% increased, 3.0% decreased, 91.2% no change, 3.5% do not know, against 2.5% / 3.3% / 90.2% / 4.1%. The sign asymmetry found in the first cycle repeats: on existing headcount AI-using firms report gains over losses by about three to one, while on new hiring slightly more report a fall than a rise. Both questions run behind skip logic and are asked only of businesses that report AI use, so the denominator is AI-using businesses rather than all businesses, and both count firms rather than jobs. They carry no magnitude - a firm reporting a decrease could have cut one role or a hundred - so they belong on this graph as overlays rather than as a share of US jobs displaced. Collection ran 2026-11-02 to 2026-11-15 for the reference period 2026-10-19 to 2026-11-01; published 2026-11-19.",
+      "dateAdded": "2026-11-23"
+    },
+    {
+      "id": "stanford-del-indicators-november-2026",
+      "title": "The AI Economic Indicators - Monthly Update, November 2026",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/11/AIEI_MU_Nov26.pdf",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-18",
+      "excerpt": "First issue of the Lab's monthly AI Economic Indicators update, with latest data through October 2026. On the economy-wide question the brief is explicit that little has moved: \"Signs of an economy-wide AI transformation are limited so far: GDP and productivity are growing at their usual pace.\" The Transformation Tracker (renamed from the Takeoff Tracker) reads \"3 of 12 macro indicators well above their pre-2020 trends. September 2026\", unchanged from one month and six months earlier, and \"Of 12 macro indicators that would move under an economy-wide AI transformation, only 3 are clearly above pre-2020 trends, all tied to capital: the shares of IT in business equipment, of software and R&D in business capital, and of capital in national income.\" Capital's share of income is given as 41.7% in 2024. The brief also carries the GDP-B Surplus Observer at $183B, the annual amount 127 million US users would collectively need to be paid to give up generative AI as of July 2026, against $172B four months earlier and $116B a year earlier - consumer surplus rather than a labor-market quantity.",
+      "dateAdded": "2026-11-23"
     }
   ]
 }

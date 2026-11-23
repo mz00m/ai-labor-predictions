@@ -1,8 +1,8 @@
 {
   "_comment": "Centralized source database. Each source is verified once and referenced by ID across prediction files.",
-  "lastUpdated": "2026-11-16",
-  "totalSources": 800,
-  "verifiedCount": 790,
+  "lastUpdated": "2026-11-23",
+  "totalSources": 804,
+  "verifiedCount": 794,
   "sources": {
     "berger-ai-labor-market-thoughts-2026": {
       "id": "berger-ai-labor-market-thoughts-2026",
@@ -11368,6 +11368,70 @@
       "usedIn": [
         "overall-us-displacement",
         "tech-sector-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "census-btos-ai-cycle-202623": {
+      "id": "census-btos-ai-cycle-202623",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202623)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-19",
+      "excerpt": "BTOS Q7 national share answering yes to AI use in any business function: 25.0% (SE 0.60%) for the two weeks ending 2026-11-01, up from 24.2% (SE 0.61%) and the highest reading in the series. Q28 six-month expectation 28.2% (SE 0.52%). Second reading for the three AI follow-up questions asked only of AI-using firms: Q8 employee generative-SI use 27.6% (SE 0.57%), Q9 effect on total headcount 7.3% up / 2.4% down / 87.4% no change, Q10 effect on new hires 2.3% up / 3.0% down / 91.2% no change - the Q9/Q10 sign asymmetry from the first cycle repeats. The elevated 'do not know' share (13.3%) and doubled standard error that appeared with cycle 202622 held rather than reverting, so they are a level shift tied to the new questions. Sector highs: Information 49.6%, Educational Services 44.0%, Finance and Insurance 42.7%. Collected 2026-11-02 to 2026-11-15 for reference period 2026-10-19 to 2026-11-01; published 2026-11-19.",
+      "dateAdded": "2026-11-23",
+      "usedIn": [
+        "ai-adoption-rate",
+        "genai-work-adoption",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "stanford-del-indicators-november-2026": {
+      "id": "stanford-del-indicators-november-2026",
+      "title": "The AI Economic Indicators - Monthly Update, November 2026",
+      "url": "https://digitaleconomy.stanford.edu/app/uploads/2026/11/AIEI_MU_Nov26.pdf",
+      "publisher": "Stanford Digital Economy Lab / ADP Research",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-18",
+      "excerpt": "First issue of the Lab's monthly AI Economic Indicators brief, data through October 2026. Canaries Dashboard: \"-4.2% Employment change from a year earlier, ages 22-25, most AI-exposed jobs. October 2026. 1 mo ago -3.5% - 6 mo ago -3.3%\"; \"Employment fell 2.2% from a year earlier for ages 22-34 and rose 0.4% for ages 35+\"; in the most AI-exposed jobs, employment of 22- to 25-year-olds \"has been below its year-earlier level every month since October 2023\". Transformation Tracker (renamed from Takeoff Tracker), September 2026: \"3 of 12 macro indicators well above their pre-2020 trends\", unchanged over one and six months, \"all tied to capital\", with capital's share of income 41.7% in 2024. The brief states \"Signs of an economy-wide AI transformation are limited so far: GDP and productivity are growing at their usual pace.\" Also carries the Adoption Monitor at 45% of employed US adults (May 2026 survey, the Bick/Blandin/Deming RPS tracked separately) and GDP-B Surplus Observer at $183B (July 2026).",
+      "dateAdded": "2026-11-23",
+      "usedIn": [
+        "early-career-employment-decline",
+        "overall-us-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "openai-upwork-rebundling-freelance-2026": {
+      "id": "openai-upwork-rebundling-freelance-2026",
+      "title": "The Rebundling of Freelance Work in the AI Age (Work at the Frontier)",
+      "url": "https://openai.com/index/ai-effect-on-freelance-work/",
+      "publisher": "OpenAI Economic Research / Upwork (Chin, Kala, Kunievsky, Liu, Richmond, Shan)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-10",
+      "excerpt": "\"fixed-price budgets are approximately 70 percent higher for AI-related jobs overall and remain about 52 percent higher after controlling for work subcategory and posting month. The gap in posted hourly rates is smaller, where the gap between AI and non-AI-related jobs is only about 9 percent and falls to roughly 1.5 percent after the same adjustment.\" \"Among hired hourly contracts with positive recorded hours, hours worked during the first 90 days after hire are approximately 41 percent\" higher. \"Of the 63 subcategories, 43 (68.3 percent)\" follow the substitution-consistent pattern, but \"There is not a simple substitution pattern.\" Within AI-related postings the task mix widened from an effective 14.6 to 21.2 clusters between early 2023 and late 2025, about 45% more diverse, while the largest cluster fell from 21.8% to 17.8%. Content writing and professional/business writing are 14.5% and 10.2% of sampled ChatGPT conversations against roughly 1.3% and 0.4% of Upwork posts, while design, video and animation, QA testing, mobile and web development are much larger shares of postings than of ChatGPT use. Prices run through April 2026; posting mix through late 2025.",
+      "dateAdded": "2026-11-23",
+      "usedIn": [
+        "freelancer-rate-impact",
+        "creative-industry-displacement"
+      ],
+      "verified": true,
+      "synthetic": false
+    },
+    "openai-science-at-frontier-2026": {
+      "id": "openai-science-at-frontier-2026",
+      "title": "Science at the Frontier: How Scientists Use ChatGPT",
+      "url": "https://openai.com/index/science-at-the-frontier/",
+      "publisher": "OpenAI Economic Research (Liao, Shan, Chatterji)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-06",
+      "excerpt": "580,186 scientific messages from 1,819 scientists on the ChatGPT for Academic Researchers plan over a 34-day span in 2026, plus a survey fielded 2026-09-30 to 2026-10-07. \"85% of the average scientist's scientific messages to ChatGPT and Codex fall in four workflows\", with reading and writing alone over half. \"Mean reported productivity ratios range from 1.35x in administrative work to 2.83x in research software & code development\", where the ratio is time required without AI over time with AI at the same quality; reported use and reported gain correlate at 0.96 across workflows. \"98% of survey respondents expect AI to increase the rate of scientific discovery in their field.\" Against that, \"45.4% of scientists selected 'time needed to check or correct outputs' as a difficulty in obtaining value from ChatGPT, making it the most common response\", and reported AI time shares are lowest in the workflows the authors flag as bottlenecks: 17.6% data gathering, 11.8% peer review and service, 11.4% administration. Scientists follow up on AI output after about one-third of requests.",
+      "dateAdded": "2026-11-23",
+      "usedIn": [
+        "genai-work-adoption"
       ],
       "verified": true,
       "synthetic": false

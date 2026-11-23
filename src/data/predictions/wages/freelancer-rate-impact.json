@@ -338,6 +338,42 @@
       ],
       "evidenceTier": 1,
       "label": "Upwork Q2 2026: AI-related GSV +22% YoY; GSV per client +5% to $5,230"
+    },
+    {
+      "date": "2026-11-10",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-upwork-rebundling-freelance-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI/Upwork: AI-related posted hourly rates only +1.5% adjusted (+9% raw) vs non-AI posts"
+    },
+    {
+      "date": "2026-11-10",
+      "direction": "up",
+      "sourceIds": [
+        "openai-upwork-rebundling-freelance-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI/Upwork: AI-related fixed-price budgets +52% adjusted (+70% raw) vs non-AI postings"
+    },
+    {
+      "date": "2026-11-10",
+      "direction": "up",
+      "sourceIds": [
+        "openai-upwork-rebundling-freelance-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI/Upwork: AI-related hourly hires log about 41% more hours in the first 90 days"
+    },
+    {
+      "date": "2026-11-10",
+      "direction": "down",
+      "sourceIds": [
+        "openai-upwork-rebundling-freelance-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI/Upwork: 43 of 63 categories common in ChatGPT lost Upwork share as uncommon ones gained"
     }
   ],
   "sources": [
@@ -589,6 +625,16 @@
       "datePublished": "2026-07-31",
       "excerpt": "Using proprietary data on incumbent freelancers and a difference-in-differences design that leverages cross-sectional variation in pre-period AI exposure and skill-level, we show that freelancers more exposed to AI shift away from prior domains and reorient bidding toward higher-value contracts.",
       "dateAdded": "2026-09-24"
+    },
+    {
+      "id": "openai-upwork-rebundling-freelance-2026",
+      "title": "The Rebundling of Freelance Work in the AI Age (Work at the Frontier)",
+      "url": "https://openai.com/index/ai-effect-on-freelance-work/",
+      "publisher": "OpenAI Economic Research / Upwork (Chin, Kala, Kunievsky, Liu, Richmond, Shan)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-10",
+      "excerpt": "OpenAI and Upwork compare sampled ChatGPT conversations against Upwork Marketplace job postings. On prices: \"fixed-price budgets are approximately 70 percent higher for AI-related jobs overall and remain about 52 percent higher after controlling for work subcategory and posting month. The gap in posted hourly rates is smaller, where the gap between AI and non-AI-related jobs is only about 9 percent and falls to roughly 1.5 percent after the same adjustment.\" On quantity: \"Among hired hourly contracts with positive recorded hours, hours worked during the first 90 days after hire are approximately 41 percent\" higher for AI-related work. The authors read the three together as scope rather than price: \"Larger AI-related budgets may therefore reflect larger or more intensive projects rather than simply a higher price for an otherwise identical unit of labor.\" On demand composition: \"Of the 63 subcategories, 43 (68.3 percent) either had lower ChatGPT intensity and gained Upwork\" share or the reverse, with 6 (9.5 percent) combining higher ChatGPT intensity with share gains and 14 (22.2 percent) combining lower intensity with losses; the authors conclude \"There is not a simple substitution pattern.\" Within AI-related postings the task mix widened from an effective 14.6 to 21.2 equally common task clusters between early 2023 and late 2025, about 45 percent more diverse, while the largest cluster, building chatbots and machine-learning models, fell from 21.8% to 17.8%. Price and hours figures use Upwork data through April 2026; posting-mix figures run through late 2025. These are cross-sectional gaps between AI-related and non-AI postings at a point in time, not a change in freelancer rates over time, so they are recorded here as directional signals rather than as data points in this graph's unit.",
+      "dateAdded": "2026-11-23"
     }
   ]
 }

@@ -675,6 +675,33 @@
       ],
       "evidenceTier": 1,
       "label": "BTOS: 26.8% of AI-using firms report employees used generative SI for work tasks"
+    },
+    {
+      "date": "2026-11-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-btos-ai-cycle-202623"
+      ],
+      "evidenceTier": 1,
+      "label": "BTOS: employees' generative-SI use 27.6% of AI-using firms, from 26.8% (inside sampling error)"
+    },
+    {
+      "date": "2026-11-06",
+      "direction": "up",
+      "sourceIds": [
+        "openai-science-at-frontier-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: scientists self-report 1.35x-2.83x productivity ratios; 98% expect faster discovery"
+    },
+    {
+      "date": "2026-11-06",
+      "direction": "neutral",
+      "sourceIds": [
+        "openai-science-at-frontier-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI: 45.4% of scientists name time checking or correcting output as the top barrier"
     }
   ],
   "sources": [
@@ -1256,6 +1283,26 @@
       "datePublished": "2026-11-05",
       "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 24.2% (SE 0.61%) for the two weeks ending 2026-10-18, down from 24.6% (SE 0.27%) for the cycle ending 2026-10-04 - a 0.4pp move well inside the sampling error of either cycle, so the series reads flat rather than falling, and 24.6% remains the series high. \"Do not know\" rose to 13.9% from 9.6% and \"No\" fell to 61.9% from 65.8%, while the standard error on the yes share more than doubled; this is the first cycle in which three new core AI questions were fielded behind Q7. Q28, the six-month expectation of SI/AI use, was 27.6% (SE 0.49%), down from 28.6%. The three AI questions pre-announced in FR Doc. 2026-18304 appear for the first time in this cycle and are asked only of businesses that report AI use: Q8, whether employees used generative SI to assist in work-related tasks - 26.8% yes (SE 0.56%), 58.6% no, 14.7% do not know; Q9, AI's effect on total headcount over the last six months - 6.6% increased, 2.5% decreased, 87.3% no change, 3.6% do not know; Q10, AI's effect on the number of new employees hired - 2.5% increased, 3.3% decreased, 90.2% no change, 4.1% do not know. Because of the skip logic, Q8-Q10 denominators are AI-using businesses, not all businesses; Q8's 26.8% exceeding Q7's 24.2% confirms the subpopulation denominator arithmetically. Collection for cycle 202622 ran 2026-10-19 to 2026-11-01, reference period 2026-10-05 to 2026-10-18; published 2026-11-05. Values are dated to reference-period end rather than publication date.",
       "dateAdded": "2026-11-09"
+    },
+    {
+      "id": "census-btos-ai-cycle-202623",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202623)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-19",
+      "excerpt": "BTOS Q8, \"In the last two weeks, did this business's employees use Generative Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) to assist in any work-related tasks?\" 27.6% yes (SE 0.57%), 58.8% no, 13.6% do not know, for the two weeks ending 2026-11-01, up from 26.8% (SE 0.56%) the cycle before - a move of about one standard error of the difference. Q8 runs behind skip logic and is asked only of businesses that answered yes to Q7, so its denominator is AI-using businesses, not all businesses, and it is a share of firms rather than of employed adults. It therefore sits on this graph as an overlay rather than a data point: the graph's unit is the share of employed adults 18-64 who have used generative AI for work.",
+      "dateAdded": "2026-11-23"
+    },
+    {
+      "id": "openai-science-at-frontier-2026",
+      "title": "Science at the Frontier: How Scientists Use ChatGPT",
+      "url": "https://openai.com/index/science-at-the-frontier/",
+      "publisher": "OpenAI Economic Research (Liao, Shan, Chatterji)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-06",
+      "excerpt": "Analysis of 580,186 scientific messages from 1,819 scientists enrolled in the ChatGPT for Academic Researchers plan over a 34-day span in 2026, plus a survey of the same population fielded 2026-09-30 to 2026-10-07. \"85% of the average scientist's scientific messages to ChatGPT and Codex fall in four workflows: reading & knowledge acquisition, scientific analysis, software development, and writing\", with reading and writing alone accounting for over half. Scientists follow up on AI output after about one-third of requests, and do so more often for requests requiring greater scientific expertise. On self-reported productivity, \"Mean reported productivity ratios range from 1.35x in administrative work to 2.83x in research software & code development\", where the ratio is the time a task would need without AI divided by the time it needs with AI at the same quality; reported AI use and reported productivity gain correlate at 0.96 across workflow averages. \"98% of survey respondents expect AI to increase the rate of scientific discovery in their field.\" Against that, \"45.4% of scientists selected 'time needed to check or correct outputs' as a difficulty in obtaining value from ChatGPT, making it the most common response\", and reported AI time shares are low in the workflows the authors flag as bottlenecks - 17.6% of time in data gathering, 11.8% in peer review and service, 11.4% in administration.",
+      "dateAdded": "2026-11-23"
     }
   ]
 }

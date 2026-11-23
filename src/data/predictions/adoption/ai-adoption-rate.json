@@ -5,10 +5,10 @@
   "description": "Percentage of US firms using AI, measured by the Census Bureau's Business Trends and Outlook Survey (BTOS) — the most rigorous measure available. Survey-based estimates from consultancies run 5-10x higher due to self-selected samples.",
   "category": "adoption",
   "unit": "% of firms (Census BTOS)",
-  "currentValue": 24.2,
+  "currentValue": 25,
   "aggregationMethod": "latest",
   "timeHorizon": "Current measure",
-  "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (23.8%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
+  "disclaimer": "Adoption estimates differ by more than tenfold depending on how adoption is defined. The measures disagree because they count different things, not because one of them is wrong. BTOS asks firms directly whether they used AI in the past two weeks (25.0%); Census refined the wording in November 2025 from AI use “in producing goods or services” to AI use “in any business function,” and publishes the result as one continuous series, as do we. Posting-based methods instead infer adoption from whether a firm advertises roles that integrate AI into its own operations, which yields roughly 5.9% of eligible hiring firms — a narrower, harder threshold that captures deliberate deployment rather than any use. Consultancy surveys run higher than both because their samples are self-selected. Only the BTOS series is charted; the other measures appear below it as directional signals and are left out of the average. See the [Census Bureau](https://www.census.gov/library/stories/2026/05/ai-use-businesses.html) on the wording refinement, [Revelio Labs](https://www.reveliolabs.com/news/ai-and-work/introduction-the-revelio-ai-labor-market-tracker) on the posting-based approach, and [Known Limitations](/methodology#limitations).",
   "history": [
     {
       "date": "2023-09-10",
@@ -169,6 +169,16 @@
       "value": 24.2,
       "sourceIds": [
         "census-btos-ai-cycle-202622"
+      ],
+      "evidenceTier": 1,
+      "dataType": "observed",
+      "metricType": "survey"
+    },
+    {
+      "date": "2026-11-01",
+      "value": 25.0,
+      "sourceIds": [
+        "census-btos-ai-cycle-202623"
       ],
       "evidenceTier": 1,
       "dataType": "observed",
@@ -1079,6 +1089,15 @@
       ],
       "evidenceTier": 2,
       "label": "Ramp: 56.8% of US businesses pay for AI (+1.0pp); Anthropic 44.8%, OpenAI flat at 40.6%"
+    },
+    {
+      "date": "2026-11-01",
+      "direction": "neutral",
+      "sourceIds": [
+        "census-btos-ai-cycle-202623"
+      ],
+      "evidenceTier": 1,
+      "label": "Census BTOS: 'do not know' holds at 13.3%, SE at 0.60% - October's shift was a level change"
     }
   ],
   "sources": [
@@ -2048,6 +2067,16 @@
       "datePublished": "2026-11-11",
       "excerpt": "Ramp AI Index for October 2026, from corporate card and bill-pay transactions across more than 85,000 US businesses on Ramp's platform. \"Overall adoption reached 56.8%, increasing 1 percentage point, slightly faster than September's 0.66 point gain.\" Vendor shares: \"Anthropic adoption rose 1.1 percentage points to 44.8%, while OpenAI adoption held flat at 40.6%\"; \"Among Ramp businesses, 6.3% paid SpaceXAI, up 2.2 percentage points from last month\" - the post uses SpaceXAI where the dashboard table still reads xAI. On intensity: \"The top 1% of firms now spend a median $10.2K per employee per month on AI, up 9%. Firms in the top 10% spent $801, roughly flat. The median firm spends $16.32, up $0.93.\" Concentration: \"1% of businesses drive 80% of the revenues to OpenAI and Anthropic,\" and that top 1% is \"largely made up of VC-backed companies in tech, finance, and technical services.\" This edition introduces department-level AI spend: \"In October, Engineering teams drove 72% of all classified spend, but spend has fallen from highs we observed earlier this summer,\" while customer success and support operations are \"now driving 13.3% of all classified spend, up from 0.8% in June.\" Prices: \"The average price per million tokens fell 21% over the last month.\" Kharazian's September gain is restated here as 0.66pp against the 0.62pp published in the October edition. Measures paid vendor subscriptions among Ramp's own customers rather than self-reported use across a probability sample of US firms, so it sits below the chart as a directional overlay.",
       "dateAdded": "2026-11-16"
+    },
+    {
+      "id": "census-btos-ai-cycle-202623",
+      "title": "Business Trends and Outlook Survey - Biweekly AI Use (cycle 202623)",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "publisher": "US Census Bureau",
+      "evidenceTier": 1,
+      "datePublished": "2026-11-19",
+      "excerpt": "BTOS Q7, \"In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions?\" National share answering yes: 25.0% (SE 0.60%) for the two weeks ending 2026-11-01, up from 24.2% (SE 0.61%) for the cycle ending 2026-10-18 and 24.6% (SE 0.27%) for the cycle ending 2026-10-04. The 0.8pp rise is about one standard error of the difference and so is not individually significant, but 25.0% is the highest reading in the series and its first at or above 25%. Response quality held rather than reverting: \"do not know\" was 13.3% against 13.9% the cycle before and 9.6% two cycles before, \"No\" 61.6% against 61.9% and 65.8%, and the standard error on the yes share 0.60% against 0.61% and 0.27%. The elevated \"do not know\" share and doubled standard error that first appeared with cycle 202622 are therefore a level shift that arrived with the three new AI follow-up questions, not a one-cycle blip. Q28, the six-month expectation of SI/AI use, was 28.2% (SE 0.52%), up from 27.6%. Second cycle for the three questions from FR Doc. 2026-18304, all asked only of businesses reporting AI use: Q8, employees using generative SI for work-related tasks - 27.6% yes (SE 0.57%), 58.8% no, 13.6% do not know, from 26.8% the cycle before; Q9, AI's effect on total headcount over the last six months - 7.3% increased, 2.4% decreased, 87.4% no change, 2.9% do not know; Q10, AI's effect on the number of new employees hired - 2.3% increased, 3.0% decreased, 91.2% no change, 3.5% do not know. The Q9/Q10 sign asymmetry seen in the first cycle repeats: on existing headcount more AI-using firms report a rise than a fall, on new hiring more report a fall than a rise. Sector highs (Sector.xlsx, same cycle): Information 49.6% from 45.0%, Educational Services 44.0% from 39.5%, Finance and Insurance 42.7% from 39.2%, Professional/Scientific/Technical 40.8% from 41.6%. Collection for cycle 202623 ran 2026-11-02 to 2026-11-15, reference period 2026-10-19 to 2026-11-01; published 2026-11-19. Values are dated to reference-period end rather than publication date.",
+      "dateAdded": "2026-11-23"
     }
   ]
 }

@@ -424,6 +424,15 @@
       ],
       "evidenceTier": 1,
       "label": "Chakrabarty et al.: books with no AI text lose most ground in high-AI genres"
+    },
+    {
+      "date": "2026-11-10",
+      "direction": "down",
+      "sourceIds": [
+        "openai-upwork-rebundling-freelance-2026"
+      ],
+      "evidenceTier": 2,
+      "label": "OpenAI/Upwork: video and design hold far larger Upwork shares than ChatGPT use shares"
     }
   ],
   "sources": [
@@ -784,6 +793,16 @@
       "datePublished": "2026-07-22",
       "excerpt": "Full-text AI detection across 14,419 self-published genre-fiction books sold on Amazon 2023-2026, matched to daily sales records through June 2026: \"Over this period, the number of books with observed sales in a quarter grew 19.2-fold, while quarterly revenue grew only 8.9-fold. The market therefore added selling books faster than it added revenue, and revenue per selling book fell across most genres.\" Books with detected AI text above 25% \"make up a large share of the catalog but a smaller share of sales,\" yet win \"a growing share of sales over time\" and take \"more of the scarce top-rank positions once held by books with no detected AI text.\" \"Books with no AI text lose the most ground in genres with high AI diffusion, and most of all where Kindle Unlimited availability is high.\" Authors conclude generative AI \"can thus reshape a creative market through scale rather than quality.\"",
       "dateAdded": "2026-08-07"
+    },
+    {
+      "id": "openai-upwork-rebundling-freelance-2026",
+      "title": "The Rebundling of Freelance Work in the AI Age (Work at the Frontier)",
+      "url": "https://openai.com/index/ai-effect-on-freelance-work/",
+      "publisher": "OpenAI Economic Research / Upwork (Chin, Kala, Kunievsky, Liu, Richmond, Shan)",
+      "evidenceTier": 2,
+      "datePublished": "2026-11-10",
+      "excerpt": "The composition contrast runs against creative work being the first to go. \"Content writing and professional and business writing account for 14.5 percent and 10.2 percent of sampled ChatGPT conversations, respectively, compared with approximately 1.3 percent and 0.4 percent of Upwork job posts. ... By contrast, graphic and presentation design, video and animation, quality-assurance testing, mobile development, digital marketing, and web development represent substantially larger shares of Upwork postings than of ChatGPT conversations.\" Within AI-related postings between early 2023 and late 2025, \"Tasks such as video production, social-media campaign management, marketing automation, and AI API integration gained share\", while \"AI-generated written content, training programs, cloud infrastructure, data and systems integration, and several writing- and data-related activities lost share.\" The authors read this as clients hiring freelancers for \"implementation, production, and delivery\" of finished outputs. The cut is text-versus-production rather than creative-versus-not: writing is where direct ChatGPT use is concentrated and where freelance share is thinnest, so the same source points down for visual production and up for written content. Shares are of postings and conversations, not of roles or employment, so this is a directional signal rather than a share of creative roles displaced.",
+      "dateAdded": "2026-11-23"
     }
   ]
 }
